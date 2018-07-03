@@ -1,12 +1,16 @@
 package Onboarding_tests;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -31,9 +35,29 @@ public class Base_test {
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
 
+    //common validations
+    protected void validateTextEquals(String actual, String expected){
+        Assert.assertEquals(actual, expected);
+    }
 
-//    @After
-//    public void shutDown(){
-//        driver.quit();
-//    }
+    protected void validateIsDisplayed(boolean displayed){
+        Assert.assertTrue(displayed);
+    }
+
+    protected void validateIsNotDisplayed(boolean displayed){
+        Assert.assertFalse(displayed);
+    }
+
+    protected void validateEnabled(boolean enabled) {
+        Assert.assertTrue(enabled);
+    }
+
+    protected void validateNotEmabled(boolean enabled){
+        Assert.assertFalse(enabled);
+    }
+
+    @After
+    public void shutDown(){
+        driver.quit();
+    }
 }
