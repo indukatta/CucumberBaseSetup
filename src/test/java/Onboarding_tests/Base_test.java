@@ -8,6 +8,7 @@ import java.util.Properties;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -19,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Base_test {
 
-    AppiumDriver<MobileElement> driver;
+    AppiumDriver driver;
 
     @BeforeTest
     public void setUp() throws MalformedURLException {
@@ -37,13 +38,8 @@ public class Base_test {
     }
 
 
-    @AfterMethod
-    public static void afterMethod(){
-
-    }
-
     @AfterTest
-    public void shutDown(){
+    public void afterMethod(){
         driver.quit();
     }
 }

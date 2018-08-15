@@ -1,6 +1,10 @@
-package testData.RandomDataFactory;
+package testData;
 
 import com.github.javafaker.Faker;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang3.RandomUtils;
+import utils.Constants;
+import utils.ExcelUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -8,7 +12,11 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Random;
 
-public class TestData {
+import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic;
+import static org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric;
+import static org.apache.commons.lang3.RandomStringUtils.randomNumeric;
+
+public class RandomDataGenerator {
 
     //faker defaulted to British data
     private static Faker faker = new Faker(new Locale("en-GB"));
@@ -24,6 +32,7 @@ public class TestData {
     private String email;
     private String incorrectEmail;
     private String phoneNumber;
+    private String randomValue;
 
     public String setTitle() {
         String title = faker.name().prefix();
@@ -127,6 +136,20 @@ public class TestData {
         }
     }
 
+    public String setRandomValue(int count, String type){
+
+        String s;
+
+        switch (type){
+            case "Numeric": s = randomNumeric(count);
+            break;
+            default: s = randomAlphanumeric(count);
+            break;
+        }
+
+        return this.randomValue = s;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -171,5 +194,29 @@ public class TestData {
         return incorrectEmail;
     }
 
-    public String getPhoneNumber() {return phoneNumber;}
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getRandomValue() {
+        return randomValue;
+    }
+
+    /**
+     * Method which returns random country selected from excel data file
+     * @return jurisdiction country
+     */
+    public String setCountry() {
+        String country = "";
+        try {
+            ExcelUtils.setExcelFile(Constants.Path_TestData + Constants.File_CountriesList, "Countries");
+            int Min = 1;
+            int Max = 243;
+            int row = Min + (int)(Math.random() * ((Max - Min) + 1));
+            country = ExcelUtils.getCellData(row, 0);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return country;
+    }
 }
