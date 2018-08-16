@@ -72,8 +72,8 @@ public class PersonalDetailsForm extends GuiCommands {
     @FindBy(name = "personal_details.dn_negative")
     private MobileElement personDualNationalNo;
 
-    @FindBy(name = "personal_details.utr")
-    private MobileElement personJurisdictionOfTaxReference;
+    @FindBy(name = "personal_details.tax_jurisdiction")
+    private MobileElement personJurisdictionOfTaxResidency;
 
     @FindBy(name = "personal_details.nino")
     private MobileElement personNationalInsuranceNumber;
@@ -90,6 +90,9 @@ public class PersonalDetailsForm extends GuiCommands {
     @FindBy (name = "Back")
     private MobileElement backToCompanyReview;
 
+    @FindBy (name = "Done")
+    private MobileElement pickerWheelDone;
+
     //Steps
     public boolean isOwnershipTitleDisplayed(){
         return ownerShipTitle.isDisplayed();
@@ -101,6 +104,19 @@ public class PersonalDetailsForm extends GuiCommands {
 
     public boolean isPersonalDetailsTitlePageDisplayed(){
         return personalDetailsPageTitle.isDisplayed();
+    }
+
+    public boolean isJurisdictionOfTaxResidencyDisplayed(){
+        scrollDown(personJurisdictionOfTaxResidency);
+        return personJurisdictionOfTaxResidency.isDisplayed();
+    }
+
+    public void clickJurisdictionOfTaxResidency(){
+        click(personJurisdictionOfTaxResidency);
+    }
+
+    public String getPersonJurisdictionOfTaxResidency(){
+        return readText(personJurisdictionOfTaxResidency);
     }
 
     public void confirmOwnership(){
@@ -161,5 +177,26 @@ public class PersonalDetailsForm extends GuiCommands {
 
     public boolean isPersonNationalityEnabled(){
         return personNationality.isEnabled();
+    }
+
+    public void clickBackToBusinessDetails(){
+        click(backToCompanyReview);
+    }
+
+    public String getPersonIdType(){
+        return readText(personIdType);
+    }
+
+    public void selectIdType(String choice){
+        IosPickerWheel(personIdType, choice);
+    }
+
+    public boolean isGovernmentIdTypeDisplayed(){
+        scrollDown(personIdType);
+        return personIdType.isDisplayed();
+    }
+
+    public void pickerWheelDone(){
+        click(pickerWheelDone);
     }
 }

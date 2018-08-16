@@ -276,7 +276,7 @@ public class GuiCommands {
         return cells.size();
     }
 
-    public void clickIosTableCell(String locator){
+    public void clickSpecificIosTableCell(String locator){
         try {
             MobileElement element = (MobileElement) driver.findElement(By.name(locator));
             element.click();
@@ -284,6 +284,10 @@ public class GuiCommands {
         catch (ElementNotVisibleException e) {
             //TODO: Sysout(e.getMessage());
         }
+    }
+
+    public void clickGenericIostableCell(){
+        driver.findElement(By.className("XCUIElementTypeCell")).click();
     }
 
     public int CheckboxSelected(MobileElement element) {

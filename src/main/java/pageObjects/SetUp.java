@@ -107,7 +107,7 @@ public class SetUp extends GuiCommands {
         clickConfirm();
         writePhoneNumber(generator.setPhoneNumber());
         clickNext();
-        writeEmail(generator.setEmail());
+        writeEmail(generator.setEmail("", 0));
         clickNext();
     }
 }

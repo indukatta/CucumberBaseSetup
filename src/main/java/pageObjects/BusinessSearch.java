@@ -79,13 +79,13 @@ public class BusinessSearch extends GuiCommands {
 
     //CUSTOM METHODS
     public void clickTableCell(String locator){
-        clickIosTableCell(locator);
+        clickSpecificIosTableCell(locator);
     }
 
     public void passThroughBusinessSearch(){
         clickNextButton();
         clickBusinessSearchBoxTitle();
         writeBusinessTitle("06587021");
-        clickIosTableCell("THE GREAT BRITISH SAUSAGE COMPANY LTD");
+        clickSpecificIosTableCell("THE GREAT BRITISH SAUSAGE COMPANY LTD");
     }
 }

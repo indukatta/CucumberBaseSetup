@@ -1,6 +1,5 @@
 package Onboarding_tests;
 
-import com.sun.source.tree.AssertTree;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,11 +11,7 @@ import pageObjects.*;
 import testData.RandomDataGenerator;
 import utils.GuiCommands;
 
-public class Personal_Details_Test extends Base_test{
-
-    //private OnboardingPersonalDetails details;
-//    private OnboardingSetUp newCustomer;
-//    private OnboardingBusinessDetails businessDetails;
+public class OnboardingTests extends Base_test {
 
 
     private RandomDataGenerator generator;
@@ -31,10 +26,6 @@ public class Personal_Details_Test extends Base_test{
 
     @BeforeMethod
     public void beforeMethod() throws Exception {
-        //details = new OnboardingPersonalDetails(driver);
-//        newCustomer = new OnboardingSetUp(driver);
-//        businessDetails = new OnboardingBusinessDetails(driver);
-
 
         generator = new RandomDataGenerator();
         commands = new GuiCommands(driver);
@@ -45,67 +36,11 @@ public class Personal_Details_Test extends Base_test{
         details = new PersonalDetailsForm(driver);
     }
 
-//    @Test
-//    public void placeholder(){
-//        newCustomer.onBoard();
-//        businessDetails.onBoard();
-//        details.onBoard();
-//    }
-
-    @Test (description = "CUICE4445, CUICE4446, CUICE4447, CUICE4448, CUICE4343, CUICE4345, CUICE4346")
-    public void phoneAndEmailTests(){
-        setUp.clickContinue();
-        setUp.clickConfirm();
-        Assert.assertTrue(setUp.phoneNumberTitleDisplayed());
-        softAssert.assertFalse(setUp.nextButtonEnabled());
-
-        setUp.clickPhoneNumberTextbox();
-        softAssert.assertTrue(setUp.isKeyboardDisplayed());
-
-        //invalid phone entry
-        setUp.writePhoneNumber("01234567890");
-
-        softAssert.assertFalse(setUp.nextButtonEnabled());
-        setUp.clearPhoneNumber();
-        setUp.writePhoneNumber("+441234567890");
-
-        softAssert.assertFalse(setUp.nextButtonEnabled());
-        setUp.clearPhoneNumber();
-        setUp.writePhoneNumber("0723456789");
-
-        softAssert.assertFalse(setUp.nextButtonEnabled());
-        setUp.clearPhoneNumber();
-        setUp.writePhoneNumber("071345678901");
-
-        softAssert.assertFalse(setUp.nextButtonEnabled());
-        setUp.clearPhoneNumber();
-
-        //valid phone entry
-        setUp.writePhoneNumber(generator.setPhoneNumber());
-        Assert.assertTrue(setUp.nextButtonEnabled());
-        setUp.clickNext();
-
-        Assert.assertTrue(setUp.emailTitleDisplayed());
-        softAssert.assertFalse(setUp.nextButtonEnabled());
-        setUp.clickEmailTextbox();
-        softAssert.assertTrue(setUp.isKeyboardDisplayed());
-
-        //CUICE-4346 Email Address validation - negative
-        setUp.writeEmail(generator.setIncorrectEmail());
-        softAssert.assertFalse(setUp.nextButtonEnabled());
-        setUp.clearEmail();
-
-        //CUICE-4345 Email Address validation - positive
-        setUp.writeEmail(generator.setEmail());
-        Assert.assertTrue(setUp.nextButtonEnabled());
-        setUp.clickNext();
-
-        softAssert.assertAll();
-    }
 
 
-    @Test (description = "CUICE3979, CUICE3980, CUICE3980, CUICE3981, CUICE3982, CUICE3995, CUICE3996, CUICE3998")
-    private void businessSearchTests(){
+
+    @Test(description = "CUICE3979, CUICE3980, CUICE3980, CUICE3981, CUICE3982, CUICE3995, CUICE3996, CUICE3998")
+    private void businessSearchTests() {
         setUp.passThroughSetUp();
         Assert.assertTrue(businessSearch.coverPageTitleDisplayed());
 
@@ -117,12 +52,12 @@ public class Personal_Details_Test extends Base_test{
         softAssert.assertTrue(business.isKeyboardVisible());
 
         businessSearch.writeBusinessTitle("ZXE");
-        softAssert.assertTrue(commands.IosTableCellCount()>0);
+        softAssert.assertTrue(commands.IosTableCellCount() > 0);
 
         String countOne = String.valueOf(commands.IosTableCellCount());
         businessSearch.writeBusinessTitle("N");
         new WebDriverWait(driver, 1).until(ExpectedConditions.invisibilityOfElementLocated(By.name("ZX EVENTS LTD")));
-        softAssert.assertTrue(commands.IosTableCellCount()>0);
+        softAssert.assertTrue(commands.IosTableCellCount() > 0);
 
         String countTwo = String.valueOf(commands.IosTableCellCount());
         softAssert.assertNotEquals(countOne, countTwo);
@@ -130,12 +65,12 @@ public class Personal_Details_Test extends Base_test{
 
         //CUICE-3980 LOOKUP MY BUSINESS - Search Company Registration Number
         businessSearch.writeBusinessTitle("065");
-        softAssert.assertTrue(commands.IosTableCellCount()>0);
+        softAssert.assertTrue(commands.IosTableCellCount() > 0);
 
         String countThree = String.valueOf(commands.IosTableCellCount());
         businessSearch.writeBusinessTitle("87021");
         new WebDriverWait(driver, 1).until(ExpectedConditions.invisibilityOfElementLocated(By.name("EVANGELINA P LTD")));
-        softAssert.assertTrue(commands.IosTableCellCount()>0);
+        softAssert.assertTrue(commands.IosTableCellCount() > 0);
 
         String countFour = String.valueOf(commands.IosTableCellCount());
         softAssert.assertNotEquals(countThree, countFour);
@@ -156,69 +91,72 @@ public class Personal_Details_Test extends Base_test{
         businessSearch.writeBusinessTitle("THE GREAT BRITISH SAUSAGE COMPANY");
         businessSearch.clickTableCell("THE GREAT BRITISH SAUSAGE COMPANY LTD");
         //check results are returned
-        Assert.assertTrue(business.getOwnersName().length()>0);//FIXME:Needs better validation
+        Assert.assertTrue(business.getOwnersName().length() > 0);//FIXME:Needs better validation
         Assert.assertTrue(business.getBusinessName().length() > 0);
         Assert.assertTrue(business.getBusinessAddress().length() > 0);
 
         //CUICE-3996 LOOKUP MY BUSINESS - Navigate back to company Search Screen
-        business.clickBackNavigation();
+
+        driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"You and your business\"]")).click();//FIXME:get accessibility ID
+        //business.clickBackNavigation();
         Assert.assertTrue(businessSearch.businessSearchTitleDisplayed());
 
         //CUICE-3995 - LOOKUP MY BUSINESS - Selection of company
         businessSearch.writeBusinessTitle("06587021");
         businessSearch.clickTableCell("THE GREAT BRITISH SAUSAGE COMPANY LTD");
         //CUICE-3998 - LOOKUP MY BUSINESS - Information Pre-populated and displayed back to user
-        Assert.assertTrue(business.getOwnersName().length()>0);//FIXME:Needs better validation
+        Assert.assertTrue(business.getOwnersName().length() > 0);//FIXME:Needs better validation
         Assert.assertTrue(business.getBusinessName().length() > 0);
         Assert.assertTrue(business.getBusinessAddress().length() > 0);
 
         softAssert.assertAll();
     }
 
-    @Test (description = "CUICE4581, CUICE4583, CUICE4584, CUICE4000, CUICE4541, CUICE4542, CUICE4543, CUICE4544, CUICE4555")
-    private void businessFormTests(){
+    @Test(description = "CUICE4581, CUICE4583, CUICE4584, CUICE4000, CUICE4541, CUICE4542, CUICE4543, CUICE4544, CUICE4555")
+    private void businessFormTests() {
         setUp.passThroughSetUp();
         businessSearch.passThroughBusinessSearch();
 
         //CUICE-4581 - Display of trading address address/ Business Address Checkboxes
-        softAssert.assertTrue(business.tradingAddressDifferentToResidentialDisplayed());
-        softAssert.assertTrue(business.tradingAddressSameAsResidentialDisplayed());
-        softAssert.assertFalse(business.isTradingAddressDifferentToResidentialSelected());
-        softAssert.assertFalse(business.isTradingAddressSameAsResidentialSelected());
+        softAssert.assertTrue(business.tradingAddressDifferentToResidentialDisplayed(), "1");
+        softAssert.assertTrue(business.tradingAddressSameAsResidentialDisplayed(), "2");
+        softAssert.assertFalse(business.isTradingAddressDifferentToResidentialSelected(), "3");
+        softAssert.assertFalse(business.isTradingAddressSameAsResidentialSelected(), "4");
         softAssert.assertFalse(business.isNextButtonEnabled());
 
         business.clickTradingAddressDifferentToResidential();
-        softAssert.assertTrue(business.isAddressLookupTitleDisplayed());
-        softAssert.assertTrue(business.isAddressLookupSearchDisplayed());
+        softAssert.assertTrue(business.isAddressLookupTitleDisplayed(), "5");
+        softAssert.assertTrue(business.isAddressLookupSearchDisplayed(), "6");
 
         businessSearch.clickSearchExitButton();
-        softAssert.assertFalse(business.isTradingAddressDifferentToResidentialSelected());
-        softAssert.assertFalse(business.isTradingAddressSameAsResidentialSelected());
-        softAssert.assertFalse(business.isNextButtonEnabled());
+        softAssert.assertFalse(business.isTradingAddressDifferentToResidentialSelected(), "7");
+        softAssert.assertFalse(business.isTradingAddressSameAsResidentialSelected(), "8");
+        softAssert.assertFalse(business.isNextButtonEnabled(), "9");
 
         //CUICE-4583 - Same trading address as Business Address
-        softAssert.assertTrue(business.tradingAddressDifferentToResidentialDisplayed());
-        softAssert.assertFalse(business.isNextButtonEnabled());
+        softAssert.assertTrue(business.tradingAddressDifferentToResidentialDisplayed(), "10");
+        softAssert.assertFalse(business.isNextButtonEnabled(), "11");
 
         business.clickTradingAddressSameAsResidential();
-        softAssert.assertEquals(business.getTradingAddress(), business.getBusinessAddress());
+        softAssert.assertEquals(business.getTradingAddress(), business.getBusinessAddress(), "12");
 
         //CUICE-4000 - LOOKUP MY BUSINESS - Non-Editing of Pre-populated Information
-        softAssert.assertFalse(business.isOwnersNameTextboxEnabled());
-        softAssert.assertFalse(business.isBusinessNameTextboxEnabled());
-        softAssert.assertFalse(business.isBusinessAddressTextboxEnabled());
-        softAssert.assertFalse(business.isTradingAddressEnabled());
+        softAssert.assertFalse(business.isOwnersNameTextboxEnabled(), "13");
+        softAssert.assertFalse(business.isBusinessNameTextboxEnabled(), "14");
+        //softAssert.assertFalse(business.isBusinessAddressTextboxEnabled(), "15");
+        //softAssert.assertFalse(business.isTradingAddressEnabled(), "16");
         //FIXME add sic code
 
         business.scrollDownToBottom();
         business.writeAdditionalDetails("Additional Details");
-        softAssert.assertTrue(business.isJurisdictionOfTaxResidencyDisplayed());
+        softAssert.assertTrue(business.isJurisdictionOfTaxResidencyDisplayed(), "17");
 
+        business.scrollDownToBottom();
         business.clickJurisdictionOfTaxResidency();
-        softAssert.assertTrue(business.isKeyboardVisible());
+        softAssert.assertTrue(business.isKeyboardVisible(), "18");
 
         business.writeCountry("Not a country");
-        softAssert.assertEquals(commands.IosTableCellCount(), 0);
+        softAssert.assertEquals(commands.IosTableCellCount(), 0, "19");
 
         business.clearCountry();
         business.writeCountry("United");
@@ -226,46 +164,46 @@ public class Personal_Details_Test extends Base_test{
         business.writeCountry(" Kingdom");
         new WebDriverWait(driver, 2).until(ExpectedConditions.invisibilityOfElementLocated(By.name("United States")));
         String countTwo = String.valueOf(commands.IosTableCellCount());
-        softAssert.assertNotEquals(countOne,countTwo);
+        softAssert.assertNotEquals(countOne, countTwo, "20");
 
         business.clearCountry();
         String country = generator.setCountry();
         business.writeCountry(country);
-        business.clickTableCell(country);
-        softAssert.assertEquals(business.getJurisdictionOfTaxResidency(), country);
+        business.clickTableCell();
+        softAssert.assertEquals(business.getJurisdictionOfTaxResidency(), country, "21");
 
         //CUICE-1232 - UTR's
-        softAssert.assertTrue(business.isUTRDisplayed());
+        softAssert.assertTrue(business.isUTRDisplayed(), "22");
         business.clickUTR();
         softAssert.assertTrue(business.isKeyboardVisible());
         business.writeUTR(generator.setRandomValue(9, "Numeric"));
-        softAssert.assertFalse(business.isNextButtonEnabled());
+        softAssert.assertFalse(business.isNextButtonEnabled(), "23");
 
         //CUICE-1232 - UTR's
         business.writeUTR("01");
         String actual = business.getUTR();
         String expected = generator.getRandomValue() + "0";
-        softAssert.assertEquals(actual, expected);
-        softAssert.assertTrue(business.isNextButtonEnabled());
+        softAssert.assertEquals(actual, expected, "24");
+        softAssert.assertTrue(business.isNextButtonEnabled(), "25");
 
         business.scrollUpToTop();
-        softAssert.assertTrue(business.isTradingNameDisplayed());
-        softAssert.assertTrue(business.verifyTextboxIsEmpty());
-        softAssert.assertTrue(business.isNextButtonEnabled());
+        softAssert.assertTrue(business.isTradingNameDisplayed(), "26");
+        softAssert.assertTrue(business.verifyTextboxIsEmpty(), "27");
+        softAssert.assertTrue(business.isNextButtonEnabled(), "28");
         business.clickTradingName();
-        softAssert.assertTrue(business.isKeyboardVisible());
+        softAssert.assertTrue(business.isKeyboardVisible(), "29");
 
         business.writeTradingName(generator.setRandomValue(81, "Alphanumeric"));
-        softAssert.assertEquals(business.getTradingName().length(), 80);
+        softAssert.assertEquals(business.getTradingName().length(), 80, "30");
         business.clickNextButton();
 
-        Assert.assertTrue(details.isOwnershipTitleDisplayed());
+        Assert.assertTrue(details.isOwnershipTitleDisplayed(), "31");
 
         softAssert.assertAll();
     }
 
     @Test(description = "CUICE4141, CUICE4142")
-    public void personalDetailsFormTests(){
+    public void personalDetailsFormTests() {
 
         Assert.assertTrue(details.isOwnershipTitleDisplayed());
         details.clickConfirmOwnership();
@@ -284,33 +222,19 @@ public class Personal_Details_Test extends Base_test{
         Assert.assertFalse(details.isPersonLastNameEnabled());
         Assert.assertFalse(details.isPersonDOBEnabled());
         Assert.assertFalse(details.isPersonNationalityEnabled());
-    }
 
-
-    @Test
-    private void ownershipPageNavigation(){
-
-    }
-
-    @Test
-    private void CUICE4142(){
+        details.clickBackToBusinessDetails();
+        business.scrollUpToTop();
+        softAssert.assertTrue(business.isBusinessReviewTitleDisplayed());
+        business.clickBackNavigation();
+        softAssert.assertTrue(businessSearch.businessSearchTitleDisplayed());
 
     }
 
-    @Test
-    private void CUICE4141(){
-
-    }
 
 //    @Test
 //    private void CUICE4144(){
-//        click(backToOwnershipScreen);
-//        validate.assertIsDisplayed(ownerShipTitle);
-//        click(backToCompanyReview);
-//        scrollUp(business.getBusinessReviewTitle());
-//        validate.verifyIsDisplayed(business.getBusinessReviewTitle(), "CUICE4144");
-//        click(business.getBackNavigation());
-//        validate.verifyIsDisplayed(business.getBusinessSearchTitle(), "CUICE4144");
+
 //
 //        //navigate back
 //        click(business.getBusinessSearchBoxTitle());
@@ -323,7 +247,7 @@ public class Personal_Details_Test extends Base_test{
 //        writeText(business.getAdditionalDetails(), "Additional Details");
 //        click(business.getJurisdictionOfTaxResidency());
 //        writeText(business.getCountriesList(), business.getJurisdictionCountry());
-//        clickIosTableCell();
+//        clickSpecificIosTableCell();
 //        writeText(business.getUniqueTaxReferenceNumber(), "1234567890");
 //        click(business.getNextButton());
 //        click(confirmOwnership);

@@ -98,27 +98,59 @@ public class RandomDataGenerator {
         return this.natInsuranceNumber = natInsuranceNumber;
     }
 
-    public String setEmail() {
-        String email = "email1@email.com";
+    public String setEmail(String tests, int number) {
+        String email = "";
+        Random rand = new Random();
+        int value = 0;
+        if(tests.equalsIgnoreCase("ALL")){
+            value = number;
+        } else {
+            value = rand.nextInt(6);
+        }
+        switch (value) {
+            case 0:
+                email = "email1@email.com";
+                break;
+            case 1:
+                email = setRandomValue(64, "ALPHANUMERIC")+"@email.com";
+                break;
+            case 2:
+                email = "email\"();,:<>![]@\"@email.com";
+                break;
+            case 3:
+                email = "email@"+setRandomValue(255, "ALPHANUMERIC");
+                break;
+            case 4:
+                email = "email@em-ail.com";
+                break;
+            case 5: email = "email$!@email.com";
+        }
         return this.email = email;
     }
 
-    public String setIncorrectEmail() {
+    public String setIncorrectEmail(String tests, int number) {
         String incorrectEmail = "";
         Random rand = new Random();
-        int value = rand.nextInt(6);
+        int value = 0;
+        if(tests.equalsIgnoreCase("ALL")){
+            value = number;
+        } else {
+            value = rand.nextInt(7);
+        }
         switch (value){
             case 0: incorrectEmail = "random.email";
             break;
             case 1: incorrectEmail = "random@email";
             break;
-            case 2: incorrectEmail = "random@email.c";
+            case 2: incorrectEmail = "random@email.co#";
             break;
-            case 3: incorrectEmail = "random@email.co1";
+            case 3: incorrectEmail = "@email.com";
             break;
-            case 4: incorrectEmail = "random@email.co£";
+            case 4: incorrectEmail = "email@";
             break;
-            case 5: incorrectEmail = "email$!@email.com";
+            case 5: incorrectEmail = setRandomValue(65, "ALPHANUMERIC")+"@email.com";
+            break;
+            case 6: incorrectEmail = "email@"+setRandomValue(256, "ALPHANUMERIC");
         }
         return this.incorrectEmail = incorrectEmail;
     }
@@ -141,7 +173,9 @@ public class RandomDataGenerator {
         String s;
 
         switch (type){
-            case "Numeric": s = randomNumeric(count);
+            case "NUMERIC": s = randomNumeric(count);
+            break;
+            case "ALPHABETIC": s = randomAlphabetic(count);
             break;
             default: s = randomAlphanumeric(count);
             break;
@@ -211,7 +245,7 @@ public class RandomDataGenerator {
         try {
             ExcelUtils.setExcelFile(Constants.Path_TestData + Constants.File_CountriesList, "Countries");
             int Min = 1;
-            int Max = 243;
+            int Max = 242;
             int row = Min + (int)(Math.random() * ((Max - Min) + 1));
             country = ExcelUtils.getCellData(row, 0);
         } catch (Exception e) {

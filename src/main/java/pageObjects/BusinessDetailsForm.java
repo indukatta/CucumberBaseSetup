@@ -6,6 +6,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import testData.RandomDataGenerator;
 import utils.GuiCommands;
 
 public class BusinessDetailsForm extends GuiCommands {
@@ -14,6 +15,8 @@ public class BusinessDetailsForm extends GuiCommands {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
+
+    RandomDataGenerator generator = new RandomDataGenerator();
 
     @FindBy (name = "Next")
     private MobileElement nextButton;
@@ -38,10 +41,10 @@ public class BusinessDetailsForm extends GuiCommands {
     private MobileElement tradingName;
 
     @FindBy(name = "checkbox_default.affirmative")
-    private MobileElement tradingAddressDifferentToResidential;
+    private MobileElement tradingAddressDifferentToBusiness;
 
     @FindBy(name = "checkbox_default.negative")
-    private MobileElement tradingAddressSameAsResidential;
+    private MobileElement tradingAddressSameAsBusiness;
 
     @FindBy(name = "business_details.trading_address")
     private MobileElement tradingAddressTextbox;
@@ -77,11 +80,12 @@ public class BusinessDetailsForm extends GuiCommands {
     }
 
     public boolean tradingAddressDifferentToResidentialDisplayed(){
-        return tradingAddressDifferentToResidential.isDisplayed();
+        scrollDown(tradingAddressSameAsBusiness);
+        return tradingAddressDifferentToBusiness.isDisplayed();
     }
 
     public boolean tradingAddressSameAsResidentialDisplayed(){
-        return tradingAddressSameAsResidential.isDisplayed();
+        return tradingAddressSameAsBusiness.isDisplayed();
     }
 
     public boolean isAddressLookupTitleDisplayed(){
@@ -93,7 +97,7 @@ public class BusinessDetailsForm extends GuiCommands {
     }
 
     public boolean isJurisdictionOfTaxResidencyDisplayed(){
-        return jurisdictionOfTaxResidencyTextboxTitle.isDisplayed();
+        return jurisdictionOfTaxResidencyTextboxTitle.isEnabled();
     }
 
     public boolean isUTRDisplayed(){
@@ -101,7 +105,12 @@ public class BusinessDetailsForm extends GuiCommands {
     }
 
     public boolean isTradingNameDisplayed(){
+        scrollDown(tradingName);
         return tradingName.isDisplayed();
+    }
+
+    public boolean isBusinessReviewTitleDisplayed(){
+        return businessReviewTitle.isDisplayed();
     }
 
     //Methods for elements enabled
@@ -156,7 +165,7 @@ public class BusinessDetailsForm extends GuiCommands {
 
     //Checkbox default selection
     public boolean isTradingAddressDifferentToResidentialSelected(){
-        if (CheckboxSelected(tradingAddressDifferentToResidential) == 1){
+        if (CheckboxSelected(tradingAddressDifferentToBusiness) == 1){
             return true;
         } else {
             return false;
@@ -164,7 +173,7 @@ public class BusinessDetailsForm extends GuiCommands {
     }
 
     public boolean isTradingAddressSameAsResidentialSelected(){
-        if (CheckboxSelected(tradingAddressSameAsResidential) == 1){
+        if (CheckboxSelected(tradingAddressSameAsBusiness) == 1){
             return true;
         } else {
             return false;
@@ -195,11 +204,11 @@ public class BusinessDetailsForm extends GuiCommands {
 
     //CLICK METHODS
     public void clickTradingAddressDifferentToResidential(){
-        click(tradingAddressDifferentToResidential);
+        click(tradingAddressDifferentToBusiness);
     }
 
     public void clickTradingAddressSameAsResidential(){
-        click(tradingAddressSameAsResidential);
+        click(tradingAddressSameAsBusiness);
     }
 
     public void clickJurisdictionOfTaxResidency(){
@@ -249,7 +258,17 @@ public class BusinessDetailsForm extends GuiCommands {
         scrollUp(businessReviewTitle);
     }
 
-    public void clickTableCell(String locator){
-        clickIosTableCell(locator);
+    public void clickTableCell(){
+        clickGenericIostableCell();
+    }
+
+    public void populateAllFieldsAndClickNext(){
+        click(tradingAddressSameAsBusiness);
+        writeText(additionalDetails, "Additional Details");
+        click(jurisdictionOfTaxResidency);
+        writeText(countriesList, generator.setCountry());
+        clickTableCell();
+        writeText(uniqueTaxReferenceNumber, generator.setRandomValue(10, "NUMERIC"));
+        click(nextButton);
     }
 }
