@@ -115,7 +115,7 @@ public class RandomDataGenerator {
                 email = setRandomValue(64, "ALPHANUMERIC")+"@email.com";
                 break;
             case 2:
-                email = "email\"();,:<>![]@\"@email.com";
+                email = "email@email.com";//"email\"();,:<>![]@\"@email.com";
                 break;
             case 3:
                 email = "email@"+setRandomValue(255, "ALPHANUMERIC");
@@ -148,7 +148,7 @@ public class RandomDataGenerator {
             break;
             case 4: incorrectEmail = "email@";
             break;
-            case 5: incorrectEmail = setRandomValue(65, "ALPHANUMERIC")+"@email.com";
+            case 5: incorrectEmail = setRandomValue(66, "ALPHANUMERIC")+"@email.com";
             break;
             case 6: incorrectEmail = "email@"+setRandomValue(256, "ALPHANUMERIC");
         }

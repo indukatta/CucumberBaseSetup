@@ -9,7 +9,6 @@ import utils.GuiCommands;
 
 public class PersonalDetailsForm extends GuiCommands {
 
-
     public PersonalDetailsForm(AppiumDriver driver) {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);

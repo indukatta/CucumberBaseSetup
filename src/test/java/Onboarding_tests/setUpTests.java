@@ -18,7 +18,7 @@ public class setUpTests extends Base_test {
     SoftAssert softAssert = new SoftAssert();
 
     @BeforeMethod
-    public void beforeMethod() throws Exception {
+    public void beforeMethod() {
 
         generator = new RandomDataGenerator();
         commands = new GuiCommands(driver);
@@ -38,7 +38,7 @@ public class setUpTests extends Base_test {
     @Test(priority = 2)
     public void testPhoneEntry(){
         setUp.clickPhoneNumberTextbox();
-        softAssert.assertTrue(setUp.isKeyboardDisplayed(), "");
+        softAssert.assertTrue(setUp.isKeyboardDisplayed(), "CUICE");
 
         //invalid phone entry
         setUp.writePhoneNumber("01234567890");
@@ -64,81 +64,29 @@ public class setUpTests extends Base_test {
         setUp.clickNext();
     }
 
-    @Test(priority = 3)
-    public void testEmailEntry(){
-
-        Assert.assertTrue(setUp.emailTitleDisplayed(), "");
-        softAssert.assertFalse(setUp.nextButtonEnabled(), "");
-
-        setUp.clickEmailTextbox();
-        softAssert.assertTrue(setUp.isKeyboardDisplayed(), "");
-
-        //CUICE-4346 Email Address validation - negative
-        for (int i = 0; i < 6; i++){
-            setUp.writeEmail(generator.setIncorrectEmail("ALL", i));
-            softAssert.assertFalse(setUp.nextButtonEnabled(), "CUICE-4346" + " " + i);
-
-            setUp.clearEmail();
-        }
-
-        //CUICE-4345 Email Address validation - positive
-        for (int i = 0; i < 5; i++){
-            setUp.writeEmail(generator.setEmail("ALL", i));
-            softAssert.assertTrue(setUp.nextButtonEnabled(), "CUICE-4345" + " " + i);
-
-            setUp.clearEmail();
-        }
-        setUp.clickNext();
-
-        softAssert.assertAll();
-    }
-
-//    @Test(description = "CUICE4445, CUICE4446, CUICE4447, CUICE4448, CUICE4343, CUICE4345, CUICE4346")
-//    public void phoneAndEmailTests() {
-//        setUp.clickContinue();
-//        setUp.clickConfirm();
-//        Assert.assertTrue(setUp.phoneNumberTitleDisplayed());
-//        softAssert.assertFalse(setUp.nextButtonEnabled());
+//    @Test(priority = 3)
+//    public void testEmailEntry(){
+//        Assert.assertTrue(setUp.emailTitleDisplayed(), "");
+//        softAssert.assertFalse(setUp.nextButtonEnabled(), "");
 //
-//        setUp.clickPhoneNumberTextbox();
-//        softAssert.assertTrue(setUp.isKeyboardDisplayed());
-//
-//        //invalid phone entry
-//        setUp.writePhoneNumber("01234567890");
-//
-//        softAssert.assertFalse(setUp.nextButtonEnabled());
-//        setUp.clearPhoneNumber();
-//        setUp.writePhoneNumber("+441234567890");
-//
-//        softAssert.assertFalse(setUp.nextButtonEnabled());
-//        setUp.clearPhoneNumber();
-//        setUp.writePhoneNumber("0723456789");
-//
-//        softAssert.assertFalse(setUp.nextButtonEnabled());
-//        setUp.clearPhoneNumber();
-//        setUp.writePhoneNumber("071345678901");
-//
-//        softAssert.assertFalse(setUp.nextButtonEnabled());
-//        setUp.clearPhoneNumber();
-//
-//        //valid phone entry
-//        setUp.writePhoneNumber(generator.setPhoneNumber());
-//        Assert.assertTrue(setUp.nextButtonEnabled());
-//        setUp.clickNext();
-//
-//        Assert.assertTrue(setUp.emailTitleDisplayed());
-//        softAssert.assertFalse(setUp.nextButtonEnabled());
 //        setUp.clickEmailTextbox();
-//        softAssert.assertTrue(setUp.isKeyboardDisplayed());
+//        softAssert.assertTrue(setUp.isKeyboardDisplayed(), "");
 //
 //        //CUICE-4346 Email Address validation - negative
-//        setUp.writeEmail(generator.setIncorrectEmail());
-//        softAssert.assertFalse(setUp.nextButtonEnabled());
-//        setUp.clearEmail();
+//        for (int i = 0; i < 6; i++){
+//            setUp.writeEmail(generator.setIncorrectEmail("ALL", i));
+//            softAssert.assertFalse(setUp.nextButtonEnabled(), "CUICE-4346" + " " + i);
+//
+//            setUp.clearEmail();
+//        }
 //
 //        //CUICE-4345 Email Address validation - positive
-//        setUp.writeEmail(generator.setEmail());
-//        Assert.assertTrue(setUp.nextButtonEnabled());
+//        for (int i = 0; i < 5; i++){
+//            setUp.writeEmail(generator.setEmail("ALL", i));
+//            softAssert.assertTrue(setUp.nextButtonEnabled(), "CUICE-4345" + " " + i);
+//
+//            setUp.clearEmail();
+//        }
 //        setUp.clickNext();
 //
 //        softAssert.assertAll();

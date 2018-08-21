@@ -6,17 +6,21 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import testData.RandomDataGenerator;
 import utils.GuiCommands;
 
 public class BusinessDetailsForm extends GuiCommands {
 
+    RandomDataGenerator generator = new RandomDataGenerator();
+    SetUp setUp = new SetUp(driver);
+    BusinessSearch businessSearch = new BusinessSearch(driver);
+
     public BusinessDetailsForm(AppiumDriver driver) {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
-
-    RandomDataGenerator generator = new RandomDataGenerator();
 
     @FindBy (name = "Next")
     private MobileElement nextButton;
@@ -73,6 +77,9 @@ public class BusinessDetailsForm extends GuiCommands {
     @FindBy(name = "address_search.search_field_title")
     private MobileElement addressSearchTexbox;
 
+    @FindBy(name = "search exit button")
+    private MobileElement countrySearchExitButton;
+
 
     //Methods for elements displayed?
     public boolean businessReviewTitleDisplayed(){
@@ -126,6 +133,10 @@ public class BusinessDetailsForm extends GuiCommands {
         return businessAddress.isEnabled();
     }
 
+    public boolean isSicCodeEnabled(){
+        return businessActivity.isEnabled();
+    }
+
     public boolean isTradingAddressEnabled(){
         return tradingAddressTextbox.isEnabled();
     }
@@ -134,50 +145,9 @@ public class BusinessDetailsForm extends GuiCommands {
         return nextButton.isEnabled();
     }
 
-    //getters
-    public String getOwnersName(){
-        return readText(beneficialOwner);
-    }
-
-    public String getBusinessName(){
-        return readText(businessName);
-    }
-
-    public String getBusinessAddress(){
-        return readText(businessAddress);
-    }
-
-    public String getTradingAddress(){
-        return readText(tradingAddressTextbox);
-    }
-
-    public String getUTR() {
-        return readText(uniqueTaxReferenceNumber);
-    }
-
-    public String getTradingName(){
-        return readText(tradingName);
-    }
-
-    public String getJurisdictionOfTaxResidency(){
-        return readText(jurisdictionOfTaxResidency);
-    }
-
     //Checkbox default selection
-    public boolean isTradingAddressDifferentToResidentialSelected(){
-        if (CheckboxSelected(tradingAddressDifferentToBusiness) == 1){
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public boolean isTradingAddressSameAsResidentialSelected(){
-        if (CheckboxSelected(tradingAddressSameAsBusiness) == 1){
-            return true;
-        } else {
-            return false;
-        }
+    public boolean noDefaultCheckboxSelection(){
+        return CheckboxSelected(tradingAddressDifferentToBusiness) != 1 && CheckboxSelected(tradingAddressSameAsBusiness) != 1;
     }
 
     //WRITE METHODS
@@ -215,20 +185,12 @@ public class BusinessDetailsForm extends GuiCommands {
         click(jurisdictionOfTaxResidency);
     }
 
-    public void clickUTR(){
-        click(uniqueTaxReferenceNumber);
-    }
-
-    public void clickTradingName(){
-        click(tradingName);
-    }
-
-    public void clickBackNavigation(){
-        click(backNavigation);
-    }
-
     public void clickNextButton(){
         click(nextButton);
+    }
+
+    public void clickCountrySearchExitButton(){
+        click(countrySearchExitButton);
     }
 
     //CUSTOM METHODS
@@ -250,25 +212,94 @@ public class BusinessDetailsForm extends GuiCommands {
         return doesKeyboardExist();
     }
 
-    public void scrollDownToBottom(){
-        scrollDown(uniqueTaxReferenceNumber);
-    }
 
-    public void scrollUpToTop(){
-        scrollUp(businessReviewTitle);
-    }
-
-    public void clickTableCell(){
-        clickGenericIostableCell();
-    }
 
     public void populateAllFieldsAndClickNext(){
         click(tradingAddressSameAsBusiness);
         writeText(additionalDetails, "Additional Details");
         click(jurisdictionOfTaxResidency);
         writeText(countriesList, generator.setCountry());
-        clickTableCell();
+        clickGenericIostableCell();
         writeText(uniqueTaxReferenceNumber, generator.setRandomValue(10, "NUMERIC"));
         click(nextButton);
+    }
+
+    public boolean navigateToBusinessDetails(){
+        setUp.passThroughSetUp();
+        businessSearch.passThroughBusinessSearch();
+        return isBusinessReviewTitleDisplayed();
+    }
+
+    public boolean prePopulatedInformationNotEditible(){
+        boolean owner = isOwnersNameTextboxEnabled();
+        boolean name = isBusinessNameTextboxEnabled();
+        boolean address = isBusinessAddressTextboxEnabled();
+        scrollDown(businessActivity);
+        boolean sic = isSicCodeEnabled();
+        scrollUp(businessReviewTitle);
+        return owner && name && address && sic;
+    }
+
+    public boolean tradingAddressSameAsRegisteredBusinessAddress(){
+        scrollDown(tradingAddressSameAsBusiness);
+        click(tradingAddressSameAsBusiness);
+        return readText(businessAddress).equalsIgnoreCase(readText(tradingAddressTextbox));
+    }
+
+    public boolean tradingAddressDifferentFromRegisteredBusinessAddress(){
+        scrollDown(tradingAddressDifferentToBusiness);
+        click(tradingAddressDifferentToBusiness);
+        writeText(addressSearchTexbox, "3B475BP");
+        clickGenericIostableCell();
+        return readText(businessAddress).equalsIgnoreCase("Wiremock Barn, Wiremark Lane\nStoke Prior\n" +
+                "Bromsgrove\nB60 4BH\nUnited Kingdom");
+    }
+
+    public boolean jurisdictionOfTaxResidencyNoCountryFound(){
+        scrollDown(jurisdictionOfTaxResidency);
+        click(jurisdictionOfTaxResidency);
+        boolean keyboard = isKeyboardVisible();
+        writeCountry("Not a country");
+        return IosTableCellCount() == 0 && keyboard;
+    }
+
+    public boolean jurisdictionOfTaxResidencyDynamicList(){
+        scrollDown(jurisdictionOfTaxResidency);
+        click(jurisdictionOfTaxResidency);
+        writeCountry("United");
+        String countOne = String.valueOf(IosTableCellCount());
+        writeCountry(" Kingdom");
+        new WebDriverWait(driver, 2).until(ExpectedConditions.invisibilityOfElementLocated(By.name("United States")));
+        String countTwo = String.valueOf(IosTableCellCount());
+        return !countOne.equals(countTwo);
+    }
+
+    public boolean jurisdictionOfTaxResidencySelectCountry(){
+        clearCountry();
+        String country = generator.setCountry();
+        writeCountry(country);
+        clickGenericIostableCell();
+        return readText(jurisdictionOfTaxResidency).equals(country);
+    }
+
+    public boolean uniqueTaxReferenceNumber(){
+        scrollDown(uniqueTaxReferenceNumber);
+        String random = generator.setRandomValue(9, "NUMERIC");
+        writeText(uniqueTaxReferenceNumber, random);
+        boolean nextButtonDisabled = !isNextButtonEnabled();
+        writeText(uniqueTaxReferenceNumber, "01");
+        boolean utrNumberLength = readText(uniqueTaxReferenceNumber).equals(random + "0");
+        boolean nextButtonEnabled  = isNextButtonEnabled();
+        return nextButtonDisabled && utrNumberLength && nextButtonEnabled;
+    }
+
+    public boolean additionalDetails(){
+        scrollUp(additionalDetails);
+        clearText(additionalDetails);
+        boolean nextButton = isNextButtonEnabled();
+        writeText(additionalDetails, "Additional Details");
+        boolean adttionalDetailsText = readText(additionalDetails).equals("Additional Details");
+        boolean button = isNextButtonEnabled();
+        return nextButton && adttionalDetailsText && button;
     }
 }
