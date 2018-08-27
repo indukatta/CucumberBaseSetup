@@ -44,10 +44,10 @@ public class BusinessDetailsForm extends GuiCommands {
     @FindBy(name = "business_details.trading_name")
     private MobileElement tradingName;
 
-    @FindBy(name = "radio_button_default.affirmative")
+    @FindBy(name = "radio_buttons_view_default.affirmative")
     private MobileElement tradingAddressDifferentToBusiness;
 
-    @FindBy(name = "radio_button_default.negative")
+    @FindBy(name = "radio_buttons_view_default.negative")
     private MobileElement tradingAddressSameAsBusiness;
 
     @FindBy(name = "business_details.trading_address")
