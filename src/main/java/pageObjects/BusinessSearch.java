@@ -2,6 +2,7 @@ package pageObjects;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -15,7 +16,7 @@ public class BusinessSearch extends GuiCommands {
 
     private SetUp setup = new SetUp(driver);
 
-    public BusinessSearch(AppiumDriver driver) {
+    public BusinessSearch(IOSDriver driver) {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
@@ -97,15 +98,20 @@ public class BusinessSearch extends GuiCommands {
         clickSpecificIosTableCell(locator);
     }
 
-    public boolean navigateToBusinessSearch(){
+    public void navigateToBusinessSearch(){
         setup.passThroughSetUp();
         click(nextButton);
-        return businessSearchTitleDisplayed();
+    }
+
+    public boolean businessSearchKeyboard(){
+        navigateToBusinessSearch();
+        clickBusinessSearchBoxTitle();
+        return doesKeyboardExist();
     }
 
     public boolean searchByBusinessName(){
         //CUICE-3979 LOOKUP MY BUSINESS - Search by Business Name
-        clickNextButton();
+        navigateToBusinessSearch();
 
         writeBusinessTitle("GLAZE");
         if (IosTableCellCount() == 0){
@@ -113,7 +119,6 @@ public class BusinessSearch extends GuiCommands {
         }
         String countOne = String.valueOf(IosTableCellCount());
         writeBusinessTitle(" LIMITED");
-        //new WebDriverWait(driver, 1).until(ExpectedConditions.invisibilityOfElementLocated(By.name("ZX EVENTS LTD")));
 
         if (IosTableCellCount() == 0) {
             return false;
@@ -130,6 +135,7 @@ public class BusinessSearch extends GuiCommands {
     }
 
     public boolean searchByRegistrationNumber(){
+        navigateToBusinessSearch();
         writeBusinessTitle("054");
         if (IosTableCellCount() == 0){
             return false;
@@ -155,11 +161,13 @@ public class BusinessSearch extends GuiCommands {
 
     public boolean noBussinessFoundSearchByBusinessName(){
         //CUICE-3981 LOOKUP MY BUSINESS - Search by business name - no business found
+        navigateToBusinessSearch();
         writeBusinessTitle("noresults");
         return noBusinessFoundErrorDisplayed();
     }
 
     public boolean noBussinessFoundErrorSearchByBusinessNumber(){
+        navigateToBusinessSearch();
         try {
             //CUICE-3982 LOOKUP MY BUSINESS - Search by company reg number - no business found
             writeBusinessTitle("01234567");
@@ -170,31 +178,44 @@ public class BusinessSearch extends GuiCommands {
     }
 
     public boolean cancelSearch(){
+        navigateToBusinessSearch();
+        clickBusinessSearchBoxTitle();
         clickSearchExitButton();
         return businessSearchTitleDisplayed();
     }
 
     public boolean selectionOfCompanyByBusinessName(){
         //CUICE-3995 - LOOKUP MY BUSINESS - Selection of company
+        navigateToBusinessSearch();
         clickBusinessSearchBoxTitle();
         writeBusinessTitle("GLAZE LIMITED");
         clickGenericIostableCell();
 
         //check results are returned
         boolean owner = readText(beneficialOwner).equalsIgnoreCase("Mr Robert Elwell");
-        boolean name = readText(businessName).equalsIgnoreCase("Glaze Limited");
-        boolean address = readText(businessAddress).equalsIgnoreCase("89 King Street\nMaidstone\nME14 1BG\nUnited Kingdom");
 
-        return owner && name && address;
+        return owner;
     }
 
     public boolean selectionOfCompanyByBusinessRegNumber(){
         //CUICE-3995 - LOOKUP MY BUSINESS - Selection of company
+        navigateToBusinessSearch();
         clickBusinessSearchBoxTitle();
         writeBusinessTitle("05717355");
         clickGenericIostableCell();
 
         //check results are returned
+        boolean owner = readText(beneficialOwner).equalsIgnoreCase("Mr Robert Elwell");
+
+
+        return owner;
+    }
+
+    public boolean isBusinessInformationDisplayed(){
+        navigateToBusinessSearch();
+        clickBusinessSearchBoxTitle();
+        writeBusinessTitle("GLAZE LIMITED");
+        clickGenericIostableCell();
         boolean owner = readText(beneficialOwner).equalsIgnoreCase("Mr Robert Elwell");
         boolean name = readText(businessName).equalsIgnoreCase("Glaze Limited");
         boolean address = readText(businessAddress).equalsIgnoreCase("89 King Street\nMaidstone\nME14 1BG\nUnited Kingdom");
@@ -206,6 +227,6 @@ public class BusinessSearch extends GuiCommands {
         clickNextButton();
         clickBusinessSearchBoxTitle();
         writeBusinessTitle("05717355");
-        clickSpecificIosTableCell("GLAZE LIMITED");
+        clickGenericIostableCell();
     }
 }

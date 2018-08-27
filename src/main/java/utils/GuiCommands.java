@@ -3,6 +3,7 @@ package utils;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
@@ -19,10 +20,10 @@ import java.util.List;
 
 public class GuiCommands {
 
-    public AppiumDriver driver;
+    public IOSDriver driver;
 
     //Constructor
-    public GuiCommands(AppiumDriver driver){
+    public GuiCommands(IOSDriver driver){
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }

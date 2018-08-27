@@ -1,15 +1,12 @@
 package Onboarding_tests;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
+import io.appium.java_client.ios.IOSDriver;
 import org.apache.commons.io.FileUtils;
-import org.aspectj.lang.annotation.After;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.ITestNGListener;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 
@@ -24,11 +21,12 @@ import java.util.concurrent.TimeUnit;
 
 public class Base_test {
 
-    AppiumDriver driver;
+    IOSDriver driver;
     String folder;
+    String recordings;
     DateFormat df;
 
-    @BeforeTest
+    @BeforeMethod
     public void setUp() throws MalformedURLException {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -39,16 +37,16 @@ public class Base_test {
                 "/Users/awhitten/Library/Developer/Xcode/DerivedData/Iceberg-dmdimcbnvyefcdajhivuraigymun/Build" +
                         "/Products/Debug-iphonesimulator/Iceberg.app");
 
-        driver = new AppiumDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
 
-    @AfterTest
+    @AfterMethod()
     public void takeScreenShot(){
         folder = "screenshots";
         File file = driver.getScreenshotAs(OutputType.FILE);
 
-        df = new SimpleDateFormat("dd-mm-yyyy_hh_mm_ss");
+        df = new SimpleDateFormat("dd-MM-yyyy_hh_mm_ss");
 
         new File(folder).mkdir();
 

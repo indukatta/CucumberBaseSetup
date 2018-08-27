@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Onboarding">
+    <!--<listeners>-->
+        <!--<listener class-name="org.uncommons.reportng.HTMLReporter"/>-->
+        <!--<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>-->
+    <!--</listeners>-->
+    <test name="Set Up Test">
+        <classes>
+            <class name= "Onboarding_tests.SetUpTests"/>
+        </classes>
+    </test>
+    <test name="Business Search Tests">
+        <classes>
+            <class name="Onboarding_tests.businessSearchTests"/>
+        </classes>
+    </test>
+    <test name="Business Form Tests">
+        <classes>
+            <class name="Onboarding_tests.businessFormTests"/>
+        </classes>
+    </test>
+    <test name="Personal Details Tests">
+        <classes>
+            <class name="Onboarding_tests.personalDetailsTests"/>
+        </classes>
+    </test>
+</suite>

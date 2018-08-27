@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Onboarding]">
+  <test thread-count="5" name="Set Up Test(failed)">
+    <classes>
+      <class name="Onboarding_tests.SetUpTests">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="takeScreenShot"/>
+          <include name="CUICE4346"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Onboarding_tests.SetUpTests -->
+    </classes>
+  </test> <!-- Set Up Test(failed) -->
+  <test thread-count="5" name="Business Form Tests(failed)">
+    <classes>
+      <class name="Onboarding_tests.businessFormTests">
+        <methods>
+          <include name="CUICE4585"/>
+          <include name="CUICE4583"/>
+          <include name="CUICE4584"/>
+          <include name="CUICE5160"/>
+          <include name="takeScreenShot"/>
+          <include name="CUICE4353ANDCUICE4354"/>
+          <include name="CUICE4581"/>
+          <include name="setUp"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- Onboarding_tests.businessFormTests -->
+    </classes>
+  </test> <!-- Business Form Tests(failed) -->
+  <test thread-count="5" name="Personal Details Tests(failed)">
+    <classes>
+      <class name="Onboarding_tests.personalDetailsTests">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="CUICE4141"/>
+          <include name="takeScreenShot"/>
+          <include name="CUICE4142"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Onboarding_tests.personalDetailsTests -->
+    </classes>
+  </test> <!-- Personal Details Tests(failed) -->
+</suite> <!-- Failed suite [Onboarding] -->

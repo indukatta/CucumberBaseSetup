@@ -2,14 +2,21 @@ package pageObjects;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import testData.RandomDataGenerator;
 import utils.GuiCommands;
 
 public class PersonalDetailsForm extends GuiCommands {
 
-    public PersonalDetailsForm(AppiumDriver driver) {
+    RandomDataGenerator generator = new RandomDataGenerator();
+    SetUp setUp = new SetUp(driver);
+    BusinessSearch businessSearch = new BusinessSearch(driver);
+    BusinessDetailsForm businessDetailsForm = new BusinessDetailsForm(driver);
+
+    public PersonalDetailsForm(IOSDriver driver) {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
@@ -17,10 +24,10 @@ public class PersonalDetailsForm extends GuiCommands {
     @FindBy(name = "Ownership")
     private MobileElement ownerShipTitle;
 
-    @FindBy(name = "Yes, I confirm")
+    @FindBy(name = "ownership_confirmation.accept")
     private MobileElement confirmOwnership;
 
-    @FindBy(name = "No, I cannot confirm")
+    @FindBy(name = "ownership_confirmation.decline")
     private MobileElement unconfirmedOwnership;
 
     @FindBy(name = "About you & your business")
@@ -86,7 +93,7 @@ public class PersonalDetailsForm extends GuiCommands {
     @FindBy(name = "Business Details")
     private MobileElement backToOwnershipScreen;
 
-    @FindBy (name = "Back")
+    @FindBy (id = "You and your business")
     private MobileElement backToCompanyReview;
 
     @FindBy (name = "Done")
@@ -180,6 +187,43 @@ public class PersonalDetailsForm extends GuiCommands {
 
     public void clickBackToBusinessDetails(){
         click(backToCompanyReview);
+    }
+
+    public void naviagateToPersonalDetailsForm(){
+        businessDetailsForm.passThroughBusinessDetailsForm();
+        click(confirmOwnership);
+    }
+
+    public boolean personalDetailsNotEditible(){
+        naviagateToPersonalDetailsForm();
+        boolean one = !personTitle.isEnabled();
+        boolean two = !personFirstName.isEnabled();
+        boolean three = !personLastName.isEnabled();
+        return one && two && three;
+    }
+
+    public boolean personalDetailsDisplayed(){
+        naviagateToPersonalDetailsForm();
+        boolean one = personTitle.isDisplayed();
+        boolean two = personFirstName.isDisplayed();
+        boolean three = personLastName.isDisplayed();
+        return one && two && three;
+    }
+
+    public boolean navigateBackToBusinessSearch(){
+        naviagateToPersonalDetailsForm();
+        click(backToOwnershipScreen);
+        click(backToCompanyReview);
+        businessDetailsForm.scrollToTopOfPage();
+        boolean one = businessDetailsForm.businessReviewTitleDisplayed();
+        businessDetailsForm.clickBackNavigation();
+        boolean two = businessSearch.businessSearchTitleDisplayed();
+        return one && two;
+    }
+
+    public void tradingNameDisplayed(){
+        naviagateToPersonalDetailsForm();
+
     }
 
     public String getPersonIdType(){

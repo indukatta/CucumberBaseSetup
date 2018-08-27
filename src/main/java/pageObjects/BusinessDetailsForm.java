@@ -1,7 +1,7 @@
 package pageObjects;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
@@ -17,7 +17,7 @@ public class BusinessDetailsForm extends GuiCommands {
     SetUp setUp = new SetUp(driver);
     BusinessSearch businessSearch = new BusinessSearch(driver);
 
-    public BusinessDetailsForm(AppiumDriver driver) {
+    public BusinessDetailsForm(IOSDriver driver) {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
@@ -25,7 +25,7 @@ public class BusinessDetailsForm extends GuiCommands {
     @FindBy (name = "Next")
     private MobileElement nextButton;
 
-    @FindBy(name = "You and your business")
+    @FindBy(xpath = "//XCUIElementTypeButton[@name=\"You and your business\"]")//FIXME get accessibility id
     private MobileElement backNavigation;
 
     @FindBy(name = "Review and confirm your details. " +
@@ -44,10 +44,10 @@ public class BusinessDetailsForm extends GuiCommands {
     @FindBy(name = "business_details.trading_name")
     private MobileElement tradingName;
 
-    @FindBy(name = "checkbox_default.affirmative")
+    @FindBy(name = "radio_button_default.affirmative")
     private MobileElement tradingAddressDifferentToBusiness;
 
-    @FindBy(name = "checkbox_default.negative")
+    @FindBy(name = "radio_button_default.negative")
     private MobileElement tradingAddressSameAsBusiness;
 
     @FindBy(name = "business_details.trading_address")
@@ -80,7 +80,6 @@ public class BusinessDetailsForm extends GuiCommands {
     @FindBy(name = "search exit button")
     private MobileElement countrySearchExitButton;
 
-
     //Methods for elements displayed?
     public boolean businessReviewTitleDisplayed(){
         return businessReviewTitle.isDisplayed();
@@ -101,10 +100,6 @@ public class BusinessDetailsForm extends GuiCommands {
 
     public boolean isAddressLookupSearchDisplayed(){
         return addressSearchTexbox.isDisplayed();
-    }
-
-    public boolean isJurisdictionOfTaxResidencyDisplayed(){
-        return jurisdictionOfTaxResidencyTextboxTitle.isEnabled();
     }
 
     public boolean isUTRDisplayed(){
@@ -147,6 +142,7 @@ public class BusinessDetailsForm extends GuiCommands {
 
     //Checkbox default selection
     public boolean noDefaultCheckboxSelection(){
+        navigateToBusinessDetails();
         return CheckboxSelected(tradingAddressDifferentToBusiness) != 1 && CheckboxSelected(tradingAddressSameAsBusiness) != 1;
     }
 
@@ -212,8 +208,6 @@ public class BusinessDetailsForm extends GuiCommands {
         return doesKeyboardExist();
     }
 
-
-
     public void populateAllFieldsAndClickNext(){
         click(tradingAddressSameAsBusiness);
         writeText(additionalDetails, "Additional Details");
@@ -224,29 +218,27 @@ public class BusinessDetailsForm extends GuiCommands {
         click(nextButton);
     }
 
-    public boolean navigateToBusinessDetails(){
+    public void navigateToBusinessDetails(){
         setUp.passThroughSetUp();
         businessSearch.passThroughBusinessSearch();
-        return isBusinessReviewTitleDisplayed();
     }
 
     public boolean prePopulatedInformationNotEditible(){
-        boolean owner = isOwnersNameTextboxEnabled();
-        boolean name = isBusinessNameTextboxEnabled();
-        boolean address = isBusinessAddressTextboxEnabled();
-        scrollDown(businessActivity);
-        boolean sic = isSicCodeEnabled();
-        scrollUp(businessReviewTitle);
-        return owner && name && address && sic;
+        navigateToBusinessDetails();
+        boolean owner = !isOwnersNameTextboxEnabled();
+        boolean name = !isBusinessNameTextboxEnabled();
+        return owner && name;
     }
 
     public boolean tradingAddressSameAsRegisteredBusinessAddress(){
+        navigateToBusinessDetails();
         scrollDown(tradingAddressSameAsBusiness);
         click(tradingAddressSameAsBusiness);
         return readText(businessAddress).equalsIgnoreCase(readText(tradingAddressTextbox));
     }
 
     public boolean tradingAddressDifferentFromRegisteredBusinessAddress(){
+        navigateToBusinessDetails();
         scrollDown(tradingAddressDifferentToBusiness);
         click(tradingAddressDifferentToBusiness);
         writeText(addressSearchTexbox, "3B475BP");
@@ -255,15 +247,37 @@ public class BusinessDetailsForm extends GuiCommands {
                 "Bromsgrove\nB60 4BH\nUnited Kingdom");
     }
 
-    public boolean jurisdictionOfTaxResidencyNoCountryFound(){
+    public boolean addressNotFound(){
+        navigateToBusinessDetails();
+        scrollDown(tradingAddressDifferentToBusiness);
+        click(tradingAddressDifferentToBusiness);
+        writeText(addressSearchTexbox, "BT9012F");
+        return false; //FIXME Needs error message
+    }
+
+    public boolean jurisdictionOfTaxResidencyDisplayed(){
+        navigateToBusinessDetails();
+        scrollDown(jurisdictionOfTaxResidency);
+        return jurisdictionOfTaxResidency.isDisplayed();
+    }
+
+    public boolean jurisdictionOfTaxResidencykeyboardVisible(){
+        navigateToBusinessDetails();
         scrollDown(jurisdictionOfTaxResidency);
         click(jurisdictionOfTaxResidency);
-        boolean keyboard = isKeyboardVisible();
+        return isKeyboardVisible();
+    }
+
+    public boolean jurisdictionOfTaxResidencyNoCountryFound(){
+        navigateToBusinessDetails();
+        scrollDown(jurisdictionOfTaxResidency);
+        click(jurisdictionOfTaxResidency);
         writeCountry("Not a country");
-        return IosTableCellCount() == 0 && keyboard;
+        return IosTableCellCount() == 0;
     }
 
     public boolean jurisdictionOfTaxResidencyDynamicList(){
+        navigateToBusinessDetails();
         scrollDown(jurisdictionOfTaxResidency);
         click(jurisdictionOfTaxResidency);
         writeCountry("United");
@@ -271,10 +285,13 @@ public class BusinessDetailsForm extends GuiCommands {
         writeCountry(" Kingdom");
         new WebDriverWait(driver, 2).until(ExpectedConditions.invisibilityOfElementLocated(By.name("United States")));
         String countTwo = String.valueOf(IosTableCellCount());
+        click(countrySearchExitButton);
         return !countOne.equals(countTwo);
     }
 
     public boolean jurisdictionOfTaxResidencySelectCountry(){
+        scrollDown(jurisdictionOfTaxResidency);
+        click(jurisdictionOfTaxResidency);
         clearCountry();
         String country = generator.setCountry();
         writeCountry(country);
@@ -282,7 +299,26 @@ public class BusinessDetailsForm extends GuiCommands {
         return readText(jurisdictionOfTaxResidency).equals(country);
     }
 
-    public boolean uniqueTaxReferenceNumber(){
+    public boolean uniqueTaxReferenceNumberDisplayed(){
+        navigateToBusinessDetails();
+        scrollDown(uniqueTaxReferenceNumber);
+        return uniqueTaxReferenceNumber.isDisplayed();
+    }
+
+    public boolean uniqueTaxReferenceNumberKeyboard(){
+        navigateToBusinessDetails();
+        scrollDown(uniqueTaxReferenceNumber);
+        click(uniqueTaxReferenceNumber);
+        return isKeyboardVisible();
+    }
+
+    public boolean uniqueTaxReferenceNumberValidation(){
+        navigateToBusinessDetails();
+        click(tradingAddressSameAsBusiness);
+        scrollDown(additionalDetails);
+        writeText(additionalDetails, "Additional Details");
+        scrollDown(jurisdictionOfTaxResidency);
+        jurisdictionOfTaxResidencySelectCountry();
         scrollDown(uniqueTaxReferenceNumber);
         String random = generator.setRandomValue(9, "NUMERIC");
         writeText(uniqueTaxReferenceNumber, random);
@@ -293,13 +329,81 @@ public class BusinessDetailsForm extends GuiCommands {
         return nextButtonDisabled && utrNumberLength && nextButtonEnabled;
     }
 
-    public boolean additionalDetails(){
+    public void populateFieldsExceptAdditionalDetails(){
+        navigateToBusinessDetails();
+        scrollDown(tradingAddressSameAsBusiness);
+        click(tradingAddressSameAsBusiness);
+        scrollDown(jurisdictionOfTaxResidency);
+        jurisdictionOfTaxResidencySelectCountry();
+        scrollDown(uniqueTaxReferenceNumber);
+        writeText(uniqueTaxReferenceNumber, generator.setRandomValue(10, "NUMERIC"));
         scrollUp(additionalDetails);
+    }
+
+    public boolean additionalDetailsDisplayed(){
+        navigateToBusinessDetails();
+        scrollDown(additionalDetails);
+        return additionalDetails.isDisplayed();
+    }
+
+    public boolean additionalDetailsKeyboard(){
+        navigateToBusinessDetails();
+        scrollDown(additionalDetails);
+        click(additionalDetails);
+        return isKeyboardVisible();
+    }
+
+    public boolean additionalDetailsNoCharacters(){
+        populateFieldsExceptAdditionalDetails();
+        scrollDown(additionalDetails);
         clearText(additionalDetails);
-        boolean nextButton = isNextButtonEnabled();
-        writeText(additionalDetails, "Additional Details");
-        boolean adttionalDetailsText = readText(additionalDetails).equals("Additional Details");
+        return !isNextButtonEnabled();
+    }
+
+    public boolean additionalDetailsLessThanTwoCharacters(){
+        writeText(additionalDetails, "A");
+        boolean addtionalDetailsText = readText(additionalDetails).equals("A");
+        boolean button = !isNextButtonEnabled();
+        clearText(additionalDetails);
+        return addtionalDetailsText && button;
+    }
+
+    public boolean additionalDetailsMoreThan255Characters(){
+        writeText(additionalDetails, generator.setRandomValue(254, "ALPHANUMERIC"));
+        String one = readText(additionalDetails);
+        writeText(additionalDetails, "01");
+        boolean addtionalDetailsText = readText(additionalDetails).equals(one + "0");
         boolean button = isNextButtonEnabled();
-        return nextButton && adttionalDetailsText && button;
+        clearText(additionalDetails);
+        return addtionalDetailsText && button;
+    }
+
+    public boolean additionalDetailsValidEntry(){
+        writeText(additionalDetails, "01");
+        boolean buttonOne = isNextButtonEnabled();
+        clearText(additionalDetails);
+        writeText(additionalDetails, generator.setRandomValue(255, "ALPHANUMERIC"));
+        boolean buttonTwo = isNextButtonEnabled();
+        return buttonOne && buttonTwo;
+    }
+
+    public void passThroughBusinessDetailsForm(){
+        navigateToBusinessDetails();
+        click(tradingAddressSameAsBusiness);
+        scrollDown(additionalDetails);
+        writeText(additionalDetails, "Additional Details");
+        scrollDown(jurisdictionOfTaxResidency);
+        jurisdictionOfTaxResidencySelectCountry();
+        scrollDown(uniqueTaxReferenceNumber);
+        writeText(uniqueTaxReferenceNumber, generator.setRandomValue(10, "NUMERIC"));
+        click(nextButton);
+    }
+
+    public void scrollToTopOfPage(){
+        scrollUp(businessReviewTitle);
+    }
+
+    public void clickBackNavigation(){
+        click(backNavigation);
     }
 }

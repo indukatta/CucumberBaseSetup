@@ -34,20 +34,6 @@ public class RandomDataGenerator {
     private String phoneNumber;
     private String randomValue;
 
-    public String setTitle() {
-        String title = faker.name().prefix();
-        return this.title = title;
-    }
-
-    public String setFirstName() {
-        String firstName = faker.name().firstName();
-        return this.firstName = firstName;
-    }
-
-    public String setLastName() {
-        String lastName = faker.name().lastName();
-        return this.lastName = lastName;
-    }
 
     public HashMap<String, String> setDOB() {
         Date DOB = faker.date().birthday(18, 100);
@@ -118,7 +104,7 @@ public class RandomDataGenerator {
                 email = "email@email.com";//"email\"();,:<>![]@\"@email.com";
                 break;
             case 3:
-                email = "email@"+setRandomValue(255, "ALPHANUMERIC");
+                email = "email@"+setRandomValue(252, "ALPHANUMERIC")+".com";
                 break;
             case 4:
                 email = "email@em-ail.com";
@@ -182,54 +168,6 @@ public class RandomDataGenerator {
         }
 
         return this.randomValue = s;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getFirstName(){
-        return firstName;
-    }
-
-    public String getLastName(){
-        return lastName;
-    }
-
-    public HashMap<String, String> getDOB(){
-        return DOB;
-    }
-
-    public String getNationality() {
-        return nationality;
-    }
-
-    public String getIdType() {
-        return idType;
-    }
-
-    public String getIdNumber() {
-        return idNumber;
-    }
-
-    public String getTaxNumber() {
-        return taxNumber;
-    }
-
-    public String getNatInsuranceNumber() {
-        return natInsuranceNumber;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getIncorrectEmail() {
-        return incorrectEmail;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
     }
 
     public String getRandomValue() {
