@@ -12,7 +12,6 @@ import utils.GuiCommands;
 public class PersonalDetailsForm extends GuiCommands {
 
     RandomDataGenerator generator = new RandomDataGenerator();
-    SetUp setUp = new SetUp(driver);
     BusinessSearch businessSearch = new BusinessSearch(driver);
     BusinessDetailsForm businessDetailsForm = new BusinessDetailsForm(driver);
 
@@ -96,98 +95,15 @@ public class PersonalDetailsForm extends GuiCommands {
     @FindBy (id = "You and your business")
     private MobileElement backToCompanyReview;
 
-    @FindBy (name = "Done")
+    @FindBy (name = "toolbar_done")
     private MobileElement pickerWheelDone;
 
-    //Steps
-    public boolean isOwnershipTitleDisplayed(){
-        return ownerShipTitle.isDisplayed();
-    }
+    @FindBy (name = "country_search.search_field_title")
+    private MobileElement countrySearch;
 
-    public void clickConfirmOwnership(){
-        click(confirmOwnership);
-    }
+    @FindBy (name = "next_button_default_title")
+    private MobileElement nextButton;
 
-    public boolean isPersonalDetailsTitlePageDisplayed(){
-        return personalDetailsPageTitle.isDisplayed();
-    }
-
-    public boolean isJurisdictionOfTaxResidencyDisplayed(){
-        scrollDown(personJurisdictionOfTaxResidency);
-        return personJurisdictionOfTaxResidency.isDisplayed();
-    }
-
-    public void clickJurisdictionOfTaxResidency(){
-        click(personJurisdictionOfTaxResidency);
-    }
-
-    public String getPersonJurisdictionOfTaxResidency(){
-        return readText(personJurisdictionOfTaxResidency);
-    }
-
-    public void confirmOwnership(){
-        click(confirmOwnership);
-    }
-
-    public void writePersonTitle(String title){
-        writeText(personTitle, title);
-    }
-
-    public String getPersonTitle(){
-        return readText(personTitle);
-    }
-
-    public boolean isPersonTitleEnabled(){
-        return personTitle.isEnabled();
-    }
-
-    public void writePersonFirstName(String firstName){
-        writeText(personFirstName, firstName);
-    }
-
-    public String getPersonFirstName(){
-        return readText(personFirstName);
-    }
-
-    public boolean isPersonFirstNameEnabled(){
-        return personFirstName.isEnabled();
-    }
-
-    public void writePersonLastName(String lastName){
-        writeText(personLastName, lastName);
-    }
-
-    public String getPersonLastName(){
-        return readText(personLastName);
-    }
-
-    public boolean isPersonLastNameEnabled(){
-        return personLastName.isEnabled();
-    }
-
-    public void clickNameChangedYes(){
-        click(personNameChangedYes);
-    }
-
-    public String getPersonDOB(){
-        return readText(personDOB);
-    }
-
-    public boolean isPersonDOBEnabled(){
-        return personDOB.isEnabled();
-    }
-
-    public String getPersonNationality(){
-        return readText(personNationality);
-    }
-
-    public boolean isPersonNationalityEnabled(){
-        return personNationality.isEnabled();
-    }
-
-    public void clickBackToBusinessDetails(){
-        click(backToCompanyReview);
-    }
 
     public void naviagateToPersonalDetailsForm(){
         businessDetailsForm.passThroughBusinessDetailsForm();
@@ -221,25 +137,20 @@ public class PersonalDetailsForm extends GuiCommands {
         return one && two;
     }
 
-    public void tradingNameDisplayed(){
+    public void passThroughPersonalDetailsForm(){
         naviagateToPersonalDetailsForm();
-
-    }
-
-    public String getPersonIdType(){
-        return readText(personIdType);
-    }
-
-    public void selectIdType(String choice){
-        IosPickerWheel(personIdType, choice);
-    }
-
-    public boolean isGovernmentIdTypeDisplayed(){
-        scrollDown(personIdType);
-        return personIdType.isDisplayed();
-    }
-
-    public void pickerWheelDone(){
+        click(confirmOwnership);
+        click(personNameChangedNo);
+        click(personDOB);
         click(pickerWheelDone);
+        click(personBusinessAndResidentialEqualYes);
+        click(personDualNationalNo);
+        writeText(personNationalInsuranceNumber, "JC123456Y");
+        click(personIdType);
+        click(pickerWheelDone);
+        writeText(personIdNumber, "1234567890");
+        click(personJurisdictionOfTaxResidency);
+        writeText(countrySearch, generator.setCountry());
+        click(nextButton);
     }
 }

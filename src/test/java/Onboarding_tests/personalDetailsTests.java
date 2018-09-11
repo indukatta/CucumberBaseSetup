@@ -11,21 +11,10 @@ import testData.RandomDataGenerator;
 
 public class personalDetailsTests extends Base_test {
 
-    private RandomDataGenerator generator;
-
-    private SetUp setUp;
-    private BusinessSearch businessSearch;
-    private BusinessDetailsForm business;
     private PersonalDetailsForm details;
 
     @BeforeMethod
     public void beforeMethod() throws Exception {
-
-        generator = new RandomDataGenerator();
-
-        setUp = new SetUp(driver);
-        businessSearch = new BusinessSearch(driver);
-        business = new BusinessDetailsForm(driver);
         details = new PersonalDetailsForm(driver);
     }
 
