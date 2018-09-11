@@ -66,7 +66,6 @@ public class GuiCommands {
     protected void writeText(MobileElement element, String text) {
         try {
             scrollDown(element);
-
             element.sendKeys(text);
         }
         catch (ElementNotVisibleException e) {
