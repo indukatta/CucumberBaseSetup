@@ -3,6 +3,7 @@ package pageObjects;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSFindBy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -22,7 +23,9 @@ public class BusinessDetailsForm extends GuiCommands {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @FindBy (name = "Next")
+    @iOSFindBy
+
+    @FindBy (name = "next_button_default_title")
     private MobileElement nextButton;
 
     @FindBy(xpath = "//XCUIElementTypeButton[@name=\"You and your business\"]")//FIXME get accessibility id
@@ -241,10 +244,10 @@ public class BusinessDetailsForm extends GuiCommands {
         navigateToBusinessDetails();
         scrollDown(tradingAddressDifferentToBusiness);
         click(tradingAddressDifferentToBusiness);
-        writeText(addressSearchTexbox, "3B475BP");
+        writeText(addressSearchTexbox, "BT42FS");
         clickGenericIostableCell();
-        return readText(businessAddress).equalsIgnoreCase("Wiremock Barn, Wiremark Lane\nStoke Prior\n" +
-                "Bromsgrove\nB60 4BH\nUnited Kingdom");
+        return readText(tradingAddressTextbox).equalsIgnoreCase("1 Carolhill Gardens\nBelfast\n" +
+                "BT4 2FS\nUnited Kingdom");
     }
 
     public boolean addressNotFound(){
@@ -320,9 +323,9 @@ public class BusinessDetailsForm extends GuiCommands {
         scrollDown(jurisdictionOfTaxResidency);
         jurisdictionOfTaxResidencySelectCountry();
         scrollDown(uniqueTaxReferenceNumber);
+        boolean nextButtonDisabled = !isNextButtonEnabled();
         String random = generator.setRandomValue(9, "NUMERIC");
         writeText(uniqueTaxReferenceNumber, random);
-        boolean nextButtonDisabled = !isNextButtonEnabled();
         writeText(uniqueTaxReferenceNumber, "01");
         boolean utrNumberLength = readText(uniqueTaxReferenceNumber).equals(random + "0");
         boolean nextButtonEnabled  = isNextButtonEnabled();
