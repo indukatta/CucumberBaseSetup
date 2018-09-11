@@ -139,7 +139,6 @@ public class PersonalDetailsForm extends GuiCommands {
 
     public void passThroughPersonalDetailsForm(){
         naviagateToPersonalDetailsForm();
-        click(confirmOwnership);
         click(personNameChangedNo);
         click(personDOB);
         click(pickerWheelDone);
@@ -151,6 +150,7 @@ public class PersonalDetailsForm extends GuiCommands {
         writeText(personIdNumber, "1234567890");
         click(personJurisdictionOfTaxResidency);
         writeText(countrySearch, generator.setCountry());
+        clickGenericIostableCell();
         click(nextButton);
     }
 }

@@ -41,6 +41,9 @@ public class OngoingSourceOfWealth  extends GuiCommands {
     @FindBy(name = "country_search.search_field_title")
     private MobileElement countrySearchTextField;
 
+    @FindBy(name = "ongoing_source_of_wealth.fundingCountry.heading")
+    private MobileElement fundingCountryTextField;
+
     @FindBy(name = "search exit button")
     private MobileElement countrySearchExitButton;
 
@@ -66,7 +69,7 @@ public class OngoingSourceOfWealth  extends GuiCommands {
 
     public void clickFundingSearchExitButton (){ click(fundingSearchExitButton);}
 
-    public void clickCountry(){ click(countrySearchTextField); }
+    public void clickCountry(){ click(fundingCountryTextField); }
 
     public void clickCountrySearchExitButton(){ click(countrySearchExitButton); }
 
@@ -84,21 +87,22 @@ public class OngoingSourceOfWealth  extends GuiCommands {
 
     public boolean navigateToOngoingSourceOfWealth (){
         personalDetailsForm.passThroughPersonalDetailsForm();
-
-        boolean one = isOngoingPageDisplayed();
-
-        return one;
+        return isOngoingPageDisplayed();
 
 
     }
-    public void passThroughOngoingSourceOfWealth(){
+    public boolean passThroughOngoingSourceOfWealth(){
+        navigateToOngoingSourceOfWealth();
         writeAnnualTurnover(20);
         clickBuisinessFunding();
         click(gift);
         clickSearchConfirmButton();
         clickCountry();
         writeText(countrySearchTextField, generator.setCountry());
+        clickGenericIostableCell();
         clickNextButton();
+
+        return !isOngoingPageDisplayed();
     }
 
 
