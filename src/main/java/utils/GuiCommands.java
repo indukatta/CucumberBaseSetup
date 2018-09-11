@@ -28,7 +28,7 @@ public class GuiCommands {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public void synchElement(MobileElement element){
+    protected void synchElement(MobileElement element){
         try {
             new WebDriverWait(driver, 3).until(ExpectedConditions.visibilityOf(element));
             new WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(element));
@@ -40,7 +40,7 @@ public class GuiCommands {
     }
 
     //Package private Click Method
-    public void click (MobileElement element) {
+    protected void click (MobileElement element) {
         try{
             synchElement(element);
             scrollDown(element);
@@ -63,7 +63,7 @@ public class GuiCommands {
      * @param element
      * @param text
      */
-    public void writeText(MobileElement element, String text) {
+    protected void writeText(MobileElement element, String text) {
         try {
             scrollDown(element);
 
@@ -80,7 +80,7 @@ public class GuiCommands {
         }
     }
 
-    public void writeNumber(MobileElement element, int number){
+    protected void writeNumber(MobileElement element, int number){
         try {
             scrollDown(element);
             element.sendKeys(String.valueOf(number));
@@ -96,7 +96,7 @@ public class GuiCommands {
         }
     }
 
-    public void clearText(MobileElement element) {
+    protected void clearText(MobileElement element) {
 
         try {
             scrollDown(element);
@@ -114,7 +114,7 @@ public class GuiCommands {
     }
 
     //Package private Read Text
-    public String readText(MobileElement element) {
+    protected String readText(MobileElement element) {
         try {
             synchElement(element);
             scrollDown(element);
@@ -133,7 +133,7 @@ public class GuiCommands {
     }
 
     //Package private Read Attribute
-    public String readAttribute (MobileElement element, String attribute) {
+    protected String readAttribute (MobileElement element, String attribute) {
         try {
             scrollDown(element);
             return element.getAttribute(attribute);
@@ -151,7 +151,7 @@ public class GuiCommands {
     }
 
     // Package private DropDown Select
-    public void dropdownSelect (MobileElement element, String selection) {
+    protected void dropdownSelect (MobileElement element, String selection) {
         try {
             new Select(element).selectByVisibleText(selection);
         }
@@ -167,7 +167,7 @@ public class GuiCommands {
     }
 
     // Package private Hover
-    public void hover (String locator) {
+    protected void hover (String locator) {
 
         MobileElement element = (MobileElement) driver.findElement(By.name(locator));
         Actions builder = new Actions(driver);
@@ -194,7 +194,7 @@ public class GuiCommands {
     }
 
     // Package private css value
-    public String getCSSValue  (MobileElement element, String propertyName) {
+    protected String getCSSValue  (MobileElement element, String propertyName) {
         scrollDown(element);
         String cssValue = null;
 
@@ -214,7 +214,7 @@ public class GuiCommands {
     }
 
     //Package private scroll
-    public void scrollDown(MobileElement element){
+    protected void scrollDown(MobileElement element){
         while (!element.isDisplayed()) {
                 TouchAction actions = new TouchAction(driver);
                 actions.press(PointOption.point(10, 250))
@@ -224,7 +224,7 @@ public class GuiCommands {
         }
     }
 
-    public void scrollUp(MobileElement element){
+    protected void scrollUp(MobileElement element){
         while (!element.isDisplayed()) {
             TouchAction actions = new TouchAction(driver);
             actions.press(PointOption.point(10, 100))
@@ -234,7 +234,7 @@ public class GuiCommands {
         }
     }
 
-    public void radioButton(boolean select, MobileElement locatorButtonOne, MobileElement locatorButtonTwo){
+    protected void radioButton(boolean select, MobileElement locatorButtonOne, MobileElement locatorButtonTwo){
         try {
             if (select){
                 click(locatorButtonOne);//FIXME: needs accessibility ID
@@ -253,7 +253,7 @@ public class GuiCommands {
         }
     }
 
-    public void IosDatePickerWheel(HashMap<String, String> map, MobileElement element){
+    protected void IosDatePickerWheel(HashMap<String, String> map, MobileElement element){
         System.out.println(map.get("year") + " " + map.get("month") + " " + map.get("day"));
         scrollDown(element);
         click(element);
@@ -265,19 +265,19 @@ public class GuiCommands {
         dayElement.sendKeys(map.get("day"));
     }
 
-    public void IosPickerWheel(MobileElement element, String choice){
+    protected void IosPickerWheel(MobileElement element, String choice){
         scrollDown(element);
         click(element);
         WebElement wheel = (WebElement) driver.findElements(By.className("XCUIElementTypePickerWheel")).get(0);
         wheel.sendKeys(choice);
     }
 
-    public int IosTableCellCount(){
+    protected int IosTableCellCount(){
         List cells = driver.findElements(By.className("XCUIElementTypeCell"));
         return cells.size();
     }
 
-    public void clickSpecificIosTableCell(String locator){
+    protected void clickSpecificIosTableCell(String locator){
         try {
             MobileElement element = (MobileElement) driver.findElement(By.name(locator));
             element.click();
@@ -287,11 +287,11 @@ public class GuiCommands {
         }
     }
 
-    public void clickGenericIostableCell(){
+    protected void clickGenericIostableCell(){
         driver.findElement(By.className("XCUIElementTypeCell")).click();
     }
 
-    public int CheckboxSelected(MobileElement element) {
+    protected int CheckboxSelected(MobileElement element) {
         try {
             int value;
             String s = element.getAttribute("value");
@@ -307,7 +307,7 @@ public class GuiCommands {
         return 2;
     }
 
-    public boolean doesKeyboardExist(){
+    protected boolean doesKeyboardExist(){
         try {
             MobileElement element = (MobileElement) driver.findElement(By.className("XCUIElementTypeKeyboard"));
             return true;

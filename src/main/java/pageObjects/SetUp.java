@@ -6,6 +6,8 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import testData.RandomDataGenerator;
 import utils.GuiCommands;
 
@@ -54,15 +56,6 @@ public class SetUp extends GuiCommands {
     @FindBy(name = "Be aware that once you confirm your details your information can't be changed")
     private MobileElement landingPageDescriptionThree;
 
-    //DISPLAYED METHODS
-    public boolean phoneNumberTitleDisplayed(){
-        return phoneNumberTitle.isDisplayed();
-    }
-
-    public boolean emailTitleDisplayed(){
-        return emailTitle.isDisplayed();
-    }
-
     public boolean nextButtonEnabled(){
         return nextButton.isEnabled();
     }
@@ -74,15 +67,6 @@ public class SetUp extends GuiCommands {
 
     public void writeEmail(String email){
         writeText(emailTextbox, email);
-    }
-
-    //CLICK METHODS
-    public void clickConfirm(){
-        click(eligibilityConfirm);
-    }
-
-    public void clickDecline(){
-        click(eligibilityDecline);
     }
 
     public void clickPhoneNumberTextbox(){
@@ -101,30 +85,19 @@ public class SetUp extends GuiCommands {
         click(startButton);
     }
 
-    //CLEAR TEXT METHODS
-    public void clearPhoneNumber(){
-        clearText(phoneNumberTextbox);
-    }
-
     public void clearEmail(){
         clearText(emailTextbox);
     }
 
-    public void navigateToPhoneNumber(){
-        clickStart();
-        clickConfirm();
-    }
 
     public void navigateToEmail(){
         clickStart();
-        clickConfirm();
         writePhoneNumber(generator.setPhoneNumber());
         clickNext();
     }
 
     public void navigateToLandingPage(){
         clickStart();
-        clickConfirm();
         writePhoneNumber(generator.setPhoneNumber());
         clickNext();
         writeEmail(generator.setEmail("", 0));
@@ -133,7 +106,6 @@ public class SetUp extends GuiCommands {
 
     public boolean isPhoneNumberFieldDisplayed(){
         clickStart();
-        clickConfirm();
         return phoneNumberTextbox.isDisplayed();
     }
 
@@ -144,7 +116,6 @@ public class SetUp extends GuiCommands {
 
     public boolean isPhoneKeyboardDisplayed(){
         clickStart();
-        clickConfirm();
         clickPhoneNumberTextbox();
         return doesKeyboardExist();
     }
@@ -156,7 +127,6 @@ public class SetUp extends GuiCommands {
 
     public boolean invalidPhoneNumber(){
         clickStart();
-        clickConfirm();
 
         //invalid phone entry
         writePhoneNumber("01234567890");
@@ -179,13 +149,13 @@ public class SetUp extends GuiCommands {
 
     public boolean validPhonenumber(){
         clickStart();
-        clickConfirm();
         writePhoneNumber(generator.setPhoneNumber());
         return nextButtonEnabled();
     }
 
     public boolean invalidEmail(){
         navigateToEmail();
+        new WebDriverWait(driver, 3).until(ExpectedConditions.visibilityOf(emailTextbox));
         boolean initialButtonEnabled = !nextButtonEnabled();
 
         clearEmail();
@@ -256,7 +226,6 @@ public class SetUp extends GuiCommands {
 
     public void passThroughSetUp(){
         clickStart();
-        clickConfirm();
         writePhoneNumber("07123456789");
         clickNext();
         writeEmail(generator.setEmail("", 0));

@@ -3,15 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default Suite]">
   <test thread-count="5" name="Iceberg(failed)">
     <classes>
-      <class name="Onboarding_tests.personalDetailsTests">
+      <class name="Onboarding_tests.SetUpTests">
         <methods>
           <include name="beforeMethod"/>
-          <include name="CUICE4141"/>
           <include name="takeScreenShot"/>
-          <include name="CUICE4142"/>
+          <include name="CUICE4346"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- Onboarding_tests.personalDetailsTests -->
+      </class> <!-- Onboarding_tests.SetUpTests -->
     </classes>
   </test> <!-- Iceberg(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->

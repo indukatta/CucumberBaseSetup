@@ -30,8 +30,11 @@ public class BusinessSearch extends GuiCommands {
     @FindBy(name = "Your Business")
     private MobileElement businessSearchTitle;
 
-    @FindBy(name = "business_search.search_field_title")
+    @FindBy(name = "business_search.search_field_title.initial")
     private MobileElement businessSearchBoxTitle;
+
+    @FindBy(name = "business_search.search_field_title")
+    private MobileElement businessSearchBox;
 
     @FindBy(name = "search_textfield")
     private MobileElement searchTexfield;
@@ -65,14 +68,13 @@ public class BusinessSearch extends GuiCommands {
         return noBusinessFoundError.isDisplayed();
     }
 
-    //ELEMENTS ENABLED
-    public boolean isNextButtonEnabled(){
-        return nextButton.isEnabled();
-    }
 
-    //WRITE METHODS
     public void writeBusinessTitle(String businessName){
         writeText(businessSearchBoxTitle, businessName);
+    }
+
+    public void writeBusinessSearch(String businessName){
+        writeText(businessSearchBox, businessName);
     }
 
     //CLICK METHODS
@@ -86,16 +88,6 @@ public class BusinessSearch extends GuiCommands {
 
     public void clickSearchExitButton(){
         click(searchExitButton);
-    }
-
-    //CLEAR METHODS
-    public void clearBusinessSearch(){
-        clearText(businessSearchBoxTitle);
-    }
-
-    //CUSTOM METHODS
-    public void clickTableCell(String locator){
-        clickSpecificIosTableCell(locator);
     }
 
     public void navigateToBusinessSearch(){
@@ -141,7 +133,7 @@ public class BusinessSearch extends GuiCommands {
             return false;
         }
         String countOne = String.valueOf(IosTableCellCount());
-        writeBusinessTitle("4");
+        writeBusinessSearch("4");
         new WebDriverWait(driver, 1).until(ExpectedConditions.invisibilityOfElementLocated(By.name("HOUSE CROWD PROJECT O54 LIMITED")));
 
         if (IosTableCellCount() == 0) {
@@ -149,7 +141,7 @@ public class BusinessSearch extends GuiCommands {
         }
 
         String countTwo = String.valueOf(IosTableCellCount());
-        clearText(businessSearchBoxTitle);
+        clearText(businessSearchBox);
         System.out.println(countOne + " " + countTwo);
 
         if (!countOne.equals(countTwo)){
@@ -192,9 +184,7 @@ public class BusinessSearch extends GuiCommands {
         clickGenericIostableCell();
 
         //check results are returned
-        boolean owner = readText(beneficialOwner).equalsIgnoreCase("Mr Robert Elwell");
-
-        return owner;
+        return readText(beneficialOwner).equalsIgnoreCase("Mr Robert Elwell");
     }
 
     public boolean selectionOfCompanyByBusinessRegNumber(){
@@ -205,10 +195,7 @@ public class BusinessSearch extends GuiCommands {
         clickGenericIostableCell();
 
         //check results are returned
-        boolean owner = readText(beneficialOwner).equalsIgnoreCase("Mr Robert Elwell");
-
-
-        return owner;
+        return readText(beneficialOwner).equalsIgnoreCase("Mr Robert Elwell");
     }
 
     public boolean isBusinessInformationDisplayed(){
@@ -225,7 +212,6 @@ public class BusinessSearch extends GuiCommands {
 
     public void passThroughBusinessSearch(){
         clickNextButton();
-        clickBusinessSearchBoxTitle();
         writeBusinessTitle("05717355");
         clickGenericIostableCell();
     }
