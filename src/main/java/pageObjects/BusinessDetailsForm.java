@@ -23,7 +23,7 @@ public class BusinessDetailsForm extends GuiCommands {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @iOSFindBy
+
 
     @FindBy (name = "next_button_default_title")
     private MobileElement nextButton;
