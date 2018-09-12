@@ -5,22 +5,31 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import testData.RandomDataGenerator;
 import utils.GuiCommands;
 
 public class SourceOfFunds extends GuiCommands {
 
-    private PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm(driver);
+    SetUp setUp = new SetUp(driver);
+    BusinessSearch businessSearch = new BusinessSearch(driver);
+    BusinessDetailsForm businessDetailsForm = new BusinessDetailsForm(driver);
+    PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm(driver);
+    OngoingSourceOfWealth ongoingSourceOfWealth = new OngoingSourceOfWealth(driver);
+    RandomDataGenerator generator = new RandomDataGenerator();
 
     public SourceOfFunds(IOSDriver driver) {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @FindBy (xpath = "//XCUIElementTypeTextField[@name=\"depositors.last_twelve_months_amount\"]")
-    private MobileElement valueOfCashDepositorBox;
+    @FindBy ( name = "Source of Funds")
+    private MobileElement sourceOfFundstitle;
 
-    @FindBy (xpath = "//XCUIElementTypeTextField[@name=\"depositors.depositors_total_amount.header\"]")
-    private MobileElement totalDepositMoneyBox;
+    @FindBy (xpath = "//XCUIElementTypeTextField[@name=\"depositors.last_twelve_months_amount\"]")  //FIXME get unique accessibility id
+    private MobileElement valueOfCashDepositorField;
+
+    @FindBy (xpath = "//XCUIElementTypeTextField[@name=\"depositors.depositors_total_amount.header\"]")  //FIXME get unique accessibility id
+    private MobileElement totalDepositMoneyField;
 
     @FindBy (name = "depositors.depositors_count_textfield.header")
     private MobileElement numberOfDepositors;
@@ -34,12 +43,155 @@ public class SourceOfFunds extends GuiCommands {
     @FindBy (name = "next_button_default_title")
     private  MobileElement nextButton;
 
+    @FindBy (name = "Please share a little information with us about each of your depositors.")
+    private MobileElement howManyDepositorDoneButton;
 
-    public void navigateToSourceOfFunds(){
-        personalDetailsForm.passThroughPersonalDetailsForm();
+    // Depositor Screen
+
+    @FindBy ( name = "Depositors")
+    private MobileElement depositorsTitle;
+
+    @FindBy ( name = "depositor.name_of_depositor.header")
+    private MobileElement nameOfDepositor;
+
+    @FindBy ( name = "depositor.transferral_method.header")
+    private MobileElement depositorTransferralMethod;
+
+    @FindBy ( name = "How have funds been generated?")
+    private MobileElement depositorsHowFundTransferredDoneButton;
+
+    @FindBy ( name = "depositor.transferral_origin.header")
+    private MobileElement fundTransfer;
+
+    @FindBy ( name = "How have funds been generated?")
+    private MobileElement whereFundsTransferredFromDoneButton;
+
+    @FindBy ( name = "depositor.bank_origin_country.header")
+    private MobileElement countryField;
+
+    @FindBy ( name = "search exit button")
+    private MobileElement countryExitButton;
+
+    @FindBy ( xpath = "//XCUIElementTypeTextField[@name=\"depositor.transferral_amount.header\"]")  //FIXME get unique accessibility id
+    private MobileElement howMuchTransferred;
+
+    @FindBy ( name = "How have funds been generated?")
+    private  MobileElement howFundsGenerated;
+
+    @FindBy(name = "Gift")
+    public MobileElement gift;
+
+
+    @FindBy ( name = "search exit button")
+    private MobileElement howFundsGeneratedExitButton;
+
+    @FindBy ( name = "next_button_default_title")
+    private MobileElement depositorNextButon;
+
+
+
+
+    // Element Displayed
+
+    public boolean isSourceOfFundsPageDisplayed() { return sourceOfFundstitle.isDisplayed(); }
+
+    public boolean isDepositorsPageDisplayed() { return depositorsTitle.isDisplayed(); }
+
+    // Element Enabled
+
+    public boolean isNextButtonEnabled() { return nextButton.isEnabled(); }
+
+    // Clicking Source of funds
+
+    public void clickValueOfCashDepositor() { click(valueOfCashDepositorField); }
+
+    public void clickTotalDepositMoney() { click(totalDepositMoneyField); }
+
+    public void clickNumberOfDepositors() { click(numberOfDepositors); }
+
+    public void clickDepositorDetailButton() { click(depositorDetailButton); }
+
+    public void clickNextButton() { click(nextButton); }
+
+    public void clickHowManyDepositprDoneButton() { click(howManyDepositorDoneButton); }
+
+    // Clicking Depositor
+
+    public void clickInsertName() { click(nameOfDepositor); }
+
+    public void clickDepositorTransferralMethod() { click(depositorTransferralMethod); }
+
+    public void clickHowFundTransferredDoneButton() { click(depositorsHowFundTransferredDoneButton); }
+
+    public void clickWhereFundTransferFrom() { click(fundTransfer); }
+
+    public void clickWhereFundsTransferredFromDoneButton() { click(whereFundsTransferredFromDoneButton); }
+
+    public void clickCountry() { click(countryField); }
+
+    public void clickCountryExitButton() { click(countryExitButton); }
+
+    public void clickHowMuchTransferred() { click(howMuchTransferred); }
+
+    public void clickHowFundsGenerated() { click(howFundsGenerated); }
+
+    public void clickHowFundsGeneratedExitButton() { click(howFundsGeneratedExitButton); }
+
+    public void clickDepositorNextButton() { click(depositorNextButon); }
+
+    //Write Methods
+
+    public void writeValueOfCashDeposit(int amount) { writeNumber(valueOfCashDepositorField, amount);}
+
+    public void wrireTotalDepositMoney(int amount) { writeNumber(totalDepositMoneyField, amount);}
+
+    public void writeDepositorsName(String name) { writeText(nameOfDepositor, name);}
+
+    public void writeHowMuchIsGoingToBeTransferred(int amount) { writeNumber(howMuchTransferred, amount);}
+
+    // Clear Methods
+
+    public void clearValueOfCashDeposit() { clearText(valueOfCashDepositorField);}
+
+    public void clearTotalDepositMoney() { clearText(totalDepositMoneyField);}
+
+    public void clearDepositorsName() { clearText(nameOfDepositor);}
+
+    public void clearHowMuchIsGoingToBeTransferred() { clearText(howMuchTransferred);}
+
+    // Custom Methods
+
+    public boolean navigateToSourceOfFunds() {
+        ongoingSourceOfWealth.passThroughOngoingSourceOfWealth();
+
+        boolean one = isSourceOfFundsPageDisplayed();
+
+        return one;
+    }
+
+
+    public void passThrougSourceOfFunds() {
+        writeValueOfCashDeposit(500);
+        wrireTotalDepositMoney(200);
+        clickNumberOfDepositors();
+        clickHowManyDepositprDoneButton();
+        clickDepositorDetailButton();
+        writeDepositorsName("Alex Warner");
+        clickDepositorTransferralMethod();
+        clickHowFundTransferredDoneButton();
+        clickWhereFundTransferFrom();
+        clickWhereFundsTransferredFromDoneButton();
+        clickCountry();
+        writeText(countryField, generator.setCountry());
+        writeHowMuchIsGoingToBeTransferred(100);
+        clickHowFundsGenerated();
+        click(gift);
+        clickDepositorNextButton();
     }
 
 }
+
+
 
 
 
