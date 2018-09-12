@@ -59,7 +59,6 @@ public class TransactionDetails extends GuiCommands {
 //Custom Methods
 
     public void passThroughTransactionDetails(){
-
         clickAccountUsageField();
         clickDone();
         clickExpectedPayField();
