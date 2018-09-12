@@ -34,7 +34,7 @@ public class Base_test {
         capabilities.setCapability("platformVersion", "11.2");
         capabilities.setCapability("deviceName", "iPhone 8");
         capabilities.setCapability("app",
-                "/Users/awhitten/Library/Developer/Xcode/DerivedData/Iceberg-dmdimcbnvyefcdajhivuraigymun/Build" +
+                "/Users/bbakare/Library/Developer/Xcode/DerivedData/Iceberg-adtdbektmsxudqdkhkquwuwoeobx/Build" +
                         "/Products/Debug-iphonesimulator/Iceberg.app");
 
         driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
