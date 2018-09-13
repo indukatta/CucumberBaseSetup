@@ -36,6 +36,7 @@ public class SourceOfFunds extends GuiCommands {
 
 
     public void navigateToSourceOfFunds(){
+
         personalDetailsForm.passThroughPersonalDetailsForm();
     }
 
