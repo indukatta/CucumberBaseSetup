@@ -23,8 +23,6 @@ public class BusinessDetailsForm extends GuiCommands {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-
-
     @FindBy (name = "next_button_default_title")
     private MobileElement nextButton;
 
@@ -395,10 +393,23 @@ public class BusinessDetailsForm extends GuiCommands {
         click(tradingAddressSameAsBusiness);
         scrollDown(additionalDetails);
         writeText(additionalDetails, "Additional Details");
-        scrollDown(jurisdictionOfTaxResidency);
         jurisdictionOfTaxResidencySelectCountry();
         scrollDown(uniqueTaxReferenceNumber);
         writeText(uniqueTaxReferenceNumber, generator.setRandomValue(10, "NUMERIC"));
+        click(nextButton);
+    }
+
+    public void businessDetailsFormWithData(String name, String country, int utr){
+        writeText(tradingName, name);
+        click(tradingAddressSameAsBusiness);
+        scrollDown(additionalDetails);
+        writeText(additionalDetails, "Additional Details");
+        scrollDown(jurisdictionOfTaxResidency);
+        click(jurisdictionOfTaxResidency);
+        writeCountry(country);
+        clickGenericIostableCell();
+        scrollDown(uniqueTaxReferenceNumber);
+        writeNumber(uniqueTaxReferenceNumber, utr);
         click(nextButton);
     }
 
