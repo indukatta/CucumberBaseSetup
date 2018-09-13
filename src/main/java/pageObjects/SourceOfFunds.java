@@ -43,8 +43,6 @@ public class SourceOfFunds extends GuiCommands {
     @FindBy (name = "next_button_default_title")
     private  MobileElement nextButton;
 
-    @FindBy (name = "Please share a little information with us about each of your depositors.")
-    private MobileElement howManyDepositorDoneButton;
 
     // Depositor Screen
 
@@ -57,17 +55,18 @@ public class SourceOfFunds extends GuiCommands {
     @FindBy ( name = "depositor.transferral_method.header")
     private MobileElement depositorTransferralMethod;
 
-    @FindBy ( name = "How have funds been generated?")
-    private MobileElement depositorsHowFundTransferredDoneButton;
+    @FindBy(name = "toolbar_done")
+    private MobileElement doneButton;
 
     @FindBy ( name = "depositor.transferral_origin.header")
     private MobileElement fundTransfer;
 
-    @FindBy ( name = "How have funds been generated?")
-    private MobileElement whereFundsTransferredFromDoneButton;
 
     @FindBy ( name = "depositor.bank_origin_country.header")
     private MobileElement countryField;
+
+    @FindBy(name = "country_search.search_field_title")
+    private MobileElement countrySearchField;
 
     @FindBy ( name = "search exit button")
     private MobileElement countryExitButton;
@@ -75,8 +74,11 @@ public class SourceOfFunds extends GuiCommands {
     @FindBy ( xpath = "//XCUIElementTypeTextField[@name=\"depositor.transferral_amount.header\"]")  //FIXME get unique accessibility id
     private MobileElement howMuchTransferred;
 
-    @FindBy ( name = "How have funds been generated?")
+    @FindBy ( name = "depositor.funds_generated.header")
     private  MobileElement howFundsGenerated;
+
+    @FindBy(name = "ongoing_source_of_wealth_selection.confirm")
+    private MobileElement confirmButton;
 
     @FindBy(name = "Gift")
     public MobileElement gift;
@@ -113,7 +115,7 @@ public class SourceOfFunds extends GuiCommands {
 
     public void clickNextButton() { click(nextButton); }
 
-    public void clickHowManyDepositprDoneButton() { click(howManyDepositorDoneButton); }
+    public void clickHowManyDepositprDoneButton() { click(doneButton); }
 
     // Clicking Depositor
 
@@ -121,11 +123,11 @@ public class SourceOfFunds extends GuiCommands {
 
     public void clickDepositorTransferralMethod() { click(depositorTransferralMethod); }
 
-    public void clickHowFundTransferredDoneButton() { click(depositorsHowFundTransferredDoneButton); }
+    public void clickHowFundTransferredDoneButton() { click(doneButton); }
 
     public void clickWhereFundTransferFrom() { click(fundTransfer); }
 
-    public void clickWhereFundsTransferredFromDoneButton() { click(whereFundsTransferredFromDoneButton); }
+    public void clickWhereFundsTransferredFromDoneButton() { click(doneButton); }
 
     public void clickCountry() { click(countryField); }
 
@@ -164,29 +166,31 @@ public class SourceOfFunds extends GuiCommands {
     public boolean navigateToSourceOfFunds() {
         ongoingSourceOfWealth.passThroughOngoingSourceOfWealth();
 
-        boolean one = isSourceOfFundsPageDisplayed();
-
-        return one;
+        return isSourceOfFundsPageDisplayed();
     }
 
 
     public void passThrougSourceOfFunds() {
+        navigateToSourceOfFunds();
         writeValueOfCashDeposit(500);
         wrireTotalDepositMoney(200);
-        clickNumberOfDepositors();
-        clickHowManyDepositprDoneButton();
+       // clickNumberOfDepositors();
+        //clickHowManyDepositprDoneButton();
         clickDepositorDetailButton();
         writeDepositorsName("Alex Warner");
         clickDepositorTransferralMethod();
         clickHowFundTransferredDoneButton();
-        clickWhereFundTransferFrom();
-        clickWhereFundsTransferredFromDoneButton();
+       // clickWhereFundTransferFrom();
+        //clickWhereFundsTransferredFromDoneButton();
         clickCountry();
-        writeText(countryField, generator.setCountry());
+        writeText(countrySearchField, generator.setCountry());
+        clickGenericIostableCell();
         writeHowMuchIsGoingToBeTransferred(100);
         clickHowFundsGenerated();
         click(gift);
+        click(confirmButton);
         clickDepositorNextButton();
+        clickNextButton();
     }
 
 }
