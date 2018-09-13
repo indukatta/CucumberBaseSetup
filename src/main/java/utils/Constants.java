@@ -2,9 +2,11 @@ package utils;
 
 public class Constants {
 
-    public static final String Path_TestData = "/Users/bbakare/uitesting/src/main/java/testData/";
+    public static final String Path_TestData = "/Users/awhitten/IdeaProjects/Iceberg/src/main/java/testData/";
 
     public static final String File_SICCodes = "SIC_Code_analysis.xlsx";
 
     public static final String File_CountriesList = "Countries.xlsx";
+
+    public static final String File_E2E_Tests = "E2E_Test_Data.xlsx";
 }
