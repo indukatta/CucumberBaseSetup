@@ -211,7 +211,6 @@ public class BusinessSearch extends GuiCommands {
     }
 
     public void passThroughBusinessSearch(){
-        clickNextButton();
         writeBusinessTitle("05717355");
         clickGenericIostableCell();
     }
