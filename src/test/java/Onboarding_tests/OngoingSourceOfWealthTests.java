@@ -22,29 +22,36 @@ public class OngoingSourceOfWealthTests extends Base_test {
         ongoingSourceOfWealth = new OngoingSourceOfWealth(driver);
     }
 
-   //@Test(priority = 1, description = "Go to page after ongoing source of wealth" )
-   // public void test12(){
-    //    Assert.assertTrue(ongoingSourceOfWealth.passThroughOngoingSourceOfWealth());
-    //}
-    /*@Test(priority = 2, description = "Checks if it allows incorrect amounts" )
-    public void test1(){
-        Assert.assertTrue(ongoingSourceOfWealth.incorrectAmounts());
-    }
-    @Test(priority = 3, description = "Checks is all fields are displayed" )
-    public void test2(){
-        Assert.assertTrue(ongoingSourceOfWealth.wealthFieldsDisplayed());
-    }
 
-    @Test(priority = 4 , description = "Checks if unless all fields are displayed the next button is disabled" )
-    public void test3 (){
+    @Test(priority = 1 , description = "Makes sure only when all fields are filled the next button is shown" )
+    public void CUICE5113 (){
         Assert.assertTrue(ongoingSourceOfWealth.checkAllFieldsAreFilled());
     }
-    @Test(priority = 5 , description = "Checks to see if amounts are shown in GBP" )
-    public void test4 (){
+
+    @Test(priority = 2, description = "Ensures only correct amounts can be entered into the amount field" )
+    public void CUICE5114(){
+
+        Assert.assertTrue(ongoingSourceOfWealth.incorrectAmounts());
         Assert.assertTrue(ongoingSourceOfWealth.isGbpDisplayed());
-    }*/
-    @Test(priority = 6 , description = "Ensures wealth details are removed if a different business is searched" )
-    public void test6 () {
+    }
+
+    @Test(priority = 3, description = "Ensures all checkbox elements can be selected " )
+    public void CUICE5115(){
+        Assert.assertTrue(ongoingSourceOfWealth.canAllFundingOptionsBeChosen());
+    }
+
+    @Test(priority = 4 , description = "When other option is filled it adds another mandatory field to the wealth screen" )
+    public void CUICE5902 (){
+        Assert.assertTrue(ongoingSourceOfWealth.checkOtherFieldValidity());
+    }
+
+    @Test(priority = 5 , description = "Checks if the country list be seen" )
+    public void CUICE5116 () {
+        Assert.assertTrue(ongoingSourceOfWealth.isCountryListShown());
+    }
+
+    @Test(priority = 6 , description = "Check that customer information is cleared when selected company changes" )
+    public void CUICE5903 () {
         Assert.assertTrue(ongoingSourceOfWealth.doFieldsClearWithNewSearch());
     }
 

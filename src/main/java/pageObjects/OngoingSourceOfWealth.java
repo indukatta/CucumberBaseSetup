@@ -5,8 +5,11 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import testData.CheckBoxElements;
 import testData.RandomDataGenerator;
 import utils.GuiCommands;
+
+import java.util.concurrent.TimeUnit;
 
 public class OngoingSourceOfWealth  extends GuiCommands {
 
@@ -15,6 +18,7 @@ public class OngoingSourceOfWealth  extends GuiCommands {
     BusinessDetailsForm businessDetailsForm = new BusinessDetailsForm(driver);
     PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm(driver);
     RandomDataGenerator generator = new RandomDataGenerator();
+    CheckBoxElements checkBoxElements = new CheckBoxElements(driver);
 
 
 
@@ -50,9 +54,6 @@ public class OngoingSourceOfWealth  extends GuiCommands {
     @FindBy(name = "next_button_default_title")
     private MobileElement nextButton;
 
-    @FindBy(name = "Gift")
-    private MobileElement gift;
-
     @FindBy(name = "GBP")
     private MobileElement gbpTitle;
 
@@ -73,6 +74,12 @@ public class OngoingSourceOfWealth  extends GuiCommands {
 
     @FindBy(xpath = "//XCUIElementTypeButton[@name=\"You and your business\"]")
     private MobileElement businessSearchBackButton;
+
+    //check box elements
+
+    @FindBy(name = "Other")
+    private MobileElement other;
+
 
 
     //Elements Displayed
@@ -126,20 +133,22 @@ public class OngoingSourceOfWealth  extends GuiCommands {
     }
 
     public boolean checkAllFieldsAreFilled(){
+
         navigateToOngoingSourceOfWealth();
         writeAnnualTurnover(50000);
         boolean two = !isNextButtonEnabled();
         clickBuisinessFunding();
-        click(gift);
+        checkBoxElements.clickRandomElement();
         clickSearchConfirmButton();
         boolean three =!isNextButtonEnabled();
+
         return   two && three;
     }
 
     public boolean incorrectAmounts(){
         navigateToOngoingSourceOfWealth();
         clickBuisinessFunding();
-        click(gift);
+        checkBoxElements.clickRandomElement();
         clickSearchConfirmButton();
         clickCountry();
         writeText(countrySearchTextField, generator.setCountry());
@@ -183,7 +192,6 @@ public class OngoingSourceOfWealth  extends GuiCommands {
         return  one && two && three;
     }
     public boolean isGbpDisplayed (){
-        navigateToOngoingSourceOfWealth();
         return gbpTitle.isDisplayed();
     }
     public boolean isCountryListShown (){
@@ -197,12 +205,11 @@ public class OngoingSourceOfWealth  extends GuiCommands {
         navigateToOngoingSourceOfWealth();
         writeAnnualTurnover(20);
         clickBuisinessFunding();
-        click(gift);
+        checkBoxElements.clickRandomElement();
         clickSearchConfirmButton();
         clickCountry();
         writeText(countrySearchTextField, generator.setCountry());
         clickGenericIostableCell();
-
         click(wealthBackButton);
         click(businessDetailsBackButton);
         click(ownershipBackButton);
@@ -213,21 +220,75 @@ public class OngoingSourceOfWealth  extends GuiCommands {
         businessDetailsForm.passThroughBusinessDetailsForm();
         personalDetailsForm.passThroughPersonalDetailsForm();
 
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
         String field1 = annualTurnoverTextField.getText();
-        String field2 = annualTurnoverTextField.getText();
-        String field3 = annualTurnoverTextField.getText();
 
-        if (field1.isEmpty() && field2.isEmpty() && field3.isEmpty()){ return true; }
-        else {return false;}
+        if (Integer.parseInt(field1) ==  0){
+            return true;
+        }
+        else{
+            return false;
+        }
 
+    }
+
+    public boolean checkOtherFieldValidity (){
+
+        navigateToOngoingSourceOfWealth();
+        writeAnnualTurnover(20);
+        clickBuisinessFunding();
+        click(other);
+        clickSearchConfirmButton();
+        clickCountry();
+        writeText(countrySearchTextField, generator.setCountry());
+        clickGenericIostableCell();
+        if (nextButton.isEnabled()) return false;
+        writeText(otherTextField,generator.setRandomValue(1,"ALPHANUMERIC"));
+        if (nextButton.isEnabled()) return false;
+        clearText(otherTextField);
+        writeText(otherTextField,generator.setRandomValue(256,"ALPHANUMERIC"));
+        if (nextButton.isEnabled()) return false;
+        clearText(otherTextField);
+        writeText(otherTextField,generator.setRandomValue(2,"ALPHANUMERIC"));
+        boolean one = isNextButtonEnabled();
+        clearText(otherTextField);
+        writeText(otherTextField,generator.setRandomValue(255,"ALPHANUMERIC"));
+        boolean two = isNextButtonEnabled();
+
+
+        return one&&two;
+
+    }
+
+
+    public boolean canAllFundingOptionsBeChosen(){
+
+        navigateToOngoingSourceOfWealth();
+        writeAnnualTurnover(20);
+        clickBuisinessFunding();
+        checkBoxElements.clickAllCheckboxElements();
+        click(other);
+        clickSearchConfirmButton();
+        writeText(otherTextField,"Other Element");
+        clickCountry();
+        writeText(countrySearchTextField, generator.setCountry());
+        clickGenericIostableCell();
+        clickNextButton();
+
+        return !isOngoingPageDisplayed();
     }
 
     public boolean passThroughOngoingSourceOfWealth(){
         navigateToOngoingSourceOfWealth();
         writeAnnualTurnover(20);
         clickBuisinessFunding();
-        click(gift);
+        checkBoxElements.clickRandomElement();
         clickSearchConfirmButton();
+        clickCountry();
+        writeText(countrySearchTextField, generator.setCountry());
+        clickGenericIostableCell();
+        writeText(otherTextField,"Other Element");
         clickCountry();
         writeText(countrySearchTextField, generator.setCountry());
         clickGenericIostableCell();

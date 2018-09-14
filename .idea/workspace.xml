@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d068524-d172-4dd2-882a-e468c3dce49b" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/testData/CheckBoxElements.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/BusinessDetailsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/BusinessDetailsForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/BusinessSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/BusinessSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/OngoingSourceOfWealth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/OngoingSourceOfWealth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/PersonalDetailsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/PersonalDetailsForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/SourceOfFunds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/SourceOfFunds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/GuiCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/GuiCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/testData/Countries.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testData/Countries.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Onboarding_tests/Base_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Onboarding_tests/Base_test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/BusinessDetailsForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/BusinessDetailsForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/BusinessSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/BusinessSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/OngoingSourceOfWealth.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/OngoingSourceOfWealth.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/PersonalDetailsForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/PersonalDetailsForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/SourceOfFunds.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/SourceOfFunds.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/Base_test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/Base_test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/OngoingSourceOfWealthTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/OngoingSourceOfWealthTests.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -44,120 +50,93 @@
     <session id="-1565336078">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="19" />
+          <entry key="class" value="1" />
+          <entry key="java" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="19" />
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4339" />
+          <entry key="java" value="6288" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4339" />
+          <entry key="JAVA" value="6288" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="e#910#911#0" expanded="true" />
+                <element signature="e#992#993#0" expanded="true" />
+                <element signature="e#1392#1393#0" expanded="true" />
+                <element signature="e#1479#1480#0" expanded="true" />
+                <element signature="e#1634#1635#0" expanded="true" />
+                <element signature="e#1716#1717#0" expanded="true" />
+                <element signature="e#1826#1827#0" expanded="true" />
+                <element signature="e#1903#1904#0" expanded="true" />
+                <element signature="e#2051#2052#0" expanded="true" />
+                <element signature="e#2136#2137#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/testData/RandomDataGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1188">
+              <caret line="136" column="69" selection-start-line="136" selection-start-column="57" selection-end-line="136" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/OngoingSourceOfWealth.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="115" selection-start-line="115" selection-end-line="115" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/SourceOfFunds.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/SetUp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1784">
-              <caret line="63" column="39" lean-forward="true" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
+            <state relative-caret-position="3225">
+              <caret line="224" column="58" selection-start-line="224" selection-start-column="58" selection-end-line="224" selection-end-column="58" />
               <folding>
-                <element signature="e#2173#2174#0" expanded="true" />
-                <element signature="e#2226#2227#0" expanded="true" />
+                <element signature="e#6206#6207#0" expanded="true" />
+                <element signature="e#6251#6252#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/DepositorsDetailsForm.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/testData/CheckBoxElements.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+            <state relative-caret-position="127">
+              <caret line="69" column="61" selection-start-line="69" selection-start-column="61" selection-end-line="69" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#285#286#0" expanded="true" />
+                <element signature="e#314#315#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/BusinessSearch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="212" column="44" selection-start-line="212" selection-start-column="44" selection-end-line="212" selection-end-column="44" />
-              <folding>
-                <element signature="e#2327#2328#0" expanded="true" />
-                <element signature="e#2390#2391#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="e#1889#1890#0" expanded="true" />
-                <element signature="e#1962#1963#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/BusinessDetailsForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="224" column="8" lean-forward="true" selection-start-line="224" selection-start-column="8" selection-end-line="225" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/personalDetailsTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/PersonalDetailsForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="109" column="8" lean-forward="true" selection-start-line="109" selection-start-column="8" selection-end-line="112" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -165,11 +144,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/utils/GuiCommands.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="96" column="61" selection-start-line="96" selection-start-column="61" selection-end-line="96" selection-end-column="61" />
+            <state relative-caret-position="269">
+              <caret line="304" selection-start-line="304" selection-end-line="304" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#9829#9830#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/PersonalDetailsForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="129" column="5" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -242,14 +230,15 @@
         <option value="$PROJECT_DIR$/src/main/java/utils/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/DepositorsDetailsForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/TransactionDetails.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Onboarding_tests/Base_test.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/GuiCommands.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pageObjects/BusinessSearch.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/BusinessDetailsForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/PersonalDetailsForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pageObjects/OngoingSourceOfWealth.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/SourceOfFunds.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pageObjects/BusinessSearch.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Onboarding_tests/Base_test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/testData/CheckBoxElements.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pageObjects/OngoingSourceOfWealth.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java" />
       </list>
     </option>
   </component>
@@ -271,9 +260,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="955" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -281,71 +271,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pageObjects" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Onboarding_tests" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="test-output" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -431,10 +356,75 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="pageObjects" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Onboarding_tests" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="test-output" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536848898497" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536947572599" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -604,34 +594,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="OngoingSourceOfWealthTests - 2018.09.13 at 13h 12m 03s.xml">
+    <history-entry file="OngoingSourceOfWealthTests - 2018.09.14 at 16h 26m 06s.xml">
       <configuration name="OngoingSourceOfWealthTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="OngoingSourceOfWealthTests - 2018.09.13 at 13h 15m 49s.xml">
+    <history-entry file="OngoingSourceOfWealthTests - 2018.09.14 at 16h 40m 13s.xml">
       <configuration name="OngoingSourceOfWealthTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="OngoingSourceOfWealthTests - 2018.09.13 at 13h 19m 24s.xml">
+    <history-entry file="OngoingSourceOfWealthTests - 2018.09.14 at 17h 24m 56s.xml">
       <configuration name="OngoingSourceOfWealthTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="OngoingSourceOfWealthTests - 2018.09.13 at 13h 29m 27s.xml">
+    <history-entry file="OngoingSourceOfWealthTests - 2018.09.14 at 17h 47m 10s.xml">
       <configuration name="OngoingSourceOfWealthTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="OngoingSourceOfWealthTests - 2018.09.13 at 14h 18m 09s.xml">
+    <history-entry file="OngoingSourceOfWealthTests - 2018.09.14 at 17h 54m 25s.xml">
       <configuration name="OngoingSourceOfWealthTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="OngoingSourceOfWealthTests - 2018.09.13 at 14h 20m 49s.xml">
+    <history-entry file="OngoingSourceOfWealthTests - 2018.09.14 at 18h 12m 20s.xml">
       <configuration name="OngoingSourceOfWealthTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="OngoingSourceOfWealthTests - 2018.09.13 at 14h 26m 08s.xml">
+    <history-entry file="OngoingSourceOfWealthTests - 2018.09.14 at 18h 25m 20s.xml">
       <configuration name="OngoingSourceOfWealthTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="OngoingSourceOfWealthTests - 2018.09.13 at 14h 29m 47s.xml">
+    <history-entry file="OngoingSourceOfWealthTests - 2018.09.14 at 18h 45m 01s.xml">
       <configuration name="OngoingSourceOfWealthTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="OngoingSourceOfWealthTests - 2018.09.13 at 14h 36m 22s.xml">
+    <history-entry file="OngoingSourceOfWealthTests - 2018.09.14 at 18h 50m 20s.xml">
       <configuration name="OngoingSourceOfWealthTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="OngoingSourceOfWealthTests - 2018.09.13 at 14h 47m 45s.xml">
+    <history-entry file="OngoingSourceOfWealthTests - 2018.09.14 at 18h 56m 06s.xml">
       <configuration name="OngoingSourceOfWealthTests" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -645,10 +635,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="955" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22771673" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23748474" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -657,7 +647,35 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969698" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.2897959" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.32908458" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32969698" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32969698" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007153" side_tool="true" weight="0.32969698" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32908458" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.3297568" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23015873" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32969698" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.2897959" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -674,7 +692,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.3297568" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -726,27 +744,6 @@
     <entry file="file://$PROJECT_DIR$/target/classes/utils/Constants.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/testData/RandomDataGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2505">
-          <caret line="187" column="50" selection-start-line="187" selection-start-column="50" selection-end-line="187" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/businessFormTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="e#1114#1115#0" expanded="true" />
-            <element signature="e#1212#1213#0" expanded="true" />
-            <element signature="e#1447#1448#0" expanded="true" />
-            <element signature="e#2777#2778#0" expanded="true" />
-            <element signature="e#2857#2858#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/businessSearchTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-137">
@@ -754,27 +751,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/ExcelUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/DepositorsDetailsForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/TransactionDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="975">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/ScreenshotUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/personalDetailsTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="330">
+          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/SetUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1542">
+          <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
+          <folding>
+            <element signature="e#2173#2174#0" expanded="true" />
+            <element signature="e#2226#2227#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/BusinessSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2489">
+          <caret line="213" column="26" selection-start-line="213" selection-start-column="26" selection-end-line="213" selection-end-column="26" />
+          <folding>
+            <element signature="e#2327#2328#0" expanded="true" />
+            <element signature="e#2390#2391#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -785,101 +797,138 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/Base_test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/ExcelUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/GuiCommands.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/ScreenshotUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="96" column="61" selection-start-line="96" selection-start-column="61" selection-end-line="96" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/DepositorsDetailsForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#1889#1890#0" expanded="true" />
-            <element signature="e#1962#1963#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/personalDetailsTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/BusinessSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="212" column="44" selection-start-line="212" selection-start-column="44" selection-end-line="212" selection-end-column="44" />
-          <folding>
-            <element signature="e#2327#2328#0" expanded="true" />
-            <element signature="e#2390#2391#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/SetUp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1784">
-          <caret line="63" column="39" lean-forward="true" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
-          <folding>
-            <element signature="e#2173#2174#0" expanded="true" />
-            <element signature="e#2226#2227#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/BusinessDetailsForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="224" column="8" lean-forward="true" selection-start-line="224" selection-start-column="8" selection-end-line="225" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/PersonalDetailsForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="109" column="8" lean-forward="true" selection-start-line="109" selection-start-column="8" selection-end-line="112" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/OngoingSourceOfWealth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/SourceOfFunds.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
-          <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/TransactionDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/BusinessDetailsForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="244" column="54" lean-forward="true" selection-start-line="244" selection-start-column="8" selection-end-line="244" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/businessFormTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="e#1447#1448#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/Base_test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="39" column="72" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.12.0/selenium-remote-driver-3.12.0.jar!/org/openqa/selenium/remote/RemoteWebElement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="287" column="19" selection-start-line="287" selection-start-column="19" selection-end-line="287" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.12.0/selenium-remote-driver-3.12.0-sources.jar!/org/openqa/selenium/remote/RemoteWebElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3225">
+          <caret line="315" column="17" selection-start-line="315" selection-start-column="17" selection-end-line="315" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/testData/CheckBoxElements.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="69" column="61" selection-start-line="69" selection-start-column="61" selection-end-line="69" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
+            <element signature="e#314#315#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/GuiCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="304" selection-start-line="304" selection-end-line="304" />
+          <folding>
+            <element signature="e#9829#9830#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/PersonalDetailsForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="129" column="5" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/OngoingSourceOfWealth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3225">
+          <caret line="224" column="58" selection-start-line="224" selection-start-column="58" selection-end-line="224" selection-end-column="58" />
+          <folding>
+            <element signature="e#6206#6207#0" expanded="true" />
+            <element signature="e#6251#6252#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/testData/RandomDataGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="136" column="69" selection-start-line="136" selection-start-column="57" selection-end-line="136" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#1392#1393#0" expanded="true" />
+            <element signature="e#1479#1480#0" expanded="true" />
+            <element signature="e#1634#1635#0" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+            <element signature="e#1826#1827#0" expanded="true" />
+            <element signature="e#1903#1904#0" expanded="true" />
+            <element signature="e#2051#2052#0" expanded="true" />
+            <element signature="e#2136#2137#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
