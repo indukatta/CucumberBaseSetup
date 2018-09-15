@@ -92,6 +92,21 @@ public class GuiCommands {
             //TODO: Sysout(e.getMessage());
         }
     }
+    protected void writeDecimal(MobileElement element, double number){
+        try {
+            scrollDown(element);
+            element.sendKeys(String.valueOf(number));
+        }
+        catch (ElementNotVisibleException e) {
+            //TODO: Sysout(e.getMessage());
+        }
+        catch (ElementNotSelectableException e) {
+            //TODO: Sysout(e.getMessage());
+        }
+        catch(NoSuchElementException e){
+            //TODO: Sysout(e.getMessage());
+        }
+    }
 
     protected void clearText(MobileElement element) {
 

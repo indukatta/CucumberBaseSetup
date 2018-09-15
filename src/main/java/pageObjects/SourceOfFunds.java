@@ -163,24 +163,18 @@ public class SourceOfFunds extends GuiCommands {
 
     // Custom Methods
 
-    public boolean navigateToSourceOfFunds() {
-        ongoingSourceOfWealth.passThroughOngoingSourceOfWealth();
-
-        return isSourceOfFundsPageDisplayed();
-    }
-
 
     public void passThrougSourceOfFunds() {
         navigateToSourceOfFunds();
         writeValueOfCashDeposit(500);
         wrireTotalDepositMoney(200);
-       // clickNumberOfDepositors();
+        // clickNumberOfDepositors();
         //clickHowManyDepositprDoneButton();
         clickDepositorDetailButton();
         writeDepositorsName("Alex Warner");
         clickDepositorTransferralMethod();
         clickHowFundTransferredDoneButton();
-       // clickWhereFundTransferFrom();
+        // clickWhereFundTransferFrom();
         //clickWhereFundsTransferredFromDoneButton();
         clickCountry();
         writeText(countrySearchField, generator.setCountry());
@@ -191,6 +185,11 @@ public class SourceOfFunds extends GuiCommands {
         click(confirmButton);
         clickDepositorNextButton();
         clickNextButton();
+    }
+
+    public void navigateToSourceOfFunds(){
+
+        personalDetailsForm.passThroughPersonalDetailsForm();
     }
 
     public void populateSourceOfFunds() {

@@ -389,7 +389,6 @@ public class BusinessDetailsForm extends GuiCommands {
     }
 
     public void passThroughBusinessDetailsForm(){
-        navigateToBusinessDetails();
         click(tradingAddressSameAsBusiness);
         scrollDown(additionalDetails);
         writeText(additionalDetails, "Additional Details");

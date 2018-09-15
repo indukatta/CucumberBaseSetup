@@ -15,6 +15,7 @@ public class PersonalDetailsForm extends GuiCommands {
     RandomDataGenerator generator = new RandomDataGenerator();
     BusinessSearch businessSearch = new BusinessSearch(driver);
     BusinessDetailsForm businessDetailsForm = new BusinessDetailsForm(driver);
+    SetUp setUp = new SetUp(driver);
 
     public PersonalDetailsForm(IOSDriver driver) {
         super(driver);
@@ -113,6 +114,8 @@ public class PersonalDetailsForm extends GuiCommands {
 
 
     public void naviagateToPersonalDetailsForm(){
+        setUp.passThroughSetUp();
+        businessSearch.passThroughBusinessSearch();
         businessDetailsForm.passThroughBusinessDetailsForm();
         click(confirmOwnership);
     }
@@ -145,7 +148,7 @@ public class PersonalDetailsForm extends GuiCommands {
     }
 
     public void passThroughPersonalDetailsForm(){
-        naviagateToPersonalDetailsForm();
+        click(confirmOwnership);
         click(personNameChangedNo);
         click(personDOB);
         click(pickerWheelDone);
