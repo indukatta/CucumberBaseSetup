@@ -35,6 +35,10 @@ public class ExcelUtils {
 
     }
 
+    public static int getRowCount(){
+        return  ExcelWSheet.getLastRowNum() + 1;
+    }
+
     //This method is to read the test data from the Excel cell, in this we are passing parameters as Row num and Col num
     public static String getCellData(int RowNum, int ColNum){
         try{

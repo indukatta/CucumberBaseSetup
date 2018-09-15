@@ -399,7 +399,7 @@ public class BusinessDetailsForm extends GuiCommands {
         click(nextButton);
     }
 
-    public void businessDetailsFormWithData(String name, String country, int utr){
+    public void businessDetailsFormWithData(String name, String country, String utr){
         writeText(tradingName, name);
         click(tradingAddressSameAsBusiness);
         scrollDown(additionalDetails);
@@ -409,7 +409,7 @@ public class BusinessDetailsForm extends GuiCommands {
         writeCountry(country);
         clickGenericIostableCell();
         scrollDown(uniqueTaxReferenceNumber);
-        writeNumber(uniqueTaxReferenceNumber, utr);
+        writeText(uniqueTaxReferenceNumber, utr);
         click(nextButton);
     }
 

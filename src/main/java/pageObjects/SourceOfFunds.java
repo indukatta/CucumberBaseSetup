@@ -193,6 +193,23 @@ public class SourceOfFunds extends GuiCommands {
         clickNextButton();
     }
 
+    public void populateSourceOfFunds() {
+        writeValueOfCashDeposit(500);
+        wrireTotalDepositMoney(200);
+        clickDepositorDetailButton();
+        writeDepositorsName("Alex Warner");
+        clickDepositorTransferralMethod();
+        clickHowFundTransferredDoneButton();
+        clickCountry();
+        writeText(countrySearchField, generator.setCountry());
+        clickGenericIostableCell();
+        writeHowMuchIsGoingToBeTransferred(100);
+        clickHowFundsGenerated();
+        click(gift);
+        click(confirmButton);
+        clickDepositorNextButton();
+        clickNextButton();
+    }
 }
 
 

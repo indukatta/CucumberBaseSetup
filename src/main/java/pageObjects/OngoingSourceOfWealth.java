@@ -101,14 +101,18 @@ public class OngoingSourceOfWealth  extends GuiCommands {
         writeText(countrySearchTextField, generator.setCountry());
         clickGenericIostableCell();
         clickNextButton();
-
         return !isOngoingPageDisplayed();
     }
 
-
-
-
-
-
+    public void populateSourceOfWealth(){
+        writeAnnualTurnover(20);
+        clickBuisinessFunding();
+        click(gift);
+        clickSearchConfirmButton();
+        clickCountry();
+        writeText(countrySearchTextField, generator.setCountry());
+        clickGenericIostableCell();
+        clickNextButton();
+    }
 
 }
