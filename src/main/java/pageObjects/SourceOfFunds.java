@@ -163,19 +163,32 @@ public class SourceOfFunds extends GuiCommands {
         click(element);
     }
 
+<<<<<<< HEAD
     public boolean navigateToSourceOfFunds() {
         ongoingSourceOfWealth.passThroughOngoingSourceOfWealth();
         return isSourceOfFundsPageDisplayed();
     }
+=======
+>>>>>>> f82c57e220636ea6eed1ed66392972aff08e3aed
 
     public void passThrougSourceOfFunds() {
         navigateToSourceOfFunds();
         writeValueOfCashDeposit(500);
         wrireTotalDepositMoney(200);
+<<<<<<< HEAD
+=======
+        // clickNumberOfDepositors();
+        //clickHowManyDepositprDoneButton();
+>>>>>>> f82c57e220636ea6eed1ed66392972aff08e3aed
         clickDepositorDetailButton();
         writeDepositorsName("Alex Warner");
         clickDepositorTransferralMethod();
         clickHowFundTransferredDoneButton();
+<<<<<<< HEAD
+=======
+        // clickWhereFundTransferFrom();
+        //clickWhereFundsTransferredFromDoneButton();
+>>>>>>> f82c57e220636ea6eed1ed66392972aff08e3aed
         clickCountry();
         writeText(countrySearchField, generator.setCountry());
         clickGenericIostableCell();
@@ -187,9 +200,20 @@ public class SourceOfFunds extends GuiCommands {
         clickNextButton();
     }
 
+<<<<<<< HEAD
     public void populateSourceOfFunds(String cash, String depositTotal, String depositor, String transferTotal , String howFundsGenerated) {
         writeText(valueOfCashDepositorField, cash);
         writeText(totalDepositMoneyField, depositTotal);
+=======
+    public void navigateToSourceOfFunds(){
+
+        personalDetailsForm.passThroughPersonalDetailsForm();
+    }
+
+    public void populateSourceOfFunds() {
+        writeValueOfCashDeposit(500);
+        wrireTotalDepositMoney(200);
+>>>>>>> f82c57e220636ea6eed1ed66392972aff08e3aed
         clickDepositorDetailButton();
         writeDepositorsName(depositor);
         clickDepositorTransferralMethod();
