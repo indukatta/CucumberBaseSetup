@@ -3,6 +3,7 @@ package pageObjects;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSFindBy;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import testData.CheckBoxElements;
@@ -27,7 +28,7 @@ public class OngoingSourceOfWealth  extends GuiCommands {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @FindBy(name = "Ongoing Source of Wealth")
+    @iOSFindBy(accessibility = "Ongoing Source of Wealth")
     private MobileElement ongoingTitle ;
 
     @FindBy(xpath = "//XCUIElementTypeTextField[@name=\"ongoing_source_of_wealth.turnover.heading\"]") //FIXME get unique accessibility id
