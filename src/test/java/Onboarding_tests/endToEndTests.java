@@ -1,6 +1,5 @@
 package Onboarding_tests;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -48,15 +47,15 @@ public class endToEndTests extends Base_test {
 
     @Test(dataProvider = "getTestData")
     public void onboardingEndToEnd(String mobile, String email, String company, String tradingName, String taxResidency, String UTR, String previousName,
-                       String DOB, String residentialAddress, String natInsuranceNumber, String idNumber, String annualTurnover,
+                                   String residentialAddress, String natInsuranceNumber, String idNumber, String annualTurnover,
                        String country, String valueOfCashDeposits, String totalDeposits, String depositorName, String amountTransferred,
                        String howTheFundsWereGenerated){
         setUp.setUpWithData(mobile, email);
-        businessSearch.passThroughBusinessSearch();
-        businessDetailsForm.businessDetailsFormWithData(tradingName,taxResidency,UTR);
+        businessSearch.populateBusinessSearch(company);
+        businessDetailsForm.populateBusinessDetailsForm(tradingName,taxResidency,UTR);
         personalDetailsForm.personalDetailsWitData(previousName,residentialAddress,natInsuranceNumber,idNumber,country);
-        ongoingSourceOfWealth.populateSourceOfWealth();
-        sourceOfFunds.populateSourceOfFunds();
+        ongoingSourceOfWealth.populateSourceOfWealth(annualTurnover, howTheFundsWereGenerated, country);
+        sourceOfFunds.populateSourceOfFunds(valueOfCashDeposits, totalDeposits, depositorName, amountTransferred, howTheFundsWereGenerated);
         transactionDetails.passThroughTransactionDetails();
 
     }

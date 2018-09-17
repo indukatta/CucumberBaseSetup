@@ -1,8 +1,11 @@
 package pageObjects;
 
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSFindBy;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import testData.RandomDataGenerator;
@@ -65,6 +68,11 @@ public class OngoingSourceOfWealth  extends GuiCommands {
 
     public void clickBuisinessFunding() { click(fundingTextField);}
 
+    public void clickFundingOption(String funding){
+       MobileElement element = (MobileElement) driver.findElement(By.name(funding));
+       click(element);
+    }
+
     public void clickSearchConfirmButton(){click((searchConfirmButton));}
 
     public void clickFundingSearchExitButton (){ click(fundingSearchExitButton);}
@@ -76,21 +84,17 @@ public class OngoingSourceOfWealth  extends GuiCommands {
     public void clickNextButton() { click(nextButton); }
 
     // Write Methods
-
     public void writeAnnualTurnover (int amount){writeNumber(annualTurnoverTextField,amount);}
 
     // Clear Methods
-
     public void clearAnnualTurnover (){clearText(annualTurnoverTextField);}
 
-    //Custom Methods gthtgt
-
+    //Custom Methods
     public boolean navigateToOngoingSourceOfWealth (){
         personalDetailsForm.passThroughPersonalDetailsForm();
         return isOngoingPageDisplayed();
-
-
     }
+
     public boolean passThroughOngoingSourceOfWealth(){
         navigateToOngoingSourceOfWealth();
         writeAnnualTurnover(20);
@@ -104,13 +108,13 @@ public class OngoingSourceOfWealth  extends GuiCommands {
         return !isOngoingPageDisplayed();
     }
 
-    public void populateSourceOfWealth(){
-        writeAnnualTurnover(20);
+    public void populateSourceOfWealth(String turnover, String funding, String country){
+        writeText(annualTurnoverTextField, turnover);
         clickBuisinessFunding();
-        click(gift);
+        clickFundingOption(funding);
         clickSearchConfirmButton();
         clickCountry();
-        writeText(countrySearchTextField, generator.setCountry());
+        writeText(countrySearchTextField, country);
         clickGenericIostableCell();
         clickNextButton();
     }

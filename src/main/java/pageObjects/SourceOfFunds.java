@@ -3,6 +3,7 @@ package pageObjects;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import testData.RandomDataGenerator;
@@ -43,9 +44,7 @@ public class SourceOfFunds extends GuiCommands {
     @FindBy (name = "next_button_default_title")
     private  MobileElement nextButton;
 
-
     // Depositor Screen
-
     @FindBy ( name = "Depositors")
     private MobileElement depositorsTitle;
 
@@ -60,7 +59,6 @@ public class SourceOfFunds extends GuiCommands {
 
     @FindBy ( name = "depositor.transferral_origin.header")
     private MobileElement fundTransfer;
-
 
     @FindBy ( name = "depositor.bank_origin_country.header")
     private MobileElement countryField;
@@ -82,7 +80,6 @@ public class SourceOfFunds extends GuiCommands {
 
     @FindBy(name = "Gift")
     public MobileElement gift;
-
 
     @FindBy ( name = "search exit button")
     private MobileElement howFundsGeneratedExitButton;
@@ -152,7 +149,6 @@ public class SourceOfFunds extends GuiCommands {
     public void writeHowMuchIsGoingToBeTransferred(int amount) { writeNumber(howMuchTransferred, amount);}
 
     // Clear Methods
-
     public void clearValueOfCashDeposit() { clearText(valueOfCashDepositorField);}
 
     public void clearTotalDepositMoney() { clearText(totalDepositMoneyField);}
@@ -162,26 +158,24 @@ public class SourceOfFunds extends GuiCommands {
     public void clearHowMuchIsGoingToBeTransferred() { clearText(howMuchTransferred);}
 
     // Custom Methods
+    public void clickFundingOption(String funding){
+        MobileElement element = (MobileElement) driver.findElement(By.name(funding));
+        click(element);
+    }
 
     public boolean navigateToSourceOfFunds() {
         ongoingSourceOfWealth.passThroughOngoingSourceOfWealth();
-
         return isSourceOfFundsPageDisplayed();
     }
-
 
     public void passThrougSourceOfFunds() {
         navigateToSourceOfFunds();
         writeValueOfCashDeposit(500);
         wrireTotalDepositMoney(200);
-       // clickNumberOfDepositors();
-        //clickHowManyDepositprDoneButton();
         clickDepositorDetailButton();
         writeDepositorsName("Alex Warner");
         clickDepositorTransferralMethod();
         clickHowFundTransferredDoneButton();
-       // clickWhereFundTransferFrom();
-        //clickWhereFundsTransferredFromDoneButton();
         clickCountry();
         writeText(countrySearchField, generator.setCountry());
         clickGenericIostableCell();
@@ -193,19 +187,19 @@ public class SourceOfFunds extends GuiCommands {
         clickNextButton();
     }
 
-    public void populateSourceOfFunds() {
-        writeValueOfCashDeposit(500);
-        wrireTotalDepositMoney(200);
+    public void populateSourceOfFunds(String cash, String depositTotal, String depositor, String transferTotal , String howFundsGenerated) {
+        writeText(valueOfCashDepositorField, cash);
+        writeText(totalDepositMoneyField, depositTotal);
         clickDepositorDetailButton();
-        writeDepositorsName("Alex Warner");
+        writeDepositorsName(depositor);
         clickDepositorTransferralMethod();
         clickHowFundTransferredDoneButton();
         clickCountry();
         writeText(countrySearchField, generator.setCountry());
         clickGenericIostableCell();
-        writeHowMuchIsGoingToBeTransferred(100);
+        writeText(howMuchTransferred, transferTotal);
         clickHowFundsGenerated();
-        click(gift);
+        clickFundingOption(howFundsGenerated);
         click(confirmButton);
         clickDepositorNextButton();
         clickNextButton();
