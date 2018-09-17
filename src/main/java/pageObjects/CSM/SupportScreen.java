@@ -9,9 +9,9 @@ import utils.GuiCommands;
 
 public class SupportScreen extends GuiCommands {
 
-    private SetUp setup = new SetUp(driver);
+    //private SetUp setup = new SetUp(driver);
 
-    public Support (IOSDriver driver) {
+    public SupportScreen (IOSDriver driver) {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }

@@ -121,14 +121,8 @@ public class OngoingSourceOfWealth  extends GuiCommands {
     // Clear Methods
     public void clearAnnualTurnover (){clearText(annualTurnoverTextField);}
 
-<<<<<<< HEAD
+
     //Custom Methods
-    public boolean navigateToOngoingSourceOfWealth (){
-        personalDetailsForm.passThroughPersonalDetailsForm();
-        return isOngoingPageDisplayed();
-    }
-=======
-    //Custom Methods gthtgt
 
     public void navigateToOngoingSourceOfWealth (){
 
@@ -210,6 +204,7 @@ public class OngoingSourceOfWealth  extends GuiCommands {
     public boolean isGbpDisplayed (){
         return gbpTitle.isDisplayed();
     }
+
     public boolean isCountryListShown (){
         navigateToOngoingSourceOfWealth();
         clickCountry();
@@ -294,18 +289,13 @@ public class OngoingSourceOfWealth  extends GuiCommands {
 
         return !isOngoingPageDisplayed();
     }
->>>>>>> f82c57e220636ea6eed1ed66392972aff08e3aed
+
 
     public boolean passThroughOngoingSourceOfWealth(){
-        navigateToOngoingSourceOfWealth();
         writeAnnualTurnover(20);
         clickBuisinessFunding();
         checkBoxElements.clickRandomElement();
         clickSearchConfirmButton();
-        clickCountry();
-        writeText(countrySearchTextField, generator.setCountry());
-        clickGenericIostableCell();
-        writeText(otherTextField,"Other Element");
         clickCountry();
         writeText(countrySearchTextField, generator.setCountry());
         clickGenericIostableCell();

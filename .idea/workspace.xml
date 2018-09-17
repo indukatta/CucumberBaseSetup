@@ -2,66 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d068524-d172-4dd2-882a-e468c3dce49b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/screenshots/12-09-2018_01_55_25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/12-09-2018_01_56_15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/12-09-2018_01_57_13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/12-09-2018_01_59_23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/12-09-2018_05_31_06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/12-09-2018_05_39_43.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/12-09-2018_05_49_25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/12-09-2018_05_54_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/12-09-2018_05_58_30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/12-09-2018_06_08_36.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/12-09-2018_06_18_29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/12-09-2018_06_22_18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_01_02_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_01_03_40.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_01_05_33.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_01_08_51.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_01_10_24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_01_12_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_01_15_48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_01_19_23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_01_29_25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_02_36_22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_02_47_44.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_09_53_54.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_09_57_28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_09_59_59.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_11_40_54.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_11_41_07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_11_41_20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_11_41_38.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_11_41_51.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_11_42_07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_11_42_35.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_11_45_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_12_01_26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_12_02_58.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshots/13-09-2018_12_03_59.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/testData/CheckBoxElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pageObjects/DepositorsDetailsForm.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/OngoingSourceOfWealthTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/BusinessDetailsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/BusinessDetailsForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/CSM/SupportScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/CSM/SupportScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/OngoingSourceOfWealth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/OngoingSourceOfWealth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/PersonalDetailsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/PersonalDetailsForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/SourceOfFunds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/SourceOfFunds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/testData/ExcelFiles/Countries.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testData/ExcelFiles/Countries.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/GuiCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/GuiCommands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Onboarding_tests/Base_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Onboarding_tests/Base_test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/BusinessDetailsForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/BusinessDetailsForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/BusinessSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/BusinessSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/DepositorsDetailsForm.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/OngoingSourceOfWealth.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/OngoingSourceOfWealth.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/PersonalDetailsForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/PersonalDetailsForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/SetUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/SetUp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/SourceOfFunds.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/SourceOfFunds.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/TransactionDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/TransactionDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/testData/ExcelFiles/Countries.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/testData/ExcelFiles/E2E_Test_Data.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/testData/ExcelFiles/SIC_Code_analysis.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/testData/ExcelFiles/~$E2E_Test_Data.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/testData/RandomDataGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/testData/RandomDataGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/testData/onboardingTestData/GetE2ETestData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/testData/onboardingTestData/GetE2ETestData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/Constants.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/utils/ExcelUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/ExcelUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/utils/GuiCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/GuiCommands.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/Base_test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/Base_test.class" afterDir="false" />
@@ -121,26 +76,32 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="17" />
+          <entry key="java" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="17" />
+          <entry key="JAVA" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2932" />
+          <entry key="java" value="2966" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2932" />
+          <entry key="JAVA" value="2966" />
         </counts>
       </usages-collector>
-      <usages-collector id="statistics.lifecycle.project" />
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
@@ -148,18 +109,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/OngoingSourceOfWealth.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1895">
-              <caret line="238" column="19" selection-start-line="238" selection-start-column="19" selection-end-line="238" selection-end-column="19" />
+            <state relative-caret-position="187">
+              <caret line="128" column="24" lean-forward="true" selection-start-line="128" selection-start-column="24" selection-end-line="128" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/SetUp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="22" />
+            <state relative-caret-position="44">
+              <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
               <folding>
+                <element signature="e#2173#2174#0" expanded="true" />
+                <element signature="e#2226#2227#0" expanded="true" />
                 <element signature="e#2269#2270#0" expanded="true" />
                 <element signature="e#2315#2316#0" expanded="true" />
               </folding>
@@ -167,11 +130,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/endToEndTests.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/GuiCommands.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="165">
+              <caret line="94" column="19" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -180,32 +143,67 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/reflect/Method.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="563" selection-start-line="563" selection-end-line="563" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/SourceOfFunds.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3045">
-              <caret line="209" column="26" lean-forward="true" selection-start-line="209" selection-start-column="26" selection-end-line="209" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/BusinessDetailsForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="3735">
+              <caret line="256" column="1" lean-forward="true" selection-start-line="256" selection-start-column="1" selection-end-line="256" selection-end-column="1" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3340#3341#0" expanded="true" />
-                <element signature="e#3405#3406#0" expanded="true" />
+                <element signature="e#3325#3326#0" expanded="true" />
+                <element signature="e#3380#3381#0" expanded="true" />
+                <element signature="e#3430#3431#0" expanded="true" />
+                <element signature="e#3482#3483#0" expanded="true" />
+                <element signature="e#3550#3551#0" expanded="true" />
+                <element signature="e#3595#3596#0" expanded="true" />
+                <element signature="e#3675#3676#0" expanded="true" />
+                <element signature="e#3723#3724#0" expanded="true" />
+                <element signature="e#3767#3768#0" expanded="true" />
+                <element signature="e#3812#3813#0" expanded="true" />
+                <element signature="e#3857#3858#0" expanded="true" />
+                <element signature="e#3898#3899#0" expanded="true" />
+                <element signature="e#3946#3947#0" expanded="true" />
+                <element signature="e#3990#3991#0" expanded="true" />
+                <element signature="e#4027#4028#0" expanded="true" />
+                <element signature="e#4060#4061#0" expanded="true" />
+                <element signature="e#4113#4114#0" expanded="true" />
+                <element signature="e#4146#4147#0" expanded="true" />
+                <element signature="e#4210#4211#0" expanded="true" />
+                <element signature="e#4248#4249#0" expanded="true" />
+                <element signature="e#4301#4302#0" expanded="true" />
+                <element signature="e#4350#4351#0" expanded="true" />
+                <element signature="e#4405#4406#0" expanded="true" />
+                <element signature="e#4438#4439#0" expanded="true" />
+                <element signature="e#4486#4487#0" expanded="true" />
+                <element signature="e#4521#4522#0" expanded="true" />
+                <element signature="e#4583#4584#0" expanded="true" />
+                <element signature="e#4616#4617#0" expanded="true" />
+                <element signature="e#4650#4651#0" expanded="true" />
+                <element signature="e#4685#4686#0" expanded="true" />
+                <element signature="e#4729#4730#0" expanded="true" />
+                <element signature="e#4769#4770#0" expanded="true" />
+                <element signature="e#4814#4815#0" expanded="true" />
+                <element signature="e#4855#4856#0" expanded="true" />
+                <element signature="e#4899#4900#0" expanded="true" />
+                <element signature="e#4939#4940#0" expanded="true" />
+                <element signature="e#4993#4994#0" expanded="true" />
+                <element signature="e#5043#5044#0" expanded="true" />
+                <element signature="e#5089#5090#0" expanded="true" />
+                <element signature="e#5130#5131#0" expanded="true" />
+                <element signature="e#5206#5207#0" expanded="true" />
+                <element signature="e#5268#5269#0" expanded="true" />
+                <element signature="e#5322#5323#0" expanded="true" />
+                <element signature="e#5381#5382#0" expanded="true" />
+                <element signature="e#5433#5434#0" expanded="true" />
+                <element signature="e#5481#5482#0" expanded="true" />
+                <element signature="e#5547#5548#0" expanded="true" />
+                <element signature="e#5602#5603#0" expanded="true" />
+                <element signature="e#5668#5669#0" expanded="true" />
+                <element signature="e#5720#5721#0" expanded="true" />
+                <element signature="e#5764#5765#0" expanded="true" />
+                <element signature="e#5813#5814#0" expanded="true" />
+                <element signature="e#5854#5855#0" expanded="true" />
+                <element signature="e#5896#5897#0" expanded="true" />
+                <element signature="e#5952#5953#0" expanded="true" />
+                <element signature="e#5997#5998#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -221,10 +219,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/Base_test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+            <state relative-caret-position="147">
+              <caret line="39" column="39" lean-forward="true" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -233,13 +231,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/TransactionDetails.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/CSM/SupportScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="90" column="1" lean-forward="true" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
+            <state relative-caret-position="180">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/CSM/MessagingScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/BusinessSearch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -319,10 +344,11 @@
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/BusinessDetailsForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/TransactionDetails.java" />
         <option value="$PROJECT_DIR$/src/test/java/Onboarding_tests/EndtoEndTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pageObjects/OngoingSourceOfWealth.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Onboarding_tests/Base_test.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/Constants.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Onboarding_tests/Base_test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pageObjects/OngoingSourceOfWealth.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/SourceOfFunds.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pageObjects/CSM/SupportScreen.java" />
       </list>
     </option>
   </component>
@@ -418,8 +444,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -457,14 +481,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="pageObjects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="uitesting" type="b2602c69:ProjectViewProjectNode" />
-              <item name="uitesting" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="uitesting" type="b2602c69:ProjectViewProjectNode" />
@@ -514,10 +530,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537034264586" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537197196285" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -541,7 +559,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.endToEndTests">
+  <component name="RunManager" selected="TestNG.OngoingSourceOfWealthTests">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -665,8 +683,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.endToEndTests" />
         <item itemvalue="TestNG.OngoingSourceOfWealthTests" />
+        <item itemvalue="TestNG.endToEndTests" />
         <item itemvalue="TestNG.OngoingSourceOfWealthTests.CUICE5113" />
         <item itemvalue="TestNG.personalDetailsTests" />
         <item itemvalue="TestNG.businessFormTests" />
@@ -687,12 +705,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="OngoingSourceOfWealthTests - 2018.09.12 at 18h 22m 19s.xml">
-      <configuration name="OngoingSourceOfWealthTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="OngoingSourceOfWealthTests - 2018.09.15 at 17h 44m 24s.xml">
-      <configuration name="OngoingSourceOfWealthTests" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="OngoingSourceOfWealthTests - 2018.09.15 at 17h 51m 45s.xml">
       <configuration name="OngoingSourceOfWealthTests" configurationId="TestNG" />
     </history-entry>
@@ -717,6 +729,12 @@
     <history-entry file="OngoingSourceOfWealthTests - 2018.09.15 at 18h 46m 50s.xml">
       <configuration name="OngoingSourceOfWealthTests" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="OngoingSourceOfWealthTests - 2018.09.17 at 16h 33m 19s.xml">
+      <configuration name="OngoingSourceOfWealthTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="OngoingSourceOfWealthTests - 2018.09.17 at 16h 34m 40s.xml">
+      <configuration name="OngoingSourceOfWealthTests" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -730,7 +748,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="821" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25250357" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22174536" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -739,7 +757,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969698" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.28806585" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.28806585" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -747,8 +765,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32969698" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007153" side_tool="true" weight="0.32969698" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32921812" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3297568" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32857144" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -757,6 +774,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.3297568" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.3297568" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35407725" />
@@ -796,10 +814,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/commonSeleniumCommands.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.12.0/selenium-support-3.12.0.jar!/org/openqa/selenium/support/PageFactory.class" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Onboarding_Welcome_screen.java" />
     <entry file="file://$PROJECT_DIR$/allure-results/a8d628cf-5cba-4141-ae25-11c0f33b24bd-result.json" />
@@ -830,13 +844,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/OnboardingBusinessDetails.java" />
     <entry file="file://$PROJECT_DIR$/target/classes/pageObjects/BusinessDetailsForm.class" />
     <entry file="file://$PROJECT_DIR$/target/classes/utils/Constants.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#516#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/testData/RandomDataGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -859,13 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/BusinessSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/ExcelUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -875,16 +876,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/pageObjects/SourceOfFunds.class" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/DepositorsDetailsForm.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/GuiCommands.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/PersonalDetailsForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1365">
@@ -896,14 +887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1114#1115#0" expanded="true" />
-            <element signature="e#1212#1213#0" expanded="true" />
-            <element signature="e#1447#1448#0" expanded="true" />
-            <element signature="e#2777#2778#0" expanded="true" />
-            <element signature="e#2857#2858#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -918,8 +901,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.12.0/selenium-support-3.12.0.jar!/org/openqa/selenium/support/FindBy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="563" selection-start-line="563" selection-end-line="563" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.12.0/selenium-support-3.12.0-sources.jar!/org/openqa/selenium/support/AbstractFindByBuilder.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.12.0/selenium-support-3.12.0-sources.jar!/org/openqa/selenium/support/FindBy.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/TransactionDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="90" column="1" lean-forward="true" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
           <folding>
-            <element signature="e#0#4147#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/endToEndTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/BusinessDetailsForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -931,66 +957,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.12.0/selenium-support-3.12.0.jar!/org/openqa/selenium/support/FindBy.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/CSM/MessagingScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/BusinessSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/SourceOfFunds.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3735">
+          <caret line="256" column="1" lean-forward="true" selection-start-line="256" selection-start-column="1" selection-end-line="256" selection-end-column="1" />
           <folding>
-            <element signature="e#0#1331#0" expanded="true" />
-            <element signature="imports" expanded="true" />
+            <element signature="e#3325#3326#0" expanded="true" />
+            <element signature="e#3380#3381#0" expanded="true" />
+            <element signature="e#3430#3431#0" expanded="true" />
+            <element signature="e#3482#3483#0" expanded="true" />
+            <element signature="e#3550#3551#0" expanded="true" />
+            <element signature="e#3595#3596#0" expanded="true" />
+            <element signature="e#3675#3676#0" expanded="true" />
+            <element signature="e#3723#3724#0" expanded="true" />
+            <element signature="e#3767#3768#0" expanded="true" />
+            <element signature="e#3812#3813#0" expanded="true" />
+            <element signature="e#3857#3858#0" expanded="true" />
+            <element signature="e#3898#3899#0" expanded="true" />
+            <element signature="e#3946#3947#0" expanded="true" />
+            <element signature="e#3990#3991#0" expanded="true" />
+            <element signature="e#4027#4028#0" expanded="true" />
+            <element signature="e#4060#4061#0" expanded="true" />
+            <element signature="e#4113#4114#0" expanded="true" />
+            <element signature="e#4146#4147#0" expanded="true" />
+            <element signature="e#4210#4211#0" expanded="true" />
+            <element signature="e#4248#4249#0" expanded="true" />
+            <element signature="e#4301#4302#0" expanded="true" />
+            <element signature="e#4350#4351#0" expanded="true" />
+            <element signature="e#4405#4406#0" expanded="true" />
+            <element signature="e#4438#4439#0" expanded="true" />
+            <element signature="e#4486#4487#0" expanded="true" />
+            <element signature="e#4521#4522#0" expanded="true" />
+            <element signature="e#4583#4584#0" expanded="true" />
+            <element signature="e#4616#4617#0" expanded="true" />
+            <element signature="e#4650#4651#0" expanded="true" />
+            <element signature="e#4685#4686#0" expanded="true" />
+            <element signature="e#4729#4730#0" expanded="true" />
+            <element signature="e#4769#4770#0" expanded="true" />
+            <element signature="e#4814#4815#0" expanded="true" />
+            <element signature="e#4855#4856#0" expanded="true" />
+            <element signature="e#4899#4900#0" expanded="true" />
+            <element signature="e#4939#4940#0" expanded="true" />
+            <element signature="e#4993#4994#0" expanded="true" />
+            <element signature="e#5043#5044#0" expanded="true" />
+            <element signature="e#5089#5090#0" expanded="true" />
+            <element signature="e#5130#5131#0" expanded="true" />
+            <element signature="e#5206#5207#0" expanded="true" />
+            <element signature="e#5268#5269#0" expanded="true" />
+            <element signature="e#5322#5323#0" expanded="true" />
+            <element signature="e#5381#5382#0" expanded="true" />
+            <element signature="e#5433#5434#0" expanded="true" />
+            <element signature="e#5481#5482#0" expanded="true" />
+            <element signature="e#5547#5548#0" expanded="true" />
+            <element signature="e#5602#5603#0" expanded="true" />
+            <element signature="e#5668#5669#0" expanded="true" />
+            <element signature="e#5720#5721#0" expanded="true" />
+            <element signature="e#5764#5765#0" expanded="true" />
+            <element signature="e#5813#5814#0" expanded="true" />
+            <element signature="e#5854#5855#0" expanded="true" />
+            <element signature="e#5896#5897#0" expanded="true" />
+            <element signature="e#5952#5953#0" expanded="true" />
+            <element signature="e#5997#5998#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/Base_test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+        <state relative-caret-position="147">
+          <caret line="39" column="39" lean-forward="true" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/reflect/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="563" selection-start-line="563" selection-end-line="563" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.12.0/selenium-support-3.12.0-sources.jar!/org/openqa/selenium/support/AbstractFindByBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="99" column="48" selection-start-line="99" selection-start-column="46" selection-end-line="99" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.12.0/selenium-support-3.12.0-sources.jar!/org/openqa/selenium/support/FindBy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="docComment;class#FindBy#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/SetUp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/CSM/SupportScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="22" />
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/GuiCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="94" column="19" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
           <folding>
-            <element signature="e#2269#2270#0" expanded="true" />
-            <element signature="e#2315#2316#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+        <state relative-caret-position="238">
+          <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -999,46 +1075,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/OngoingSourceOfWealth.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1895">
-          <caret line="238" column="19" selection-start-line="238" selection-start-column="19" selection-end-line="238" selection-end-column="19" />
+        <state relative-caret-position="187">
+          <caret line="128" column="24" lean-forward="true" selection-start-line="128" selection-start-column="24" selection-end-line="128" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/TransactionDetails.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/SetUp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="90" column="1" lean-forward="true" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
+        <state relative-caret-position="44">
+          <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/SourceOfFunds.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3045">
-          <caret line="209" column="26" lean-forward="true" selection-start-line="209" selection-start-column="26" selection-end-line="209" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/BusinessDetailsForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3340#3341#0" expanded="true" />
-            <element signature="e#3405#3406#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/endToEndTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2173#2174#0" expanded="true" />
+            <element signature="e#2226#2227#0" expanded="true" />
+            <element signature="e#2269#2270#0" expanded="true" />
+            <element signature="e#2315#2316#0" expanded="true" />
           </folding>
         </state>
       </provider>
