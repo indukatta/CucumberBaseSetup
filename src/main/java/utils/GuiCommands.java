@@ -11,7 +11,6 @@ import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.*;
-import org.testng.Assert;
 
 import java.time.Duration;
 import java.util.HashMap;

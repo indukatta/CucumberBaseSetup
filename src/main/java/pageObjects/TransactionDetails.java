@@ -64,8 +64,6 @@ public class TransactionDetails extends GuiCommands {
 
     public  void clickSubmit() {click(submitButton);}
 
-
-
 //Custom Methods
 
     public void passThroughTransactionDetails(){
@@ -78,12 +76,10 @@ public class TransactionDetails extends GuiCommands {
 
     public boolean navigateToTransactionDetails(){
         sourceOfFunds.passThrougSourceOfFunds();
-
         return isTransactionDetailsPageDisplayed();
     }
 
     public boolean passThroughSummaryPage(){
-
         passThroughTransactionDetails();
         clickSubmit();
         return isAllDoneDisplayed();
