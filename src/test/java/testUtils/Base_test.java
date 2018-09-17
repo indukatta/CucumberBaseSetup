@@ -1,4 +1,4 @@
-package Onboarding_tests;
+package testUtils;
 
 import io.appium.java_client.ios.IOSDriver;
 import org.apache.commons.io.FileUtils;
@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Base_test {
 
-    IOSDriver driver;
+    protected IOSDriver driver;
     String folder;
     String recordings;
     DateFormat df;
@@ -33,7 +33,8 @@ public class Base_test {
         capabilities.setCapability("platformName", "IOS");
         capabilities.setCapability("platformVersion", "11.2");
         capabilities.setCapability("deviceName", "iPhone 8");
-        capabilities.setCapability("app", "/Users/Somayehalimohammadi/Library/Developer/Xcode/DerivedData/Iceberg-exzergyzsxqzaieskfrshlgbmzfg/Build/Products/Debug-iphonesimulator/Iceberg.app");
+        capabilities.setCapability("app", "/Users/awhitten/Library/Developer/Xcode/DerivedData/" +
+                "Iceberg-dmdimcbnvyefcdajhivuraigymun/Build/Products/Debug-iphonesimulator/Iceberg.app");
 
 
         driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);

@@ -3,11 +3,8 @@ package Onboarding_tests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pageObjects.BusinessDetailsForm;
-import pageObjects.BusinessSearch;
-import pageObjects.PersonalDetailsForm;
-import pageObjects.SetUp;
-import testData.RandomDataGenerator;
+import pageObjects.Onboarding.PersonalDetailsForm;
+import testUtils.Base_test;
 
 public class personalDetailsTests extends Base_test {
 

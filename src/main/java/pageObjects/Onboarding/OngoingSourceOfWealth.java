@@ -1,6 +1,5 @@
-package pageObjects;
+package pageObjects.Onboarding;
 
-import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -23,67 +22,64 @@ public class OngoingSourceOfWealth  extends GuiCommands {
     RandomDataGenerator generator = new RandomDataGenerator();
     CheckBoxElements checkBoxElements = new CheckBoxElements(driver);
 
-
-
     public OngoingSourceOfWealth(IOSDriver driver) {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @FindBy(name = "Ongoing Source of Wealth")
+    @iOSFindBy(accessibility = "Ongoing Source of Wealth")
     private MobileElement ongoingTitle ;
 
-    @FindBy(xpath = "//XCUIElementTypeTextField[@name=\"ongoing_source_of_wealth.turnover.heading\"]") //FIXME get unique accessibility id
+    @iOSFindBy(xpath = "//XCUIElementTypeTextField[@name=\"ongoing_source_of_wealth.turnover.heading\"]") //FIXME get unique accessibility id
     private MobileElement annualTurnoverTextField;
 
-    @FindBy(name = "ongoing_source_of_wealth.fundingSource.heading")
+    @iOSFindBy(accessibility = "ongoing_source_of_wealth.fundingSource.heading")
     private MobileElement fundingTextField;
 
-    @FindBy(name = "search exit button")
+    @iOSFindBy(accessibility = "search exit button")
     private MobileElement fundingSearchExitButton;
 
-    @FindBy(name = "ongoing_source_of_wealth_selection.confirm")
+    @iOSFindBy(accessibility = "ongoing_source_of_wealth_selection.confirm")
     private MobileElement searchConfirmButton;
 
-    @FindBy(name = "country_search.search_field_title")
+    @iOSFindBy(accessibility = "country_search.search_field_title")
     private MobileElement countrySearchTextField;
 
-    @FindBy(name = "ongoing_source_of_wealth.fundingCountry.heading")
+    @iOSFindBy(accessibility = "ongoing_source_of_wealth.fundingCountry.heading")
     private MobileElement fundingCountryTextField;
 
-    @FindBy(name = "search exit button")
+    @iOSFindBy(accessibility = "search exit button")
     private MobileElement countrySearchExitButton;
 
-    @FindBy(name = "next_button_default_title")
+    @iOSFindBy(accessibility = "next_button_default_title")
     private MobileElement nextButton;
 
-    @FindBy(name = "GBP")
+    @iOSFindBy(accessibility = "GBP")
     private MobileElement gbpTitle;
 
-    @FindBy(name = "ongoing_source_of_wealth.optional_other")
+    @iOSFindBy(accessibility = "ongoing_source_of_wealth.optional_other")
     private MobileElement otherTextField;
 
-    @FindBy(name = "You and your business")
+    @iOSFindBy(accessibility = "You and your business")
     private MobileElement wealthBackButton;
 
-    @FindBy(name = "Business Details")
+    @iOSFindBy(accessibility = "Business Details")
     private MobileElement businessDetailsBackButton;
 
-    @FindBy(name = "You and your business")
+    @iOSFindBy(accessibility = "You and your business")
     private MobileElement ownershipBackButton;
 
-    @FindBy(name = "business_search.search_field_title.initial")
+    @iOSFindBy(accessibility = "business_search.search_field_title.initial")
     private MobileElement businessSearchField;
 
-    @FindBy(xpath = "//XCUIElementTypeButton[@name=\"You and your business\"]")
+    @iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"You and your business\"]")
     private MobileElement businessSearchBackButton;
 
     //check box elements
-
-    @FindBy(name = "Gift")
+    @iOSFindBy(accessibility = "Gift")
     private MobileElement gift;
 
-    @FindBy(name = "Other")
+    @iOSFindBy(accessibility = "Other")
     private MobileElement other;
 
 
@@ -121,17 +117,8 @@ public class OngoingSourceOfWealth  extends GuiCommands {
     // Clear Methods
     public void clearAnnualTurnover (){clearText(annualTurnoverTextField);}
 
-<<<<<<< HEAD
-    //Custom Methods
-    public boolean navigateToOngoingSourceOfWealth (){
-        personalDetailsForm.passThroughPersonalDetailsForm();
-        return isOngoingPageDisplayed();
-    }
-=======
-    //Custom Methods gthtgt
 
     public void navigateToOngoingSourceOfWealth (){
-
         setUp.passThroughSetUp();
         businessSearch.passThroughBusinessSearch();
         businessDetailsForm.passThroughBusinessDetailsForm();
@@ -294,7 +281,6 @@ public class OngoingSourceOfWealth  extends GuiCommands {
 
         return !isOngoingPageDisplayed();
     }
->>>>>>> f82c57e220636ea6eed1ed66392972aff08e3aed
 
     public boolean passThroughOngoingSourceOfWealth(){
         navigateToOngoingSourceOfWealth();

@@ -1,8 +1,9 @@
-package pageObjects;
+package pageObjects.Onboarding;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSFindBy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -23,85 +24,79 @@ public class SourceOfFunds extends GuiCommands {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @FindBy ( name = "Source of Funds")
+    @iOSFindBy(accessibility = "Source of Funds")
     private MobileElement sourceOfFundstitle;
 
-    @FindBy (xpath = "//XCUIElementTypeTextField[@name=\"depositors.last_twelve_months_amount\"]")  //FIXME get unique accessibility id
+    @iOSFindBy (xpath = "//XCUIElementTypeTextField[@name=\"depositors.last_twelve_months_amount\"]")  //FIXME get unique accessibility id
     private MobileElement valueOfCashDepositorField;
 
-    @FindBy (xpath = "//XCUIElementTypeTextField[@name=\"depositors.depositors_total_amount.header\"]")  //FIXME get unique accessibility id
+    @iOSFindBy (xpath = "//XCUIElementTypeTextField[@name=\"depositors.depositors_total_amount.header\"]")  //FIXME get unique accessibility id
     private MobileElement totalDepositMoneyField;
 
-    @FindBy (name = "depositors.depositors_count_textfield.header")
+    @iOSFindBy (accessibility = "depositors.depositors_count_textfield.header")
     private MobileElement numberOfDepositors;
 
-    @FindBy (name = "depositors.add_depositor_details.buttonTitle")
+    @iOSFindBy (accessibility = "depositors.add_depositor_details.buttonTitle")
     private MobileElement depositorDetailButton;
 
-    @FindBy (name = "Ff Gg")
+    @iOSFindBy (accessibility = "Ff Gg")
     private MobileElement depositorDetail;
 
-    @FindBy (name = "next_button_default_title")
+    @iOSFindBy (accessibility = "next_button_default_title")
     private  MobileElement nextButton;
 
     // Depositor Screen
-    @FindBy ( name = "Depositors")
+    @iOSFindBy (accessibility = "Depositors")
     private MobileElement depositorsTitle;
 
-    @FindBy ( name = "depositor.name_of_depositor.header")
+    @iOSFindBy (accessibility = "depositor.name_of_depositor.header")
     private MobileElement nameOfDepositor;
 
-    @FindBy ( name = "depositor.transferral_method.header")
+    @iOSFindBy (accessibility = "depositor.transferral_method.header")
     private MobileElement depositorTransferralMethod;
 
-    @FindBy(name = "toolbar_done")
+    @iOSFindBy(accessibility = "toolbar_done")
     private MobileElement doneButton;
 
-    @FindBy ( name = "depositor.transferral_origin.header")
+    @iOSFindBy (accessibility = "depositor.transferral_origin.header")
     private MobileElement fundTransfer;
 
-    @FindBy ( name = "depositor.bank_origin_country.header")
+    @iOSFindBy (accessibility = "depositor.bank_origin_country.header")
     private MobileElement countryField;
 
-    @FindBy(name = "country_search.search_field_title")
+    @iOSFindBy(accessibility = "country_search.search_field_title")
     private MobileElement countrySearchField;
 
-    @FindBy ( name = "search exit button")
+    @iOSFindBy (accessibility = "search exit button")
     private MobileElement countryExitButton;
 
-    @FindBy ( xpath = "//XCUIElementTypeTextField[@name=\"depositor.transferral_amount.header\"]")  //FIXME get unique accessibility id
+    @iOSFindBy (xpath = "//XCUIElementTypeTextField[@name=\"depositor.transferral_amount.header\"]")  //FIXME get unique accessibility id
     private MobileElement howMuchTransferred;
 
-    @FindBy ( name = "depositor.funds_generated.header")
+    @iOSFindBy (accessibility = "depositor.funds_generated.header")
     private  MobileElement howFundsGenerated;
 
-    @FindBy(name = "ongoing_source_of_wealth_selection.confirm")
+    @iOSFindBy(accessibility = "ongoing_source_of_wealth_selection.confirm")
     private MobileElement confirmButton;
 
-    @FindBy(name = "Gift")
+    @iOSFindBy(accessibility = "Gift")
     public MobileElement gift;
 
-    @FindBy ( name = "search exit button")
+    @iOSFindBy ( accessibility = "search exit button")
     private MobileElement howFundsGeneratedExitButton;
 
-    @FindBy ( name = "next_button_default_title")
+    @iOSFindBy ( accessibility = "next_button_default_title")
     private MobileElement depositorNextButon;
-
-
-
-
+    
     // Element Displayed
-
     public boolean isSourceOfFundsPageDisplayed() { return sourceOfFundstitle.isDisplayed(); }
 
     public boolean isDepositorsPageDisplayed() { return depositorsTitle.isDisplayed(); }
 
     // Element Enabled
-
     public boolean isNextButtonEnabled() { return nextButton.isEnabled(); }
 
     // Clicking Source of funds
-
     public void clickValueOfCashDepositor() { click(valueOfCashDepositorField); }
 
     public void clickTotalDepositMoney() { click(totalDepositMoneyField); }
@@ -115,7 +110,6 @@ public class SourceOfFunds extends GuiCommands {
     public void clickHowManyDepositprDoneButton() { click(doneButton); }
 
     // Clicking Depositor
-
     public void clickInsertName() { click(nameOfDepositor); }
 
     public void clickDepositorTransferralMethod() { click(depositorTransferralMethod); }
@@ -139,7 +133,6 @@ public class SourceOfFunds extends GuiCommands {
     public void clickDepositorNextButton() { click(depositorNextButon); }
 
     //Write Methods
-
     public void writeValueOfCashDeposit(int amount) { writeNumber(valueOfCashDepositorField, amount);}
 
     public void wrireTotalDepositMoney(int amount) { writeNumber(totalDepositMoneyField, amount);}
@@ -163,32 +156,19 @@ public class SourceOfFunds extends GuiCommands {
         click(element);
     }
 
-<<<<<<< HEAD
     public boolean navigateToSourceOfFunds() {
         ongoingSourceOfWealth.passThroughOngoingSourceOfWealth();
         return isSourceOfFundsPageDisplayed();
     }
-=======
->>>>>>> f82c57e220636ea6eed1ed66392972aff08e3aed
 
     public void passThrougSourceOfFunds() {
         navigateToSourceOfFunds();
         writeValueOfCashDeposit(500);
         wrireTotalDepositMoney(200);
-<<<<<<< HEAD
-=======
-        // clickNumberOfDepositors();
-        //clickHowManyDepositprDoneButton();
->>>>>>> f82c57e220636ea6eed1ed66392972aff08e3aed
         clickDepositorDetailButton();
         writeDepositorsName("Alex Warner");
         clickDepositorTransferralMethod();
         clickHowFundTransferredDoneButton();
-<<<<<<< HEAD
-=======
-        // clickWhereFundTransferFrom();
-        //clickWhereFundsTransferredFromDoneButton();
->>>>>>> f82c57e220636ea6eed1ed66392972aff08e3aed
         clickCountry();
         writeText(countrySearchField, generator.setCountry());
         clickGenericIostableCell();
@@ -200,20 +180,9 @@ public class SourceOfFunds extends GuiCommands {
         clickNextButton();
     }
 
-<<<<<<< HEAD
     public void populateSourceOfFunds(String cash, String depositTotal, String depositor, String transferTotal , String howFundsGenerated) {
         writeText(valueOfCashDepositorField, cash);
         writeText(totalDepositMoneyField, depositTotal);
-=======
-    public void navigateToSourceOfFunds(){
-
-        personalDetailsForm.passThroughPersonalDetailsForm();
-    }
-
-    public void populateSourceOfFunds() {
-        writeValueOfCashDeposit(500);
-        wrireTotalDepositMoney(200);
->>>>>>> f82c57e220636ea6eed1ed66392972aff08e3aed
         clickDepositorDetailButton();
         writeDepositorsName(depositor);
         clickDepositorTransferralMethod();

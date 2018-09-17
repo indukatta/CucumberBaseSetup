@@ -3,10 +3,11 @@ package Onboarding_tests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pageObjects.BusinessDetailsForm;
-import pageObjects.BusinessSearch;
-import pageObjects.OngoingSourceOfWealth;
-import pageObjects.SetUp;
+import pageObjects.Onboarding.BusinessDetailsForm;
+import pageObjects.Onboarding.BusinessSearch;
+import pageObjects.Onboarding.OngoingSourceOfWealth;
+import pageObjects.Onboarding.SetUp;
+import testUtils.Base_test;
 
 public class OngoingSourceOfWealthTests extends Base_test {
     private SetUp setUp;

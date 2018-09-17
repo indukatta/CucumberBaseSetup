@@ -1,11 +1,11 @@
-package pageObjects;
+package pageObjects.Onboarding;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.support.FindBy;
+import io.appium.java_client.pagefactory.iOSFindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,38 +20,38 @@ public class BusinessSearch extends GuiCommands {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @FindBy(name = "Great, you're ready to get started!")
+    @iOSFindBy(accessibility = "Great, you're ready to get started!")
     private MobileElement coverPageTitle;
 
-    @FindBy (name = "Next")
+    @iOSFindBy (accessibility = "Next")
     private MobileElement nextButton;
 
-    @FindBy(name = "Your Business")
+    @iOSFindBy(accessibility = "Your Business")
     private MobileElement businessSearchTitle;
 
-    @FindBy(name = "business_search.search_field_title.initial")
+    @iOSFindBy(accessibility = "business_search.search_field_title.initial")
     private MobileElement businessSearchBoxTitle;
 
-    @FindBy(name = "business_search.search_field_title")
+    @iOSFindBy(accessibility = "business_search.search_field_title")
     private MobileElement businessSearchBox;
 
-    @FindBy(name = "search_textfield")
+    @iOSFindBy(accessibility = "search_textfield")
     private MobileElement searchTexfield;
 
-    @FindBy(name = "search exit button")
+    @iOSFindBy(accessibility = "search exit button")
     private MobileElement searchExitButton;
 
-    @FindBy(name = "We are currently experiencing some technical issues. " +
+    @iOSFindBy(accessibility = "We are currently experiencing some technical issues. " +
             "Please log back into Iceberg to continue with your sign up later")//FIXME:get a better error message)
     private MobileElement noBusinessFoundError;
 
-    @FindBy(name = "business_details.beneficial_owner")
+    @iOSFindBy(accessibility = "business_details.beneficial_owner")
     private MobileElement beneficialOwner;
 
-    @FindBy(name = "business_details.name")
+    @iOSFindBy(accessibility = "business_details.name")
     private MobileElement businessName;
 
-    @FindBy(name = "business_details.address")
+    @iOSFindBy(accessibility = "business_details.address")
     private MobileElement businessAddress;
 
     //ELEMENTS DISPLAYED
