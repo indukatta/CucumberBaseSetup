@@ -33,14 +33,8 @@ public class Base_test {
         capabilities.setCapability("platformName", "IOS");
         capabilities.setCapability("platformVersion", "11.2");
         capabilities.setCapability("deviceName", "iPhone 8");
-<<<<<<< HEAD:src/test/java/Onboarding_tests/Base_test.java
-        capabilities.setCapability("app", "/Users/bbakare/Library/Developer/Xcode/DerivedData/Iceberg-adtdbektmsxudqdkhkquwuwoeobx/Build" +
-                                                                "/Products/Debug-iphonesimulator/Iceberg.app");
-=======
-        capabilities.setCapability("app", "/Users/awhitten/Library/Developer/Xcode/DerivedData/" +
-                "Iceberg-dmdimcbnvyefcdajhivuraigymun/Build/Products/Debug-iphonesimulator/Iceberg.app");
->>>>>>> origin/file_structure:src/test/java/testUtils/Base_test.java
-
+        capabilities.setCapability("app", "/Users/emorgan/Library/Developer/Xcode/DerivedData/Iceberg-cqkxxebqjdsungexhtjtj" +
+                "ohxatgt/Build/Products/Debug-iphonesimulator/Iceberg.app");
 
         driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
