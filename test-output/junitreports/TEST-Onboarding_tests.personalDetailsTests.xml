@@ -3,11 +3,11 @@
 <testsuite skipped="0" hostname="UK-C02WF0X2HV2R" name="Onboarding_tests.personalDetailsTests" tests="3" failures="0" timestamp="27 Aug 2018 17:40:58 GMT" time="620.616" errors="2">
   <testcase name="CUICE4142" time="188.398" classname="Onboarding_tests.personalDetailsTests">
     <error type="org.openqa.selenium.NoSuchElementException" message="Can&#039;t locate an element by this strategy: By.name: personal_details.title">
-      <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.name: personal_details.title
+        <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.name: personal_details.title
 at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
 at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:60)
 at io.appium.java_client.ios.IOSElement$$EnhancerByCGLIB$$d311658.isDisplayed(<generated>)
-at pageObjects.PersonalDetailsForm.personalDetailsDisplayed(PersonalDetailsForm.java:207)
+at pageObjects.Onboarding.PersonalDetailsForm.personalDetailsDisplayed(PersonalDetailsForm.java:207)
 at Onboarding_tests.personalDetailsTests.CUICE4142(personalDetailsTests.java:34)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -88,11 +88,11 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
   </testcase> <!-- CUICE4142 -->
   <testcase name="CUICE4141" time="187.309" classname="Onboarding_tests.personalDetailsTests">
     <error type="org.openqa.selenium.NoSuchElementException" message="Can&#039;t locate an element by this strategy: By.name: personal_details.title">
-      <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.name: personal_details.title
+        <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.name: personal_details.title
 at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
 at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:60)
 at io.appium.java_client.ios.IOSElement$$EnhancerByCGLIB$$d311658.isEnabled(<generated>)
-at pageObjects.PersonalDetailsForm.personalDetailsNotEditible(PersonalDetailsForm.java:199)
+at pageObjects.Onboarding.PersonalDetailsForm.personalDetailsNotEditible(PersonalDetailsForm.java:199)
 at Onboarding_tests.personalDetailsTests.CUICE4141(personalDetailsTests.java:39)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
