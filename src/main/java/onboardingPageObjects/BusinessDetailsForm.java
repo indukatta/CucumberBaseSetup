@@ -91,27 +91,6 @@ public class BusinessDetailsForm extends GuiCommands {
         return tradingAddressDifferentToBusiness.isDisplayed();
     }
 
-    public boolean tradingAddressSameAsResidentialDisplayed(){
-        return tradingAddressSameAsBusiness.isDisplayed();
-    }
-
-    public boolean isAddressLookupTitleDisplayed(){
-        return addressLookupTitle.isDisplayed();
-    }
-
-    public boolean isAddressLookupSearchDisplayed(){
-        return addressSearchTexbox.isDisplayed();
-    }
-
-    public boolean isUTRDisplayed(){
-        return uniqueTaxReferenceNumber.isDisplayed();
-    }
-
-    public boolean isTradingNameDisplayed(){
-        scrollDown(tradingName);
-        return tradingName.isDisplayed();
-    }
-
     public boolean isBusinessReviewTitleDisplayed(){
         return businessReviewTitle.isDisplayed();
     }
@@ -167,27 +146,6 @@ public class BusinessDetailsForm extends GuiCommands {
     //CLEAR METHODS
     public void clearCountry(){
         clearText(countriesList);
-    }
-
-    //CLICK METHODS
-    public void clickTradingAddressDifferentToResidential(){
-        click(tradingAddressDifferentToBusiness);
-    }
-
-    public void clickTradingAddressSameAsResidential(){
-        click(tradingAddressSameAsBusiness);
-    }
-
-    public void clickJurisdictionOfTaxResidency(){
-        click(jurisdictionOfTaxResidency);
-    }
-
-    public void clickNextButton(){
-        click(nextButton);
-    }
-
-    public void clickCountrySearchExitButton(){
-        click(countrySearchExitButton);
     }
 
     //CUSTOM METHODS
@@ -398,7 +356,7 @@ public class BusinessDetailsForm extends GuiCommands {
         click(nextButton);
     }
 
-    public void businessDetailsFormWithData(String name, String country, String utr){
+    public void populateBusinessDetailsForm(String name, String country, String utr){
         writeText(tradingName, name);
         click(tradingAddressSameAsBusiness);
         scrollDown(additionalDetails);
