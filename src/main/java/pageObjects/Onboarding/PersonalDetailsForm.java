@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects.Onboarding;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
@@ -22,94 +22,94 @@ public class PersonalDetailsForm extends GuiCommands {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @FindBy(name = "Ownership")
+    @iOSFindBy(accessibility = "Ownership")
     private MobileElement ownerShipTitle;
 
-    @FindBy(name = "ownership_confirmation.accept")
+    @iOSFindBy(accessibility = "ownership_confirmation.accept")
     private MobileElement confirmOwnership;
 
-    @FindBy(name = "ownership_confirmation.decline")
+    @iOSFindBy(accessibility = "ownership_confirmation.decline")
     private MobileElement unconfirmedOwnership;
 
-    @FindBy(name = "About you & your business")
+    @iOSFindBy(accessibility = "About you & your business")
     private MobileElement aboutBusiness;
 
-    @FindBy (name = "A bit about you")
+    @iOSFindBy (accessibility = "A bit about you")
     private MobileElement personalDetailsPageTitle;
 
-    @FindBy (name = "personal_details.title")
+    @iOSFindBy (accessibility = "personal_details.title")
     private MobileElement personTitle;
 
-    @FindBy (name = "personal_details.first_name")
+    @iOSFindBy (accessibility = "personal_details.first_name")
     private MobileElement personFirstName;
 
-    @FindBy (name = "personal_details.last_name")
+    @iOSFindBy (accessibility = "personal_details.last_name")
     private MobileElement personLastName;
 
-    @FindBy (name = "personal_details.changed_name_affirmative")
+    @iOSFindBy (accessibility = "personal_details.changed_name_affirmative")
     private MobileElement personNameChangedYes;
 
-    @FindBy (name = "personal_details.changed_name_negative")
+    @iOSFindBy (accessibility = "personal_details.changed_name_negative")
     private MobileElement personNameChangedNo;
 
     @iOSFindBy(accessibility = "personal_details.previous_name")
     private MobileElement personPreviousName;
 
-    @FindBy (name = "personal_details.dob")
+    @iOSFindBy (accessibility = "personal_details.dob")
     private MobileElement personDOB;
 
-    @FindBy (name = "personal_details.ra_affirmative")
+    @iOSFindBy (accessibility = "personal_details.ra_affirmative")
     private MobileElement personBusinessAndResidentialEqualYes;
 
-    @FindBy(name = "personal_details.ra_negative")
+    @iOSFindBy(accessibility = "personal_details.ra_negative")
     private MobileElement personBusinessAndResidentialEqualNo;
 
     @iOSFindBy(accessibility = "address_search.search_field_title")
     private MobileElement addressSearch;
 
-    @FindBy(name = "personal_details.address")
+    @iOSFindBy(accessibility = "personal_details.address")
     private MobileElement personResidentialAddress;
 
-    @FindBy(name = "personal_details.nationality")
+    @iOSFindBy(accessibility = "personal_details.nationality")
     private MobileElement personNationality;
 
-    @FindBy(name = "personal_details.id_type")
+    @iOSFindBy(accessibility = "personal_details.id_type")
     private MobileElement personIdType;
 
-    @FindBy(name = "personal_details.id_number")
+    @iOSFindBy(accessibility = "personal_details.id_number")
     private MobileElement personIdNumber;
 
-    @FindBy(name = "personal_details.dn_affirmative")
+    @iOSFindBy(accessibility = "personal_details.dn_affirmative")
     private MobileElement personDualNationalYes;
 
-    @FindBy(name = "personal_details.dn_negative")
+    @iOSFindBy(accessibility = "personal_details.dn_negative")
     private MobileElement personDualNationalNo;
 
-    @FindBy(name = "personal_details.tax_jurisdiction")
+    @iOSFindBy(accessibility = "personal_details.tax_jurisdiction")
     private MobileElement personJurisdictionOfTaxResidency;
 
-    @FindBy(name = "personal_details.nino")
+    @iOSFindBy(accessibility = "personal_details.nino")
     private MobileElement personNationalInsuranceNumber;
 
-    @FindBy(name = "personal_details.email")
+    @iOSFindBy(accessibility = "personal_details.email")
     private MobileElement personEmail;
 
-    @FindBy(name = "personal_details.email_confirmation")
+    @iOSFindBy(accessibility = "personal_details.email_confirmation")
     private MobileElement personConfirmEmail;
 
-    @FindBy(name = "Business Details")
+    @iOSFindBy(accessibility = "Business Details")
     private MobileElement backToOwnershipScreen;
 
-    @FindBy (id = "You and your business")
+    @iOSFindBy (accessibility = "You and your business")
     private MobileElement backToCompanyReview;
 
-    @FindBy (name = "toolbar_done")
+    @iOSFindBy (accessibility = "toolbar_done")
     private MobileElement pickerWheelDone;
 
-    @FindBy (name = "country_search.search_field_title")
+    @iOSFindBy (accessibility = "country_search.search_field_title")
     private MobileElement countrySearch;
 
-    @FindBy (name = "next_button_default_title")
+    @iOSFindBy (accessibility = "next_button_default_title")
     private MobileElement nextButton;
 
 

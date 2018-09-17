@@ -1,8 +1,9 @@
-package pageObjects;
+package pageObjects.Onboarding;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSFindBy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -20,40 +21,40 @@ public class SetUp extends GuiCommands {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @FindBy(name = "eligibility.confirm_title")
+    @iOSFindBy(accessibility = "eligibility.confirm_title")
     private MobileElement eligibilityConfirm;
 
-    @FindBy(name = "eligibility.decline_title")
+    @iOSFindBy(accessibility = "eligibility.decline_title")
     private MobileElement eligibilityDecline;
 
-    @FindBy(name = "Personal Details")
+    @iOSFindBy(accessibility = "Personal Details")
     private MobileElement phoneNumberTitle;
 
-    @FindBy(name = "phone_number_entry.phone_number_textfield_header")
+    @iOSFindBy(accessibility = "phone_number_entry.phone_number_textfield_header")
     private MobileElement phoneNumberTextbox;
 
-    @FindBy(name = "Your e-mail address")
+    @iOSFindBy(accessibility = "Your e-mail address")
     private MobileElement emailTitle;
 
-    @FindBy(name = "email_entry.textfield_header")
+    @iOSFindBy(accessibility = "email_entry.textfield_header")
     private MobileElement emailTextbox;
 
-    @FindBy(name = "Next")
+    @iOSFindBy(accessibility = "Next")
     private MobileElement nextButton;
 
-    @FindBy(name = "welcome.new_customer_button_title")
+    @iOSFindBy(accessibility = "welcome.new_customer_button_title")
     private MobileElement startButton;
 
-    @FindBy(name = "Great, you're ready to get started!")
+    @iOSFindBy(accessibility = "Great, you're ready to get started!")
     private MobileElement titleGetStarted;
 
-    @FindBy(name = "We're about to ask you about your")
+    @iOSFindBy(accessibility = "We're about to ask you about your")
     private MobileElement landingPageDescriptionOne;
 
-    @FindBy(className = "• Business details\n • Personal details\n • Business Financials")//FIXME get accessibility locator without bullet points
+    @iOSFindBy(className = "• Business details\n • Personal details\n • Business Financials")//FIXME get accessibility locator without bullet points
     private MobileElement landingPageDescriptionTwo;
 
-    @FindBy(name = "Be aware that once you confirm your details your information can't be changed")
+    @iOSFindBy(accessibility = "Be aware that once you confirm your details your information can't be changed")
     private MobileElement landingPageDescriptionThree;
 
     public boolean nextButtonEnabled(){

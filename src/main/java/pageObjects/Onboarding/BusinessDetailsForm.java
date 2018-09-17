@@ -1,11 +1,10 @@
-package pageObjects;
+package pageObjects.Onboarding;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSFindBy;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -23,62 +22,62 @@ public class BusinessDetailsForm extends GuiCommands {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @FindBy (name = "next_button_default_title")
+    @iOSFindBy(accessibility = "next_button_default_title")
     private MobileElement nextButton;
 
-    @FindBy(xpath = "//XCUIElementTypeButton[@name=\"You and your business\"]")//FIXME get accessibility id
+    @iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"You and your business\"]")//FIXME get accessibility id
     private MobileElement backNavigation;
 
-    @FindBy(name = "Review and confirm your details. " +
+    @iOSFindBy(accessibility = "Review and confirm your details. " +
             "Be aware that once you've confirmed them they can't be changed.")
     private MobileElement businessReviewTitle;
 
-    @FindBy(name = "business_details.beneficial_owner")
+    @iOSFindBy(accessibility = "business_details.beneficial_owner")
     private MobileElement beneficialOwner;
 
-    @FindBy(name = "business_details.name")
+    @iOSFindBy(accessibility = "business_details.name")
     private MobileElement businessName;
 
-    @FindBy(name = "business_details.address")
+    @iOSFindBy(accessibility = "business_details.address")
     private MobileElement businessAddress;
 
-    @FindBy(name = "business_details.trading_name")
+    @iOSFindBy(accessibility = "business_details.trading_name")
     private MobileElement tradingName;
 
-    @FindBy(name = "radio_buttons_view_default.affirmative")
+    @iOSFindBy(accessibility = "radio_buttons_view_default.affirmative")
     private MobileElement tradingAddressDifferentToBusiness;
 
-    @FindBy(name = "radio_buttons_view_default.negative")
+    @iOSFindBy(accessibility = "radio_buttons_view_default.negative")
     private MobileElement tradingAddressSameAsBusiness;
 
-    @FindBy(name = "business_details.trading_address")
+    @iOSFindBy(accessibility = "business_details.trading_address")
     private MobileElement tradingAddressTextbox;
 
-    @FindBy(name = "business_details.activity")
+    @iOSFindBy(accessibility = "business_details.activity")
     private MobileElement businessActivity;
 
-    @FindBy(name = "business_details.additional_details")
+    @iOSFindBy(accessibility = "business_details.additional_details")
     private MobileElement additionalDetails;
 
-    @FindBy(name = "Jurisdiction of Tax residency")
+    @iOSFindBy(accessibility = "Jurisdiction of Tax residency")
     private MobileElement jurisdictionOfTaxResidencyTextboxTitle;
 
-    @FindBy(name = "business_details.tax_residency")
+    @iOSFindBy(accessibility = "business_details.tax_residency")
     private MobileElement jurisdictionOfTaxResidency;
 
-    @FindBy(name = "country_search.search_field_title")
+    @iOSFindBy(accessibility = "country_search.search_field_title")
     private MobileElement countriesList;
 
-    @FindBy(name = "business_details.utr")
+    @iOSFindBy(accessibility = "business_details.utr")
     private MobileElement uniqueTaxReferenceNumber;
 
-    @FindBy(name = "Address (number / postcode)")
+    @iOSFindBy(accessibility = "Address (number / postcode)")
     private MobileElement addressLookupTitle;
 
-    @FindBy(name = "address_search.search_field_title")
+    @iOSFindBy(accessibility = "address_search.search_field_title")
     private MobileElement addressSearchTexbox;
 
-    @FindBy(name = "search exit button")
+    @iOSFindBy(accessibility = "search exit button")
     private MobileElement countrySearchExitButton;
 
     //Methods for elements displayed?
@@ -89,27 +88,6 @@ public class BusinessDetailsForm extends GuiCommands {
     public boolean tradingAddressDifferentToResidentialDisplayed(){
         scrollDown(tradingAddressSameAsBusiness);
         return tradingAddressDifferentToBusiness.isDisplayed();
-    }
-
-    public boolean tradingAddressSameAsResidentialDisplayed(){
-        return tradingAddressSameAsBusiness.isDisplayed();
-    }
-
-    public boolean isAddressLookupTitleDisplayed(){
-        return addressLookupTitle.isDisplayed();
-    }
-
-    public boolean isAddressLookupSearchDisplayed(){
-        return addressSearchTexbox.isDisplayed();
-    }
-
-    public boolean isUTRDisplayed(){
-        return uniqueTaxReferenceNumber.isDisplayed();
-    }
-
-    public boolean isTradingNameDisplayed(){
-        scrollDown(tradingName);
-        return tradingName.isDisplayed();
     }
 
     public boolean isBusinessReviewTitleDisplayed(){
@@ -167,27 +145,6 @@ public class BusinessDetailsForm extends GuiCommands {
     //CLEAR METHODS
     public void clearCountry(){
         clearText(countriesList);
-    }
-
-    //CLICK METHODS
-    public void clickTradingAddressDifferentToResidential(){
-        click(tradingAddressDifferentToBusiness);
-    }
-
-    public void clickTradingAddressSameAsResidential(){
-        click(tradingAddressSameAsBusiness);
-    }
-
-    public void clickJurisdictionOfTaxResidency(){
-        click(jurisdictionOfTaxResidency);
-    }
-
-    public void clickNextButton(){
-        click(nextButton);
-    }
-
-    public void clickCountrySearchExitButton(){
-        click(countrySearchExitButton);
     }
 
     //CUSTOM METHODS
@@ -398,7 +355,7 @@ public class BusinessDetailsForm extends GuiCommands {
         click(nextButton);
     }
 
-    public void businessDetailsFormWithData(String name, String country, String utr){
+    public void populateBusinessDetailsForm(String name, String country, String utr){
         writeText(tradingName, name);
         click(tradingAddressSameAsBusiness);
         scrollDown(additionalDetails);

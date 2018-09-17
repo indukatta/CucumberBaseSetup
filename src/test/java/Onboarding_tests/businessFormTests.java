@@ -3,9 +3,10 @@ package Onboarding_tests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pageObjects.BusinessDetailsForm;
-import pageObjects.BusinessSearch;
-import pageObjects.SetUp;
+import pageObjects.Onboarding.BusinessDetailsForm;
+import pageObjects.Onboarding.BusinessSearch;
+import pageObjects.Onboarding.SetUp;
+import testUtils.Base_test;
 
 public class businessFormTests extends Base_test {
 

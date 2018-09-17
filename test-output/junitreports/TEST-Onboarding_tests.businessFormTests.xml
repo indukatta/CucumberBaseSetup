@@ -3,12 +3,12 @@
 <testsuite skipped="0" hostname="UK-C02WF0X2HV2R" name="Onboarding_tests.businessFormTests" tests="14" failures="1" timestamp="27 Aug 2018 17:40:58 GMT" time="984.240" errors="5">
   <testcase name="CUICE4581" time="72.886" classname="Onboarding_tests.businessFormTests">
     <error type="org.openqa.selenium.NoSuchElementException" message="Can&#039;t locate an element by this strategy: By.name: radio_button_default.affirmative">
-      <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.name: radio_button_default.affirmative
+        <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.name: radio_button_default.affirmative
 at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
 at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:60)
 at io.appium.java_client.ios.IOSElement$$EnhancerByCGLIB$$d311658.getAttribute(<generated>)
 at utils.GuiCommands.CheckboxSelected(GuiCommands.java:297)
-at pageObjects.BusinessDetailsForm.noDefaultCheckboxSelection(BusinessDetailsForm.java:146)
+at pageObjects.Onboarding.BusinessDetailsForm.noDefaultCheckboxSelection(BusinessDetailsForm.java:146)
 at Onboarding_tests.businessFormTests.CUICE4581(businessFormTests.java:25)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -89,12 +89,12 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
   </testcase> <!-- CUICE4581 -->
   <testcase name="CUICE4583" time="63.043" classname="Onboarding_tests.businessFormTests">
     <error type="org.openqa.selenium.NoSuchElementException" message="Can&#039;t locate an element by this strategy: By.name: radio_button_default.negative">
-      <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.name: radio_button_default.negative
+        <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.name: radio_button_default.negative
 at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
 at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:60)
 at io.appium.java_client.ios.IOSElement$$EnhancerByCGLIB$$d311658.isDisplayed(<generated>)
 at utils.GuiCommands.scrollDown(GuiCommands.java:218)
-at pageObjects.BusinessDetailsForm.tradingAddressSameAsRegisteredBusinessAddress(BusinessDetailsForm.java:235)
+at pageObjects.Onboarding.BusinessDetailsForm.tradingAddressSameAsRegisteredBusinessAddress(BusinessDetailsForm.java:235)
 at Onboarding_tests.businessFormTests.CUICE4583(businessFormTests.java:30)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -175,12 +175,12 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
   </testcase> <!-- CUICE4583 -->
   <testcase name="CUICE4584" time="61.085" classname="Onboarding_tests.businessFormTests">
     <error type="org.openqa.selenium.NoSuchElementException" message="Can&#039;t locate an element by this strategy: By.name: radio_button_default.affirmative">
-      <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.name: radio_button_default.affirmative
+        <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.name: radio_button_default.affirmative
 at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
 at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:60)
 at io.appium.java_client.ios.IOSElement$$EnhancerByCGLIB$$d311658.isDisplayed(<generated>)
 at utils.GuiCommands.scrollDown(GuiCommands.java:218)
-at pageObjects.BusinessDetailsForm.tradingAddressDifferentFromRegisteredBusinessAddress(BusinessDetailsForm.java:242)
+at pageObjects.Onboarding.BusinessDetailsForm.tradingAddressDifferentFromRegisteredBusinessAddress(BusinessDetailsForm.java:242)
 at Onboarding_tests.businessFormTests.CUICE4584(businessFormTests.java:35)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -261,12 +261,12 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
   </testcase> <!-- CUICE4584 -->
   <testcase name="CUICE4585" time="62.219" classname="Onboarding_tests.businessFormTests">
     <error type="org.openqa.selenium.NoSuchElementException" message="Can&#039;t locate an element by this strategy: By.name: radio_button_default.affirmative">
-      <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.name: radio_button_default.affirmative
+        <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.name: radio_button_default.affirmative
 at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
 at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:60)
 at io.appium.java_client.ios.IOSElement$$EnhancerByCGLIB$$d311658.isDisplayed(<generated>)
 at utils.GuiCommands.scrollDown(GuiCommands.java:218)
-at pageObjects.BusinessDetailsForm.addressNotFound(BusinessDetailsForm.java:252)
+at pageObjects.Onboarding.BusinessDetailsForm.addressNotFound(BusinessDetailsForm.java:252)
 at Onboarding_tests.businessFormTests.CUICE4585(businessFormTests.java:40)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -390,13 +390,13 @@ at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
   <testcase name="CUICE5159" time="55.476" classname="Onboarding_tests.businessFormTests"/>
   <testcase name="CUICE5160" time="70.218" classname="Onboarding_tests.businessFormTests">
     <error type="org.openqa.selenium.NoSuchElementException" message="Can&#039;t locate an element by this strategy: By.name: radio_button_default.negative">
-      <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.name: radio_button_default.negative
+        <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.name: radio_button_default.negative
 at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
 at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:60)
 at io.appium.java_client.ios.IOSElement$$EnhancerByCGLIB$$d311658.isDisplayed(<generated>)
 at utils.GuiCommands.scrollDown(GuiCommands.java:218)
-at pageObjects.BusinessDetailsForm.populateFieldsExceptAdditionalDetails(BusinessDetailsForm.java:334)
-at pageObjects.BusinessDetailsForm.additionalDetailsNoCharacters(BusinessDetailsForm.java:357)
+at pageObjects.Onboarding.BusinessDetailsForm.populateFieldsExceptAdditionalDetails(BusinessDetailsForm.java:334)
+at pageObjects.Onboarding.BusinessDetailsForm.additionalDetailsNoCharacters(BusinessDetailsForm.java:357)
 at Onboarding_tests.businessFormTests.CUICE5160(businessFormTests.java:91)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)

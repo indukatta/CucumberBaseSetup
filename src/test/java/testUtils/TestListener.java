@@ -1,4 +1,4 @@
-package Onboarding_tests;
+package testUtils;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;

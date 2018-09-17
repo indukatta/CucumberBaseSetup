@@ -1,8 +1,8 @@
-package pageObjects;
+package pageObjects.Onboarding;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
-import org.openqa.selenium.support.FindBy;
+import io.appium.java_client.pagefactory.iOSFindBy;
 import utils.GuiCommands;
 
 public class TransactionDetails extends GuiCommands {
@@ -13,35 +13,33 @@ public class TransactionDetails extends GuiCommands {
         super(driver);
     }
 
-    @FindBy(name = "Transaction details")
+    @iOSFindBy(accessibility = "Transaction details")
     private MobileElement transactionDetailsTitle;
 
-    @FindBy(name = "transaction_details.account_usage")
+    @iOSFindBy(accessibility = "transaction_details.account_usage")
     private MobileElement accountUsageTextField;
 
-    @FindBy(name = "transaction_details.expected_payments")
+    @iOSFindBy(accessibility = "transaction_details.expected_payments")
     private MobileElement expectedPayTextField;
 
-    @FindBy(name = "next_button_default_title")
+    @iOSFindBy(accessibility = "next_button_default_title")
     private MobileElement nextButton;
 
-    @FindBy(name = "toolbar_done")
+    @iOSFindBy(accessibility = "toolbar_done")
     private MobileElement pickerWheelDone;
 
     // Summary page elements
-
-    @FindBy(name = "submit")
+    @iOSFindBy(accessibility = "submit")
     private MobileElement submitButton;
 
-    @FindBy (xpath = "//XCUIElementTypeStaticText[@name=\"Summary\"]")
+    @iOSFindBy (xpath = "//XCUIElementTypeStaticText[@name=\"Summary\"]")
     private MobileElement applicationSummaryTitle;
 
-    @FindBy (name = "All Done!")
+    @iOSFindBy (accessibility = "All Done!")
     private MobileElement allDoneMessage;
 
 
 // Elements Displayed
-
     public boolean isTransactionDetailsPageDisplayed() {return transactionDetailsTitle.isDisplayed(); }
 
     public boolean isSummaryPageDisplayed(){ return applicationSummaryTitle.isDisplayed(); }
@@ -49,11 +47,9 @@ public class TransactionDetails extends GuiCommands {
     public boolean isAllDoneDisplayed() { return allDoneMessage.isDisplayed();}
 
 //Elements Enabled
-
     public boolean isNextButtonEnabled () { return nextButton.isEnabled(); }
 
 // Click Methods
-
     public void clickAccountUsageField(){ click(accountUsageTextField); }
 
     public void clickExpectedPayField() { click(expectedPayTextField); }
@@ -64,10 +60,7 @@ public class TransactionDetails extends GuiCommands {
 
     public  void clickSubmit() {click(submitButton);}
 
-
-
 //Custom Methods
-
     public void passThroughTransactionDetails(){
         clickAccountUsageField();
         clickDone();
@@ -78,12 +71,10 @@ public class TransactionDetails extends GuiCommands {
 
     public boolean navigateToTransactionDetails(){
         sourceOfFunds.passThrougSourceOfFunds();
-
         return isTransactionDetailsPageDisplayed();
     }
 
     public boolean passThroughSummaryPage(){
-
         passThroughTransactionDetails();
         clickSubmit();
         return isAllDoneDisplayed();
