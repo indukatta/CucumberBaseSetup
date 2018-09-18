@@ -11,8 +11,6 @@ import utils.GuiCommands;
 
 public class MessagingScreen extends GuiCommands {
 
-    private SetUp setup = new SetUp(driver);
-
     public MessagingScreen(IOSDriver driver) {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -30,7 +28,7 @@ public class MessagingScreen extends GuiCommands {
     @iOSFindBy(accessibility = "Send")
     private  MobileElement sendButton;
 
-    @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Write a message\"]")
+    @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Write a message\"]")  //FIXME get unique accessibility id
     private MobileElement messagingBox;
 
 }

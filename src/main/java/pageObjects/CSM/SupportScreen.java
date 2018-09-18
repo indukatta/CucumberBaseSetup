@@ -6,24 +6,18 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSFindBy;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-<<<<<<< HEAD
+import pageObjects.Login.Login;
 import testData.RandomDataGenerator;
-=======
 import pageObjects.Onboarding.SetUp;
->>>>>>> 3d2a989392ba79adb78bd5fd9cd0fc97fbcdd0d3
 import utils.GuiCommands;
 
 
 public class SupportScreen extends GuiCommands {
 
+    Login login = new Login(driver);
+
     public SupportScreen(IOSDriver driver) {
 
-
-<<<<<<< HEAD
-    public SupportScreen (IOSDriver driver) {
-=======
->>>>>>> 3d2a989392ba79adb78bd5fd9cd0fc97fbcdd0d3
-        super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
@@ -32,5 +26,35 @@ public class SupportScreen extends GuiCommands {
 
     @iOSFindBy(xpath = "(//XCUIElementTypeButton[@name=\"Support\"])[2")  //FIXME get unique accessibility id
     private MobileElement supportButton;
+
+    //Element Displayed
+
+    public boolean isStartSupportChatButtonDisplayed() { return startSupportChatButton.isDisplayed(); }
+
+    public boolean isSupportButtonDisplayed() { return supportButton.isDisplayed(); }
+
+    // Element Enabled
+
+    public boolean isStartSupportChatButtonEnabled() { return startSupportChatButton.isEnabled(); }
+
+    public boolean isSupportButtonEnabled() { return supportButton.isEnabled(); }
+
+    // Clicking Elements
+
+    public void clickStartSupportChatButton() { click(startSupportChatButton); }
+
+    public void clickSupportButton() { click(supportButton); }
+
+    // Custom Methods
+
+    public void navigateToSupportScreen() {
+//        login.passthroughLogin();   // FIXME create passthroughLogin
+        clickSupportButton();
+    }
+
+    public void passthroughSupportScreen() {
+        navigateToSupportScreen();
+        clickStartSupportChatButton();
+    }
 
 }
