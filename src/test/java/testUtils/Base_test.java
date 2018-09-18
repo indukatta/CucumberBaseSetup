@@ -23,18 +23,18 @@ public class Base_test {
 
     protected IOSDriver driver;
     String folder;
-    String recordings;
     DateFormat df;
+
+    ConfigReader config = new ConfigReader();
 
     @BeforeMethod
     public void setUp() throws MalformedURLException {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("platformName", "IOS");
-        capabilities.setCapability("platformVersion", "11.2");
-        capabilities.setCapability("deviceName", "iPhone 8");
-        capabilities.setCapability("app", "/Users/emorgan/Library/Developer/Xcode/DerivedData/Iceberg-cqkxxebqjdsungexhtjtj" +
-                "ohxatgt/Build/Products/Debug-iphonesimulator/Iceberg.app");
+        capabilities.setCapability("platformName", config.getPlatformName());
+        capabilities.setCapability("platformVersion", config.getVersion());
+        capabilities.setCapability("deviceName", config.getDeviceName());
+        capabilities.setCapability("app", config.getAppPath());
 
         driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
