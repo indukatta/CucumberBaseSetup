@@ -23,8 +23,6 @@ public class BusinessDetailsForm extends GuiCommands {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-
-
     @FindBy (name = "next_button_default_title")
     private MobileElement nextButton;
 
@@ -93,27 +91,6 @@ public class BusinessDetailsForm extends GuiCommands {
         return tradingAddressDifferentToBusiness.isDisplayed();
     }
 
-    public boolean tradingAddressSameAsResidentialDisplayed(){
-        return tradingAddressSameAsBusiness.isDisplayed();
-    }
-
-    public boolean isAddressLookupTitleDisplayed(){
-        return addressLookupTitle.isDisplayed();
-    }
-
-    public boolean isAddressLookupSearchDisplayed(){
-        return addressSearchTexbox.isDisplayed();
-    }
-
-    public boolean isUTRDisplayed(){
-        return uniqueTaxReferenceNumber.isDisplayed();
-    }
-
-    public boolean isTradingNameDisplayed(){
-        scrollDown(tradingName);
-        return tradingName.isDisplayed();
-    }
-
     public boolean isBusinessReviewTitleDisplayed(){
         return businessReviewTitle.isDisplayed();
     }
@@ -169,27 +146,6 @@ public class BusinessDetailsForm extends GuiCommands {
     //CLEAR METHODS
     public void clearCountry(){
         clearText(countriesList);
-    }
-
-    //CLICK METHODS
-    public void clickTradingAddressDifferentToResidential(){
-        click(tradingAddressDifferentToBusiness);
-    }
-
-    public void clickTradingAddressSameAsResidential(){
-        click(tradingAddressSameAsBusiness);
-    }
-
-    public void clickJurisdictionOfTaxResidency(){
-        click(jurisdictionOfTaxResidency);
-    }
-
-    public void clickNextButton(){
-        click(nextButton);
-    }
-
-    public void clickCountrySearchExitButton(){
-        click(countrySearchExitButton);
     }
 
     //CUSTOM METHODS
@@ -394,10 +350,23 @@ public class BusinessDetailsForm extends GuiCommands {
         click(tradingAddressSameAsBusiness);
         scrollDown(additionalDetails);
         writeText(additionalDetails, "Additional Details");
-        scrollDown(jurisdictionOfTaxResidency);
         jurisdictionOfTaxResidencySelectCountry();
         scrollDown(uniqueTaxReferenceNumber);
         writeText(uniqueTaxReferenceNumber, generator.setRandomValue(10, "NUMERIC"));
+        click(nextButton);
+    }
+
+    public void populateBusinessDetailsForm(String name, String country, String utr){
+        writeText(tradingName, name);
+        click(tradingAddressSameAsBusiness);
+        scrollDown(additionalDetails);
+        writeText(additionalDetails, "Additional Details");
+        scrollDown(jurisdictionOfTaxResidency);
+        click(jurisdictionOfTaxResidency);
+        writeCountry(country);
+        clickGenericIostableCell();
+        scrollDown(uniqueTaxReferenceNumber);
+        writeText(uniqueTaxReferenceNumber, utr);
         click(nextButton);
     }
 

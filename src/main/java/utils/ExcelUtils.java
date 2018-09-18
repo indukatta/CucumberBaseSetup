@@ -2,12 +2,15 @@ package utils;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.util.Arrays;
 import java.util.Date;
 
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.support.PageFactory;
 
 public class ExcelUtils {
 
@@ -32,12 +35,16 @@ public class ExcelUtils {
 
     }
 
+    public static int getRowCount(){
+        return  ExcelWSheet.getLastRowNum() + 1;
+    }
+
     //This method is to read the test data from the Excel cell, in this we are passing parameters as Row num and Col num
     public static String getCellData(int RowNum, int ColNum){
         try{
             Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
-            String CellData = Cell.getStringCellValue();
-            return CellData;
+            Cell.setCellType(CellType.STRING);
+            return Cell.getStringCellValue();
         }catch (Exception e){
             return"";
         }
@@ -61,7 +68,9 @@ public class ExcelUtils {
             int CellData = (int) Cell.getNumericCellValue();
             return CellData;
         }catch (Exception e){
+            System.out.print(e.getMessage());
             return 0;
+
         }
 
     }

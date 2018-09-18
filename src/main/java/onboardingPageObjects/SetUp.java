@@ -231,4 +231,12 @@ public class SetUp extends GuiCommands {
         writeEmail(generator.setEmail("", 0));
         clickNext();
     }
+
+    public void setUpWithData(String phoneNumber, String Email){
+        clickStart();
+        writePhoneNumber(phoneNumber);
+        clickNext();
+        writeEmail(Email);
+        clickNext();
+    }
 }

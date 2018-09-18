@@ -1,9 +1,12 @@
 package pageObjects;
+package onboardingPageObjects;
 
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSFindBy;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import testData.CheckBoxElements;
@@ -18,6 +21,11 @@ public class OngoingSourceOfWealth  extends GuiCommands {
     BusinessSearch businessSearch = new BusinessSearch(driver);
     BusinessDetailsForm businessDetailsForm = new BusinessDetailsForm(driver);
     PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm(driver);
+
+    pageObjects.SetUp setUp = new pageObjects.SetUp(driver);
+    pageObjects.BusinessSearch businessSearch = new pageObjects.BusinessSearch(driver);
+    pageObjects.BusinessDetailsForm businessDetailsForm = new pageObjects.BusinessDetailsForm(driver);
+    pageObjects.PersonalDetailsForm personalDetailsForm = new pageObjects.PersonalDetailsForm(driver);
     RandomDataGenerator generator = new RandomDataGenerator();
     CheckBoxElements checkBoxElements = new CheckBoxElements(driver);
 
@@ -78,6 +86,9 @@ public class OngoingSourceOfWealth  extends GuiCommands {
 
     //check box elements
 
+    @FindBy(name = "Gift")
+    private MobileElement gift;
+
     @FindBy(name = "Other")
     private MobileElement other;
 
@@ -94,6 +105,11 @@ public class OngoingSourceOfWealth  extends GuiCommands {
     // Click Methods
 
     public void clickBuisinessFunding() { click(fundingTextField);}
+
+    public void clickFundingOption(String funding){
+       MobileElement element = (MobileElement) driver.findElement(By.name(funding));
+       click(element);
+    }
 
     public void clickSearchConfirmButton(){click((searchConfirmButton));}
 
@@ -114,6 +130,8 @@ public class OngoingSourceOfWealth  extends GuiCommands {
     public void clearAnnualTurnover (){clearText(annualTurnoverTextField);}
 
     //Custom Methods gthtgt
+
+    //Custom Methods
 
     public void navigateToOngoingSourceOfWealth (){
 
@@ -195,6 +213,7 @@ public class OngoingSourceOfWealth  extends GuiCommands {
     public boolean isGbpDisplayed (){
         return gbpTitle.isDisplayed();
     }
+
     public boolean isCountryListShown (){
         navigateToOngoingSourceOfWealth();
         clickCountry();
@@ -280,6 +299,7 @@ public class OngoingSourceOfWealth  extends GuiCommands {
         return !isOngoingPageDisplayed();
     }
 
+
     public boolean passThroughOngoingSourceOfWealth(){
         navigateToOngoingSourceOfWealth();
         writeAnnualTurnover(20);
@@ -303,5 +323,15 @@ public class OngoingSourceOfWealth  extends GuiCommands {
 
 
 
+    public void populateSourceOfWealth(String turnover, String funding, String country){
+        writeText(annualTurnoverTextField, turnover);
+        clickBuisinessFunding();
+        clickFundingOption(funding);
+        clickSearchConfirmButton();
+        clickCountry();
+        writeText(countrySearchTextField, country);
+        clickGenericIostableCell();
+        clickNextButton();
+    }
 
 }

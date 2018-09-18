@@ -1,13 +1,14 @@
 package pageObjects;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSFindBy;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import testData.RandomDataGenerator;
 import utils.GuiCommands;
+
 
 public class PersonalDetailsForm extends GuiCommands {
 
@@ -51,6 +52,9 @@ public class PersonalDetailsForm extends GuiCommands {
     @FindBy (name = "personal_details.changed_name_negative")
     private MobileElement personNameChangedNo;
 
+    @iOSFindBy(accessibility = "personal_details.previous_name")
+    private MobileElement personPreviousName;
+
     @FindBy (name = "personal_details.dob")
     private MobileElement personDOB;
 
@@ -59,6 +63,9 @@ public class PersonalDetailsForm extends GuiCommands {
 
     @FindBy(name = "personal_details.ra_negative")
     private MobileElement personBusinessAndResidentialEqualNo;
+
+    @iOSFindBy(accessibility = "address_search.search_field_title")
+    private MobileElement addressSearch;
 
     @FindBy(name = "personal_details.address")
     private MobileElement personResidentialAddress;
@@ -153,6 +160,26 @@ public class PersonalDetailsForm extends GuiCommands {
         writeText(personIdNumber, "1234567890");
         click(personJurisdictionOfTaxResidency);
         writeText(countrySearch, generator.setCountry());
+        clickGenericIostableCell();
+        click(nextButton);
+    }
+
+    public void personalDetailsWitData(String name, String address, String number, String id, String country){
+        click(confirmOwnership);
+        click(personNameChangedYes);
+        writeText(personPreviousName, name);
+        click(personDOB);
+        click(pickerWheelDone);
+        click(personBusinessAndResidentialEqualNo);
+        writeText(addressSearch, address);
+        clickGenericIostableCell();
+        click(personDualNationalNo);
+        writeText(personNationalInsuranceNumber, number);
+        click(personIdType);
+        click(pickerWheelDone);
+        writeText(personIdNumber, id);
+        click(personJurisdictionOfTaxResidency);
+        writeText(countrySearch, country);
         clickGenericIostableCell();
         click(nextButton);
     }

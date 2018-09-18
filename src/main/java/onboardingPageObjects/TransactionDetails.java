@@ -7,6 +7,8 @@ import utils.GuiCommands;
 
 public class TransactionDetails extends GuiCommands {
 
+    SourceOfFunds sourceOfFunds = new SourceOfFunds(driver);
+
     public TransactionDetails(IOSDriver driver) {
         super(driver);
     }
@@ -26,19 +28,25 @@ public class TransactionDetails extends GuiCommands {
     @FindBy(name = "toolbar_done")
     private MobileElement pickerWheelDone;
 
+    // Summary page elements
+
     @FindBy(name = "submit")
     private MobileElement submitButton;
 
     @FindBy (xpath = "//XCUIElementTypeStaticText[@name=\"Summary\"]")
     private MobileElement applicationSummaryTitle;
 
-    @FindBy (name = "Finished")
-    private MobileElement completedImage;
+    @FindBy (name = "All Done!")
+    private MobileElement allDoneMessage;
 
 
 // Elements Displayed
 
-    public boolean isTransactionDetailsPageDisplayed() {return transactionDetailsTitle.isDisplayed();}
+    public boolean isTransactionDetailsPageDisplayed() {return transactionDetailsTitle.isDisplayed(); }
+
+    public boolean isSummaryPageDisplayed(){ return applicationSummaryTitle.isDisplayed(); }
+
+    public boolean isAllDoneDisplayed() { return allDoneMessage.isDisplayed();}
 
 //Elements Enabled
 
@@ -54,12 +62,11 @@ public class TransactionDetails extends GuiCommands {
 
     public void clickDone() {click(pickerWheelDone);}
 
-
+    public  void clickSubmit() {click(submitButton);}
 
 //Custom Methods
 
     public void passThroughTransactionDetails(){
-
         clickAccountUsageField();
         clickDone();
         clickExpectedPayField();
@@ -67,7 +74,14 @@ public class TransactionDetails extends GuiCommands {
         clickNextButton();
     }
 
-    public void navigateToTransactionDetails(){}
+    public boolean navigateToTransactionDetails(){
+        sourceOfFunds.passThrougSourceOfFunds();
+        return isTransactionDetailsPageDisplayed();
+    }
 
-    public void passThroughSummaryPage(){ click(submitButton);}
+    public boolean passThroughSummaryPage(){
+        passThroughTransactionDetails();
+        clickSubmit();
+        return isAllDoneDisplayed();
+    }
 }
