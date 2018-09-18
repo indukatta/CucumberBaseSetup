@@ -15,8 +15,8 @@ import utils.GuiCommands;
 public class BusinessDetailsForm extends GuiCommands {
 
     RandomDataGenerator generator = new RandomDataGenerator();
-    SetUp setUp = new SetUp(driver);
-    BusinessSearch businessSearch = new BusinessSearch(driver);
+    pageObjects.SetUp setUp = new pageObjects.SetUp(driver);
+    pageObjects.BusinessSearch businessSearch = new pageObjects.BusinessSearch(driver);
 
     public BusinessDetailsForm(IOSDriver driver) {
         super(driver);

@@ -11,11 +11,11 @@ import utils.GuiCommands;
 
 public class SourceOfFunds extends GuiCommands {
 
-    SetUp setUp = new SetUp(driver);
-    BusinessSearch businessSearch = new BusinessSearch(driver);
-    BusinessDetailsForm businessDetailsForm = new BusinessDetailsForm(driver);
-    PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm(driver);
-    OngoingSourceOfWealth ongoingSourceOfWealth = new OngoingSourceOfWealth(driver);
+    pageObjects.SetUp setUp = new pageObjects.SetUp(driver);
+    pageObjects.BusinessSearch businessSearch = new pageObjects.BusinessSearch(driver);
+    pageObjects.BusinessDetailsForm businessDetailsForm = new pageObjects.BusinessDetailsForm(driver);
+    pageObjects.PersonalDetailsForm personalDetailsForm = new pageObjects.PersonalDetailsForm(driver);
+    pageObjects.OngoingSourceOfWealth ongoingSourceOfWealth = new pageObjects.OngoingSourceOfWealth(driver);
     RandomDataGenerator generator = new RandomDataGenerator();
 
     public SourceOfFunds(IOSDriver driver) {

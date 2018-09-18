@@ -5,9 +5,9 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.iOSFindBy;
 import utils.GuiCommands;
 
-public class LogIn extends GuiCommands {
+public class AvailableBalance extends GuiCommands {
 
-    public LogIn(IOSDriver driver) {
+    public AvailableBalance(IOSDriver driver) {
         super(driver);
     }
 
@@ -57,10 +57,6 @@ public class LogIn extends GuiCommands {
     private MobileElement psAvailableBalance;
 
 
-
-    // strip method aString.replaceAll("[^0-9]","");
-
-
     //Enabled Methods
 
     //Click Methods
@@ -101,11 +97,13 @@ public class LogIn extends GuiCommands {
         writeNumber(payeeAccNumber,12345678);
         clickContinue();
         String check2 = psAvailableBalance.getText().replaceAll("[^0-9]","");
-        
+        System.out.println(check2);
 
+        if ((Integer.parseInt(check1)) == (Integer.parseInt(check2) )){
+            return true;
+        }
+        else { return false;}
 
-
-        return true;
     }
 
 

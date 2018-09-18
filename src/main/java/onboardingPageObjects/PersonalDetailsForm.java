@@ -13,13 +13,14 @@ import utils.GuiCommands;
 public class PersonalDetailsForm extends GuiCommands {
 
     RandomDataGenerator generator = new RandomDataGenerator();
-    BusinessSearch businessSearch = new BusinessSearch(driver);
-    BusinessDetailsForm businessDetailsForm = new BusinessDetailsForm(driver);
-    SetUp setUp = new SetUp(driver);
+    pageObjects.BusinessSearch businessSearch = new pageObjects.BusinessSearch(driver);
+    pageObjects.BusinessDetailsForm businessDetailsForm = new pageObjects.BusinessDetailsForm(driver);
+    pageObjects.SetUp setUp;
 
     public PersonalDetailsForm(IOSDriver driver) {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+        setUp = new pageObjects.SetUp(this.driver);
     }
 
     @FindBy(name = "Ownership")

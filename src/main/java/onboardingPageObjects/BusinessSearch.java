@@ -13,7 +13,7 @@ import utils.GuiCommands;
 
 public class BusinessSearch extends GuiCommands {
 
-    private SetUp setup = new SetUp(driver);
+    private pageObjects.SetUp setup = new pageObjects.SetUp(driver);
 
     public BusinessSearch(IOSDriver driver) {
         super(driver);
