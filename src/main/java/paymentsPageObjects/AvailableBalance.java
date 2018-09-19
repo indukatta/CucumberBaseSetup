@@ -56,7 +56,7 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy (accessibility = "payment_details.reference_textfield_header")
     private MobileElement reference;
 
-    @iOSFindBy (accessibility = "56,455.02 GBP")
+    @iOSFindBy (accessibility = "available_balance_value_label")
     private MobileElement psAvailableBalance;
 
     @iOSFindBy(accessibility = "Payments")
@@ -79,6 +79,12 @@ public class AvailableBalance extends GuiCommands {
 
     @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Payments\"]")
     private MobileElement paymentsTitle;
+
+    @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Paying someone new\"]")
+    private MobileElement payDetailsTitle;
+
+    @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Paying someone new\"]")
+    private MobileElement payRefTitle;
 
 
     //Enabled Methods
@@ -118,7 +124,7 @@ public class AvailableBalance extends GuiCommands {
         populatePaymentDetails();
         String check2 = psAvailableBalance.getText().replaceAll("[^0-9]","");
 
-        if ((Integer.parseInt(check1)) == (Integer.parseInt(check2) )){
+        if (check1.equals(check2)){
             return true;
         }
         else { return false;}
@@ -134,12 +140,10 @@ public class AvailableBalance extends GuiCommands {
         click(cancelButton);
         boolean one = paymentsTitle.isDisplayed();
         clickNewPayee();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        String field1 = usernameField.getText();
-        System.out.println("field 1 is: "+field1);
+        String field1 = payeeName.getText();
         boolean two;
 
-        if (Integer.parseInt(field1) == 0){
+        if (field1.isEmpty()){
              two = true;
         }
         else {
@@ -151,9 +155,9 @@ public class AvailableBalance extends GuiCommands {
         click(cancelButton);
         boolean three = paymentsTitle.isDisplayed();
         clickNewPayee();
-        String field2 = usernameField.getText();
+        String field2 = payeeName.getText();
         boolean four;
-        if (Integer.parseInt(field2) == 0){
+        if (field2.isEmpty()){
              four = true;
         }
         else {
@@ -165,7 +169,7 @@ public class AvailableBalance extends GuiCommands {
 
     public void populatePaymentDetails(){
 
-        writeText(payeeName,"John does");
+        writeText(payeeName,"John doe");
         writeNumber(payeeSortCode,123456);
         writeNumber(payeeAccNumber,12345678);
         clickContinue();
@@ -176,6 +180,41 @@ public class AvailableBalance extends GuiCommands {
         writeNumber(payAmount,12000);
         writeText(reference,"The Reference");
         clickContinue();
+    }
+
+    public boolean goBackFromSummaryPage (){
+
+        boolean one;
+        boolean two;
+        boolean three;
+        login();
+        clickPaymentTab();
+        clickNewPayee();
+        populatePaymentDetails();
+        populateRefPage();
+        click(summaryBB);
+        one = payRefTitle.isDisplayed();
+        int amount = Integer.parseInt(payAmount.getText());
+        String ref = reference.getText();
+
+        System.out.println(ref);
+        if (amount == 12000){
+             two = true;
+        }
+        else{
+            two = false;
+        }
+
+        if(ref.equals("The Reference") ){
+            three = true;
+        }
+        else {
+            three = false;
+        }
+
+        return one && two && three;
+
+
     }
 
 

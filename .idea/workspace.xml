@@ -2,97 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d068524-d172-4dd2-882a-e468c3dce49b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/screenshots/17-09-2018_05_46_16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Cards/Cards.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Login/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/SourceOfFunds.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pageObjects/CSM/MessagingScreen.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pageObjects/Login/Login.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/BusinessDetailsForm.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/BusinessSearch.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/OngoingSourceOfWealth.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/PersonalDetailsForm.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/SetUp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/SourceOfFunds.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/TransactionDetails.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/testUtils/Base_test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/testUtils/TestListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testUtils/ConfigReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/testData/ExcelFiles/Countries.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/testUtils/ConfigReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/17-09-2018_02_02_47.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/17-09-2018_02_11_16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/17-09-2018_02_15_13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/17-09-2018_02_19_00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/17-09-2018_02_24_21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/17-09-2018_02_25_37.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/17-09-2018_03_28_38.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/17-09-2018_03_28_57.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/17-09-2018_03_29_16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/17-09-2018_03_29_35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/17-09-2018_03_29_54.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/17-09-2018_03_30_12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/17-09-2018_04_32_54.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/17-09-2018_04_33_13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/17-09-2018_04_34_31.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/17-09-2018_12_07_45.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loginPageObjects/Login.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/onboardingPageObjects/BusinessDetailsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/BusinessDetailsForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/onboardingPageObjects/BusinessSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/BusinessSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/onboardingPageObjects/DepositorsDetailsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/DepositorsDetailsForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/onboardingPageObjects/OngoingSourceOfWealth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/onboardingPageObjects/PersonalDetailsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/PersonalDetailsForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/onboardingPageObjects/SetUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/SetUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/onboardingPageObjects/SourceOfFunds.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/onboardingPageObjects/TransactionDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/TransactionDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/CSM/MessagingScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/CSM/MessagingScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/CSM/SupportScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/CSM/SupportScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report.xml" beforeDir="false" afterPath="$PROJECT_DIR$/report.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/DepositorsDetailsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/DepositorsDetailsForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/OngoingSourceOfWealth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/OngoingSourceOfWealth.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Onboarding_tests/Base_test.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Onboarding_tests/SetUpTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Onboarding_tests/SetUpTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Onboarding_tests/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testUtils/TestListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Onboarding_tests/businessFormTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Onboarding_tests/businessFormTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Onboarding_tests/businessSearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Onboarding_tests/businessSearchTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Onboarding_tests/endToEndTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Onboarding_tests/endToEndTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Onboarding_tests/personalDetailsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Onboarding_tests/personalDetailsTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testUtils/Base_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testUtils/Base_test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/loginPageObjects/Login.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/BusinessDetailsForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/BusinessSearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/DepositorsDetailsForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/MessagingScreen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/OngoingSourceOfWealth.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/OngoingSourceOfWealth.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/PersonalDetailsForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/PersonalDetailsForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/SetUp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/SourceOfFunds.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/SupportScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/CSM/SupportScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/TransactionDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/OngoingSourceOfWealth.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/OngoingSourceOfWealth.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/PersonalDetailsForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/PersonalDetailsForm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/paymentsPageObjects/AvailableBalance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/paymentsPageObjects/AvailableBalance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/Base_test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/Base_test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/OngoingSourceOfWealthTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/OngoingSourceOfWealthTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/TestListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/businessFormTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/businessFormTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/businessSearchTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/businessSearchTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/endToEndTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/endToEndTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/personalDetailsTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/personalDetailsTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/setUpTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/setUpTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Payments_tests/paymentTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Payments_tests/paymentTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/Onboarding/Business Form Tests.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/Onboarding/Business Form Tests.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/Onboarding/Business Form Tests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/Onboarding/Business Form Tests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/Onboarding/Personal Details Tests.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/Onboarding/Personal Details Tests.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/Onboarding/Personal Details Tests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/Onboarding/Personal Details Tests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/html/suite1_test1_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/html/suite1_test1_results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/html/suite1_test2_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/html/suite1_test2_results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/html/suite1_test3_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/html/suite1_test3_results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/html/suite1_test4_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/html/suite1_test4_results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-Onboarding_tests.businessFormTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-Onboarding_tests.businessFormTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-Onboarding_tests.personalDetailsTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-Onboarding_tests.personalDetailsTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/xml/Onboarding_tests.SetUpTests_results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/xml/Onboarding_tests.SetUpTests_results.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/xml/Onboarding_tests.businessFormTests_results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/xml/Onboarding_tests.businessFormTests_results.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/xml/Onboarding_tests.businessSearchTests_results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/xml/Onboarding_tests.businessSearchTests_results.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/xml/Onboarding_tests.personalDetailsTests_results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/xml/Onboarding_tests.personalDetailsTests_results.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Payments_tests/paymentTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testUtils/Base_test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testUtils/Base_test.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -148,24 +77,28 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="5" />
-          <entry key="java" value="60" />
+          <entry key="gitignore" value="1" />
+          <entry key="java" value="67" />
+          <entry key="properties" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="5" />
-          <entry key="JAVA" value="60" />
+          <entry key="JAVA" value="67" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Properties" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="34" />
-          <entry key="java" value="4986" />
+          <entry key="java" value="5829" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4986" />
+          <entry key="JAVA" value="5829" />
           <entry key="PLAIN_TEXT" value="34" />
         </counts>
       </usages-collector>
@@ -185,8 +118,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="136" column="72" selection-start-line="136" selection-start-column="72" selection-end-line="136" selection-end-column="72" />
+            <state relative-caret-position="88">
+              <caret line="128" column="9" lean-forward="true" selection-start-line="128" selection-start-column="9" selection-end-line="128" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -197,12 +130,47 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="366">
+              <caret line="32" column="66" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#386#387#0" expanded="true" />
-                <element signature="e#449#450#0" expanded="true" />
+                <element signature="e#562#563#0" expanded="true" />
+                <element signature="e#643#644#0" expanded="true" />
+                <element signature="e#770#771#0" expanded="true" />
+                <element signature="e#853#854#0" expanded="true" />
+                <element signature="e#1063#1064#0" expanded="true" />
+                <element signature="e#1149#1150#0" expanded="true" />
+                <element signature="e#1064#1065#0" expanded="true" />
+                <element signature="e#1148#1149#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/businessFormTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-24">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1464#1465#0" expanded="true" />
+                <element signature="e#1551#1552#0" expanded="true" />
+                <element signature="e#1706#1707#0" expanded="true" />
+                <element signature="e#1788#1789#0" expanded="true" />
+                <element signature="e#1898#1899#0" expanded="true" />
+                <element signature="e#1975#1976#0" expanded="true" />
+                <element signature="e#2123#2124#0" expanded="true" />
+                <element signature="e#2208#2209#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -211,20 +179,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/OngoingSourceOfWealth.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="230" column="72" selection-start-line="230" selection-start-column="8" selection-end-line="230" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="28" column="50" lean-forward="true" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="258">
+              <caret line="179" column="18" lean-forward="true" selection-start-line="179" selection-start-column="18" selection-end-line="179" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -234,8 +190,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="TestNG Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -260,7 +216,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pageObjects/Page.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding_Your_Business_Details.java" />
         <option value="$PROJECT_DIR$/config" />
         <option value="$PROJECT_DIR$/config.yml" />
@@ -301,16 +256,17 @@
         <option value="$PROJECT_DIR$/src/main/java/onboardingPageObjects/OngoingSourceOfWealth.java" />
         <option value="$PROJECT_DIR$/src/test/java/Onboarding_tests/Base_test.java" />
         <option value="$PROJECT_DIR$/src/test/java/Onboarding_tests/endToEndTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/testUtils/Base_test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/OngoingSourceOfWealth.java" />
         <option value="$PROJECT_DIR$/src/main/java/onboardingPageObjects/DepositorsDetailsForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/DepositorsDetailsForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/PersonalDetailsForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/BusinessSearch.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/BusinessDetailsForm.java" />
+        <option value="$PROJECT_DIR$/src/test/java/testUtils/Base_test.java" />
         <option value="$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java" />
+        <option value="$PROJECT_DIR$/config.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/OngoingSourceOfWealth.java" />
         <option value="$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java" />
       </list>
     </option>
   </component>
@@ -332,7 +288,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="821" />
@@ -492,23 +448,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Payments_tests" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="uitesting" type="b2602c69:ProjectViewProjectNode" />
-              <item name="uitesting" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Payments_tests" type="462c0819:PsiDirectoryNode" />
-              <item name="paymentsTests.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="uitesting" type="b2602c69:ProjectViewProjectNode" />
-              <item name="uitesting" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="testUtils" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -516,7 +455,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537344792271" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537365398134" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -548,7 +487,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.paymentTests">
+  <component name="RunManager" selected="TestNG.paymentsTests.CUICE779">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -562,7 +501,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OngoingSourceOfWealthTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="OngoingSourceOfWealthTests.CUICE5114" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Iceberg" />
       <extension name="coverage">
         <pattern>
@@ -572,25 +511,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Onboarding_tests" />
       <option name="MAIN_CLASS_NAME" value="Onboarding_tests.OngoingSourceOfWealthTests" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OngoingSourceOfWealthTests.CUICE5113" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Iceberg" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Onboarding_tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Onboarding_tests" />
-      <option name="MAIN_CLASS_NAME" value="Onboarding_tests.OngoingSourceOfWealthTests" />
-      <option name="METHOD_NAME" value="CUICE5113" />
+      <option name="METHOD_NAME" value="CUICE5114" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -601,24 +522,6 @@
       </method>
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="endToEndTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Iceberg" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Onboarding_tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Onboarding_tests" />
-      <option name="MAIN_CLASS_NAME" value="Onboarding_tests.endToEndTests" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
@@ -645,16 +548,58 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="personalDetailsTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="paymentsTests.CUICE5890" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Iceberg" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Onboarding_tests.*" />
+          <option name="PATTERN" value="Payments_tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Onboarding_tests" />
-      <option name="MAIN_CLASS_NAME" value="Onboarding_tests.personalDetailsTests" />
+      <option name="PACKAGE_NAME" value="Payments_tests" />
+      <option name="MAIN_CLASS_NAME" value="Payments_tests.paymentsTests" />
+      <option name="METHOD_NAME" value="CUICE5890" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="paymentsTests.CUICE5893" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Iceberg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Payments_tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Payments_tests" />
+      <option name="MAIN_CLASS_NAME" value="Payments_tests.paymentsTests" />
+      <option name="METHOD_NAME" value="CUICE5893" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="paymentsTests.CUICE779" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Iceberg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Payments_tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Payments_tests" />
+      <option name="MAIN_CLASS_NAME" value="Payments_tests.paymentsTests" />
+      <option name="METHOD_NAME" value="CUICE779" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
@@ -664,19 +609,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.personalDetailsTests" />
-      <item itemvalue="TestNG.OngoingSourceOfWealthTests" />
-      <item itemvalue="TestNG.OngoingSourceOfWealthTests.CUICE5113" />
-      <item itemvalue="TestNG.endToEndTests" />
       <item itemvalue="TestNG.paymentTests" />
+      <item itemvalue="TestNG.paymentsTests.CUICE5890" />
+      <item itemvalue="TestNG.OngoingSourceOfWealthTests.CUICE5114" />
+      <item itemvalue="TestNG.paymentsTests.CUICE5893" />
+      <item itemvalue="TestNG.paymentsTests.CUICE779" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.paymentsTests.CUICE779" />
+        <item itemvalue="TestNG.paymentsTests.CUICE5893" />
+        <item itemvalue="TestNG.OngoingSourceOfWealthTests.CUICE5114" />
+        <item itemvalue="TestNG.paymentsTests.CUICE5890" />
         <item itemvalue="TestNG.paymentTests" />
-        <item itemvalue="TestNG.OngoingSourceOfWealthTests" />
-        <item itemvalue="TestNG.endToEndTests" />
-        <item itemvalue="TestNG.OngoingSourceOfWealthTests.CUICE5113" />
-        <item itemvalue="TestNG.personalDetailsTests" />
       </list>
     </recent_temporary>
   </component>
@@ -694,35 +639,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="OngoingSourceOfWealthTests - 2018.09.17 at 18h 22m 09s.xml">
-      <configuration name="OngoingSourceOfWealthTests" configurationId="TestNG" />
+    <history-entry file="paymentsTests_CUICE5890 - 2018.09.19 at 12h 14m 12s.xml">
+      <configuration name="paymentsTests.CUICE5890" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="paymentTests - 2018.09.18 at 12h 12m 48s.xml">
-      <configuration name="paymentTests" configurationId="TestNG" />
+    <history-entry file="paymentsTests_CUICE5890 - 2018.09.19 at 12h 16m 16s.xml">
+      <configuration name="paymentsTests.CUICE5890" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="paymentTests - 2018.09.18 at 12h 14m 50s.xml">
-      <configuration name="paymentTests" configurationId="TestNG" />
+    <history-entry file="paymentsTests_CUICE5890 - 2018.09.19 at 12h 17m 48s.xml">
+      <configuration name="paymentsTests.CUICE5890" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="paymentTests - 2018.09.18 at 12h 15m 58s.xml">
-      <configuration name="paymentTests" configurationId="TestNG" />
+    <history-entry file="OngoingSourceOfWealthTests_CUICE5114 - 2018.09.19 at 13h 39m 56s.xml">
+      <configuration name="OngoingSourceOfWealthTests.CUICE5114" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="paymentTests - 2018.09.18 at 17h 22m 46s.xml">
-      <configuration name="paymentTests" configurationId="TestNG" />
+    <history-entry file="OngoingSourceOfWealthTests_CUICE5114 - 2018.09.19 at 13h 58m 08s.xml">
+      <configuration name="OngoingSourceOfWealthTests.CUICE5114" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="paymentTests - 2018.09.18 at 17h 24m 07s.xml">
-      <configuration name="paymentTests" configurationId="TestNG" />
+    <history-entry file="OngoingSourceOfWealthTests_CUICE5114 - 2018.09.19 at 14h 03m 56s.xml">
+      <configuration name="OngoingSourceOfWealthTests.CUICE5114" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="paymentTests - 2018.09.18 at 17h 26m 53s.xml">
-      <configuration name="paymentTests" configurationId="TestNG" />
+    <history-entry file="paymentsTests_CUICE5893 - 2018.09.19 at 14h 45m 41s.xml">
+      <configuration name="paymentsTests.CUICE5893" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="OngoingSourceOfWealthTests - 2018.09.18 at 17h 41m 09s.xml">
-      <configuration name="OngoingSourceOfWealthTests" configurationId="TestNG" />
+    <history-entry file="paymentsTests_CUICE5893 - 2018.09.19 at 14h 47m 01s.xml">
+      <configuration name="paymentsTests.CUICE5893" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="OngoingSourceOfWealthTests - 2018.09.18 at 17h 43m 21s.xml">
-      <configuration name="OngoingSourceOfWealthTests" configurationId="TestNG" />
+    <history-entry file="paymentsTests_CUICE5893 - 2018.09.19 at 14h 53m 47s.xml">
+      <configuration name="paymentsTests.CUICE5893" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="paymentTests - 2018.09.19 at 09h 12m 50s.xml">
-      <configuration name="paymentTests" configurationId="TestNG" />
+    <history-entry file="paymentsTests_CUICE779 - 2018.09.19 at 14h 56m 06s.xml">
+      <configuration name="paymentsTests.CUICE779" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -735,10 +680,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="821" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19456366" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16605617" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -747,7 +692,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969698" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.38683128" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.2877551" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -804,9 +749,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/OnboardingSetUp.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/OnboardingBusinessDetails.java" />
-    <entry file="file://$PROJECT_DIR$/target/classes/pageObjects/BusinessDetailsForm.class" />
     <entry file="file://$PROJECT_DIR$/target/classes/utils/Constants.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -905,16 +847,6 @@
         <state>
           <folding>
             <element signature="e#0#3085#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/businessFormTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="e#1447#1448#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1024,13 +956,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/testUtils/Base_test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="36" column="111" selection-start-line="36" selection-start-column="111" selection-end-line="36" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/SourceOfFunds.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1072,27 +997,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/testUtils/Base_test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="28" column="50" lean-forward="true" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="111">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/testUtils/ConfigReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/businessFormTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/OngoingSourceOfWealth.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="230" column="72" selection-start-line="230" selection-start-column="8" selection-end-line="230" selection-end-column="72" />
+        <state relative-caret-position="258">
+          <caret line="179" column="18" lean-forward="true" selection-start-line="179" selection-start-column="18" selection-end-line="179" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/OngoingSourceOfWealthTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1551#1552#0" expanded="true" />
+            <element signature="e#1706#1707#0" expanded="true" />
+            <element signature="e#1788#1789#0" expanded="true" />
+            <element signature="e#1898#1899#0" expanded="true" />
+            <element signature="e#1975#1976#0" expanded="true" />
+            <element signature="e#2123#2124#0" expanded="true" />
+            <element signature="e#2208#2209#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="136" column="72" selection-start-line="136" selection-start-column="72" selection-end-line="136" selection-end-column="72" />
+        <state relative-caret-position="88">
+          <caret line="128" column="9" lean-forward="true" selection-start-line="128" selection-start-column="9" selection-end-line="128" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1101,12 +1065,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="366">
+          <caret line="32" column="66" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
+            <element signature="e#562#563#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
+            <element signature="e#770#771#0" expanded="true" />
+            <element signature="e#853#854#0" expanded="true" />
+            <element signature="e#1063#1064#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1064#1065#0" expanded="true" />
+            <element signature="e#1148#1149#0" expanded="true" />
           </folding>
         </state>
       </provider>
