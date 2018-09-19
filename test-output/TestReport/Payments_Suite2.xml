@@ -6,7 +6,7 @@
 </listeners>
 <test name="Faster Payments Without Contacts | Quick Pay" verbose="2">
     <classes>
-        <class name= "Payments_tests.paymentTests"/>
+        <class name= "Payments_tests.paymentsTests"/>
     </classes>
 </test>
 </suite>
