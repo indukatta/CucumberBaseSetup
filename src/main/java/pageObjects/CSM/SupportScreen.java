@@ -18,16 +18,11 @@ public class SupportScreen extends GuiCommands {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @iOSFindBy(xpath = "(//XCUIElementTypeButton[@name=\"customer_support.start_chat\"])[2]")  //FIXME get unique accessibility id
+    @iOSFindBy(accessibility = "customer_support.start_chat")  //FIXME get unique accessibility id
     private MobileElement startSupportChatButton;
 
-    @iOSFindBy(xpath = "(//XCUIElementTypeButton[@name=\"Support\"])[2")  //FIXME get unique accessibility id
+    @iOSFindBy(accessibility = "Support")
     private MobileElement supportButton;
-
-    //Element Displayed
-    public boolean isStartSupportChatButtonDisplayed() {
-        return startSupportChatButton.isDisplayed();
-    }
 
     public boolean isSupportButtonDisplayed() {
         return supportButton.isDisplayed();
@@ -52,14 +47,15 @@ public class SupportScreen extends GuiCommands {
     }
 
     // Custom Methods
-    public void navigateToSupportScreen() {
-        login.passThroughLogin();   // FIXME create passthroughLogin
+    public boolean navigateToSupportScreen() {
+        login.navigateToLogin();
         clickSupportButton();
+        return startSupportChatButton.isDisplayed();
     }
 
-    public void passthroughSupportScreen() {
-        navigateToSupportScreen();
-        clickStartSupportChatButton();
-    }
+//    public void passthroughSupportScreen() {
+//        navigateToSupportScreen();
+//        clickStartSupportChatButton();
+//    }
 
 }

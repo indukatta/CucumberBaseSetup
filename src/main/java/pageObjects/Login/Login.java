@@ -74,22 +74,29 @@ public class Login extends GuiCommands {
     public void writeUsername (String username){writeText(usernameFieldBox,username);}
 
     // Custom Methods
-    public boolean passThroughLogin() {
+    public boolean canUserLogin() {
         clickexistingCustomerButton();
         writeUsername("TESTUSER");
         clickusernameNextButton();
         clickpasswordLoginButton();
-
-        return  isaccountTitleDisplayed() ;
+        return isaccountTitleDisplayed();
     }
 
-    public boolean logoutTest (){
-        passThroughLogin();
+    public boolean canUserLogout (){
+        canUserLogin();
         clicklogoutButton();
-
         return islogoutScreen();
 
     }
+
+    public void navigateToLogin(){
+        clickexistingCustomerButton();
+        writeUsername("TESTUSER");
+        clickusernameNextButton();
+        clickpasswordLoginButton();
+    }
+
+
 }
 
 
