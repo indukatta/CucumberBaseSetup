@@ -2,73 +2,94 @@ package pageObjects.Login;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSFindBy;
-import org.openqa.selenium.support.PageFactory;
 import utils.GuiCommands;
 
-public class Login extends GuiCommands{
-
-    public Login (IOSDriver driver) {
+public class Login extends GuiCommands {
+    public Login(IOSDriver driver) {
         super(driver);
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
     @iOSFindBy(accessibility = "welcome.existing_customer_button_title")
-    private MobileElement alreadyRegisteredButton;
+    private MobileElement existingCustomerButton;
 
-    @iOSFindBy (accessibility = "Set up")
-    private MobileElement usernameScreenBackArrow;
+    @iOSFindBy(accessibility = "Set up")
+    private MobileElement backArrowUsername;
 
-    @iOSFindBy (accessibility = "Username")
-    private MobileElement usernameBox;
+    @iOSFindBy(accessibility = "login.login_username_textfield_header")
+    private MobileElement usernameFieldBox;
 
-    @iOSFindBy (accessibility = "login.login_username.remember_me")
-    private MobileElement rememberCheckBox;
+    @iOSFindBy(accessibility = "checkbox_button")
+    private MobileElement rememberMeCheckbox;
 
-    @iOSFindBy (accessibility = "next_button_default_title")
-    private MobileElement loginNextButton;
+    @iOSFindBy(accessibility = "next_button_default_title")
+    private MobileElement usernameNextButton;
 
-    @iOSFindBy (xpath = "//XCUIElementTypeStaticText[@name=\"Login\"]")  //FIXME get unique accessibility id
-    private MobileElement loginTitle;
+    @iOSFindBy(xpath =  "//XCUIElementTypeButton[@name=\"Login\"]") //FIXME get unique accessibility id
+    private MobileElement backArrowPassword;
 
-    @iOSFindBy (xpath = "//XCUIElementTypeButton[@name=\"Login\"]")  //FIXME get unique accessibility id
-    private MobileElement passwordScreenBackArrow;
+    @iOSFindBy(accessibility = "login.login_password_textfield_header")
+    private MobileElement passwordFieldBox;
 
-    @iOSFindBy (xpath = "//XCUIElementTypeApplication[@name=\"Iceberg\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/" +
-            "XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeSecureTextField")   //FIXME get unique accessibility id
-    private MobileElement passwordBox;
+    @iOSFindBy(accessibility = "checkbox_button")
+    private MobileElement showPasswordCheckBox;
 
-    @iOSFindBy (accessibility = "checkbox_button")
-    private MobileElement showPasswordCheckboxButton;
+    @iOSFindBy(accessibility = "login.login_button_title")
+    private MobileElement passwordLoginButton;
 
-    @iOSFindBy (accessibility = "login.login_button_title")
-    private MobileElement actualLoginButton;
-
-    @iOSFindBy (xpath = "(//XCUIElementTypeButton[@name=\"Log out\"])[1]")  //FIXME get unique accessibility id
+    @iOSFindBy(accessibility = "Log out")
     private MobileElement logoutButton;
 
-    @iOSFindBy (xpath = "(//XCUIElementTypeOther[@name=\"Account\"])[1]")  //FIXME get unique accessibility id
+    @iOSFindBy(xpath = "//XCUIElementTypeOther[@name=\"Account\"]") //FIXME get unique accessibility id
     private MobileElement accountTitle;
 
-    @iOSFindBy (xpath = "(//XCUIElementTypeStaticText[@name=\"ledgerBalanceValueLabel\"])[2]")  //FIXME get unique accessibility id
-    private MobileElement balanceAmount;
+    @iOSFindBy(xpath = "  //XCUIElementTypeStaticText[@name=\"Set up\"]") //FIXME get unique accessibility id
+    private MobileElement logoutScreen;
 
-    @iOSFindBy (xpath = "(//XCUIElementTypeButton[@name=\"Overview\"])[1]")  //FIXME get unique accessibility id
-    private MobileElement overviewButton;
+    //Elements Displayed
+    public boolean isaccountTitleDisplayed() { return accountTitle.isDisplayed(); }
 
-    @iOSFindBy (xpath = "(//XCUIElementTypeButton[@name=\"Accounts\"])[1]")  //FIXME get unique accessibility id
-    private MobileElement accountsButton;
+    public boolean islogoutScreen() {
+        return logoutScreen.isDisplayed();
+    }
 
-    @iOSFindBy (xpath = "(//XCUIElementTypeButton[@name=\"Payments\"])[1]")  //FIXME get unique accessibility id
-    private MobileElement paymentsButton;
+    //Click Methods
+    public void clickexistingCustomerButton() {
+        click(existingCustomerButton);
+    }
 
-    @iOSFindBy (xpath = "(//XCUIElementTypeButton[@name=\"Support\"])[1]")  //FIXME get unique accessibility id
-    private MobileElement supportButton;
+    public void clickusernameNextButton() {
+        click(usernameNextButton);
+    }
 
-    @iOSFindBy (xpath = "(//XCUIElementTypeButton[@name=\"More\"])[1]")  //FIXME get unique accessibility id
-    private MobileElement moreButton;
+    public void clickpasswordLoginButton() {
+        click(passwordLoginButton);
+    }
 
+    public void clicklogoutButton() {
+        click(logoutButton);
+    }
+
+    //Write Method
+    public void writeUsername (String username){writeText(usernameFieldBox,username);}
+
+    // Custom Methods
+    public boolean passThroughLogin() {
+        clickexistingCustomerButton();
+        writeUsername("TESTUSER");
+        clickusernameNextButton();
+        clickpasswordLoginButton();
+
+        return  isaccountTitleDisplayed() ;
+    }
+
+    public boolean logoutTest (){
+        passThroughLogin();
+        clicklogoutButton();
+
+        return islogoutScreen();
+
+    }
 }
 
 
