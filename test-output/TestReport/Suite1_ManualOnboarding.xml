@@ -34,4 +34,9 @@
             <class name= "Onboarding_tests.endToEndTests"/>
         </classes>
     </test>
+    <test name="Login / Logout" verbose="2">
+        <classes>
+            <class name= "Onboarding_tests.loginTests"/>
+        </classes>
+    </test>
 </suite>
