@@ -5,6 +5,9 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.iOSFindBy;
 import utils.GuiCommands;
 
+import java.lang.reflect.Field;
+import java.util.concurrent.TimeUnit;
+
 public class AvailableBalance extends GuiCommands {
 
     public AvailableBalance(IOSDriver driver) {
@@ -56,6 +59,27 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy (accessibility = "56,455.02 GBP")
     private MobileElement psAvailableBalance;
 
+    @iOSFindBy(accessibility = "Payments")
+    private MobileElement payDeteailsBB;
+
+    @iOSFindBy(accessibility = "Cancel")
+    private MobileElement cancelButton;
+
+    @iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"Paying someone new\"]")
+    private MobileElement payNewPersonBB;
+
+    @iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"Paying someone new\"]")
+    private MobileElement summaryBB;
+
+    @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Paying someone new\"")
+    private MobileElement summaryTitle;
+
+    @iOSFindBy(accessibility = "OK")
+    private MobileElement okButton;
+
+    @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Payments\"]")
+    private MobileElement paymentsTitle;
+
 
     //Enabled Methods
 
@@ -89,15 +113,10 @@ public class AvailableBalance extends GuiCommands {
 
         login();
         String check1 = hsAvailableBalance.getText().replaceAll("[^0-9]","");
-        System.out.println(check1);
         clickPaymentTab();
         clickNewPayee();
-        writeText(payeeName,"John does");
-        writeNumber(payeeSortCode,123456);
-        writeNumber(payeeAccNumber,12345678);
-        clickContinue();
+        populatePaymentDetails();
         String check2 = psAvailableBalance.getText().replaceAll("[^0-9]","");
-        System.out.println(check2);
 
         if ((Integer.parseInt(check1)) == (Integer.parseInt(check2) )){
             return true;
@@ -105,6 +124,60 @@ public class AvailableBalance extends GuiCommands {
         else { return false;}
 
     }
+
+    public boolean cancelButtonVerification(){
+
+        login();
+        clickPaymentTab();
+        clickNewPayee();
+        populatePaymentDetails();
+        click(cancelButton);
+        boolean one = paymentsTitle.isDisplayed();
+        clickNewPayee();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        String field1 = usernameField.getText();
+        System.out.println("field 1 is: "+field1);
+        boolean two;
+
+        if (Integer.parseInt(field1) == 0){
+             two = true;
+        }
+        else {
+             two = false;
+        }
+
+        populatePaymentDetails();
+        populateRefPage();
+        click(cancelButton);
+        boolean three = paymentsTitle.isDisplayed();
+        clickNewPayee();
+        String field2 = usernameField.getText();
+        boolean four;
+        if (Integer.parseInt(field2) == 0){
+             four = true;
+        }
+        else {
+             four = false;
+        }
+
+        return one && two && three && four;
+    }
+
+    public void populatePaymentDetails(){
+
+        writeText(payeeName,"John does");
+        writeNumber(payeeSortCode,123456);
+        writeNumber(payeeAccNumber,12345678);
+        clickContinue();
+
+    }
+    public void populateRefPage(){
+
+        writeNumber(payAmount,12000);
+        writeText(reference,"The Reference");
+        clickContinue();
+    }
+
 
 
 

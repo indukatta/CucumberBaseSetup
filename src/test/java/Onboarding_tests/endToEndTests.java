@@ -3,15 +3,9 @@ package Onboarding_tests;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import pageObjects.*;
-import pageObjects.BusinessDetailsForm;
-import pageObjects.BusinessSearch;
-import pageObjects.OngoingSourceOfWealth;
-import pageObjects.PersonalDetailsForm;
-import pageObjects.SetUp;
-import pageObjects.SourceOfFunds;
-import pageObjects.TransactionDetails;
+import pageObjects.Onboarding.*;
 import testData.onboardingTestData.GetE2ETestData;
+import testUtils.Base_test;
 import utils.Constants;
 import utils.ExcelUtils;
 
@@ -27,8 +21,6 @@ public class endToEndTests extends Base_test {
     private OngoingSourceOfWealth ongoingSourceOfWealth;
     private SourceOfFunds sourceOfFunds;
     private TransactionDetails transactionDetails;
-
-    private int testRow;
 
     @BeforeMethod
     public void before(){

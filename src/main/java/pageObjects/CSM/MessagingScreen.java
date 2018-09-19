@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects.CSM;
 
 public class MessagingScreen {
 }

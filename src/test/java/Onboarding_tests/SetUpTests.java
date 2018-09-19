@@ -4,9 +4,11 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import pageObjects.BusinessDetailsForm;
-import pageObjects.BusinessSearch;
-import pageObjects.SetUp;
+import pageObjects.Onboarding.BusinessDetailsForm;
+import pageObjects.Onboarding.BusinessSearch;
+import pageObjects.Onboarding.SetUp;
+import testUtils.Base_test;
+import testUtils.TestListener;
 
 @Listeners(TestListener.class)
 public class SetUpTests extends Base_test {
