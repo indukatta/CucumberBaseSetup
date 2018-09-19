@@ -1,18 +1,50 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Onboarding">
-<!--<listeners>-->
-<!--<listener class-name="org.uncommons.reportng.HTMLReporter"/>-->
-<!--<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>-->
-<!--</listeners>-->
-<test name="Onboarding">
+<listeners>
+<listener class-name="org.uncommons.reportng.HTMLReporter"/>
+<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+</listeners>
+<test name="Set up" verbose="2">
     <classes>
-        <class name= "Onboarding_tests.businessFormTests"/>
-        <class name= "Onboarding_tests.businessSearchTests"/>
-        <class name= "Onboarding_tests.endToEndTests"/>
-        <class name= "Onboarding_tests.OngoingSourceOfWealthTests"/>
-        <class name= "Onboarding_tests.personalDetailsTests"/>
         <class name= "Onboarding_tests.SetUpTests"/>
     </classes>
 </test>
-
+    <test name="Business search" verbose="2">
+        <classes>
+            <class name= "Onboarding_tests.businessSearchTests"/>
+        </classes>
+    </test>
+    <test name="Personal details" verbose="2">
+        <classes>
+            <class name= "Onboarding_tests.personalDetailsTests"/>
+        </classes>
+    </test>
+    <test name="Business form" verbose="2">
+        <classes>
+            <class name= "Onboarding_tests.businessFormTests"/>
+        </classes>
+    </test>
+    <test name="Ongoing source of wealth" verbose="2">
+        <classes>
+            <class name= "Onboarding_tests.OngoingSourceOfWealthTests"/>
+        </classes>
+    </test>
+    <test name="End-to-end" verbose="2">
+        <classes>
+            <class name= "Onboarding_tests.endToEndTests"/>
+        </classes>
+    </test>
+<!--<test name="Simple Transactions">-->
+    <!--<classes>-->
+    <!--</classes>-->
+<!--</test>-->
+<!--<test name="Login / Logout">-->
+    <!--<classes>-->
+    <!--</classes>-->
+<!--</test>-->
+<!--<test name="End-to-end" group-by-instances="true">-->
+    <!--<classes>-->
+        <!--<class name= "Onboarding_tests.endToEndTests"/>-->
+    <!--</classes>-->
+<!--</test>-->
 </suite>
