@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="43"
-           time="2.027">
+           time="1.986">
   <properties />
-            <testcase name="setUp" time="2.027" classname="Onboarding_tests.SetUpTests">
+            <testcase name="setUp" time="1.986" classname="Onboarding_tests.SetUpTests">
                 <failure type="org.openqa.selenium.WebDriverException"
                   message="It is impossible to create a new session because &apos;createSession&apos; which takes HttpClient, InputStream and long was not found or it is not accessible
 Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
@@ -186,6 +186,60 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
 
           </testcase>
   
+            <testcase name="setUp" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="setUp" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="setUp" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
             <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.SetUpTests">
           <skipped />
     </testcase>
@@ -198,46 +252,10 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
             <testcase name="setUp" time="0.0" classname="Onboarding_tests.SetUpTests">
           <skipped />
     </testcase>
-            <testcase name="setUp" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="setUp" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
             <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.SetUpTests">
           <skipped />
     </testcase>
             <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="setUp" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="setUp" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="setUp" time="0.0" classname="Onboarding_tests.SetUpTests">
           <skipped />
     </testcase>
             <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.SetUpTests">
@@ -258,58 +276,40 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
             <testcase name="setUp" time="0.0" classname="Onboarding_tests.SetUpTests">
           <skipped />
     </testcase>
-            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.SetUpTests">
+            <testcase name="setUp" time="0.0" classname="Onboarding_tests.SetUpTests">
           <skipped />
     </testcase>
-            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="CUICE4344" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="CUICE4345" time="0.0" classname="Onboarding_tests.SetUpTests">
+            <testcase name="setUp" time="0.0" classname="Onboarding_tests.SetUpTests">
           <skipped />
     </testcase>
             <testcase name="CUICE4105" time="0.0" classname="Onboarding_tests.SetUpTests">
           <skipped />
     </testcase>
-            <testcase name="CUICE4447" time="0.0" classname="Onboarding_tests.SetUpTests">
+            <testcase name="CUICE4448" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="CUICE4345" time="0.0" classname="Onboarding_tests.SetUpTests">
           <skipped />
     </testcase>
             <testcase name="CUICE4816" time="0.0" classname="Onboarding_tests.SetUpTests">
           <skipped />
     </testcase>
-            <testcase name="CUICE4343" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
             <testcase name="CUICE4445" time="0.0" classname="Onboarding_tests.SetUpTests">
           <skipped />
     </testcase>
-            <testcase name="CUICE4448" time="0.0" classname="Onboarding_tests.SetUpTests">
+            <testcase name="CUICE4446" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="CUICE4344" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="CUICE4343" time="0.0" classname="Onboarding_tests.SetUpTests">
+          <skipped />
+    </testcase>
+            <testcase name="CUICE4447" time="0.0" classname="Onboarding_tests.SetUpTests">
           <skipped />
     </testcase>
             <testcase name="CUICE4346" time="0.0" classname="Onboarding_tests.SetUpTests">
-          <skipped />
-    </testcase>
-            <testcase name="CUICE4446" time="0.0" classname="Onboarding_tests.SetUpTests">
           <skipped />
     </testcase>
             <testcase name="CUICE4815" time="0.0" classname="Onboarding_tests.SetUpTests">

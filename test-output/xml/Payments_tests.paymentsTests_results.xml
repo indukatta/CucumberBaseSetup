@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="15"
-           time="0.560">
+           time="0.470">
   <properties />
-            <testcase name="setUp" time="0.560" classname="Payments_tests.paymentsTests">
+            <testcase name="setUp" time="0.470" classname="Payments_tests.paymentsTests">
                 <failure type="org.openqa.selenium.WebDriverException"
                   message="It is impossible to create a new session because &apos;createSession&apos; which takes HttpClient, InputStream and long was not found or it is not accessible
 Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
@@ -186,12 +186,6 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
 
           </testcase>
   
-            <testcase name="beforeMethod" time="0.0" classname="Payments_tests.paymentsTests">
-          <skipped />
-    </testcase>
-            <testcase name="beforeMethod" time="0.0" classname="Payments_tests.paymentsTests">
-          <skipped />
-    </testcase>
             <testcase name="setUp" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
@@ -201,7 +195,16 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
             <testcase name="takeScreenShot" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
+            <testcase name="takeScreenShot" time="0.0" classname="Payments_tests.paymentsTests">
+          <skipped />
+    </testcase>
+            <testcase name="setUp" time="0.0" classname="Payments_tests.paymentsTests">
+          <skipped />
+    </testcase>
             <testcase name="beforeMethod" time="0.0" classname="Payments_tests.paymentsTests">
+          <skipped />
+    </testcase>
+            <testcase name="takeScreenShot" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
             <testcase name="beforeMethod" time="0.0" classname="Payments_tests.paymentsTests">
@@ -210,25 +213,22 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
             <testcase name="setUp" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
-            <testcase name="takeScreenShot" time="0.0" classname="Payments_tests.paymentsTests">
+            <testcase name="beforeMethod" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
-            <testcase name="takeScreenShot" time="0.0" classname="Payments_tests.paymentsTests">
-          <skipped />
-    </testcase>
-            <testcase name="setUp" time="0.0" classname="Payments_tests.paymentsTests">
+            <testcase name="beforeMethod" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
             <testcase name="CUICE779" time="0.0" classname="Payments_tests.paymentsTests">
+          <skipped />
+    </testcase>
+            <testcase name="CUICE5893" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
             <testcase name="CUICE5890" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
             <testcase name="CUICE589" time="0.0" classname="Payments_tests.paymentsTests">
-          <skipped />
-    </testcase>
-            <testcase name="CUICE5893" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
   
