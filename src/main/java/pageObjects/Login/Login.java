@@ -66,7 +66,8 @@ public class Login extends GuiCommands {
         click(passwordLoginButton);
     }
 
-    public void clicklogoutButton() { click(logoutButton);
+    public void clicklogoutButton() {
+        click(logoutButton);
     }
 
     //Write Method
