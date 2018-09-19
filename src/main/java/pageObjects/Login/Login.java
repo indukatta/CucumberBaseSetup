@@ -49,6 +49,9 @@ public class Login extends GuiCommands {
     @iOSFindBy(accessibility = "Entered an incorrect username or password")
     private MobileElement errorMessage;
 
+    @iOSFindBy(accessibility = "Support")
+    private MobileElement supportButton;
+
     //Elements Displayed
     public boolean isaccountTitleDisplayed() {
         return accountTitle.isDisplayed();
