@@ -16,22 +16,21 @@ public class loginTests extends Base_test {
     }
 
     @Test(priority = 1, description = "Login with username & password then logout")
-    public void CUICE5474(){
-        Assert.assertTrue(login.passThroughLogin());
-          /*
+    public void CUICE5474() {
+    Assert.assertTrue(login.passThroughLogin());
+    }
 
-        @Test(priority = 2, description = "Information Prepopulated and Displayed to User")
-        public void CUICE4142(){
-            Assert.assertTrue(details.personalDetailsDisplayed());
+    @Test(priority = 2, description = "login with incorrect username")
+    public void CUICE5476(){
+    Assert.assertTrue(login.incorrectLogin());
+    }
 
+    @Test(priority = 3, description = "login with incorrect username")
+    public void CUICE5477(){
+    Assert.assertTrue(login.incorrectPassword());
+    }
 
-        }
-
-        @Test(priority = 2, description = "Non-Editing of Pre-populated Information")
-        public void CUICE4141(){
-            Assert.assertTrue(details.personalDetailsNotEditible());
-        }
-
+        /*
         @Test(priority = 3, description = "Navigate Back To Company Search Screen")
         public void CUICE4144(){
             Assert.assertTrue(details.navigateBackToBusinessSearch());
@@ -40,4 +39,3 @@ public class loginTests extends Base_test {
     }
 
 
-}

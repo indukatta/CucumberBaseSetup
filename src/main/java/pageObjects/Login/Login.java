@@ -25,7 +25,7 @@ public class Login extends GuiCommands {
     @iOSFindBy(accessibility = "next_button_default_title")
     private MobileElement usernameNextButton;
 
-    @iOSFindBy(xpath =  "//XCUIElementTypeButton[@name=\"Login\"]") //FIXME get unique accessibility id
+    @iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"Login\"]") //FIXME get unique accessibility id
     private MobileElement backArrowPassword;
 
     @iOSFindBy(accessibility = "login.login_password_textfield_header")
@@ -46,8 +46,17 @@ public class Login extends GuiCommands {
     @iOSFindBy(xpath = "  //XCUIElementTypeStaticText[@name=\"Set up\"]") //FIXME get unique accessibility id
     private MobileElement logoutScreen;
 
+    @iOSFindBy(accessibility = "Entered an incorrect username or password")
+    private MobileElement errorMessage;
+
     //Elements Displayed
-    public boolean isaccountTitleDisplayed() { return accountTitle.isDisplayed(); }
+    public boolean isaccountTitleDisplayed() {
+        return accountTitle.isDisplayed();
+    }
+
+    public boolean iserrorMessageDisplayed() {
+        return errorMessage.isDisplayed();
+    }
 
     public boolean islogoutScreen() {
         return logoutScreen.isDisplayed();
@@ -62,6 +71,10 @@ public class Login extends GuiCommands {
         click(usernameNextButton);
     }
 
+    public void clickpasswordFieldBox() {
+        click(usernameNextButton);
+    }
+
     public void clickpasswordLoginButton() {
         click(passwordLoginButton);
     }
@@ -70,26 +83,56 @@ public class Login extends GuiCommands {
         click(logoutButton);
     }
 
+    public void clickshowPasswordCheckBox() {
+        click(logoutButton);
+    }
+
     //Write Method
-    public void writeUsername (String username){writeText(usernameFieldBox,username);}
-
-    // Custom Methods
-    public boolean passThroughLogin (){
-        clickexistingCustomerButton();
-        writeUsername("TESTUSER");
-        clickusernameNextButton();
-        clickpasswordLoginButton();
-
-        return  isaccountTitleDisplayed() ;
+    public void writeUsername(String username) {
+        writeText(usernameFieldBox, username);
+    }
+    public void writePassword (String password){
+        writeText(passwordFieldBox, password);
     }
 
-    public boolean logoutTest (){
-        passThroughLogin();
-        clicklogoutButton();
+   // Custom Methods
+   public boolean passThroughLogin () {
+            clickexistingCustomerButton();
+            writeUsername("TESTUSER");
+            clickusernameNextButton();
+            clickpasswordLoginButton();
 
-        return islogoutScreen();
-
+            return isaccountTitleDisplayed();
     }
+
+   public boolean incorrectLogin () {
+            clickexistingCustomerButton();
+            writeUsername("TESTUSE");
+            clickusernameNextButton();
+            clickpasswordLoginButton();
+
+            return iserrorMessageDisplayed();
+
+   }
+
+   public boolean incorrectPassword () {
+            clickexistingCustomerButton();
+            writeUsername("TESTUSER");
+            clickusernameNextButton();
+            clickshowPasswordCheckBox();
+            clickpasswordFieldBox();
+            writePassword("TESTPASSWOR");
+            clickpasswordLoginButton();
+
+            return iserrorMessageDisplayed();
+    }
+
+            public boolean logoutTest () {
+                passThroughLogin();
+                clicklogoutButton();
+
+                return islogoutScreen();
+
+     }
+
 }
-
-
