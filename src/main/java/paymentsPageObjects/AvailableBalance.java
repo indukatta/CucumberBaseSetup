@@ -3,12 +3,15 @@ package paymentsPageObjects;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.iOSFindBy;
+import pageObjects.Login.Login;
 import utils.GuiCommands;
 
 import java.lang.reflect.Field;
 import java.util.concurrent.TimeUnit;
 
 public class AvailableBalance extends GuiCommands {
+
+    Login login = new Login(driver);
 
     public AvailableBalance(IOSDriver driver) {
         super(driver);
@@ -107,17 +110,11 @@ public class AvailableBalance extends GuiCommands {
     //Custom Methods
 
 
-    public void login(){
 
-        clickExistingCustomer();
-        writeText(usernameField,"TESTUSER");
-        clickNext();
-        clickLogin();
-    }
 
     public boolean isAvailBalanceEqual (){
 
-        login();
+        login.passThroughLogin();
         String check1 = hsAvailableBalance.getText().replaceAll("[^0-9]","");
         clickPaymentTab();
         clickNewPayee();
@@ -133,36 +130,20 @@ public class AvailableBalance extends GuiCommands {
 
     public boolean cancelButtonVerification(){
 
-        login();
+        login.passThroughLogin();
         clickPaymentTab();
         clickNewPayee();
         populatePaymentDetails();
         click(cancelButton);
         boolean one = paymentsTitle.isDisplayed();
         clickNewPayee();
-        String field1 = payeeName.getText();
-        boolean two;
-
-        if (field1.isEmpty()){
-             two = true;
-        }
-        else {
-             two = false;
-        }
-
+        boolean two = payeeName.getText().isEmpty();
         populatePaymentDetails();
         populateRefPage();
         click(cancelButton);
         boolean three = paymentsTitle.isDisplayed();
         clickNewPayee();
-        String field2 = payeeName.getText();
-        boolean four;
-        if (field2.isEmpty()){
-             four = true;
-        }
-        else {
-             four = false;
-        }
+        boolean four = payeeName.getText().isEmpty();
 
         return one && two && three && four;
     }
@@ -187,7 +168,7 @@ public class AvailableBalance extends GuiCommands {
         boolean one;
         boolean two;
         boolean three;
-        login();
+        login.passThroughLogin();
         clickPaymentTab();
         clickNewPayee();
         populatePaymentDetails();
@@ -213,7 +194,19 @@ public class AvailableBalance extends GuiCommands {
         }
 
         return one && two && three;
+    }
 
+    public boolean goBackFromPayeeDetails(){
+
+        login.passThroughLogin();
+        clickPaymentTab();
+        clickNewPayee();
+        populatePaymentDetails();
+        click(payDeteailsBB);
+        boolean one = paymentsTitle.isDisplayed();
+        boolean two = payeeName.getTagName().isEmpty();
+
+        return one && two;
 
     }
 

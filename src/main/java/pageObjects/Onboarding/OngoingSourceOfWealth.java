@@ -7,10 +7,6 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import pageObjects.Onboarding.BusinessDetailsForm;
-import pageObjects.Onboarding.BusinessSearch;
-import pageObjects.Onboarding.PersonalDetailsForm;
-import pageObjects.Onboarding.SetUp;
 import testData.CheckBoxElements;
 import testData.RandomDataGenerator;
 import utils.GuiCommands;
@@ -86,6 +82,8 @@ public class OngoingSourceOfWealth  extends GuiCommands {
     @iOSFindBy(accessibility = "Other")
     private MobileElement other;
 
+
+
     //Elements Displayed
 
     public boolean isOngoingPageDisplayed() { return ongoingTitle.isDisplayed(); }
@@ -114,14 +112,13 @@ public class OngoingSourceOfWealth  extends GuiCommands {
     public void clickNextButton() { click(nextButton); }
 
     // Write Methods
-
     public void writeAnnualTurnover (int amount){writeNumber(annualTurnoverTextField,amount);}
 
     // Clear Methods
-
     public void clearAnnualTurnover (){clearText(annualTurnoverTextField);}
 
     //Custom Methods
+
 
     public void navigateToOngoingSourceOfWealth (){
         setUp.passThroughSetUp();
@@ -312,14 +309,8 @@ public class OngoingSourceOfWealth  extends GuiCommands {
         writeText(countrySearchTextField, generator.setCountry());
         clickGenericIostableCell();
         clickNextButton();
-
         return !isOngoingPageDisplayed();
     }
-
-
-
-
-
 
     public void populateSourceOfWealth(String turnover, String funding, String country){
         writeText(annualTurnoverTextField, turnover);
