@@ -117,10 +117,6 @@ public class OngoingSourceOfWealth  extends GuiCommands {
     // Clear Methods
     public void clearAnnualTurnover (){clearText(annualTurnoverTextField);}
 
-<<<<<<< HEAD
-=======
-    //Custom Methods
->>>>>>> origin/payments
 
     public void navigateToOngoingSourceOfWealth (){
         setUp.passThroughSetUp();

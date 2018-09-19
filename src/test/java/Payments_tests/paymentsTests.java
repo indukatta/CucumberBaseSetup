@@ -38,17 +38,6 @@ public class paymentsTests extends Base_test {
             Assert.assertTrue(availableBalance.cancelButtonVerification());
         }
 
-<<<<<<< HEAD
-    @Test(priority = 1 , description = "Is available balance the same on both sides" )
-    public void CUICE779() { Assert.assertTrue(availableBalance.isAvailBalanceEqual());
-    }
-    @Test(priority = 2 , description = "Ensures the cancel button is function and redirects to the correct page" )
-    public void CUICE5890() { Assert.assertTrue(availableBalance.cancelButtonVerification());
-    }
-=======
-
->>>>>>> origin/payments
-
 
 
 }

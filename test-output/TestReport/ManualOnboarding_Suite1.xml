@@ -34,29 +34,4 @@
             <class name= "Onboarding_tests.endToEndTests"/>
         </classes>
     </test>
-<!--<test name="Simple Transactions">-->
-    <!--<classes>-->
-    <!--</classes>-->
-<!--</test>-->
-<!--<test name="Login / Logout">-->
-    <!--<classes>-->
-    <!--</classes>-->
-<!--</test>-->
-<!--<test name="End-to-end" group-by-instances="true">-->
-    <!--<classes>-->
-        <!--<class name= "Onboarding_tests.endToEndTests"/>-->
-    <!--</classes>-->
-<!--</test>-->
-<test name="Faster Payments Without Contacts | Quick Pay" verbose="2">
-    <classes>
-        <class name= "Payments_tests.paymentTests"/>
-    </classes>
-</test>
 </suite>
-<!--<suite name="Login">-->
-<!--<test name="Faster Payments Without Contacts | Quick Pay" verbose="2">-->
-    <!--<classes>-->
-        <!--<class name= "Payments_tests.paymentTests"/>-->
-    <!--</classes>-->
-<!--</test>-->
-<!--</suite>-->
