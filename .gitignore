@@ -2,10 +2,19 @@
 .idea/workspace.xml
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+config.properties
+=======
+>>>>>>> 2be21f2c556081dca7cb4c9651e4ff9211a7c3cf
+<<<<<<< HEAD
 .testUtils/Base_test.java
 =======
 .config.properties
 >>>>>>> 5f3cf1f1cafe24dc36f2d21db86e80f3e8b8820c
+<<<<<<< HEAD
 =======
 config.properties
 >>>>>>> 51e63e8a09d41574d806defc47cd72e8615d1a83
+=======
+>>>>>>> origin/payments
+>>>>>>> 2be21f2c556081dca7cb4c9651e4ff9211a7c3cf

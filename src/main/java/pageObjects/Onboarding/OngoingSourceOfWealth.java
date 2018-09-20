@@ -119,7 +119,6 @@ public class OngoingSourceOfWealth  extends GuiCommands {
 
     //Custom Methods
 
-
     public void navigateToOngoingSourceOfWealth (){
         setUp.passThroughSetUp();
         businessSearch.passThroughBusinessSearch();

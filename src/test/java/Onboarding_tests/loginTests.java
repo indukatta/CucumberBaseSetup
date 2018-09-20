@@ -17,7 +17,7 @@ public class loginTests extends Base_test {
 
     @Test(priority = 1, description = "Login with username & password then logout")
     public void CUICE5474(){
-        Assert.assertTrue(login.passThroughLogin());
+        Assert.assertTrue(login.canUserLogin());
           /*
 
         @Test(priority = 2, description = "Information Prepopulated and Displayed to User")

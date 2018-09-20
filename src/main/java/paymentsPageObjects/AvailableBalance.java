@@ -6,7 +6,6 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 import pageObjects.Login.Login;
 import utils.GuiCommands;
 
-import java.lang.reflect.Field;
 import java.util.concurrent.TimeUnit;
 
 public class AvailableBalance extends GuiCommands {
@@ -59,7 +58,7 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy (accessibility = "payment_details.reference_textfield_header")
     private MobileElement reference;
 
-    @iOSFindBy (accessibility = "available_balance_value_label")
+    @iOSFindBy (accessibility = "payment_details.available_balance_label_value")
     private MobileElement psAvailableBalance;
 
     @iOSFindBy(accessibility = "Payments")
@@ -89,8 +88,30 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Paying someone new\"]")
     private MobileElement payRefTitle;
 
+    @iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"Paying someone new\"]")
+    private MobileElement paymentDetailsBB;
 
-    //Enabled Methods
+    // Summary page
+
+    @iOSFindBy(accessibility = "payment_confirmation.sort_code_label_value")
+    private MobileElement summarySortCode;
+
+    @iOSFindBy(accessibility = "payment_confirmation.account_number_label_value")
+    private  MobileElement summaryAccNumber;
+
+    @iOSFindBy(accessibility = "payment_confirmation.reference_label_value")
+    private MobileElement summaryReference;
+
+    @iOSFindBy(accessibility = "payment_confirmation.confirm_payment_message")
+    private MobileElement disclaimerMessage;
+
+    @iOSFindBy(accessibility = "payment_confirmation.about_to_pay_label_value")
+    private MobileElement summaryAmount;
+
+    @iOSFindBy(accessibility = "payment_confirmation.make_payment_button_title")
+    private MobileElement makePaymentButton;
+
+
 
     //Click Methods
 
@@ -109,37 +130,32 @@ public class AvailableBalance extends GuiCommands {
 
     //Custom Methods
 
-
-
-
     public boolean isAvailBalanceEqual (){
 
-        login.passThroughLogin();
+        login.navigateToLogin();
         String check1 = hsAvailableBalance.getText().replaceAll("[^0-9]","");
         clickPaymentTab();
         clickNewPayee();
-        populatePaymentDetails();
+        passThroughPayeeDetails();
         String check2 = psAvailableBalance.getText().replaceAll("[^0-9]","");
-
         if (check1.equals(check2)){
             return true;
         }
         else { return false;}
-
     }
 
     public boolean cancelButtonVerification(){
 
-        login.passThroughLogin();
+        login.navigateToLogin();
         clickPaymentTab();
         clickNewPayee();
-        populatePaymentDetails();
+        passThroughPayeeDetails();
         click(cancelButton);
         boolean one = paymentsTitle.isDisplayed();
         clickNewPayee();
         boolean two = payeeName.getText().isEmpty();
-        populatePaymentDetails();
-        populateRefPage();
+        passThroughPayeeDetails();
+        passThroughRefPage();
         click(cancelButton);
         boolean three = paymentsTitle.isDisplayed();
         clickNewPayee();
@@ -148,67 +164,121 @@ public class AvailableBalance extends GuiCommands {
         return one && two && three && four;
     }
 
-    public void populatePaymentDetails(){
+    public void populatePayeeDetails(){
+
+        writeText(payeeName,"Jane doe");
+        writeNumber(payeeSortCode,123456);
+        writeNumber(payeeAccNumber,12345678);
+    }
+    public void populateRefPage(){
+
+        writeNumber(payAmount,666);
+        writeText(reference,"The end is near");
+    }
+
+    public void passThroughPayeeDetails(){
 
         writeText(payeeName,"John doe");
         writeNumber(payeeSortCode,123456);
         writeNumber(payeeAccNumber,12345678);
         clickContinue();
-
     }
-    public void populateRefPage(){
+    public void passThroughRefPage(){
 
         writeNumber(payAmount,12000);
         writeText(reference,"The Reference");
         clickContinue();
     }
 
+
     public boolean goBackFromSummaryPage (){
 
-        boolean one;
-        boolean two;
-        boolean three;
-        login.passThroughLogin();
+
+
+
+        login.navigateToLogin();
         clickPaymentTab();
         clickNewPayee();
-        populatePaymentDetails();
-        populateRefPage();
+        passThroughPayeeDetails();
+        passThroughRefPage();
         click(summaryBB);
-        one = payRefTitle.isDisplayed();
-        int amount = Integer.parseInt(payAmount.getText());
-        String ref = reference.getText();
-
-        System.out.println(ref);
-        if (amount == 12000){
-             two = true;
-        }
-        else{
-            two = false;
-        }
-
-        if(ref.equals("The Reference") ){
-            three = true;
-        }
-        else {
-            three = false;
-        }
+        boolean one = payRefTitle.isDisplayed();
+        boolean two = payAmount.getText().equals("1,200.00");
+        boolean three = reference.getText().equals("The Reference");
 
         return one && two && three;
     }
 
     public boolean goBackFromPayeeDetails(){
 
-        login.passThroughLogin();
+        login.navigateToLogin();
         clickPaymentTab();
         clickNewPayee();
-        populatePaymentDetails();
+        populatePayeeDetails();
         click(payDeteailsBB);
         boolean one = paymentsTitle.isDisplayed();
-        boolean two = payeeName.getTagName().isEmpty();
+        clickNewPayee();
+        boolean two = payeeName.getText().isEmpty();
+        if(two == false) two =true;
 
         return one && two;
-
     }
+
+    public boolean goBackFromPaymentsDetailsPage(){
+
+        login.navigateToLogin();
+        clickPaymentTab();
+        clickNewPayee();
+        passThroughPayeeDetails();
+        click(paymentDetailsBB);
+        boolean one = payeeName.getText().equals("John doe");
+        clearText(payeeName);
+        writeText(payeeName,"Test data");
+        boolean two;
+        if (payeeName.getText().equals("John doe")) two = false;
+        //driver.findElementById("to john doe");
+
+        else  two = true;
+
+        return one && two;
+    }
+
+    public boolean isPaymentInfoKept(){
+
+        login.navigateToLogin();
+        clickPaymentTab();
+        clickNewPayee();
+        passThroughPayeeDetails();
+        populateRefPage();
+        click(paymentDetailsBB);
+        clickContinue();
+        boolean one = payAmount.getText().replaceAll("[^0-9]","").equals("66600");
+        boolean two = reference.getText().equals("The end is near");
+
+        return one && two;
+    }
+
+    public boolean isAllSummaryDisplayed(){
+        login.navigateToLogin();
+        clickPaymentTab();
+        clickNewPayee();
+        passThroughPayeeDetails();
+        passThroughRefPage();
+
+        boolean one = driver.findElementById("to John doe").isDisplayed();
+        boolean two = summaryAccNumber.isDisplayed();
+        boolean three = summarySortCode.isDisplayed();
+        boolean four = summaryAmount.isDisplayed();
+        boolean five = summaryReference.isDisplayed();
+        boolean six = disclaimerMessage.isDisplayed();
+        boolean seven = makePaymentButton.isDisplayed();
+
+        return one && two && three && four && five && six && seven;
+    }
+
+
+
+
 
 
 
