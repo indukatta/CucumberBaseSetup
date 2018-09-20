@@ -24,6 +24,14 @@ public class SupportScreen extends GuiCommands {
     @iOSFindBy(accessibility = "Support")
     private MobileElement supportButton;
 
+    @iOSFindBy(xpath = "//XCUIElementTypeAlert[@name=\"“Iceberg” Would Like to Send You Notifications\"]")
+    private MobileElement notificationBox;
+
+    @iOSFindBy(accessibility = "Allow")
+    private MobileElement allowNotificationsButton;
+
+
+
     public boolean isSupportButtonDisplayed() {
         return supportButton.isDisplayed();
     }
@@ -45,19 +53,27 @@ public class SupportScreen extends GuiCommands {
     public void clickSupportButton() {
         click(supportButton);
     }
-
-    // Custom Methods
-    public boolean navigateToSupportScreen() {
-        login.navigateToLogin();
-        clickSupportButton();
-        return chatWithUsButton.isDisplayed();
+    public void clickallowNotificationsButton() {
+        click(allowNotificationsButton);
     }
-    public void passToMessageScreen() {
-        login.navigateToLogin();
-        clickSupportButton();
-        clickchatWithUsButton();
+        // Custom Methods
+        public boolean navigateToSupportScreen() {
+            login.navigateToLogin();
+            clickSupportButton();
+            return chatWithUsButton.isDisplayed();
+        }
+        public void passToMessageScreen () {
+            login.navigateToLogin();
+            clickSupportButton();
+            clickchatWithUsButton();
+            clickallowNotificationsButton();
 
-    }
+        }
+
+        }
+
+
+
 
 
 //    public void passthroughSupportScreen() {
@@ -65,5 +81,5 @@ public class SupportScreen extends GuiCommands {
 //        clickStartSupportChatButton();
 //    }
 
-}
+
 

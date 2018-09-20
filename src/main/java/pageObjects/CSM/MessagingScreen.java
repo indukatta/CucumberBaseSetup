@@ -31,27 +31,38 @@ public class MessagingScreen extends GuiCommands {
     private MobileElement timeOfFirstMessage;
 
     @iOSFindBy(accessibility = "Send")
-    private  MobileElement sendButton;
+    private MobileElement sendButton;
 
-    @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Write a message\"]")  //FIXME get unique accessibility id
+    @iOSFindBy(xpath = "//XCUIElementTypeTextView[@name=\"Write a message\"]]")//FIXME get unique accessibility id
+    private MobileElement messagingText;
+
+    @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Write a message\"]")//FIXME get unique accessibility id
     private MobileElement messagingBox;
 
+    public void clickSendButton() {
+        click(sendButton);
+    }
 
-    public void writeMessage (String message){writeText(messagingBox,message);}
 
 
-    public boolean navigateToMessagingcreen() {
+    public void writeMessage(String message) {
+        writeText(messagingText, message);
+    }
+
+
+    public boolean navigateToMessagingScreen() {
         supportScreen.passToMessageScreen();
         return messagingBox.isDisplayed();
 
     }
-//    public boolean writeToMessagingcreen() {
-//        supportScreen.passToMessageScreen();
-//        return messagingBox.isDisplayed();
-//    writeUsername("TESTUSER");
 
+    public boolean writeToMessagingScreen() {
+        navigateToMessagingScreen();
+        writeMessage("I have lost my card");
+        clickSendButton();
+        return messagingBox.isDisplayed();
+    }
 }
-
 
 
 

@@ -23,14 +23,17 @@ public class messagingScreenTests extends Base_test {
         supportScreen = new SupportScreen(driver);
         messagingScreen = new MessagingScreen(driver);
 
-
     }
 
     @Test(priority = 1, description = "Navigate to messaging screen")
     public void CUICE2() {
-        Assert.assertTrue(messagingScreen.navigateToMessagingcreen());
+        Assert.assertTrue(messagingScreen.navigateToMessagingScreen());
     }
 
+    @Test(priority = 2, description = "Type and send in message box")
+    public void CUICE3() {
+        Assert.assertTrue(messagingScreen.writeToMessagingScreen());
+    }
 
 }
 
