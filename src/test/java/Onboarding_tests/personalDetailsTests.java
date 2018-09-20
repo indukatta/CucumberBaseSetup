@@ -40,12 +40,12 @@ public class personalDetailsTests extends Base_test {
         Assert.assertTrue(details.errorMessageDisappearsWhenValidationPassed());
     }
 
-    @Test(priority = 4, description = "Field is active, no data is entered and user navigates to another field")
+    @Test(priority = 6, description = "Field is active, no data is entered and user navigates to another field")
     public void CUICE6057(){
         Assert.assertTrue(details.errorMessageDoesNotShow());
     }
 
-    @Test(priority = 4, description = "Error message shows, user deletes data, error disappears")
+    @Test(priority = 7, description = "Error message shows, user deletes data, error disappears")
     public void CUICE6058(){
         Assert.assertTrue(details.errorMessageDisplayed());
     }

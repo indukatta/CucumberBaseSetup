@@ -1,3 +1,4 @@
 *.png
 .idea/workspace.xml
 config.properties
+*.class
