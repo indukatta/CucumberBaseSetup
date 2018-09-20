@@ -6,8 +6,6 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 import pageObjects.Login.Login;
 import utils.GuiCommands;
 
-import java.util.concurrent.TimeUnit;
-
 public class AvailableBalance extends GuiCommands {
 
     Login login = new Login(driver);
@@ -91,7 +89,10 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"Paying someone new\"]")
     private MobileElement paymentDetailsBB;
 
-    // Summary page
+    @iOSFindBy(accessibility = "Delete")
+    private MobileElement numPadDel;
+
+    // Summary page elements
 
     @iOSFindBy(accessibility = "payment_confirmation.sort_code_label_value")
     private MobileElement summarySortCode;
@@ -111,8 +112,6 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy(accessibility = "payment_confirmation.make_payment_button_title")
     private MobileElement makePaymentButton;
 
-
-
     //Click Methods
 
     public void clickNext(){ click(nextButton);}
@@ -127,9 +126,39 @@ public class AvailableBalance extends GuiCommands {
 
     public void clickLogin() {click(loginButton);}
 
-
     //Custom Methods
+    public void populatePayeeDetails(){
 
+        writeText(payeeName,"Jane doe");
+        writeNumber(payeeSortCode,123456);
+        writeNumber(payeeAccNumber,12345678);
+    }
+    public void populateRefPage(){
+
+        writeNumber(payAmount,666);
+        writeText(reference,"The end is near");
+    }
+    public void passThroughPayeeDetails(){
+
+        writeText(payeeName,"John doe");
+        writeNumber(payeeSortCode,123456);
+        writeNumber(payeeAccNumber,12345678);
+        clickContinue();
+    }
+    public void passThroughRefPage(){
+
+        writeNumber(payAmount,12000);
+        writeText(reference,"The Reference");
+        clickContinue();
+    }
+    public void  navigateToPaymentpage(){
+
+        login.navigateToLogin();
+        clickPaymentTab();
+        clickNewPayee();
+    }
+
+    //Test Methods
     public boolean isAvailBalanceEqual (){
 
         login.navigateToLogin();
@@ -143,12 +172,9 @@ public class AvailableBalance extends GuiCommands {
         }
         else { return false;}
     }
-
     public boolean cancelButtonVerification(){
 
-        login.navigateToLogin();
-        clickPaymentTab();
-        clickNewPayee();
+        navigateToPaymentpage();
         passThroughPayeeDetails();
         click(cancelButton);
         boolean one = paymentsTitle.isDisplayed();
@@ -163,42 +189,9 @@ public class AvailableBalance extends GuiCommands {
 
         return one && two && three && four;
     }
-
-    public void populatePayeeDetails(){
-
-        writeText(payeeName,"Jane doe");
-        writeNumber(payeeSortCode,123456);
-        writeNumber(payeeAccNumber,12345678);
-    }
-    public void populateRefPage(){
-
-        writeNumber(payAmount,666);
-        writeText(reference,"The end is near");
-    }
-
-    public void passThroughPayeeDetails(){
-
-        writeText(payeeName,"John doe");
-        writeNumber(payeeSortCode,123456);
-        writeNumber(payeeAccNumber,12345678);
-        clickContinue();
-    }
-    public void passThroughRefPage(){
-
-        writeNumber(payAmount,12000);
-        writeText(reference,"The Reference");
-        clickContinue();
-    }
-
-
     public boolean goBackFromSummaryPage (){
 
-
-
-
-        login.navigateToLogin();
-        clickPaymentTab();
-        clickNewPayee();
+        navigateToPaymentpage();
         passThroughPayeeDetails();
         passThroughRefPage();
         click(summaryBB);
@@ -208,12 +201,9 @@ public class AvailableBalance extends GuiCommands {
 
         return one && two && three;
     }
-
     public boolean goBackFromPayeeDetails(){
 
-        login.navigateToLogin();
-        clickPaymentTab();
-        clickNewPayee();
+        navigateToPaymentpage();
         populatePayeeDetails();
         click(payDeteailsBB);
         boolean one = paymentsTitle.isDisplayed();
@@ -223,31 +213,21 @@ public class AvailableBalance extends GuiCommands {
 
         return one && two;
     }
-
     public boolean goBackFromPaymentsDetailsPage(){
 
-        login.navigateToLogin();
-        clickPaymentTab();
-        clickNewPayee();
+        navigateToPaymentpage();
         passThroughPayeeDetails();
         click(paymentDetailsBB);
         boolean one = payeeName.getText().equals("John doe");
         clearText(payeeName);
         writeText(payeeName,"Test data");
-        boolean two;
-        if (payeeName.getText().equals("John doe")) two = false;
-        //driver.findElementById("to john doe");
-
-        else  two = true;
+        boolean two = (payeeName.getText().equals("Test data"));
 
         return one && two;
     }
-
     public boolean isPaymentInfoKept(){
 
-        login.navigateToLogin();
-        clickPaymentTab();
-        clickNewPayee();
+        navigateToPaymentpage();
         passThroughPayeeDetails();
         populateRefPage();
         click(paymentDetailsBB);
@@ -257,14 +237,11 @@ public class AvailableBalance extends GuiCommands {
 
         return one && two;
     }
-
     public boolean isAllSummaryDisplayed(){
-        login.navigateToLogin();
-        clickPaymentTab();
-        clickNewPayee();
+
+        navigateToPaymentpage();
         passThroughPayeeDetails();
         passThroughRefPage();
-
         boolean one = driver.findElementById("to John doe").isDisplayed();
         boolean two = summaryAccNumber.isDisplayed();
         boolean three = summarySortCode.isDisplayed();
@@ -274,6 +251,48 @@ public class AvailableBalance extends GuiCommands {
         boolean seven = makePaymentButton.isDisplayed();
 
         return one && two && three && four && five && six && seven;
+    }
+    public boolean sortCodeValidator(){
+
+        navigateToPaymentpage();
+        writeNumber(payeeSortCode,1);
+        boolean one = numPadDel.isDisplayed();
+        writeNumber(payeeSortCode,234567);
+        click(payeeName);
+        boolean two = payeeSortCode.getText().equals("12-34-56");
+
+        return one && two;
+    }
+
+    public boolean accountNumberValidator(){
+        navigateToPaymentpage();
+        writeText(payeeName,"Robo Cop");
+        writeNumber(payeeSortCode,234567);
+        boolean one = false;
+        for (int i = 1; i < 10; i++){
+            if (continueButton.isEnabled()){
+                writeNumber(payeeAccNumber,i);
+                 one = payeeAccNumber.getText().equals("12345678");
+                 break;
+            }
+            else {
+                writeNumber(payeeAccNumber,i);
+
+            }
+        }
+        return one;
+    }
+    public boolean isContinueButtonWorking(){
+        navigateToPaymentpage();
+        writeText(payeeName,"Monkey D Luffy");
+        boolean one = !continueButton.isEnabled();
+        writeNumber(payeeSortCode,777777);
+        boolean two = !continueButton.isEnabled();
+        writeNumber(payeeAccNumber,12345678);
+        clickContinue();
+        boolean three = psAvailableBalance.isDisplayed();
+
+        return one && two && three;
     }
 
 

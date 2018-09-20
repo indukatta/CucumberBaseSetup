@@ -50,6 +50,16 @@ public class paymentsTests extends Base_test {
         @Test(priority = 7 , description = "Ensures information is retained when back button from " )
         public void CUICE5920 () { Assert.assertTrue(availableBalance.isAllSummaryDisplayed()); }
 
+        // CUICE-637
+
+        @Test(priority = 8 , description = "Checks sort code is written in correct format" )
+        public void sortCode () { Assert.assertTrue(availableBalance.sortCodeValidator()); }
+
+        @Test(priority = 9 , description = "Ensures only valid details are entered into account" )
+        public void accNum () { Assert.assertTrue(availableBalance.accountNumberValidator()); }
+
+        @Test(priority = 10 , description = "Ensure continue button is enabled when all fields are filled" )
+        public void contButton () { Assert.assertTrue(availableBalance.isContinueButtonWorking()); }
 
 
 
