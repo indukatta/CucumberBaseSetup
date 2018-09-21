@@ -15,22 +15,28 @@ public class SupportScreen extends GuiCommands {
 
     public SupportScreen(IOSDriver driver) {
         super(driver);
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+        PageFactory.initElements(new AppiumFieldDecorator(driver),this);
     }
 
-    @iOSFindBy(accessibility = "customer_support.start_chat")  //FIXME get unique accessibility id
-    private MobileElement startSupportChatButton;
+    @iOSFindBy(accessibility = "customer_support.chat_button_title")
+    private MobileElement chatWithUsButton;
 
     @iOSFindBy(accessibility = "Support")
     private MobileElement supportButton;
+
+    @iOSFindBy(xpath = "//XCUIElementTypeAlert[@name=\"“Iceberg” Would Like to Send You Notifications\"]")
+    private MobileElement notificationBox;
+
+    @iOSFindBy(accessibility = "Allow")
+    private MobileElement allowNotificationsButton;
 
     public boolean isSupportButtonDisplayed() {
         return supportButton.isDisplayed();
     }
 
     // Element Enabled
-    public boolean isStartSupportChatButtonEnabled() {
-        return startSupportChatButton.isEnabled();
+    public boolean ischatWithUsButtonEnabled() {
+        return chatWithUsButton.isEnabled();
     }
 
     public boolean isSupportButtonEnabled() {
@@ -38,24 +44,30 @@ public class SupportScreen extends GuiCommands {
     }
 
     // Clicking Elements
-    public void clickStartSupportChatButton() {
-        click(startSupportChatButton);
+    public void clickchatWithUsButton() {
+        click(chatWithUsButton);
     }
 
     public void clickSupportButton() {
         click(supportButton);
     }
-
-    // Custom Methods
-    public boolean navigateToSupportScreen() {
-        login.navigateToLogin();
-        clickSupportButton();
-        return startSupportChatButton.isDisplayed();
+    public void clickallowNotificationsButton() {
+        click(allowNotificationsButton);
     }
+        // Custom Methods
+        public boolean navigateToSupportScreen() {
+            login.navigateToLogin();
+            clickSupportButton();
+            return chatWithUsButton.isDisplayed();
+        }
+        public void passToMessageScreen () {
+            login.navigateToLogin();
+            clickSupportButton();
+            clickchatWithUsButton();
+            clickallowNotificationsButton();
 
-//    public void passthroughSupportScreen() {
-//        navigateToSupportScreen();
-//        clickStartSupportChatButton();
-//    }
+        }
 
 }
+
+
