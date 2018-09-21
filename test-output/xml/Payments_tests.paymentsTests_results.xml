@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Manual Onboarding - Business search"
-           tests="40"
+<testsuite name="Faster Payments Without Contacts | Quick Pay"
+           tests="16"
            failures="1"
            errors="0"
-           skipped="39"
-           time="0.629">
+           skipped="15"
+           time="0.470">
   <properties />
-            <testcase name="setUp" time="0.629" classname="Onboarding_tests.businessSearchTests">
+            <testcase name="setUp" time="0.470" classname="Payments_tests.paymentsTests">
                 <failure type="org.openqa.selenium.WebDriverException"
                   message="It is impossible to create a new session because &apos;createSession&apos; which takes HttpClient, InputStream and long was not found or it is not accessible
 Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
@@ -186,121 +186,49 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
 
           </testcase>
   
-            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.businessSearchTests">
+            <testcase name="setUp" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
-            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.businessSearchTests">
+            <testcase name="takeScreenShot" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
-            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.businessSearchTests">
+            <testcase name="takeScreenShot" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
-            <testcase name="setUp" time="0.0" classname="Onboarding_tests.businessSearchTests">
+            <testcase name="takeScreenShot" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
-            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.businessSearchTests">
+            <testcase name="setUp" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
-            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.businessSearchTests">
+            <testcase name="beforeMethod" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
-            <testcase name="setUp" time="0.0" classname="Onboarding_tests.businessSearchTests">
+            <testcase name="takeScreenShot" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
-            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.businessSearchTests">
+            <testcase name="beforeMethod" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
-            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.businessSearchTests">
+            <testcase name="setUp" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
-            <testcase name="setUp" time="0.0" classname="Onboarding_tests.businessSearchTests">
+            <testcase name="beforeMethod" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
-            <testcase name="setUp" time="0.0" classname="Onboarding_tests.businessSearchTests">
+            <testcase name="beforeMethod" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
-            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.businessSearchTests">
+            <testcase name="CUICE779" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
-            <testcase name="setUp" time="0.0" classname="Onboarding_tests.businessSearchTests">
+            <testcase name="CUICE5893" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
-            <testcase name="setUp" time="0.0" classname="Onboarding_tests.businessSearchTests">
+            <testcase name="CUICE5890" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
-            <testcase name="setUp" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="setUp" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="takeScreenShot" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="setUp" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="beforeMethod" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="CUICE3979" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="CUICE5182" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="CUICE3996" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="CUICE4000" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="CUICE3981" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="CUICE3980" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="CUICE3998" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="CUICE3982" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="CUICE3978" time="0.0" classname="Onboarding_tests.businessSearchTests">
-          <skipped />
-    </testcase>
-            <testcase name="CUICE3995" time="0.0" classname="Onboarding_tests.businessSearchTests">
+            <testcase name="CUICE589" time="0.0" classname="Payments_tests.paymentsTests">
           <skipped />
     </testcase>
   

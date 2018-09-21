@@ -31,6 +31,7 @@ public class Base_test {
     public void setUp() throws MalformedURLException {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
+
         capabilities.setCapability("platformName", config.getPlatformName());
         capabilities.setCapability("platformVersion", config.getVersion());
         capabilities.setCapability("deviceName", config.getDeviceName());

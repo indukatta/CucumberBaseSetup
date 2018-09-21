@@ -2,3 +2,4 @@
 .idea/workspace.xml
 config.properties
 *.class
+.idea/misc.xml
