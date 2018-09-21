@@ -43,17 +43,13 @@ public class MessagingScreen extends GuiCommands {
         click(sendButton);
     }
 
-
-
     public void writeMessage(String message) {
         writeText(messagingText, message);
     }
 
-
     public boolean navigateToMessagingScreen() {
         supportScreen.passToMessageScreen();
         return messagingBox.isDisplayed();
-
     }
 
     public boolean writeToMessagingScreen() {

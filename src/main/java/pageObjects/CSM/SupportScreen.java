@@ -15,7 +15,7 @@ public class SupportScreen extends GuiCommands {
 
     public SupportScreen(IOSDriver driver) {
         super(driver);
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+        PageFactory.initElements(new AppiumFieldDecorator(driver),this);
     }
 
     @iOSFindBy(accessibility = "customer_support.chat_button_title")
@@ -29,8 +29,6 @@ public class SupportScreen extends GuiCommands {
 
     @iOSFindBy(accessibility = "Allow")
     private MobileElement allowNotificationsButton;
-
-
 
     public boolean isSupportButtonDisplayed() {
         return supportButton.isDisplayed();
@@ -70,16 +68,6 @@ public class SupportScreen extends GuiCommands {
 
         }
 
-        }
-
-
-
-
-
-//    public void passthroughSupportScreen() {
-//        navigateToSupportScreen();
-//        clickStartSupportChatButton();
-//    }
-
+}
 
 
