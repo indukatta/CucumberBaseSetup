@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d068524-d172-4dd2-882a-e468c3dce49b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -59,8 +59,8 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="6" />
-          <entry key="gitignore" value="1" />
-          <entry key="java" value="76" />
+          <entry key="gitignore" value="2" />
+          <entry key="java" value="77" />
           <entry key="properties" value="4" />
           <entry key="xml" value="1" />
         </counts>
@@ -68,8 +68,8 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="6" />
-          <entry key="JAVA" value="76" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="JAVA" value="77" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="4" />
           <entry key="XML" value="1" />
         </counts>
@@ -77,23 +77,24 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="34" />
-          <entry key="java" value="8494" />
+          <entry key="java" value="8540" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8494" />
+          <entry key="JAVA" value="8540" />
           <entry key="PLAIN_TEXT" value="34" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -101,15 +102,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4050">
-              <caret line="274" column="67" selection-start-line="274" selection-start-column="67" selection-end-line="274" selection-end-column="67" />
-              <folding>
-                <element signature="e#296#297#0" expanded="true" />
-                <element signature="e#325#326#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="73">
+              <caret line="239" column="19" selection-start-line="239" selection-start-column="19" selection-end-line="239" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -117,8 +114,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="290">
+              <caret line="54" column="92" lean-forward="true" selection-start-line="54" selection-start-column="92" selection-end-line="54" selection-end-column="92" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/GuiCommands.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2471">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -157,7 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config" />
         <option value="$PROJECT_DIR$/config.yml" />
         <option value="$PROJECT_DIR$/src/main/java/testData/RandomDataFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/testData/RandomDataFactory/RandomDataFactory.java" />
@@ -206,8 +223,9 @@
         <option value="$PROJECT_DIR$/.idea/misc.xml" />
         <option value="$PROJECT_DIR$/src/test/java/testUtils/Base_test.java" />
         <option value="$PROJECT_DIR$/config.properties" />
-        <option value="$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -229,7 +247,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="821" />
@@ -241,6 +259,7 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -304,7 +323,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -347,6 +365,14 @@
               <item name="uitesting" type="b2602c69:ProjectViewProjectNode" />
               <item name="uitesting" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="uitesting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="uitesting" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -364,6 +390,14 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Payments_tests" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="uitesting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="uitesting" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="testUtils" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -371,7 +405,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537461631226" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537541089552" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -403,7 +437,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.paymentsTests.accNum">
+  <component name="RunManager" selected="TestNG.paymentsTests.CUICE5920">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -535,11 +569,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.paymentsTests.CUICE5920" />
         <item itemvalue="TestNG.paymentsTests.accNum" />
         <item itemvalue="TestNG.paymentsTests.contButton" />
         <item itemvalue="TestNG.paymentsTests.sortCode" />
         <item itemvalue="TestNG.paymentsTests.CUICE5891" />
-        <item itemvalue="TestNG.paymentsTests.CUICE5920" />
       </list>
     </recent_temporary>
   </component>
@@ -557,15 +591,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="paymentsTests_sortCode - 2018.09.20 at 16h 42m 55s.xml">
-      <configuration name="paymentsTests.sortCode" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="paymentsTests_sortCode - 2018.09.20 at 16h 43m 55s.xml">
-      <configuration name="paymentsTests.sortCode" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="paymentsTests_accNum - 2018.09.20 at 17h 00m 08s.xml">
-      <configuration name="paymentsTests.accNum" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="paymentsTests_accNum - 2018.09.20 at 17h 05m 58s.xml">
       <configuration name="paymentsTests.accNum" configurationId="TestNG" />
     </history-entry>
@@ -587,6 +612,15 @@
     <history-entry file="paymentsTests_accNum - 2018.09.20 at 17h 39m 25s.xml">
       <configuration name="paymentsTests.accNum" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="paymentsTests_CUICE5920 - 2018.09.21 at 14h 21m 36s.xml">
+      <configuration name="paymentsTests.CUICE5920" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="paymentsTests_CUICE5920 - 2018.09.21 at 14h 24m 11s.xml">
+      <configuration name="paymentsTests.CUICE5920" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="paymentsTests_CUICE5920 - 2018.09.21 at 14h 25m 45s.xml">
+      <configuration name="paymentsTests.CUICE5920" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -598,10 +632,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="821" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16605617" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19670959" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -610,7 +644,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969698" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.2877551" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.2866941" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -699,22 +733,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/test-classes/Onboarding_tests/businessSearchTests.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#3118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/target/test-classes/Onboarding_tests/endToEndTests.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#3085#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/target/test-classes/Onboarding_tests/OngoingSourceOfWealthTests.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -758,55 +780,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/onboardingPageObjects/SourceOfFunds.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/onboardingPageObjects/SetUp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/onboardingPageObjects/BusinessDetailsForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="18" column="68" lean-forward="true" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/onboardingPageObjects/PersonalDetailsForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1989">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/onboardingPageObjects/BusinessSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/onboardingPageObjects/OngoingSourceOfWealth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/Base_test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/onboardingPageObjects/SourceOfFunds.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/onboardingPageObjects/SetUp.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/onboardingPageObjects/BusinessDetailsForm.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/onboardingPageObjects/PersonalDetailsForm.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/onboardingPageObjects/BusinessSearch.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/onboardingPageObjects/OngoingSourceOfWealth.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/Base_test.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/PersonalDetailsForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -845,25 +825,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/GuiCommands.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/DepositorsDetailsForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/testUtils/ConfigReader.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -936,10 +903,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-          <folding>
-            <element signature="e#1331#1332#0" expanded="true" />
-            <element signature="e#1375#1376#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -953,23 +916,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="239" column="19" selection-start-line="239" selection-start-column="19" selection-end-line="239" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="290">
+          <caret line="54" column="92" lean-forward="true" selection-start-line="54" selection-start-column="92" selection-end-line="54" selection-end-column="92" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4050">
-          <caret line="274" column="67" selection-start-line="274" selection-start-column="67" selection-end-line="274" selection-end-column="67" />
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/GuiCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2471">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
           <folding>
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

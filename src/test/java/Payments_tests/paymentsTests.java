@@ -47,7 +47,7 @@ public class paymentsTests extends Base_test {
 
         // CUICE-656
 
-        @Test(priority = 7 , description = "Ensures information is retained when back button from " )
+        @Test(priority = 7 , description = "Ensures all summary screen items are displayed " )
         public void CUICE5920 () { Assert.assertTrue(availableBalance.isAllSummaryDisplayed()); }
 
         // CUICE-637
