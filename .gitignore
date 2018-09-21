@@ -1,11 +1,5 @@
 *.png
 .idea/workspace.xml
-<<<<<<< HEAD
 config.properties
-=======
-<<<<<<< HEAD
-.testUtils/Base_test.java
-=======
-.config.properties
->>>>>>> 5f3cf1f1cafe24dc36f2d21db86e80f3e8b8820c
->>>>>>> origin/payments
+*.class
+.idea/misc.xml

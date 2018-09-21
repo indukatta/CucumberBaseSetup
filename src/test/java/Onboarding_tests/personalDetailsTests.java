@@ -30,4 +30,24 @@ public class personalDetailsTests extends Base_test {
         Assert.assertTrue(details.navigateBackToBusinessSearch());
     }
 
+    @Test(priority = 4, description = "Error message shows when validation not passed")
+    public void CUICE6051(){
+        Assert.assertTrue(details.errorMessageDisplayed());
+    }
+
+    @Test(priority = 5, description = "When validation is passed error message disappears")
+    public void CUICE6056(){
+        Assert.assertTrue(details.errorMessageDisappearsWhenValidationPassed());
+    }
+
+    @Test(priority = 6, description = "Field is active, no data is entered and user navigates to another field")
+    public void CUICE6057(){
+        Assert.assertTrue(details.errorMessageDoesNotShow());
+    }
+
+    @Test(priority = 7, description = "Error message shows, user deletes data, error disappears")
+    public void CUICE6058(){
+        Assert.assertTrue(details.errorMessageDisplayed());
+    }
+
 }
