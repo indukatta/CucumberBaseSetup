@@ -18,7 +18,6 @@ public class supportScreenTests extends Base_test {
         supportScreen = new SupportScreen(driver);
     }
 
-
     @Test(priority = 1, description = "Navigate to support screen")
     public void CUICE1() {
         Assert.assertTrue(supportScreen.navigateToSupportScreen());
@@ -26,3 +25,4 @@ public class supportScreenTests extends Base_test {
 
 
 }
+
