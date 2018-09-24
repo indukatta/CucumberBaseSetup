@@ -47,19 +47,42 @@ public class paymentsTests extends Base_test {
 
         // CUICE-656
 
-        @Test(priority = 7 , description = "Ensures all summary screen items are displayed " )
+        @Test(priority = 7 , description = "Ensures all summary elements are on the page" )
         public void CUICE5920 () { Assert.assertTrue(availableBalance.isAllSummaryDisplayed()); }
 
         // CUICE-637
 
-        @Test(priority = 8 , description = "Checks sort code is written in correct format" )
-        public void sortCode () { Assert.assertTrue(availableBalance.sortCodeValidator()); }
+        @Test(priority = 8 , description = "Checks name field validation" )
+        public void CUICE5547 () { Assert.assertTrue(availableBalance.payeeDetailsNameField()); }
 
-        @Test(priority = 9 , description = "Ensures only valid details are entered into account" )
-        public void accNum () { Assert.assertTrue(availableBalance.accountNumberValidator()); }
+        @Test(priority = 9 , description = "Checks sort code is written in correct format" )
+        public void CUICE5548 () { Assert.assertTrue(availableBalance.sortCodeValidator()); }
 
-        @Test(priority = 10 , description = "Ensure continue button is enabled when all fields are filled" )
-        public void contButton () { Assert.assertTrue(availableBalance.isContinueButtonWorking()); }
+        @Test(priority = 10 , description = "Ensures only valid details are entered into account" )
+        public void CUICE5549 () { Assert.assertTrue(availableBalance.accountNumberValidator()); }
+
+        @Test(priority = 11 , description = "Ensure continue button is enabled when all fields are filled" )
+        public void CUICE5550 () { Assert.assertTrue(availableBalance.isContinueButtonWorking()); }
+
+        @Test(priority = 12, description = "Ensures all elements on payee details page is displayed" )
+        public void CUICE5546 () { Assert.assertTrue(availableBalance.startPaymentJourneyAndEnterPayeeDetails()); }
+
+        // CUICE-642
+    
+        @Test(priority = 13 , description = "Ensures only valid amounts can be accepted" )
+        public void ac1 () { Assert.assertTrue(availableBalance.paymentAmountValidator()); }
+
+        @Test(priority = 14 , description = "Ensures correct currency is displayed" )
+        public void ac2 () { Assert.assertTrue(availableBalance.isCurrencyDisplayed()); }
+
+        @Test(priority = 15 , description = "Ensures continue button on payment page works correctly" )
+        public void ac4 () { Assert.assertTrue(availableBalance.isContinuebtnEnabled()); }
+
+        @Test(priority = 16 , description = "Checks that pound sign is not displayed whilst amount field is inactive" )
+        public void ac7 () { Assert.assertTrue(availableBalance.isGpbDisplayedInactive()); }
+
+        @Test(priority = 17 , description = "Ensures only valid entries are allowed" )
+        public void ac3 () { Assert.assertTrue(availableBalance.referenceFieldValidator()); }
 
 
 

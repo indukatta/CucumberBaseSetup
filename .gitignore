@@ -2,6 +2,7 @@
 .idea/workspace.xml
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 config.properties
 =======
@@ -18,3 +19,8 @@ config.properties
 =======
 >>>>>>> origin/payments
 >>>>>>> 2be21f2c556081dca7cb4c9651e4ff9211a7c3cf
+=======
+config.properties
+*.class
+.idea/misc.xml
+>>>>>>> 1997f10c3df92ffc3fe2482b60eb2f03b3804435

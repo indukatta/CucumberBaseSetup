@@ -176,7 +176,6 @@ public class OngoingSourceOfWealth  extends GuiCommands {
             else {
                  num = Integer.parseInt(annualTurnoverTextField.getText());
             }
-
             if(num == i){
                 one = isNextButtonEnabled();
                 clearAnnualTurnover();
@@ -245,9 +244,7 @@ public class OngoingSourceOfWealth  extends GuiCommands {
         else{
             return false;
         }
-
     }
-
     public boolean checkOtherFieldValidity (){
 
         navigateToOngoingSourceOfWealth();

@@ -4,6 +4,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSFindBy;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import testData.RandomDataGenerator;
@@ -112,6 +113,9 @@ public class PersonalDetailsForm extends GuiCommands {
     @iOSFindBy (accessibility = "next_button_default_title")
     private MobileElement nextButton;
 
+    @iOSFindBy(accessibility = "Incorrect details entered")
+    private MobileElement errorMessage;
+
 
     public void naviagateToPersonalDetailsForm(){
         setUp.passThroughSetUp();
@@ -145,6 +149,56 @@ public class PersonalDetailsForm extends GuiCommands {
         businessDetailsForm.clickBackNavigation();
         boolean two = businessSearch.businessSearchTitleDisplayed();
         return one && two;
+    }
+
+    public boolean errorMessageDisplayed(){
+        naviagateToPersonalDetailsForm();
+        scrollDown(personNationalInsuranceNumber);
+        writeText(personNationalInsuranceNumber, "HHHHHHHHH");
+        scrollDown(personIdType);
+        click(personIdType);
+        boolean one = errorMessage.isDisplayed();
+        clearText(personNationalInsuranceNumber);
+        click(personIdType);
+        boolean two = false;
+        try{
+            errorMessage.isDisplayed();
+        } catch (NoSuchElementException e){
+            two = true;
+        }
+        return one && two;
+    }
+
+    public boolean errorMessageDisappearsWhenValidationPassed(){
+        naviagateToPersonalDetailsForm();
+        scrollDown(personNationalInsuranceNumber);
+        writeText(personNationalInsuranceNumber, "AS1234");
+        scrollDown(personIdType);
+        click(personIdType);
+        boolean one = errorMessage.isDisplayed();
+        writeText(personNationalInsuranceNumber, "56D");
+        boolean two = false;
+        try{
+            errorMessage.isDisplayed();
+        } catch (NoSuchElementException e){
+            two = true;
+        }
+        return one && two;
+    }
+
+    public boolean errorMessageDoesNotShow(){
+        naviagateToPersonalDetailsForm();
+        scrollDown(personNationalInsuranceNumber);
+        click(personNationalInsuranceNumber);
+        scrollDown(personIdType);
+        click(personIdType);
+        boolean one = false;
+        try{
+            errorMessage.isDisplayed();
+        } catch (NoSuchElementException e){
+            one = true;
+        }
+        return one;
     }
 
     public void passThroughPersonalDetailsForm(){

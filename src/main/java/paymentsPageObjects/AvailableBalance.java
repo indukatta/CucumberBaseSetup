@@ -3,6 +3,7 @@ package paymentsPageObjects;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.iOSFindBy;
+import org.openqa.selenium.NoSuchElementException;
 import pageObjects.Login.Login;
 import utils.GuiCommands;
 
@@ -71,7 +72,7 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"Paying someone new\"]")
     private MobileElement summaryBB;
 
-    @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Paying someone new\"")
+    @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Paying someone new\"]")
     private MobileElement summaryTitle;
 
     @iOSFindBy(accessibility = "OK")
@@ -112,6 +113,9 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy(accessibility = "payment_confirmation.make_payment_button_title")
     private MobileElement makePaymentButton;
 
+    @iOSFindBy(accessibility = "GBP")
+    private MobileElement poundSign;
+
     //Click Methods
 
     public void clickNext(){ click(nextButton);}
@@ -147,7 +151,7 @@ public class AvailableBalance extends GuiCommands {
     }
     public void passThroughRefPage(){
 
-        writeNumber(payAmount,12000);
+        writeNumber(payAmount,1200);
         writeText(reference,"The Reference");
         clickContinue();
     }
@@ -295,9 +299,117 @@ public class AvailableBalance extends GuiCommands {
         return one && two && three;
     }
 
+    public boolean isCurrencyDisplayed(){
+        navigateToPaymentpage();
+        passThroughPayeeDetails();
+        writeNumber(payAmount,1500);
+        boolean one = poundSign.isDisplayed();
+        writeText(poundSign,"USD");
+        boolean two = poundSign.getText().equals("GBP");
 
+        return one && two;
+    }
 
+    public boolean isContinuebtnEnabled(){
+        navigateToPaymentpage();
+        passThroughPayeeDetails();
+        writeNumber(payAmount,1234);
+        boolean two = !continueButton.isEnabled();
+        writeText(reference,"You can do it");
+        clickContinue();
+        boolean three = summarySortCode.isDisplayed();
 
+        return  two && three;
+    }
+    public boolean startPaymentJourneyAndEnterPayeeDetails(){
+        navigateToPaymentpage();
+        boolean one = payeeName.isDisplayed();
+        boolean two = payeeSortCode.isDisplayed();
+        boolean three = payeeAccNumber.isDisplayed();
+        boolean four = continueButton.isDisplayed();
+
+        return one && two && three && four;
+    }
+    public boolean payeeDetailsNameField() {
+        navigateToPaymentpage();
+        writeNumber(payeeSortCode, 123456);
+        writeNumber(payeeAccNumber, 12345678);
+        boolean one = !continueButton.isEnabled();
+        writeText(payeeName, "John doe 123456789");
+        boolean two = continueButton.isEnabled();
+        clearText(payeeName);
+        writeText(payeeName, "John does 123456789");
+        boolean three = payeeName.getText().equals("John does 12345678");
+
+        return one && two && three;
+    }
+    public boolean paymentAmountValidator() {
+
+        boolean one;
+        boolean two =false ;
+        boolean three;
+        int count =0;
+        String [] correctValues = {"0.01","5000"};
+        String [] incorrectValues = {"5000.01","5500","5.234"};
+
+        navigateToPaymentpage();
+        passThroughPayeeDetails();
+        writeText(reference,"Mike Check One Two, One Two");
+        for (String val : correctValues){
+            writeText(payAmount,val);
+            if (continueButton.isEnabled()) count++;
+            clearText(payAmount);
+        }
+        if (count == 2){
+            one = true;
+            count= 0;
+        }
+        else {
+            one = false;
+            count= 0;
+        }
+        for (String val : incorrectValues){
+            writeText(payAmount,val);
+            if (!payAmount.getText().equals(val) || !continueButton.isEnabled()) count++;
+            clearText(payAmount);
+        }
+        if (count == 3){
+            two = true;
+        }
+        writeText(payAmount,"3500.1");
+        boolean four = payAmount.getText().equals("3500.1");
+        click(reference);
+        three = payAmount.getText().equals("3,500.10");
+        return one && two && three && four;
+    }
+    public boolean isGpbDisplayedInactive (){
+        navigateToPaymentpage();
+        passThroughPayeeDetails();
+        boolean one;
+        try {
+            one = !poundSign.isDisplayed();
+        }
+        catch (NoSuchElementException e) {
+            one = true;
+        }
+        return one;
+    }
+    public boolean referenceFieldValidator(){
+        navigateToPaymentpage();
+        passThroughPayeeDetails();
+        writeNumber(payAmount,1222);
+        writeText(reference,"Abc345 / ., -/..ps");
+        boolean one = continueButton.isEnabled();
+        clearText(reference);
+        boolean two = !continueButton.isEnabled();
+        writeText(reference,"This is kinda longer");
+        boolean three = !reference.getText().equals("This is kinda longer");
+        clearText(reference);
+        writeText(reference," ");
+        boolean four = !continueButton.isEnabled();
+
+        return one && two && three && four;
+    }
 
 
 
