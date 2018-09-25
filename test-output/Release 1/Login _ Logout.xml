@@ -91,13 +91,13 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
 ]]>
     </failure>
   </testcase> <!-- @BeforeMethod setUp -->
-  <testcase classname="Onboarding_tests.loginTests" name="@BeforeMethod beforeMethod" time="0.0">
+  <testcase classname="Login.loginTests" name="@BeforeMethod beforeMethod" time="0.0">
     <skipped/>
   </testcase> <!-- @BeforeMethod beforeMethod -->
   <testcase classname="testUtils.Base_test" name="@AfterMethod takeScreenShot" time="0.0">
     <skipped/>
   </testcase> <!-- @AfterMethod takeScreenShot -->
-  <testcase classname="Onboarding_tests.loginTests" name="CUICE5474" time="0.0">
+  <testcase classname="Login.loginTests" name="CUICE5474" time="0.0">
     <skipped/>
   </testcase> <!-- CUICE5474 -->
 </testsuite> <!-- Login / Logout -->

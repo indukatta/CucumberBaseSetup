@@ -6365,8 +6365,8 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
       </class> <!-- Onboarding_tests.endToEndTests -->
     </test> <!-- Manual Onboarding - End-to-end -->
     <test started-at="2018-09-25T07:39:22Z" name="Login / Logout" finished-at="2018-09-25T07:39:22Z" duration-ms="27">
-      <class name="Onboarding_tests.loginTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Onboarding_tests.loginTests@51f116b8]" started-at="2018-09-25T07:39:22Z" name="setUp" finished-at="2018-09-25T07:39:22Z" duration-ms="24" status="FAIL">
+      <class name="Login.loginTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Login.loginTests@51f116b8]" started-at="2018-09-25T07:39:22Z" name="setUp" finished-at="2018-09-25T07:39:22Z" duration-ms="24" status="FAIL">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[Connection refused (Connection refused)
@@ -6463,7 +6463,7 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="CUICE5474()[pri:1, instance:Onboarding_tests.loginTests@51f116b8]" started-at="2018-09-25T07:39:22Z" name="CUICE5474" description="Login with username &amp; password then logout" finished-at="2018-09-25T07:39:22Z" duration-ms="0" status="SKIP">
+        <test-method signature="CUICE5474()[pri:1, instance:Login.loginTests@51f116b8]" started-at="2018-09-25T07:39:22Z" name="CUICE5474" description="Login with username &amp; password then logout" finished-at="2018-09-25T07:39:22Z" duration-ms="0" status="SKIP">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[Connection refused (Connection refused)
@@ -6560,15 +6560,15 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CUICE5474 -->
-        <test-method is-config="true" signature="takeScreenShot()[pri:0, instance:Onboarding_tests.loginTests@51f116b8]" started-at="2018-09-25T07:39:22Z" name="takeScreenShot" finished-at="2018-09-25T07:39:22Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="takeScreenShot()[pri:0, instance:Login.loginTests@51f116b8]" started-at="2018-09-25T07:39:22Z" name="takeScreenShot" finished-at="2018-09-25T07:39:22Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Onboarding_tests.loginTests@51f116b8]" started-at="2018-09-25T07:39:22Z" name="beforeMethod" finished-at="2018-09-25T07:39:22Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login.loginTests@51f116b8]" started-at="2018-09-25T07:39:22Z" name="beforeMethod" finished-at="2018-09-25T07:39:22Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-      </class> <!-- Onboarding_tests.loginTests -->
+      </class> <!-- Login.loginTests -->
     </test> <!-- Login / Logout -->
   </suite> <!-- Release 1 -->
   <suite started-at="2018-09-25T07:39:23Z" name="Customer Service Model" finished-at="2018-09-25T07:39:23Z" duration-ms="79">

@@ -122,14 +122,14 @@
   </test> <!-- Manual Onboarding - End-to-end(failed) -->
   <test thread-count="5" name="Login / Logout(failed)">
     <classes>
-      <class name="Onboarding_tests.loginTests">
+      <class name="Login.loginTests">
         <methods>
           <include name="takeScreenShot"/>
           <include name="setUp"/>
           <include name="beforeMethod"/>
           <include name="CUICE5474"/>
         </methods>
-      </class> <!-- Onboarding_tests.loginTests -->
+      </class> <!-- Login.loginTests -->
     </classes>
   </test> <!-- Login / Logout(failed) -->
 </suite> <!-- Failed suite [Release 1] -->
