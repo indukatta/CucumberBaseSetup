@@ -93,6 +93,9 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy(accessibility = "Delete")
     private MobileElement numPadDel;
 
+    @iOSFindBy(accessibility = ".")
+    private MobileElement  decimalDot;
+
     // Summary page elements
 
     @iOSFindBy(accessibility = "payment_confirmation.sort_code_label_value")
@@ -164,7 +167,6 @@ public class AvailableBalance extends GuiCommands {
 
     //Test Methods
     public boolean isAvailBalanceEqual (){
-
         login.navigateToLogin();
         String check1 = hsAvailableBalance.getText().replaceAll("[^0-9]","");
         clickPaymentTab();
@@ -177,7 +179,6 @@ public class AvailableBalance extends GuiCommands {
         else { return false;}
     }
     public boolean cancelButtonVerification(){
-
         navigateToPaymentpage();
         passThroughPayeeDetails();
         click(cancelButton);
@@ -194,7 +195,6 @@ public class AvailableBalance extends GuiCommands {
         return one && two && three && four;
     }
     public boolean goBackFromSummaryPage (){
-
         navigateToPaymentpage();
         passThroughPayeeDetails();
         passThroughRefPage();
@@ -206,7 +206,6 @@ public class AvailableBalance extends GuiCommands {
         return one && two && three;
     }
     public boolean goBackFromPayeeDetails(){
-
         navigateToPaymentpage();
         populatePayeeDetails();
         click(payDeteailsBB);
@@ -218,7 +217,6 @@ public class AvailableBalance extends GuiCommands {
         return one && two;
     }
     public boolean goBackFromPaymentsDetailsPage(){
-
         navigateToPaymentpage();
         passThroughPayeeDetails();
         click(paymentDetailsBB);
@@ -230,7 +228,6 @@ public class AvailableBalance extends GuiCommands {
         return one && two;
     }
     public boolean isPaymentInfoKept(){
-
         navigateToPaymentpage();
         passThroughPayeeDetails();
         populateRefPage();
@@ -242,7 +239,6 @@ public class AvailableBalance extends GuiCommands {
         return one && two;
     }
     public boolean isAllSummaryDisplayed(){
-
         navigateToPaymentpage();
         passThroughPayeeDetails();
         passThroughRefPage();
@@ -257,7 +253,6 @@ public class AvailableBalance extends GuiCommands {
         return one && two && three && four && five && six && seven;
     }
     public boolean sortCodeValidator(){
-
         navigateToPaymentpage();
         writeNumber(payeeSortCode,1);
         boolean one = numPadDel.isDisplayed();
@@ -267,7 +262,6 @@ public class AvailableBalance extends GuiCommands {
 
         return one && two;
     }
-
     public boolean accountNumberValidator(){
         navigateToPaymentpage();
         writeText(payeeName,"Robo Cop");
@@ -281,7 +275,6 @@ public class AvailableBalance extends GuiCommands {
             }
             else {
                 writeNumber(payeeAccNumber,i);
-
             }
         }
         return one;
@@ -344,7 +337,6 @@ public class AvailableBalance extends GuiCommands {
         return one && two && three;
     }
     public boolean paymentAmountValidator() {
-
         boolean one;
         boolean two =false ;
         boolean three;
@@ -354,7 +346,9 @@ public class AvailableBalance extends GuiCommands {
 
         navigateToPaymentpage();
         passThroughPayeeDetails();
-        writeText(reference,"Mike Check One Two, One Two");
+        click(payAmount);
+        boolean five = decimalDot.isDisplayed();
+        writeText(reference,"Mike check one two");
         for (String val : correctValues){
             writeText(payAmount,val);
             if (continueButton.isEnabled()) count++;
@@ -380,11 +374,12 @@ public class AvailableBalance extends GuiCommands {
         boolean four = payAmount.getText().equals("3500.1");
         click(reference);
         three = payAmount.getText().equals("3,500.10");
-        return one && two && three && four;
+        return one && two && three && four && five;
     }
     public boolean isGpbDisplayedInactive (){
         navigateToPaymentpage();
         passThroughPayeeDetails();
+        click(reference);
         boolean one;
         try {
             one = !poundSign.isDisplayed();
@@ -407,8 +402,10 @@ public class AvailableBalance extends GuiCommands {
         clearText(reference);
         writeText(reference," ");
         boolean four = !continueButton.isEnabled();
+        writeText(reference," Hiya!");
+        boolean five = !continueButton.isEnabled();
 
-        return one && two && three && four;
+        return one && two && three && four && five;
     }
 
 

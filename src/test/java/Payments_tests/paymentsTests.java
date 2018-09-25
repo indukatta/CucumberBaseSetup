@@ -68,21 +68,21 @@ public class paymentsTests extends Base_test {
         public void CUICE5546 () { Assert.assertTrue(availableBalance.startPaymentJourneyAndEnterPayeeDetails()); }
 
         // CUICE-642
-    
+
         @Test(priority = 13 , description = "Ensures only valid amounts can be accepted" )
-        public void ac1 () { Assert.assertTrue(availableBalance.paymentAmountValidator()); }
+        public void CUICE5552 () { Assert.assertTrue(availableBalance.paymentAmountValidator()); }
 
         @Test(priority = 14 , description = "Ensures correct currency is displayed" )
-        public void ac2 () { Assert.assertTrue(availableBalance.isCurrencyDisplayed()); }
+        public void CUICE5554 () { Assert.assertTrue(availableBalance.isCurrencyDisplayed()); }
 
         @Test(priority = 15 , description = "Ensures continue button on payment page works correctly" )
-        public void ac4 () { Assert.assertTrue(availableBalance.isContinuebtnEnabled()); }
+        public void CUICE5556 () { Assert.assertTrue(availableBalance.isContinuebtnEnabled()); }
 
-        @Test(priority = 16 , description = "Checks that pound sign is not displayed whilst amount field is inactive" )
+        @Test(priority = 16 , description = "Checks that pound sign is not displayed whilst amount field is inactive and empty" )
         public void ac7 () { Assert.assertTrue(availableBalance.isGpbDisplayedInactive()); }
 
-        @Test(priority = 17 , description = "Ensures only valid entries are allowed" )
-        public void ac3 () { Assert.assertTrue(availableBalance.referenceFieldValidator()); }
+        @Test(priority = 17 , description = "Ensures only valid entries in reference field are allowed" )
+        public void CUICE5555 () { Assert.assertTrue(availableBalance.referenceFieldValidator()); }
 
 
 
