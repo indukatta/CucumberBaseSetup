@@ -3,10 +3,13 @@ package pageObjects.Transactions;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.iOSFindBy;
+import pageObjects.Login.Login;
 import utils.GuiCommands;
 
 public class Transactions extends GuiCommands {
-    public Transactions(IOSDriver driver) {
+    Login login = new Login(driver);
+    public Transactions(IOSDriver driver)
+    {
         super(driver);
     }
 
