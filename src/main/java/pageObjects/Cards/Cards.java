@@ -24,10 +24,7 @@ public class Cards extends GuiCommands {
     @iOSFindBy(accessibility = "cards.button.continue")
     private MobileElement reportCardContinueButton;
 
-
-
 // Custom Methods
-
    public boolean cardReportLost() {
        login.passThroughLogin();
        click(MoreButton);

@@ -1,4 +1,4 @@
-package Onboarding_tests;
+package Login;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -16,9 +16,12 @@ public class loginTests extends Base_test {
     }
 
     @Test(priority = 1, description = "Login with username & password then logout")
+
+
     public void CUICE5474() {
         Assert.assertTrue(login.passThroughLogin());
     }
+
 
     @Test(priority = 2, description = "Login with incorrect username")
     public void CUICE5476() {

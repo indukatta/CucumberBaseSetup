@@ -3,22 +3,22 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - Personal Details Tests</title>
+  <title>Test Results Report - Manual Onboarding - Business form</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>Personal Details Tests</h1>
+<h1>Manual Onboarding - Business form</h1>
 <p>
-  Test duration: 0.011s
+  Test duration: 0.010s
 </p>
 
   <table class="resultsTable configTable">
     <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
               <tr class="group">
-        <td colspan="3">Onboarding_tests.personalDetailsTests</td>
+        <td colspan="3">Onboarding_tests.businessFormTests</td>
       </tr>
             
 <tr>
@@ -26,7 +26,7 @@
                   setUp
       </td>
   <td class="duration">
-    0.011s
+    0.010s
   </td>
   <td class="result">
         
@@ -35,11 +35,11 @@
 
         <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.WebDriverException: Connection refused (Connection refused)<br/>
 Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;<br/>
-System info: host: &apos;UK-C02WF0X2HV2R&apos;, ip: &apos;2a02:c7f:1065:f900:e4cb:bd7a:6941:7cc1%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_162&apos;<br/>
+System info: host: &apos;uk-c02t94a9hf1r&apos;, ip: &apos;fe80:0:0:0:486:9abe:47a4:5e12%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;10.0.2&apos;<br/>
 Driver info: driver.version: IOSDriver</b></a><br />
     <div class="stackTrace" id="exception-0">
               io.appium.java_client.remote.AppiumCommandExecutor.lambda$2(AppiumCommandExecutor.java:230)<br />
-              java.util.Optional.orElseGet(Optional.java:267)<br />
+              java.base/java.util.Optional.orElseGet(Optional.java:358)<br />
               io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:229)<br />
               org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)<br />
               io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)<br />
@@ -52,10 +52,10 @@ Driver info: driver.version: IOSDriver</b></a><br />
               io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:94)<br />
               io.appium.java_client.ios.IOSDriver.&lt;init&gt;(IOSDriver.java:90)<br />
               testUtils.Base_test.setUp(Base_test.java:40)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:564)<br />
               org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)<br />
               org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)<br />
               org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)<br />
@@ -74,6 +74,7 @@ Driver info: driver.version: IOSDriver</b></a><br />
               org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
               org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)<br />
               org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)<br />
               org.testng.TestNG.runSuitesLocally(TestNG.java:1137)<br />
               org.testng.TestNG.runSuites(TestNG.java:1049)<br />
               org.testng.TestNG.run(TestNG.java:1017)<br />
@@ -81,12 +82,12 @@ Driver info: driver.version: IOSDriver</b></a><br />
               org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)<br />
                     <b>Caused by: </b> <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse">java.net.ConnectException: Connection refused (Connection refused)</a><br />
         <div class="stackTrace" id="exception-1">
-                      java.net.PlainSocketImpl.socketConnect(Native Method)<br />
-                      java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)<br />
-                      java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)<br />
-                      java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)<br />
-                      java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)<br />
-                      java.net.Socket.connect(Socket.java:589)<br />
+                      java.base/java.net.PlainSocketImpl.socketConnect(Native Method)<br />
+                      java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:400)<br />
+                      java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:243)<br />
+                      java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:225)<br />
+                      java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:402)<br />
+                      java.base/java.net.Socket.connect(Socket.java:591)<br />
                       okhttp3.internal.platform.Platform.connectSocket(Platform.java:125)<br />
                       okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:238)<br />
                       okhttp3.internal.connection.RealConnection.connect(RealConnection.java:158)<br />
@@ -108,10 +109,10 @@ Driver info: driver.version: IOSDriver</b></a><br />
                       okhttp3.RealCall.execute(RealCall.java:77)<br />
                       org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:105)<br />
                       org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:101)<br />
-                      sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-                      sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
-                      sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-                      java.lang.reflect.Method.invoke(Method.java:498)<br />
+                      java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+                      java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+                      java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+                      java.base/java.lang.reflect.Method.invoke(Method.java:564)<br />
                       io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:172)<br />
                       io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:196)<br />
                       io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:218)<br />
@@ -126,10 +127,10 @@ Driver info: driver.version: IOSDriver</b></a><br />
                       io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:94)<br />
                       io.appium.java_client.ios.IOSDriver.&lt;init&gt;(IOSDriver.java:90)<br />
                       testUtils.Base_test.setUp(Base_test.java:40)<br />
-                      sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-                      sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
-                      sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-                      java.lang.reflect.Method.invoke(Method.java:498)<br />
+                      java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+                      java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+                      java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+                      java.base/java.lang.reflect.Method.invoke(Method.java:564)<br />
                       org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)<br />
                       org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)<br />
                       org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)<br />
@@ -148,6 +149,7 @@ Driver info: driver.version: IOSDriver</b></a><br />
                       org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
                       org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)<br />
                       org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)<br />
+                      org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)<br />
                       org.testng.TestNG.runSuitesLocally(TestNG.java:1137)<br />
                       org.testng.TestNG.runSuites(TestNG.java:1049)<br />
                       org.testng.TestNG.run(TestNG.java:1017)<br />
@@ -161,7 +163,7 @@ Driver info: driver.version: IOSDriver</b></a><br />
           <tr><td colspan="3">&nbsp;</td></tr>
       <tr><td colspan="3" class="header skippedConfig">Skipped Configuration</td></tr>
                     <tr>
-          <td colspan="3" class="group">Onboarding_tests.personalDetailsTests</td>
+          <td colspan="3" class="group">Onboarding_tests.businessFormTests</td>
         </tr>
                 
 <tr>
@@ -208,6 +210,160 @@ Driver info: driver.version: IOSDriver</b></a><br />
 </tr>
 <tr>
   <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeMethod
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
                   setUp
       </td>
   <td class="duration">
@@ -223,6 +379,314 @@ Driver info: driver.version: IOSDriver</b></a><br />
 <tr>
   <td class="method">
                   setUp
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  setUp
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  setUp
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  setUp
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  setUp
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  setUp
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  setUp
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  setUp
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  setUp
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  setUp
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  setUp
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  setUp
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  takeScreenShot
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  takeScreenShot
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  takeScreenShot
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  takeScreenShot
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  takeScreenShot
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  takeScreenShot
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  takeScreenShot
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  takeScreenShot
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  takeScreenShot
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  takeScreenShot
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  takeScreenShot
       </td>
   <td class="duration">
     0.000s
@@ -283,12 +747,12 @@ Driver info: driver.version: IOSDriver</b></a><br />
   <table class="resultsTable" width="100%">
     <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">Onboarding_tests.personalDetailsTests</td>
+        <td colspan="3" class="group">Onboarding_tests.businessFormTests</td>
       </tr>
             
 <tr>
   <td class="method">
-                  <span class="description" title="Non-Editing of Pre-populated Information">CUICE4141</span>
+                  <span class="description" title="Display of UTR Question">CUICE4351</span>
       </td>
   <td class="duration">
     0.000s
@@ -302,7 +766,7 @@ Driver info: driver.version: IOSDriver</b></a><br />
 </tr>
 <tr>
   <td class="method">
-                  <span class="description" title="Information Prepopulated and Displayed to User">CUICE4142</span>
+                  <span class="description" title="Numeric Keyboard Entry">CUICE4352</span>
       </td>
   <td class="duration">
     0.000s
@@ -316,7 +780,161 @@ Driver info: driver.version: IOSDriver</b></a><br />
 </tr>
 <tr>
   <td class="method">
-                  <span class="description" title="Navigate Back To Compant Search Screen">CUICE4144</span>
+                  <span class="description" title="Unique Tax Reference Validation">CUICE4353ANDCUICE4354</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="Display of Jurisdiction of tax residency field">CUICE4541</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="AlphaNumeric Keyboard Entry">CUICE4542</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="Jurisdiction of Tax Residency Lookup Function">CUICE4543</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="Invalid Jurisdiction of Tax Residency Lookup">CUICE4544</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="Display of Trading Address/Business Address Checkboxes">CUICE4581</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="Trading Address Same as business address">CUICE4583</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="Trading Address Different as business address">CUICE4584</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="Trading Address Different as business address, no address found">CUICE4585</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="Display Additional Details">CUICE5158</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="Additional Details Keyboard">CUICE5159</span>
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description" title="Additional Details Validation">CUICE5160</span>
       </td>
   <td class="duration">
     0.000s

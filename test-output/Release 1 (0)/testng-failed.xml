@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Release 1 (0)]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test thread-count="5" name="Faster Payments Without Contacts | Quick Pay(failed)">
+    <classes>
+      <class name="Payments_tests.paymentsTests">
+        <methods>
+          <include name="takeScreenShot"/>
+          <include name="beforeMethod"/>
+          <include name="CUICE779"/>
+          <include name="setUp"/>
+          <include name="CUICE5890"/>
+          <include name="CUICE589"/>
+          <include name="CUICE5893"/>
+        </methods>
+      </class> <!-- Payments_tests.paymentsTests -->
+    </classes>
+  </test> <!-- Faster Payments Without Contacts | Quick Pay(failed) -->
+</suite> <!-- Failed suite [Release 1 (0)] -->

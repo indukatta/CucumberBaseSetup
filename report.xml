@@ -1,35 +1,35 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Onboarding">
+<suite name="Release 1">
 <listeners>
 <listener class-name="org.uncommons.reportng.HTMLReporter"/>
 <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
 </listeners>
-<test name="Set up" verbose="2">
+<test name="Manual Onboarding - Set up" verbose="2">
     <classes>
         <class name= "Onboarding_tests.SetUpTests"/>
     </classes>
 </test>
-    <test name="Business search" verbose="2">
+    <test name="Manual Onboarding - Business search" verbose="2">
         <classes>
             <class name= "Onboarding_tests.businessSearchTests"/>
         </classes>
     </test>
-    <test name="Personal details" verbose="2">
+    <test name="Manual Onboarding - Personal details" verbose="2">
         <classes>
             <class name= "Onboarding_tests.personalDetailsTests"/>
         </classes>
     </test>
-    <test name="Business form" verbose="2">
+    <test name="Manual Onboarding - Business form" verbose="2">
         <classes>
             <class name= "Onboarding_tests.businessFormTests"/>
         </classes>
     </test>
-    <test name="Ongoing source of wealth" verbose="2">
+    <test name="Manual Onboarding - Ongoing source of wealth" verbose="2">
         <classes>
             <class name= "Onboarding_tests.OngoingSourceOfWealthTests"/>
         </classes>
     </test>
-    <test name="End-to-end" verbose="2">
+    <test name="Manual Onboarding - End-to-end" verbose="2">
         <classes>
             <class name= "Onboarding_tests.endToEndTests"/>
         </classes>
@@ -47,4 +47,16 @@
         <!--<class name= "Onboarding_tests.endToEndTests"/>-->
     <!--</classes>-->
 <!--</test>-->
+<test name="Faster Payments Without Contacts | Quick Pay" verbose="2">
+    <classes>
+        <class name= "Payments_tests.paymentTests"/>
+    </classes>
+</test>
 </suite>
+<!--<suite name="Login">-->
+<!--<test name="Faster Payments Without Contacts | Quick Pay" verbose="2">-->
+    <!--<classes>-->
+        <!--<class name= "Payments_tests.paymentTests"/>-->
+    <!--</classes>-->
+<!--</test>-->
+<!--</suite>-->

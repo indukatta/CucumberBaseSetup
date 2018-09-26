@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Release 1]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test thread-count="5" name="Manual Onboarding - Set up(failed)">
+    <classes>
+      <class name="Onboarding_tests.SetUpTests">
+        <methods>
+          <include name="CUICE4345"/>
+          <include name="CUICE4344"/>
+          <include name="takeScreenShot"/>
+          <include name="CUICE4105"/>
+          <include name="CUICE4446"/>
+          <include name="CUICE4448"/>
+          <include name="CUICE4447"/>
+          <include name="setUp"/>
+          <include name="beforeMethod"/>
+          <include name="CUICE4343"/>
+          <include name="CUICE4816"/>
+          <include name="CUICE4815"/>
+          <include name="CUICE4346"/>
+          <include name="CUICE4445"/>
+        </methods>
+      </class> <!-- Onboarding_tests.SetUpTests -->
+    </classes>
+  </test> <!-- Manual Onboarding - Set up(failed) -->
+  <test thread-count="5" name="Manual Onboarding - Business search(failed)">
+    <classes>
+      <class name="Onboarding_tests.businessSearchTests">
+        <methods>
+          <include name="CUICE3982"/>
+          <include name="CUICE3981"/>
+          <include name="takeScreenShot"/>
+          <include name="CUICE3998"/>
+          <include name="CUICE3996"/>
+          <include name="setUp"/>
+          <include name="CUICE3995"/>
+          <include name="beforeMethod"/>
+          <include name="CUICE4000"/>
+          <include name="CUICE3980"/>
+          <include name="CUICE3979"/>
+          <include name="CUICE3978"/>
+          <include name="CUICE5182"/>
+        </methods>
+      </class> <!-- Onboarding_tests.businessSearchTests -->
+    </classes>
+  </test> <!-- Manual Onboarding - Business search(failed) -->
+  <test thread-count="5" name="Manual Onboarding - Personal details(failed)">
+    <classes>
+      <class name="Onboarding_tests.personalDetailsTests">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="takeScreenShot"/>
+          <include name="setUp"/>
+          <include name="CUICE4141"/>
+          <include name="CUICE6058"/>
+          <include name="CUICE4142"/>
+          <include name="CUICE6057"/>
+          <include name="CUICE6056"/>
+          <include name="CUICE4144"/>
+          <include name="CUICE6051"/>
+        </methods>
+      </class> <!-- Onboarding_tests.personalDetailsTests -->
+    </classes>
+  </test> <!-- Manual Onboarding - Personal details(failed) -->
+  <test thread-count="5" name="Manual Onboarding - Business form(failed)">
+    <classes>
+      <class name="Onboarding_tests.businessFormTests">
+        <methods>
+          <include name="takeScreenShot"/>
+          <include name="setUp"/>
+          <include name="CUICE5160"/>
+          <include name="CUICE4581"/>
+          <include name="CUICE4541"/>
+          <include name="CUICE4585"/>
+          <include name="CUICE4351"/>
+          <include name="CUICE4352"/>
+          <include name="CUICE4583"/>
+          <include name="CUICE4584"/>
+          <include name="CUICE4542"/>
+          <include name="CUICE5158"/>
+          <include name="CUICE4543"/>
+          <include name="CUICE5159"/>
+          <include name="CUICE4544"/>
+          <include name="CUICE4353ANDCUICE4354"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- Onboarding_tests.businessFormTests -->
+    </classes>
+  </test> <!-- Manual Onboarding - Business form(failed) -->
+  <test thread-count="5" name="Manual Onboarding - Ongoing source of wealth(failed)">
+    <classes>
+      <class name="Onboarding_tests.OngoingSourceOfWealthTests">
+        <methods>
+          <include name="CUICE5114"/>
+          <include name="CUICE5113"/>
+          <include name="CUICE5116"/>
+          <include name="takeScreenShot"/>
+          <include name="CUICE5115"/>
+          <include name="beforeMethod"/>
+          <include name="setUp"/>
+          <include name="CUICE5903"/>
+          <include name="CUICE5902"/>
+        </methods>
+      </class> <!-- Onboarding_tests.OngoingSourceOfWealthTests -->
+    </classes>
+  </test> <!-- Manual Onboarding - Ongoing source of wealth(failed) -->
+  <test thread-count="5" name="Manual Onboarding - End-to-end(failed)">
+    <classes>
+      <class name="Onboarding_tests.endToEndTests">
+        <methods>
+          <include name="before"/>
+          <include name="takeScreenShot"/>
+          <include name="setUp"/>
+          <include name="onboardingEndToEnd"/>
+        </methods>
+      </class> <!-- Onboarding_tests.endToEndTests -->
+    </classes>
+  </test> <!-- Manual Onboarding - End-to-end(failed) -->
+  <test thread-count="5" name="Login / Logout(failed)">
+    <classes>
+      <class name="Login.loginTests">
+        <methods>
+          <include name="takeScreenShot"/>
+          <include name="setUp"/>
+          <include name="beforeMethod"/>
+          <include name="CUICE5474"/>
+        </methods>
+      </class> <!-- Login.loginTests -->
+    </classes>
+  </test> <!-- Login / Logout(failed) -->
+</suite> <!-- Failed suite [Release 1] -->

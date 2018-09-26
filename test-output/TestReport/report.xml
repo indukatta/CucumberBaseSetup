@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="FullSuiteName" verbose="1">
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <suite-files>
+        <suite-file path="Suite1_ManualOnboarding.xml"/>
+        <suite-file path="Suite2_Payments.xml"/>
+        <suite-file path="Suite3_Cards.xml"/>
+        <suite-file path="Suite4_CSM.xml"/>
+    </suite-files>
+</suite>
