@@ -1,15 +1,11 @@
 package Transactions_tests;
 
-import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 import pageObjects.Login.Login;
-import pageObjects.Transactions.Transactions;
 import testUtils.Base_test;
 
 public class transactionsTests extends Base_test {
-    Login login = new Login(driver);
-    private Transactions Transactions;
+    Login Login = new Login(driver);
+    /*
 
     @BeforeMethod
     public void beforeMethod() throws Exception {
@@ -91,4 +87,7 @@ public class transactionsTests extends Base_test {
     public void CUICE4806() {
         Assert.assertTrue(Transactions.logoutTest());
     }
+}
+     */
+
 }
