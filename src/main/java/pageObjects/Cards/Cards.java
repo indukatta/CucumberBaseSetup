@@ -2,13 +2,16 @@ package pageObjects.Cards;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSFindBy;
+import org.openqa.selenium.support.PageFactory;
 import pageObjects.Login.Login;
 import utils.GuiCommands;
 
 public class Cards extends GuiCommands {
     public Cards(IOSDriver driver) {
         super(driver);
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
         Login login = new Login(driver);
 
