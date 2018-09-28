@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pageObjects.Cards.Cards;
 import testUtils.Base_test;
 
-public class reportCardLostOrStolen extends Base_test {
+public class cardsTests extends Base_test {
 
     private Cards Cards;
 
