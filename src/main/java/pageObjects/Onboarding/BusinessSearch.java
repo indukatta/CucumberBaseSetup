@@ -214,6 +214,11 @@ public class BusinessSearch extends GuiCommands {
         writeBusinessTitle("05717355");
         clickGenericIostableCell();
     }
+    public void passThroughBusinessUnderThreeYearsSearch(){
+        clickNextButton();
+        writeBusinessTitle("tyn ltd");
+        clickGenericIostableCell();
+    }
 
     public void populateBusinessSearch(String business){
         clickNextButton();

@@ -9,6 +9,7 @@ import utils.GuiCommands;
 
 public class AvailableBalance extends GuiCommands {
 
+
     Login login = new Login(driver);
 
     public AvailableBalance(IOSDriver driver) {

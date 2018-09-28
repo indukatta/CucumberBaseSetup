@@ -22,5 +22,8 @@ config.properties
 =======
 config.properties
 *.class
+<<<<<<< HEAD
 .idea/misc.xml
 >>>>>>> 1997f10c3df92ffc3fe2482b60eb2f03b3804435
+=======
+>>>>>>> e90f89e5ceaefaaaec5c0b633307d0906a9f6fa7

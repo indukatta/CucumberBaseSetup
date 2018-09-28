@@ -79,7 +79,7 @@ public class paymentsTests extends Base_test {
         public void CUICE5556 () { Assert.assertTrue(availableBalance.isContinuebtnEnabled()); }
 
         @Test(priority = 16 , description = "Checks that pound sign is not displayed whilst amount field is inactive and empty" )
-        public void ac7 () { Assert.assertTrue(availableBalance.isGpbDisplayedInactive()); }
+        public void CUICE6373 () { Assert.assertTrue(availableBalance.isGpbDisplayedInactive()); }
 
         @Test(priority = 17 , description = "Ensures only valid entries in reference field are allowed" )
         public void CUICE5555 () { Assert.assertTrue(availableBalance.referenceFieldValidator()); }
