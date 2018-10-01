@@ -42,20 +42,20 @@ public class Base_test {
 
     @AfterMethod()
     public void takeScreenShot(){
-        folder = "screenshots";
-        File file = driver.getScreenshotAs(OutputType.FILE);
-
-        df = new SimpleDateFormat("dd-MM-yyyy_hh_mm_ss");
-
-        new File(folder).mkdir();
-
-        String file_name = df.format(new Date())+".png";
-
-        try {
-            FileUtils.copyFile(file, new File(folder + "/" + file_name));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        folder = "screenshots";
+//        File file = driver.getScreenshotAs(OutputType.FILE);
+//
+//        df = new SimpleDateFormat("dd-MM-yyyy_hh_mm_ss");
+//
+//        new File(folder).mkdir();
+//
+//        String file_name = df.format(new Date())+".png";
+//
+//        try {
+//            FileUtils.copyFile(file, new File(folder + "/" + file_name));
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
         driver.quit();
     }
 
