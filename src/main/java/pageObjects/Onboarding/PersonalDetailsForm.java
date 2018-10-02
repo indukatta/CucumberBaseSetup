@@ -224,9 +224,10 @@ public class PersonalDetailsForm extends GuiCommands {
         writeText(personPreviousName, name);
         click(personDOB);
         click(pickerWheelDone);
-        click(personBusinessAndResidentialEqualNo);
-        writeText(addressSearch, address);
-        clickGenericIostableCell();
+//        click(personBusinessAndResidentialEqualNo);
+//        writeText(addressSearch, address);
+//        clickGenericIostableCell();
+        click(personBusinessAndResidentialEqualYes);
         click(personDualNationalNo);
         writeText(personNationalInsuranceNumber, number);
         click(personIdType);
