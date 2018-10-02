@@ -17,13 +17,10 @@ public class paymentsTests extends Base_test {
             availableBalance = new AvailableBalance(driver);
 
         }
-        //CUICE-779
         @Test(priority = 1 , description = "Ensure available balance the same one summary page and in payment page " )
         public void CUICE5614 () {
             Assert.assertTrue(availableBalance.isAvailBalanceEqual());
         }
-
-        // CUICE-658
 
         @Test(priority = 2 , description = "Ensures cancel button resets all entries and goes back to landing page" )
         public void CUICE5890 () {
@@ -36,8 +33,7 @@ public class paymentsTests extends Base_test {
         }
 
         @Test(priority = 4 , description = "Ensures back button on payee details page goes to the right place and details are removed" )
-        public void CUICE5891 () {
-            Assert.assertTrue(availableBalance.goBackFromPayeeDetails()); }
+        public void CUICE5891 () { Assert.assertTrue(availableBalance.goBackFromPayeeDetails()); }
 
         @Test(priority = 5 , description = "Ensures back button on payment details page goes the the right place" )
         public void CUICE5892 () { Assert.assertTrue(availableBalance.goBackFromPaymentsDetailsPage()); }
@@ -45,12 +41,8 @@ public class paymentsTests extends Base_test {
         @Test(priority = 6 , description = "Ensures information is retained when back button from " )
         public void CUICE5900 () { Assert.assertTrue(availableBalance.isPaymentInfoKept()); }
 
-        // CUICE-656
-
         @Test(priority = 7 , description = "Ensures all summary elements are on the page" )
         public void CUICE5920 () { Assert.assertTrue(availableBalance.isAllSummaryDisplayed()); }
-
-        // CUICE-637
 
         @Test(priority = 8 , description = "Checks name field validation" )
         public void CUICE5547 () { Assert.assertTrue(availableBalance.payeeDetailsNameField()); }
@@ -66,8 +58,6 @@ public class paymentsTests extends Base_test {
 
         @Test(priority = 12, description = "Ensures all elements on payee details page is displayed" )
         public void CUICE5546 () { Assert.assertTrue(availableBalance.startPaymentJourneyAndEnterPayeeDetails()); }
-
-        // CUICE-642
 
         @Test(priority = 13 , description = "Ensures only valid amounts can be accepted" )
         public void CUICE5552 () { Assert.assertTrue(availableBalance.paymentAmountValidator()); }
