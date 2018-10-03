@@ -13,17 +13,13 @@ public class paymentsTests extends Base_test {
 
         @BeforeMethod
         public void beforeMethod() {
-
             availableBalance = new AvailableBalance(driver);
-
         }
-        //CUICE-779
+
         @Test(priority = 1 , description = "Ensure available balance the same one summary page and in payment page " )
         public void CUICE5614 () {
             Assert.assertTrue(availableBalance.isAvailBalanceEqual());
         }
-
-        // CUICE-658
 
         @Test(priority = 2 , description = "Ensures cancel button resets all entries and goes back to landing page" )
         public void CUICE5890 () {
