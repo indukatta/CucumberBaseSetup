@@ -5,6 +5,7 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSFindBy;
 import org.openqa.selenium.support.PageFactory;
+import pageObjects.Login.Login;
 import utils.GuiCommands;
 
 public class More extends GuiCommands {
@@ -13,6 +14,8 @@ public class More extends GuiCommands {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
+
+    private Login login = new Login(driver);
 
     @iOSFindBy(accessibility = "More")
     private MobileElement moreButton;
@@ -28,4 +31,11 @@ public class More extends GuiCommands {
 
     @iOSFindBy(accessibility = "more.cell_title.credit_and_lending")
     private MobileElement creditAndLendingButton;
+
+    public void navigateToCardManagement(){
+        login.passThroughLogin();
+        click(moreButton);
+        click(cardManagmentButton);
+    }
 }
+

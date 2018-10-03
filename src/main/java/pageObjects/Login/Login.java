@@ -117,9 +117,8 @@ public class Login extends GuiCommands {
         writeText(passwordFieldBox, password);
     }
 
-    // Custom Methods
 
-        public boolean passThroughLogin() {
+        public boolean successfulLogin() {
             clickexistingCustomerButton();
             writeUsername("TESTUSER");
             clickusernameNextButton();
@@ -147,7 +146,7 @@ public class Login extends GuiCommands {
         }
 
         public boolean canUserLogout () {
-            passThroughLogin();
+            successfulLogin();
             clicklogoutButton();
             return islogoutScreenDisplayed();
         }
@@ -190,7 +189,7 @@ public class Login extends GuiCommands {
         }
 
         public boolean logoutTest () {
-            passThroughLogin();
+            successfulLogin();
             clicklogoutButton();
             return iswelcomeTitleDisplayed();
         }
@@ -202,14 +201,11 @@ public class Login extends GuiCommands {
             clickpasswordLoginButton();
         }
 
+    public void passThroughLogin() {
+        clickexistingCustomerButton();
+        writeUsername("TESTUSER");
+        clickusernameNextButton();
+        clickpasswordLoginButton();
     }
 
-    /*
-
-    public boolean logoutTest() {
-        passThroughLogin();
-        *****create wait 10mins method*****
-
-        return iswelcomeTitleDisplayed();
-
-        */
+    }

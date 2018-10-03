@@ -44,4 +44,9 @@ public class transactionsTests extends Base_test {
     public void CUICE4811(){
         Assert.assertTrue(transactionsObjects.viewTransactionDetails());
     }
+
+    @Test()
+    public void CUICE(){
+        transactionsObjects.transactionsScreenshot();
+    }
 }
