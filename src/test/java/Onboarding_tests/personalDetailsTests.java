@@ -50,4 +50,10 @@ public class personalDetailsTests extends Base_test {
         Assert.assertTrue(details.errorMessageDisplayed());
     }
 
+    @Test(priority = 8, description = "Display of dual nationality checkbox")
+    public void CUICE4397(){
+        Assert.assertTrue(details.dualNationalityValidation());
+    }
+
+
 }

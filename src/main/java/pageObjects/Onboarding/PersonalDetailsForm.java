@@ -238,4 +238,29 @@ public class PersonalDetailsForm extends GuiCommands {
         clickGenericIostableCell();
         click(nextButton);
     }
+
+    public boolean dualNationalityValidation(){
+        naviagateToPersonalDetailsForm();
+        click(personNameChangedNo);
+        click(personDOB);
+        click(pickerWheelDone);
+        click(personBusinessAndResidentialEqualYes);
+        writeText(personNationalInsuranceNumber, "JC123456Y");
+        click(personIdType);
+        click(pickerWheelDone);
+        writeText(personIdNumber, "1234567890");
+        click(personJurisdictionOfTaxResidency);
+        writeText(countrySearch, generator.setCountry());
+        clickGenericIostableCell();
+        boolean one = !nextButton.isEnabled();
+        boolean two;
+        try {
+             two = !personDualNationalNo.getAttribute("value").equals(1) && !personDualNationalNo.getAttribute("value").equals(1);
+        }catch (NullPointerException e){
+             two = true;
+        }
+        click(personDualNationalNo);
+        boolean three = nextButton.isEnabled();
+        return one && two && three;
+    }
 }
