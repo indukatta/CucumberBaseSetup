@@ -116,6 +116,15 @@ public class PersonalDetailsForm extends GuiCommands {
     @iOSFindBy(accessibility = "Incorrect details entered")
     private MobileElement errorMessage;
 
+    @iOSFindBy(accessibility = "search exit button")
+    private MobileElement addSearchExitbutton;
+
+    @iOSFindBy(xpath = "//XCUIElementTypeTextField[@name=\"country_search.search_field_title\"]")
+    private MobileElement dualCountrySearch;
+
+    @iOSFindBy(xpath = "//XCUIElementTypeTextField[@name=\"personal_details.dual_national\"]")
+    private MobileElement dualNationalityTextfield;
+
 
     public void naviagateToPersonalDetailsForm(){
         setUp.passThroughSetUp();
@@ -262,5 +271,92 @@ public class PersonalDetailsForm extends GuiCommands {
         click(personDualNationalNo);
         boolean three = nextButton.isEnabled();
         return one && two && three;
+    }
+
+    public boolean dualNationalityNo(){
+        naviagateToPersonalDetailsForm();
+        click(personNameChangedNo);
+        click(personDOB);
+        click(pickerWheelDone);
+        click(personBusinessAndResidentialEqualYes);
+        writeText(personNationalInsuranceNumber, "JC123456Y");
+        click(personIdType);
+        click(pickerWheelDone);
+        writeText(personIdNumber, "1234567890");
+        click(personJurisdictionOfTaxResidency);
+        writeText(countrySearch, generator.setCountry());
+        clickGenericIostableCell();
+        boolean one = !nextButton.isEnabled();
+        click(personDualNationalNo);
+        boolean two = nextButton.isEnabled();
+
+        return  one && two;
+    }
+    public boolean dualNationalityYes(){
+        naviagateToPersonalDetailsForm();
+        click(personNameChangedNo);
+        click(personDOB);
+        click(pickerWheelDone);
+        click(personBusinessAndResidentialEqualYes);
+        writeText(personNationalInsuranceNumber, "JC123456Y");
+        click(personIdType);
+        click(pickerWheelDone);
+        writeText(personIdNumber, "1234567890");
+        click(personJurisdictionOfTaxResidency);
+        writeText(countrySearch, generator.setCountry());
+        clickGenericIostableCell();
+        boolean one = !nextButton.isEnabled();
+        click(personDualNationalYes);
+        boolean two = addSearchExitbutton.isDisplayed();
+
+        return  one && two;
+    }
+    public boolean nationalitySearch(){
+        naviagateToPersonalDetailsForm();
+        click(personDualNationalYes);
+        writeText(dualCountrySearch,"uni");
+        clickGenericIostableCell();
+        boolean one = dualNationalityTextfield.getText().equals("Réunion");
+
+        return  one;
+    }
+    public boolean invalidNationalitySearch(){
+        naviagateToPersonalDetailsForm();
+        click(personDualNationalYes);
+        writeText(dualCountrySearch,"zyt");
+        try {
+            clickGenericIostableCell();
+        }catch (NoSuchElementException e){}
+
+        boolean one = false;
+        try{
+            dualNationalityTextfield.isDisplayed();
+        } catch (NoSuchElementException e){
+            one = true;
+        }
+        click(addSearchExitbutton);
+        boolean two = false;
+        try{
+            dualNationalityTextfield.isDisplayed();
+        } catch (NoSuchElementException e){
+            two = true;
+        }
+
+        return  one && two;
+    }
+    public boolean cancelDualNationality(){
+        naviagateToPersonalDetailsForm();
+        click(personDualNationalYes);
+        writeText(dualCountrySearch,"uni");
+        clickGenericIostableCell();
+        click(personDualNationalNo);
+        boolean one = false;
+        try{
+            dualNationalityTextfield.isDisplayed();
+        } catch (NoSuchElementException e){
+            one = true;
+        }
+
+        return one;
     }
 }

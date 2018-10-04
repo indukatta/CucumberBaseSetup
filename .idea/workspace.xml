@@ -2,9 +2,167 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d068524-d172-4dd2-882a-e468c3dce49b" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/More/CardLostOrStolen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/More/CardsManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AccountsTab.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Cards_tests/CUICE452_ReportACardLostOrStolen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Payments_tests/accountsTab_tests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/testData/ExcelFiles/E2E_Test_Data.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_05_05_47.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_05_07_30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_05_09_29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_05_10_25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_05_11_18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_05_12_42.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_05_14_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_05_15_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_05_16_26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_05_17_57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_05_25_59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_05_38_51.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_11_44_26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_11_44_57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_11_45_42.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_11_46_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_11_46_27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_11_46_56.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_11_47_28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_11_47_50.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_11_48_24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/10-09-2018_11_48_48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_06_24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_09_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_14_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_15_52.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_16_27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_17_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_17_34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_18_07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_18_41.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_19_38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_20_51.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_21_24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_22_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_23_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_23_34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_24_08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_25_40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_29_35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_30_33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_01_32_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_08_58_21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_08_58_35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_08_58_48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_08_59_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_08_59_25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_08_59_39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_00_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_00_57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_01_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_01_33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_01_57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_03_07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_06_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_09_38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_14_23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_20_32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_24_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_24_44.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_25_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_25_45.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_26_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_26_48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_27_41.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_28_49.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_29_19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_29_53.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_31_08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_31_38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_32_09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_33_37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_09_59_45.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_10_01_52.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_10_10_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_10_11_57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_10_16_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/11-09-2018_10_32_46.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_02_08_24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_05_38_41.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_05_50_32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_05_54_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_06_27_19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_09_46_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_09_49_45.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_10_01_25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_10_01_40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_10_01_54.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_10_02_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_10_02_30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_10_02_46.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_10_03_17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_10_04_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_10_04_24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_10_04_44.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_10_05_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_10_09_34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_11_10_37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_11_11_57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_11_13_19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_11_14_52.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_11_16_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_11_18_54.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_11_21_07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_11_22_37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_11_23_44.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_11_25_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_11_25_43.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_11_26_56.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_11_42_50.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_11_51_32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_12_12_32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_12_14_58.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_12_19_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_12_21_08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_12_24_15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/12-09-2018_12_27_15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/13-09-2018_05_23_09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/13-09-2018_05_24_41.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/13-09-2018_05_26_58.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/13-09-2018_11_12_17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/14-09-2018_02_16_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/14-09-2018_02_17_19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/14-09-2018_11_20_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/14-09-2018_11_24_43.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/14-09-2018_11_34_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/15-09-2018_12_02_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/15-09-2018_12_05_42.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/15-09-2018_12_09_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/15-09-2018_12_14_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/15-09-2018_12_15_18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/17-09-2018_05_46_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/Cards/Cards.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/Login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Login/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/More/CardsManagment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/More/More.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/More/More.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/PersonalDetailsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/PersonalDetailsForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/Transactions/TransactionsObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Transactions/TransactionsObjects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/ScreenshotUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ScreenshotUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Cards_tests/cardsTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Login/loginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Login/loginTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Onboarding_tests/personalDetailsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Onboarding_tests/personalDetailsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Transactions_tests/transactionsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Transactions_tests/transactionsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/Cards/Cards.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/ScreenshotUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/ScreenshotUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Payments_tests/paymentsTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Payments_tests/paymentsTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Transactions_tests/transactionsTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Transactions_tests/transactionsTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/Cards/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/Cards/testng-failed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-failed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/~$E2E_Test_Data.xlsx" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -61,7 +219,7 @@
         <counts>
           <entry key="class" value="6" />
           <entry key="gitignore" value="2" />
-          <entry key="java" value="129" />
+          <entry key="java" value="133" />
           <entry key="properties" value="10" />
           <entry key="xml" value="1" />
         </counts>
@@ -69,7 +227,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="6" />
-          <entry key="JAVA" value="129" />
+          <entry key="JAVA" value="133" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="10" />
           <entry key="XML" value="1" />
@@ -78,28 +236,29 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="34" />
-          <entry key="java" value="12324" />
+          <entry key="java" value="13774" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12324" />
+          <entry key="JAVA" value="13774" />
           <entry key="PLAIN_TEXT" value="34" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.6" value="3" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -108,97 +267,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/businessFormTests.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/PersonalDetailsForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="1513">
+              <caret line="274" selection-start-line="274" selection-end-line="274" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/PersonalDetailsForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="263" column="35" lean-forward="true" selection-start-line="263" selection-start-column="35" selection-end-line="263" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/GuiCommands.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="262" column="14" lean-forward="true" selection-start-line="262" selection-start-column="14" selection-end-line="262" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.12.0/selenium-remote-driver-3.12.0-sources.jar!/org/openqa/selenium/remote/RemoteWebElement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="148" column="17" selection-start-line="148" selection-start-column="17" selection-end-line="148" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/businessSearchTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/personalDetailsTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="143" selection-start-line="3" selection-start-column="143" selection-end-line="3" selection-end-column="143" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/BusinessSearch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1271">
-              <caret line="96" column="19" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/BusinessDetailsForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="359" column="37" lean-forward="true" selection-start-line="359" selection-start-column="37" selection-end-line="359" selection-end-column="37" />
+            <state relative-caret-position="453">
+              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
             </state>
           </provider>
         </entry>
@@ -234,9 +315,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/testData/RandomDataFactory/PersonalData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/testData/Page.java" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/Common_Validations.java" />
         <option value="$PROJECT_DIR$/src/main/java/testData/GuiCommands.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding_Personal_Details.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/OnboardingNewCustomer.java" />
@@ -281,10 +359,13 @@
         <option value="$PROJECT_DIR$/src/test/java/Onboarding_tests/endToEndTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/testData/onboardingTestData/GetE2ETestData.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/InitialWealth.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java" />
         <option value="$PROJECT_DIR$/config.properties" />
-        <option value="$PROJECT_DIR$/src/test/java/Onboarding_tests/personalDetailsTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Payments_tests/accountsTab_tests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AccountsTab.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pageObjects/Login/Login.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/PersonalDetailsForm.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Onboarding_tests/personalDetailsTests.java" />
       </list>
     </option>
   </component>
@@ -301,9 +382,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="height" value="951" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -311,7 +393,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -441,7 +522,7 @@
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="pageObjects" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Onboarding" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Login" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -478,16 +559,33 @@
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Login" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="Onboarding_tests" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Payments_tests" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538560765103" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538643087050" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -519,7 +617,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.personalDetailsTests.CUICE4397">
+  <component name="RunManager" selected="TestNG.personalDetailsTests.CUICE4406">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -533,24 +631,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Onboarding_tests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Iceberg" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Onboarding_tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Onboarding_tests" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -560,63 +640,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="businessFormTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Iceberg" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Onboarding_tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Onboarding_tests" />
-      <option name="MAIN_CLASS_NAME" value="Onboarding_tests.businessFormTests" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="paymentsTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Iceberg" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Payments_tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Payments_tests" />
-      <option name="MAIN_CLASS_NAME" value="Payments_tests.paymentsTests" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="paymentsTests.CUICE5547" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Iceberg" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Payments_tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Payments_tests" />
-      <option name="MAIN_CLASS_NAME" value="Payments_tests.paymentsTests" />
-      <option name="METHOD_NAME" value="CUICE5547" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="personalDetailsTests.CUICE4397" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="personalDetailsTests.CUICE4398" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Iceberg" />
       <extension name="coverage">
         <pattern>
@@ -626,7 +650,87 @@
       </extension>
       <option name="PACKAGE_NAME" value="Onboarding_tests" />
       <option name="MAIN_CLASS_NAME" value="Onboarding_tests.personalDetailsTests" />
-      <option name="METHOD_NAME" value="CUICE4397" />
+      <option name="METHOD_NAME" value="CUICE4398" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="personalDetailsTests.CUICE4401" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Iceberg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Onboarding_tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Onboarding_tests" />
+      <option name="MAIN_CLASS_NAME" value="Onboarding_tests.personalDetailsTests" />
+      <option name="METHOD_NAME" value="CUICE4401" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="personalDetailsTests.CUICE4404" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Iceberg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Onboarding_tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Onboarding_tests" />
+      <option name="MAIN_CLASS_NAME" value="Onboarding_tests.personalDetailsTests" />
+      <option name="METHOD_NAME" value="CUICE4404" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="personalDetailsTests.CUICE4406" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Iceberg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Onboarding_tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Onboarding_tests" />
+      <option name="MAIN_CLASS_NAME" value="Onboarding_tests.personalDetailsTests" />
+      <option name="METHOD_NAME" value="CUICE4406" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="personalDetailsTests.CUICE4407" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Iceberg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Onboarding_tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Onboarding_tests" />
+      <option name="MAIN_CLASS_NAME" value="Onboarding_tests.personalDetailsTests" />
+      <option name="METHOD_NAME" value="CUICE4407" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -637,19 +741,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.paymentsTests" />
-      <item itemvalue="TestNG.Onboarding_tests" />
-      <item itemvalue="TestNG.businessFormTests" />
-      <item itemvalue="TestNG.paymentsTests.CUICE5547" />
-      <item itemvalue="TestNG.personalDetailsTests.CUICE4397" />
+      <item itemvalue="TestNG.personalDetailsTests.CUICE4398" />
+      <item itemvalue="TestNG.personalDetailsTests.CUICE4401" />
+      <item itemvalue="TestNG.personalDetailsTests.CUICE4404" />
+      <item itemvalue="TestNG.personalDetailsTests.CUICE4406" />
+      <item itemvalue="TestNG.personalDetailsTests.CUICE4407" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.personalDetailsTests.CUICE4397" />
-        <item itemvalue="TestNG.paymentsTests.CUICE5547" />
-        <item itemvalue="TestNG.businessFormTests" />
-        <item itemvalue="TestNG.Onboarding_tests" />
-        <item itemvalue="TestNG.paymentsTests" />
+        <item itemvalue="TestNG.personalDetailsTests.CUICE4406" />
+        <item itemvalue="TestNG.personalDetailsTests.CUICE4407" />
+        <item itemvalue="TestNG.personalDetailsTests.CUICE4404" />
+        <item itemvalue="TestNG.personalDetailsTests.CUICE4401" />
+        <item itemvalue="TestNG.personalDetailsTests.CUICE4398" />
       </list>
     </recent_temporary>
   </component>
@@ -667,35 +771,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="personalDetailsTests_CUICE4397 - 2018.10.02 at 17h 05m 55s.xml">
-      <configuration name="personalDetailsTests.CUICE4397" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="personalDetailsTests_CUICE4397 - 2018.10.02 at 17h 09m 29s.xml">
-      <configuration name="personalDetailsTests.CUICE4397" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="personalDetailsTests_CUICE4397 - 2018.10.02 at 17h 10m 41s.xml">
-      <configuration name="personalDetailsTests.CUICE4397" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="personalDetailsTests_CUICE4397 - 2018.10.02 at 17h 12m 25s.xml">
-      <configuration name="personalDetailsTests.CUICE4397" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="personalDetailsTests_CUICE4397 - 2018.10.02 at 17h 14m 47s.xml">
-      <configuration name="personalDetailsTests.CUICE4397" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="personalDetailsTests_CUICE4397 - 2018.10.02 at 17h 22m 00s.xml">
-      <configuration name="personalDetailsTests.CUICE4397" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="personalDetailsTests_CUICE4397 - 2018.10.02 at 17h 24m 29s.xml">
-      <configuration name="personalDetailsTests.CUICE4397" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="personalDetailsTests_CUICE4397 - 2018.10.02 at 17h 26m 26s.xml">
-      <configuration name="personalDetailsTests.CUICE4397" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="personalDetailsTests_CUICE4397 - 2018.10.02 at 17h 28m 38s.xml">
-      <configuration name="personalDetailsTests.CUICE4397" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="personalDetailsTests_CUICE4397 - 2018.10.02 at 17h 30m 53s.xml">
       <configuration name="personalDetailsTests.CUICE4397" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="personalDetailsTests_CUICE4397 - 2018.10.03 at 18h 05m 14s.xml">
+      <configuration name="personalDetailsTests.CUICE4397" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="personalDetailsTests_CUICE4397 - 2018.10.03 at 18h 07m 21s.xml">
+      <configuration name="personalDetailsTests.CUICE4397" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="personalDetailsTests_CUICE4398 - 2018.10.03 at 18h 09m 34s.xml">
+      <configuration name="personalDetailsTests.CUICE4398" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="personalDetailsTests_CUICE4401 - 2018.10.03 at 18h 11m 27s.xml">
+      <configuration name="personalDetailsTests.CUICE4401" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="personalDetailsTests_CUICE4404 - 2018.10.03 at 18h 13m 52s.xml">
+      <configuration name="personalDetailsTests.CUICE4404" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="personalDetailsTests_CUICE4406 - 2018.10.03 at 18h 16m 02s.xml">
+      <configuration name="personalDetailsTests.CUICE4406" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="personalDetailsTests_CUICE4407 - 2018.10.03 at 18h 18m 36s.xml">
+      <configuration name="personalDetailsTests.CUICE4407" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="personalDetailsTests_CUICE4406 - 2018.10.04 at 09h 37m 00s.xml">
+      <configuration name="personalDetailsTests.CUICE4406" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="personalDetailsTests_CUICE4406 - 2018.10.04 at 09h 47m 24s.xml">
+      <configuration name="personalDetailsTests.CUICE4406" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -708,10 +812,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="951" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17887668" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18070818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -720,7 +824,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969698" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.498779" visible="true" weight="0.2132653" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.498779" visible="true" weight="0.24330617" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -748,8 +852,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/TransactionDetails.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/BusinessDetailsForm.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/BusinessSearch.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/SourceOfFunds.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/OngoingSourceOfWealth.java" />
@@ -832,13 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Login/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="197" column="20" selection-start-line="197" selection-start-column="20" selection-end-line="197" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -872,20 +967,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Cards_tests/cardsTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Cards/Cards.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Cards_tests/cardsTests.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Cards/Cards.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Transactions/TransactionsObjects.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -897,16 +980,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="45" column="59" selection-start-line="45" selection-start-column="59" selection-end-line="45" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -955,7 +1028,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/BusinessDetailsForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
-          <caret line="359" column="37" lean-forward="true" selection-start-line="359" selection-start-column="37" selection-end-line="359" selection-end-column="37" />
+          <caret line="359" column="37" selection-start-line="359" selection-start-column="37" selection-end-line="359" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -966,13 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="143" selection-start-line="3" selection-start-column="143" selection-end-line="3" selection-end-column="143" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/businessSearchTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -980,10 +1046,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/personalDetailsTests.java">
+    <entry file="file://$PROJECT_DIR$/config.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="22" lean-forward="true" selection-start-line="10" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -994,10 +1070,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Login/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="209" column="69" selection-start-line="209" selection-start-column="69" selection-end-line="209" selection-end-column="69" />
+          <folding>
+            <element signature="e#3299#3300#0" expanded="true" />
+            <element signature="e#3352#3353#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/accountsTab_tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/AccountsTab.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="-1514">
+          <caret line="28" column="40" lean-forward="true" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1006,8 +1113,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/GuiCommands.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="262" column="14" lean-forward="true" selection-start-line="262" selection-start-column="14" selection-end-line="262" selection-end-column="38" />
+        <state relative-caret-position="606">
+          <caret line="262" column="14" selection-start-line="262" selection-start-column="14" selection-end-line="262" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1016,8 +1123,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/PersonalDetailsForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="263" column="35" lean-forward="true" selection-start-line="263" selection-start-column="35" selection-end-line="263" selection-end-column="35" />
+        <state relative-caret-position="1513">
+          <caret line="274" selection-start-line="274" selection-end-line="274" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/personalDetailsTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
         </state>
       </provider>
     </entry>

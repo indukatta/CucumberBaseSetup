@@ -13,10 +13,9 @@ public class paymentsTests extends Base_test {
 
         @BeforeMethod
         public void beforeMethod() {
-
             availableBalance = new AvailableBalance(driver);
-
         }
+
         @Test(priority = 1 , description = "Ensure available balance the same one summary page and in payment page " )
         public void CUICE5614 () {
             Assert.assertTrue(availableBalance.isAvailBalanceEqual());

@@ -19,7 +19,7 @@ public class loginTests extends Base_test {
 
 
     public void CUICE5474() {
-        Assert.assertTrue(login.passThroughLogin());
+        Assert.assertTrue(login.successfulLogin());
     }
 
 

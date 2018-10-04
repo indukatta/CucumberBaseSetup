@@ -55,5 +55,27 @@ public class personalDetailsTests extends Base_test {
         Assert.assertTrue(details.dualNationalityValidation());
     }
 
+    @Test(priority = 9, description = "Dual nationality checkbox is no")
+    public void CUICE4398(){
+        Assert.assertTrue(details.dualNationalityNo());
+    }
+
+    @Test(priority = 10, description = "Dual nationality checkbox is yes")
+    public void CUICE4401(){
+        Assert.assertTrue(details.dualNationalityYes());
+    }
+
+    @Test(priority = 11, description = "Nationality lookup function")
+    public void CUICE4404(){
+        Assert.assertTrue(details.nationalitySearch());
+    }
+
+    @Test(priority = 12, description = "Invalid nationality lookup function")
+    public void CUICE4406(){ Assert.assertTrue(details.invalidNationalitySearch()); }
+
+    @Test(priority = 13, description = "Dual nationality back to no")
+    public void CUICE4407(){ Assert.assertTrue(details.cancelDualNationality()); }
+
+
 
 }

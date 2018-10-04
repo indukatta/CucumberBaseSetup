@@ -10,12 +10,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import pageObjects.Login.Login;
 import utils.GuiCommands;
+import utils.ScreenshotUtils;
 
 import java.util.ArrayList;
 
 public class TransactionsObjects extends GuiCommands {
 
-    Login login = new Login(driver);
+    private Login login = new Login(driver);
+
+    ScreenshotUtils screenshot = new ScreenshotUtils(driver);
 
     public TransactionsObjects(IOSDriver driver) {
         super(driver);
@@ -186,5 +189,10 @@ public class TransactionsObjects extends GuiCommands {
             two = true;
         }
         return one && two;
+    }
+
+    public void transactionsScreenshot(){
+        login.passThroughLogin();
+        screenshot.takeScreenshot();
     }
 }
