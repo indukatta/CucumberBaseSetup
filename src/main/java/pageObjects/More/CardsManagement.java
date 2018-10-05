@@ -36,7 +36,7 @@ public class CardsManagement extends GuiCommands {
         return cardManagementTitle.isDisplayed();
     }
 
-   public boolean cardManagmentScreenHasReportLostStolen() {
+   public boolean cardManagementScreenHasReportLostStolen() {
        more.navigateToCardManagement();
        boolean one = isTitleDisplayed();
        boolean two = reportLostAndStolenButton.isEnabled();
@@ -46,6 +46,11 @@ public class CardsManagement extends GuiCommands {
    public void navigateToCardLostOrStolen(){
        more.navigateToCardManagement();
        click(reportLostAndStolenButton);
+   }
+
+   public void navigateToActivateCard(){
+        more.navigateToCardManagement();
+        click(activateCardButton);
    }
 }
 

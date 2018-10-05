@@ -178,7 +178,6 @@ public class BusinessSearch extends GuiCommands {
     public boolean selectionOfCompanyByBusinessName(){
         //CUICE-3995 - LOOKUP MY BUSINESS - Selection of company
         navigateToBusinessSearch();
-        clickBusinessSearchBoxTitle();
         writeBusinessTitle("GLAZE LIMITED");
         clickGenericIostableCell();
 
