@@ -78,26 +78,18 @@ public class ActivateCard extends GuiCommands {
         writeText(cardNumberTextbox, generator.setRandomValue(15, "NUMERIC"));
         click(expiryDateTextbox);
         boolean one = errorMessage.isDisplayed();
-        click(cardNumberTextbox);
-        click(cardNumberTextbox);
-        click(selectAll);
-        click(cut);
+        clearText(cardNumberTextbox);
 
         writeText(cardNumberTextbox, "1111111111111111");
         click(expiryDateTextbox);
         click(cardNumberTextbox);
-        System.out.println(cardNumberTextbox.getAttribute("value"));
         click(expiryDateTextbox);
         boolean two = errorMessage.isDisplayed();
 
-        click(cardNumberTextbox);
-        click(cardNumberTextbox);
-        click(selectAll);
-        click(cut);
+        clearText(cardNumberTextbox);
         String num = generator.setRandomValue(15, "NUMERIC");
         writeText(cardNumberTextbox,  num + "01");
-        System.out.println(readAttribute(cardNumberTextbox, "value"));
-        boolean three = readAttribute(cardNumberTextbox, "value").equalsIgnoreCase(num + "0");
+        boolean three = readText(cardNumberTextbox).equalsIgnoreCase(num + "0");
 
         return one && two && three;
     }
