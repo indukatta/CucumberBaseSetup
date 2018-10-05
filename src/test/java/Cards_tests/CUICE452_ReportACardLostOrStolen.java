@@ -20,7 +20,7 @@ public class CUICE452_ReportACardLostOrStolen extends Base_test {
 
     @Test(priority = 1, description = "Card Activation menu Option")
     public void CUICE6455() {
-        Assert.assertTrue(Cards.cardManagmentScreenHasReportLostStolen());
+        Assert.assertTrue(Cards.cardManagementScreenHasReportLostStolen());
         Assert.assertTrue(cardLostOrStolen.navigateToReportLostOrStolenScreen());
     }
 
