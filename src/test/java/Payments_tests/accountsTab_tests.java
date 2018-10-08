@@ -21,4 +21,9 @@ public class accountsTab_tests extends Base_test {
         Assert.assertTrue(accountsTab.emptyStateVerification());
     }
 
+    @Test(priority = 2 , description = "Empty state - user has no transactions on their account" )
+    public void CUICE6601 () {
+        Assert.assertTrue(accountsTab.titleDisplayVerification());
+    }
+
 }

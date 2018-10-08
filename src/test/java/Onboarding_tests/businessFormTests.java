@@ -94,4 +94,17 @@ public class businessFormTests extends Base_test {
         Assert.assertTrue(business.additionalDetailsMoreThan255Characters());
         Assert.assertTrue(business.additionalDetailsValidEntry());
     }
+
+    @Test(priority = 15, description = "Find full address through postcode entry")
+    public void CUICE4395(){ Assert.assertTrue(business.findAddressPostcode()); }
+
+    @Test(priority = 16, description = "Find full address  through first line of address")
+    public void CUICE4394(){ Assert.assertTrue(business.findAddress()); }
+
+    @Test(priority = 17, description = "Invalid address lookup")
+    public void CUICE4391(){ Assert.assertTrue(business.findInvalidAddress()); }
+
+
+
+
 }

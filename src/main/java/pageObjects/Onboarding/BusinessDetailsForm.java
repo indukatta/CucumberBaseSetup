@@ -5,6 +5,7 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSFindBy;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -367,6 +368,55 @@ public class BusinessDetailsForm extends GuiCommands {
         scrollDown(uniqueTaxReferenceNumber);
         writeText(uniqueTaxReferenceNumber, utr);
         click(nextButton);
+    }
+    public boolean findAddressPostcode(){
+            navigateToBusinessDetails();
+            scrollDown(tradingAddressDifferentToBusiness);
+            click(tradingAddressDifferentToBusiness);
+            writeText(addressSearchTexbox, "BT");
+            boolean one = false;
+            try {
+                clickGenericIostableCell();
+            }catch (NoSuchElementException e){
+                one = true;
+            }
+            writeText(addressSearchTexbox, "42FS");
+            clickGenericIostableCell();
+            boolean two = readText(tradingAddressTextbox).equalsIgnoreCase("1 Carolhill Gardens\nBelfast\n" +
+                    "BT4 2FS\nUnited Kingdom");
+            return one && two;
+    }
+    public boolean findAddress(){
+        navigateToBusinessDetails();
+        scrollDown(tradingAddressDifferentToBusiness);
+        click(tradingAddressDifferentToBusiness);
+        writeText(addressSearchTexbox, "1 ");
+        boolean one = false;
+        try {
+            clickGenericIostableCell();
+        }catch (NoSuchElementException e){
+            one = true;
+        }
+        writeText(addressSearchTexbox, "Carolhill Gardens");
+        clickGenericIostableCell();
+        boolean two = readText(tradingAddressTextbox).equalsIgnoreCase("1 Carolhill Gardens\nBelfast\n" +
+                "BT4 2FS\nUnited Kingdom");
+        return one && two;
+    }
+    public boolean findInvalidAddress(){
+        navigateToBusinessDetails();
+        scrollDown(tradingAddressDifferentToBusiness);
+        click(tradingAddressDifferentToBusiness);
+        writeText(addressSearchTexbox, "!!!!!!!!!");
+        boolean one = false;
+        try {
+            clickGenericIostableCell();
+        }catch (NoSuchElementException e){
+            one = true;
+        }
+        click(countrySearchExitButton);
+        boolean two = readText(tradingAddressTextbox).equals("");
+        return one && two;
     }
 
     public void scrollToTopOfPage(){

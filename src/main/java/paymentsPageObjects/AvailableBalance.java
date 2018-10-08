@@ -37,7 +37,7 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy (accessibility = "Payments")
     private MobileElement paymentsTab;
 
-    @iOSFindBy (accessibility = "payments.make_payment_button_title")
+    @iOSFindBy (accessibility = "payments.pay_someone_new_title")
     private MobileElement newPaymentButton;
 
     @iOSFindBy (accessibility = "payee_details.name_textfield_header")
@@ -120,6 +120,9 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy(accessibility = "GBP")
     private MobileElement poundSign;
 
+    @iOSFindBy(accessibility = "You have insufficient funds")
+    private MobileElement errorMessageFunds;
+
     //Click Methods
 
     public void clickNext(){ click(nextButton);}
@@ -195,6 +198,7 @@ public class AvailableBalance extends GuiCommands {
 
         return one && two && three && four;
     }
+
     public boolean goBackFromSummaryPage (){
         navigateToPaymentpage();
         passThroughPayeeDetails();
@@ -407,6 +411,34 @@ public class AvailableBalance extends GuiCommands {
         boolean five = !continueButton.isEnabled();
 
         return one && two && three && four && five;
+    }
+    public boolean insuficientFundsError(){
+        navigateToPaymentpage();
+        passThroughPayeeDetails();
+        writeNumber(payAmount,2000000);
+        writeText(reference,"Testing");
+        boolean one = errorMessageFunds.isDisplayed();
+        boolean two = !continueButton.isEnabled();
+
+        return one && two;
+    }
+    public boolean insuficientFundsCorrection(){
+        navigateToPaymentpage();
+        passThroughPayeeDetails();
+        writeNumber(payAmount,2000);
+        writeText(reference,"Testing");
+        boolean one = errorMessageFunds.isDisplayed();
+        boolean two = !continueButton.isEnabled();
+        clearText(payAmount);
+        writeNumber(payAmount,200);
+        boolean three = continueButton.isEnabled();
+        boolean four;
+        try {
+            four = !errorMessageFunds.isDisplayed();
+        }catch (NoSuchElementException e){
+            four = true;
+        }
+        return one && two && three && four;
     }
 
 

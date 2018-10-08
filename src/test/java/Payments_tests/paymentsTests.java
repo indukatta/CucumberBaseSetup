@@ -73,6 +73,11 @@ public class paymentsTests extends Base_test {
         @Test(priority = 17 , description = "Ensures only valid entries in reference field are allowed" )
         public void CUICE5555 () { Assert.assertTrue(availableBalance.referenceFieldValidator()); }
 
+        @Test(priority = 17 , description = "Ensures only valid entries in reference field are allowed" )
+        public void CUICE6700 () { Assert.assertTrue(availableBalance.insuficientFundsError()); }
+
+        @Test(priority = 17 , description = "Ensures only valid entries in reference field are allowed" )
+        public void CUICE6701 () { Assert.assertTrue(availableBalance.insuficientFundsCorrection()); }
 
 
 

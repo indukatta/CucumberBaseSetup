@@ -44,6 +44,13 @@ public class AccountsTab extends GuiCommands {
     @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"titleLabel\"])[18]")
     private MobileElement firstTransaction;
 
+    @iOSFindBy(accessibility = "455.02 GBP")
+    private MobileElement availableBalance; //FIXME
+
+    @iOSFindBy(accessibility = "40-12-76 | 12768903") // FIXME
+    private MobileElement sortCodeAndAccountNum;
+
+
 
     //Custom Methods
 
@@ -51,12 +58,22 @@ public class AccountsTab extends GuiCommands {
 
     public boolean emptyStateVerification(){
         login.differentUserLogin("NOTRANSACTIONUSER","NOTRANSACTIONPASSWORD");
-        click(accountsTab);
+       // click(accountsTab);
         boolean one = noTrasactionTitle.isDisplayed();
-        boolean two = noTransSortCode.equals("40-12-76");
-        boolean three = noTransAccountNum.equals("44444444");
+        boolean two = noTransSortCode.getText().equals("40-12-76");
+        boolean three = noTransAccountNum.getText().equals("44444444");
 
         return one && two && three;
+    }
+
+    public boolean titleDisplayVerification(){
+        login.navigateToLogin();
+        boolean one = graphAvailableBalanceTitle.isDisplayed();
+        boolean three = availableBalance.getText().equals("455.02 GBP");
+       // boolean two = sortCodeAndAccountNum.equals("40-12-76 | 12768903"); // waiting for fix
+
+
+        return one && three;
     }
 
 
