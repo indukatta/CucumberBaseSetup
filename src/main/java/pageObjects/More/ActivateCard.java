@@ -4,11 +4,10 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSFindBy;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.PageFactory;
 import testData.RandomDataGenerator;
+import testData.cardsTestData.GetCardsTestData;
 import utils.GuiCommands;
 
 public class ActivateCard extends GuiCommands {
@@ -30,7 +29,7 @@ public class ActivateCard extends GuiCommands {
     @iOSFindBy(accessibility = "activate_card.button.primary_cta")
     private MobileElement activateCardButton;
 
-    @iOSFindBy(accessibility = "activate_card.button.secondary_cta")
+    @iOSFindBy(accessibility = "cards.button.contact_support")
     private MobileElement contactSupportButton;
 
     @iOSFindBy(accessibility = "Cancel")
@@ -42,11 +41,17 @@ public class ActivateCard extends GuiCommands {
     @iOSFindBy(accessibility = "Incorrect details entered")
     private MobileElement errorMessage;
 
-    @iOSFindBy(accessibility = "Select All")
-    private MobileElement selectAll;
+    @iOSFindBy(accessibility = "activate_card_progress_status.success.card_successfully_activated")
+    private MobileElement cardActivatedSuccessMessage;
 
-    @iOSFindBy(accessibility = "Cut")
-    private MobileElement cut;
+    @iOSFindBy(accessibility = "activate_card_progress_status.success.card_already_activated")
+    private MobileElement cardAlreadyActivated;
+
+    @iOSFindBy(accessibility = "activate_card_progress_status.error.security")
+    private MobileElement cardErrorSecurity;
+
+    @iOSFindBy(accessibility = "activate_card_progress_status.error.generic_error")
+    private MobileElement timeoutError;
 
     public boolean activateACardScreen(){
         cardsManagement.navigateToActivateCard();
@@ -165,5 +170,45 @@ public class ActivateCard extends GuiCommands {
         cardsManagement.navigateToActivateCard();
         click(cancelButton);
         return cardsManagement.isTitleDisplayed();
+    }
+
+    public boolean successfulCardActivation(){
+        cardsManagement.navigateToActivateCard();
+        writeText(cardNumberTextbox, GetCardsTestData.getSuccssfullCardNumber());
+        writeText(expiryDateTextbox, "1225");
+        click(activateCardButton);
+        return cardActivatedSuccessMessage.isDisplayed();
+    }
+
+    public boolean cardAlreadyActivated(){
+        cardsManagement.navigateToActivateCard();
+        writeText(cardNumberTextbox, GetCardsTestData.getAlreadyActivatedCardNumber());
+        writeText(expiryDateTextbox, "1225");
+        click(activateCardButton);
+        return cardAlreadyActivated.isDisplayed();
+    }
+
+    public boolean cardNotLive(){
+        cardsManagement.navigateToActivateCard();
+        writeText(cardNumberTextbox, GetCardsTestData.getCardNotLiveCardNumber());
+        writeText(expiryDateTextbox, "1225");
+        click(activateCardButton);
+        return cardErrorSecurity.isDisplayed();
+    }
+
+    public boolean incorrectCardDetails(){
+        cardsManagement.navigateToActivateCard();
+        writeText(cardNumberTextbox, GetCardsTestData.getCardIncorrectNumber());
+        writeText(expiryDateTextbox, "1225");
+        click(activateCardButton);
+        return errorMessage.isDisplayed();
+    }
+
+    public boolean cardActivationTimeout(){
+        cardsManagement.navigateToActivateCard();
+        writeText(cardNumberTextbox, GetCardsTestData.getCardTimeoutNumber());
+        writeText(expiryDateTextbox, "1225");
+        click(activateCardButton);
+        return timeoutError.isDisplayed();
     }
 }
