@@ -49,4 +49,29 @@ public class CUICE460_ActivateACard extends Base_test {
     public void CUICE6632(){
         Assert.assertTrue(card.cancelButton());
     }
+
+    @Test(priority = 8, description = "Card Activation Success")
+    public void CUICE6602(){
+        Assert.assertTrue(card.successfulCardActivation());
+    }
+
+    @Test(priority = 9, description = "Incorrect Card Details")
+    public void CUICE6604(){
+        Assert.assertTrue(card.incorrectCardDetails());
+    }
+
+    @Test(priority = 10, description = "Card Already Activated")
+    public void CUICE6605(){
+        Assert.assertTrue(card.cardAlreadyActivated());
+    }
+
+    @Test(priority = 11, description = "Non Live Card Activation Attempt")
+    public void CUICE6606(){
+        Assert.assertTrue(card.cardNotLive());
+    }
+
+    @Test(priority = 12, description = "Card Activation Fail (Timeout)")
+    public void CUICE6607(){
+        Assert.assertTrue(card.cardActivationTimeout());
+    }
 }
