@@ -201,7 +201,10 @@ public class ActivateCard extends GuiCommands {
         writeText(cardNumberTextbox, GetCardsTestData.getCardIncorrectNumber());
         writeText(expiryDateTextbox, "1225");
         click(activateCardButton);
-        return errorMessage.isDisplayed();
+        boolean one = errorMessage.isDisplayed();
+        boolean two = readText(cardNumberTextbox).equals("");
+        boolean three = readText(expiryDateTextbox).equals("");
+        return one && two && three;
     }
 
     public boolean cardActivationTimeout(){

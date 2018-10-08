@@ -207,5 +207,4 @@ public class Login extends GuiCommands {
         clickusernameNextButton();
         clickpasswordLoginButton();
     }
-
-    }
+}
