@@ -10,7 +10,6 @@
     </classes>
 </test>
     <test name="Manual Onboarding - Business search" verbose="2">
-    <test name="Business Search Tests">
         <classes>
             <class name="Onboarding_tests.businessSearchTests"/>
         </classes>
