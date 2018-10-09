@@ -7,12 +7,12 @@ import pageObjects.Onboarding.*;
 import testData.onboardingTestData.ExcelDataDriver;
 import testUtils.Base_test;
 import utils.Constants;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class CompanySicCodes extends Base_test {
+
     private SetUp setUp;
     private BusinessSearch businessSearch;
     private BusinessDetailsForm businessDetailsForm;
@@ -39,32 +39,24 @@ public class CompanySicCodes extends Base_test {
         initialWealth = new InitialWealth(driver);
     }
 
-    //CUICE-4106
     @Test(dataProvider = "dataSet")
-    public void CompanySicCodes(HashMap<String, String> dataSet){
+    public void CUICE4106(HashMap<String, String> dataSet){
 
         setUp.passThroughSetUp();
-
         businessSearch.populateBusinessSearch(dataSet.get("CompanyCode"));
 
         List<String> expected = new ArrayList<>();
-
         for(int i = 1; i <= 4; i++){
             if(dataSet.get("SicCode" + i) != "")
                 expected.add(dataSet.get("SicCode" + i));
         }
 
         businessSearch.verifyCompanySicCodesAndDescription(expected);
-
         businessDetailsForm.passThroughBusinessDetailsForm();
-
         personalDetailsForm.passThroughPersonalDetailsForm();
         ongoingSourceOfWealth.processOngoingSourceOfWealth();
-
         initialWealth.passThroughInitalWealth();
-
         sourceOfFunds.processSourceOfFunds();
-
         transactionDetails.passThroughTransactionDetails();
         transactionDetails.processSummaryPage();
     }
