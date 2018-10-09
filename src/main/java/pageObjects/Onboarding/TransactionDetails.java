@@ -76,6 +76,10 @@ public class TransactionDetails extends GuiCommands {
 
     public boolean passThroughSummaryPage(){
         passThroughTransactionDetails();
+        return processSummaryPage();
+    }
+
+    public boolean processSummaryPage(){
         clickSubmit();
         return isAllDoneDisplayed();
     }
