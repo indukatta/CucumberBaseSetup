@@ -31,7 +31,7 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy (accessibility = "login.login_button_title")
     private MobileElement loginButton;
 
-    @iOSFindBy (accessibility = "availableBalanceValueLabel")
+    @iOSFindBy (accessibility = "Available balance")
     private MobileElement hsAvailableBalance;
 
     @iOSFindBy (accessibility = "Payments")
@@ -52,13 +52,13 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy (accessibility = "payments.continue_button_title")
     private MobileElement continueButton;
 
-    @iOSFindBy (accessibility = "payment_details.amount_textfield_header")
+    @iOSFindBy (xpath = "//XCUIElementTypeTextField[@name=\"payment_details.amount_textfield_header\"]")
     private MobileElement payAmount;
 
     @iOSFindBy (accessibility = "payment_details.reference_textfield_header")
     private MobileElement reference;
 
-    @iOSFindBy (accessibility = "payment_details.available_balance_label_value")
+    @iOSFindBy (accessibility = "Available balance: 1,005.02 GBP")
     private MobileElement psAvailableBalance;
 
     @iOSFindBy(accessibility = "Payments")
@@ -123,6 +123,9 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy(accessibility = "You have insufficient funds")
     private MobileElement errorMessageFunds;
 
+    @iOSFindBy(accessibility = "Delete")
+    private MobileElement deleteKey;
+
     //Click Methods
 
     public void clickNext(){ click(nextButton);}
@@ -158,7 +161,7 @@ public class AvailableBalance extends GuiCommands {
     }
     public void passThroughRefPage(){
 
-        writeNumber(payAmount,1200);
+        writeNumber(payAmount,1000);
         writeText(reference,"The Reference");
         clickContinue();
     }
@@ -169,14 +172,25 @@ public class AvailableBalance extends GuiCommands {
         clickNewPayee();
     }
 
+    public void pressDelete (int count){
+
+        while (count > 0){
+            click(deleteKey);
+            count--;
+        }
+
+    }
+
     //Test Methods
     public boolean isAvailBalanceEqual (){
         login.navigateToLogin();
         String check1 = hsAvailableBalance.getText().replaceAll("[^0-9]","");
+        System.out.println(check1);
         clickPaymentTab();
         clickNewPayee();
         passThroughPayeeDetails();
         String check2 = psAvailableBalance.getText().replaceAll("[^0-9]","");
+        System.out.println(check2);
         if (check1.equals(check2)){
             return true;
         }
@@ -205,7 +219,7 @@ public class AvailableBalance extends GuiCommands {
         passThroughRefPage();
         click(summaryBB);
         boolean one = payRefTitle.isDisplayed();
-        boolean two = payAmount.getText().equals("1,200.00");
+        boolean two = payAmount.getText().equals("1,000.00");
         boolean three = reference.getText().equals("The Reference");
 
         return one && two && three;
@@ -226,8 +240,6 @@ public class AvailableBalance extends GuiCommands {
         passThroughPayeeDetails();
         click(paymentDetailsBB);
         boolean one = payeeName.getText().equals("John doe");
-        clearText(payeeName);
-        writeText(payeeName,"Test data");
         boolean two = (payeeName.getText().equals("Test data"));
 
         return one && two;
@@ -311,7 +323,7 @@ public class AvailableBalance extends GuiCommands {
     public boolean isContinuebtnEnabled(){
         navigateToPaymentpage();
         passThroughPayeeDetails();
-        writeNumber(payAmount,1234);
+        writeNumber(payAmount,123);
         boolean two = !continueButton.isEnabled();
         writeText(reference,"You can do it");
         clickContinue();
@@ -429,8 +441,8 @@ public class AvailableBalance extends GuiCommands {
         writeText(reference,"Testing");
         boolean one = errorMessageFunds.isDisplayed();
         boolean two = !continueButton.isEnabled();
-        clearText(payAmount);
-        writeNumber(payAmount,200);
+        click(payAmount);
+        pressDelete(4);
         boolean three = continueButton.isEnabled();
         boolean four;
         try {

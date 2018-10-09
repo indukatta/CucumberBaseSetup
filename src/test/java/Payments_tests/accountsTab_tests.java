@@ -26,4 +26,10 @@ public class accountsTab_tests extends Base_test {
         Assert.assertTrue(accountsTab.titleDisplayVerification());
     }
 
+    @Test(priority = 3, description = "Months is in active state on months bar (more than 1 month displayed )")
+    public void CUICE6724 (){Assert.assertTrue(accountsTab.moreThanOneMonthsBar());}
+
+    @Test(priority = 4, description = "Months is in active state on months bar (1st month of account) ")
+    public void CUICE6723 (){Assert.assertTrue(accountsTab.oneMonthBar());}
+
 }

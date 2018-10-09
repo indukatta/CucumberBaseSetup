@@ -6,6 +6,8 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 import pageObjects.Login.Login;
 import utils.GuiCommands;
 
+import java.util.NoSuchElementException;
+
 public class AccountsTab extends GuiCommands {
 
     Login login = new Login(driver);
@@ -14,7 +16,7 @@ public class AccountsTab extends GuiCommands {
         super(driver);
     }
 
-    @iOSFindBy(accessibility = "Available balance")
+    @iOSFindBy(accessibility = "balanceViewBottomSubtitle")
     private MobileElement graphAvailableBalanceTitle;
 
     @iOSFindBy(accessibility = "tab_bar.overview_title")
@@ -44,11 +46,27 @@ public class AccountsTab extends GuiCommands {
     @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"titleLabel\"])[18]")
     private MobileElement firstTransaction;
 
-    @iOSFindBy(accessibility = "455.02 GBP")
+    @iOSFindBy(accessibility = "balanceViewTitle")
     private MobileElement availableBalance; //FIXME
 
-    @iOSFindBy(accessibility = "40-12-76 | 12768903") // FIXME
+    @iOSFindBy(accessibility = "balanceViewTopSubtitle") // 40-12-76 | 12768903
     private MobileElement sortCodeAndAccountNum;
+
+    @iOSFindBy(accessibility = "October")
+    private MobileElement october; //FIXME
+
+    @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"September\"])[1]")
+    private MobileElement september; //FIXME
+
+    @iOSFindBy(xpath = "//XCUIElementTypeApplication[@name=\"Iceberg\"]/XCUIElementTypeWindow[1]" +
+            "/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther" +
+            "/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]")
+    private MobileElement underline;
+
+    @iOSFindBy(xpath = "//XCUIElementTypeApplication[@name=\"Iceberg\"]/XCUIElementTypeWindow[1]" +
+            "/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther" +
+            "/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView")
+    private MobileElement monthsBar;
 
 
 
@@ -69,13 +87,30 @@ public class AccountsTab extends GuiCommands {
     public boolean titleDisplayVerification(){
         login.navigateToLogin();
         boolean one = graphAvailableBalanceTitle.isDisplayed();
-        boolean three = availableBalance.getText().equals("455.02 GBP");
-       // boolean two = sortCodeAndAccountNum.equals("40-12-76 | 12768903"); // waiting for fix
+        boolean three = availableBalance.getText().equals("1,005.02 GBP");
+        boolean two = sortCodeAndAccountNum.getText().equals("40-12-76   |   12768903");
 
+        return one && two && three;
+        //look into driver . lable . value for months
+    }
+    public boolean moreThanOneMonthsBar(){
+        login.navigateToLogin();
+        boolean one = october.getLocation().toString().equals("(157, 269)");
+        boolean two = underline.isDisplayed();
 
-        return one && three;
+        return one && two;
     }
 
+    public boolean oneMonthBar() {
+        login.differentUserLogin("ONETRANUSER","TESTPASSWORD");
+        boolean one;
+        try {
+            one = !monthsBar.isDisplayed();
+        }catch (Exception e){
+            one = true;
+        }
 
+        return one;
+    }
 
 }

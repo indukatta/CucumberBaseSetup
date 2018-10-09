@@ -76,7 +76,7 @@ public class paymentsTests extends Base_test {
         @Test(priority = 17 , description = "Ensures only valid entries in reference field are allowed" )
         public void CUICE6700 () { Assert.assertTrue(availableBalance.insuficientFundsError()); }
 
-        @Test(priority = 17 , description = "Ensures only valid entries in reference field are allowed" )
+        @Test(priority = 17 , description = "If error message is displayed when correction is made it goes away" )
         public void CUICE6701 () { Assert.assertTrue(availableBalance.insuficientFundsCorrection()); }
 
 

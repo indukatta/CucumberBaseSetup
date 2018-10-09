@@ -211,7 +211,7 @@ public class GuiCommands {
         String cssValue = null;
 
         try {
-            cssValue = element.getCssValue( propertyName);
+            cssValue = element.getCssValue(propertyName);
         }
         catch (ElementNotVisibleException e) {
             //TODO: Sysout(e.getMessage());

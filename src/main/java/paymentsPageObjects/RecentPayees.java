@@ -19,25 +19,25 @@ public class RecentPayees extends GuiCommands {
     @iOSFindBy(xpath = "(//XCUIElementTypeOther[@name=\"RECENT PAYEES\"])[2]") // FIXME
     private MobileElement recentPayeeTitle;
 
-    @iOSFindBy(accessibility = "John Smith")
+    @iOSFindBy(accessibility = "Jim Wilson")
     private MobileElement firstPayeeName;
 
-    @iOSFindBy(accessibility = "11-22-33")
+    @iOSFindBy(accessibility = "11-10-78")
     private MobileElement firstPayeeSortCode;
 
-    @iOSFindBy(accessibility = "99887799")
+    @iOSFindBy(accessibility = "67933423")
     private MobileElement firstPayeeAccNum;
 
-    @iOSFindBy(xpath = "//XCUIElementTypeTextField[@name=\"payment_details.amount_textfield_header\"]")
+    @iOSFindBy(accessibility = "payment_details.amount_textfield_header")
     private MobileElement amountField;
 
-    @iOSFindBy(xpath = "//XCUIElementTypeTextField[@name=\"payment_details.reference_textfield_header\"]")
+    @iOSFindBy(accessibility = "payment_details.reference_textfield_header")
     private MobileElement referenceField;
 
     @iOSFindBy(accessibility = "payments.continue_button_title")
     private MobileElement continueButton;
 
-    @iOSFindBy(accessibility = "Available balance: 1,055.02 GBP")
+    @iOSFindBy(accessibility = "Available balance: 1,005.02 GBP")
     private MobileElement availableBalance;
 
     @iOSFindBy(accessibility = "GBP")
@@ -46,7 +46,7 @@ public class RecentPayees extends GuiCommands {
     @iOSFindBy(accessibility = "payment_confirmation.about_to_pay_label_value")
     private MobileElement paymentAmount;
 
-    @iOSFindBy(accessibility = "to John Smith")
+    @iOSFindBy(accessibility = "to Jim Wilson")
     private MobileElement payeeName;
 
     @iOSFindBy(accessibility = "payment_confirmation.sort_code_label_value")
@@ -67,13 +67,13 @@ public class RecentPayees extends GuiCommands {
     @iOSFindBy(accessibility = "Cancel")
     private MobileElement cancelButton;
 
-    @iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"John Smith\"]")
+    @iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"Jim Wilson\"]")
     private MobileElement summaryBB;
 
     @iOSFindBy(accessibility = "Payments")
     private MobileElement paymentBB;
 
-    @iOSFindBy(xpath = "xpath\t//XCUIElementTypeStaticText[@name=\"John Smith\"]")
+    @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Jim Wilson\"]")
     private MobileElement headerTitle;
 
     @iOSFindBy (accessibility = "Payments")
@@ -87,17 +87,19 @@ public class RecentPayees extends GuiCommands {
         click(paymentsTab);
     }
 
+    public void  getPayeeInfo(){
+       // String name = driver.findElementByClassName("XCUIElementTypeCell");
+    }
     //Test Methods
 
     public boolean recentSectionVerification(){
         navigateToPaymentTab();
 
         boolean one = driver.findElementByName("RECENT PAYEES").isDisplayed() && headerTitle.isDisplayed();
-        boolean two = firstPayeeSortCode.getText().equals("11-22-33") && firstPayeeAccNum.getText().equals("99887799");
+        boolean two = firstPayeeSortCode.getText().equals("11-10-78") && firstPayeeAccNum.getText().equals("67933423");
 
         return one && two;
     }
-
     public boolean noRecentPayee(){
         login.differentUserLogin("NOTRANSACTIONUSER","NOTRANSACTIONPASSWORD");
         click(paymentsTab);
@@ -105,7 +107,7 @@ public class RecentPayees extends GuiCommands {
         try {
             one = !recentPayeeTitle.isDisplayed();
 
-        }catch (NoSuchElementException e){
+        }catch (Exception e){
             one = true;
         }
 
@@ -122,23 +124,28 @@ public class RecentPayees extends GuiCommands {
         navigateToPaymentTab();
         click(firstPayeeName);
         writeNumber(amountField,22);
-        click(confirmButton);
-        boolean one = summaryAccNum.isDisplayed() && summarySortCode.isDisplayed() && summaryReference.isDisplayed();///come back
+        click(continueButton);
+        boolean one = summaryAccNum.isDisplayed() && summarySortCode.isDisplayed() && summaryReference.isDisplayed();
+        click(summaryBB);
+        boolean two = referenceField.getText().equalsIgnoreCase("office rent");
+        click(continueButton);
+        click(cancelButton);
+        boolean three = recentPayeeTitle.isDisplayed();
+        click(firstPayeeName);
+        boolean four = amountField.getText().isEmpty();
 
-        return one;
+        return one && two && three && four;
     }
-
     public boolean selectPayee(){
         navigateToPaymentTab();
         click(firstPayeeName);
-
-        boolean one = headerTitle.getText().equals("John Smith");
+        boolean one = headerTitle.getText().equals("Jim Wilson");
         boolean two;
         try {
             two = !cancelButton.isDisplayed();
-        }catch (NoSuchElementException e){
+        }catch (Exception e){
         two = true;}
-         boolean three = availableBalance.isDisplayed();
+         boolean three = driver.findElementByName("Available balance: 1,005.02 GBP").isEnabled();
         writeNumber(amountField,22);
         click(paymentBB);
         click(firstPayeeName);
@@ -146,7 +153,5 @@ public class RecentPayees extends GuiCommands {
 
         return one && two && three && four;
         }
-
-
     }
 
