@@ -269,12 +269,12 @@ public class GuiCommands {
         System.out.println(map.get("year") + " " + map.get("month") + " " + map.get("day"));
         scrollDown(element);
         click(element);
-        WebElement yearElement = (WebElement) driver.findElements(By.className("XCUIElementTypePickerWheel")).get(2);
-        yearElement.sendKeys(map.get("year"));
+        WebElement yearElement = (WebElement) driver.findElements(By.className("XCUIElementTypePickerWheel")).get(0);
+        yearElement.sendKeys(map.get("month"));
         WebElement monthElement = (WebElement) driver.findElements(By.className("XCUIElementTypePickerWheel")).get(1);
-        monthElement.sendKeys(map.get("month"));
-        WebElement dayElement = (WebElement) driver.findElements(By.className("XCUIElementTypePickerWheel")).get(0);
-        dayElement.sendKeys(map.get("day"));
+        monthElement.sendKeys(map.get("day"));
+        WebElement dayElement = (WebElement) driver.findElements(By.className("XCUIElementTypePickerWheel")).get(2);
+        dayElement.sendKeys(map.get("year"));
     }
 
     protected void IosPickerWheel(MobileElement element, String choice){
