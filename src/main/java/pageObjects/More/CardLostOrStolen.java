@@ -64,4 +64,9 @@ public class CardLostOrStolen extends GuiCommands {
 
         return one && two;
     }
+
+    public void navigateToCardLostStolenFurtherInfo(){
+        cardsManagement.navigateToCardLostOrStolen();
+        click(cardsContinueButton);
+    }
 }
