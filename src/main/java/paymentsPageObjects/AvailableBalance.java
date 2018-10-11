@@ -6,6 +6,9 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 import org.openqa.selenium.NoSuchElementException;
 import pageObjects.Login.Login;
 import utils.GuiCommands;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.HashMap;
 
 public class AvailableBalance extends GuiCommands {
 
@@ -79,7 +82,7 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy(accessibility = "OK")
     private MobileElement okButton;
 
-    @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Payments\"]")
+    @iOSFindBy(xpath = "//XCUIElementTypeOther[@name=\"Payments\"]")
     private MobileElement paymentsTitle;
 
     @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Paying someone new\"]")
@@ -126,6 +129,22 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy(accessibility = "Delete")
     private MobileElement deleteKey;
 
+    @iOSFindBy(accessibility = "payment_success.copy_label")
+    private MobileElement successMessage;
+
+    @iOSFindBy(accessibility = "payments.done_button_title")
+    private MobileElement doneButton;
+
+    @iOSFindBy(accessibility = "payment_confirmation.about_to_pay_label_value")
+    private MobileElement sentAmount;
+
+    @iOSFindBy(accessibility = "payment_success.confirmed_label")
+    private MobileElement paymentConfrimedTitle;
+
+    @iOSFindBy(accessibility = "ic_green_circle_tick")
+    private MobileElement greenTickImage;
+
+
     //Click Methods
 
     public void clickNext(){ click(nextButton);}
@@ -171,6 +190,25 @@ public class AvailableBalance extends GuiCommands {
         clickPaymentTab();
         clickNewPayee();
     }
+    public void populateValidUser(){
+        writeText(payeeName,"valid user");
+        writeNumber(payeeSortCode,123456);
+        writeNumber(payeeAccNumber,44449999);
+        clickContinue();
+
+    }
+    public void populateHRCodeRef(String code){
+        writeNumber(payAmount,1000);
+        writeText(reference,code);
+        clickContinue();
+    }
+    public void navigateToSuccessScreen(){
+        navigateToPaymentpage();
+        populateValidUser();
+        populateHRCodeRef("H47");
+        click(makePaymentButton);
+    }
+
 
     public void pressDelete (int count){
 
@@ -178,6 +216,8 @@ public class AvailableBalance extends GuiCommands {
             click(deleteKey);
             count--;
         }
+
+
 
     }
 
@@ -453,8 +493,84 @@ public class AvailableBalance extends GuiCommands {
         return one && two && three && four;
     }
 
+    public boolean successPageDisplayed(){
+        navigateToSuccessScreen();
+        boolean one = doneButton.isDisplayed() && sentAmount.isDisplayed() && paymentConfrimedTitle.isDisplayed();
+        boolean two = driver.findElementByAccessibilityId("to valid user").isDisplayed();
+        return one && two;
+    }
+    public boolean disclaimerShown(){
+        navigateToSuccessScreen();
+        boolean one = paymentConfrimedTitle.isDisplayed() && successMessage.isDisplayed();
 
+        return one;
+    }
+    public boolean doneButtonValidation()
+    {
+        navigateToSuccessScreen();
+        click(doneButton);
+        boolean one = paymentsTitle.isDisplayed();
 
+        return one;
+    }
 
+    public boolean sentStatusMessageCheck(){
+        HashMap<String,String> brcCodes = new HashMap<>();
 
-}
+        brcCodes.put( "H47", "Your payment has been sent and will be credited to the beneficiary's account immediately," +
+                " subject to our normal fraud checks.");
+        brcCodes.put("H48", "Your payment has been sent and will usually be credited to the beneficiary's account " +
+                "within 2 hours, subject to our normal fraud checks");
+        brcCodes.put(  "H50", "Your payment has been sent and will usually be credited to the beneficiary's account " +
+                "today, subject to our normal fraud checks.");
+        brcCodes.put( "H51", "Your payment has been sent and will usually be credited to the beneficiary's account " +
+                "within 2 hours, subject to our normal fraud checks. However, the Credit Card balance will not be " +
+                "updated until the next working day");
+        brcCodes.put("H54", "Your payment instructions have been received and are being processed.");
+        brcCodes.put("H89", "Your payment has been sent and will be credited to the beneficiary's account.");
+        brcCodes.put("H41", "Your payment has been accepted however the beneficiary's bankers are unable to confirm " +
+                "when the beneficiary will be credited.");
+        brcCodes.put("H42", "Your payment has been accepted by the beneficiary's bankers who advise that the beneficiary" +
+                " account will be credited today.");
+        brcCodes.put("H43", "Your payment has been accepted by the beneficiary's bankers who advise that the " +
+                "beneficiary account will be credited by tomorrow.");
+        brcCodes.put( "H44","Your payment has been accepted by the beneficiary's bankers who advise that the " +
+                "beneficiary account will be credited by the next working day.");
+        brcCodes.put("H45", "Your payment has been accepted however the beneficiary's bankers are unable to confirm " +
+                "when the beneficiary will be credited.");
+
+        String[] sentBrcCodes = {"H47","H48","H50","H51","H54","H89","H41","H42","H43","H44","H45"};
+        int count = 0;
+        navigateToPaymentpage();
+        for(String code : sentBrcCodes){
+            populateValidUser();
+            populateHRCodeRef(code);
+            click(makePaymentButton);
+            String message = successMessage.getText();
+            if (message.equals(brcCodes.get(code))){
+                count++;
+            }
+            System.out.println(count);
+            click(doneButton);
+            click(paymentsTab);
+            clickNewPayee();
+        }
+        System.out.println(count);
+        boolean one = count == 11;
+
+        return one;
+    }
+    }
+ /*   h47 Your payment has been sent and will be credited to the beneficiary's account immediately, subject to our normal fraud checks.";
+        h48 = "Your payment has been sent and will usually be credited to the beneficiary's account within 2 hours, subject to our normal fraud checks";
+        h50 = "Your payment has been sent and will usually be credited to the beneficiary's account today, subject to our normal fraud checks.";
+        h51 = "Your payment has been sent and will usually be credited to the beneficiary's account within 2 hours, subject to our normal fraud checks. However, the Credit Card balance will not be updated until the next working day";
+        h54 = "Your payment instructions have been received and are being processed.";
+        h89 = "Your payment has been sent and will be credited to the beneficiary's account.";
+        h41 = "Your payment has been accepted however the beneficiary's bankers are unable to confirm when the beneficiary will be credited.";
+        h42 = "Your payment has been accepted by the beneficiary's bankers who advise that the beneficiary account will be credited today.";
+        h43 = "Your payment has been accepted by the beneficiary's bankers who advise that the beneficiary account will be credited by tomorrow.";
+        h44 = "Your payment has been accepted by the beneficiary's bankers who advise that the beneficiary account will be credited by the next working day.";
+        h45 = "Your payment has been accepted however the beneficiary's bankers are unable to confirm when the beneficiary will be credited.";
+
+*/
