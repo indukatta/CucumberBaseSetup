@@ -28,7 +28,7 @@ public class hrCodes_tests extends Base_test {
         Assert.assertTrue(availableBalance.doneButtonValidation());
     }
     @Test(priority = 4 , description = "Display relevant message for sent status brcs" )
-    public void CUICE () {
+    public void CUICE6829 () {
         Assert.assertTrue(availableBalance.sentStatusMessageCheck());
     }
 

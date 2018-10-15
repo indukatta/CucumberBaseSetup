@@ -37,7 +37,7 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy (accessibility = "Available balance")
     private MobileElement hsAvailableBalance;
 
-    @iOSFindBy (accessibility = "Payments")
+    @iOSFindBy (accessibility = "tab_bar.payments_title")
     private MobileElement paymentsTab;
 
     @iOSFindBy (accessibility = "payments.pay_someone_new_title")
@@ -99,6 +99,9 @@ public class AvailableBalance extends GuiCommands {
 
     @iOSFindBy(accessibility = ".")
     private MobileElement  decimalDot;
+
+    @iOSFindBy(accessibility = "balanceViewTitle")
+    private MobileElement availableBalance;
 
     // Summary page elements
 
@@ -191,7 +194,7 @@ public class AvailableBalance extends GuiCommands {
         clickNewPayee();
     }
     public void populateValidUser(){
-        writeText(payeeName,"valid user");
+        writeText(payeeName,"Valid User");
         writeNumber(payeeSortCode,123456);
         writeNumber(payeeAccNumber,44449999);
         clickContinue();
@@ -315,7 +318,7 @@ public class AvailableBalance extends GuiCommands {
         boolean one = numPadDel.isDisplayed();
         writeNumber(payeeSortCode,234567);
         click(payeeName);
-        boolean two = payeeSortCode.getText().equals("12-34-56");
+        boolean two = payeeSortCode.getText().matches("^\\d{2}-\\d{2}-\\d{2}");
 
         return one && two;
     }
@@ -497,6 +500,7 @@ public class AvailableBalance extends GuiCommands {
         navigateToSuccessScreen();
         boolean one = doneButton.isDisplayed() && sentAmount.isDisplayed() && paymentConfrimedTitle.isDisplayed();
         boolean two = driver.findElementByAccessibilityId("to valid user").isDisplayed();
+
         return one && two;
     }
     public boolean disclaimerShown(){
@@ -509,7 +513,7 @@ public class AvailableBalance extends GuiCommands {
     {
         navigateToSuccessScreen();
         click(doneButton);
-        boolean one = paymentsTitle.isDisplayed();
+        boolean one = availableBalance.isDisplayed();
 
         return one;
     }
@@ -550,27 +554,12 @@ public class AvailableBalance extends GuiCommands {
             if (message.equals(brcCodes.get(code))){
                 count++;
             }
-            System.out.println(count);
             click(doneButton);
             click(paymentsTab);
             clickNewPayee();
         }
-        System.out.println(count);
         boolean one = count == 11;
 
         return one;
     }
     }
- /*   h47 Your payment has been sent and will be credited to the beneficiary's account immediately, subject to our normal fraud checks.";
-        h48 = "Your payment has been sent and will usually be credited to the beneficiary's account within 2 hours, subject to our normal fraud checks";
-        h50 = "Your payment has been sent and will usually be credited to the beneficiary's account today, subject to our normal fraud checks.";
-        h51 = "Your payment has been sent and will usually be credited to the beneficiary's account within 2 hours, subject to our normal fraud checks. However, the Credit Card balance will not be updated until the next working day";
-        h54 = "Your payment instructions have been received and are being processed.";
-        h89 = "Your payment has been sent and will be credited to the beneficiary's account.";
-        h41 = "Your payment has been accepted however the beneficiary's bankers are unable to confirm when the beneficiary will be credited.";
-        h42 = "Your payment has been accepted by the beneficiary's bankers who advise that the beneficiary account will be credited today.";
-        h43 = "Your payment has been accepted by the beneficiary's bankers who advise that the beneficiary account will be credited by tomorrow.";
-        h44 = "Your payment has been accepted by the beneficiary's bankers who advise that the beneficiary account will be credited by the next working day.";
-        h45 = "Your payment has been accepted however the beneficiary's bankers are unable to confirm when the beneficiary will be credited.";
-
-*/

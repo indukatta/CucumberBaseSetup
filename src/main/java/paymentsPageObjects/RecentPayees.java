@@ -76,7 +76,7 @@ public class RecentPayees extends GuiCommands {
     @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Jim Wilson\"]")
     private MobileElement headerTitle;
 
-    @iOSFindBy (accessibility = "Payments")
+    @iOSFindBy (accessibility = "tab_bar.payments_title")
     private MobileElement paymentsTab;
 
 

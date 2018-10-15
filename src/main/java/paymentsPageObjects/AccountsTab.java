@@ -47,7 +47,7 @@ public class AccountsTab extends GuiCommands {
     private MobileElement firstTransaction;
 
     @iOSFindBy(accessibility = "balanceViewTitle")
-    private MobileElement availableBalance; //FIXME
+    private MobileElement availableBalance;
 
     @iOSFindBy(accessibility = "balanceViewTopSubtitle") // 40-12-76 | 12768903
     private MobileElement sortCodeAndAccountNum;
@@ -67,7 +67,11 @@ public class AccountsTab extends GuiCommands {
             "/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther" +
             "/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView")
     private MobileElement monthsBar;
-
+    @iOSFindBy(xpath = "//XCUIElementTypeApplication[@name=\"Iceberg\"]/XCUIElementTypeWindow[1]/" +
+            "XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/" +
+            "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther/" +
+            "XCUIElementTypeOther[3]/XCUIElementTypeScrollView/XCUIElementTypeOther[3]")
+    private MobileElement glowingBall;
 
 
     //Custom Methods
@@ -78,8 +82,8 @@ public class AccountsTab extends GuiCommands {
         login.differentUserLogin("NOTRANSACTIONUSER","NOTRANSACTIONPASSWORD");
        // click(accountsTab);
         boolean one = noTrasactionTitle.isDisplayed();
-        boolean two = noTransSortCode.getText().equals("40-12-76");
-        boolean three = noTransAccountNum.getText().equals("44444444");
+        boolean two = noTransSortCode.getText().matches("^\\d{2}-\\d{2}-\\d{2}");
+        boolean three = noTransAccountNum.getText().matches("^\\d{8}");
 
         return one && two && three;
     }
@@ -87,8 +91,8 @@ public class AccountsTab extends GuiCommands {
     public boolean titleDisplayVerification(){
         login.navigateToLogin();
         boolean one = graphAvailableBalanceTitle.isDisplayed();
-        boolean three = availableBalance.getText().equals("1,005.02 GBP");
-        boolean two = sortCodeAndAccountNum.getText().equals("40-12-76   |   12768903");
+        boolean three = availableBalance.getText().matches("^(\\d{1,3},)?\\d{1,3}.\\d{2} GBP$");
+        boolean two = sortCodeAndAccountNum.getText().matches("^\\d{2}-\\d{2}-\\d{2}\\s{3}\\D\\s{3}\\d{8}");
 
         return one && two && three;
         //look into driver . lable . value for months

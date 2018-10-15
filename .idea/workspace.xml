@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d068524-d172-4dd2-882a-e468c3dce49b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/testData/cardsTestData/GetCardsTestData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Payments_tests/hrCodes_tests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/paymentsPageObjects/DirectDebit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Payments_tests/directDebit_tests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report.xml" beforeDir="false" afterPath="$PROJECT_DIR$/report.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/Login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Login/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/More/ActivateCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/More/ActivateCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AccountsTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AccountsTab.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/testData/ExcelFiles/E2E_Test_Data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testData/ExcelFiles/E2E_Test_Data.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Cards_tests/CUICE460_ActivateACard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Cards_tests/CUICE460_ActivateACard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/paymentsPageObjects/RecentPayees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/paymentsPageObjects/RecentPayees.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Payments_tests/hrCodes_tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Payments_tests/hrCodes_tests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/paymentsPageObjects/AvailableBalance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/paymentsPageObjects/AvailableBalance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/testData/ExcelFiles/E2E_Test_Data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/testData/ExcelFiles/E2E_Test_Data.xlsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -69,7 +66,7 @@
         <counts>
           <entry key="class" value="6" />
           <entry key="gitignore" value="2" />
-          <entry key="java" value="158" />
+          <entry key="java" value="171" />
           <entry key="properties" value="12" />
           <entry key="xml" value="1" />
         </counts>
@@ -77,7 +74,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="6" />
-          <entry key="JAVA" value="158" />
+          <entry key="JAVA" value="171" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="12" />
           <entry key="XML" value="1" />
@@ -86,13 +83,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="34" />
-          <entry key="java" value="19417" />
+          <entry key="java" value="21139" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="19417" />
+          <entry key="JAVA" value="21139" />
           <entry key="PLAIN_TEXT" value="34" />
           <entry key="XML" value="3" />
         </counts>
@@ -122,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/AccountsTab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="694">
-              <caret line="93" column="53" selection-start-line="93" selection-start-column="53" selection-end-line="93" selection-end-column="53" />
+            <state relative-caret-position="375">
+              <caret line="93" column="96" lean-forward="true" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="96" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,11 +128,63 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/directDebit_tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="773">
-              <caret line="548" selection-start-line="548" selection-end-line="548" />
+            <state relative-caret-position="420">
+              <caret line="34" column="73" lean-forward="true" selection-start-line="34" selection-start-column="73" selection-end-line="34" selection-end-column="73" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#384#385#0" expanded="true" />
+                <element signature="e#437#438#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/DirectDebit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="574">
+              <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/accountsTab_tests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="29" column="66" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/recentPayees_tests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#383#384#0" expanded="true" />
+                <element signature="e#437#438#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="615">
+              <caret line="49" column="83" selection-start-line="49" selection-start-column="83" selection-end-line="49" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -146,31 +195,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/hrCodes_tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="31" column="54" lean-forward="true" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
+            <state relative-caret-position="120">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#440#441#0" expanded="true" />
-                <element signature="e#521#522#0" expanded="true" />
-                <element signature="e#688#689#0" expanded="true" />
-                <element signature="e#762#763#0" expanded="true" />
-                <element signature="e#863#864#0" expanded="true" />
-                <element signature="e#937#938#0" expanded="true" />
-                <element signature="e#1058#1059#0" expanded="true" />
-                <element signature="e#1111#1112#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Login/Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-              <folding>
-                <element signature="e#2580#2581#0" expanded="true" />
-                <element signature="e#2625#2626#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -208,8 +236,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/testData/RandomDataFactory/TestData.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/TestListenerAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/CustomTestListener.java" />
         <option value="$PROJECT_DIR$/src/test/java/Onboarding_tests/Personal_Details_Test.java" />
@@ -253,12 +279,14 @@
         <option value="$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/Payments_tests/accountsTab_tests.java" />
         <option value="$PROJECT_DIR$/src/test/java/Payments_tests/recentPayees_tests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AccountsTab.java" />
-        <option value="$PROJECT_DIR$/src/main/java/paymentsPageObjects/RecentPayees.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/Login/Login.java" />
         <option value="$PROJECT_DIR$/config.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java" />
         <option value="$PROJECT_DIR$/src/test/java/Payments_tests/hrCodes_tests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/paymentsPageObjects/RecentPayees.java" />
+        <option value="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java" />
+        <option value="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AccountsTab.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Payments_tests/directDebit_tests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/paymentsPageObjects/DirectDebit.java" />
       </list>
     </option>
   </component>
@@ -428,6 +456,14 @@
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="Payments_tests" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
+            <path>
+              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="testUtils" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -435,7 +471,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539252681825" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539601053796" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -467,7 +503,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.hrCodes_tests.CUICE">
+  <component name="RunManager" selected="TestNG.directDebit_tests.CUICE6862">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -490,7 +526,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="hrCodes_tests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="accountsTab_tests.CUICE6601" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Iceberg" />
       <extension name="coverage">
         <pattern>
@@ -499,26 +535,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Payments_tests" />
-      <option name="MAIN_CLASS_NAME" value="Payments_tests.hrCodes_tests" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="hrCodes_tests.CUICE" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Iceberg" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Payments_tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Payments_tests" />
-      <option name="MAIN_CLASS_NAME" value="Payments_tests.hrCodes_tests" />
-      <option name="METHOD_NAME" value="CUICE" />
+      <option name="MAIN_CLASS_NAME" value="Payments_tests.accountsTab_tests" />
+      <option name="METHOD_NAME" value="CUICE6601" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -528,7 +546,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="recentPayees_tests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="directDebit_tests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Iceberg" />
       <extension name="coverage">
         <pattern>
@@ -537,7 +555,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Payments_tests" />
-      <option name="MAIN_CLASS_NAME" value="Payments_tests.recentPayees_tests" />
+      <option name="MAIN_CLASS_NAME" value="Payments_tests.directDebit_tests" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
@@ -546,7 +564,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="recentPayees_tests.CUICE6359" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="directDebit_tests.CUICE6862" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Iceberg" />
       <extension name="coverage">
         <pattern>
@@ -555,8 +573,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Payments_tests" />
-      <option name="MAIN_CLASS_NAME" value="Payments_tests.recentPayees_tests" />
-      <option name="METHOD_NAME" value="CUICE6359" />
+      <option name="MAIN_CLASS_NAME" value="Payments_tests.directDebit_tests" />
+      <option name="METHOD_NAME" value="CUICE6862" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -566,7 +584,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="recentPayees_tests.CUICE6362" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="directDebit_tests.CUICE6877" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Iceberg" />
       <extension name="coverage">
         <pattern>
@@ -575,8 +593,28 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Payments_tests" />
-      <option name="MAIN_CLASS_NAME" value="Payments_tests.recentPayees_tests" />
-      <option name="METHOD_NAME" value="CUICE6362" />
+      <option name="MAIN_CLASS_NAME" value="Payments_tests.directDebit_tests" />
+      <option name="METHOD_NAME" value="CUICE6877" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="paymentsTests.CUICE5548" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Iceberg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Payments_tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Payments_tests" />
+      <option name="MAIN_CLASS_NAME" value="Payments_tests.paymentsTests" />
+      <option name="METHOD_NAME" value="CUICE5548" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -587,19 +625,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.recentPayees_tests" />
-      <item itemvalue="TestNG.recentPayees_tests.CUICE6359" />
-      <item itemvalue="TestNG.recentPayees_tests.CUICE6362" />
-      <item itemvalue="TestNG.hrCodes_tests" />
-      <item itemvalue="TestNG.hrCodes_tests.CUICE" />
+      <item itemvalue="TestNG.directDebit_tests.CUICE6877" />
+      <item itemvalue="TestNG.paymentsTests.CUICE5548" />
+      <item itemvalue="TestNG.accountsTab_tests.CUICE6601" />
+      <item itemvalue="TestNG.directDebit_tests" />
+      <item itemvalue="TestNG.directDebit_tests.CUICE6862" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.hrCodes_tests.CUICE" />
-        <item itemvalue="TestNG.hrCodes_tests" />
-        <item itemvalue="TestNG.recentPayees_tests.CUICE6362" />
-        <item itemvalue="TestNG.recentPayees_tests" />
-        <item itemvalue="TestNG.recentPayees_tests.CUICE6359" />
+        <item itemvalue="TestNG.directDebit_tests.CUICE6862" />
+        <item itemvalue="TestNG.directDebit_tests" />
+        <item itemvalue="TestNG.accountsTab_tests.CUICE6601" />
+        <item itemvalue="TestNG.paymentsTests.CUICE5548" />
+        <item itemvalue="TestNG.directDebit_tests.CUICE6877" />
       </list>
     </recent_temporary>
   </component>
@@ -617,35 +655,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="recentPayees_tests_CUICE6362 - 2018.10.09 at 17h 12m 33s.xml">
-      <configuration name="recentPayees_tests.CUICE6362" configurationId="TestNG" />
+    <history-entry file="directDebit_tests_CUICE6877 - 2018.10.12 at 12h 26m 17s.xml">
+      <configuration name="directDebit_tests.CUICE6877" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="recentPayees_tests_CUICE6362 - 2018.10.09 at 17h 15m 05s.xml">
-      <configuration name="recentPayees_tests.CUICE6362" configurationId="TestNG" />
+    <history-entry file="paymentsTests_CUICE5548 - 2018.10.12 at 14h 31m 35s.xml">
+      <configuration name="paymentsTests.CUICE5548" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="recentPayees_tests_CUICE6362 - 2018.10.09 at 17h 16m 09s.xml">
-      <configuration name="recentPayees_tests.CUICE6362" configurationId="TestNG" />
+    <history-entry file="accountsTab_tests_CUICE6601 - 2018.10.12 at 15h 05m 15s.xml">
+      <configuration name="accountsTab_tests.CUICE6601" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="hrCodes_tests - 2018.10.10 at 18h 14m 59s.xml">
-      <configuration name="hrCodes_tests" configurationId="TestNG" />
+    <history-entry file="directDebit_tests - 2018.10.15 at 10h 56m 09s.xml">
+      <configuration name="directDebit_tests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="hrCodes_tests - 2018.10.10 at 18h 19m 29s.xml">
-      <configuration name="hrCodes_tests" configurationId="TestNG" />
+    <history-entry file="directDebit_tests_CUICE6862 - 2018.10.15 at 11h 40m 00s.xml">
+      <configuration name="directDebit_tests.CUICE6862" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="hrCodes_tests - 2018.10.11 at 09h 55m 38s.xml">
-      <configuration name="hrCodes_tests" configurationId="TestNG" />
+    <history-entry file="directDebit_tests_CUICE6862 - 2018.10.15 at 11h 41m 37s.xml">
+      <configuration name="directDebit_tests.CUICE6862" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="hrCodes_tests_CUICE - 2018.10.11 at 10h 53m 56s.xml">
-      <configuration name="hrCodes_tests.CUICE" configurationId="TestNG" />
+    <history-entry file="directDebit_tests_CUICE6862 - 2018.10.15 at 11h 48m 13s.xml">
+      <configuration name="directDebit_tests.CUICE6862" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="hrCodes_tests_CUICE - 2018.10.11 at 10h 55m 56s.xml">
-      <configuration name="hrCodes_tests.CUICE" configurationId="TestNG" />
+    <history-entry file="directDebit_tests_CUICE6862 - 2018.10.15 at 11h 49m 14s.xml">
+      <configuration name="directDebit_tests.CUICE6862" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="hrCodes_tests_CUICE - 2018.10.11 at 10h 58m 06s.xml">
-      <configuration name="hrCodes_tests.CUICE" configurationId="TestNG" />
+    <history-entry file="directDebit_tests_CUICE6862 - 2018.10.15 at 11h 54m 36s.xml">
+      <configuration name="directDebit_tests.CUICE6862" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="hrCodes_tests_CUICE - 2018.10.11 at 11h 01m 02s.xml">
-      <configuration name="hrCodes_tests.CUICE" configurationId="TestNG" />
+    <history-entry file="directDebit_tests_CUICE6862 - 2018.10.15 at 11h 56m 01s.xml">
+      <configuration name="directDebit_tests.CUICE6862" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -698,20 +736,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/CSM/SupportScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/CSM/MessagingScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/test-classes/Onboarding_tests/businessSearchTests.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -918,30 +942,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/AccountsTab.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="694">
-          <caret line="93" column="53" selection-start-line="93" selection-start-column="53" selection-end-line="93" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="143" selection-start-line="3" selection-start-column="143" selection-end-line="3" selection-end-column="143" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/RecentPayees.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="78" column="55" selection-start-line="78" selection-start-column="55" selection-end-line="78" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="320" column="78" selection-start-line="320" selection-start-column="46" selection-end-line="320" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Login/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="196" column="20" selection-start-line="196" selection-start-column="20" selection-end-line="196" selection-end-column="20" />
+          <folding>
+            <element signature="e#2580#2581#0" expanded="true" />
+            <element signature="e#2625#2626#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/hrCodes_tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="49" column="83" selection-start-line="49" selection-start-column="83" selection-end-line="49" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -957,16 +1012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/RecentPayees.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/accountsTab_tests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -977,39 +1022,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/hrCodes_tests.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/AccountsTab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="31" column="54" lean-forward="true" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
+        <state relative-caret-position="375">
+          <caret line="93" column="96" lean-forward="true" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="96" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
-            <element signature="e#688#689#0" expanded="true" />
-            <element signature="e#762#763#0" expanded="true" />
-            <element signature="e#863#864#0" expanded="true" />
-            <element signature="e#937#938#0" expanded="true" />
-            <element signature="e#1058#1059#0" expanded="true" />
-            <element signature="e#1111#1112#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Login/Login.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/directDebit_tests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        <state relative-caret-position="420">
+          <caret line="34" column="73" lean-forward="true" selection-start-line="34" selection-start-column="73" selection-end-line="34" selection-end-column="73" />
           <folding>
-            <element signature="e#2580#2581#0" expanded="true" />
-            <element signature="e#2625#2626#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/DirectDebit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="548" selection-start-line="548" selection-end-line="548" />
+        <state relative-caret-position="574">
+          <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
