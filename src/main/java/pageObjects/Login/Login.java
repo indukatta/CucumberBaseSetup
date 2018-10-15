@@ -201,10 +201,19 @@ public class Login extends GuiCommands {
             clickpasswordLoginButton();
         }
 
-    public void passThroughLogin() {
+        public void passThroughLogin() {
         clickexistingCustomerButton();
         writeUsername("TESTUSER");
         clickusernameNextButton();
+        clickpasswordLoginButton();
+    }
+
+    public void loginAsUser(String username, String password){
+        clickexistingCustomerButton();
+        writeUsername(username);
+        clickusernameNextButton();
+        clearText(passwordFieldBox);
+        writePassword(password);
         clickpasswordLoginButton();
     }
 }
