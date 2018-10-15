@@ -106,6 +106,6 @@ public class CUICE460_ActivateACard extends Base_test {
 
     @Test(priority = 16, description = "Remove Card Activation Prompt - activate from card management")
     public void CUICE6936(){
-        
+
     }
 }
