@@ -19,13 +19,13 @@ public class RecentPayees extends GuiCommands {
     @iOSFindBy(xpath = "(//XCUIElementTypeOther[@name=\"RECENT PAYEES\"])[2]") // FIXME
     private MobileElement recentPayeeTitle;
 
-    @iOSFindBy(accessibility = "Jim Wilson")
+    @iOSFindBy(accessibility = "John Smith")
     private MobileElement firstPayeeName;
 
-    @iOSFindBy(accessibility = "11-10-78")
+    @iOSFindBy(accessibility = "11-22-33")
     private MobileElement firstPayeeSortCode;
 
-    @iOSFindBy(accessibility = "67933423")
+    @iOSFindBy(accessibility = "99887799")
     private MobileElement firstPayeeAccNum;
 
     @iOSFindBy(accessibility = "payment_details.amount_textfield_header")
@@ -46,7 +46,7 @@ public class RecentPayees extends GuiCommands {
     @iOSFindBy(accessibility = "payment_confirmation.about_to_pay_label_value")
     private MobileElement paymentAmount;
 
-    @iOSFindBy(accessibility = "to Jim Wilson")
+    @iOSFindBy(accessibility = "to John Smith")
     private MobileElement payeeName;
 
     @iOSFindBy(accessibility = "payment_confirmation.sort_code_label_value")
@@ -96,7 +96,7 @@ public class RecentPayees extends GuiCommands {
         navigateToPaymentTab();
 
         boolean one = driver.findElementByName("RECENT PAYEES").isDisplayed() && headerTitle.isDisplayed();
-        boolean two = firstPayeeSortCode.getText().equals("11-10-78") && firstPayeeAccNum.getText().equals("67933423");
+        boolean two = firstPayeeSortCode.getText().equals("11-22-33") && firstPayeeAccNum.getText().equals("99887799");
 
         return one && two;
     }
@@ -139,13 +139,13 @@ public class RecentPayees extends GuiCommands {
     public boolean selectPayee(){
         navigateToPaymentTab();
         click(firstPayeeName);
-        boolean one = headerTitle.getText().equals("Jim Wilson");
+        boolean one = headerTitle.getText().equals("John Smith");
         boolean two;
         try {
             two = !cancelButton.isDisplayed();
         }catch (Exception e){
         two = true;}
-         boolean three = driver.findElementByName("Available balance: 1,005.02 GBP").isEnabled();
+         boolean three = driver.findElementByName("Available balance: 20,000.00 GBP").isEnabled();
         writeNumber(amountField,22);
         click(paymentBB);
         click(firstPayeeName);

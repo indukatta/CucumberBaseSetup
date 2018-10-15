@@ -6,7 +6,8 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 import pageObjects.Login.Login;
 import utils.GuiCommands;
 
-import java.util.NoSuchElementException;
+import java.util.Calendar;
+import java.util.Locale;
 
 public class AccountsTab extends GuiCommands {
 
@@ -73,14 +74,19 @@ public class AccountsTab extends GuiCommands {
             "XCUIElementTypeOther[3]/XCUIElementTypeScrollView/XCUIElementTypeOther[3]")
     private MobileElement glowingBall;
 
-
+    String currentMonth = getCurrentMonth();
     //Custom Methods
+
+    public String getCurrentMonth(){
+        String currentMonth =Calendar.getInstance().getDisplayName(Calendar.MONTH, Calendar.LONG,Locale.getDefault());
+
+        return currentMonth;
+    }
 
     //Test Methods
 
     public boolean emptyStateVerification(){
         login.differentUserLogin("NOTRANSACTIONUSER","NOTRANSACTIONPASSWORD");
-       // click(accountsTab);
         boolean one = noTrasactionTitle.isDisplayed();
         boolean two = noTransSortCode.getText().matches("^\\d{2}-\\d{2}-\\d{2}");
         boolean three = noTransAccountNum.getText().matches("^\\d{8}");
@@ -95,11 +101,10 @@ public class AccountsTab extends GuiCommands {
         boolean two = sortCodeAndAccountNum.getText().matches("^\\d{2}-\\d{2}-\\d{2}\\s{3}\\D\\s{3}\\d{8}");
 
         return one && two && three;
-        //look into driver . lable . value for months
     }
     public boolean moreThanOneMonthsBar(){
         login.navigateToLogin();
-        boolean one = october.getLocation().toString().equals("(157, 269)");
+        boolean one = driver.findElementByName(currentMonth).getLocation().toString().equals("(157, 269)");
         boolean two = underline.isDisplayed();
 
         return one && two;
@@ -116,5 +121,4 @@ public class AccountsTab extends GuiCommands {
 
         return one;
     }
-
 }

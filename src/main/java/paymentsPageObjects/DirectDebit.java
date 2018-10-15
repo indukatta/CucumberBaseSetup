@@ -66,6 +66,36 @@ public class DirectDebit extends GuiCommands {
     @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"topRightLabel\"])[1]")
     private MobileElement dDPaymentAmount;
 
+    @iOSFindBy(accessibility = "There may be some direct debits missing. Please try again later.")
+    private MobileElement networkErrMessage;
+
+    @iOSFindBy(accessibility = "alertWarning")
+    private MobileElement alertImage;
+
+    @iOSFindBy(accessibility = "There may be some direct debits missing.")
+    private MobileElement failureMessage;
+
+    @iOSFindBy(accessibility = "Allow")
+    private MobileElement allowButton;
+
+    @iOSFindBy(accessibility = "Don’t Allow")
+    private MobileElement dontAllowButton;
+
+    @iOSFindBy(accessibility = "Support chat")
+    private MobileElement supportChatTitle;
+
+    @iOSFindBy(accessibility = "Close")
+    private MobileElement closeSupportChat;
+
+    @iOSFindBy(xpath = "//XCUIElementTypeApplication[@name=\"Iceberg\"]/XCUIElementTypeWindow[1]/" +
+            "XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther" +
+            "/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther" +
+            "/XCUIElementTypeOther[1]/XCUIElementTypeButton")
+    private MobileElement contactSupportBtn;
+
+    @iOSFindBy(accessibility = "direct_debit_details.cancel")
+    private MobileElement cancelDDButton;
+
     // Custom Methods
 
     public void navigateToDDScreen(String user, String pass){
@@ -104,5 +134,22 @@ public class DirectDebit extends GuiCommands {
         boolean five = paymentCategrory.getText().equals("Direct Debit");
         
         return one && two && three && four && five;
+    }
+    public boolean isFailureErrMsgDisplayed(){
+        navigateToDDScreen("THREETRANUSER","TESTPASSWORD");
+        boolean one = failureMessage.isEnabled() && noDDMessage.isDisplayed();
+        System.out.println(one);
+        click(contactSupportBtn);
+        click(allowButton);
+        boolean two = supportChatTitle.isDisplayed();
+
+        return one && two;
+    }
+    public boolean isNetworkErrMsgDisplayed(){
+        navigateToDDScreen("TWOTRANUSER","TESTPASSWORD");
+        boolean one = networkErrMessage.isDisplayed() && alertImage.isDisplayed() && noDDMessage.isDisplayed();
+        boolean two = alertImage.getLocation().toString().equals("(16, 76)");
+
+        return one && two;
     }
 }

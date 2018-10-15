@@ -33,5 +33,11 @@ public class directDebit_tests extends Base_test {
 
     @Test(priority = 4, description = "Direct debit list display")
     public void CUICE6862() {Assert.assertTrue(directDebit.displayDD());}
+
+    @Test(priority = 5, description = "Failure - display warning in snackbar")
+    public void CUICE7038() {Assert.assertTrue(directDebit.isFailureErrMsgDisplayed());}
+
+    @Test(priority = 6, description = "Network error message")
+    public void CUICE7040() {Assert.assertTrue(directDebit.isNetworkErrMsgDisplayed());}
 }
 
