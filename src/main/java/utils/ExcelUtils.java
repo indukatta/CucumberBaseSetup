@@ -46,6 +46,7 @@ public class ExcelUtils {
             Cell.setCellType(CellType.STRING);
             return Cell.getStringCellValue();
         }catch (Exception e){
+            System.out.println("Unable to read Excel");
             return"";
         }
 
@@ -90,7 +91,7 @@ public class ExcelUtils {
             }
 
             // Constant variables Test Data path and Test Data file name
-            FileOutputStream fileOut = new FileOutputStream(Constants.Path_TestData + Constants.File_SICCodes);
+            FileOutputStream fileOut = new FileOutputStream(Constants.Path_TestData + Constants.File_User_Data);
             ExcelWBook.write(fileOut);
             fileOut.flush();
             fileOut.close();

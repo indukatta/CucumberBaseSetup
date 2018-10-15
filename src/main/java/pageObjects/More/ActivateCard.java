@@ -20,6 +20,9 @@ public class ActivateCard extends GuiCommands {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
+    @iOSFindBy(accessibility = "Activate card")
+    private MobileElement activateCardTitle;
+
     @iOSFindBy(accessibility = "activate_card.textfield.card_number")
     private MobileElement cardNumberTextbox;
 
@@ -53,6 +56,13 @@ public class ActivateCard extends GuiCommands {
     @iOSFindBy(accessibility = "activate_card_progress_status.error.generic_error")
     private MobileElement timeoutError;
 
+    @iOSFindBy(accessibility = "modal_action_progress_indicator.button.done")
+    private MobileElement activatedDoneButton;
+
+    public boolean activateCardTitleDisplayed(){
+        return activateCardTitle.isDisplayed();
+    }
+
     public boolean activateACardScreen(){
         cardsManagement.navigateToActivateCard();
         boolean one  = cardNumberTextbox.isDisplayed();
@@ -73,7 +83,7 @@ public class ActivateCard extends GuiCommands {
         try {
             two = !errorMessage.isDisplayed();
         } catch (NoSuchElementException e){
-            two = true;
+            two = false;
         }
         return one && two;
     }
@@ -213,5 +223,12 @@ public class ActivateCard extends GuiCommands {
         writeText(expiryDateTextbox, "1225");
         click(activateCardButton);
         return timeoutError.isDisplayed();
+    }
+
+    public void passThroughSuccessfulCardActivation(){
+        writeText(cardNumberTextbox, GetCardsTestData.getSuccssfullCardNumber());
+        writeText(expiryDateTextbox, "1225");
+        click(activateCardButton);
+        click(activatedDoneButton);
     }
 }
