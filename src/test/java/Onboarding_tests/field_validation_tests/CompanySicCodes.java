@@ -24,7 +24,7 @@ public class CompanySicCodes extends Base_test {
 
     @DataProvider(name = "dataSet")
     public Object[][] testDataProvider() {
-        return new ExcelDataDriver(Constants.File_Field_Validation_Tests, "CompanySicCodes").createDataProvider();
+        return new ExcelDataDriver(Constants.File_OnBoarding_Field_Validation_Tests, "CompanySicCodes").createDataProvider();
     }
 
     @BeforeMethod

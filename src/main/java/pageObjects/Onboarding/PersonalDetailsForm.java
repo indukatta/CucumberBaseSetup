@@ -5,7 +5,6 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSFindBy;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import testData.RandomDataGenerator;
 import utils.GuiCommands;
@@ -227,7 +226,7 @@ public class PersonalDetailsForm extends GuiCommands {
 //        click(personBusinessAndResidentialEqualNo);
 //        writeText(addressSearch, address);
 //        clickGenericIostableCell();
-        click(personBusinessAndResidentialEqualYes);
+
         click(personDualNationalNo);
         writeText(personNationalInsuranceNumber, number);
         click(personIdType);
@@ -238,4 +237,59 @@ public class PersonalDetailsForm extends GuiCommands {
         clickGenericIostableCell();
         click(nextButton);
     }
+
+    public void clickBackToOwnershipScreen(){
+        click(backToOwnershipScreen);
+    }
+
+    public void setConfirmOwnershipYes(){
+        click(confirmOwnership);
+    }
+
+    public boolean isNextButtonEnabled(){
+        return nextButton.isEnabled();
+    }
+
+    public void personalDetailsMandatoryFields(boolean isNameChanged, String name, boolean setDOB, boolean isHomeAddressSameAsBusinessAddress,
+                                        boolean isDualNational, String niNnumber, boolean setPersonalId,String personalIdValue,
+                                        boolean setJurisdictionCountry, String country){
+
+        click(confirmOwnership);
+
+        if(isNameChanged){
+            click(personNameChangedYes);
+            writeText(personPreviousName, name);
+        }
+
+        if(setDOB) {
+            click(personDOB);
+            click(pickerWheelDone);
+        }
+
+        if(isHomeAddressSameAsBusinessAddress) {
+            click(personBusinessAndResidentialEqualYes);
+        }
+
+        if(!isDualNational){
+            click(personDualNationalNo);
+        }
+
+        writeText(personNationalInsuranceNumber, niNnumber);
+
+        if(setPersonalId){
+            click(personIdType);
+            click(pickerWheelDone);
+            writeText(personIdNumber, personalIdValue);
+        }else{
+            writeText(personIdNumber, personalIdValue);
+        }
+
+        if(setJurisdictionCountry) {
+            click(personJurisdictionOfTaxResidency);
+            writeText(countrySearch, country);
+            clickGenericIostableCell();
+        }
+    }
+
+
 }
