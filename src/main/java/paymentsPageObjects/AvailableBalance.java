@@ -271,8 +271,8 @@ public class AvailableBalance extends GuiCommands {
         for (int i = 1; i < 10; i++){
             if (continueButton.isEnabled()){
                 writeNumber(payeeAccNumber,i);
-                 one = payeeAccNumber.getText().equals("12345678");
-                 break;
+                one = payeeAccNumber.getText().equals("12345678");
+                break;
             }
             else {
                 writeNumber(payeeAccNumber,i);
