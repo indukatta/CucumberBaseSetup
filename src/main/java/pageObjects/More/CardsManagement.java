@@ -42,7 +42,7 @@ public class CardsManagement extends GuiCommands {
     public void clickBack(){
         click(clickBack);
     }
-
+    
     public boolean cardManagementScreenHasReportLostStolen() {
         more.navigateToCardManagement();
         boolean one = isTitleDisplayed();
@@ -60,12 +60,12 @@ public class CardsManagement extends GuiCommands {
         click(activateCardButton);
     }
 
-    public boolean cardManagmentScreenHasActivateCard(){
-        more.navigateToCardManagement();
-        boolean one = isTitleDisplayed();
-        boolean two = activateCardButton.isEnabled();
-        click(activateCardButton);
-        return one && two;
-    }
+   public boolean cardManagmentScreenHasActivateCard(){
+       more.navigateToCardManagement();
+       boolean one = isTitleDisplayed();
+       boolean two = activateCardButton.isEnabled();
+       click(activateCardButton);
+       return one && two;
+   }
 }
 

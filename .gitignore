@@ -1,6 +1,6 @@
 *.png
 .idea/workspace.xml
 config.properties
-*.class
+target
 .idea/misc.xml
 
