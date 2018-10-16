@@ -1,12 +1,4 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<<<<<<< HEAD
-<suite name="Onboarding">
-    <!--<listeners>-->
-        <!--<listener class-name="org.uncommons.reportng.HTMLReporter"/>-->
-        <!--<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>-->
-    <!--</listeners>-->
-    <test name="Set Up Test">
-=======
 <suite name="Release 1">
 <listeners>
 <listener class-name="org.uncommons.reportng.HTMLReporter"/>
@@ -18,41 +10,20 @@
     </classes>
 </test>
     <test name="Manual Onboarding - Business search" verbose="2">
->>>>>>> 2be21f2c556081dca7cb4c9651e4ff9211a7c3cf
-        <classes>
-            <class name= "Onboarding_tests.SetUpTests"/>
-        </classes>
-    </test>
-<<<<<<< HEAD
-    <test name="Business Search Tests">
-=======
-    <test name="Manual Onboarding - Personal details" verbose="2">
->>>>>>> 2be21f2c556081dca7cb4c9651e4ff9211a7c3cf
         <classes>
             <class name="Onboarding_tests.businessSearchTests"/>
         </classes>
     </test>
-<<<<<<< HEAD
-    <test name="Business Form Tests">
-=======
     <test name="Manual Onboarding - Business form" verbose="2">
->>>>>>> 2be21f2c556081dca7cb4c9651e4ff9211a7c3cf
         <classes>
             <class name="Onboarding_tests.businessFormTests"/>
         </classes>
     </test>
-<<<<<<< HEAD
-    <test name="Personal Details Tests">
-=======
     <test name="Manual Onboarding - Ongoing source of wealth" verbose="2">
->>>>>>> 2be21f2c556081dca7cb4c9651e4ff9211a7c3cf
         <classes>
             <class name="Onboarding_tests.personalDetailsTests"/>
         </classes>
     </test>
-<<<<<<< HEAD
-</suite>
-=======
     <test name="Manual Onboarding - End-to-end" verbose="2">
         <classes>
             <class name= "Onboarding_tests.endToEndTests"/>
@@ -73,7 +44,7 @@
 <!--</test>-->
 <test name="Faster Payments Without Contacts | Quick Pay" verbose="2">
     <classes>
-        <class name= "Payments_tests.paymentTests"/>
+        <class name= "Payments_tests.paymentsTests"/>
     </classes>
 </test>
 </suite>
@@ -84,4 +55,3 @@
     <!--</classes>-->
 <!--</test>-->
 <!--</suite>-->
->>>>>>> 2be21f2c556081dca7cb4c9651e4ff9211a7c3cf
