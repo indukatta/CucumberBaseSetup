@@ -86,7 +86,7 @@ public class AccountsTab extends GuiCommands {
     //Test Methods
 
     public boolean emptyStateVerification(){
-        login.differentUserLogin("NOTRANSACTIONUSER","NOTRANSACTIONPASSWORD");
+        login.loginAsUser("NOTRANSACTIONUSER","NOTRANSACTIONPASSWORD");
         boolean one = noTrasactionTitle.isDisplayed();
         boolean two = noTransSortCode.getText().matches("^\\d{2}-\\d{2}-\\d{2}");
         boolean three = noTransAccountNum.getText().matches("^\\d{8}");
@@ -111,7 +111,7 @@ public class AccountsTab extends GuiCommands {
     }
 
     public boolean oneMonthBar() {
-        login.differentUserLogin("ONETRANUSER","TESTPASSWORD");
+        login.loginAsUser("ONETRANUSER","TESTPASSWORD");
         boolean one;
         try {
             one = !monthsBar.isDisplayed();

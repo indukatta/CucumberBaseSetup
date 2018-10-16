@@ -101,7 +101,7 @@ public class RecentPayees extends GuiCommands {
         return one && two;
     }
     public boolean noRecentPayee(){
-        login.differentUserLogin("NOTRANSACTIONUSER","NOTRANSACTIONPASSWORD");
+        login.loginAsUser("NOTRANSACTIONUSER","NOTRANSACTIONPASSWORD");
         click(paymentsTab);
         boolean one;
         try {

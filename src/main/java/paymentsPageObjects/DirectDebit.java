@@ -6,8 +6,6 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 import pageObjects.Login.Login;
 import utils.GuiCommands;
 
-import java.security.cert.X509Certificate;
-
 public class DirectDebit extends GuiCommands {
 
     Login login = new Login(driver);
@@ -96,37 +94,62 @@ public class DirectDebit extends GuiCommands {
     @iOSFindBy(accessibility = "direct_debit_details.cancel")
     private MobileElement cancelDDButton;
 
+    @iOSFindBy(accessibility = "direct_debit_details.header")
+    private MobileElement dDDetailsTitle;
+
+    @iOSFindBy(accessibility = "Please make sure to contact your payee if you would like to make changes to " +
+            "this direct debit.")
+    private MobileElement detailsInformativeText;
+
+    @iOSFindBy(accessibility = "Direct debits")
+    private MobileElement detailsBB;
+
+    @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"rightLabel\"])[1]")
+    private MobileElement lastPayAmount;
+
+    @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"rightLabel\"])[2]")
+    private MobileElement lastPayDate;
+
+    @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"rightLabel\"])[3]")
+    private MobileElement reference;
+
     // Custom Methods
 
-    public void navigateToDDScreen(String user, String pass){
+    public void navigateToDDScreenAsUser(String user, String pass){
         login.loginAsUser(user,pass);
         click(paymentsTab);
         click(viewSPayments);
     }
+    public void nanavigateToDDScreen(){
+        login.navigateToLogin();
+        click(paymentsTab);
+        click(viewSPayments);
+    }
+
 
     // Test Methods
 
     public boolean emptyState(){
-        navigateToDDScreen("NOTRANSACTIONUSER","NOTRANSACTIONPASSWORD");
+        navigateToDDScreenAsUser("NOTRANSACTIONUSER","NOTRANSACTIONPASSWORD");
         boolean one = noDDMessage.isDisplayed();
 
         return one;
     }
     public boolean BBValidation(){
-        navigateToDDScreen("TESTUSER","TESTPASSWORD");
+        nanavigateToDDScreen();
         click(directDebitBB);
         boolean one = paymentsTitle.isDisplayed();
 
         return one;
     }
     public boolean isInformativeTextShown(){
-        navigateToDDScreen("TESTUSER","TESTPASSWORD");
+        nanavigateToDDScreen();
         boolean one = infomativeText.isDisplayed();
 
         return one;
     }
     public boolean displayDD(){
-        navigateToDDScreen("TESTUSER","TESTPASSWORD");
+        nanavigateToDDScreen();
         boolean one = recentDirectDebits.isDisplayed();
         boolean two = dDPaymentAmount.getText().matches("^(\\d{1,3},)?\\d{1,3}.\\d{2} GBP$");
         boolean three = merchantName.getText().matches(".*");
@@ -136,7 +159,7 @@ public class DirectDebit extends GuiCommands {
         return one && two && three && four && five;
     }
     public boolean isFailureErrMsgDisplayed(){
-        navigateToDDScreen("THREETRANUSER","TESTPASSWORD");
+        navigateToDDScreenAsUser("THREETRANUSER","TESTPASSWORD");
         boolean one = failureMessage.isEnabled() && noDDMessage.isDisplayed();
         System.out.println(one);
         click(contactSupportBtn);
@@ -146,10 +169,52 @@ public class DirectDebit extends GuiCommands {
         return one && two;
     }
     public boolean isNetworkErrMsgDisplayed(){
-        navigateToDDScreen("TWOTRANUSER","TESTPASSWORD");
-        boolean one = networkErrMessage.isDisplayed() && alertImage.isDisplayed() && noDDMessage.isDisplayed();
+        navigateToDDScreenAsUser("TWOTRANUSER","TESTPASSWORD");
+        boolean one = networkErrMessage.isEnabled() && alertImage.isEnabled() && noDDMessage.isDisplayed();
         boolean two = alertImage.getLocation().toString().equals("(16, 76)");
 
         return one && two;
+    }
+    public boolean isRetryErrMsgDisplayed(){
+        navigateToDDScreenAsUser("ONETRANUSER","TESTPASSWORD");
+        boolean one = networkErrMessage.isEnabled() && alertImage.isEnabled() && recentDirectDebits.isDisplayed();
+        boolean two = alertImage.getLocation().toString().equals("(16, 76)");
+
+        return one && two;
+    }
+
+    public boolean loadDDDetails(){
+        nanavigateToDDScreen();
+        String str1 = firstDD.getText();
+        click(firstDD);
+        boolean one = driver.findElementByName(str1).getLocation().toString().equals("(0, 20)");
+        boolean two = detailsInformativeText.isEnabled() && dDDetailsTitle.isDisplayed();
+
+        return one && two;
+    }
+    public boolean backFromDetailsPage(){
+        nanavigateToDDScreen();
+        click(firstDD);
+        click(detailsBB);
+        boolean one = directDebitTitle.isDisplayed();
+        return one;
+    }
+    public boolean viewDDPage(){
+        nanavigateToDDScreen();
+        click(firstDD);
+        boolean one = dDDetailsTitle.isDisplayed();
+        boolean two = lastPayAmount.getText().matches("^(\\d{1,3},)?\\d{1,3}.\\d{2} GBP$");
+        boolean three = lastPayDate.getText().matches("^\\d{2}\\s[a-zA-z]{3,9}\\s\\d{4}$");
+        boolean four = reference.getText().matches(".*");
+
+        return one && two && three && four;
+    }
+    public boolean isCancelDisplayed(){
+        nanavigateToDDScreen();
+        click(firstDD);
+        boolean one = cancelDDButton.isEnabled();
+
+        return one;
+
     }
 }

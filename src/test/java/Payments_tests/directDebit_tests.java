@@ -39,5 +39,21 @@ public class directDebit_tests extends Base_test {
 
     @Test(priority = 6, description = "Network error message")
     public void CUICE7040() {Assert.assertTrue(directDebit.isNetworkErrMsgDisplayed());}
+
+    @Test(priority = 6, description = "Retry - Display warning in snackbar")
+    public void CUICE7039() {Assert.assertTrue(directDebit.isRetryErrMsgDisplayed());}
+
+    @Test(priority = 7, description = "Navigate to direct debit details page")
+    public void CUICE7051() {Assert.assertTrue(directDebit.loadDDDetails());}
+
+    @Test(priority = 8, description = "Direct debit details page view")
+    public void CUICE7052() {Assert.assertTrue(directDebit.viewDDPage());}
+
+    @Test(priority = 9, description = "Back button from direct debits details")
+    public void CUICE7053() {Assert.assertTrue(directDebit.backFromDetailsPage());}
+
+    @Test(priority = 10, description = "Cancel Direct Debit is shown")
+    public void CUICE7054() {Assert.assertTrue(directDebit.isCancelDisplayed());}
+
 }
 
