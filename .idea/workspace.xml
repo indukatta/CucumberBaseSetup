@@ -2,10 +2,144 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d068524-d172-4dd2-882a-e468c3dce49b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AccountsTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AccountsTab.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_72.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_javafaker_javafaker_0_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_mifmif_generex_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_04.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_23_6_jre.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_13_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_1_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_validator_commons_validator_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dk_brics_automaton_automaton_1_11_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_appium_java_client_6_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_websocket_javax_websocket_api_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_8_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_9_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_9_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_exec_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_extras_beanshell_bsh_2_0b6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_compat_qual_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_grizzly_grizzly_framework_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_grizzly_grizzly_http_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_grizzly_grizzly_http_server_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_grizzly_grizzly_rcm_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_tyrus_tyrus_client_1_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_tyrus_tyrus_container_grizzly_1_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_tyrus_tyrus_core_1_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_tyrus_tyrus_spi_1_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openpnp_opencv_3_2_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_14_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_uncommons_reportng_1_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_android_1_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__velocity_velocity_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__velocity_velocity_dep_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Iceberg.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Overview/Overview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/testData/ExcelFiles/UserData.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/testData/ExcelFiles/~$E2E_Test_Data.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/testData/ExcelFiles/~$UserData.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/testData/getUserData/GetUserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/Login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Login/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/More/ActivateCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/More/ActivateCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/More/CardsManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/More/CardsManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/More/More.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/More/More.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/BusinessDetailsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/BusinessDetailsForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/SetUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/SetUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/TransactionDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/TransactionDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/paymentsPageObjects/DirectDebit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/paymentsPageObjects/DirectDebit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/paymentsPageObjects/RecentPayees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/paymentsPageObjects/RecentPayees.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Payments_tests/directDebit_tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Payments_tests/directDebit_tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/testData/ExcelFiles/E2E_Test_Data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testData/ExcelFiles/E2E_Test_Data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/testData/ExcelFiles/Users.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/ExcelUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ExcelUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/GuiCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/GuiCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Cards_tests/CUICE460_ActivateACard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Cards_tests/CUICE460_ActivateACard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/CSM/MessagingScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/CSM/SupportScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/Login/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/Login/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/BusinessDetailsForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/BusinessDetailsForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/BusinessSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/DepositorsDetailsForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/OngoingSourceOfWealth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/PersonalDetailsForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/PersonalDetailsForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/SetUp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/SourceOfFunds.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/Onboarding/TransactionDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/paymentsPageObjects/AvailableBalance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/paymentsPageObjects/AvailableBalance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/testData/CheckBoxElements.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/testData/ExcelFiles/E2E_Test_Data.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/testData/ExcelFiles/Users.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/testData/RandomDataGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/testData/onboardingTestData/GetE2ETestData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/ExcelUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/GuiCommands.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/ScreenshotUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CSM_Tests/messagingScreenTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CSM_Tests/supportScreenTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Cards_tests/activateCardsTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Cards_tests/reportCardLostOrStolen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/OngoingSourceOfWealthTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/businessFormTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/businessFormTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/businessSearchTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/endToEndTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/personalDetailsTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/personalDetailsTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Onboarding_tests/setUpTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Payments_tests/paymentTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Payments_tests/paymentsTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Payments_tests/paymentsTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Transactions_tests/transactionsTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testUtils/Base_test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testUtils/ConfigReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testUtils/TestListener.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -62,30 +196,30 @@
         <counts>
           <entry key="class" value="7" />
           <entry key="gitignore" value="2" />
-          <entry key="java" value="176" />
-          <entry key="properties" value="12" />
+          <entry key="java" value="179" />
+          <entry key="properties" value="13" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="7" />
-          <entry key="JAVA" value="176" />
+          <entry key="JAVA" value="179" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Properties" value="12" />
+          <entry key="Properties" value="13" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="34" />
-          <entry key="java" value="22217" />
+          <entry key="java" value="22227" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="22217" />
+          <entry key="JAVA" value="22227" />
           <entry key="PLAIN_TEXT" value="34" />
           <entry key="XML" value="3" />
         </counts>
@@ -125,10 +259,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2935">
+              <caret line="320" column="78" selection-start-line="320" selection-start-column="46" selection-end-line="320" selection-end-column="78" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/directDebit_tests.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="423">
-              <caret line="37" column="73" lean-forward="true" selection-start-line="37" selection-start-column="73" selection-end-line="37" selection-end-column="73" />
+              <caret line="37" column="73" selection-start-line="37" selection-start-column="73" selection-end-line="37" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#384#385#0" expanded="true" />
@@ -138,14 +284,45 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/DirectDebit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="96" column="41" selection-start-line="96" selection-start-column="41" selection-end-line="96" selection-end-column="41" />
+            <state relative-caret-position="1485">
+              <caret line="101" column="37" selection-start-line="101" selection-start-column="37" selection-end-line="101" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Login/Login.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2449">
+              <caret line="218" column="1" selection-start-line="218" selection-start-column="1" selection-end-line="218" selection-end-column="1" />
+              <folding>
+                <element signature="e#2580#2581#0" expanded="true" />
+                <element signature="e#2625#2626#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="143" selection-start-line="3" selection-start-column="143" selection-end-line="3" selection-end-column="143" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/BusinessDetailsForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5352">
+              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -178,7 +355,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/recentPayees_tests.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="20" column="49" lean-forward="true" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+              <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#383#384#0" expanded="true" />
@@ -259,17 +436,17 @@
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/PersonalDetailsForm.java" />
         <option value="$PROJECT_DIR$/src/test/java/Onboarding_tests/personalDetailsTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/Onboarding_tests/businessFormTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/BusinessDetailsForm.java" />
         <option value="$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/Payments_tests/accountsTab_tests.java" />
         <option value="$PROJECT_DIR$/src/test/java/Payments_tests/recentPayees_tests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pageObjects/Login/Login.java" />
         <option value="$PROJECT_DIR$/config.properties" />
         <option value="$PROJECT_DIR$/src/test/java/Payments_tests/hrCodes_tests.java" />
         <option value="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java" />
         <option value="$PROJECT_DIR$/src/main/java/paymentsPageObjects/AccountsTab.java" />
         <option value="$PROJECT_DIR$/src/main/java/paymentsPageObjects/RecentPayees.java" />
         <option value="$PROJECT_DIR$/src/test/java/Payments_tests/directDebit_tests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pageObjects/Login/Login.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/BusinessDetailsForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/paymentsPageObjects/DirectDebit.java" />
       </list>
     </option>
@@ -420,35 +597,6 @@
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="paymentsPageObjects" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
-            <path>
-              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Payments_tests" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="uitesting" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Iceberg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="testUtils" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -456,7 +604,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539622154280" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539622156362" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -684,7 +832,7 @@
     <frame x="0" y="23" width="1680" height="951" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1916972" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1916972" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -693,7 +841,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969698" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.498779" visible="true" weight="0.24330617" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498779" visible="true" weight="0.24330617" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39813736" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -861,13 +1009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/BusinessDetailsForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5445">
-          <caret line="401" column="105" selection-start-line="401" selection-start-column="105" selection-end-line="401" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Onboarding_tests/personalDetailsTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -924,34 +1065,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="143" selection-start-line="3" selection-start-column="143" selection-end-line="3" selection-end-column="143" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="320" column="78" selection-start-line="320" selection-start-column="46" selection-end-line="320" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Login/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="196" column="20" selection-start-line="196" selection-start-column="20" selection-end-line="196" selection-end-column="20" />
-          <folding>
-            <element signature="e#2580#2581#0" expanded="true" />
-            <element signature="e#2625#2626#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/paymentsTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -982,7 +1095,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/recentPayees_tests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="20" column="49" lean-forward="true" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#383#384#0" expanded="true" />
@@ -1024,7 +1137,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/Payments_tests/directDebit_tests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
-          <caret line="37" column="73" lean-forward="true" selection-start-line="37" selection-start-column="73" selection-end-line="37" selection-end-column="73" />
+          <caret line="37" column="73" selection-start-line="37" selection-start-column="73" selection-end-line="37" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#384#385#0" expanded="true" />
@@ -1033,13 +1146,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/DirectDebit.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/AvailableBalance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="96" column="41" selection-start-line="96" selection-start-column="41" selection-end-line="96" selection-end-column="41" />
+        <state relative-caret-position="-2935">
+          <caret line="320" column="78" selection-start-line="320" selection-start-column="46" selection-end-line="320" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/paymentsPageObjects/DirectDebit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1485">
+          <caret line="101" column="37" selection-start-line="101" selection-start-column="37" selection-end-line="101" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Login/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2449">
+          <caret line="218" column="1" selection-start-line="218" selection-start-column="1" selection-end-line="218" selection-end-column="1" />
+          <folding>
+            <element signature="e#2580#2581#0" expanded="true" />
+            <element signature="e#2625#2626#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="143" selection-start-line="3" selection-start-column="143" selection-end-line="3" selection-end-column="143" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Onboarding/BusinessDetailsForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5352">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
         </state>
       </provider>
     </entry>

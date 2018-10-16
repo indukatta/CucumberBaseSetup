@@ -9,5 +9,8 @@
         <module name="Iceberg" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Iceberg" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

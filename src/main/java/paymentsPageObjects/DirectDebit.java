@@ -99,7 +99,7 @@ public class DirectDebit extends GuiCommands {
     // Custom Methods
 
     public void navigateToDDScreen(String user, String pass){
-        login.differentUserLogin(user,pass);
+        login.loginAsUser(user,pass);
         click(paymentsTab);
         click(viewSPayments);
     }

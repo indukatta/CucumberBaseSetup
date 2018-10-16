@@ -118,88 +118,88 @@ public class Login extends GuiCommands {
     }
 
 
-        public boolean successfulLogin() {
-            clickexistingCustomerButton();
-            writeUsername("TESTUSER");
-            clickusernameNextButton();
-            clickpasswordLoginButton();
-            return isaccountTitleDisplayed();
-        }
+    public boolean successfulLogin() {
+        clickexistingCustomerButton();
+        writeUsername("TESTUSER");
+        clickusernameNextButton();
+        clickpasswordLoginButton();
+        return isaccountTitleDisplayed();
+    }
 
-        public boolean incorrectLogin () {
-            clickexistingCustomerButton();
-            writeUsername("TESTUSE");
-            clickusernameNextButton();
-            clickpasswordLoginButton();
-            return iserrorMessageDisplayed();
-        }
+    public boolean incorrectLogin() {
+        clickexistingCustomerButton();
+        writeUsername("TESTUSE");
+        clickusernameNextButton();
+        clickpasswordLoginButton();
+        return iserrorMessageDisplayed();
+    }
 
-        public boolean incorrectPassword () {
-            clickexistingCustomerButton();
-            writeUsername("TESTUSER");
-            clickusernameNextButton();
-            clickshowPasswordCheckBox();
-            clickpasswordFieldBox();
-            writePassword("TESTPASSWOR");
-            clickpasswordLoginButton();
-            return isaccountTitleDisplayed();
-        }
+    public boolean incorrectPassword() {
+        clickexistingCustomerButton();
+        writeUsername("TESTUSER");
+        clickusernameNextButton();
+        clickshowPasswordCheckBox();
+        clickpasswordFieldBox();
+        writePassword("TESTPASSWOR");
+        clickpasswordLoginButton();
+        return isaccountTitleDisplayed();
+    }
 
-        public boolean canUserLogout () {
-            successfulLogin();
-            clicklogoutButton();
-            return islogoutScreenDisplayed();
-        }
+    public boolean canUserLogout() {
+        successfulLogin();
+        clicklogoutButton();
+        return islogoutScreenDisplayed();
+    }
 
-        public boolean showPasswordCheckBox () {
-            clickexistingCustomerButton();
-            writeUsername("TESTUSER");
-            clickusernameNextButton();
-            clickshowPasswordCheckBox();
-            return ispasswordFieldBoxDisplayed();
-        }
+    public boolean showPasswordCheckBox() {
+        clickexistingCustomerButton();
+        writeUsername("TESTUSER");
+        clickusernameNextButton();
+        clickshowPasswordCheckBox();
+        return ispasswordFieldBoxDisplayed();
+    }
 
-        public boolean navigateToPasswordField () {
-            clickexistingCustomerButton();
-            writeUsername("TESTUSER");
-            clickusernameNextButton();
-            clickshowPasswordCheckBox();
-            clickpasswordFieldBox();
-            return ispasswordFieldBoxDisplayed();
-        }
+    public boolean navigateToPasswordField() {
+        clickexistingCustomerButton();
+        writeUsername("TESTUSER");
+        clickusernameNextButton();
+        clickshowPasswordCheckBox();
+        clickpasswordFieldBox();
+        return ispasswordFieldBoxDisplayed();
+    }
 
-        public boolean navigateToPasswordScreen () {
-            clickexistingCustomerButton();
-            writeUsername("TESTUSER");
-            clickusernameNextButton();
-            return ispasswordFieldBoxDisplayed();
-        }
+    public boolean navigateToPasswordScreen() {
+        clickexistingCustomerButton();
+        writeUsername("TESTUSER");
+        clickusernameNextButton();
+        return ispasswordFieldBoxDisplayed();
+    }
 
-        public boolean navigateToUsernameFieldBox () {
-            clickexistingCustomerButton();
-            clickusernameFieldBox();
-            clickusernameNextButton();
-            clickpasswordLoginButton();
-            return isusernameFieldBoxDiplay();
-        }
+    public boolean navigateToUsernameFieldBox() {
+        clickexistingCustomerButton();
+        clickusernameFieldBox();
+        clickusernameNextButton();
+        clickpasswordLoginButton();
+        return isusernameFieldBoxDiplay();
+    }
 
-        public boolean navigateToUsernamePage () {
-            clickexistingCustomerButton();
-            return isusernameFieldBoxDiplay();
-        }
+    public boolean navigateToUsernamePage() {
+        clickexistingCustomerButton();
+        return isusernameFieldBoxDiplay();
+    }
 
-        public boolean logoutTest () {
-            successfulLogin();
-            clicklogoutButton();
-            return iswelcomeTitleDisplayed();
-        }
+    public boolean logoutTest() {
+        successfulLogin();
+        clicklogoutButton();
+        return iswelcomeTitleDisplayed();
+    }
 
-        public void navigateToLogin () {
-            clickexistingCustomerButton();
-            writeUsername("TESTUSER");
-            clickusernameNextButton();
-            clickpasswordLoginButton();
-        }
+    public void navigateToLogin() {
+        clickexistingCustomerButton();
+        writeUsername("TESTUSER");
+        clickusernameNextButton();
+        clickpasswordLoginButton();
+    }
 
     public void passThroughLogin() {
         clickexistingCustomerButton();
@@ -207,7 +207,8 @@ public class Login extends GuiCommands {
         clickusernameNextButton();
         clickpasswordLoginButton();
     }
-    public void differentUserLogin(String username, String password){
+
+    public void loginAsUser(String username, String password) {
         clickexistingCustomerButton();
         writeUsername(username);
         clickusernameNextButton();
@@ -215,5 +216,4 @@ public class Login extends GuiCommands {
         writePassword(password);
         clickpasswordLoginButton();
     }
-
-    }
+}

@@ -328,4 +328,11 @@ public class GuiCommands {
             return false;
         }
     }
+
+    protected void scrollToEnd(){
+        JavascriptExecutor js = driver;
+        HashMap<String, String> scrollObject = new HashMap<>();
+        scrollObject.put("direction", "down");
+        js.executeScript("mobile: scroll", scrollObject);
+    }
 }

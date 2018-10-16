@@ -32,8 +32,15 @@ public class CardsManagement extends GuiCommands {
     @iOSFindBy(accessibility = "card_management.rows.activate_card")
     private MobileElement activateCardButton;
 
+    @iOSFindBy(accessibility = "More")
+    private MobileElement clickBack;
+
     public boolean isTitleDisplayed(){
         return cardManagementTitle.isDisplayed();
+    }
+
+    public void clickBack(){
+        click(clickBack);
     }
 
    public boolean cardManagementScreenHasReportLostStolen() {
@@ -51,6 +58,14 @@ public class CardsManagement extends GuiCommands {
    public void navigateToActivateCard(){
         more.navigateToCardManagement();
         click(activateCardButton);
+   }
+
+   public boolean cardManagmentScreenHasActivateCard(){
+       more.navigateToCardManagement();
+       boolean one = isTitleDisplayed();
+       boolean two = activateCardButton.isEnabled();
+       click(activateCardButton);
+       return one && two;
    }
 }
 

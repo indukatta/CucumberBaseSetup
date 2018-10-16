@@ -67,6 +67,7 @@ public class TransactionDetails extends GuiCommands {
         clickExpectedPayField();
         clickDone();
         clickNextButton();
+        scrollToEnd();
     }
 
     public boolean navigateToTransactionDetails(){
