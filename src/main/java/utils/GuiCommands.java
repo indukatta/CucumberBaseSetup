@@ -228,11 +228,11 @@ public class GuiCommands {
     //Package private scroll
     protected void scrollDown(MobileElement element){
         while (!element.isDisplayed()) {
-                TouchAction actions = new TouchAction(driver);
-                actions.press(PointOption.point(10, 250))
-                        .waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000)))
-                        .moveTo(PointOption.point(10, -5))
-                        .perform();
+            TouchAction actions = new TouchAction(driver);
+            actions.press(PointOption.point(10, 250))
+                    .waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000)))
+                    .moveTo(PointOption.point(10, -5))
+                    .perform();
         }
     }
 
@@ -269,12 +269,12 @@ public class GuiCommands {
         System.out.println(map.get("year") + " " + map.get("month") + " " + map.get("day"));
         scrollDown(element);
         click(element);
-        WebElement yearElement = (WebElement) driver.findElements(By.className("XCUIElementTypePickerWheel")).get(2);
-        yearElement.sendKeys(map.get("year"));
+        WebElement yearElement = (WebElement) driver.findElements(By.className("XCUIElementTypePickerWheel")).get(0);
+        yearElement.sendKeys(map.get("month"));
         WebElement monthElement = (WebElement) driver.findElements(By.className("XCUIElementTypePickerWheel")).get(1);
-        monthElement.sendKeys(map.get("month"));
-        WebElement dayElement = (WebElement) driver.findElements(By.className("XCUIElementTypePickerWheel")).get(0);
-        dayElement.sendKeys(map.get("day"));
+        monthElement.sendKeys(map.get("day"));
+        WebElement dayElement = (WebElement) driver.findElements(By.className("XCUIElementTypePickerWheel")).get(2);
+        dayElement.sendKeys(map.get("year"));
     }
 
     protected void IosPickerWheel(MobileElement element, String choice){
@@ -327,5 +327,12 @@ public class GuiCommands {
         catch (ElementNotVisibleException e) {
             return false;
         }
+    }
+
+    protected void scrollToEnd(){
+        JavascriptExecutor js = driver;
+        HashMap<String, String> scrollObject = new HashMap<>();
+        scrollObject.put("direction", "down");
+        js.executeScript("mobile: scroll", scrollObject);
     }
 }

@@ -36,7 +36,7 @@ public class GetE2ETestData {
             String howTheFundsWereGenerated = ExcelUtils.getCellData(RowNum, 17);
 
             Object objects[] = {mobile, email, company, tradingName, taxResidency, UTR, previousName, residentialAddress, natInsuranceNumber,
-            idNumber, annualTurnover, country, valueOfCashDeposits, totalDeposits, depositorName, amountTransferred, howTheFundsWereGenerated,};
+                    idNumber, annualTurnover, country, valueOfCashDeposits, totalDeposits, depositorName, amountTransferred, howTheFundsWereGenerated,};
 
             myData.add(objects);
         }

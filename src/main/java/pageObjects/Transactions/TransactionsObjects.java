@@ -131,29 +131,29 @@ public class TransactionsObjects extends GuiCommands {
         String month = null;
         switch (value) {
             case "Jan" : month = "January";
-            break;
+                break;
             case "Feb": month = "February";
-            break;
+                break;
             case "Mar": month = "March";
-            break;
+                break;
             case "Apr": month = "April";
-            break;
+                break;
             case "May": month = "May";
-            break;
+                break;
             case "Jun": month = "June";
-            break;
+                break;
             case "Jul": month = "July";
-            break;
+                break;
             case "Aug": month = "August";
-            break;
+                break;
             case "Sep": month = "September";
-            break;
+                break;
             case "Oct": month = "October";
-            break;
+                break;
             case "Nov": month = "November";
-            break;
+                break;
             case "Dec": month = "December";
-            break;
+                break;
         }
 
         int firstMonth = months.indexOf(month);

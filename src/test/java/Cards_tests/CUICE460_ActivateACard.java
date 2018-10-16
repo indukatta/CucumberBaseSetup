@@ -3,16 +3,28 @@ package Cards_tests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pageObjects.Login.Login;
 import pageObjects.More.ActivateCard;
+import pageObjects.More.CardsManagement;
+import pageObjects.Overview.Overview;
+import testData.getUserData.GetUserData;
 import testUtils.Base_test;
 
 public class CUICE460_ActivateACard extends Base_test {
 
+    private Login login;
     private ActivateCard card;
+    private CardsManagement management;
+    private Overview overview;
 
     @BeforeMethod
     public void beforeMethod() {
         card = new ActivateCard(driver);
+        management = new CardsManagement(driver);
+        overview = new Overview(driver);
+
+        login = new Login(driver);
+        login.loginAsUser(GetUserData.getFirstTimeUser().get("Username").toString(), GetUserData.getFirstTimeUser().get("Password").toString());
     }
 
     @Test(priority = 1, description = "Activate a card screen")
@@ -73,5 +85,27 @@ public class CUICE460_ActivateACard extends Base_test {
     @Test(priority = 12, description = "Card Activation Fail (Timeout)")
     public void CUICE6607(){
         Assert.assertTrue(card.cardActivationTimeout());
+    }
+
+    @Test(priority = 13, description = "Card Activation Prompt")
+    public void CUICE6512(){
+        Assert.assertTrue(overview.isActivateCardBannerDisplayed());
+        Assert.assertTrue(card.activateCardTitleDisplayed());
+    }
+
+    @Test(priority = 14, description = "Remove Card Activation Prompt - activate from banner")
+    public void CUICE6562(){
+        Assert.assertTrue(overview.activateCardBannerRemovedAfterActivation());
+    }
+
+    @Test(priority = 15, description = "Card Activation Menu Option")
+    public void CUICE6564() {
+        Assert.assertTrue(management.cardManagmentScreenHasActivateCard());
+        Assert.assertTrue(card.activateCardTitleDisplayed());
+    }
+
+    @Test(priority = 16, description = "Remove Card Activation Prompt - activate from card management")
+    public void CUICE6936(){
+
     }
 }

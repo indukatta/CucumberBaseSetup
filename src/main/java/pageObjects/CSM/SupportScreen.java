@@ -54,19 +54,19 @@ public class SupportScreen extends GuiCommands {
     public void clickallowNotificationsButton() {
         click(allowNotificationsButton);
     }
-        // Custom Methods
-        public boolean navigateToSupportScreen() {
-            login.navigateToLogin();
-            clickSupportButton();
-            return chatWithUsButton.isDisplayed();
-        }
-        public void passToMessageScreen () {
-            login.navigateToLogin();
-            clickSupportButton();
-            clickchatWithUsButton();
-            clickallowNotificationsButton();
+    // Custom Methods
+    public boolean navigateToSupportScreen() {
+        login.navigateToLogin();
+        clickSupportButton();
+        return chatWithUsButton.isDisplayed();
+    }
+    public void passToMessageScreen () {
+        login.navigateToLogin();
+        clickSupportButton();
+        clickchatWithUsButton();
+        clickallowNotificationsButton();
 
-        }
+    }
 
 }
 

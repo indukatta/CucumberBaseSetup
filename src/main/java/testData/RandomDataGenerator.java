@@ -125,17 +125,17 @@ public class RandomDataGenerator {
         }
         switch (value){
             case 0: incorrectEmail = "random.email";
-            break;
+                break;
             case 1: incorrectEmail = "random@email";
-            break;
+                break;
             case 2: incorrectEmail = "random@email.co#";
-            break;
+                break;
             case 3: incorrectEmail = "@email.com";
-            break;
+                break;
             case 4: incorrectEmail = "email@";
-            break;
+                break;
             case 5: incorrectEmail = setRandomValue(66, "ALPHANUMERIC")+"@email.com";
-            break;
+                break;
             case 6: incorrectEmail = "email@"+setRandomValue(256, "ALPHANUMERIC");
         }
         return this.incorrectEmail = incorrectEmail;
@@ -160,11 +160,11 @@ public class RandomDataGenerator {
 
         switch (type){
             case "NUMERIC": s = randomNumeric(count);
-            break;
+                break;
             case "ALPHABETIC": s = randomAlphabetic(count);
-            break;
+                break;
             default: s = randomAlphanumeric(count);
-            break;
+                break;
         }
 
         return this.randomValue = s;

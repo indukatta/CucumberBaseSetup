@@ -54,8 +54,8 @@ public class endToEndTests extends Base_test {
     @Test(dataProvider = "getTestData")
     public void onboardingEndToEnd(String mobile, String email, String company, String tradingName, String taxResidency, String UTR, String previousName,
                                    String residentialAddress, String natInsuranceNumber, String idNumber, String annualTurnover,
-                       String country, String valueOfCashDeposits, String totalDeposits, String depositorName, String amountTransferred,
-                       String howTheFundsWereGenerated){
+                                   String country, String valueOfCashDeposits, String totalDeposits, String depositorName, String amountTransferred,
+                                   String howTheFundsWereGenerated){
         setUp.setUpWithData(mobile, email);
         businessSearch.populateBusinessSearch(company);
         businessDetailsForm.populateBusinessDetailsForm(tradingName,taxResidency,UTR);
@@ -72,9 +72,9 @@ public class endToEndTests extends Base_test {
     }
     @Test(dataProvider = "getInitialWealth")
     public void onboardingAlternateEndToEnd(String mobile, String email, String company, String tradingName, String taxResidency, String UTR, String previousName,
-                                   String residentialAddress, String natInsuranceNumber, String idNumber, String annualTurnover,
-                                   String country, String valueOfCashDeposits, String totalDeposits, String depositorName, String amountTransferred,
-                                   String howTheFundsWereGenerated,String investorName,String initialAmount, String investedAmount,String investorsCountry,String FundsGenerated){
+                                            String residentialAddress, String natInsuranceNumber, String idNumber, String annualTurnover,
+                                            String country, String valueOfCashDeposits, String totalDeposits, String depositorName, String amountTransferred,
+                                            String howTheFundsWereGenerated,String investorName,String initialAmount, String investedAmount,String investorsCountry,String FundsGenerated){
         setUp.setUpWithData(mobile, email);
         businessSearch.populateBusinessSearch(company);
         businessDetailsForm.populateBusinessDetailsForm(tradingName,taxResidency,UTR);

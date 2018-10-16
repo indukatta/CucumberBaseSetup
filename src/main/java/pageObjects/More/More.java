@@ -33,7 +33,6 @@ public class More extends GuiCommands {
     private MobileElement creditAndLendingButton;
 
     public void navigateToCardManagement(){
-        login.passThroughLogin();
         click(moreButton);
         click(cardManagmentButton);
     }
