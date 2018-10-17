@@ -67,4 +67,19 @@ public class CUICE452_ReportACardLostOrStolen extends Base_test {
     public void CUICE6740(){
         Assert.assertTrue(info.verifyReportAndCancelButton());
     }
+
+    @Test(priority = 10, description = "Report Card Lost/Stolen and PIN Compromised")
+    public void CUICE7151(){
+        Assert.assertTrue(info.reportCardLostStolenPinCompromised());
+    }
+
+    @Test(priority = 11, description = "Report Card Lost/Stolen and PIN Not Compromised")
+    public void CUICE7152(){
+        Assert.assertTrue(info.reportCardLostStolenPinNotCompromised());
+    }
+
+    @Test(priority = 12, description = "Report Card Lost/Stolen and PIN Compromised")
+    public void CUICE7149(){
+        Assert.assertTrue(info.reportLostStolenBackendValidationError());
+    }
 }
