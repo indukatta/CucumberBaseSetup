@@ -6,6 +6,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSFindBy;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.PageFactory;
+import pageObjects.Overview.Overview;
 import testData.RandomDataGenerator;
 import testData.cardsTestData.GetCardsTestData;
 import utils.GuiCommands;
@@ -14,6 +15,7 @@ public class ActivateCard extends GuiCommands {
 
     private CardsManagement cardsManagement = new CardsManagement(driver);
     private RandomDataGenerator generator = new RandomDataGenerator();
+    private Overview overview = new Overview(driver);
 
     public ActivateCard(IOSDriver driver) {
         super(driver);
@@ -60,6 +62,7 @@ public class ActivateCard extends GuiCommands {
     private MobileElement activatedDoneButton;
 
     public boolean activateCardTitleDisplayed(){
+        overview.clickBanner();
         return activateCardTitle.isDisplayed();
     }
 
@@ -230,5 +233,31 @@ public class ActivateCard extends GuiCommands {
         writeText(expiryDateTextbox, "1225");
         click(activateCardButton);
         click(activatedDoneButton);
+    }
+
+    public boolean activateCardBannerRemovedAfterCardManagementActivation() {
+        overview.navigateToOverviewPage();
+        boolean one = overview.isActivateCardBannerDisplayed();
+        cardsManagement.navigateToActivateCard();
+        writeText(cardNumberTextbox, GetCardsTestData.getSuccssfullCardNumber());
+        writeText(expiryDateTextbox, "1225");
+        click(activateCardButton);
+        click(activatedDoneButton);
+        cardsManagement.clickBack();
+        boolean two = overview.activateCardBannerRemovedAfterActivation();
+        return one && two;
+    }
+
+    public boolean activateCardBannerRemains() {
+        overview.navigateToOverviewPage();
+        boolean one = overview.isActivateCardBannerDisplayed();
+        cardsManagement.navigateToActivateCard();
+        writeText(cardNumberTextbox, GetCardsTestData.getCardTimeoutNumber());
+        writeText(expiryDateTextbox, "1225");
+        click(activateCardButton);
+        click(cancelButton);
+        cardsManagement.clickBack();
+        boolean two = overview.activateCardBannerRemovedAfterActivation();
+        return one && two;
     }
 }
