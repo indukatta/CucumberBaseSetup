@@ -228,11 +228,11 @@ public class GuiCommands {
     //Package private scroll
     protected void scrollDown(MobileElement element){
         while (!element.isDisplayed()) {
-                TouchAction actions = new TouchAction(driver);
-                actions.press(PointOption.point(10, 250))
-                        .waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000)))
-                        .moveTo(PointOption.point(10, -5))
-                        .perform();
+            TouchAction actions = new TouchAction(driver);
+            actions.press(PointOption.point(10, 250))
+                    .waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000)))
+                    .moveTo(PointOption.point(10, -5))
+                    .perform();
         }
     }
 

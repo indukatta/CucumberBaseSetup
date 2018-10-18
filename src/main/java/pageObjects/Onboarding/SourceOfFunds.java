@@ -163,6 +163,10 @@ public class SourceOfFunds extends GuiCommands {
 
     public void passThrougSourceOfFunds() {
         navigateToSourceOfFunds();
+        processSourceOfFunds();
+    }
+
+    public void processSourceOfFunds(){
         writeValueOfCashDeposit(500);
         wrireTotalDepositMoney(200);
         clickDepositorDetailButton();

@@ -43,8 +43,8 @@ public class DirectDebit extends GuiCommands {
     @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"topLeftLabel\"])[199]")
     private MobileElement lastDD;
 
-    @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"topLeftLabel\"])[1]")
-    private MobileElement firstDD;
+    @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"topLeftLabel\"])[2]")
+    private MobileElement firstRecentDD;
 
     @iOSFindBy (accessibility = "tab_bar.payments_title")
     private MobileElement paymentsTab;
@@ -112,6 +112,32 @@ public class DirectDebit extends GuiCommands {
 
     @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"rightLabel\"])[3]")
     private MobileElement reference;
+
+    @iOSFindBy(accessibility = "Go back")
+    private MobileElement goBackButton;
+
+    @iOSFindBy(accessibility = "Cancel direct debit")
+    private MobileElement cancelDDButton2;
+
+    @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Are you sure you want to cancel Eon direct debit?\"]")
+    private MobileElement areYouSureText;
+
+    @iOSFindBy(accessibility = "You will need to contact the thirth party to set this direct debit up again. Make sure" +
+            " to contact the payee to confirm that you don’t have a balance outstanding and that you are no longer" +
+            " being charged.")
+    private MobileElement cancelDisclaimerText;
+
+    @iOSFindBy(accessibility = "direct_debit_details.alert.success.title")
+    private MobileElement cancelSuccessTitle;
+
+    @iOSFindBy( accessibility = "direct_debit_details.alert.success.primaryCTA")
+    private MobileElement cancelSuccessReturnButton;
+
+    @iOSFindBy(xpath = "(//XCUIElementTypeOther[@name=\"NEW\"])[1]")
+    private MobileElement newTitle;
+
+    @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"topLeftLabel\"])[1]")
+    private MobileElement firstNewDD;
 
     // Custom Methods
 
@@ -185,8 +211,8 @@ public class DirectDebit extends GuiCommands {
 
     public boolean loadDDDetails(){
         nanavigateToDDScreen();
-        String str1 = firstDD.getText();
-        click(firstDD);
+        String str1 = firstRecentDD.getText();
+        click(firstRecentDD);
         boolean one = driver.findElementByName(str1).getLocation().toString().equals("(0, 20)");
         boolean two = detailsInformativeText.isEnabled() && dDDetailsTitle.isDisplayed();
 
@@ -194,14 +220,14 @@ public class DirectDebit extends GuiCommands {
     }
     public boolean backFromDetailsPage(){
         nanavigateToDDScreen();
-        click(firstDD);
+        click(firstRecentDD);
         click(detailsBB);
         boolean one = directDebitTitle.isDisplayed();
         return one;
     }
     public boolean viewDDPage(){
         nanavigateToDDScreen();
-        click(firstDD);
+        click(firstRecentDD);
         boolean one = dDDetailsTitle.isDisplayed();
         boolean two = lastPayAmount.getText().matches("^(\\d{1,3},)?\\d{1,3}.\\d{2} GBP$");
         boolean three = lastPayDate.getText().matches("^\\d{2}\\s[a-zA-z]{3,9}\\s\\d{4}$");
@@ -211,10 +237,33 @@ public class DirectDebit extends GuiCommands {
     }
     public boolean isCancelDisplayed(){
         nanavigateToDDScreen();
-        click(firstDD);
+        click(firstRecentDD);
         boolean one = cancelDDButton.isEnabled();
 
         return one;
 
+    }
+    public boolean cancelPopupVerification(){
+        isCancelDisplayed();
+        click(cancelDDButton);
+        boolean one =  cancelDisclaimerText.isDisplayed() && goBackButton.isDisplayed() && cancelDDButton2.isDisplayed();
+
+        return one;
+    }
+    public boolean doNotCancelDD(){
+        cancelPopupVerification();
+        click(goBackButton);
+        boolean one = dDDetailsTitle.isDisplayed() && !cancelDisclaimerText.isDisplayed();
+
+        return one;
+    }
+    public boolean successfulDDDelete(){
+        cancelPopupVerification();
+        click(cancelDDButton2);
+        boolean one =  cancelSuccessTitle.isDisplayed() && cancelSuccessReturnButton.isDisplayed();
+        click(cancelSuccessReturnButton);
+        boolean two = directDebitTitle.isEnabled();
+
+        return one && two;
     }
 }

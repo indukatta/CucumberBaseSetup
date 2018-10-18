@@ -55,5 +55,15 @@ public class directDebit_tests extends Base_test {
     @Test(priority = 10, description = "Cancel Direct Debit is shown")
     public void CUICE7054() {Assert.assertTrue(directDebit.isCancelDisplayed());}
 
+    @Test(priority = 11, description = "Cancel Direct Debit Pop-Up")
+    public void CUICE7181() {Assert.assertTrue(directDebit.cancelPopupVerification());}
+
+    @Test(priority = 12, description = "Do not delete Direct Debit")
+    public void CUICE7182() {Assert.assertTrue(directDebit.doNotCancelDD());}
+
+    @Test(priority = 13, description = "Success direct debit deletion")
+    public void CUICE7183() {Assert.assertTrue(directDebit.successfulDDDelete());}
+
+
 }
 

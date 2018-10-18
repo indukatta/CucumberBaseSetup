@@ -66,8 +66,8 @@ public class CheckBoxElements extends GuiCommands {
     private MobileElement checkBoxTable;
 
     MobileElement [] cbElements = {activeWealth,businessOwnership,gift,externalInvestment,businessIncome,incomeSalary,
-                                    inheritance,ultimateOwner,intragroupFinancing,businessLoan,lottery,lumpSum,pension,
-                                     realEstate,saleOfAssests};
+            inheritance,ultimateOwner,intragroupFinancing,businessLoan,lottery,lumpSum,pension,
+            realEstate,saleOfAssests};
 
     public void clickAllCheckboxElements(){
 
@@ -82,9 +82,9 @@ public class CheckBoxElements extends GuiCommands {
     public void clickRandomElement(){
         Random rand = new Random();
 
-       int value = rand.nextInt(15);
+        int value = rand.nextInt(15);
 
-       click(cbElements[value]);
+        click(cbElements[value]);
     }
 
 }

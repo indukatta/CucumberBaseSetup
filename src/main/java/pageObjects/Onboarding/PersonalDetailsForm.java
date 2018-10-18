@@ -359,4 +359,59 @@ public class PersonalDetailsForm extends GuiCommands {
 
         return one;
     }
+
+    public void clickBackToOwnershipScreen(){
+        click(backToOwnershipScreen);
+    }
+
+    public void setConfirmOwnershipYes(){
+        click(confirmOwnership);
+    }
+
+    public boolean isNextButtonEnabled(){
+        return nextButton.isEnabled();
+    }
+
+    public void personalDetailsMandatoryFields(boolean isNameChanged, String name, boolean setDOB, boolean isHomeAddressSameAsBusinessAddress,
+                                        boolean isDualNational, String niNnumber, boolean setPersonalId,String personalIdValue,
+                                        boolean setJurisdictionCountry, String country){
+
+        click(confirmOwnership);
+
+        if(isNameChanged){
+            click(personNameChangedYes);
+            writeText(personPreviousName, name);
+        }
+
+        if(setDOB) {
+            click(personDOB);
+            click(pickerWheelDone);
+        }
+
+        if(isHomeAddressSameAsBusinessAddress) {
+            click(personBusinessAndResidentialEqualYes);
+        }
+
+        if(!isDualNational){
+            click(personDualNationalNo);
+        }
+
+        writeText(personNationalInsuranceNumber, niNnumber);
+
+        if(setPersonalId){
+            click(personIdType);
+            click(pickerWheelDone);
+            writeText(personIdNumber, personalIdValue);
+        }else{
+            writeText(personIdNumber, personalIdValue);
+        }
+
+        if(setJurisdictionCountry) {
+            click(personJurisdictionOfTaxResidency);
+            writeText(countrySearch, country);
+            clickGenericIostableCell();
+        }
+    }
+
+
 }

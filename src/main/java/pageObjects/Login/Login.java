@@ -52,6 +52,9 @@ public class Login extends GuiCommands {
     @iOSFindBy(accessibility = "Entered an incorrect username or password")
     private MobileElement errorMessage;
 
+    @iOSFindBy(accessibility = "Allow")
+    private MobileElement allowButton;
+
     //Elements Displayed
     public boolean isaccountTitleDisplayed() {
         return accountTitle.isDisplayed();
@@ -125,7 +128,6 @@ public class Login extends GuiCommands {
         clickpasswordLoginButton();
         return isaccountTitleDisplayed();
     }
-
     public boolean incorrectLogin() {
         clickexistingCustomerButton();
         writeUsername("TESTUSE");
@@ -199,6 +201,7 @@ public class Login extends GuiCommands {
         writeUsername("TESTUSER");
         clickusernameNextButton();
         clickpasswordLoginButton();
+        click(allowButton);
     }
 
     public void passThroughLogin() {

@@ -293,6 +293,10 @@ public class OngoingSourceOfWealth  extends GuiCommands {
 
     public boolean passThroughOngoingSourceOfWealth(){
         navigateToOngoingSourceOfWealth();
+        return processOngoingSourceOfWealth();
+    }
+
+    public boolean processOngoingSourceOfWealth(){
         writeAnnualTurnover(20);
         clickBuisinessFunding();
         checkBoxElements.clickRandomElement();

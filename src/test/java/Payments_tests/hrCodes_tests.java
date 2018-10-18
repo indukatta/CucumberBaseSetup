@@ -19,17 +19,75 @@ public class hrCodes_tests extends Base_test {
     public void CUICE6354 () {
         Assert.assertTrue(availableBalance.successPageDisplayed());
     }
+
     @Test(priority = 2 , description = "Faster payment placeholder disclaimer" )
     public void CUICE6355 () {
         Assert.assertTrue(availableBalance.disclaimerShown());
     }
+
     @Test(priority = 3 , description = "Done CTA on success page" )
     public void CUICE6356 () {
         Assert.assertTrue(availableBalance.doneButtonValidation());
     }
+
     @Test(priority = 4 , description = "Display relevant message for sent status brcs" )
     public void CUICE6829 () {
         Assert.assertTrue(availableBalance.sentStatusMessageCheck());
     }
+
+    @Test(priority = 5 , description = "Display edit payment failure page" )
+    public void CUICE7104 () {
+        Assert.assertTrue(availableBalance.editStatusMessageCheck());
+    }
+
+    @Test(priority = 6 , description = "Edit sort code, account number or name" )
+    public void CUICE7105 () {
+        Assert.assertTrue(availableBalance.editPayeeDetailsCode());
+    }
+
+    @Test(priority = 7 , description = "Issue with available balance or limits" )
+    public void CUICE7106 () {
+        Assert.assertTrue(availableBalance.editPaymentDetailsCode());
+    }
+
+    @Test(priority = 8 , description = "Issue with available balance or limits" )
+    public void CUICE7122 () {
+        Assert.assertTrue(availableBalance.failureStatusMessageCheck());
+    }
+
+    @Test(priority = 9 , description = "Display Yes/No pop-up" )
+    public void CUICE7078 () {
+        Assert.assertTrue(availableBalance.duplicatePopUpDisplay());
+    }
+
+    @Test(priority = 10 , description = "Click No on yes/no pop-up" )
+    public void CUICE7079 () { Assert.assertTrue(availableBalance.clickNoPopUp()); }
+
+    @Test(priority = 11 , description = "Click Yes on yes/no pop-up" )
+    public void CUICE7080 () {
+        Assert.assertTrue(availableBalance.clickYesPopUp());
+    }
+
+    @Test(priority = 12 , description = "Display yes/no pop-up for bacs codes" )
+    public void CUICE7211 () {
+        Assert.assertTrue(availableBalance.bacsPopUpDisplay());
+    }
+
+    @Test(priority = 13 , description = "Click no on bacs yes/no pop up" )
+    public void CUICE7212 () {
+        Assert.assertTrue(availableBalance.bacsSelectNo());
+    }
+
+    @Test(priority = 13 , description = "Click Yes Happy Path" )
+    public void CUICE7213 () {
+        Assert.assertTrue(availableBalance.bacsSelectYes());
+    }
+
+
+
+
+
+
+
 
 }
