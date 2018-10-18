@@ -6,13 +6,11 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSFindBy;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.PageFactory;
-import pageObjects.Login.Login;
 import pageObjects.More.ActivateCard;
 import utils.GuiCommands;
 
 public class Overview extends GuiCommands {
 
-    private Login login = new Login(driver);
     private ActivateCard card = new ActivateCard(driver);
 
     public Overview(IOSDriver driver) {
@@ -33,10 +31,13 @@ public class Overview extends GuiCommands {
         click(overviewButton);
     }
 
+    public void clickBanner(){
+        click(activateCardBanner);
+    }
+
     public boolean isActivateCardBannerDisplayed(){
         navigateToOverviewPage();
         boolean one = activateCardBanner.isDisplayed();
-        click(activateCardBanner);
         return one;
     }
 
@@ -51,12 +52,6 @@ public class Overview extends GuiCommands {
         } catch (NoSuchElementException e){
             one = true;
         }
-        return one;
-    }
-
-    public boolean activateCardBannerRemovedAfterCardManagementActivation() {
-        navigateToOverviewPage();
-        boolean one = activateCardBanner.isDisplayed();
         return one;
     }
 }

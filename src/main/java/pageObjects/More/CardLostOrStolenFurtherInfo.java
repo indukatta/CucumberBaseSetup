@@ -15,6 +15,7 @@ public class CardLostOrStolenFurtherInfo extends GuiCommands {
 
     private CardLostOrStolen cardLostOrStolen = new CardLostOrStolen(driver);
     private CardsManagement cardsManagement = new CardsManagement(driver);
+    private ActivateCard activateCard = new ActivateCard(driver);
 
     public CardLostOrStolenFurtherInfo(IOSDriver driver) {
         super(driver);
@@ -56,6 +57,24 @@ public class CardLostOrStolenFurtherInfo extends GuiCommands {
 
     @iOSFindBy(accessibility = "toolbar_done")
     private MobileElement dateDone;
+
+    @iOSFindBy(accessibility = "card_report.success.title.card_successfully_cancelled")
+    private MobileElement cardCancelledMessage;
+
+    @iOSFindBy(accessibility = "card_report.success.subtitle.with_pin_compromised_messaage")
+    private MobileElement pinCompromisedMessage;
+
+    @iOSFindBy(accessibility = "card_report.success.subtitle.without_pin_compromised_messaage")
+    private MobileElement pinNotCompromisedMessage;
+
+    @iOSFindBy(accessibility = "cards.button.review_transactions")
+    private MobileElement reviewTransactionsButton;
+
+    @iOSFindBy(accessibility = "cards.button.close_without_reviewing")
+    private MobileElement closeWithoutReviewingButton;
+
+    @iOSFindBy(accessibility = "card_report.error.title.we_couldnt_complete_request")
+    private MobileElement cannotCompleteRequestMessage;
 
     public boolean verifyFurtherInformationScreen(){
         cardLostOrStolen.navigateToCardLostStolenFurtherInfo();
@@ -146,5 +165,66 @@ public class CardLostOrStolenFurtherInfo extends GuiCommands {
         boolean two = reportAndCancelButton.isEnabled();
 
         return one && two;
+    }
+
+    public boolean reportCardLostStolenPinNotCompromised(){
+        activateCard.successfulCardActivation();
+        cardLostOrStolen.navigateToCardLostStolenFurtherInfo();
+        click(lostButton);
+        click(cardLastSeenTextfield);
+        click(dateDone);
+        click(pinCompromisedNo);
+        click(reportAndCancelButton);
+
+        boolean one = cardCancelledMessage.isDisplayed();
+        boolean two = pinNotCompromisedMessage.isDisplayed();
+        boolean three = reviewTransactionsButton.isDisplayed();
+
+        click(closeWithoutReviewingButton);
+        boolean four = cardsManagement.isTitleDisplayed();
+
+        return one && two && three && four;
+    }
+
+    public boolean reportCardLostStolenPinCompromised(){
+        activateCard.successfulCardActivation();
+        cardLostOrStolen.navigateToCardLostStolenFurtherInfo();
+        click(stolenButton);
+        click(cardLastSeenTextfield);
+        click(dateDone);
+        click(pinCompromisedYes);
+        click(reportAndCancelButton);
+
+        boolean one = cardCancelledMessage.isDisplayed();
+        boolean two = pinCompromisedMessage.isDisplayed();
+        boolean three = reviewTransactionsButton.isDisplayed();
+
+        click(closeWithoutReviewingButton);
+        boolean four = cardsManagement.isTitleDisplayed();
+
+        return one && two && three && four;
+    }
+
+    public boolean reportLostStolenBackendValidationError(){
+        cardLostOrStolen.navigateToCardLostStolenFurtherInfo();
+        click(stolenButton);
+        click(cardLastSeenTextfield);
+        click(dateDone);
+        click(pinCompromisedYes);
+        click(reportAndCancelButton);
+
+        boolean one = cannotCompleteRequestMessage.isDisplayed();
+        boolean two = contactSupportButton.isDisplayed();
+
+        return one && two;
+    }
+
+    public void deactivateCard(){
+        cardLostOrStolen.navigateToCardLostStolenFurtherInfo();
+        click(stolenButton);
+        click(cardLastSeenTextfield);
+        click(dateDone);
+        click(pinCompromisedYes);
+        click(reportAndCancelButton);
     }
 }

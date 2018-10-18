@@ -14,9 +14,27 @@ public class GetUserData {
             e.printStackTrace();
         }
 
+        int row = 2;
+
         HashMap<String, String> map = new HashMap<>();
-        map.put("Username", ExcelUtils.getCellData(2,2));
-        map.put("Password", ExcelUtils.getCellData(2,3));
+        map.put("Username", ExcelUtils.getCellData(row,2));
+        map.put("Password", ExcelUtils.getCellData(row,3));
+
+        return map;
+    }
+
+    public static HashMap getNoTransactionUser(){
+        try {
+            ExcelUtils.setExcelFile(Constants.Path_TestData + Constants.File_User_Data, "Users");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        int row = 3;
+
+        HashMap<String, String> map = new HashMap<>();
+        map.put("Username", ExcelUtils.getCellData(row,2));
+        map.put("Password", ExcelUtils.getCellData(row,3));
 
         return map;
     }
