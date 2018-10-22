@@ -233,5 +233,4 @@ public class CardLostOrStolenFurtherInfo extends GuiCommands {
         click(contactSupportButton);
     }
 
-    public void
 }

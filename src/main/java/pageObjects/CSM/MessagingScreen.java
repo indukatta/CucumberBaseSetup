@@ -9,7 +9,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import pageObjects.Login.Login;
 import pageObjects.More.ActivateCard;
-import pageObjects.More.CardLostOrStolen;
 import pageObjects.Onboarding.SetUp;
 import testData.RandomDataGenerator;
 import utils.GuiCommands;
@@ -17,8 +16,7 @@ import utils.GuiCommands;
 public class MessagingScreen extends GuiCommands {
 
     SupportScreen supportScreen = new SupportScreen(driver);
-    CardLostOrStolen cardLostOrStolen = new CardLostOrStolen(driver);
-
+    ActivateCard activateCard = new ActivateCard(driver);
 
 
     public MessagingScreen(IOSDriver driver) {
@@ -77,29 +75,29 @@ public class MessagingScreen extends GuiCommands {
         return messagingBox.isDisplayed();
     }
 
-    public boolean contactSupportFromCards() {
-        cardLostOrStolen.con();
-        click(allowNotification);
-        return supportPageTitle.isDisplayed();
+//    public boolean contactSupportFromCards() {
+//        activateCard.contactSupport();
+//        click(allowNotification);
+//        return supportPageTitle.isDisplayed();
+//
+//    }
 
-    }
 
-
-    public boolean contactSupportFromCardsReturningCustomer() {
-        contactSupportFromCards();
-        click(closeScreenButton);
-        click(contactSupportButton);
-        boolean one = false;//copy from here
-        try {
-            allowNotification.isDisplayed();//if change this to allow button .isDisplayed()
-        } catch (
-                NoSuchElementException e) {//this is the exception catch that passes the test
-            one = true;
-        }
-        return one;//till here, delete these comments after you have copied the code
-    }
-}
-
+//    public boolean contactSupportFromCardsReturningCustomer() {
+//        contactSupportFromCards();
+//        click(closeScreenButton);
+//        click(contactSupportButton);
+//        boolean one = false;//copy from here
+//        try {
+//            allowNotification.isDisplayed();//if change this to allow button .isDisplayed()
+//        } catch (
+//                NoSuchElementException e) {//this is the exception catch that passes the test
+//            one = true;
+//        }
+//        return one;//till here, delete these comments after you have copied the code
+//    }
+//}
+//
 
 
 
