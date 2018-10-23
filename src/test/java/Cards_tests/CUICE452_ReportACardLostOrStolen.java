@@ -3,22 +3,30 @@ package Cards_tests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pageObjects.Login.Login;
 import pageObjects.More.CardLostOrStolen;
 import pageObjects.More.CardLostOrStolenFurtherInfo;
 import pageObjects.More.CardsManagement;
+import pageObjects.More.ReviewTransactions;
 import testUtils.Base_test;
 
 public class CUICE452_ReportACardLostOrStolen extends Base_test {
 
+    private Login login;
+
     private CardsManagement Cards;
     private CardLostOrStolen cardLostOrStolen;
     private CardLostOrStolenFurtherInfo info;
+    private ReviewTransactions transactions;
 
     @BeforeMethod
     public void beforeMethod() throws Exception {
         Cards = new CardsManagement(driver);
         cardLostOrStolen = new CardLostOrStolen(driver);
         info = new CardLostOrStolenFurtherInfo(driver);
+        transactions = new ReviewTransactions(driver);
+
+        login = new Login(driver);
     }
 
     @Test(priority = 1, description = "Card Activation menu Option")
@@ -81,5 +89,11 @@ public class CUICE452_ReportACardLostOrStolen extends Base_test {
     @Test(priority = 12, description = "Report Card Lost/Stolen and PIN Compromised")
     public void CUICE7149(){
         Assert.assertTrue(info.reportLostStolenBackendValidationError());
+    }
+
+    @Test
+    public void CUICE(){
+        login.setLogin("FIRST TIME");
+        System.out.println(transactions.returnElements());
     }
 }

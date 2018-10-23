@@ -3,6 +3,7 @@ package pageObjects.Login;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.iOSFindBy;
+import testData.getUserData.GetUserData;
 import utils.GuiCommands;
 
 public class Login extends GuiCommands {
@@ -78,12 +79,10 @@ public class Login extends GuiCommands {
     public boolean ispasswordFieldBoxDisplayed() {
         return passwordFieldBox.isDisplayed();
     }
-
-
+    
     public boolean isusernameFieldBoxDiplay() {
         return usernameFieldBox.isDisplayed();
     }
-
 
     //Click Methods
     public void clickexistingCustomerButton() { click(existingCustomerButton); }
@@ -209,7 +208,7 @@ public class Login extends GuiCommands {
         clickpasswordLoginButton();
     }
 
-        public void passThroughLogin() {
+    public void passThroughLogin() {
         clickexistingCustomerButton();
         writeUsername("TESTUSER");
         clickusernameNextButton();
@@ -224,13 +223,24 @@ public class Login extends GuiCommands {
         clearText(passwordFieldBox);
         writePassword(password);
         clickpasswordLoginButton();
+        click(dontAllowNotification);
     }
 
+    public void setLogin(String user){
+
+        switch (user){
+            case "FIRST TIME":
+                loginAsUser((String) GetUserData.getFirstTimeUser().get("Username"), (String) GetUserData.getFirstTimeUser().get("Password"));
+                break;
+            case "NO TRANSACTION":
+                loginAsUser((String) GetUserData.getNoTransactionUser().get("Username"), (String) GetUserData.getNoTransactionUser().get("Password"));
+
+        }
+    }
 
     public void dontAllowNotificationLogin(){
         navigateToLogin();
         clickdontAllowNotifacation();
-
     }
 
 }
