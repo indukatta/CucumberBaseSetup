@@ -69,4 +69,11 @@ public class CardLostOrStolen extends GuiCommands {
         cardsManagement.navigateToCardLostOrStolen();
         click(cardsContinueButton);
     }
+
+    public void contactSupportThroughCardLostOrstolen(){
+        cardsManagement.navigateToCardLostOrStolen();
+        click(contactSupportButton);
+    }
+
+
 }

@@ -34,10 +34,7 @@ public class loginTests extends Base_test {
     }
 
     @Test(priority = 4, description = "Password unmasking")
-    public void CUICE5473() {
-        Assert.assertTrue(login.showPasswordCheckBox());
-
-    }
+    public void CUICE5473() { Assert.assertTrue(login.showPasswordCheckBox()); }
 
     @Test(priority = 5, description = "Navigate to password field")
     public void CUICE5472() {
@@ -63,6 +60,7 @@ public class loginTests extends Base_test {
     public void CUICE5389() {
         Assert.assertTrue(login.logoutTest());
     }
+
 }
     /*
     //Advised by Ed to wait on this test. I've left this here as a reference.
