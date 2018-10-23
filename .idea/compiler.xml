@@ -7,7 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Iceberg" />
+        <module name="uitesting" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="uitesting" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

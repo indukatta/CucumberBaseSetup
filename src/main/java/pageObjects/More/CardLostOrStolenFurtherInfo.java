@@ -248,4 +248,10 @@ public class CardLostOrStolenFurtherInfo extends GuiCommands {
         click(pinCompromisedYes);
         click(reportAndCancelButton);
     }
+
+    public void contactSupportThroughCardLostOrstolenFurtherInfo(){
+        cardLostOrStolen.navigateToCardLostStolenFurtherInfo();
+        click(contactSupportButton);
+    }
+
 }

@@ -3,6 +3,7 @@ package pageObjects.Onboarding;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.iOSFindBy;
+import org.openqa.selenium.By;
 import testData.CheckBoxElements;
 import testData.RandomDataGenerator;
 import utils.GuiCommands;
@@ -101,19 +102,22 @@ public class InitialWealth extends GuiCommands {
     }
 
     public void passThroughInitalWealth(){
-        writeNumber(initialAmountTextField,10800);
-        click(investorDetailsButton);
-        writeText(investorNameField,"Michael Jackson");
-        writeNumber(investorAmount,1080);
-        click(investorCountry);
-        writeText(countrySearchfield, generator.setCountry());
-        clickGenericIostableCell();
-        click(howFundsGenerated);
-        checkBoxElements.clickRandomElement();
-        clickConfirm();
-        clickNext();
-        clickNext();
+        if(driver.findElements( By.name("initial_source_of_wealth.add_investor")).size() != 0) {
+            writeNumber(initialAmountTextField, 10800);
+            click(investorDetailsButton);
+            writeText(investorNameField, "Michael Jackson");
+            writeNumber(investorAmount, 1080);
+            click(investorCountry);
+            writeText(countrySearchfield, generator.setCountry());
+            clickGenericIostableCell();
+            click(howFundsGenerated);
+            checkBoxElements.clickRandomElement();
+            clickConfirm();
+            clickNext();
+            clickNext();
+        }
     }
+
     public void populateInitialWealth(String name, String initialAmount, String investAmount){
         writeText(initialAmountTextField,initialAmount);
         click(investorDetailsButton);
@@ -128,9 +132,5 @@ public class InitialWealth extends GuiCommands {
         clickNext();
         clickNext();
     }
-
-
-
-
 
 }

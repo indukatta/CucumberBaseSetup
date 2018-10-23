@@ -53,8 +53,11 @@ public class Login extends GuiCommands {
     @iOSFindBy(accessibility = "Entered an incorrect username or password")
     private MobileElement errorMessage;
 
+    @iOSFindBy(accessibility = "Allow")
+    private MobileElement allowNotification;
+
     @iOSFindBy(accessibility = "Don’t Allow")
-    private MobileElement dismissNotifications;
+    private MobileElement dontAllowNotification;
 
     //Elements Displayed
     public boolean isaccountTitleDisplayed() {
@@ -76,17 +79,17 @@ public class Login extends GuiCommands {
     public boolean ispasswordFieldBoxDisplayed() {
         return passwordFieldBox.isDisplayed();
     }
-
-
+    
     public boolean isusernameFieldBoxDiplay() {
         return usernameFieldBox.isDisplayed();
     }
 
-
     //Click Methods
-    public void clickexistingCustomerButton() {
-        click(existingCustomerButton);
-    }
+    public void clickexistingCustomerButton() { click(existingCustomerButton); }
+
+    public void clickallowNotifacation() { click(allowNotification); }
+
+    public void clickdontAllowNotifacation() { click(dontAllowNotification); }
 
     public void clickusernameNextButton() {
         click(usernameNextButton);
@@ -210,6 +213,7 @@ public class Login extends GuiCommands {
         writeUsername("TESTUSER");
         clickusernameNextButton();
         clickpasswordLoginButton();
+        clickallowNotifacation();
     }
 
     public void loginAsUser(String username, String password){
@@ -219,7 +223,7 @@ public class Login extends GuiCommands {
         clearText(passwordFieldBox);
         writePassword(password);
         clickpasswordLoginButton();
-        click(dismissNotifications);
+        click(dontAllowNotification);
     }
 
     public void setLogin(String user){
@@ -233,4 +237,10 @@ public class Login extends GuiCommands {
 
         }
     }
+
+    public void dontAllowNotificationLogin(){
+        navigateToLogin();
+        clickdontAllowNotifacation();
+    }
+
 }

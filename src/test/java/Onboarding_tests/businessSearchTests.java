@@ -66,7 +66,7 @@ public class businessSearchTests extends Base_test {
 
     @Test(priority = 9, description = "Informated Pre-populated and Displayed to user")
     public void CUICE3998(){
-       Assert.assertTrue(businessSearch.isBusinessInformationDisplayed());
+        Assert.assertTrue(businessSearch.isBusinessInformationDisplayed());
     }
 
     @Test(priority = 10, description = "Non-Editing of Pre-populated Information")

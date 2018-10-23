@@ -10,6 +10,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.GuiCommands;
+import org.testng.Assert;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BusinessSearch extends GuiCommands {
 
@@ -53,6 +56,12 @@ public class BusinessSearch extends GuiCommands {
 
     @iOSFindBy(accessibility = "business_details.address")
     private MobileElement businessAddress;
+
+    @iOSFindBy(accessibility =  "business_details.activity")
+    private MobileElement txtBusinessSicCodes;
+
+    @iOSFindBy(accessibility = "Business Address")
+    private MobileElement txtBusinessAddress;
 
     //ELEMENTS DISPLAYED
     public boolean coverPageTitleDisplayed(){
@@ -223,5 +232,17 @@ public class BusinessSearch extends GuiCommands {
         clickNextButton();
         writeBusinessTitle(business);
         clickGenericIostableCell();
+    }
+
+    public void verifyCompanySicCodesAndDescription(List<String> expectedSicCodes){
+        List<String> actualSicCodes = new ArrayList<>();
+        scrollDown(txtBusinessSicCodes);
+        String  sicCodesInfo = txtBusinessSicCodes.getAttribute("value");
+        String[] tempVar = sicCodesInfo.split("\n");
+        for(int i = 0; i < tempVar.length; i++){
+            actualSicCodes.add(tempVar[i]);
+        }
+        Assert.assertTrue(actualSicCodes.containsAll(expectedSicCodes),"Sic codes verification");
+        scrollUp(txtBusinessAddress);
     }
 }
