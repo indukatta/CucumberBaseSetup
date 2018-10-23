@@ -3,6 +3,7 @@ package pageObjects.Login;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.iOSFindBy;
+import testData.getUserData.GetUserData;
 import utils.GuiCommands;
 
 public class Login extends GuiCommands {
@@ -51,6 +52,9 @@ public class Login extends GuiCommands {
 
     @iOSFindBy(accessibility = "Entered an incorrect username or password")
     private MobileElement errorMessage;
+
+    @iOSFindBy(accessibility = "Don’t Allow")
+    private MobileElement dismissNotifications;
 
     //Elements Displayed
     public boolean isaccountTitleDisplayed() {
@@ -118,90 +122,90 @@ public class Login extends GuiCommands {
     }
 
 
-        public boolean successfulLogin() {
-            clickexistingCustomerButton();
-            writeUsername("TESTUSER");
-            clickusernameNextButton();
-            clickpasswordLoginButton();
-            return isaccountTitleDisplayed();
-        }
+    public boolean successfulLogin() {
+        clickexistingCustomerButton();
+        writeUsername("TESTUSER");
+        clickusernameNextButton();
+        clickpasswordLoginButton();
+        return isaccountTitleDisplayed();
+    }
 
-        public boolean incorrectLogin () {
-            clickexistingCustomerButton();
-            writeUsername("TESTUSE");
-            clickusernameNextButton();
-            clickpasswordLoginButton();
-            return iserrorMessageDisplayed();
-        }
+    public boolean incorrectLogin () {
+        clickexistingCustomerButton();
+        writeUsername("TESTUSE");
+        clickusernameNextButton();
+        clickpasswordLoginButton();
+        return iserrorMessageDisplayed();
+    }
 
-        public boolean incorrectPassword () {
-            clickexistingCustomerButton();
-            writeUsername("TESTUSER");
-            clickusernameNextButton();
-            clickshowPasswordCheckBox();
-            clickpasswordFieldBox();
-            writePassword("TESTPASSWOR");
-            clickpasswordLoginButton();
-            return isaccountTitleDisplayed();
-        }
+    public boolean incorrectPassword () {
+        clickexistingCustomerButton();
+        writeUsername("TESTUSER");
+        clickusernameNextButton();
+        clickshowPasswordCheckBox();
+        clickpasswordFieldBox();
+        writePassword("TESTPASSWOR");
+        clickpasswordLoginButton();
+        return isaccountTitleDisplayed();
+    }
 
-        public boolean canUserLogout () {
-            successfulLogin();
-            clicklogoutButton();
-            return islogoutScreenDisplayed();
-        }
+    public boolean canUserLogout () {
+        successfulLogin();
+        clicklogoutButton();
+        return islogoutScreenDisplayed();
+    }
 
-        public boolean showPasswordCheckBox () {
-            clickexistingCustomerButton();
-            writeUsername("TESTUSER");
-            clickusernameNextButton();
-            clickshowPasswordCheckBox();
-            return ispasswordFieldBoxDisplayed();
-        }
+    public boolean showPasswordCheckBox () {
+        clickexistingCustomerButton();
+        writeUsername("TESTUSER");
+        clickusernameNextButton();
+        clickshowPasswordCheckBox();
+        return ispasswordFieldBoxDisplayed();
+    }
 
-        public boolean navigateToPasswordField () {
-            clickexistingCustomerButton();
-            writeUsername("TESTUSER");
-            clickusernameNextButton();
-            clickshowPasswordCheckBox();
-            clickpasswordFieldBox();
-            return ispasswordFieldBoxDisplayed();
-        }
+    public boolean navigateToPasswordField () {
+        clickexistingCustomerButton();
+        writeUsername("TESTUSER");
+        clickusernameNextButton();
+        clickshowPasswordCheckBox();
+        clickpasswordFieldBox();
+        return ispasswordFieldBoxDisplayed();
+    }
 
-        public boolean navigateToPasswordScreen () {
-            clickexistingCustomerButton();
-            writeUsername("TESTUSER");
-            clickusernameNextButton();
-            return ispasswordFieldBoxDisplayed();
-        }
+    public boolean navigateToPasswordScreen () {
+        clickexistingCustomerButton();
+        writeUsername("TESTUSER");
+        clickusernameNextButton();
+        return ispasswordFieldBoxDisplayed();
+    }
 
-        public boolean navigateToUsernameFieldBox () {
-            clickexistingCustomerButton();
-            clickusernameFieldBox();
-            clickusernameNextButton();
-            clickpasswordLoginButton();
-            return isusernameFieldBoxDiplay();
-        }
+    public boolean navigateToUsernameFieldBox () {
+        clickexistingCustomerButton();
+        clickusernameFieldBox();
+        clickusernameNextButton();
+        clickpasswordLoginButton();
+        return isusernameFieldBoxDiplay();
+    }
 
-        public boolean navigateToUsernamePage () {
-            clickexistingCustomerButton();
-            return isusernameFieldBoxDiplay();
-        }
+    public boolean navigateToUsernamePage () {
+        clickexistingCustomerButton();
+        return isusernameFieldBoxDiplay();
+    }
 
-        public boolean logoutTest () {
-            successfulLogin();
-            clicklogoutButton();
-            return iswelcomeTitleDisplayed();
-        }
+    public boolean logoutTest () {
+        successfulLogin();
+        clicklogoutButton();
+        return iswelcomeTitleDisplayed();
+    }
 
-        public void navigateToLogin () {
-            clickexistingCustomerButton();
-            writeUsername("TESTUSER");
-            clickusernameNextButton();
-            clickpasswordLoginButton();
-        }
+    public void navigateToLogin () {
+        clickexistingCustomerButton();
+        writeUsername("TESTUSER");
+        clickusernameNextButton();
+        clickpasswordLoginButton();
+    }
 
-        public void passThroughLogin() {
+    public void passThroughLogin() {
         clickexistingCustomerButton();
         writeUsername("TESTUSER");
         clickusernameNextButton();
@@ -215,5 +219,18 @@ public class Login extends GuiCommands {
         clearText(passwordFieldBox);
         writePassword(password);
         clickpasswordLoginButton();
+        click(dismissNotifications);
+    }
+
+    public void setLogin(String user){
+
+        switch (user){
+            case "FIRST TIME":
+                loginAsUser((String) GetUserData.getFirstTimeUser().get("Username"), (String) GetUserData.getFirstTimeUser().get("Password"));
+                break;
+            case "NO TRANSACTION":
+                loginAsUser((String) GetUserData.getNoTransactionUser().get("Username"), (String) GetUserData.getNoTransactionUser().get("Password"));
+
+        }
     }
 }

@@ -15,8 +15,6 @@ public class More extends GuiCommands {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    private Login login = new Login(driver);
-
     @iOSFindBy(accessibility = "More")
     private MobileElement moreButton;
 
