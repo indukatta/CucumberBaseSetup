@@ -32,16 +32,16 @@ public class messagingScreenTests extends Base_test {
         Assert.assertTrue(messagingScreen.writeToMessagingScreen());
     }
 
-    @Test(priority = 3, description = "Contextual Chat-First time in messaging")
-    public void CUICE6750(){
-        Assert.assertTrue(messagingScreen.contactSupportFromCards());
-    }
-
-    @Test(priority = 4, description = "Contextual Chat-Returning to messaging")
-    public void CUICE6751(){
-        Assert.assertTrue(messagingScreen.contactSupportFromCardsReturningCustomer());
-    }
-
+//    @Test(priority = 3, description = "Contextual Chat-First time in messaging")
+//    public void CUICE6750(){
+//        Assert.assertTrue(messagingScreen.contactSupportFromCards());
+//    }
+//
+//    @Test(priority = 4, description = "Contextual Chat-Returning to messaging")
+//    public void CUICE6751(){
+//        Assert.assertTrue(messagingScreen.contactSupportFromCardsReturningCustomer());
+//    }
+//
 
 
 }

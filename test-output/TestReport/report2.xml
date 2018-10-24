@@ -1,0 +1,37 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="FullSuiteName" verbose="1">
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name="Login" verbose="2">
+        <packages>
+            <package name="Login"/>
+        </packages>
+    </test>
+    <!--<test name="Manual Onboarding" verbose="2">-->
+        <!--<packages>-->
+            <!--<package name="Onboarding"/>-->
+        <!--</packages>-->
+    <!--</test>-->
+    <test name="Payments_tests" verbose="2">
+        <packages>
+            <package name="Payments_tests"/>
+        </packages>
+    </test>
+    <test name="Transactions_tests" verbose="2">
+        <packages>
+            <package name="Transactions_tests"/>
+        </packages>
+    </test>
+    <test name="Cards_tests" verbose="2">
+        <packages>
+            <package name="Cards_tests"/>
+        </packages>
+    </test>
+    <test name="CSM_tests" verbose="2">
+        <packages>
+            <package name="CSM_Tests"/>
+        </packages>
+    </test>
+</suite>

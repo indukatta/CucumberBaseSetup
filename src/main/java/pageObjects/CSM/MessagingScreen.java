@@ -74,7 +74,7 @@ public class MessagingScreen extends GuiCommands {
         clickSendButton();
         return messagingBox.isDisplayed();
     }
-
+}
 //    public boolean contactSupportFromCards() {
 //        activateCard.contactSupport();
 //        click(allowNotification);
