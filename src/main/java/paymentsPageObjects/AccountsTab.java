@@ -50,7 +50,7 @@ public class AccountsTab extends GuiCommands {
     @iOSFindBy(accessibility = "balanceViewTitle")
     private MobileElement availableBalance;
 
-    @iOSFindBy(accessibility = "balanceViewTopSubtitle") // 40-12-76 | 12768903
+    @iOSFindBy(accessibility = "balanceViewTopSubtitle")
     private MobileElement sortCodeAndAccountNum;
 
     @iOSFindBy(accessibility = "October")

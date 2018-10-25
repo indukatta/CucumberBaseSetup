@@ -218,5 +218,6 @@ public class Login extends GuiCommands {
         clearText(passwordFieldBox);
         writePassword(password);
         clickpasswordLoginButton();
+        click(allowButton);
     }
 }

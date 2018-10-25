@@ -34,7 +34,7 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy(accessibility = "login.login_button_title")
     private MobileElement loginButton;
 
-    @iOSFindBy(accessibility = "Available balance")
+    @iOSFindBy(accessibility = "balanceViewTitle")
     private MobileElement hsAvailableBalance;
 
     @iOSFindBy(accessibility = "tab_bar.payments_title")
@@ -61,9 +61,6 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy(accessibility = "payment_details.reference_textfield_header")
     private MobileElement reference;
 
-    @iOSFindBy(accessibility = "Available balance: 1,005.02 GBP")
-    private MobileElement psAvailableBalance;
-
     @iOSFindBy(accessibility = "back arrow")
     private MobileElement payDeteailsBB;
 
@@ -82,7 +79,7 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy(accessibility = "OK")
     private MobileElement okButton;
 
-    @iOSFindBy(xpath = "//XCUIElementTypeNavigationBar[@name=\"Payments\"]")
+    @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Payments\"]")
     private MobileElement paymentsTitle;
 
     @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Paying someone new\"]")
@@ -102,6 +99,9 @@ public class AvailableBalance extends GuiCommands {
 
     @iOSFindBy(accessibility = "balanceViewTitle")
     private MobileElement availableBalance;
+
+    @iOSFindBy(accessibility = "activity_indicator")
+    private MobileElement spinner;
 
     // Summary page elements
 
@@ -138,6 +138,12 @@ public class AvailableBalance extends GuiCommands {
     @iOSFindBy(accessibility = "payments.done_button_title")
     private MobileElement doneButton;
 
+    @iOSFindBy(accessibility = "payment_failure.close_action_title")
+    private MobileElement closeButton;
+
+    @iOSFindBy(accessibility = "payment_failure.edit_action_title")
+    private MobileElement editButton;
+
     @iOSFindBy(accessibility = "payment_confirmation.about_to_pay_label_value")
     private MobileElement sentAmount;
 
@@ -165,6 +171,57 @@ public class AvailableBalance extends GuiCommands {
 
     @iOSFindBy(accessibility = "We are unable to process as a faster payment. Would you like to use the 3 day payment cycle?")
     private MobileElement bacsPayMessage;
+
+    @iOSFindBy(accessibility = "Your payment will not be sent")
+    private MobileElement bacsFailMessage;
+
+    @iOSFindBy(accessibility = "Your payment has been sent and will be credited to the beneficiary's account within 3 working days.")
+    private MobileElement bacsSuccessMessage;
+
+    @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Payment delay\"]")
+    private MobileElement paymentDelayTitle;
+
+    @iOSFindBy(accessibility = "We are unable to process as a faster payment. Would you like us to use the 2 day payment cycle? (H58)")
+    private MobileElement chapsMessageh58;
+
+    @iOSFindBy(accessibility = "We are unable to process as a faster payment. Would you like us to use the 2 day payment cycle? (009)")
+    private MobileElement chapsMessageh009;
+
+    @iOSFindBy(accessibility = "Your payment has been sent and will be credited to the beneficiary's account within 2 working days. (H98)")
+    private MobileElement succeessChapsH98;
+
+    @iOSFindBy(accessibility = "Your payment has been sent and will be credited to the beneficiary's account within 2 working days. (H97)")
+    private MobileElement succeessChapsH97;
+
+    @iOSFindBy(accessibility = "We are unable to make this payment today. Do you want us to send the payment tomorrow?")
+    private MobileElement fraudMessage;
+
+    @iOSFindBy(accessibility = "We will send your payment tomorrow")
+    private MobileElement fraudYesMessage;
+
+    @iOSFindBy(accessibility = "Your payment has been sent and will usually be credited to the beneficiary's account today, subject to our normal fraud checks.")
+    private MobileElement agencySuccessMainMsg;
+
+    @iOSFindBy(accessibility = "This payment will be credited to the beneficiary's account within 2 working days. " +
+            "Payments made after 3.30pm or on non-working days may not be sent until the next working day.")
+    private MobileElement agencySideMessage;
+
+    @iOSFindBy(accessibility = "Your payment has been sent and will be credited to the beneficiary's account within 2 working days. (H96)")
+    private MobileElement agencySuccessSideMsg;
+
+    @iOSFindBy(accessibility = "Your payment has been sent and will be credited to the beneficiary's account immediately, subject to our normal fraud checks.")
+    private MobileElement supressSuccessMessage;
+
+    @iOSFindBy(accessibility = "This payment should be credited to the beneficiary's account today. Payments made after " +
+            "8pm or on non-working days may not be credited until the next working day. Do you wish to continue?")
+    private MobileElement agencyMainMessage;
+
+    @iOSFindBy(accessibility = "Confirm Cancellation")
+    private MobileElement confimCancelationBox;
+
+    String currentAvailBal;
+
+
 
     HashMap<String, String> brcCodes = new HashMap<>();
 
@@ -303,11 +360,6 @@ public class AvailableBalance extends GuiCommands {
         brcCodes.put("008", "This payment will be credited to the beneficiary's account within 2 working days. " +
                 "Payments made after 3.30pm or on non-working days may not be sent until the next working day.");
 
-
-
-
-
-
     }
 
     //Click Methods
@@ -336,7 +388,16 @@ public class AvailableBalance extends GuiCommands {
         click(loginButton);
     }
 
+    public void clickDone() {
+        click(doneButton);
+    }
+
+
     //Custom Methods
+
+    public boolean isSpinnerShowing(){
+        return spinner.isDisplayed();
+    }
     public void populatePayeeDetails() {
 
         writeText(payeeName, "Jane doe");
@@ -368,6 +429,14 @@ public class AvailableBalance extends GuiCommands {
     public void navigateToPaymentpage() {
 
         login.navigateToLogin();
+        currentAvailBal = hsAvailableBalance.getText();
+        clickPaymentTab();
+        clickNewPayee();
+    }
+
+    public void navigateToPaymentpageAsUser(String user, String pass) {
+
+        login.loginAsUser(user,pass);
         clickPaymentTab();
         clickNewPayee();
     }
@@ -391,9 +460,33 @@ public class AvailableBalance extends GuiCommands {
         writeNumber(payeeAccNumber, 44449995);
         clickContinue();
     }
+    public void populateChapsWarningUser() {
+        writeText(payeeName, "CHAPS Warning");
+        writeNumber(payeeSortCode, 128956);
+        writeNumber(payeeAccNumber, 44449777);
+        clickContinue();
+    }
+    public void populateDuplicateWarningUser() {
+        writeText(payeeName, "Duplicate Warning");
+        writeNumber(payeeSortCode, 177456);
+        writeNumber(payeeAccNumber, 44444377);
+        clickContinue();
+    }
+    public void populateFraudWarningUser() {
+        writeText(payeeName, "Fraud Warning");
+        writeNumber(payeeSortCode, 177456);
+        writeNumber(payeeAccNumber, 44444377);
+        clickContinue();
+    }
+    public void populateBacsWarningUser() {
+        writeText(payeeName, "BACS Warning");
+        writeNumber(payeeSortCode, 177456);
+        writeNumber(payeeAccNumber, 44444377);
+        clickContinue();
+    }
 
     public void populateHRCodeRef(String code) {
-        writeNumber(payAmount, 1000);
+        writeNumber(payAmount, 100);
         writeText(reference, code);
         clickContinue();
     }
@@ -417,20 +510,13 @@ public class AvailableBalance extends GuiCommands {
     //Test Methods
     public boolean isAvailBalanceEqual() {
         login.navigateToLogin();
-        String check1 = hsAvailableBalance.getText().replaceAll("[^0-9]", "");
-        System.out.println(check1);
+        String check1 = hsAvailableBalance.getText();
         clickPaymentTab();
         clickNewPayee();
         passThroughPayeeDetails();
-        String check2 = psAvailableBalance.getText().replaceAll("[^0-9]", "");
-        System.out.println(check2);
-        if (check1.equals(check2)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 
+        return driver.findElementByAccessibilityId("Available balance: "+check1).isEnabled();
+    }
     public boolean cancelButtonVerification() {
         navigateToPaymentpage();
         passThroughPayeeDetails();
@@ -447,7 +533,6 @@ public class AvailableBalance extends GuiCommands {
 
         return one && two && three && four;
     }
-
     public boolean goBackFromSummaryPage() {
         navigateToPaymentpage();
         passThroughPayeeDetails();
@@ -459,29 +544,40 @@ public class AvailableBalance extends GuiCommands {
 
         return one && two && three;
     }
-
     public boolean goBackFromPayeeDetails() {
         navigateToPaymentpage();
-        populatePayeeDetails();
+        writeText(payeeName, "Jane doe");
+        writeNumber(payeeSortCode, 123456);
         click(payDeteailsBB);
         boolean one = paymentsTitle.isDisplayed();
         clickNewPayee();
         boolean two = payeeName.getText().isEmpty();
-        if (two == false) two = true;
 
         return one && two;
     }
+    public boolean goBackFromPayeeDetailsPopUp() {
+        navigateToPaymentpage();
+        populatePayeeDetails();
+        click(payDeteailsBB);
+        boolean one = confimCancelationBox.isDisplayed();
+        click(selectNo);
+        boolean two = payeeName.getText().equals("Jane doe");
+        click(payDeteailsBB);
+        click(selectYes);
+        clickNewPayee();
+        boolean three = payeeName.getText().isEmpty();
 
+        return one && two && three;
+    }
     public boolean goBackFromPaymentsDetailsPage() {
         navigateToPaymentpage();
         passThroughPayeeDetails();
         click(paymentDetailsBB);
         boolean one = payeeName.getText().equals("John doe");
-        boolean two = (payeeName.getText().equals("Test data"));
+        boolean two = (payeeSortCode.getText().equals("12-34-56")) && payeeAccNumber.getText().equals("12345678");
 
         return one && two;
     }
-
     public boolean isPaymentInfoKept() {
         navigateToPaymentpage();
         passThroughPayeeDetails();
@@ -493,7 +589,6 @@ public class AvailableBalance extends GuiCommands {
 
         return one && two;
     }
-
     public boolean isAllSummaryDisplayed() {
         navigateToPaymentpage();
         passThroughPayeeDetails();
@@ -508,7 +603,6 @@ public class AvailableBalance extends GuiCommands {
 
         return one && two && three && four && five && six && seven;
     }
-
     public boolean sortCodeValidator() {
         navigateToPaymentpage();
         writeNumber(payeeSortCode, 1);
@@ -519,7 +613,6 @@ public class AvailableBalance extends GuiCommands {
 
         return one && two;
     }
-
     public boolean accountNumberValidator() {
         navigateToPaymentpage();
         writeText(payeeName, "Robo Cop");
@@ -536,7 +629,6 @@ public class AvailableBalance extends GuiCommands {
         }
         return one;
     }
-
     public boolean isContinueButtonWorking() {
         navigateToPaymentpage();
         writeText(payeeName, "Monkey D Luffy");
@@ -545,11 +637,10 @@ public class AvailableBalance extends GuiCommands {
         boolean two = !continueButton.isEnabled();
         writeNumber(payeeAccNumber, 12345678);
         clickContinue();
-        boolean three = psAvailableBalance.isDisplayed();
+        boolean three = reference.isDisplayed();
 
         return one && two && three;
     }
-
     public boolean isCurrencyDisplayed() {
         navigateToPaymentpage();
         passThroughPayeeDetails();
@@ -560,7 +651,6 @@ public class AvailableBalance extends GuiCommands {
 
         return one && two;
     }
-
     public boolean isContinuebtnEnabled() {
         navigateToPaymentpage();
         passThroughPayeeDetails();
@@ -572,7 +662,6 @@ public class AvailableBalance extends GuiCommands {
 
         return two && three;
     }
-
     public boolean startPaymentJourneyAndEnterPayeeDetails() {
         navigateToPaymentpage();
         boolean one = payeeName.isDisplayed();
@@ -582,7 +671,6 @@ public class AvailableBalance extends GuiCommands {
 
         return one && two && three && four;
     }
-
     public boolean payeeDetailsNameField() {
         navigateToPaymentpage();
         writeNumber(payeeSortCode, 123456);
@@ -596,14 +684,13 @@ public class AvailableBalance extends GuiCommands {
 
         return one && two && three;
     }
-
     public boolean paymentAmountValidator() {
         boolean one;
         boolean two = false;
         boolean three;
         int count = 0;
         String[] correctValues = {"0.01", "5000"};
-        String[] incorrectValues = {"5000.01", "5500", "5.234"};
+        String[] incorrectValues = {"-0.1", "-5500", "5.234"};
 
         navigateToPaymentpage();
         passThroughPayeeDetails();
@@ -636,7 +723,6 @@ public class AvailableBalance extends GuiCommands {
         three = payAmount.getText().equals("3,500.10");
         return one && two && three && four && five;
     }
-
     public boolean isGpbDisplayedInactive() {
         navigateToPaymentpage();
         passThroughPayeeDetails();
@@ -649,7 +735,6 @@ public class AvailableBalance extends GuiCommands {
         }
         return one;
     }
-
     public boolean referenceFieldValidator() {
         navigateToPaymentpage();
         passThroughPayeeDetails();
@@ -668,27 +753,25 @@ public class AvailableBalance extends GuiCommands {
 
         return one && two && three && four && five;
     }
-
     public boolean insuficientFundsError() {
         navigateToPaymentpage();
         passThroughPayeeDetails();
-        writeNumber(payAmount, 2000000);
+        writeNumber(payAmount, Integer.parseInt(currentAvailBal.replaceAll("[^0-9]", "")) + 100);
         writeText(reference, "Testing");
         boolean one = errorMessageFunds.isDisplayed();
         boolean two = !continueButton.isEnabled();
 
         return one && two;
     }
-
     public boolean insuficientFundsCorrection() {
         navigateToPaymentpage();
         passThroughPayeeDetails();
-        writeNumber(payAmount, 2000);
+        writeNumber(payAmount,Integer.parseInt(currentAvailBal.replaceAll("[^0-9]", "")) + 100);
         writeText(reference, "Testing");
         boolean one = errorMessageFunds.isDisplayed();
         boolean two = !continueButton.isEnabled();
         click(payAmount);
-        pressDelete(4);
+        pressDelete((payAmount.getText().length())-1);
         boolean three = continueButton.isEnabled();
         boolean four;
         try {
@@ -698,30 +781,20 @@ public class AvailableBalance extends GuiCommands {
         }
         return one && two && three && four;
     }
-
     public boolean successPageDisplayed() {
         navigateToSuccessScreen();
-        boolean one = doneButton.isDisplayed() && sentAmount.isDisplayed() && paymentConfrimedTitle.isDisplayed();
-        boolean two = driver.findElementByAccessibilityId("to Valid User").isDisplayed();
-
-        return one && two;
+        return doneButton.isDisplayed() && paymentConfrimedTitle.isDisplayed();
     }
-
     public boolean disclaimerShown() {
+        addBrcCodes();
         navigateToSuccessScreen();
-        boolean one = paymentConfrimedTitle.isDisplayed() && successMessage.isDisplayed();
-
-        return one;
+        return paymentConfrimedTitle.isDisplayed() && driver.findElementByAccessibilityId(brcCodes.get("H47")).isDisplayed();
     }
-
     public boolean doneButtonValidation() {
         navigateToSuccessScreen();
         click(doneButton);
-        boolean one = availableBalance.isDisplayed();
-
-        return one;
+        return availableBalance.isDisplayed();
     }
-
     public boolean sentStatusMessageCheck() {
         addBrcCodes();
         String[] sentBrcCodes = {"H47", "H48", "H50", "H51", "H54", "H89", "H41", "H42", "H43", "H44", "H45"};
@@ -731,7 +804,7 @@ public class AvailableBalance extends GuiCommands {
             populateValidUser();
             populateHRCodeRef(code);
             click(makePaymentButton);
-            String message = successMessage.getText();
+            String message = driver.findElementByAccessibilityId(brcCodes.get(code)).getText();
             if (message.equals(brcCodes.get(code))) {
                 count++;
             }
@@ -739,11 +812,8 @@ public class AvailableBalance extends GuiCommands {
             click(paymentsTab);
             clickNewPayee();
         }
-        boolean one = count == 11;
-
-        return one;
+        return count == 11;
     }
-
     public boolean editStatusMessageCheck() {
         addBrcCodes();
         String[] editBrcCodes = {"H87", "H88", "H63", "H64", "HI7", "456", "074", "H82", "HG8", "HE5", "H95", "H69", "H72"};
@@ -754,19 +824,16 @@ public class AvailableBalance extends GuiCommands {
             populateInvalidUser();
             populateHRCodeRef(code);
             click(makePaymentButton);
-            String message = editFailureMessage.getText();
+            String message = driver.findElementByAccessibilityId(brcCodes.get(code)).getText();
             if (message.equals(brcCodes.get(code))) {
                 count++;
             }
-            click(doneButton);
+            click(closeButton);
             if (paymentsTitle.isDisplayed()) count2++;
             clickNewPayee();
         }
-        boolean one = count == 13 && count2 == 13;
-
-        return one;
+        return count == 13 && count2 == 13;
     }
-
     public boolean editPayeeDetailsCode() {
         addBrcCodes();
         String[] payeeDetailsBrcCodes = {"HG8", "HE5", "H95", "H69", "H72"};
@@ -777,7 +844,7 @@ public class AvailableBalance extends GuiCommands {
             populateInvalidUser();
             populateHRCodeRef(code);
             click(makePaymentButton);
-            click(tryAgainButton);
+            click(editButton);
             if (payeeName.getText().equals("Invalid User") && payeeAccNumber.getText().equals("44449995")
                     && payeeSortCode.getText().equals("12-34-56") && continueButton.isEnabled()) count++;
             click(payDeteailsBB);
@@ -785,10 +852,8 @@ public class AvailableBalance extends GuiCommands {
             click(selectYes);
             clickNewPayee();
         }
-        boolean one = count == 5 && count2 == 5;
-        return one;
+        return count == 5 && count2 == 5;
     }
-
     public boolean editPaymentDetailsCode() {
         addBrcCodes();
         String[] paymentDetailsBrcCodes = {"H87", "H88", "H63", "H64", "HI7", "456", "074", "H82"};
@@ -799,7 +864,7 @@ public class AvailableBalance extends GuiCommands {
             populateInvalidUser();
             populateHRCodeRef(code);
             click(makePaymentButton);
-            click(tryAgainButton);
+            click(editButton);
             if (payAmount.getText().equals("")) count++;
             click(paymentDetailsBB);
             click(payDeteailsBB);
@@ -807,14 +872,11 @@ public class AvailableBalance extends GuiCommands {
             click(selectYes);
             clickNewPayee();
         }
-        boolean one = count == 8 && count2 == 8;
-
-        return one;
+        return count == 8 && count2 == 8;
     }
-
     public boolean failureStatusMessageCheck() {
         addBrcCodes();
-        String[] failureBrcCodes = { "H91", "085", "H55","H56", "H61", "051", "024", "H86", "141", "028", "023", "HE2",
+        String[] failureBrcCodes = { "H91", "085", "H61", "051", "024", "H86", "141", "028", "023", "HE2",
                 "110", "037", "H62", "H90", "H65", "H85", "HE9", "HE3", "H70", "H76", "H75", "HF2", "H94", "H68",
                 "H71", "H77", "H78", "H79", "H80", "H84"};
         int count = 0;
@@ -824,7 +886,7 @@ public class AvailableBalance extends GuiCommands {
             populateInvalidUser();
             populateHRCodeRef(code);
             click(makePaymentButton);
-            String message = editFailureMessage.getText();
+            String message = driver.findElementByAccessibilityId(brcCodes.get(code)).getText();
             if (message.equals(brcCodes.get(code))) {
                 count++;
             }
@@ -835,15 +897,12 @@ public class AvailableBalance extends GuiCommands {
             System.out.println(count2);
             System.out.println(code);
         }
-        boolean one = count == 32 && count2 == 32;
-//
-        return one;
+        return count == 30 && count2 == 30;
     }
-
     public boolean duplicatePopUpDisplay(){
         addBrcCodes();
          navigateToPaymentpage();
-         populateInvalidUser();
+         populateDuplicateWarningUser();
          populateHRCodeRef("HE7");
          click(makePaymentButton);
          String message = duplicatePayMessage.getText();
@@ -854,7 +913,7 @@ public class AvailableBalance extends GuiCommands {
     public boolean clickNoPopUp(){
         duplicatePopUpDisplay();
         click(selectNo);
-        boolean one = editFailureMessage.getText().equals("Your payment will not be sent");
+        boolean one = driver.findElementByAccessibilityId("Your payment will not be sent").isDisplayed();
         click(doneButton);
         boolean two = paymentsTitle.isDisplayed();
 
@@ -863,15 +922,16 @@ public class AvailableBalance extends GuiCommands {
     public boolean clickYesPopUp(){
         addBrcCodes();
         navigateToPaymentpage();
-        populatePaymentWarningUser();
+        populateDuplicateWarningUser();
         populateHRCodeRef("HE7");
         click(makePaymentButton);
+        boolean one = driver.findElementByAccessibilityId(brcCodes.get("HE7")).isDisplayed();
         click(selectYes);
-        boolean one = successMessage.isDisplayed();
+        boolean two = driver.findElementByAccessibilityId(brcCodes.get("H47")).isDisplayed();
         click(doneButton);
-        boolean two = availableBalance.isDisplayed();
+        boolean three = availableBalance.isDisplayed();
 
-        return one && two;
+        return one && two && three;
     }
     public boolean bacsPopUpDisplay(){
         addBrcCodes();
@@ -880,7 +940,7 @@ public class AvailableBalance extends GuiCommands {
         int count2 = 0;
         navigateToPaymentpage();
         for (String code : bacsBrcCodes){
-            populateInvalidUser();
+            populateBacsWarningUser();
             populateHRCodeRef(code);
             click(makePaymentButton);
             String message = bacsPayMessage.getText();
@@ -889,11 +949,8 @@ public class AvailableBalance extends GuiCommands {
             click(selectNo);
             click(doneButton);
             clickNewPayee();
-
         }
-        boolean one = count == 4 && count2 == 4;
-
-        return one;
+        return count == 4 && count2 == 4;
     }
     public boolean bacsSelectNo(){
         addBrcCodes();
@@ -902,18 +959,16 @@ public class AvailableBalance extends GuiCommands {
         int count2 = 0;
         navigateToPaymentpage();
         for (String code : bacsBrcCodes){
-            populateInvalidUser();
+            populateBacsWarningUser();
             populateHRCodeRef(code);
             click(makePaymentButton);
             click(selectNo);
-            if (editFailureMessage.getText().equals("Your payment will not be sent"))count ++;
+            if (bacsFailMessage.getText().equals("Your payment will not be sent"))count ++;
             click(doneButton);
             if(paymentsTitle.isDisplayed())count2++;
             clickNewPayee();
         }
-        boolean one = count == 4 && count2 == 4;
-
-        return one;
+        return count == 4 && count2 == 4;
     }
     public boolean bacsSelectYes(){
         addBrcCodes();
@@ -922,24 +977,271 @@ public class AvailableBalance extends GuiCommands {
         int count2 = 0;
         navigateToPaymentpage();
         for (String code : bacsBrcCodes){
-            populatePaymentWarningUser();
+            populateBacsWarningUser();
             populateHRCodeRef(code);
             click(makePaymentButton);
             click(selectYes);
-            if (successMessage.getText().equals("Your payment has been sent and will be credited to the beneficiary's" +
+            if (bacsSuccessMessage.getText().equals("Your payment has been sent and will be credited to the beneficiary's" +
                     " account within 3 working days."))count ++;
             click(doneButton);
             if(availableBalance.isDisplayed())count2++;
             clickPaymentTab();
             clickNewPayee();
         }
-        boolean one = count == 4 && count2 == 4;
+        return count == 4 && count2 == 4;
+    }
+    public boolean chapsPopUpDisplay(){
+        addBrcCodes();
+        String[] chapsBrcCodes = {"H58","009"};
+        int count = 0;
+        int count2 = 0;
+        navigateToPaymentpage();
+        for (String code : chapsBrcCodes){
+            populateChapsWarningUser();
+            populateHRCodeRef(code);
+            click(makePaymentButton);
+            try {
+                if (chapsMessageh58.isDisplayed()) count ++;
 
-        return one;
+            }catch (Exception e){
+               if (chapsMessageh009.isDisplayed())count ++;
+            }
+            if(selectYes.isDisplayed() && selectNo.isDisplayed()) count2++;
+            click(selectNo);
+            clickDone();
+            clickNewPayee();
+        }
+        return count == 2 && count2 == 2;
+    }
+    public boolean chapsSelectYes() {
+        addBrcCodes();
+        String[] chapsBrcCodes = {"H58","009"};
+        int count = 0;
+        int count2 = 0;
+        navigateToPaymentpage();
+        for (String code : chapsBrcCodes){
+            populateChapsWarningUser();
+            populateHRCodeRef(code);
+            click(makePaymentButton);
+            click(selectYes);
+            try {
+                if (succeessChapsH97.isDisplayed()) count ++;
+
+            }catch (Exception e){
+                if (succeessChapsH98.isDisplayed())count ++;
+            }
+            click(doneButton);
+            if(availableBalance.isDisplayed())count2++;
+            clickPaymentTab();
+            clickNewPayee();
+        }
+        return count == 2 && count2 == 2;
+    }
+    public boolean chapsSelectNo(){
+        addBrcCodes();
+        String[] chapsBrcCodes = {"H58","009"};
+        int count = 0;
+        int count2 = 0;
+        navigateToPaymentpage();
+        for (String code : chapsBrcCodes){
+            populateBacsWarningUser();
+            populateHRCodeRef(code);
+            click(makePaymentButton);
+            click(selectNo);
+            if (bacsFailMessage.getText().equals("Your payment will not be sent"))count ++;
+            click(doneButton);
+            if(paymentsTitle.isDisplayed())count2++;
+            clickNewPayee();
+        }
+        return count == 2 && count2 == 2;
+    }
+    public boolean fruadSelectNo(){
+        addBrcCodes();
+        String[] chapsBrcCodes = {"H55","H55","003","004","005","006","008"};
+        int count = 0;
+        int count2 = 0;
+        navigateToPaymentpage();
+        for (String code : chapsBrcCodes){
+            populateBacsWarningUser();
+            populateHRCodeRef(code);
+            click(makePaymentButton);
+            click(selectNo);
+            if (bacsFailMessage.getText().equals("Your payment will not be sent"))count ++;
+            click(doneButton);
+            if(paymentsTitle.isDisplayed())count2++;
+            clickNewPayee();
+        }
+        return count == 7 && count2 == 7;
+    }
+    public boolean fruadPopUpDisplay(){
+        addBrcCodes();
+        String[] fraudBrcCodes = {"H55","H56"};
+        String[] agencyBrcCodes = {"003","004","005","006","008"};
+
+        int count = 0;
+        int count2 = 0;
+        int count3 = 0;
+        int count4 = 0;
+        navigateToPaymentpageAsUser("ONETRANUSER","TESTPASSWORD");
+        for (String code : fraudBrcCodes){
+            populateFraudWarningUser();
+            populateHRCodeRef(code);
+            click(makePaymentButton);
+            String message = fraudMessage.getText();
+            if ( message.equals(brcCodes.get(code))) count ++;
+            if(selectYes.isDisplayed() && selectNo.isDisplayed()) count2++;
+            click(selectNo);
+            click(doneButton);
+            clickNewPayee();
+        }
+        for (String code : agencyBrcCodes){
+            populateFraudWarningUser();
+            populateHRCodeRef(code);
+            click(makePaymentButton);
+            try {
+                if (agencyMainMessage.isDisplayed()) count3 ++;
+
+            }catch (Exception e){
+                if (agencySideMessage.isDisplayed())count3 ++;
+            }
+            if(selectYes.isDisplayed() && selectNo.isDisplayed()) count4++;
+            click(selectNo);
+            click(doneButton);
+            clickNewPayee();
+        }
+        boolean two = count3 == 5 && count4 == 5;
+        boolean one = count == 2 && count2 == 2;
+
+        return one && two;
+    }
+    public boolean fraudSelectYes() {
+        addBrcCodes();
+        String[] chapsBrcCodes = {"H55", "H56"};
+        int count = 0;
+        int count2 = 0;
+        navigateToPaymentpage();
+        for (String code : chapsBrcCodes) {
+            populateFraudWarningUser();
+            populateHRCodeRef(code);
+            click(makePaymentButton);
+            click(selectYes);
+            if (fraudYesMessage.isDisplayed())count ++;
+            click(doneButton);
+            if(availableBalance.isDisplayed())count2++;
+            clickPaymentTab();
+            clickNewPayee();
+        }
+        return count == 2 && count2 == 2;
+    }
+    public boolean agencyMainSelectYes() {
+        addBrcCodes();
+        String[] agencyBrcCodes = {"003","004","005","006"};
+        int count = 0;
+        int count2 = 0;
+        navigateToPaymentpage();
+        for (String code : agencyBrcCodes) {
+            populateFraudWarningUser();
+            populateHRCodeRef(code);
+            click(makePaymentButton);
+            click(selectYes);
+            if (agencySuccessMainMsg.isDisplayed())count ++;
+            click(doneButton);
+            if(availableBalance.isDisplayed())count2++;
+            clickPaymentTab();
+            clickNewPayee();
+        }
+        return count == 4 && count2 == 4;
+    }
+    public boolean agencySideSelectYes(){
+        addBrcCodes();
+        navigateToPaymentpage();
+        populateFraudWarningUser();
+        populateHRCodeRef("008");
+        click(makePaymentButton);
+        click(selectYes);
+        boolean one = agencySuccessSideMsg.isDisplayed();
+        click(doneButton);
+        boolean two = availableBalance.isDisplayed();
+
+        return one && two;
     }
 
-//chaps happy path message
-   // Your payment has been sent and will be credited to the beneficiary's account within 2 working days. (H98)
+    public boolean agencyOtheSelectYes() {
+        addBrcCodes();
+        String[] agencyBrcCodes = {"000","001","007"};
+        int count = 0;
+        int count2 = 0;
+        navigateToPaymentpageAsUser("ONETRANUSER","TESTPASSWORD");
+        for (String code : agencyBrcCodes) {
+            writeText(payeeName, "Fraud Success");
+            writeNumber(payeeSortCode, 177456);
+            writeNumber(payeeAccNumber, 44444377);
+            clickContinue();
+            populateHRCodeRef(code);
+            click(makePaymentButton);
+            if (supressSuccessMessage.isDisplayed())count ++;
+            click(doneButton);
+            if(availableBalance.isDisplayed())count2++;
+            clickPaymentTab();
+            clickNewPayee();
+        }
+        return count == 3 && count2 == 3;
+    }
+    public boolean payNewSpinner(){
+        navigateToSuccessScreen();
+        return isSpinnerShowing();
+    }
+    public boolean payChapsSpinner(){
+        navigateToPaymentpage();
+        populateChapsWarningUser();
+        populateHRCodeRef("H58");
+        click(makePaymentButton);
+        click(selectYes);
+        boolean one = isSpinnerShowing();
+        clickDone();
+        click(paymentsTab);
+        clickNewPayee();
+        return one;
+    }
+    public boolean payBacsSpinner(){
+        populateBacsWarningUser();
+        populateHRCodeRef("H59");
+        click(makePaymentButton);
+        click(selectYes);
+        boolean one = isSpinnerShowing();
+        clickDone();
+        click(paymentsTab);
+        clickNewPayee();
+        return one;
+    }
+    public boolean payDuplicateSpinner(){
+        populateDuplicateWarningUser();
+        populateHRCodeRef("HE7");
+        click(makePaymentButton);
+        click(selectYes);
+        boolean one = isSpinnerShowing();
+        clickDone();
+        click(paymentsTab);
+        clickNewPayee();
+        return one;
+    }
+    public boolean payFraudSpinner(){
+        populateFraudWarningUser();
+        populateHRCodeRef("003");
+        click(makePaymentButton);
+        click(selectYes);
+        boolean one = isSpinnerShowing();
+        clickDone();
+        click(paymentsTab);
+        clickNewPayee();
+        return one;
+    }
+    public boolean payFailureSpinner(){
+        populateInvalidUser();
+        populateHRCodeRef("H91");
+        click(makePaymentButton);
+        return isSpinnerShowing();
+    }
 
 
 }

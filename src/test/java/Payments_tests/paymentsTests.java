@@ -4,17 +4,21 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import paymentsPageObjects.AvailableBalance;
+import paymentsPageObjects.RecentPayees;
 import testUtils.Base_test;
 
 public class paymentsTests extends Base_test {
 
 
         private AvailableBalance availableBalance;
+        private RecentPayees recentPayees;
 
         @BeforeMethod
         public void beforeMethod() {
                 availableBalance = new AvailableBalance(driver);
+                recentPayees = new RecentPayees(driver);
         }
+
 
         @Test(priority = 1 , description = "Ensure available balance the same one summary page and in payment page " )
         public void CUICE5614 () {
@@ -70,14 +74,33 @@ public class paymentsTests extends Base_test {
         @Test(priority = 16 , description = "Checks that pound sign is not displayed whilst amount field is inactive and empty" )
         public void CUICE6373 () { Assert.assertTrue(availableBalance.isGpbDisplayedInactive()); }
 
-        @Test(priority = 17 , description = "Ensures only valid entries in reference field are allowed" )
+        @Test(priority = 18 , description = "Ensures only valid entries in reference field are allowed" )
         public void CUICE5555 () { Assert.assertTrue(availableBalance.referenceFieldValidator()); }
 
-        @Test(priority = 17 , description = "Ensures only valid entries in reference field are allowed" )
+        @Test(priority = 19 , description = "Ensures only valid entries in reference field are allowed" )
         public void CUICE6700 () { Assert.assertTrue(availableBalance.insuficientFundsError()); }
 
-        @Test(priority = 17 , description = "If error message is displayed when correction is made it goes away" )
+        @Test(priority = 20 , description = "If error message is displayed when correction is made it goes away" )
         public void CUICE6701 () { Assert.assertTrue(availableBalance.insuficientFundsCorrection()); }
+
+        @Test(priority = 21 , description = "Pay someone new with spinner" )
+        public void CUICE7340 () { Assert.assertTrue(availableBalance.payNewSpinner()); }
+
+        @Test(priority = 22 , description = "Pay recent payee with spinner" )
+        public void CUICE7341 () { Assert.assertTrue(recentPayees.payRecentSpinner()); }
+
+        @Test(priority = 23 , description = "payment after pop up with spinner" )
+        public void CUICE7343 () {
+            Assert.assertTrue(availableBalance.payChapsSpinner());
+            Assert.assertTrue(availableBalance.payBacsSpinner());
+            Assert.assertTrue(availableBalance.payDuplicateSpinner());
+            Assert.assertTrue(availableBalance.payFraudSpinner());
+            Assert.assertTrue(availableBalance.payFailureSpinner());
+        }
+
+        @Test(priority = 24 , description = "Back arrow on payee details page display cancellation warning" )
+        public void CUICE7440 () { Assert.assertTrue(availableBalance.goBackFromPayeeDetailsPopUp()); }
+
 
 
 

@@ -3,6 +3,9 @@ package paymentsPageObjects;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.iOSFindBy;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjects.Login.Login;
 import utils.GuiCommands;
 
@@ -24,7 +27,7 @@ public class DirectDebit extends GuiCommands {
     @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Direct debits\"]")
     private MobileElement directDebitTitle;
 
-    @iOSFindBy(accessibility = "direct_debits.table.header")
+    @iOSFindBy(xpath = "(//XCUIElementTypeOther[@name=\"RECENT\"])[2]")
     private MobileElement recentDirectDebits;
 
     @iOSFindBy(accessibility = "You have no direct debits.")
@@ -43,7 +46,7 @@ public class DirectDebit extends GuiCommands {
     @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"topLeftLabel\"])[199]")
     private MobileElement lastDD;
 
-    @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"topLeftLabel\"])[2]")
+    @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"topLeftLabel\"])[5]")
     private MobileElement firstRecentDD;
 
     @iOSFindBy (accessibility = "tab_bar.payments_title")
@@ -122,13 +125,31 @@ public class DirectDebit extends GuiCommands {
     @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Are you sure you want to cancel Eon direct debit?\"]")
     private MobileElement areYouSureText;
 
-    @iOSFindBy(accessibility = "You will need to contact the thirth party to set this direct debit up again. Make sure" +
+    @iOSFindBy(accessibility = "You will need to contact the third party to set this direct debit up again. Make sure" +
             " to contact the payee to confirm that you don’t have a balance outstanding and that you are no longer" +
             " being charged.")
     private MobileElement cancelDisclaimerText;
 
     @iOSFindBy(accessibility = "direct_debit_details.alert.success.title")
     private MobileElement cancelSuccessTitle;
+
+    @iOSFindBy(accessibility = "direct_debit_details.alert.partial_success.title")
+    private MobileElement partialSuccessTitle;
+
+    @iOSFindBy(accessibility = "direct_debit_details.alert.failure.title")
+    private MobileElement cancelFailureTitle;
+
+    @iOSFindBy(accessibility = "direct_debit_details.alert.failure.primaryCTA")
+    private MobileElement failContactSupport;
+
+    @iOSFindBy(accessibility = "direct_debit_details.alert.failure.secondaryCTA")
+    private MobileElement failDoneButton;
+
+    @iOSFindBy(accessibility = "direct_debit_details.alert.partial_success.primaryCTA")
+    private MobileElement pSContactSupport;
+
+    @iOSFindBy(accessibility = "direct_debit_details.alert.partial_success.secondaryCTA")
+    private MobileElement pSDoneButton;
 
     @iOSFindBy( accessibility = "direct_debit_details.alert.success.primaryCTA")
     private MobileElement cancelSuccessReturnButton;
@@ -138,6 +159,26 @@ public class DirectDebit extends GuiCommands {
 
     @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"topLeftLabel\"])[1]")
     private MobileElement firstNewDD;
+
+    @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"topLeftLabel\"])[2]")
+    private MobileElement secondNewDD;
+
+    @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"topLeftLabel\"])[9]")
+    private MobileElement alreadyDD;
+
+    @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"topLeftLabel\"])[10]")
+    private MobileElement partialSuccessDD;
+
+    @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"topLeftLabel\"])[16]")
+    private MobileElement failureDD;
+
+    @iOSFindBy(accessibility = "direct_debit_details.alert.already_cancelled.title")
+    private MobileElement alreadyTitle;
+
+    @iOSFindBy(accessibility = "direct_debit_details.alert.already_cancelled.primaryCTA")
+    private MobileElement alreadyCloseBtn;
+
+
 
     // Custom Methods
 
@@ -153,7 +194,7 @@ public class DirectDebit extends GuiCommands {
     }
 
 
-    // Test Methods
+    // Test Methods (//XCUIElementTypeOther[@name="RECENT"])[2]
 
     public boolean emptyState(){
         navigateToDDScreenAsUser("NOTRANSACTIONUSER","NOTRANSACTIONPASSWORD");
@@ -253,7 +294,11 @@ public class DirectDebit extends GuiCommands {
     public boolean doNotCancelDD(){
         cancelPopupVerification();
         click(goBackButton);
-        boolean one = dDDetailsTitle.isDisplayed() && !cancelDisclaimerText.isDisplayed();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(dDDetailsTitle));
+        boolean one = dDDetailsTitle.isDisplayed();
+
+
 
         return one;
     }
@@ -266,4 +311,76 @@ public class DirectDebit extends GuiCommands {
 
         return one && two;
     }
+    public boolean partialSuccessDelete(){
+        navigateToDDScreenAsUser("ONETRANUSER","TESTPASSWORD");
+        click(partialSuccessDD);
+        click(cancelDDButton);
+        click(cancelDDButton2);
+        boolean one = pSContactSupport.isDisplayed() && partialSuccessTitle.isDisplayed() && pSDoneButton.isDisplayed();
+        click(pSContactSupport);
+        boolean two = supportChatTitle.isDisplayed();
+        click(closeSupportChat);
+        click(cancelDDButton);
+        click(cancelDDButton2);
+        click(pSDoneButton);
+        boolean three = directDebitTitle.isDisplayed();
+
+        return one && two && three;
+    }
+    public boolean failureUnableToDelete(){
+
+        navigateToDDScreenAsUser("ONETRANUSER","TESTPASSWORD");
+        click(failureDD);
+        click(cancelDDButton);
+        click(cancelDDButton2);
+        boolean one = cancelFailureTitle.isDisplayed() && failContactSupport.isDisplayed() && failDoneButton.isDisplayed();
+        click(failContactSupport);
+        boolean two = supportChatTitle.isDisplayed();
+        click(closeSupportChat);
+        click(cancelDDButton);
+        click(cancelDDButton2);
+        click(failDoneButton);
+        boolean three = directDebitTitle.isDisplayed();
+
+        return one && two && three;
+    }
+    public boolean alreadyDeletedDD(){
+
+        navigateToDDScreenAsUser("ONETRANUSER","TESTPASSWORD");
+        click(alreadyDD);
+        click(cancelDDButton);
+        click(cancelDDButton2);
+        boolean one = alreadyTitle.isDisplayed()  && alreadyCloseBtn.isDisplayed();
+        click(alreadyCloseBtn);
+        boolean two = directDebitTitle.isDisplayed();
+
+        return one && two;
+    }
+    public boolean isNewDDVisible(){
+        nanavigateToDDScreen();
+        char str1 = firstNewDD.getText().charAt(0);
+        char str2 = secondNewDD.getText().charAt(0);
+
+        boolean one = str1 < str2;
+        return one;
+    }
+    public boolean newDDDetailsScreen(){
+        nanavigateToDDScreen();
+        click(firstNewDD);
+        boolean one = lastPayAmount.getText().equals("-") && lastPayDate.getText().equals("-");
+
+        return  one ;
+    }
+    public boolean cancelNewDD(){
+        nanavigateToDDScreen();
+        click(firstNewDD);
+        click(cancelDDButton);
+        click(cancelDDButton2);
+        click(cancelSuccessReturnButton);
+        boolean one = directDebitTitle.isDisplayed();
+
+        return one;
+    }
+
+
 }

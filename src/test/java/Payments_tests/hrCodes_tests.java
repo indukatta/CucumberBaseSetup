@@ -78,10 +78,47 @@ public class hrCodes_tests extends Base_test {
         Assert.assertTrue(availableBalance.bacsSelectNo());
     }
 
-    @Test(priority = 13 , description = "Click Yes Happy Path" )
+    @Test(priority = 13 , description = "Click Yes Happy Path for bacs" )
     public void CUICE7213 () {
         Assert.assertTrue(availableBalance.bacsSelectYes());
     }
+
+    @Test(priority = 13 , description = "Display yes no pop-up for chaps" )
+    public void CUICE7230 () {
+        Assert.assertTrue(availableBalance.chapsPopUpDisplay());
+    }
+
+    @Test(priority = 13 , description = "chaps click yes happy path" )
+    public void CUICE7232 () { Assert.assertTrue(availableBalance.chapsSelectYes()); }
+
+    @Test(priority = 13 , description = "chaps click no on chaps pop up" )
+    public void CUICE7231 () { Assert.assertTrue(availableBalance.chapsSelectNo()); }
+
+    @Test(priority = 13 , description = "display yes/no pop-up for fraud" )
+    public void CUICE7251 () {
+        Assert.assertTrue(availableBalance.fruadPopUpDisplay());
+    }
+
+    @Test(priority = 13 , description = "click no on fraud pop-up" )
+    public void CUICE7252 () { Assert.assertTrue(availableBalance.fruadSelectNo()); }
+
+    @Test(priority = 13 , description = "Fraud issue after cut off display popup" )
+    public void CUICE7253 () { Assert.assertTrue(availableBalance.fraudSelectYes()); }
+
+    @Test(priority = 13 , description = "Agency bank scenario 1" )
+    public void CUICE7254 () { Assert.assertTrue(availableBalance.agencyMainSelectYes()); }
+
+    @Test(priority = 13 , description = "Agency bank scenario 2" )
+    public void CUICE7255 () { Assert.assertTrue(availableBalance.agencySideSelectYes()); }
+
+    @Test(priority = 13 , description = "Agency bank scenario 1" )
+    public void CUICE7257 () { Assert.assertTrue(availableBalance.agencyOtheSelectYes()); }
+
+
+
+
+
+
 
 
 

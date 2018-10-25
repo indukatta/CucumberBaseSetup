@@ -64,6 +64,25 @@ public class directDebit_tests extends Base_test {
     @Test(priority = 13, description = "Success direct debit deletion")
     public void CUICE7183() {Assert.assertTrue(directDebit.successfulDDDelete());}
 
+    @Test(priority = 14, description = "Partial Success direct debit deletion")
+    public void CUICE7184() {Assert.assertTrue(directDebit.partialSuccessDelete());}
+
+    @Test(priority = 15, description = "failure direct debit deletion")
+    public void CUICE7185() {Assert.assertTrue(directDebit.failureUnableToDelete());}
+
+    @Test(priority = 16, description = "Already cancelled direct debit deletion")
+    public void CUICE7186() {Assert.assertTrue(directDebit.alreadyDeletedDD());}
+
+    @Test(priority = 17, description = "View new direct debit details")
+    public void CUICE7235() {Assert.assertTrue(directDebit.newDDDetailsScreen());}
+
+    @Test(priority = 18, description = "Cancel new direct debits")
+    public void CUICE7236() {Assert.assertTrue(directDebit.cancelNewDD());}
+
+    @Test(priority = 19, description = "View new dd")
+    public void CUICE7234() {Assert.assertTrue(directDebit.isNewDDVisible());}
+
+
 
 }
 

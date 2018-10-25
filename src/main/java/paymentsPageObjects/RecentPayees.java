@@ -6,17 +6,15 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 import pageObjects.Login.Login;
 import utils.GuiCommands;
 
-import java.lang.management.MonitorInfo;
-import java.util.NoSuchElementException;
-
 public class RecentPayees extends GuiCommands {
 
     Login login = new Login(driver);
+    AvailableBalance availableBalance = new AvailableBalance(driver);
     public RecentPayees(IOSDriver driver) {
         super(driver);
     }
 
-    @iOSFindBy(xpath = "(//XCUIElementTypeOther[@name=\"RECENT PAYEES\"])[2]") // FIXME
+    @iOSFindBy(accessibility = "payments.recent_payees_section_header_title")
     private MobileElement recentPayeeTitle;
 
     @iOSFindBy(accessibility = "John Smith")
@@ -37,8 +35,9 @@ public class RecentPayees extends GuiCommands {
     @iOSFindBy(accessibility = "payments.continue_button_title")
     private MobileElement continueButton;
 
-    @iOSFindBy(accessibility = "Available balance: 1,005.02 GBP")
-    private MobileElement availableBalance;
+    @iOSFindBy(accessibility = "balanceViewTitle")
+    private MobileElement availableBalanceLabel;
+
 
     @iOSFindBy(accessibility = "GBP")
     private MobileElement poundSign;
@@ -67,23 +66,29 @@ public class RecentPayees extends GuiCommands {
     @iOSFindBy(accessibility = "Cancel")
     private MobileElement cancelButton;
 
-    @iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"Jim Wilson\"]")
+    @iOSFindBy(xpath = "//XCUIElementTypeButton[@name=\"John Smith\"]")
     private MobileElement summaryBB;
 
     @iOSFindBy(accessibility = "Payments")
     private MobileElement paymentBB;
 
-    @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Jim Wilson\"]")
+    @iOSFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"John Smith\"]")
     private MobileElement headerTitle;
 
     @iOSFindBy (accessibility = "tab_bar.payments_title")
     private MobileElement paymentsTab;
+
+    @iOSFindBy(accessibility = "payment_confirmation.make_payment_button_title")
+    private MobileElement makePaymentButton;
+
+    String currentAvailBal;
 
 
     //Custom Methods
 
     public void navigateToPaymentTab(){
         login.navigateToLogin();
+        currentAvailBal = availableBalanceLabel.getText();
         click(paymentsTab);
     }
 
@@ -94,9 +99,9 @@ public class RecentPayees extends GuiCommands {
 
     public boolean recentSectionVerification(){
         navigateToPaymentTab();
-
-        boolean one = driver.findElementByName("RECENT PAYEES").isDisplayed() && headerTitle.isDisplayed();
-        boolean two = firstPayeeSortCode.getText().equals("11-22-33") && firstPayeeAccNum.getText().equals("99887799");
+        boolean one = recentPayeeTitle.isDisplayed() ;
+        boolean two = driver.findElementByAccessibilityId("11-22-33").isDisplayed()
+                && driver.findElementByAccessibilityId("99887799").isDisplayed();
 
         return one && two;
     }
@@ -130,22 +135,37 @@ public class RecentPayees extends GuiCommands {
         boolean two = referenceField.getText().equalsIgnoreCase("office rent");
         click(continueButton);
         click(cancelButton);
-        boolean three = recentPayeeTitle.isDisplayed();
+        boolean three = recentPayeeTitle.isDisplayed() ;
         click(firstPayeeName);
         boolean four = amountField.getText().isEmpty();
 
+        System.out.println(one);
+        System.out.println(two);
+        System.out.println(three);
+        System.out.println(four);
+
+
         return one && two && three && four;
+    }
+    public boolean payRecentSpinner(){
+        navigateToPaymentTab();
+        driver.findElementByAccessibilityId("Valid User").click();
+        writeNumber(amountField,100);
+        click(continueButton);
+        click(makePaymentButton);
+
+        return availableBalance.isSpinnerShowing();
     }
     public boolean selectPayee(){
         navigateToPaymentTab();
         click(firstPayeeName);
-        boolean one = headerTitle.getText().equals("John Smith");
+        boolean one = headerTitle.isDisplayed();
         boolean two;
         try {
             two = !cancelButton.isDisplayed();
         }catch (Exception e){
         two = true;}
-         boolean three = driver.findElementByName("Available balance: 20,000.00 GBP").isEnabled();
+         boolean three = driver.findElementByName("Available balance: "+currentAvailBal).isEnabled();
         writeNumber(amountField,22);
         click(paymentBB);
         click(firstPayeeName);
