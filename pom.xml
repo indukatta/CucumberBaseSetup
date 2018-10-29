@@ -27,7 +27,7 @@
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>
-                            test-output/TestReport/report.xml
+                            test-output/TestReport/report2.xml
                         </suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
