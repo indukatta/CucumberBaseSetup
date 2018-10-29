@@ -13,6 +13,7 @@ import utils.GuiCommands;
 public class DirectDebit extends GuiCommands {
 
     Login login = new Login(driver);
+    StandingOrder standingOrder = new StandingOrder(driver);
 
     public DirectDebit(IOSDriver driver) {
         super(driver);
@@ -179,6 +180,10 @@ public class DirectDebit extends GuiCommands {
     @iOSFindBy(accessibility = "direct_debit_details.alert.already_cancelled.primaryCTA")
     private MobileElement alreadyCloseBtn;
 
+    String warningLocation = "(16, 124)";
+
+
+
     // Custom Methods
 
     public boolean isRecentDisplayed(){
@@ -198,6 +203,9 @@ public class DirectDebit extends GuiCommands {
         click(paymentsTab);
         clickViewSPayements();
     }
+    // Display Methods
+
+    public boolean isPaymentPageDisplayed(){return paymentsTitle.isDisplayed(); }
 
     //Click Methods
     public void clickFRecentDD(){ click(firstRecentDD);}
@@ -218,7 +226,7 @@ public class DirectDebit extends GuiCommands {
     public boolean BBValidation(){
         navigateToDDScreen();
         clickDirectDebitsBB();
-        return paymentsTitle.isDisplayed();
+        return isPaymentPageDisplayed();
     }
     public boolean isInformativeTextShown(){
         navigateToDDScreen();
@@ -237,7 +245,6 @@ public class DirectDebit extends GuiCommands {
     public boolean isFailureErrMsgDisplayed(){
         navigateToDDScreenAsUser("THREETRANUSER","TESTPASSWORD");
         boolean one = failureMessage.isEnabled() && noDDMessage.isDisplayed();
-        System.out.println(one);
         click(contactSupportBtn);
         click(allowButton);
         boolean two = supportChatTitle.isDisplayed();
@@ -247,14 +254,14 @@ public class DirectDebit extends GuiCommands {
     public boolean isNetworkErrMsgDisplayed(){
         navigateToDDScreenAsUser("TWOTRANUSER","TESTPASSWORD");
         boolean one = networkErrMessage.isEnabled() && alertImage.isEnabled() && noDDMessage.isDisplayed();
-        boolean two = alertImage.getLocation().toString().equals("(16, 76)");
+        boolean two = alertImage.getLocation().toString().equals(warningLocation);
 
         return one && two;
     }
     public boolean isRetryErrMsgDisplayed(){
         navigateToDDScreenAsUser("ONETRANUSER","TESTPASSWORD");
         boolean one = networkErrMessage.isEnabled() && alertImage.isEnabled() && recentDirectDebits.isDisplayed();
-        boolean two = alertImage.getLocation().toString().equals("(16, 76)");
+        boolean two = alertImage.getLocation().toString().equals(warningLocation);
 
         return one && two;
     }
@@ -377,6 +384,30 @@ public class DirectDebit extends GuiCommands {
         click(cancelSuccessReturnButton);
 
         return  directDebitTitle.isDisplayed();
+    }
+
+    public boolean isRetryErrMsgDisplayedSO(){
+        standingOrder.navigateToSOAsUser("ONETRANUSER","TESTPASSWORD");
+        boolean one = networkErrMessage.isEnabled() && alertImage.isEnabled() && standingOrder.isUpTitleDisplayed();
+        boolean two = alertImage.getLocation().toString().equals(warningLocation);
+
+        return one && two;
+    }
+    public boolean isNetworkErrMsgDisplayedSO(){
+        standingOrder.navigateToSOAsUser("TWOTRANUSER","TESTPASSWORD");
+        boolean one = networkErrMessage.isEnabled() && alertImage.isEnabled() && standingOrder.isNoSOMessageDisplayed();
+        boolean two = alertImage.getLocation().toString().equals(warningLocation);
+
+        return one && two;
+    }
+    public boolean isFailureErrMsgDisplayedSO(){
+        standingOrder.navigateToSOAsUser("THREETRANUSER","TESTPASSWORD");
+        boolean one = failureMessage.isEnabled() && standingOrder.isNoSOMessageDisplayed();
+        click(contactSupportBtn);
+        click(allowButton);
+        boolean two = supportChatTitle.isDisplayed();
+
+        return one && two;
     }
 
 
