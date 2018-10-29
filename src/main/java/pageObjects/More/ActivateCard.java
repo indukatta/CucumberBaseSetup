@@ -58,7 +58,7 @@ public class ActivateCard extends GuiCommands {
     @iOSFindBy(accessibility = "activate_card_progress_status.error.generic_error")
     private MobileElement timeoutError;
 
-    @iOSFindBy(accessibility = "modal_action_progress_indicator.button.done")
+    @iOSFindBy(accessibility = "activate_card_progress_status.button.done")
     private MobileElement activatedDoneButton;
 
     public boolean activateCardTitleDisplayed(){
@@ -229,6 +229,7 @@ public class ActivateCard extends GuiCommands {
     }
 
     public void passThroughSuccessfulCardActivation(){
+        cardsManagement.navigateToActivateCard();
         writeText(cardNumberTextbox, GetCardsTestData.getSuccssfullCardNumber());
         writeText(expiryDateTextbox, "1225");
         click(activateCardButton);

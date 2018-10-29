@@ -3,6 +3,7 @@ package pageObjects.Login;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.iOSFindBy;
+import testData.getUserData.GetUserData;
 import utils.GuiCommands;
 
 public class Login extends GuiCommands {
@@ -53,7 +54,10 @@ public class Login extends GuiCommands {
     private MobileElement errorMessage;
 
     @iOSFindBy(accessibility = "Allow")
-    private MobileElement allowButton;
+    private MobileElement allowNotification;
+
+    @iOSFindBy(accessibility = "Don’t Allow")
+    private MobileElement dontAllowNotification;
 
     //Elements Displayed
     public boolean isaccountTitleDisplayed() {
@@ -75,17 +79,17 @@ public class Login extends GuiCommands {
     public boolean ispasswordFieldBoxDisplayed() {
         return passwordFieldBox.isDisplayed();
     }
-
-
+    
     public boolean isusernameFieldBoxDiplay() {
         return usernameFieldBox.isDisplayed();
     }
 
-
     //Click Methods
-    public void clickexistingCustomerButton() {
-        click(existingCustomerButton);
-    }
+    public void clickexistingCustomerButton() { click(existingCustomerButton); }
+
+    public void clickallowNotifacation() { click(allowNotification); }
+
+    public void clickdontAllowNotifacation() { click(dontAllowNotification); }
 
     public void clickusernameNextButton() {
         click(usernameNextButton);
@@ -201,7 +205,7 @@ public class Login extends GuiCommands {
         writeUsername("TESTUSER");
         clickusernameNextButton();
         clickpasswordLoginButton();
-        click(allowButton);
+        click(allowNotification);
     }
 
     public void passThroughLogin() {
@@ -209,6 +213,7 @@ public class Login extends GuiCommands {
         writeUsername("TESTUSER");
         clickusernameNextButton();
         clickpasswordLoginButton();
+        clickallowNotifacation();
     }
 
     public void loginAsUser(String username, String password) {
@@ -218,6 +223,24 @@ public class Login extends GuiCommands {
         clearText(passwordFieldBox);
         writePassword(password);
         clickpasswordLoginButton();
-        click(allowButton);
+        click(dontAllowNotification);
     }
+
+    public void setLogin(String user){
+
+        switch (user){
+            case "FIRST TIME":
+                loginAsUser((String) GetUserData.getFirstTimeUser().get("Username"), (String) GetUserData.getFirstTimeUser().get("Password"));
+                break;
+            case "NO TRANSACTION":
+                loginAsUser((String) GetUserData.getNoTransactionUser().get("Username"), (String) GetUserData.getNoTransactionUser().get("Password"));
+
+        }
+    }
+
+    public void dontAllowNotificationLogin(){
+        navigateToLogin();
+        clickdontAllowNotifacation();
+    }
+
 }

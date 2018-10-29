@@ -29,7 +29,7 @@ public class CardsManagement extends GuiCommands {
     @iOSFindBy(accessibility = "card_management.rows.replace_damage_or_broken")
     private MobileElement replaceDamagedOrStolenButton;
 
-    @iOSFindBy(accessibility = "card_management.rows.activate_card")
+    @iOSFindBy(accessibility = "activate_card.button.primary_cta")
     private MobileElement activateCardButton;
 
     @iOSFindBy(accessibility = "More")

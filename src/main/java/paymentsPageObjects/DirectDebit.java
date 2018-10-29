@@ -4,6 +4,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.iOSFindBy;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjects.Login.Login;
@@ -104,7 +105,7 @@ public class DirectDebit extends GuiCommands {
             "this direct debit.")
     private MobileElement detailsInformativeText;
 
-    @iOSFindBy(accessibility = "Direct debits")
+    @iOSFindBy(accessibility = "Scheduled payments")
     private MobileElement detailsBB;
 
     @iOSFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"rightLabel\"])[1]")
@@ -178,45 +179,53 @@ public class DirectDebit extends GuiCommands {
     @iOSFindBy(accessibility = "direct_debit_details.alert.already_cancelled.primaryCTA")
     private MobileElement alreadyCloseBtn;
 
-
-
     // Custom Methods
 
+    public boolean isRecentDisplayed(){
+        try {
+            return recentDirectDebits.isDisplayed();
+        }catch (NoSuchElementException e){
+            return false;
+        }
+    }
     public void navigateToDDScreenAsUser(String user, String pass){
         login.loginAsUser(user,pass);
-        click(paymentsTab);
+        clickViewSPayements();
         click(viewSPayments);
     }
-    public void nanavigateToDDScreen(){
+    public void navigateToDDScreen(){
         login.navigateToLogin();
         click(paymentsTab);
-        click(viewSPayments);
+        clickViewSPayements();
     }
+
+    //Click Methods
+    public void clickFRecentDD(){ click(firstRecentDD);}
+
+    public void clickDetailsBB(){ click(detailsBB);}
+
+    public void clickViewSPayements(){ click(viewSPayments);}
+
+    public void clickDirectDebitsBB(){click(directDebitBB);}
 
 
     // Test Methods (//XCUIElementTypeOther[@name="RECENT"])[2]
 
     public boolean emptyState(){
         navigateToDDScreenAsUser("NOTRANSACTIONUSER","NOTRANSACTIONPASSWORD");
-        boolean one = noDDMessage.isDisplayed();
-
-        return one;
+        return noDDMessage.isDisplayed();
     }
     public boolean BBValidation(){
-        nanavigateToDDScreen();
-        click(directDebitBB);
-        boolean one = paymentsTitle.isDisplayed();
-
-        return one;
+        navigateToDDScreen();
+        clickDirectDebitsBB();
+        return paymentsTitle.isDisplayed();
     }
     public boolean isInformativeTextShown(){
-        nanavigateToDDScreen();
-        boolean one = infomativeText.isDisplayed();
-
-        return one;
+        navigateToDDScreen();
+        return infomativeText.isDisplayed();
     }
     public boolean displayDD(){
-        nanavigateToDDScreen();
+        navigateToDDScreen();
         boolean one = recentDirectDebits.isDisplayed();
         boolean two = dDPaymentAmount.getText().matches("^(\\d{1,3},)?\\d{1,3}.\\d{2} GBP$");
         boolean three = merchantName.getText().matches(".*");
@@ -251,7 +260,7 @@ public class DirectDebit extends GuiCommands {
     }
 
     public boolean loadDDDetails(){
-        nanavigateToDDScreen();
+        navigateToDDScreen();
         String str1 = firstRecentDD.getText();
         click(firstRecentDD);
         boolean one = driver.findElementByName(str1).getLocation().toString().equals("(0, 20)");
@@ -260,15 +269,14 @@ public class DirectDebit extends GuiCommands {
         return one && two;
     }
     public boolean backFromDetailsPage(){
-        nanavigateToDDScreen();
-        click(firstRecentDD);
-        click(detailsBB);
-        boolean one = directDebitTitle.isDisplayed();
-        return one;
+        navigateToDDScreen();
+        clickFRecentDD();
+        clickDetailsBB();
+        return directDebitTitle.isDisplayed();
     }
     public boolean viewDDPage(){
-        nanavigateToDDScreen();
-        click(firstRecentDD);
+        navigateToDDScreen();
+        clickFRecentDD();
         boolean one = dDDetailsTitle.isDisplayed();
         boolean two = lastPayAmount.getText().matches("^(\\d{1,3},)?\\d{1,3}.\\d{2} GBP$");
         boolean three = lastPayDate.getText().matches("^\\d{2}\\s[a-zA-z]{3,9}\\s\\d{4}$");
@@ -277,30 +285,22 @@ public class DirectDebit extends GuiCommands {
         return one && two && three && four;
     }
     public boolean isCancelDisplayed(){
-        nanavigateToDDScreen();
-        click(firstRecentDD);
-        boolean one = cancelDDButton.isEnabled();
-
-        return one;
-
+        navigateToDDScreen();
+        clickFRecentDD();
+        return cancelDDButton.isEnabled();
     }
     public boolean cancelPopupVerification(){
         isCancelDisplayed();
         click(cancelDDButton);
-        boolean one =  cancelDisclaimerText.isDisplayed() && goBackButton.isDisplayed() && cancelDDButton2.isDisplayed();
-
-        return one;
+        return cancelDisclaimerText.isDisplayed() && goBackButton.isDisplayed() && cancelDDButton2.isDisplayed();
     }
     public boolean doNotCancelDD(){
         cancelPopupVerification();
         click(goBackButton);
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(dDDetailsTitle));
-        boolean one = dDDetailsTitle.isDisplayed();
 
-
-
-        return one;
+        return dDDetailsTitle.isDisplayed();
     }
     public boolean successfulDDDelete(){
         cancelPopupVerification();
@@ -357,29 +357,26 @@ public class DirectDebit extends GuiCommands {
         return one && two;
     }
     public boolean isNewDDVisible(){
-        nanavigateToDDScreen();
+        navigateToDDScreen();
         char str1 = firstNewDD.getText().charAt(0);
         char str2 = secondNewDD.getText().charAt(0);
 
-        boolean one = str1 < str2;
-        return one;
+        return str1 < str2;
     }
     public boolean newDDDetailsScreen(){
-        nanavigateToDDScreen();
+        navigateToDDScreen();
         click(firstNewDD);
-        boolean one = lastPayAmount.getText().equals("-") && lastPayDate.getText().equals("-");
 
-        return  one ;
+        return  lastPayAmount.getText().equals("-") && lastPayDate.getText().equals("-");
     }
     public boolean cancelNewDD(){
-        nanavigateToDDScreen();
+        navigateToDDScreen();
         click(firstNewDD);
         click(cancelDDButton);
         click(cancelDDButton2);
         click(cancelSuccessReturnButton);
-        boolean one = directDebitTitle.isDisplayed();
 
-        return one;
+        return  directDebitTitle.isDisplayed();
     }
 
 

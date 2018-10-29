@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Iceberg.iml" filepath="$PROJECT_DIR$/Iceberg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/uitesting.iml" filepath="$PROJECT_DIR$/.idea/uitesting.iml" />
     </modules>
   </component>
 </project>

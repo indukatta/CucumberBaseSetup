@@ -219,6 +219,27 @@ public class CardLostOrStolenFurtherInfo extends GuiCommands {
         return one && two;
     }
 
+    public void passToReviewTransactionsPage(){
+        activateCard.passThroughSuccessfulCardActivation();
+        cardLostOrStolen.navigateToCardLostStolenFurtherInfo();
+        click(stolenButton);
+        click(cardLastSeenTextfield);
+
+
+        String pastDate = "1/October/2018";
+        String[] pastDateArray = pastDate.split("/");
+
+        HashMap<String, String> pastDateMap = new HashMap<>();
+        pastDateMap.put("day", pastDateArray[0]);
+        pastDateMap.put("month", pastDateArray[1]);
+        pastDateMap.put("year", pastDateArray[2]);
+        IosDatePickerWheel(pastDateMap, cardLastSeenTextfield);
+
+        click(dateDone);
+        click(pinCompromisedNo);
+        click(reviewTransactionsButton);
+    }
+
     public void deactivateCard(){
         cardLostOrStolen.navigateToCardLostStolenFurtherInfo();
         click(stolenButton);
@@ -227,4 +248,10 @@ public class CardLostOrStolenFurtherInfo extends GuiCommands {
         click(pinCompromisedYes);
         click(reportAndCancelButton);
     }
+
+    public void contactSupportThroughCardLostOrstolenFurtherInfo(){
+        cardLostOrStolen.navigateToCardLostStolenFurtherInfo();
+        click(contactSupportButton);
+    }
+
 }

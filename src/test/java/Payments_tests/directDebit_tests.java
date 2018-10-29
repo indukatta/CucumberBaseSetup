@@ -5,12 +5,12 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import paymentsPageObjects.AvailableBalance;
 import paymentsPageObjects.DirectDebit;
+import paymentsPageObjects.StandingOrder;
 import testUtils.Base_test;
 
 public class directDebit_tests extends Base_test {
 
     private DirectDebit directDebit;
-
     @BeforeMethod
     public void beforeMethod() {
         directDebit = new DirectDebit(driver);
