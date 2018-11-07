@@ -9,6 +9,9 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
+import com.factory.mobile.driver.MobileDriverBase.AppType;
+
+import static com.factory.mobile.driver.MobileDriverManager.setAppiumDriver;
 
 import java.io.File;
 import java.io.IOException;
@@ -38,6 +41,9 @@ public class Base_test {
 
         driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        
+        setAppiumDriver(AppType.IOSAPP, driver);
+        
     }
 
     @AfterMethod()
