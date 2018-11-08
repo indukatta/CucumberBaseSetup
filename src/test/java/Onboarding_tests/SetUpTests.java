@@ -25,11 +25,11 @@ public class SetUpTests extends Base_test {
     private BusinessDetailsForm business;
 
 	@BeforeTest
-	public void setupReports() {
+	public void startTestReport() {
 		startReports("setupTests");
 	}
 	@AfterTest
-	public void tearDownAutoExsel() {
+	public void endTestReport() {
 		endReports();
 	}
 	
