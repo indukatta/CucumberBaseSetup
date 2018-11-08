@@ -1,3 +1,7 @@
+//		Object[] [] darr = features();
+//		System.out.println(darr.length);
+//		System.out.println(darr[0].length);
+
 
 @tag
 Feature: CUICE

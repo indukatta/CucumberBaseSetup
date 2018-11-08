@@ -1,3 +1,4 @@
+@productDetails
 Feature: Verify all functionalities related to Product Details screen, it will cover following stories CUICE-542, CUICE-6194, CUICE-3911
 
   Scenario: CUICE-542|TC-001: Verify other static content on Product Detais screen.
@@ -8,17 +9,18 @@ Feature: Verify all functionalities related to Product Details screen, it will c
     Then verify features and benefits on the screen
       | No arrangement fee                                      |
       | Pay interes only on the amount you use calculated daily |
-      | Same day availability (if approved)                      |
+      | Same day availability (if approved)                     |
     Then overdraft fee and interest
       | Overdraft fee 1.5% (charged monthly) |
-      | Interest is 9.9% EAR Representative |
+      | Interest is 9.9% EAR Representative  |
     Then verify rate and charges heading as "Rates and charges" on screen
     Then verify terms and conditions heading as "Terms and Conditions" on screen
     Then verify terms and conditions details as "Business Overdrafts"
 
   Scenario: CUICE-542|TC-002: Verify terms and conditions is not clickable.
     Given user is on Product Details screen
-    Then verify terms and conditions details is clickable.
+    Then user clicks on terms and condition
+    Then verify product name as "Business overdraft" not displayed
 
   Scenario: CUICE-6194|TC-001: Verify static overdraft range on Product Details screen
     Given user is on Product Details screen

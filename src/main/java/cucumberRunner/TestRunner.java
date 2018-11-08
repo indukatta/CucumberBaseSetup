@@ -23,9 +23,6 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 	}
 	@AfterSuite
 	public void test() {
-//		Object[] [] darr = features();
-//		System.out.println(darr.length);
-//		System.out.println(darr[0].length);
 		endReports();
 	}
 }
