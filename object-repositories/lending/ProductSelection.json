@@ -1,0 +1,4 @@
+{
+	"productSelectionHeader" : {"xpath" : "welcome.new_customer_button_title"}
+    ,"already_Registered" : {"accessibility id" : "welcome.existing_customer_button_title"}
+}
