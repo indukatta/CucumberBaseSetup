@@ -24,7 +24,7 @@ public class ProductSelection {
 	public void user_clicks_on_find_out_more_link() throws Throwable {
 		findByAny(linkFindOutMore).click();
 	}
-	
+
 	// Action(s) on screen ....
 	@When("^user clicks on Apply button$")
 	public void user_clicks_on_Apply_button() throws Throwable {
@@ -35,7 +35,7 @@ public class ProductSelection {
 	public void user_clicks_on_Skip_button() throws Throwable {
 		findByAny(buttonSkip).click();
 	}
-	
+
 	// Verification(s) on screen ....
 	@Then("^verify product selection header as \"([^\"]*)\" on screen$")
 	public void verify_product_selection_header_as_on_screen(String expected) throws Throwable {
@@ -72,6 +72,31 @@ public class ProductSelection {
 	@Then("^verify icon displayed on screen$")
 	public void verify_icon_displayed_on_screen() throws Throwable {
 		findByAny(productIcon).isDisplayed();
+	}
+
+	@Then("^Verify broken link for icon image on the screen$")
+	public void verify_broken_link_for_icon_image_on_the_screen() throws Throwable {
+		reportSkip("Verify Broken Icon", "Verify that icon appearing on screen is not broken.");
+	}
+
+	@Then("^Verify product name, description and Find out more are left aligned$")
+	public void verify_product_name_description_and_Find_out_more_are_left_aligned() throws Throwable {
+		reportSkip("Product Alignment", "Verify that product name, description and Find out more are left aligned.");
+	}
+
+	@Then("^Verify Apply and Skip buttons are center aligned$")
+	public void verify_Apply_and_Skip_buttons_are_center_alligned() throws Throwable {
+		reportSkip("Button Alignment", "Verify that Apply and Skip buttons are center aligned.");
+	}
+
+	@Then("^Verify Apply button is auto highlighted$")
+	public void verify_Apply_button_is_auto_highlighted() throws Throwable {
+		reportSkip("Appluy Button", "Verify that Apply button is auto highlighted");
+	}
+
+	@Then("^Verify overall UI of Product Selection screen as per UX$")
+	public void verify_overall_UI_of_Product_Selection_screen_as_per_UX() throws Throwable {
+		reportSkip("Overall UI", "Verify overall UI of Product Details screen is as per UX and usability.");
 	}
 
 }
