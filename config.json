@@ -1,0 +1,20 @@
+{
+	"suite-name":"productDetails"
+
+	,"appiumServer":{
+	        "ipAddress":"127.0.0.1"
+	        ,"port":"4726"
+	    }
+
+	,"iOSApp":{
+	        "platformName":"IOS"
+	        ,"platformVersion":"11.2"
+	        ,"deviceName":"iPhone 8"
+	        ,"app":"/Users/ashdiksh/Downloads/Icerberg.app"
+	    }
+
+	,"OR-package":"stepDefinitions.Lending"
+	,"OR-path":"object-repositories/lending"
+	,"sso-login":{"username":"ashdiksh", "password":"password"}
+
+}

@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Icerberg Lending">
+<test name="Apply Amend Lending Products" verbose="2">
+<groups> 
+        <run>
+           <include name="regressionSuite"/>
+        </run>
+    </groups>
+    <classes>
+        <class name= "cucumberRunner.TestRunner"/>
+    </classes>
+</test>
+</suite>

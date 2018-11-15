@@ -24,12 +24,13 @@ import java.util.concurrent.TimeUnit;
 
 public class Base_test {
 
-    protected IOSDriver driver;
+    protected static IOSDriver driver = null;
     String folder;
     DateFormat df;
 
     ConfigReader config = new ConfigReader();
 
+    
     @BeforeMethod
     public void setUp() throws MalformedURLException {
 
@@ -41,9 +42,7 @@ public class Base_test {
 
         driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        
         setAppiumDriver(AppType.IOSAPP, driver);
-        
     }
 
     @AfterMethod()

@@ -27,12 +27,18 @@ public class More extends GuiCommands {
     @iOSFindBy(accessibility = "more.cell_title.card_management")
     private MobileElement cardManagmentButton;
 
-    @iOSFindBy(accessibility = "more.cell_title.credit_and_lending")
+    @iOSFindBy(accessibility = "Credit & Lending")
     private MobileElement creditAndLendingButton;
 
     public void navigateToCardManagement(){
         click(moreButton);
         click(cardManagmentButton);
     }
+
+    public void navigateToCreditAndLending(){
+        click(moreButton);
+        click(creditAndLendingButton);
+    }
+    
 }
 

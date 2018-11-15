@@ -51,7 +51,6 @@ public class GuiCommands {
             
         }
         catch (ElementNotVisibleException e) {
-        	reportInfo("Click", e.getMessage());
             System.out.println(e.getMessage());
         }
         catch (ElementNotSelectableException e) {
@@ -71,9 +70,9 @@ public class GuiCommands {
     protected void writeText(MobileElement element, String text) {
         try {
             scrollDown(element);
-            element.sendKeys(text);
+//            element.sendKeys(text);
 //            reportPass("writeText", "Entered '"+text+"' in element "+element.toString());
-//            findByAny(element).sendKeys(text);
+            findByAny(element).sendKeys(text);
         }
         catch (ElementNotVisibleException e) {
             System.out.println("Element not visible");

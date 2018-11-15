@@ -1,0 +1,12 @@
+{
+
+	"productDetailsHeader" : {"xpath" : "//XCUIElementTypeNavigationBar[@name=\"Product Details\"]"}
+	,"productName" : {"accessibility id" : "Business Overdrafts"}
+	,"productDescription" : {"accessibility id" : "Best for flexible access to cash flow"}
+	,"featuresAndBenefitsHeading" : {"accessibility id" : "Features and Benefits"}
+	,"featuresAndBenefits" : {"accessibility id" : "• No arrangement fee • Pay interest only on the amount you use calculated daily • Same day availability (if approved)"}
+	,"overdraftRange" : {"accessibility id" : "Overdraft between 1.00 GBP - 10,000.00 GBP"}
+	,"overdratfsInformations" : {"accessibility id" : "Overdraft fee 1.5% (monthly charge) Interest is 9.9% EAR Representative Business borrowing cannot be used for personal use."}
+	,"termsAndConditionsHeading" : {"accessibility id" : "Terms and Conditions"}
+
+}
