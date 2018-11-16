@@ -12,9 +12,16 @@ public class CreditManagement extends CommonLibrary {
 
 	@Given("^that user is on the Credit Management screen$")
 	public void that_user_is_on_the_Credit_Management_screen() throws Throwable {
-		setStepName("Given");
-		Login login = new Login(driver);
-		login.loginAsUser("TESTUSER", "TESTPASSWORD");
+		if (!alreadyLoggedIn) {
+			setStepName("Given");
+			Login login = new Login(driver);
+			login.loginAsUser("TESTUSER", "TESTPASSWORD");
+			alreadyLoggedIn = true;
+		}else {
+			setStepName("Given");
+			reportPass("User is already logged in to Iceberg application.");
+		}
+		
 	}
 
 	@When("^user clicks on the Credit & Lending link$")
@@ -28,13 +35,13 @@ public class CreditManagement extends CommonLibrary {
 	@Then("^verify that XX screen is displayed$")
 	public void verify_that_Credit_Management_screen_is_displayed() throws Throwable {
 		setStepName("Then");
-		funtionNotImplemented();
+		functionNotImplemented();
 	}
 
 	@Then("^verify lending question screen is displayed$")
 	public void verify_lending_question_screen_is_displayed() throws Throwable {
 		setStepName("Then");
-		funtionNotImplemented();
+		functionNotImplemented();
 	}
 
 }

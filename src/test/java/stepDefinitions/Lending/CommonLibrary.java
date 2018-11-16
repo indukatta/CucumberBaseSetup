@@ -8,6 +8,7 @@ import pageObjects.Login.Login;
 import pageObjects.More.More;
 
 public class CommonLibrary {
+	public static boolean alreadyLoggedIn = false;
 	public static IOSDriver<MobileElement> driver;
 
 	public CommonLibrary() {
@@ -16,9 +17,9 @@ public class CommonLibrary {
 
 	public static String loginErrorCancel;
 
-	public void funtionNotImplemented() {
+	public void functionNotImplemented() {
 		System.out.println(Thread.currentThread().getStackTrace()[2].getMethodName() + " is not implemented yet.");
-		reportSkip(Thread.currentThread().getStackTrace()[2].getMethodName() + " is not implemented yet.");
+		reportInfo(Thread.currentThread().getStackTrace()[2].getMethodName() + " is not implemented yet.");
 	}
 
 	public void loginAndOpenCreditAndSelectScreen() {

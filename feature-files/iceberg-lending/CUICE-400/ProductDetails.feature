@@ -8,7 +8,7 @@ Feature: Verify all functionalities related to Product Details screen, it will c
 	Then verify Product Details screen is displayed
 	  
   @productDetails
-  Scenario: CUICE-542|ATC-001: Verify other static content on Product Details screen.
+  Scenario: CUICE-542 >> ATC-001: Verify other static content on Product Details screen.
     Given user is on Product Details screen
     Then verify product name "Business Overdrafts" on Product Details screen
     Then verify product description "Best for flexible access to cash flow" on screen
@@ -23,13 +23,13 @@ Feature: Verify all functionalities related to Product Details screen, it will c
       | Interest is 9.9% EAR Representative  |
   
   @productDetails
-  Scenario: CUICE-542|ATC-002: Verify terms and conditions is not clickable.
+  Scenario: CUICE-542 >> ATC-002: Verify terms and conditions is not clickable.
     Given user is on Product Details screen
     Then user clicks on terms and condition
-    Then verify product name "Business Overdraft" on Product Details screen
+    Then verify product name "Business Overdrafts" on Product Details screen
   
   @productDetails1
-  Scenario: CUICE-542|MTC-003: Verify icon, spacing between sub components alignment of text and/or sub component and over all UI
+  Scenario: CUICE-542 >> MTC-003: Verify icon, spacing between sub components alignment of text and/or sub component and over all UI
     Then verify broken link for icon image on the screen
     Then verify product name and description are center aligned
     Then verify other components and sub components are left aligned 
@@ -40,11 +40,11 @@ Feature: Verify all functionalities related to Product Details screen, it will c
     Then verify overall UI of Product Details screen as per UX
   
   @productDetails
-  Scenario: CUICE-6194|ATC-001: Verify static overdraft range on Product Details screen
+  Scenario: CUICE-6194 >> ATC-001: Verify static overdraft range on Product Details screen
     Given user is on Product Details screen
     Then verify overdraft range "Overdraft between 1.00 GBP - 10,000.00 GBP" is displayed on product details screen
   
   @productDetails
-  Scenario: CUICE-3914|ATC-001: Verify static warning message on Product Details screen
+  Scenario: CUICE-3914 >> ATC-001: Verify static warning message on Product Details screen
     Given user is on Product Details screen
     Then verify product waring "Business borrowing cannot be used for personal use" is displayed on product details screen

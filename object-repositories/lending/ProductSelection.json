@@ -4,7 +4,7 @@
 	,"productIcon" : {"accessibility id" : "bankAvatar"}
 	,"productName" : {"accessibility id" : "Business Overdrafts"}
 	,"productBenefit" : {"accessibility id" : "Best for flexible access to cash flow"}
-	,"linkFindOutMore" : {"accessibility id" : "lending_button_more_info"}
-	,"buttonApply" : {"accessibility id" : "lending_button_apply"}
+	,"linkFindOutMore" : {"accessibility id" : "lending.button_more_info"}
+	,"buttonApply" : {"accessibility id" : "lending.button_apply"}
 
 }
