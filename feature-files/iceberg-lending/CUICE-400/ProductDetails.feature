@@ -28,7 +28,7 @@ Feature: Verify all functionalities related to Product Details screen, it will c
     Then user clicks on terms and condition
     Then verify product name "Business Overdrafts" on Product Details screen
   
-  @productDetails1
+  @productDetails
   Scenario: CUICE-542 >> MTC-003: Verify icon, spacing between sub components alignment of text and/or sub component and over all UI
     Then verify broken link for icon image on the screen
     Then verify product name and description are center aligned

@@ -5,6 +5,8 @@ import static com.factory.mobile.driver.MobileDriverManager.*;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import pageObjects.Login.Login;
+import pageObjects.More.More;
 
 public class ProductSelection extends CommonLibrary {
 
@@ -15,6 +17,26 @@ public class ProductSelection extends CommonLibrary {
 	public static String productBenefit;
 	public static String linkFindOutMore;
 	public static String buttonApply;
+	
+	@Given("^that user is on the Credit Management screen$")
+	public void that_user_is_on_the_Credit_Management_screen() throws Throwable {
+		setStepName("Given");
+		if (!alreadyLoggedIn) {
+			Login login = new Login(driver);
+			login.loginAsUser("TESTUSER", "TESTPASSWORD");
+			alreadyLoggedIn = true;
+		}else {
+			reportPass("User is already logged in to Iceberg application.");
+		}
+	}
+	
+	@When("^user clicks on the Credit & Lending link$")
+	public void user_clicks_on_the_Credit_and_Lending_link() throws Throwable {
+		setStepName("When");
+		More more = new More(driver);
+		more.navigateToCreditAndLending();
+		sleep(3);
+	}
 	
 	@Given("^that user is on Product Selection screen$")
 	public void that_user_is_on_Product_Selection_screen() throws Throwable {
@@ -99,6 +121,12 @@ public class ProductSelection extends CommonLibrary {
 	public void verify_overall_UI_of_Product_Selection_screen_as_per_UX() throws Throwable {
 		setStepName("Then");
 		reportSkip("Verify overall UI of Product Details screen is as per UX and usability.");
+	}
+
+	@Then("^verify lending question screen is displayed$")
+	public void verify_lending_question_screen_is_displayed() throws Throwable {
+		setStepName("Then");
+		functionNotImplemented();
 	}
 
 }

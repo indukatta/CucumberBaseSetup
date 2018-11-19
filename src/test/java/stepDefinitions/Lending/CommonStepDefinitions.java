@@ -13,10 +13,10 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public void startTestReport(Scenario scenario) throws Exception {
 		startTest(scenario.getName());
 	}
-	
+
 	@After
 	public void endTestReport(Scenario scenario) {
 		endTest();
-	}	
-	
+	}
+
 }

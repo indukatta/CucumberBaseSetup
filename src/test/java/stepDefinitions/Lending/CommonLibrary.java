@@ -10,7 +10,7 @@ import pageObjects.More.More;
 public class CommonLibrary {
 	public static boolean alreadyLoggedIn = false;
 	public static IOSDriver<MobileElement> driver;
-
+	
 	public CommonLibrary() {
 		driver = (IOSDriver<MobileElement>) getAppiumDriverInstance();
 	}

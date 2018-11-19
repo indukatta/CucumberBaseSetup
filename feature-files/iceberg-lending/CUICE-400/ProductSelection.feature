@@ -1,6 +1,5 @@
-
 Feature: Verify all functionalities related to Product Selection screen. It will covers following stories CUICE-540, CUICE-542
-
+  
   @productSelection
   Scenario: CUICE-540 >> ATC-001: Test if user is able to view the product categories screen if not already taken out
     Given that user is on the Credit Management screen
@@ -33,7 +32,7 @@ Feature: Verify all functionalities related to Product Selection screen. It will
     Then verify overall UI of Product Selection screen as per UX
   
   @productSelection
-  Scenario: Product Selection >> CUICE-542 >> ATC-001: Test if user is taken to "Product Details" screen after find out more is clicked
+  Scenario: CUICE-542 >> ATC-001: Test if user is taken to "Product Details" screen after find out more is clicked
     Given that user is on Product Selection screen
     When user clicks on find out more link
     Then verify product name "Business Overdrafts" on Product Details screen

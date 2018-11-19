@@ -29,9 +29,14 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 	}
 	
 	public static void main1(String[] args) {
-		String s = "thisIsMyString";
+//		String s = "thisIsMyString";
+		
+		String s = Thread.currentThread().getStackTrace()[1].getClassName();
 		String[] r = StringUtils.capitalize(s).split("(?=\\p{Upper})");
 		System.out.println(r.length);
-		System.out.println(String.join(" ", r));
+		String cp = String.join("", r).toString();
+		System.out.println(cp);
+		System.out.println(cp.lastIndexOf("."));
+		System.out.println(String.join("", r));
 	}
 }
