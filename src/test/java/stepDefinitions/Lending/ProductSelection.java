@@ -50,8 +50,8 @@ public class ProductSelection extends CommonLibrary {
 		findByAny(linkFindOutMore).click();
 	}
 
-	@When("^user clicks on Apply button$")
-	public void user_clicks_on_Apply_button() throws Throwable {
+	@When("^user clicks on Apply button on Product Selection$")
+	public void user_clicks_on_Apply_button_on_Product_Selection_screen() throws Throwable {
 		setStepName("When");
 		findByAny(buttonApply).click();
 	}
