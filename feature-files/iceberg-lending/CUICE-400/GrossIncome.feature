@@ -10,21 +10,21 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
   Scenario: CUICE-6173 >> ATC-001: Test if user is able to view Gross Income header and other components
     Given that user is on Gross Income screen
     Then verify that Gross Income header is displayed
-    And verify that Gross Income inputbox is displayed
+    And verify that Gross Income input box is displayed
     And verify that default value of Gross Income is "0.00"
-    And verify that currency symblol "GBP" is diplayed
+    And verify that currency symbol "GBP" is displayed
     And verify that continue button is disabled
 
   Scenario: CUICE-6173 >> ATC-001: Test if user is able to view Gross Income header and other components
     Given that user is on Gross Income screen
     When user enters minimum value "0" in Gross Income input box
-    And vefify that warning message is not displayed
+    And verify that warning message is not displayed
     Then verify that continue button is enabled
 
   Scenario: CUICE-6173 >> ATC-001: Test if user is able to view Gross Income header and other components
     Given that user is on Gross Income screen
     When user enters maximum value "100,000,000" in Gross Income input box
-    And vefify that warning message is not displayed
+    And verify that warning message is not displayed
     Then verify that continue button is enabled
 
   Scenario: CUICE-6173 >> ATC-001: Test if user is able to view Gross Income header and other components

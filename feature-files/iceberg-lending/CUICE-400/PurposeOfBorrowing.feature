@@ -7,7 +7,7 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
     Then verify that screen title "Borrowing" is displayed.
     And verify that Purpose of Borrowing "Purpose of borrowing" is displayed
   
-  Scenario: CUICE-6173 >> ATC-002: Test if user is able to view the "Purpose of Borrowing" - Chioces
+  Scenario: CUICE-6173 >> ATC-002: Test if user is able to view the "Purpose of Borrowing" - Choices
     Given that user is on Purpose of Borrowing screen
     Then verify that following Purpose of Business questions are displayed on screen
       | Asset purchase                     |
@@ -17,7 +17,7 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
       | Motor vehicles                     |
       | Premises expansion                 |
       | Premises refurbishment             |
-      | Property develpoment adn sale      |
+      | Property development and sale      |
       | Property purchase - Investment     |
       | Property purchase - own occupation |
       | Stock purchase                     |
