@@ -13,7 +13,7 @@ Feature: Verify all functionalities related to Residential Status screen. It wil
       | Living with a parent |
       | Owner occupier       |
       | Tenant               |
-      | Others                |
+      | Others               |
     And verify that none of the options are pre selected
     And verify that continue button is disabled
 
