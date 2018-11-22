@@ -55,7 +55,7 @@ public class PurposeOfBorrowing extends CommonLibrary {
 	@Then("^verify that no default option is pre-selected$")
 	public void verify_that_no_default_option_is_pre_selected() {
 		setStepName("Then");
-		findByAny(purposeOfBorrowingQuestions).isDeselectedAll();
+		findByAny(purposeOfBorrowingQuestions).isAllDeselected();
 	}
 
 	@When("^user selects an option from Purpose of Borrowing Question$")
@@ -74,7 +74,7 @@ public class PurposeOfBorrowing extends CommonLibrary {
 	public void user_selects_all_options_from_Purpose_of_Borrowing_Question() {
 		setStepName("When");
 		findByAny(purposeOfBorrowingQuestions).clickAll();
-		findByAny(purposeOfBorrowingQuestions).isSelectedAll();
+		findByAny(purposeOfBorrowingQuestions).isAllSelected();
 	}
 
 	@When("^user clicks on Continue button on the screen$")

@@ -100,6 +100,8 @@ public class AccountsTab extends GuiCommands {
     public boolean titleDisplayVerification(){
         login.navigateToLogin();
         boolean one = graphAvailableBalanceTitle.isDisplayed();
+        
+        //Reportlog.aasertTrue(graphAvailableBalanceTitle.isDisplayed(),"Check is displ",true,takeScreenshot-true)
         boolean three = availableBalance.getText().matches("^(\\d{1,3},)?\\d{1,3}.\\d{2} GBP$");
         findByAny(availableBalance).click();
         

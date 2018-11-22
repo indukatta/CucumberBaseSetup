@@ -30,7 +30,7 @@ public class CommonLibrary {
 	}
 	public void sleep(int seconds) {
 		try {
-			System.out.println("Waiting for "+seconds+" seconds ...");
+//			System.out.println("Waiting for "+seconds+" seconds ...");
 			Thread.sleep(seconds*1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();

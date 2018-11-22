@@ -13,23 +13,21 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
 		features = "feature-files/"
 		, glue = "stepDefinitions.Lending/"
-//		, tags = {"@productSelection,@productDetails"}
-		, dryRun=true, tags = {"@businessPremisesOpt"}
+		, tags = {"@productSelection,@productDetails"}
+//		, dryRun=true, tags = {"@grossIncome"}
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 	
 	@BeforeTest
 	public void setup() throws Exception {
-//		launchIOSApplication("0.0.0.0:4723");
+		launchIOSApplication("0.0.0.0:4723");
 	}
 	@AfterTest
 	public void teardown() {
-//		closeApplication();
+		closeApplication();
 	}
 	
 	public static void main1(String[] args) {
-//		String s = "thisIsMyString";
-		
 		String s = Thread.currentThread().getStackTrace()[1].getClassName();
 		String[] r = StringUtils.capitalize(s).split("(?=\\p{Upper})");
 		System.out.println(r.length);
