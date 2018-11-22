@@ -1,3 +1,5 @@
 {
-    "loginErrorCancel" : {"accessibility id" : "Cancel"}
+	"loginErrorCancel": {
+		"accessibility id": "Cancel"
+	}
 }
