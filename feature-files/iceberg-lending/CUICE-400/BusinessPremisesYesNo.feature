@@ -6,7 +6,7 @@ Feature: Verify all functionalities related to Business Premises Yes/No screen, 
     When user clicks on Apply button on Product Selection
     Then verify that screen title "Borrowing" is displayed.
     And user selects an option from Purpose of Borrowing Question
-    And user clicks on Continue button on the screen
+    And user clicks on continue button on the screen
     Then verify that Business Premises YesNo screen is displayed
 
   Scenario: CUICE-6174 >> ATC-002: Test if user is able to see Yes No buttons and its default state

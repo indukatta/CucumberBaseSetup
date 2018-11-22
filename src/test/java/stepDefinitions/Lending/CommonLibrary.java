@@ -28,10 +28,10 @@ public class CommonLibrary {
 		More more = new More(driver);
 		more.navigateToCreditAndLending();
 	}
-	public void sleep(int seconds) {
+	public void sleep(int ms) {
 		try {
 //			System.out.println("Waiting for "+seconds+" seconds ...");
-			Thread.sleep(seconds*1000);
+			Thread.sleep(ms);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

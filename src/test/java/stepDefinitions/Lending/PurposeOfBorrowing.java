@@ -38,12 +38,8 @@ public class PurposeOfBorrowing extends CommonLibrary {
 
 	@Then("^verify that following Purpose of Business questions are displayed on screen$")
 	public void verify_that_following_Purpose_of_Borrowing_question_are_displayed_on_screen(DataTable expected) throws Throwable {
-		List<List<String>> data = expected.raw();
-		List<String> pobQuestions = new ArrayList<String>();
-		for (int i = 0; i < data.size(); i++) {
-			pobQuestions.add(data.get(i).get(0));
-		}
-		findByAny(purposeOfBorrowingQuestions).verifyAllEqualsTo(pobQuestions);
+		setStepName("Then");
+		findByAny(purposeOfBorrowingQuestions).verifyAllEqualsTo(expected);
 	}
 
 	@Then("^verify that continue button is disabled$")
@@ -77,8 +73,8 @@ public class PurposeOfBorrowing extends CommonLibrary {
 		findByAny(purposeOfBorrowingQuestions).isAllSelected();
 	}
 
-	@When("^user clicks on Continue button on the screen$")
-	public void user_clicks_on_Continue_button_on_the_screen() throws Throwable {
+	@When("^user clicks on continue button on the screen$")
+	public void user_clicks_on_continue_button_on_the_screen() throws Throwable {
 		setStepName("When");
 		findByAny(continueButton).isEnabled();
 	}

@@ -42,6 +42,6 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
   Scenario: CUICE-6173 >> ATC-006: Test if user is taken to the "Residential Status" lending question when clicked on Continue button.
     Given that user is on Purpose of Borrowing screen
     When user selects an option from Purpose of Borrowing Question
-    And user clicks on Continue button on the screen
+    And user clicks on continue button on the screen
     Then verify that Residential Status lending question screen is displayed
   

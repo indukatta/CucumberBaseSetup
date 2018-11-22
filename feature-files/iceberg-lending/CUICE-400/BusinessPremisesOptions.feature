@@ -6,7 +6,7 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
     When user clicks on Apply button on Product Selection
     Then verify that screen title "Borrowing" is displayed.
     And user selects an option from Purpose of Borrowing Question
-    And user clicks on Continue button on the screen
+    And user clicks on continue button on the screen
     Then verify that Business Premises options screen is displayed
 
   Scenario: CUICE-6174 >> ATC-006: Test if user is able to see Business Premises's default state
@@ -30,5 +30,5 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
   Scenario: CUICE-6174 >> ATC-008: Test if user select an option and clicks on Continue, Questions screen is displayed
     Given that user is on Business Premises options screen
     When user clicks on Freehold Business Premises type
-    And user clicks on Continue button on the screen
+    And user clicks on continue button on the screen
     Then verify that Question screen is displayed

@@ -35,7 +35,7 @@ public class ProductSelection extends CommonLibrary {
 		setStepName("When");
 		More more = new More(driver);
 		more.navigateToCreditAndLending();
-		sleep(3);
+		sleep(3000);
 	}
 	
 	@Given("^that user is on Product Selection screen$")
@@ -48,7 +48,7 @@ public class ProductSelection extends CommonLibrary {
 	public void user_clicks_on_find_out_more_link() throws Throwable {
 		setStepName("When");
 		findByAny(linkFindOutMore).click();
-		sleep(1);
+		sleep(1000);
 	}
 
 	@When("^user clicks on Apply button on Product Selection$")
