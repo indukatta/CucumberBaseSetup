@@ -15,16 +15,18 @@ public class BusinessPremisesOptions {
 
 	@Then("^verify that Business Premises options screen is displayed$")
 	public void verify_that_Business_Premises_options_screen_is_displayed() {
+		captureScreenshot();
 		findByAny(bpScreenTitle).isDisplayed();
-	}
-
-	@Then("^verify that Premises Business options header \"([^\"]*)\" is displayed$")
-	public void verify_that_Premises_Business_options_header_is_displayed(String expected) {
-		findByAny(bpTypeScreenHeader).isDisplayed();
 	}
 
 	@Given("^that user is on Business Premises options screen$")
 	public void that_user_is_on_Business_Premises_options_screen() {
+		captureScreenshot();
+		findByAny(bpTypeScreenHeader).isDisplayed();
+	}
+
+	@Then("^verify that Premises Business options header \"([^\"]*)\" is displayed$")
+	public void verify_that_Premises_Business_options_header_is_displayed(String expected) {
 		findByAny(bpTypeScreenHeader).isDisplayed();
 	}
 

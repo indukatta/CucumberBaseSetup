@@ -1,6 +1,9 @@
 @productDetails
 Feature: Verify all functionalities related to Product Details screen, it will cover following stories CUICE-542, CUICE-6194, CUICE-3911
 
+  Background: This is to add category to below scenarios
+    Given that category "ProductDetails" is added for below scenarios
+
   Scenario: CUICE-542 >> Pre-requisite: Login and open Product Details screen
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link

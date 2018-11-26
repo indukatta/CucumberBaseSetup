@@ -28,8 +28,8 @@ public class GrossIncome extends CommonLibrary {
 		findByAny(grossIncomeScreenHeader).isDisplayed();
 	}
 
-	@Then("^verify that Gross Income inputbox is displayed$")
-	public void verify_that_Gross_Income_inputbox_is_displayed() {
+	@Then("^verify that Gross Income input box is displayed$")
+	public void verify_that_Gross_Income_input_box_is_displayed() {
 		findByAny(grossIncomeInputbox).isDisplayed();
 	}
 

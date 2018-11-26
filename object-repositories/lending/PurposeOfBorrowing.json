@@ -1,14 +1,21 @@
 {
 	"borrowingTitle": {
-		"": ""
+		"xpath": "//XCUIElementTypeNavigationBar[@name=\"Borrowing\"]"
 	},
 	"purposeOfBorrowing": {
-		"": ""
+		"accessibility id": "lending.question.title"
+	},
+	"purposeOfBorrowingSubTitle": {
+		"accessibility id": "lending.question.subtitle"
 	},
 	"purposeOfBorrowingQuestions": {
-		"": ""
+		"xpath": "//XCUIElementTypeStaticText[starts-with(@name,\"lending_question_answer_option_text_\")]"
+	},
+	
+	"purposeOfBorrowingQuestionsChkBox": {
+		"xpath": "//XCUIElementTypeImage[starts-with(@name, \"lending_question_answer_option_checkbox_\")]"
 	},
 	"continueButton": {
-		"": ""
+		"accessibility id": "Continue"
 	}
 }

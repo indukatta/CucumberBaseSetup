@@ -1,6 +1,9 @@
 @grossIncome
 Feature: Verify all functionalities related to Purpose of Borrowing screen, it will cover following stories
 
+  Background: This is to add category to below scenarios
+	Given that category "GrossIncome" is added for below scenarios
+	
   Scenario: CUICE-6274 >> ATC-001: Test if user is able to view Gross Income screen
     Given that user is on Product Selection screen
     When user clicks on Apply button on Product Selection

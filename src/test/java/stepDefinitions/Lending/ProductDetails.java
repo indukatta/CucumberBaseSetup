@@ -17,10 +17,11 @@ public class ProductDetails extends CommonLibrary {
 	public static String overdratfsInformations;
 	public static String termsAndConditionsHeading;
 	public static String downloadPDF;
-
+	
 	@Given("^user is on Product Details screen$")
 	public void user_is_on_Product_Details_screen() throws Throwable {
 		setStepName("Given");
+		captureScreenshot();
 		findByAny(productName).isDisplayed();
 		findByAny(productName).verifyEqualsTo("Business Overdrafts");
 	}
@@ -28,6 +29,7 @@ public class ProductDetails extends CommonLibrary {
 	@Then("^verify Product Details screen is displayed$")
 	public void verify_Product_Details_screen_is_displayed() throws Throwable {
 		setStepName("Then");
+		captureScreenshot();
 		findByAny(productName).isDisplayed();
 		findByAny(productName).verifyEqualsTo("Business Overdrafts");
 	}

@@ -1,5 +1,6 @@
 package pageObjects.Login;
 
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.iOSFindBy;
@@ -218,6 +219,21 @@ public class Login extends GuiCommands {
 
     public void loginAsUser(String username, String password) {
         clickexistingCustomerButton();
+//        try {
+//			Thread.sleep(5000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//        driver.findElement(MobileBy.AccessibilityId("checkbox_button")).click();
+//        try {
+//			Thread.sleep(10000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//        boolean check = driver.findElement(MobileBy.AccessibilityId("checkbox_button")).isSelected();
+//        System.out.println("AAAAAAAAAAA"+check);
         writeUsername(username);
         clickusernameNextButton();
         clearText(passwordFieldBox);

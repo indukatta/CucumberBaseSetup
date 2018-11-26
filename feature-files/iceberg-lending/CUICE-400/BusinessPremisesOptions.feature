@@ -1,5 +1,8 @@
 @businessPremises
 Feature: Verify all functionalities related to Purpose of Borrowing screen, it will cover following stories
+  
+  Background: This is to add category to below scenarios
+	Given that category "BusinessPremises" is added for below scenarios
 
   Scenario: CUICE-6174 >> ATC-005: Test if user is able to see Business Premises options screen
     Given that user is on Product Selection screen

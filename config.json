@@ -1,6 +1,6 @@
 {
 	"suite-name":"thinSliceOverdrafts"
-
+	,"report-type":"aventstack"
 	,"appiumServer":{
 	        "ipAddress":"127.0.0.1"
 	        ,"port":"4726"

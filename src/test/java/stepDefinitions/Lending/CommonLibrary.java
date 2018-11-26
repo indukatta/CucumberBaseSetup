@@ -23,14 +23,20 @@ public class CommonLibrary {
 	}
 
 	public void loginAndOpenCreditAndSelectScreen() {
-		Login login = new Login(driver);
-		login.loginAsUser("TESTUSER", "TESTPASSWORD");
+		if (!alreadyLoggedIn) {
+			Login login = new Login(driver);
+			login.loginAsUser("TESTUSER", "TESTPASSWORD");
+			alreadyLoggedIn = true;
+		}else {
+			reportPass("User is already logged in to Iceberg application.");
+		}
 		More more = new More(driver);
 		more.navigateToCreditAndLending();
+		sleep(3000);
+		captureScreenshot("ProductSelection");
 	}
-	public void sleep(int ms) {
+	public static void sleep(int ms) {
 		try {
-//			System.out.println("Waiting for "+seconds+" seconds ...");
 			Thread.sleep(ms);
 		} catch (InterruptedException e) {
 			e.printStackTrace();

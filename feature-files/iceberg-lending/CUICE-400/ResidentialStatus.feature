@@ -1,6 +1,9 @@
 @residentialStatus
 Feature: Verify all functionalities related to Residential Status screen. It will covers following stories CUICE-6175
 
+  Background: This is to add category to below scenarios
+	Given that category "ResidentialStatus" is added for below scenarios
+	
   Scenario: CUICE-8934 >> ATC-001: Test if user able to view  the Residential Status screen
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link

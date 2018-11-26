@@ -1,6 +1,9 @@
 @businessPremises
 Feature: Verify all functionalities related to Business Premises Yes/No screen, it will cover following stories
 
+  Background: This is to add category to below scenarios
+	Given that category "BusinessPremises" is added for below scenarios
+	
   Scenario: CUICE-6174 >> ATC-001: Test if user is able to see Business Premises question screen
     Given that user is on Product Selection screen
     When user clicks on Apply button on Product Selection
