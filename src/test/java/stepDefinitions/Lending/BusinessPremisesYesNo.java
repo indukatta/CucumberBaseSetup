@@ -17,7 +17,7 @@ public class BusinessPremisesYesNo extends CommonLibrary {
 	@Then("^verify that Business Premises YesNo screen is displayed$")
 	public void verify_that_Business_Premises_YesNo_screen_is_displayed() {
 		setStepName("Then");
-		captureScreenshot("BusinessPremisesYesNo");
+		captureScreenshot("BusinessPremisesYesNo_0");
 		findByAny(screenTitle).isDisplayed();
 		findByAny(bpScreenHeader).isDisplayed();
 	}
@@ -25,7 +25,6 @@ public class BusinessPremisesYesNo extends CommonLibrary {
 	@Given("^that user is on Business Premises YesNo screen$")
 	public void that_user_is_on_Business_Premises_YesNo_screen() {
 		setStepName("Given");
-		captureScreenshot("BusinessPremisesYesNo");
 		findByAny(screenTitle).isDisplayed();
 		findByAny(bpScreenHeader).isDisplayed();	
 	}

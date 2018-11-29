@@ -5,11 +5,12 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
 	Given that category "BusinessPremises" is added for below scenarios
 
   Scenario: CUICE-6174 >> ATC-005: Test if user is able to see Business Premises options screen
-    Given that user is on Product Selection screen
+    Given that user is on the Credit Management screen
+    When user clicks on the Credit & Lending link
     When user clicks on Apply button on Product Selection
-    Then verify that screen title "Borrowing" is displayed.
-    And user selects an option from Purpose of Borrowing Question
-    And user clicks on continue button on the screen
+    When user selects option 1 from Purpose of Borrowing Question
+    When user clicks on continue button on the screen
+    Then user clicks on Yes button on Business Premises screen
     Then verify that Business Premises options screen is displayed
 
   Scenario: CUICE-6174 >> ATC-006: Test if user is able to see Business Premises's default state

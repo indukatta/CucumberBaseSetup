@@ -11,23 +11,23 @@ public class MaritalStatus {
 	public static String screenTitle;
 	public static String screenHeader;
 	public static String questionAnswer;
-	public static String questionAnswerCivilPartnership;
-	public static String questionAnswerMarried;
-	public static String questionAnswerSingle;
-	
+	public static String questionAnswerRadioBtn;
+
 	@Given("^user is on Marital Status lending question screen$")
 	public void user_is_on_Marital_Status_lending_question_screen() {
 		setStepName("Then");
 		findByAny(screenTitle).isDisplayed();
 		findByAny(screenHeader).isDisplayed();
 	}
+
 	@Then("^verify that Marital Status screen is displayed$")
 	public void verify_that_Marital_Status_screen_is_displayed() {
 		setStepName("Then");
-		captureScreenshot("MaritalStatus");
+		captureScreenshot("MaritalStatus_0");
 		findByAny(screenTitle).isDisplayed();
 		findByAny(screenHeader).isDisplayed();
 	}
+
 	@Then("^verify that Marital Status description \"([^\"]*)\" on screen$")
 	public void verify_that_Marital_Status_description_on_screen(String expect) {
 		setStepName("Then");
@@ -40,34 +40,24 @@ public class MaritalStatus {
 		findByAny(questionAnswer).verifyAllEqualsTo(expected);
 	}
 
-	@Then("^verify that none of the options are pre selected$")
-	public void verify_that_none_of_the_options_are_pre_selected() {
+	@Then("^verify that none of the Marital Status is pre selected$")
+	public void verify_that_none_of_the_Marital_Status_is_pre_selected() {
 		setStepName("Then");
-		findByAny(questionAnswer).isAllDeselected();
+		captureScreenshot();
+		findByAny(questionAnswerRadioBtn).verifyAttributesAllEqualsTo("value", "0");
 	}
 
-	@When("^user clicks on Civil partnership option on Marital Status screen$")
-	public void user_clicks_on_Civil_partnership_option_on_Marital_Status_screen() {
+	@When("^user selects option (\\d+) on Marital Status screen$")
+	public void user_selects_option_on_Marital_Status_screen(int index) {
 		setStepName("When");
-		findByAny(questionAnswerCivilPartnership).click();
+		findByAny(questionAnswer).click(index);
 	}
 
-	@When("^user clicks on Married option on Marital Status screen$")
-	public void user_clicks_on_Married_option_on_Marital_Status_screen() {
-		setStepName("When");
-		findByAny(questionAnswerMarried).click();
-	}
-
-	@Then("^verify that Civil partnership option is deselected$")
-	public void verify_that_Civil_partnership_option_is_deselected() {
+	@Then("^verify that option (\\d+) on Marital Status is deselected$")
+	public void verify_that_option_on_Marital_Status_is_deselected(int index) {
 		setStepName("Then");
-		findByAny(questionAnswerCivilPartnership).isDeselected();
+		captureScreenshot();
+		findByAny(questionAnswerRadioBtn).verifyAttributesEqualsTo(index, "value", "0");
 	}
-
-	@When("^user clicks on Single option on Marital Status screen$")
-	public void user_clicks_on_Single_option_on_Marital_Status_screen() {
-		setStepName("When");
-		findByAny(questionAnswerSingle).click();
-	}
-
+	
 }

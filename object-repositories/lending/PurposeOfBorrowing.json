@@ -17,8 +17,5 @@
 	
 	"purposeOfBorrowingQuestionsChkBox": {
 		"xpath": "//XCUIElementTypeImage[starts-with(@name, \"lending_question_answer_option_checkbox_\")]"
-	},
-	"continueButton": {
-		"accessibility id": "Continue"
 	}
 }

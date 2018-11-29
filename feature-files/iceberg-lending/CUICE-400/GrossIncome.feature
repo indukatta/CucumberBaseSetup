@@ -6,12 +6,11 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
 	
   Scenario: CUICE-6173 >> Pre-requisite: Test if user is able to view Gross Income screen
     Given that user is on the Credit Management screen
-    Then user clicks on the Credit & Lending link
-    Then user clicks on Apply button on Product Selection
+    When user clicks on the Credit & Lending link
+    When user clicks on Apply button on Product Selection
     When user selects option 1 from Purpose of Borrowing Question
-    And user clicks on continue button on the screen
-    Then verify that Business Premises YesNo screen is displayed
-    When user clicks on No button on Business Premises screen
+    When user clicks on continue button on the screen
+    Then user clicks on No button on Business Premises screen
     Then verify that Gross Income screen is displayed
 
   Scenario: CUICE-6173 >> ATC-001: Test if user is able to view Gross Income header and other components

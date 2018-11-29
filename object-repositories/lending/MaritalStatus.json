@@ -1,23 +1,18 @@
 {
 	"screenTitle": {
-		"xpath": "//XCUIElementTypeOther[@name=\"Borrowing\"]"
+		"accessibility id": "lending.navigation.bar_title_accessibility_id"
 	},
 	"backButton": {
-		"xpath": "//XCUIElementTypeButton[@name=\"Borrowing\"]"
+		"accessibility id": "Back"
 	},
 	"screenHeader": {
-		"accessibility id": "lending_qeustion_title"
+		"xpath": "//XCUIElementTypeStaticText[@name=\"lending.question.title\"]"
 	},
 	"questionAnswer": {
 		"xpath": "//XCUIElementTypeStaticText[starts-with(@name,\"lending_question_answer_option_text_\")]"
 	},
-	"questionAnswerCivilPartnership": {
-		"xpath": "//XCUIElementTypeStaticText[@name=\"lending_question_answer_option_checkbox_7\"]"
-	},
-	"questionAnswerMarried": {
-		"xpath": "//XCUIElementTypeStaticText[@name=\"lending_question_answer_option_checkbox_2\"]"
-	},
-	"questionAnswerSingle": {
-		"xpath": "//XCUIElementTypeStaticText[@name=\"lending_question_answer_option_checkbox_0\"]"
+	"questionAnswerRadioBtn": {
+		"xpath": "//XCUIElementTypeImage[starts-with(@name,\"lending_question_answer_option_checkbox_\")]"
 	}
+	
 }

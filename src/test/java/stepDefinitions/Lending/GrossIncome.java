@@ -16,17 +16,17 @@ public class GrossIncome extends CommonLibrary {
 	public static String grossIncomeInputbox;
 	public static String grossIncomeCurrencySymbol;
 
-	@Then("^verify that Gross Income screen is displayed$")
-	public void verify_that_Gross_Income_screen_is_displayed() {
-		setStepName("Then");
-		captureScreenshot("GrossIncome");
+	@Given("^that user is on Gross Income screen$")
+	public void that_user_is_on_Gross_Income_screen() {
+		setStepName("Given");
 		findByAny(screenTitle).isDisplayed();
 		findByAny(screenHeader).isDisplayed();
 	}
 
-	@Given("^that user is on Gross Income screen$")
-	public void that_user_is_on_Gross_Income_screen() {
-		setStepName("Given");
+	@Then("^verify that Gross Income screen is displayed$")
+	public void verify_that_Gross_Income_screen_is_displayed() {
+		setStepName("Then");
+		captureScreenshot("GrossIncome_0");
 		findByAny(screenTitle).isDisplayed();
 		findByAny(screenHeader).isDisplayed();
 	}
