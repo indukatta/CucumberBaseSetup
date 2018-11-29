@@ -1,14 +1,17 @@
 {
-	"bpScreenTitle": {
-		"": ""
+	"screenTitle": {
+		"accessibility id": "lending.navigation.bar_title_accessibility_id"
+	},
+	"backButton": {
+		"accessibility id": "Back"
 	},
 	"bpScreenHeader": {
-		"": ""
+		"accessibility id": "lending_qeustion_title"
 	},
 	"bpYes": {
-		"": ""
+		"accessibility id": "Yes"
 	},
 	"bpNo": {
-		"": ""
+		"accessibility id": "No"
 	}
 }

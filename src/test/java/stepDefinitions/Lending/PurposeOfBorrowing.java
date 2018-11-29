@@ -9,16 +9,18 @@ import cucumber.api.java.en.When;
 
 public class PurposeOfBorrowing extends CommonLibrary {
 
-	public static String borrowingTitle;
+	public static String screenTitle;
 	public static String purposeOfBorrowing;
 	public static String purposeOfBorrowingQuestions;
+	public static String purposeOfBorrowingQuestionsChkBox;
 	public static String continueButton;
 
-	@Then("^verify that screen title \"([^\"]*)\" is displayed\\.$")
-	public void verify_that_screen_title_is_displayed(String expected) {
-		setStepName("Then");
-		findByAny(borrowingTitle).isDisplayed();
-		findByAny(borrowingTitle).verifyEqualsTo(expected);
+	@Given("^that user is on Purpose of Borrowing screen$")
+	public void that_user_is_on_Purpose_of_Borrowing_screen() throws Throwable {
+		setStepName("Given");
+		captureScreenshot("PurposeOfBorrowing");
+		findByAny(screenTitle).isDisplayed();
+		findByAny(purposeOfBorrowing).isDisplayed();
 	}
 
 	@Then("^verify that Purpose of Borrowing \"([^\"]*)\" is displayed$")
@@ -27,15 +29,12 @@ public class PurposeOfBorrowing extends CommonLibrary {
 		findByAny(purposeOfBorrowing).verifyEqualsTo(expected);
 	}
 
-	@Given("^that user is on Purpose of Borrowing screen$")
-	public void that_user_is_on_Purpose_of_Borrowing_screen() throws Throwable {
-		setStepName("Given");
-		loginAndOpenCreditAndSelectScreen();
-		findByAny(ProductSelection.buttonApply).click();
-		sleep(3000);
+	@Then("^verify that screen title \"([^\"]*)\" is displayed$")
+	public void verify_that_screen_title_is_displayed(String expected) {
+		setStepName("Then");
 		captureScreenshot("PurposeOfBorrowing");
-		findByAny(borrowingTitle).isDisplayed();
-		findByAny(purposeOfBorrowing).isDisplayed();
+		findByAny(screenTitle).isDisplayed();
+		findByAny(screenTitle).verifyEqualsTo(expected);
 	}
 
 	@Then("^verify that following Purpose of Business questions are displayed on screen$")
@@ -55,7 +54,7 @@ public class PurposeOfBorrowing extends CommonLibrary {
 	@Then("^verify that no option is pre-selected$")
 	public void verify_that_no_default_option_is_pre_selected() {
 		setStepName("Then");
-		findByAny(purposeOfBorrowingQuestions).verifyAttributesAllEqualsTo("visible", "false");
+		findByAny(purposeOfBorrowingQuestionsChkBox).verifyAttributesAllEqualsTo("value", "0");
 	}
 
 	@When("^user selects option (\\d+) from Purpose of Borrowing Question$")
@@ -81,11 +80,7 @@ public class PurposeOfBorrowing extends CommonLibrary {
 	public void user_clicks_on_continue_button_on_the_screen() throws Throwable {
 		setStepName("When");
 		findByAny(continueButton).click();
-	}
-
-	@Then("^verify that Residential Status lending question screen is displayed$")
-	public void verify_that_Residential_Status_lending_question_screen_is_displayed() throws Throwable {
-		functionNotImplemented();
+		sleep(3000);
 	}
 
 }

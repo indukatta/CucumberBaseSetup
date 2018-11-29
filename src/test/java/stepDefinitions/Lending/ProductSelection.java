@@ -34,6 +34,7 @@ public class ProductSelection extends CommonLibrary {
 	public void user_clicks_on_Apply_button_on_Product_Selection_screen() throws Throwable {
 		setStepName("When");
 		findByAny(buttonApply).click();
+		sleep(2000);
 	}
 
 	@Then("^verify Select Products description \"([^\"]*)\" on screen$")

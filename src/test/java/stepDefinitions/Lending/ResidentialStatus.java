@@ -17,38 +17,45 @@ public class ResidentialStatus {
 	
 	@Given("^user is on Residential Status lending question screen$")
 	public void user_is_on_Residential_Status_lending_question_screen() {
-		findByAccessibilityId(screenTitle).isDisabled();
-		findByAccessibilityId(screenHeader).isDisabled();
+		setStepName("Given");
+		findByAny(screenTitle).isDisabled();
+		findByAny(screenHeader).isDisabled();
 	}
 
 	@Then("^verify that Residential Status description \"([^\"]*)\" on screen$")
 	public void verify_that_Residential_Status_description_on_screen(String expected) {
-		findByAccessibilityId(screenHeader).verifyEqualsTo(expected);
+		setStepName("Then");
+		findByAny(screenHeader).verifyEqualsTo(expected);
 	}
 
 	@Then("^verify that below Residential Status options are displayed$")
 	public void verify_that_below_Residential_Status_options_are_displayed(DataTable expected) {
-		findByAccessibilityId(questionAnswer).verifyAllEqualsTo(expected);
+		setStepName("Then");
+		findByAny(questionAnswer).verifyAllEqualsTo(expected);
 	}
 
 	@When("^user clicks on Halls of residence option on Residential Status screen$")
 	public void user_clicks_on_Halls_of_residence_option_on_Residential_Status_screen() {
-		findByAccessibilityId(questionAnswerHallOfResidence).click();
+		setStepName("When");
+		findByAny(questionAnswerHallOfResidence).click();
 	}
 
 	@When("^user clicks on Owner occupier option on Residential Status screen$")
 	public void user_clicks_on_Owner_occupier_option_on_Residential_Status_screen() {
-		findByAccessibilityId(questionAnswerOwnerOccupier).click();
+		setStepName("When");
+		findByAny(questionAnswerOwnerOccupier).click();
 	}
 
 	@Then("^verify that Halls of residence option is deselected$")
 	public void verify_that_Halls_of_residence_option_is_deselected() {
-		findByAccessibilityId(questionAnswerHallOfResidence).isDeselected();
+		setStepName("Then");
+		findByAny(questionAnswerHallOfResidence).isDeselected();
 	}
 
 	@When("^user clicks on Tenant option on Residential Status screen$")
 	public void user_clicks_on_Tenant_option_on_Residential_Status_screen() {
-		findByAccessibilityId(questionAnswerTenant).click();
+		setStepName("When");
+		findByAny(questionAnswerTenant).click();
 	}
 
 }

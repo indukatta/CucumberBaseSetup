@@ -7,7 +7,7 @@ import cucumber.api.java.en.When;
 import static com.factory.mobile.driver.MobileDriverManager.*;
 
 public class BusinessPremisesOptions {
-	public static String bpScreenTitle;
+	public static String screenTitle;
 	public static String bpTypeScreenHeader;
 	public static String bpTypes;
 	public static String bpTypeLeasehold;
@@ -15,8 +15,9 @@ public class BusinessPremisesOptions {
 
 	@Then("^verify that Business Premises options screen is displayed$")
 	public void verify_that_Business_Premises_options_screen_is_displayed() {
-		captureScreenshot();
-		findByAny(bpScreenTitle).isDisplayed();
+		
+		captureScreenshot("BusinessPremisesOptions");
+		findByAny(screenTitle).isDisplayed();
 	}
 
 	@Given("^that user is on Business Premises options screen$")

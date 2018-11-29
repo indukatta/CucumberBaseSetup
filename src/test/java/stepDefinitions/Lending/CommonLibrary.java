@@ -9,6 +9,7 @@ import pageObjects.More.More;
 
 public class CommonLibrary {
 	public static boolean alreadyLoggedIn = false;
+	public static boolean onScreen = false;
 	public static IOSDriver<MobileElement> driver;
 	
 	public CommonLibrary() {

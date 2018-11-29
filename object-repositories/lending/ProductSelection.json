@@ -1,6 +1,6 @@
 {
 	"selectProductHeader": {
-		"xpath": "//XCUIElementTypeNavigationBar[@name=\"Select Products\"]"
+		"xpath": "//XCUIElementTypeOther[@name=\"Select Products\"]"
 	},
 	"selectProductDescription": {
 		"accessibility id": "Do you want to add extra products or services?"

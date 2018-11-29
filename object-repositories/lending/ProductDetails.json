@@ -1,6 +1,6 @@
 {
 	"productDetailsHeader": {
-		"xpath": "//XCUIElementTypeNavigationBar[@name=\"Product Details\"]"
+		"xpath": "//XCUIElementTypeOther[@name=\"Product Details\"]"
 	},
 	"productName": {
 		"accessibility id": "Business Overdrafts"

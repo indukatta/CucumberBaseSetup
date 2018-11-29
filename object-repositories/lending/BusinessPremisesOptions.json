@@ -1,6 +1,9 @@
 {
-	"bpScreenTitle": {
-		"": ""
+	"screenTitle": {
+		"accessibility id": "lending.navigation.bar_title_accessibility_id"
+	},
+	"backButton": {
+		"accessibility id": "Select Products"
 	},
 	"bpTypeScreenHeader": {
 		"": ""

@@ -5,8 +5,8 @@ Feature: Verify all functionalities related to Marital Status screen. It will co
 	Given that category "MaritalStatus" is added for below scenarios
 	
   Scenario: CUICE-6175 >> ATC-001: Test if user able to view  the Marital Status screen
-    Given that user is on the Credit Management screen
-    When user clicks on the Credit & Lending link
+    Given user is on Marital Status lending question screen
+    Then verify that Marital Status screen is displayed
 
   Scenario: CUICE-6175 >> ATC-002: Test if user is able to view the Marital Status lending question and its choices
     Given user is on Marital Status lending question screen

@@ -1,6 +1,9 @@
 {
-	"borrowingTitle": {
-		"xpath": "//XCUIElementTypeNavigationBar[@name=\"Borrowing\"]"
+	"screenTitle": {
+		"accessibility id": "lending.navigation.bar_title_accessibility_id"
+	},
+	"backButton": {
+		"accessibility id": "Select Products"
 	},
 	"purposeOfBorrowing": {
 		"accessibility id": "lending.question.title"

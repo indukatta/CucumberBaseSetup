@@ -1,17 +1,20 @@
 {
-	"grossIncomeScreenTitle": {
-		"": ""
+	"screenTitle": {
+		"accessibility id": "lending.navigation.bar_title_accessibility_id"
 	},
-	"grossIncomeScreenHeader": {
-		"": ""
+	"backButton": {
+		"accessibility id": "Back"
+	},
+	"screenHeader": {
+		"accessibility id": "lending_qeustion_title"
 	},
 	"grossIncomeInputbox": {
-		"": ""
+		"accessibility id": "lending_question_answer_option_text"
 	},
 	"grossIncomeCurrencySymbol": {
-		"": ""
+		"accessibility id": "GBP"
 	},
-	"grossIncomeWarning": {
-		"": ""
+	"grossIncomeInfo": {
+		"accessibility id": "lending_qeustion_subtitle"
 	}
 }
