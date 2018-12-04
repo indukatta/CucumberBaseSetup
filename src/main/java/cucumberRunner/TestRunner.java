@@ -13,8 +13,9 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
 		features = "feature-files/"
 		, glue = "stepDefinitions.Lending/"
-		, tags = {"@residentialStatus,@maritalStatus,@grossIncome,@businessPremisesYN,@purposeOfBorrowing,@productSelection1,@productDetails1"}
-//		, dryRun=true, tags = {"@residentialStatus,@residentialStatus"}
+//		, tags = {"@businessPremises,@residentialStatus,@maritalStatus,@grossIncome,@businessPremisesYN,@purposeOfBorrowing,@productSelection,@productDetails"}
+//		, tags = {"@businessPremisesYN"}
+		, dryRun=true, tags = {"@productSelection"}
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 	

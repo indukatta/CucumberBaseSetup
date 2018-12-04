@@ -15,11 +15,10 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
 
   Scenario: CUICE-6174 >> ATC-006: Test if user is able to see Business Premises's default state
     Given that user is on Business Premises options screen
-    Then verify that Premises Business options header "What type of premises does you business own?" is displayed
-    And verify that Freehold Business Premises type is displayed
-    And verify that Leasehold Business Premises type is displayed
-    And verify that Freehold Business Premises type is not selected
-    And verify that Leasehold Business Premises type is not selected
+    Then verify that Premises Business options header "What type of premises does your business own?" is displayed
+    And verify that Freehold Business Premises type "Freehold" is displayed
+    And verify that Leasehold Business Premises type "Leasehold" is displayed
+    And verify that non of the Business Premises type is pre selected
     And verify that continue button is disabled
 
   Scenario: CUICE-6174 >> ATC-007: Test if user select an option then continue button is enabled
@@ -35,4 +34,3 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
     Given that user is on Business Premises options screen
     When user clicks on Freehold Business Premises type
     And user clicks on continue button on the screen
-    Then verify that Question screen is displayed

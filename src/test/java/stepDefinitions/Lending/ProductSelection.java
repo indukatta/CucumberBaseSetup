@@ -8,7 +8,7 @@ import cucumber.api.java.en.When;
 
 public class ProductSelection extends CommonLibrary {
 
-	public static String selectProductHeader;
+	public static String screenTitle;
 	public static String selectProductDescription;
 	public static String productIcon;
 	public static String productName;
@@ -19,10 +19,17 @@ public class ProductSelection extends CommonLibrary {
 	@Given("^that user is on Product Selection screen$")
 	public void that_user_is_on_Product_Selection_screen() throws Throwable {
 		setStepName("Given");
-		captureScreenshot();
-		findByAny(productName).verifyEqualsTo("Business Overdrafts");
+//		findByAny(screenTitle).isDisplayed();
+		findByAny(productName).isDisplayed();
 	}
 
+	@Then("^verify that Product Selection screen is displayed$")
+	public void verify_Product_Details_screen_is_displayed() throws Throwable {
+		setStepName("Then");
+		captureScreenshot("ProductSelection");
+//		findByAny(screenTitle).isDisplayed();
+		findByAny(productName).isDisplayed();
+	}
 	@When("^user clicks on find out more link$")
 	public void user_clicks_on_find_out_more_link() throws Throwable {
 		setStepName("When");

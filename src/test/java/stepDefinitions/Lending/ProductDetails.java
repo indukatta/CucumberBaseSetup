@@ -8,7 +8,8 @@ import java.util.List;
 
 public class ProductDetails extends CommonLibrary {
 
-	public static String productDetailsHeader;
+	public static String screenTitle;
+	public static String backButton;
 	public static String productName;
 	public static String productDescription;
 	public static String featuresAndBenefitsHeading;
@@ -21,17 +22,16 @@ public class ProductDetails extends CommonLibrary {
 	@Given("^user is on Product Details screen$")
 	public void user_is_on_Product_Details_screen() throws Throwable {
 		setStepName("Given");
-		captureScreenshot();
+//		findByAny(screenTitle).isDisplayed();
 		findByAny(productName).isDisplayed();
-		findByAny(productName).verifyEqualsTo("Business Overdrafts");
 	}
 	
-	@Then("^verify Product Details screen is displayed$")
+	@Then("^verify that Product Details screen is displayed$")
 	public void verify_Product_Details_screen_is_displayed() throws Throwable {
 		setStepName("Then");
-		captureScreenshot();
+		captureScreenshot("ProductDetails");
+//		findByAny(screenTitle).isDisplayed();
 		findByAny(productName).isDisplayed();
-		findByAny(productName).verifyEqualsTo("Business Overdrafts");
 	}
 
 	@Then("^verify product description \"([^\"]*)\" on screen$")
@@ -136,5 +136,12 @@ public class ProductDetails extends CommonLibrary {
 	public void verify_overall_UI_of_Product_Details_screen_as_per_UX() throws Throwable {
 		setStepName("Then");
 		reportSkip("Verify overall UI of Product Details screen is as per UX and usability.");
+	}
+
+	@Then("^user clicks on Back button on Product Details screen$")
+	public void user_clicks_on_Back_button_on_Product_Details_screen() throws Throwable {
+		setStepName("Then");
+		findByAny(backButton).click();
+		sleep(2000);
 	}
 }

@@ -3,18 +3,24 @@
 		"accessibility id": "lending.navigation.bar_title_accessibility_id"
 	},
 	"backButton": {
-		"accessibility id": "Select Products"
+		"accessibility id": "Back"
 	},
 	"bpTypeScreenHeader": {
-		"": ""
+		"xpath": "//XCUIElementTypeStaticText[@name=\"lending.question.title\"]"
 	},
 	"bpTypes": {
-		"": ""
+		"xpath": "//XCUIElementTypeImage[starts-with(@name, \"lending_question_answer_option_checkbox_\")]"
+	},
+	"bpTypeLeaseholdCkb": {
+		"xpath": "//XCUIElementTypeImage[starts-with(@name,\"lending_question_answer_option_checkbox_1\")]"
+	},
+	"bpTypeFreeholdCkb": {
+		"xpath": "//XCUIElementTypeImage[starts-with(@name,\"lending_question_answer_option_checkbox_0\")]"
 	},
 	"bpTypeLeasehold": {
-		"": ""
+		"xpath": "//XCUIElementTypeStaticText[starts-with(@name,\"lending_question_answer_option_text_1\")]"
 	},
 	"bpTypeFreehold": {
-		"": ""
+		"xpath": "//XCUIElementTypeStaticText[starts-with(@name,\"lending_question_answer_option_text_0\")]"
 	}
 }

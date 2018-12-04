@@ -25,7 +25,7 @@ Feature: Verify all functionalities related to Business Premises Yes/No screen, 
     Given that user is on Business Premises YesNo screen
     When user clicks on No button on Business Premises screen
     Then verify that Gross Income screen is displayed
-    And user clicks on back button on the screen
+    And user clicks on back button on Gross Income screen
     
   Scenario: CUICE-6174 >> ATC-003: Test if user clicks on Yes, Business Premises options are displayed
     Given that user is on Business Premises YesNo screen

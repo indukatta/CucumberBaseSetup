@@ -1,27 +1,30 @@
 {
-	"productDetailsHeader": {
-		"xpath": "//XCUIElementTypeOther[@name=\"Product Details\"]"
+	"screenTitle": {
+		"accessibility id": "lending.navigation.bar_title_accessibility_id"
+	},
+	"backButton": {
+		"accessibility id": "Back"
 	},
 	"productName": {
-		"accessibility id": "Business Overdrafts"
+		"accessibility id": "lending.product_detail.heading_label_accessibility_id"
 	},
 	"productDescription": {
-		"accessibility id": "Best for flexible access to cash flow"
+		"accessibility id": "lending.product_detail.subtitle_label_accessibility_id"
 	},
 	"featuresAndBenefitsHeading": {
-		"accessibility id": "Lending Product.0"
+		"accessibility id": "lending_product_detail_section_title_label_0"
 	},
 	"featuresAndBenefits": {
-		"accessibility id": "Product Description.0"
+		"accessibility id": "lending_product_detail_section_paragraph_label_0"
 	},
 	"overdraftRange": {
-		"accessibility id": "Lending Product.1"
+		"accessibility id": "lending_product_detail_section_title_label_1"
 	},
 	"overdratfsInformations": {
-		"accessibility id": "Product Description.1"
+		"accessibility id": "lending_product_detail_section_paragraph_label_1"
 	},
 	"termsAndConditionsHeading": {
-		"accessibility id": "Terms and Conditions"
+		"accessibility id": "lending.product_detail.footer_heading_label_accessibility_id"
 	},
 	"downloadPDF": {
 		"": ""

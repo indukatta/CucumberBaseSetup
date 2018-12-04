@@ -91,7 +91,7 @@ public class GrossIncome extends CommonLibrary {
 		findByAny(grossIncomeInputbox).sendKeys(expected);
 	}
 	
-	@And("^user clicks on back button on the screen$")
+	@And("^user clicks on back button on Gross Income screen$")
 	public void user_clicks_on_back_button_on_the_screen() {
 		setStepName("Then");
 		findByAny(backButton).click();

@@ -8,7 +8,7 @@ Feature: Verify all functionalities related to Product Details screen, it will c
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
     When user clicks on find out more link
-    Then verify Product Details screen is displayed
+    Then verify that Product Details screen is displayed
 
   Scenario: CUICE-542 >> ATC-001: Verify other static content on Product Details screen.
     Given user is on Product Details screen

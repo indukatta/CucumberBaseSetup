@@ -1,18 +1,21 @@
 {
-	"selectProductHeader": {
-		"xpath": "//XCUIElementTypeOther[@name=\"Select Products\"]"
+	"screenTitle": {
+		"accessibility id": "lending.navigation.bar_title_accessibility_id"
+	},
+	"backButton": {
+		"accessibility id": "Back"
 	},
 	"selectProductDescription": {
-		"accessibility id": "Do you want to add extra products or services?"
+		"accessibility id": "lending.product_selection.heading_label_accessibility_id"
 	},
 	"productIcon": {
 		"accessibility id": "bankAvatar"
 	},
 	"productName": {
-		"accessibility id": "Business Overdrafts"
+		"accessibility id": "lending.product.name_label"
 	},
 	"productBenefit": {
-		"accessibility id": "Best for flexible access to cash flow"
+		"accessibility id": "lending.product.summary_label"
 	},
 	"linkFindOutMore": {
 		"accessibility id": "lending.button_more_info"
