@@ -34,3 +34,4 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
     Given that user is on Business Premises options screen
     When user clicks on Freehold Business Premises type
     And user clicks on continue button on the screen
+    Then user clicks on back button on Gross Income screen

@@ -2,7 +2,7 @@
 Feature: Verify all functionalities related to Business Premises Yes/No screen, it will cover following stories
 
   Background: This is to add category to below scenarios
-	Given that category "BusinessPremises" is added for below scenarios
+	Given that category "BusinessPremisesYesNo" is added for below scenarios
 	
   Scenario: CUICE-6174 >> ATC-001: Test if user is able to view "What is the purpose of borrowing" header and "Borrowing" title
     Given that user is on the Credit Management screen

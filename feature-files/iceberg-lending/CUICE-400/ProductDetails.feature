@@ -15,14 +15,14 @@ Feature: Verify all functionalities related to Product Details screen, it will c
     Then verify product name "Business Overdrafts" on Product Details screen
     Then verify product description "Best for flexible access to cash flow" on screen
     Then verify feature and benefit heading "Features and Benefits" on screen
-    Then verify terms and conditions heading "Terms and Conditions" on screen
     Then verify features and benefits on the screen
-      | No arrangement fee                                       |
-      | Pay interest only on the amount you use calculated daily |
-      | Same day availability (if approved)                      |
-    Then overdraft fee and interest
-      | Overdraft fee 1.5% (charged monthly) |
+      | •	No arrangement fee                                       |
+      | •	Pay interest only on the amount you use calculated daily |
+      | •	Same day availability (if approved)                      |
+    Then verify overdraft fee and interest given below
+      | Overdraft fee 1.5% (monthly charge) |
       | Interest is 9.9% EAR Representative  |
+	Then verify terms and conditions heading "Terms and Conditions" on screen
 
   Scenario: CUICE-542 >> ATC-002: Verify terms and conditions is not clickable.
     Given user is on Product Details screen
@@ -45,4 +45,4 @@ Feature: Verify all functionalities related to Product Details screen, it will c
 
   Scenario: CUICE-3914 >> ATC-001: Verify static warning message on Product Details screen
     Given user is on Product Details screen
-    Then verify product waring "Business borrowing cannot be used for personal use" is displayed on product details screen
+    Then verify product purpose "Business borrowing cannot be used for personal use" is displayed on product details screen

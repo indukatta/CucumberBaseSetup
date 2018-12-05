@@ -4,8 +4,8 @@ import static com.factory.mobile.driver.MobileDriverManager.closeApplication;
 import static com.factory.mobile.driver.MobileDriverManager.launchIOSApplication;
 
 import org.apache.commons.lang3.StringUtils;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
@@ -14,16 +14,16 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		features = "feature-files/"
 		, glue = "stepDefinitions.Lending/"
 //		, tags = {"@businessPremises,@residentialStatus,@maritalStatus,@grossIncome,@businessPremisesYN,@purposeOfBorrowing,@productSelection,@productDetails"}
-//		, tags = {"@businessPremisesYN"}
-		, dryRun=true, tags = {"@productSelection"}
+		, tags = {"@purposeOfBorrowing"}
+//		, dryRun=true, tags = {"@productSelection"}
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 	
-	@BeforeTest
+	@BeforeSuite
 	public void setup() throws Exception {
 		launchIOSApplication("0.0.0.0:4723");
 	}
-	@AfterTest
+	@AfterSuite
 	public void teardown() {
 		closeApplication();
 	}

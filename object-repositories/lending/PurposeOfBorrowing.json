@@ -14,7 +14,6 @@
 	"purposeOfBorrowingQuestions": {
 		"xpath": "//XCUIElementTypeStaticText[starts-with(@name,\"lending_question_answer_option_text_\")]"
 	},
-	
 	"purposeOfBorrowingQuestionsChkBox": {
 		"xpath": "//XCUIElementTypeImage[starts-with(@name, \"lending_question_answer_option_checkbox_\")]"
 	}

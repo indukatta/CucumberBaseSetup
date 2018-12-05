@@ -15,13 +15,16 @@
 		"accessibility id": "lending_product_detail_section_title_label_0"
 	},
 	"featuresAndBenefits": {
-		"accessibility id": "lending_product_detail_section_paragraph_label_0"
+		"xpath": "//XCUIElementTypeStaticText[contains(@name,\"lending_product_detail_text_label_0_\")]"
 	},
 	"overdraftRange": {
 		"accessibility id": "lending_product_detail_section_title_label_1"
 	},
 	"overdratfsInformations": {
-		"accessibility id": "lending_product_detail_section_paragraph_label_1"
+		"xpath": "//XCUIElementTypeStaticText[contains(@name,\"lending_product_detail_text_label_1_\")][position()<3]"
+	},
+	"productPurpose": {
+		"xpath": "//XCUIElementTypeStaticText[@name=\"lending_product_detail_text_label_1_3\"]"
 	},
 	"termsAndConditionsHeading": {
 		"accessibility id": "lending.product_detail.footer_heading_label_accessibility_id"

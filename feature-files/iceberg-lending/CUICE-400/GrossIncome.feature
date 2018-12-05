@@ -48,3 +48,4 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
     When user enters alphabetical and special chars "~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:\"ZXCVBNM<>?" in Gross Income input box
     Then verify that value of Gross Income is set to "0" min limit
     And verify that continue button is disabled
+    Then user clicks on back button on Gross Income screen

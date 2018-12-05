@@ -16,16 +16,17 @@ public class ProductDetails extends CommonLibrary {
 	public static String featuresAndBenefits;
 	public static String overdraftRange;
 	public static String overdratfsInformations;
+	public static String productPurpose;
 	public static String termsAndConditionsHeading;
 	public static String downloadPDF;
-	
+
 	@Given("^user is on Product Details screen$")
 	public void user_is_on_Product_Details_screen() throws Throwable {
 		setStepName("Given");
 //		findByAny(screenTitle).isDisplayed();
 		findByAny(productName).isDisplayed();
 	}
-	
+
 	@Then("^verify that Product Details screen is displayed$")
 	public void verify_Product_Details_screen_is_displayed() throws Throwable {
 		setStepName("Then");
@@ -49,21 +50,13 @@ public class ProductDetails extends CommonLibrary {
 	@Then("^verify features and benefits on the screen$")
 	public void verify_features_and_benefits_on_the_screen(DataTable expected) throws Throwable {
 		setStepName("Then");
-		List<String> features = expected.asList(String.class);
-		for (String feature : features) {
-			System.out.println("feature: "+feature);
-//			findByAny(featuresAndBenefits).verifyEqualsTo(feature);
-		}
+		findByAny(featuresAndBenefits).verifyAllEqualsTo(expected);
 	}
 
-	@Then("^overdraft fee and interest$")
+	@Then("^verify overdraft fee and interest given below$")
 	public void overdraft_fee_and_interest(DataTable expected) throws Throwable {
 		setStepName("Then");
-		List<String> odFeeAndInts = expected.asList(String.class);
-		for (String odFeeAndInt : odFeeAndInts) {
-			System.out.println("odFeeAndInt: "+odFeeAndInt);
-//			findByAny(overdratfsInformations).verifyEqualsTo(odFeeAndInt);
-		}
+		findByAny(overdratfsInformations).verifyAllEqualsTo(expected);;
 	}
 
 	@Then("^verify terms and conditions heading \"([^\"]*)\" on screen$")
@@ -84,10 +77,10 @@ public class ProductDetails extends CommonLibrary {
 		findByAny(overdraftRange).verifyEqualsTo(expected);
 	}
 
-	@Then("^verify product waring \"([^\"]*)\" is displayed on product details screen$")
-	public void verify_product_waring_is_displayed_on_product_details_screen(String expected) throws Throwable {
+	@Then("^verify product purpose \"([^\"]*)\" is displayed on product details screen$")
+	public void verify_product_purpose_is_displayed_on_product_details_screen(String expected) throws Throwable {
 		setStepName("Then");
-		findByAny(overdratfsInformations).verifyContains(expected);
+		findByAny(productPurpose).verifyContains(expected);
 	}
 
 	@Then("^verify product name \"([^\"]*)\" on Product Details screen$")

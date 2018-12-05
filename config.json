@@ -8,9 +8,9 @@
 
 	,"iOSApp":{
 	        "platformName":"IOS"
-	        ,"platformVersion":"11.2"
+	        ,"platformVersion":"12.1"
 	        ,"deviceName":"iPhone 8"
-	        ,"app":"/Users/ashdiksh/Downloads/Icerberg.app"
+	        ,"app":"/Users/ashdiksh/Downloads/Iceberg.app"
 	    }
 
 	,"OR-package":"stepDefinitions.Lending"
