@@ -9,7 +9,7 @@
 		"accessibility id": "lending.product_selection.heading_label_accessibility_id"
 	},
 	"productIcon": {
-		"accessibility id": "bankAvatar"
+		"xpath": "//XCUIElementTypeImage[@name=\"bankAvatar\"]"
 	},
 	"productName": {
 		"accessibility id": "lending.product.name_label"

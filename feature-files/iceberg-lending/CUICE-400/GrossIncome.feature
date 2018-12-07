@@ -4,7 +4,7 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
   Background: This is to add category to below scenarios
 	Given that category "GrossIncome" is added for below scenarios
 	
-  Scenario: CUICE-6173 >> Pre-requisite: Test if user is able to view Gross Income screen
+  Scenario: CUICE-6173 >> Prerequisite: Test if user is able to view Gross Income screen
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
     When user clicks on Apply button on Product Selection
