@@ -4,15 +4,18 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
   Background: This is to add category to below scenarios
 	Given that category "PurposeOfBorrowing" is added for below scenarios
   
-  Scenario: CUICE-6173 >> ATC-001: Test if user is able to view "What is the purpose of borrowing" header and "Borrowing" title
+  Scenario: CUICE-6173 >> Prerequisite: Test if user is able to view "What is the purpose of borrowing" header and "Borrowing" title
     Given that user is on the Credit Management screen
-    Then user clicks on the Credit & Lending link
-    Then user clicks on Apply button on Product Selection
-    Then verify that screen title "Borrowing" is displayed
-    And verify that Purpose of Borrowing "What is the purpose of borrowing?" is displayed
-  
+    When user clicks on the Credit & Lending link
+    And user clicks on Apply button on Product Selection
+    And user clicks on No button on lending question screen
+    And user clicks on Okay Got it button on Amount of Borrowing No screen
+    Then verify that Purpose of Borrowing screen is displayed
+  	
   Scenario: CUICE-6173 >> ATC-002: Test if user is able to view the "What is the purpose of borrowing?" - Choices
     Given that user is on Purpose of Borrowing screen
+    Then verify Purpose of Borrowing title "Borrowing" on screen
+    And verify Purpose of Borrowing question "What is the purpose of borrowing?" on screen
     Then verify that following Purpose of Business questions are displayed on screen
       | Asset purchase                     |
       | Debt consolidation (HSBC)          |
@@ -51,4 +54,5 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
     When user selects option 1 from Purpose of Borrowing Question
     And user clicks on continue button on the screen
     Then verify that Residential Status lending question screen is displayed
+    Then user clicks on back button on lending question screen
   

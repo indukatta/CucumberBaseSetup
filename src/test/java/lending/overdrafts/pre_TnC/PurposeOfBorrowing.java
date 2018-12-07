@@ -1,4 +1,4 @@
-package stepDefinitions.Lending;
+package lending.overdrafts.pre_TnC;
 
 import static com.factory.mobile.driver.MobileDriverManager.*;
 
@@ -14,23 +14,30 @@ public class PurposeOfBorrowing extends CommonLibrary {
 	public static String purposeOfBorrowingQuestions;
 	public static String purposeOfBorrowingQuestionsChkBox;
 
+	@Then("^verify that Purpose of Borrowing screen is displayed$")
+	public void verify_that_user_Purpose_of_Borrowing_screen_is_displayed() {
+		setStepName("Then");
+		captureScreenshot("PurposeOfBorrowing");
+		findByAny(screenTitle).isDisplayed();
+		findByAny(purposeOfBorrowing).isDisplayed();
+	}
+	
 	@Given("^that user is on Purpose of Borrowing screen$")
-	public void that_user_is_on_Purpose_of_Borrowing_screen() throws Throwable {
+	public void that_user_is_on_Purpose_of_Borrowing_screen() {
 		setStepName("Given");
 		findByAny(screenTitle).isDisplayed();
 		findByAny(purposeOfBorrowing).isDisplayed();
 	}
 
-	@Then("^verify that Purpose of Borrowing \"([^\"]*)\" is displayed$")
-	public void verify_that_Purpose_of_Borrowing_displayed(String expected) {
+	@Then("^verify Purpose of Borrowing question \"([^\"]*)\" on screen$")
+	public void verify_Purpose_of_Borrowing_question_on_screen(String expected) {
 		setStepName("Then");
-		captureScreenshot("PurposeOfBorrowing_0");
 		findByAny(screenTitle).isDisplayed();
 		findByAny(purposeOfBorrowing).verifyEqualsTo(expected);
 	}
 
-	@Then("^verify that screen title \"([^\"]*)\" is displayed$")
-	public void verify_that_screen_title_is_displayed(String expected) {
+	@Then("^verify Purpose of Borrowing title \"([^\"]*)\" on screen$")
+	public void verify_Purpose_of_Borrowing_title_on_screen(String expected) {
 		setStepName("Then");
 		captureScreenshot("PurposeOfBorrowing");
 		findByAny(screenTitle).isDisplayed();
@@ -38,8 +45,7 @@ public class PurposeOfBorrowing extends CommonLibrary {
 	}
 
 	@Then("^verify that following Purpose of Business questions are displayed on screen$")
-	public void verify_that_following_Purpose_of_Borrowing_question_are_displayed_on_screen(DataTable expected)
-			throws Throwable {
+	public void verify_that_following_Purpose_of_Borrowing_question_are_displayed_on_screen(DataTable expected) {
 		setStepName("Then");
 		findByAny(purposeOfBorrowingQuestions).verifyAllEqualsTo(expected);
 	}

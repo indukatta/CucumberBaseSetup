@@ -1,4 +1,4 @@
-package stepDefinitions.Lending;
+package lending.overdrafts.pre_TnC;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;

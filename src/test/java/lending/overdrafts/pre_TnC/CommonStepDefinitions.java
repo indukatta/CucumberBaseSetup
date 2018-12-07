@@ -1,4 +1,4 @@
-package stepDefinitions.Lending;
+package lending.overdrafts.pre_TnC;
 
 import static com.factory.mobile.driver.MobileDriverManager.*;
 
@@ -73,5 +73,39 @@ public class CommonStepDefinitions extends CommonLibrary {
 		setStepName("Then");
 		captureScreenshot();
 		findByAny(continueButton).isDisabled();
+	}
+	
+	@Then("^verify that Yes button is displayed on lending question screen$")
+	public void verify_that_Yes_button_is_displayed_on_lending_question_screen() {
+		
+	}
+
+	@Then("^verify that No button is displayed on lending question screen$")
+	public void verify_that_No_button_is_displayed_on_lending_question_screen() {
+		
+	}
+
+	@Then("^verify that Yes button is not selected on lending question screen$")
+	public void verify_that_Yes_button_is_not_selected_on_lending_question_screen() {
+		
+	}
+
+	@Then("^verify that No button is not selected on lending question screen$")
+	public void verify_that_No_button_is_not_selected_on_lending_question_screen() {
+		
+	}
+
+	@When("^user clicks on No button on lending question screen$")
+	public void user_clicks_on_No_button_on_lending_question_YesNo_screen() {
+		
+	}
+
+	@When("^user clicks on Yes button on lending question screen$")
+	public void user_clicks_on_Yes_button_on_lending_question_YesNo_screen() {
+
+	}
+	@Then("^user clicks on back button on lending question screen$")
+	public void user_clicks_on_back_button_on_lending_question_screen() {
+		
 	}
 }

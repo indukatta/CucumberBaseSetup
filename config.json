@@ -13,7 +13,7 @@
 	        ,"app":"/Users/ashdiksh/Downloads/Iceberg 9.app"
 	    }
 
-	,"OR-package":"stepDefinitions.Lending"
+	,"OR-package":"lending.overdrafts"
 	,"OR-path":"object-repositories/lending"
 	,"sso-login":{"username":"ashdiksh", "password":"password"}
 
