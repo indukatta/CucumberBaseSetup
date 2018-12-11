@@ -1,4 +1,4 @@
-@residentialStatus
+@ResidentialStatus @Sprint3 @Regression
 Feature: Verify all functionalities related to Residential Status screen. It will covers following stories CUICE-6175
 
   Background: This is to add category to below scenarios
@@ -7,15 +7,12 @@ Feature: Verify all functionalities related to Residential Status screen. It wil
   Scenario: CUICE-8934 >> ATC-001: Test if user able to view  the Residential Status screen
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
-    When user clicks on Apply button on Product Selection
+    And user clicks on Apply button on Product Selection
+    And user clicks on No button on lending question screen
+    And user clicks on continue button on the screen
     When user selects option 1 from Purpose of Borrowing Question
-    When user clicks on continue button on the screen
-    Then user clicks on No button on Business Premises screen
-    When user enters minimum value "100" in Gross Income input box
     And user clicks on continue button on the screen
-    When user selects option 3 on Residential Status screen
-    And user clicks on continue button on the screen
-    Then verify that Residential Status is displayed
+    Then verify that Residential Status screen is displayed
 
   Scenario: CUICE-8934 >> ATC-002: Test if user is able to view the Residential Status lending question and its choices
     Given user is on Residential Status lending question screen
@@ -45,3 +42,5 @@ Feature: Verify all functionalities related to Residential Status screen. It wil
     Given user is on Residential Status lending question screen
     When user selects option 3 on Residential Status screen
     And user clicks on continue button on the screen
+    Then verify that Marital Status screen is displayed
+    And user clicks on back button on lending question screen

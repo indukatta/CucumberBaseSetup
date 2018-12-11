@@ -1,4 +1,4 @@
-@productSelection
+@ProductSelection @Sprint2 @Regression
 Feature: Verify all functionalities related to Product Selection screen. It will covers following stories CUICE-540, CUICE-542
 
   Background: This is to add category to below scenarios

@@ -1,5 +1,20 @@
 {
+	"screenTitle": {
+		"accessibility id": "lending.navigation.bar_title_accessibility_id"
+	},
+	"screenQuestion": {
+		"accessibility id": "lending_qeustion_title"
+	},
 	"continueButton": {
 		"accessibility id": "Continue"
+	},
+	"yesButton": {
+		"accessibility id": "Yes"
+	},
+	"noButton": {
+		"accessibility id": "No"
+	},
+	"backButton": {
+		"accessibility id": "Back"
 	}
 }

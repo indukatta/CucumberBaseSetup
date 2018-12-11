@@ -20,7 +20,7 @@ public class ResidentialStatus {
 		findByAny(screenHeader).isDisplayed();
 	}
 
-	@Then("^verify that Residential Status is displayed$")
+	@Then("^verify that Residential Status screen is displayed$")
 	public void verify_that_Residential_Status_is_displayed() {
 		setStepName("Given");
 		captureScreenshot("ResidentialStatus_0");

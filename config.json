@@ -1,5 +1,5 @@
 {
-	"suite-name":"thinSliceOverdrafts_Sp2"
+	"suite-name":"productDetails"
 	,"report-type":"aventstack"
 	,"appiumServer":{
 	        "ipAddress":"127.0.0.1"
@@ -10,7 +10,7 @@
 	        "platformName":"IOS"
 	        ,"platformVersion":"12.1"
 	        ,"deviceName":"iPhone 8"
-	        ,"app":"/Users/ashdiksh/Downloads/Iceberg 9.app"
+	        ,"app":"/Users/ashdiksh/Downloads/Iceberg 10.app"
 	    }
 
 	,"OR-package":"lending.overdrafts"

@@ -1,4 +1,4 @@
-@purposeOfBorrowing
+@PurposeOfBorrowing @Sprint3 @Regression
 Feature: Verify all functionalities related to Purpose of Borrowing screen, it will cover following stories
 
   Background: This is to add category to below scenarios
@@ -9,7 +9,7 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
     When user clicks on the Credit & Lending link
     And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen
-    And user clicks on Okay Got it button on Amount of Borrowing No screen
+    And user clicks on continue button on the screen
     Then verify that Purpose of Borrowing screen is displayed
   	
   Scenario: CUICE-6173 >> ATC-002: Test if user is able to view the "What is the purpose of borrowing?" - Choices
@@ -53,6 +53,6 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
     Given that user is on Purpose of Borrowing screen
     When user selects option 1 from Purpose of Borrowing Question
     And user clicks on continue button on the screen
-    Then verify that Residential Status lending question screen is displayed
+    Then verify that Residential Status screen is displayed
     Then user clicks on back button on lending question screen
   

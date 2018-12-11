@@ -12,8 +12,12 @@ import pageObjects.Login.Login;
 import pageObjects.More.More;
 
 public class CommonStepDefinitions extends CommonLibrary {
-	
+	public static String screenTitle;
+	public static String screenQuestion;
 	public static String continueButton;
+	public static String yesButton;
+	public static String noButton;
+	public static String backButton;
 
 	@Before
 	public void startTestReport(Scenario scenario) throws Exception {
@@ -31,16 +35,16 @@ public class CommonStepDefinitions extends CommonLibrary {
 		if (!alreadyLoggedIn) {
 			Login login = new Login(driver);
 			login.loginAsUser("TESTUSER", "TESTPASSWORD");
-			
+
 //			login.loginAsUser("Testuser", "testuser");
 //			findByAccessibilityId("Cancel").click();
-			
+
 			alreadyLoggedIn = true;
-		}else {
+		} else {
 			reportPass("User is already logged in to Iceberg application.");
 		}
 	}
-	
+
 	@When("^user clicks on the Credit & Lending link$")
 	public static void user_clicks_on_the_Credit_and_Lending_link() throws Throwable {
 		setStepName("When");
@@ -48,7 +52,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 		more.navigateToCreditAndLending();
 		sleep(3000);
 	}
-	
+
 	@Given("^that category \"([^\"]*)\" is added for below scenarios$")
 	public void that_category_is_added_for_below_sceanios(String category) {
 		addTestCategory(category);
@@ -58,7 +62,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public void user_clicks_on_continue_button_on_the_screen() throws Throwable {
 		setStepName("When");
 		findByAny(continueButton).click();
-		sleep(3000);
+		sleep(1000);
 	}
 
 	@Then("^verify that continue button is enabled$")
@@ -74,38 +78,49 @@ public class CommonStepDefinitions extends CommonLibrary {
 		captureScreenshot();
 		findByAny(continueButton).isDisabled();
 	}
-	
+
 	@Then("^verify that Yes button is displayed on lending question screen$")
 	public void verify_that_Yes_button_is_displayed_on_lending_question_screen() {
-		
+		setStepName("Then");
+		findByAny(yesButton).isDisplayed();
 	}
 
 	@Then("^verify that No button is displayed on lending question screen$")
 	public void verify_that_No_button_is_displayed_on_lending_question_screen() {
-		
+		setStepName("Then");
+		findByAny(noButton).isDisplayed();
 	}
 
 	@Then("^verify that Yes button is not selected on lending question screen$")
 	public void verify_that_Yes_button_is_not_selected_on_lending_question_screen() {
-		
+		setStepName("Then");
+		findByAny(yesButton).verifyAttributesEqualsTo("value", "0");
 	}
 
 	@Then("^verify that No button is not selected on lending question screen$")
 	public void verify_that_No_button_is_not_selected_on_lending_question_screen() {
-		
+		setStepName("Then");
+		findByAny(noButton).verifyAttributesEqualsTo("value", "0");
 	}
 
 	@When("^user clicks on No button on lending question screen$")
 	public void user_clicks_on_No_button_on_lending_question_YesNo_screen() {
-		
+		setStepName("Then");
+		findByAny(noButton).click();
+		sleep(2000);
 	}
 
 	@When("^user clicks on Yes button on lending question screen$")
 	public void user_clicks_on_Yes_button_on_lending_question_YesNo_screen() {
-
+		setStepName("Then");
+		findByAny(yesButton).click();
+		sleep(2000);
 	}
+
 	@Then("^user clicks on back button on lending question screen$")
 	public void user_clicks_on_back_button_on_lending_question_screen() {
-		
+		setStepName("Then");
+		findByAny(backButton).click();
+		sleep(1000);
 	}
 }

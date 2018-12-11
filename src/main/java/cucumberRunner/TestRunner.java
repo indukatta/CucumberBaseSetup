@@ -13,19 +13,19 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
 		features = "feature-files/"
 		, glue = "lending/"
-//		, tags = {"@businessPremises,@residentialStatus,@maritalStatus,@grossIncome,@businessPremisesYN,@purposeOfBorrowing,@productSelection1,@productDetails1"}
-//		, tags = {"@productSelection,@productDetails"}
-		, dryRun=true, tags = {"@purposeOfBorrowing"}
+//		, tags = {"@Sprint2"}
+		, tags = {"@ProductDetails"}
+//		, dryRun=true, tags = {"@YearsOfPersonalAccount"}
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 	
 	@BeforeSuite
 	public void setup() throws Exception {
-//		launchIOSApplication("0.0.0.0:4723");
+		launchIOSApplication("0.0.0.0:4723");
 	}
 	@AfterSuite
 	public void teardown() {
-//		closeApplication();
+		closeApplication();
 	}
 	
 	public static void main1(String[] args) {

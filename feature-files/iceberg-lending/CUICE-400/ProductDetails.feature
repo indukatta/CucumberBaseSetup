@@ -1,4 +1,4 @@
-@productDetails
+@ProductDetails @Sprint2 @Regression
 Feature: Verify all functionalities related to Product Details screen, it will cover following stories CUICE-542, CUICE-6194, CUICE-3911
 
   Background: This is to add category to below scenarios

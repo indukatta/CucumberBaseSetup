@@ -1,0 +1,11 @@
+{
+	"screenTitle": {
+		"accessibility id": "lending.navigation.bar_title_accessibility_id"
+	},
+	"screenQuestion": {
+		"accessibility id": "lending_qeustion_title"
+	},
+	"screenMessage": {
+		"accessibility id": "lending_screen_custom_text_element_accessibility_id_0_0"
+	}
+}

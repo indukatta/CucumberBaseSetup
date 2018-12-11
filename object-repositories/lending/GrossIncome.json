@@ -2,10 +2,7 @@
 	"screenTitle": {
 		"accessibility id": "lending.navigation.bar_title_accessibility_id"
 	},
-	"backButton": {
-		"accessibility id": "Back"
-	},
-	"screenHeader": {
+	"screenQuestion": {
 		"accessibility id": "lending_qeustion_title"
 	},
 	"grossIncomeInputbox": {
