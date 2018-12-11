@@ -4,7 +4,6 @@ import static com.factory.mobile.driver.MobileDriverManager.*;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import java.util.List;
 
 public class ProductDetails extends CommonLibrary {
 
@@ -23,7 +22,6 @@ public class ProductDetails extends CommonLibrary {
 	@Given("^user is on Product Details screen$")
 	public void user_is_on_Product_Details_screen() throws Throwable {
 		setStepName("Given");
-//		findByAny(screenTitle).isDisplayed();
 		findByAny(productName).isDisplayed();
 	}
 
@@ -31,7 +29,6 @@ public class ProductDetails extends CommonLibrary {
 	public void verify_Product_Details_screen_is_displayed() throws Throwable {
 		setStepName("Then");
 		captureScreenshot("ProductDetails");
-//		findByAny(screenTitle).isDisplayed();
 		findByAny(productName).isDisplayed();
 	}
 

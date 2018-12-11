@@ -23,21 +23,21 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
   Scenario: CUICE-6174 >> ATC-001: Test if user is able to see Yes No buttons and its default state
     Given that user is on Current Account YesNo screen
     Then verify that Credit Card question "Do you have a personal current account?" is displayed
-    And verify that Yes button is displayed on Business Premises screen
-    And verify that No button is displayed on Business Premises screen
-  	And verify that Yes button is not selected on Business Premises screen
-  	And verify that No button is not selected on Business Premises screen
+    And verify that Yes button is displayed on lending question screen
+    And verify that No button is displayed on lending question screen
+  	And verify that Yes button is not selected on lending question screen
+  	And verify that No button is not selected on lending question screen
   	
   Scenario: CUICE-6174 >> ATC-002: Test if user clicks on No, Questions screen is displayed
     Given that user is on Current Account YesNo screen
-    When user clicks on No button on Business Premises screen
+    When user clicks on No button on lending question screen
     Then verify that Business Premises options screen is displayed
     Then verify that Gross Income screen is displayed
     And user clicks on back button on lending question screen
     
   Scenario: CUICE-6174 >> ATC-003: Test if user clicks on Yes, Business Premises options are displayed
     Given that user is on Current Account YesNo screen
-    When user clicks on Yes button on Business Premises screen
+    When user clicks on Yes button on lending question screen
     Then verify that Years of Personal Account screen is displayed
     And user clicks on back button on lending question screen
     

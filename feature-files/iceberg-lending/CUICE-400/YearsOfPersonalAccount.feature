@@ -18,26 +18,26 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
     And user clicks on continue button on the screen
     When user enters minimum value "1" in Gross Income input box
     And user clicks on continue button on the screen
-    When user clicks on Yes button on Business Premises screen
+    When user clicks on Yes button on lending question screen
     Then verify that Years of Personal Account screen is displayed
   
   Scenario: CUICE-6174 >> ATC-001: Test if user is able to see Yes No buttons and its default state
     Given that user is on Years of Personal Account screen
     Then verify that Credit Card header "Do you have a personal current account?" is displayed
-    And verify that Yes button is displayed on Business Premises screen
-    And verify that No button is displayed on Business Premises screen
-  	And verify that Yes button is not selected on Business Premises screen
-  	And verify that No button is not selected on Business Premises screen
+    And verify that Yes button is displayed on lending question screen
+    And verify that No button is displayed on lending question screen
+  	And verify that Yes button is not selected on lending question screen
+  	And verify that No button is not selected on lending question screen
   	
   Scenario: CUICE-6174 >> ATC-002: Test if user clicks on No, Questions screen is displayed
     Given that user is on Years of Personal Account screen
-    When user clicks on No button on Business Premises screen
+    When user clicks on No button on lending question screen
     Then verify that Business Premises YesNo screen is displayed
     And user clicks on back button on lending question screen
     
   Scenario: CUICE-6174 >> ATC-003: Test if user clicks on Yes, Business Premises options are displayed
     Given that user is on Years of Personal Account screen
-    When user clicks on Yes button on Business Premises screen
+    When user clicks on Yes button on lending question screen
     Then verify that Business Premises YesNo screen is displayed
     And user clicks on back button on lending question screen
     

@@ -2,40 +2,34 @@ package lending.overdrafts.pre_TnC;
 
 import static com.factory.mobile.driver.MobileDriverManager.*;
 
-
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class GrossIncome extends CommonLibrary {
-	public static String screenTitle;
-	public static String backButton;
-	public static String screenQuestion;
-	public static String grossIncomeInfo;
 	public static String grossIncomeInputbox;
 	public static String grossIncomeCurrencySymbol;
 
 	@Given("^that user is on Gross Income screen$")
 	public void that_user_is_on_Gross_Income_screen() {
 		setStepName("Given");
-		findByAny(screenTitle).isDisplayed();
-		findByAny(screenQuestion).isDisplayed();
+		findByAny(CommonStepDefinitions.screenTitle).isDisplayed();
+		findByAny(CommonStepDefinitions.screenQuestion).isDisplayed();
 	}
 
 	@Then("^verify that Gross Income screen is displayed$")
 	public void verify_that_Gross_Income_screen_is_displayed() {
 		setStepName("Then");
-		captureScreenshot("GrossIncome_0");
-		findByAny(screenTitle).isDisplayed();
-		findByAny(screenQuestion).isDisplayed();
+		captureScreenshot("GrossIncome");
+		findByAny(CommonStepDefinitions.screenTitle).isDisplayed();
+		findByAny(CommonStepDefinitions.screenQuestion).isDisplayed();
 	}
 
 	@Then("^verify that Gross Income header is displayed$")
 	public void verify_that_Gross_Income_header_is_displayed() {
 		setStepName("Then");
-		findByAny(screenTitle).isDisplayed();
-		findByAny(screenQuestion).isDisplayed();
+		findByAny(CommonStepDefinitions.screenTitle).isDisplayed();
+		findByAny(CommonStepDefinitions.screenQuestion).isDisplayed();
 	}
 
 	@Then("^verify that Gross Income input box is displayed$")

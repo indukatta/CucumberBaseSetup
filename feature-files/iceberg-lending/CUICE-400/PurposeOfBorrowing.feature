@@ -12,10 +12,10 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
     And user clicks on continue button on the screen
     Then verify that Purpose of Borrowing screen is displayed
   	
-  Scenario: CUICE-6173 >> ATC-002: Test if user is able to view the "What is the purpose of borrowing?" - Choices
+  Scenario: CUICE-6173 >> ATC-002: Test if user is able to view the "What is the main purpose of borrowing?" - Choices
     Given that user is on Purpose of Borrowing screen
     Then verify Purpose of Borrowing title "Borrowing" on screen
-    And verify Purpose of Borrowing question "What is the purpose of borrowing?" on screen
+    And verify Purpose of Borrowing question "What is the main purpose of borrowing?" on screen
     Then verify that following Purpose of Business questions are displayed on screen
       | Asset purchase                     |
       | Debt consolidation (HSBC)          |

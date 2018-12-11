@@ -14,18 +14,18 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		features = "feature-files/"
 		, glue = "lending/"
 //		, tags = {"@Sprint2"}
-		, tags = {"@ProductDetails"}
-//		, dryRun=true, tags = {"@YearsOfPersonalAccount"}
+//		, tags = {"@ProductDetails"}
+		, dryRun=true, tags = {"@TotalExistingBorrowing"}
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 	
 	@BeforeSuite
 	public void setup() throws Exception {
-		launchIOSApplication("0.0.0.0:4723");
+//		launchIOSApplication("0.0.0.0:4723");
 	}
 	@AfterSuite
 	public void teardown() {
-		closeApplication();
+//		closeApplication();
 	}
 	
 	public static void main1(String[] args) {
