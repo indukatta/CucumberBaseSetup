@@ -1,4 +1,4 @@
-@DeclinedPaymentYesNo
+@DeclinedPaymentYesNo @Sprint4 @Regression
 Feature: Verify all functionalities related to Borrowing Yes No screen, it covers CUICE-6255
 
   Background: This is to add category to below scenarios

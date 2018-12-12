@@ -1,4 +1,4 @@
-@businessPremises
+@BusinessPremises @Sprint3 @Regression
 Feature: Verify all functionalities related to Purpose of Borrowing screen, it will cover following stories
   
   Background: This is to add category to below scenarios
@@ -10,7 +10,7 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
     When user clicks on Apply button on Product Selection
     When user selects option 1 from Purpose of Borrowing Question
     When user clicks on continue button on the screen
-    Then user clicks on Yes button on Business Premises screen
+    Then user clicks on Yes button on lending question screen
     Then verify that Business Premises options screen is displayed
 
   Scenario: CUICE-6174 >> ATC-006: Test if user is able to see Business Premises's default state
@@ -34,4 +34,4 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
     Given that user is on Business Premises options screen
     When user clicks on Freehold Business Premises type
     And user clicks on continue button on the screen
-    Then user clicks on back button on Gross Income screen
+    Then user clicks on back button on lending question screen

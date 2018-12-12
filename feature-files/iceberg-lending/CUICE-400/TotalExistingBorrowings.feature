@@ -1,4 +1,4 @@
-@TotalExistingBorrowing
+@TotalExistingBorrowing @Sprint4 @Regression
 Feature: Verify all functionalities related to Amount of Borrowing No screen, it covers CUICE-6171
 
   Background: This is to add category to below scenarios

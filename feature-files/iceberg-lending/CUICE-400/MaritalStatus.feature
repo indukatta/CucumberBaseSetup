@@ -1,4 +1,4 @@
-@MaritalStatus @Sprint @Regression
+@MaritalStatus @Sprint3 @Regression
 Feature: Verify all functionalities related to Marital Status screen. It will covers following stories CUICE-6175
 
   Background: This is to add category to below scenarios

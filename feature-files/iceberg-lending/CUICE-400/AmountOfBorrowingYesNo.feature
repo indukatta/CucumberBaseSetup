@@ -1,4 +1,4 @@
-@AmountOfBorrowingYesNo @Sprint3 @Regression
+@AmountOfBorrowingYesNo @Sprint4 @Regression
 Feature: Verify all functionalities related to Amount of Borrowings Yes No screen, it covers CUICE-6171
 
   Background: This is to add category to below scenarios
