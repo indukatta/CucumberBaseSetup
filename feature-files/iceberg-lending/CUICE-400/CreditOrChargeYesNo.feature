@@ -34,12 +34,12 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
   Scenario: CUICE-6174 >> ATC-002: Test if user clicks on No, Questions screen is displayed
     Given that user is on Credit or Charge Card YesNo screen
     When user clicks on No button on lending question screen
-    Then verify that SustainabilityCheck screen is displayed
+    Then verify that Total Existing Borrowings screen is displayed
     And user clicks on back button on lending question screen
     
   Scenario: CUICE-6174 >> ATC-003: Test if user clicks on Yes, Business Premises options are displayed
     Given that user is on Credit or Charge Card YesNo screen
     When user clicks on Yes button on lending question screen
-    
+    Then verify that Total Existing Borrowings screen is displayed
     And user clicks on back button on lending question screen
     

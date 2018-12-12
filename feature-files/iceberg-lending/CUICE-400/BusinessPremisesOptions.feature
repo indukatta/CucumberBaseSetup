@@ -7,9 +7,18 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
   Scenario: CUICE-6174 >> ATC-005: Test if user is able to see Business Premises options screen
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
-    When user clicks on Apply button on Product Selection
+    And user clicks on Apply button on Product Selection
+    And user clicks on No button on lending question screen
+    And user clicks on continue button on the screen
     When user selects option 1 from Purpose of Borrowing Question
-    When user clicks on continue button on the screen
+    And user clicks on continue button on the screen
+    When user selects option 3 on Residential Status screen
+    And user clicks on continue button on the screen
+    When user selects option 3 on Marital Status screen
+    And user clicks on continue button on the screen
+    When user enters minimum value "1" in Gross Income input box
+    And user clicks on continue button on the screen
+    Then user clicks on No button on lending question screen
     Then user clicks on Yes button on lending question screen
     Then verify that Business Premises options screen is displayed
 

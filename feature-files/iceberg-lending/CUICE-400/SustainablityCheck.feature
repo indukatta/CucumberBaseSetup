@@ -20,7 +20,6 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     And user clicks on continue button on the screen
     When user clicks on No button on lending question screen
     When user clicks on Yes button on lending question screen
-    When user clicks on Yes button on lending question screen
     When user clicks on No button on lending question screen
     Then verify that SustainabilityCheck screen is displayed
   

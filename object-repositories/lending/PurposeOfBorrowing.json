@@ -1,20 +1,8 @@
 {
-	"screenTitle": {
-		"accessibility id": "lending.navigation.bar_title_accessibility_id"
-	},
-	"backButton": {
-		"accessibility id": "Select Products"
-	},
-	"purposeOfBorrowing": {
-		"accessibility id": "lending.question.title"
-	},
-	"purposeOfBorrowingSubTitle": {
-		"accessibility id": "lending.question.subtitle"
-	},
-	"purposeOfBorrowingQuestions": {
+	"questionTypes": {
 		"xpath": "//XCUIElementTypeStaticText[starts-with(@name,\"lending_question_answer_option_text_\")]"
 	},
-	"purposeOfBorrowingQuestionsChkBox": {
+	"questionTypesChkBox": {
 		"xpath": "//XCUIElementTypeImage[starts-with(@name, \"lending_question_answer_option_checkbox_\")]"
 	}
 }

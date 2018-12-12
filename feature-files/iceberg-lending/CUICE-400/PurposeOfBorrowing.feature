@@ -4,7 +4,7 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
   Background: This is to add category to below scenarios
 	Given that category "PurposeOfBorrowing" is added for below scenarios
   
-  Scenario: CUICE-6173 >> Prerequisite: Test if user is able to view "What is the purpose of borrowing" header and "Borrowing" title
+  Scenario: CUICE-6173 >> Prerequisite: Test if user is able to view "What is the main purpose of borrowing" header and "Borrowing" title
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
     And user clicks on Apply button on Product Selection
@@ -39,15 +39,6 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
     Given that user is on Purpose of Borrowing screen
     When user selects option 2 from Purpose of Borrowing Question
     Then verify that continue button is enabled
-    When user selects option 2 from Purpose of Borrowing Question
-    Then verify that continue button is disabled
-  
-  Scenario: CUICE-6173 >> ATC-005: Test if Continue button is enabled if all options are selected
-    Given that user is on Purpose of Borrowing screen
-    When user selects all options from Purpose of Borrowing Question
-    Then verify that continue button is enabled
-    Then user selects all options from Purpose of Borrowing Question
-    Then verify that continue button is disabled
 
   Scenario: CUICE-6173 >> ATC-006: Test if user is taken to the "Residential Status" lending question when clicked on Continue button.
     Given that user is on Purpose of Borrowing screen
