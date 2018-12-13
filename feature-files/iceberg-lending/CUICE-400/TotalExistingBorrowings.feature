@@ -19,6 +19,7 @@ Given that user is on the Credit Management screen
     When user enters minimum value "1" in Gross Income input box
     And user clicks on continue button on the screen
     When user clicks on No button on lending question screen
+    When user clicks on No button on lending question screen
     When user clicks on Yes button on lending question screen
     When user clicks on Yes button on lending question screen
     When user clicks on Yes button on lending question screen

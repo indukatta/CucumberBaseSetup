@@ -1,4 +1,7 @@
 {
+	"screenQuestion": {
+		"accessibility id": "lending.question.title"
+	},
 	"questionTypes": {
 		"xpath": "//XCUIElementTypeStaticText[starts-with(@name,\"lending_question_answer_option_text_\")]"
 	},

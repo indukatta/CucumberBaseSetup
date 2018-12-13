@@ -24,12 +24,12 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
   
   Scenario: CUICE-6174 >> ATC-001: Test if user is able to see Yes No buttons and its default state
     Given that user is on Declined Payment YesNo screen
-    Then verify that Declined Payment YesNo question "Has your business had a declined payment in the last 3 months?" is displayed
+    Then verify that Declined Payment YesNo question "Has your business had a declined payment* in the last 3 months?" is displayed
     And verify that Yes button is displayed on lending question screen
     And verify that No button is displayed on lending question screen
   	And verify that Yes button is not selected on lending question screen
   	And verify that No button is not selected on lending question screen
-  	And verify that hint text "This includes direct debit, standing order or a cheque." is displayed
+  	And verify that hint text "*This includes direct debit, standing order or a cheque." is displayed
   	
   Scenario: CUICE-6174 >> ATC-002: Test if user clicks on No, Questions screen is displayed
     Given that user is on Declined Payment YesNo screen

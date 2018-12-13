@@ -17,7 +17,7 @@ public class AmountOfBorrowing extends CommonLibrary {
 	@Then("^verify that Amount of Borrowing screen is displayed$")
 	public void verify_that_Amount_of_Borrowing_Yes_screen_is_displayed() {
 		setStepName("Then");
-		captureScreenshot("AmountOfBorrowingYes");
+		captureScreenshot("AmountOfBorrowing");
 		findByAny(screenTitle).isDisplayed();
 		findByAny(screenQuestion).isDisplayed();
 	}

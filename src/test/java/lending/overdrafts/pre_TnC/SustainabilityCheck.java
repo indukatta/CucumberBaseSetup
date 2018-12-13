@@ -8,6 +8,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class SustainabilityCheck {
+	public static String screenQuestion;
 	@Then("^verify that SustainabilityCheck screen is displayed$")
 	public void verify_that_SustainabilityCheck_screen_is_displayed() {
 		setStepName("Then");

@@ -3,7 +3,7 @@
 		"accessibility id": "lending.navigation.bar_title_accessibility_id"
 	},
 	"screenQuestion": {
-		"accessibility id": "lending.question.title"
+		"accessibility id": "lending_question_title"
 	},
 	"continueButton": {
 		"accessibility id": "Continue"

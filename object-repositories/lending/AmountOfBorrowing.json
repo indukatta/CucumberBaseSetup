@@ -2,7 +2,7 @@
 	"screenTitle": {
 		"accessibility id": "lending.navigation.bar_title_accessibility_id"
 	},
-	"screenQuestion" : {"accessibility id": "lending_qeustion_title"}
+	"screenQuestion" : {"accessibility id": "lending_question_title"}
 	,"screenHint" : {"" : ""}
 	,"sliderAmountOfBorrowing" : {"" : ""}
 	,"currencyAmountOfBorrowing" : {"" : ""}
