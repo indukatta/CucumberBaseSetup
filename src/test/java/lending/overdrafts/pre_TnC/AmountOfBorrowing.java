@@ -7,10 +7,8 @@ import cucumber.api.java.en.When;
 import static com.factory.mobile.driver.MobileDriverManager.*;
 
 public class AmountOfBorrowing extends CommonLibrary {
-	public static String screenTitle;
-	public static String screenQuestion;
-	public static String sliderAmountOfBorrowing;
-	public static String currencyAmountOfBorrowing;
+	public static String amtOfBorrowingSlider;
+	public static String amtOfBorrowingCurrency;
 	public static String monthyFee;
 	public static String screenEAR;
 
@@ -18,26 +16,26 @@ public class AmountOfBorrowing extends CommonLibrary {
 	public void verify_that_Amount_of_Borrowing_Yes_screen_is_displayed() {
 		setStepName("Then");
 		captureScreenshot("AmountOfBorrowing");
-		findByAny(screenTitle).isDisplayed();
-		findByAny(screenQuestion).isDisplayed();
+		findByAny(CommonStepDefinitions.screenTitle).isDisplayed();
+		findByAny(CommonStepDefinitions.screenQuestion).isDisplayed();
 	}
 
 	@Given("^user is on Amount of Borrowing question screen$")
 	public void user_is_on_Amount_of_Borrowing_Yes_question_screen() {
 		setStepName("Given");
-		findByAny(screenQuestion).isDisplayed();
+		findByAny(CommonStepDefinitions.screenQuestion).isDisplayed();
 	}
 
 	@Then("^verify Amount of Borrowing title \"([^\"]*)\" on screen$")
 	public void verify_Amount_of_Borrowing_Yes_title_on_screen(String arg1) {
 		setStepName("Then");
-	    findByAny(screenTitle).verifyEqualsTo(arg1);
+	    findByAny(CommonStepDefinitions.screenTitle).verifyEqualsTo(arg1);
 	}
 
 	@Then("^verify Amount of Borrowing question \"([^\"]*)\" on screen$")
 	public void verify_Amount_of_Borrowing_Yes_question_on_screen(String arg1) {
 		setStepName("Then");
-		findByAny(screenQuestion).verifyEqualsTo(arg1);
+		findByAny(CommonStepDefinitions.screenQuestion).verifyEqualsTo(arg1);
 	}
 
 	@Then("^verify that hint text below to question is displayed on screen$")
@@ -48,7 +46,7 @@ public class AmountOfBorrowing extends CommonLibrary {
 	@Then("^verify that Amount of borrowing slider is displayed on the screen$")
 	public void verify_that_Amount_of_borrowing_slider_is_displayed_on_the_screen() {
 		setStepName("Then");
-		findByAny(sliderAmountOfBorrowing).isDisplayed();
+		findByAny(amtOfBorrowingSlider).isDisplayed();
 	}
 
 	@Then("^verify that monthly fee component \"([^\"]*)\" is displayed on the screen$")
@@ -66,7 +64,7 @@ public class AmountOfBorrowing extends CommonLibrary {
 	@When("^user selects an amount (\\d+) on Amount of Borrowig Yes screen$")
 	public void user_selects_an_amount_on_Amount_of_Borrowig_Yes_screen(int arg1) {
 		setStepName("When");
-		findByAny(sliderAmountOfBorrowing).sendKeys(arg1+"");
+		findByAny(amtOfBorrowingSlider).setValue(arg1+"");
 	}
 
 	@Then("^verify that monthly fee (\\d+)\\.(\\d+) is calculated and correct on the screen$")
@@ -79,7 +77,7 @@ public class AmountOfBorrowing extends CommonLibrary {
 	@When("^user selects option on Amount of Borrowig Yes screen$")
 	public void user_selects_option_on_Amount_of_Borrowig_Yes_screen() {
 		setStepName("When");
-		findByAny(sliderAmountOfBorrowing).sendKeys("100");
+		findByAny(amtOfBorrowingSlider).setValue("500");
 	}
 
 }

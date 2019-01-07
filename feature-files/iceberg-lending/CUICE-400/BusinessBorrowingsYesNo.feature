@@ -19,7 +19,8 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
     When user enters minimum value "1" in Gross Income input box
     And user clicks on continue button on the screen
     When user clicks on No button on lending question screen
-    When user clicks on Yes button on lending question screen
+    When user clicks on No button on lending question screen
+    When user clicks on No button on lending question screen
     Then verify that Business Borrowing YesNo screen is displayed
   
   Scenario: CUICE-6174 >> ATC-001: Test if user is able to see Yes No buttons and its default state

@@ -26,7 +26,7 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
   
   Scenario: CUICE-6171 >> ATC-001: Test if user is able to see default message on the screen and Okay button
     Given that user is on SustainabilityCheck screen
-    Then verify that SustainabilityCheck question "Do you know of any changes in your circumstances that could affect the business` ability to repay this borrowing?" is displayed
+    Then verify that SustainabilityCheck question "Do you know of any changes in your circumstances that could affect the business’ ability to repay this borrowing?" is displayed
     And verify that Yes button is displayed on lending question screen
     And verify that No button is displayed on lending question screen
   	And verify that Yes button is not selected on lending question screen

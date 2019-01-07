@@ -50,7 +50,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 		setStepName("When");
 		More more = new More(driver);
 		more.navigateToCreditAndLending();
-		sleep(3000);
+		sleep(4000);
 	}
 
 	@Given("^that category \"([^\"]*)\" is added for below scenarios$")

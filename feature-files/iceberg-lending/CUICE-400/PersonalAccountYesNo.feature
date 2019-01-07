@@ -31,8 +31,7 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
   Scenario: CUICE-6174 >> ATC-002: Test if user clicks on No, Questions screen is displayed
     Given that user is on Current Account YesNo screen
     When user clicks on No button on lending question screen
-    Then verify that Business Premises options screen is displayed
-    Then verify that Gross Income screen is displayed
+    Then verify that Business Premises YesNo screen is displayed
     And user clicks on back button on lending question screen
     
   Scenario: CUICE-6174 >> ATC-003: Test if user clicks on Yes, Business Premises options are displayed

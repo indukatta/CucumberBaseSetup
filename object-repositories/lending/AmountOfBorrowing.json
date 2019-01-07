@@ -1,11 +1,6 @@
 {
-	"screenTitle": {
-		"accessibility id": "lending.navigation.bar_title_accessibility_id"
-	},
-	"screenQuestion" : {"accessibility id": "lending_question_title"}
-	,"screenHint" : {"" : ""}
-	,"sliderAmountOfBorrowing" : {"" : ""}
-	,"currencyAmountOfBorrowing" : {"" : ""}
+	"amtOfBorrowingSlider" : {"accessibility id" : "lending_question_slider_accessibility_id"}
+	,"amtOfBorrowingCurrency" : {"" : ""}
 	,"monthyFee" : {"" : ""}
 	,"screenEAR" : {"" : ""}
 }

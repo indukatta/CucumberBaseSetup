@@ -7,8 +7,6 @@ import cucumber.api.java.en.When;
 import static com.factory.mobile.driver.MobileDriverManager.*;
 
 public class BusinessPremisesOptions {
-	public static String screenTitle;
-	public static String bpTypeScreenHeader;
 	public static String bpTypes;
 	public static String bpTypeLeaseholdCkb;
 	public static String bpTypeFreeholdCkb;
@@ -18,21 +16,21 @@ public class BusinessPremisesOptions {
 	@Given("^that user is on Business Premises options screen$")
 	public void that_user_is_on_Business_Premises_options_screen() {
 		setStepName("Given");
-		findByAny(bpTypeScreenHeader).isDisplayed();
+		findByAny(CommonStepDefinitions.screenQuestion).isDisplayed();
 	}
 
 	@Then("^verify that Business Premises options screen is displayed$")
 	public void verify_that_Business_Premises_options_screen_is_displayed() {
 		setStepName("Then");
 		captureScreenshot("BusinessPremises");
-		findByAny(screenTitle).isDisplayed();
-		findByAny(bpTypeScreenHeader).isDisplayed();
+		findByAny(CommonStepDefinitions.screenTitle).isDisplayed();
+		findByAny(CommonStepDefinitions.screenQuestion).isDisplayed();
 	}
 
 	@Then("^verify that Premises Business options header \"([^\"]*)\" is displayed$")
 	public void verify_that_Premises_Business_options_header_is_displayed(String expected) {
 		setStepName("Then");
-		findByAny(bpTypeScreenHeader).verifyEqualsTo(expected);
+		findByAny(CommonStepDefinitions.screenQuestion).verifyEqualsTo(expected);
 	}
 
 	@When("^user clicks on Freehold Business Premises type$")

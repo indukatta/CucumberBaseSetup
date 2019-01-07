@@ -1,11 +1,11 @@
 {
 	"totalBorrowingHint": {
-		"": ""
+		"accessibility id": "lending_question_subtitle"
 	},
 	"totalBorrowingInputbox": {
-		"": ""
+		"accessibility id": "lending_question_answer_option_text"
 	},
 	"totalBorrowingCurrencySymbol": {
-		"": ""
+		"accessibility id": "GBP"
 	}
 }
