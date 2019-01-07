@@ -25,7 +25,7 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
   
   Scenario: CUICE-6174 >> ATC-001: Test if user is able to see Yes No buttons and its default state
     Given that user is on Business Borrowing YesNo screen
-    Then verify that Business Borrowing YesNo question "Does your business have any borrowings?" is displayed
+    Then verify that Business Borrowing YesNo question "Does the business have any borrowings?" is displayed
     And verify that Yes button is displayed on lending question screen
     And verify that No button is displayed on lending question screen
   	And verify that Yes button is not selected on lending question screen
