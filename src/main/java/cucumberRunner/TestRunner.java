@@ -3,6 +3,7 @@ package cucumberRunner;
 import static com.factory.mobile.driver.MobileDriverManager.closeApplication;
 import static com.factory.mobile.driver.MobileDriverManager.launchIOSApplication;
 
+
 import org.apache.commons.lang3.StringUtils;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -13,8 +14,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
 		features = "feature-files/"
 		, glue = "lending/"
-		, tags = {"@Sprint4"}
-//		, tags = {"@TotalExistingBorrowing"}
+//		, tags = {"@Sprint4"}
+		, tags = {"@AmountOfBorrowingYesNo"}
 //		, dryRun=true, tags = {"@TotalExistingBorrowing"}
 )
 public class TestRunner extends AbstractTestNGCucumberTests {

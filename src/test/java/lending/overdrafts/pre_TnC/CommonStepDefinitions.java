@@ -8,6 +8,8 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.ios.IOSDriver;
 import pageObjects.Login.Login;
 import pageObjects.More.More;
 
@@ -33,6 +35,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public static void that_user_is_on_the_Credit_Management_screen() throws Throwable {
 		setStepName("Given");
 		if (!alreadyLoggedIn) {
+			driver = (IOSDriver<MobileElement>) getAppiumDriverInstance();
 			Login login = new Login(driver);
 			login.loginAsUser("TESTUSER", "TESTPASSWORD");
 
@@ -44,7 +47,15 @@ public class CommonStepDefinitions extends CommonLibrary {
 			reportPass("User is already logged in to Iceberg application.");
 		}
 	}
-
+	
+	@Then("^user exit the iceberg application and reopen$")
+	public static void exit_the_iceberg_application_and_reopen() throws Throwable {
+		setStepName("When");
+		restartApplication();
+		driver = (IOSDriver<MobileElement>) getAppiumDriverInstance();
+		alreadyLoggedIn = false;
+	}
+	
 	@When("^user clicks on the Credit & Lending link$")
 	public static void user_clicks_on_the_Credit_and_Lending_link() throws Throwable {
 		setStepName("When");

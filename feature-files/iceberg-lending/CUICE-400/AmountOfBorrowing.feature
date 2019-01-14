@@ -22,20 +22,19 @@ Feature: Verify all functionalities related to Amount of Borrowing  screen, it c
 @AmountOfBorrowing
   Scenario Outline: CUICE-6171 >> MTC-007: Test if monthly fee changes as per Amount of Borrowing selected on screen
     Given user is on Amount of Borrowing question screen
-    When user selects an amount <Amount of Borrowing> on Amount of Borrowig Yes screen
+    When user selects an amount <Amount of Borrowing> on Amount of Borrowing Yes screen
     Then verify that monthly fee <Monthly Fee> is calculated and correct on the screen
     Then verify that continue button is enabled
 
     Examples: 
-      | Amount of Borrowing | Monthly Fee |
-      |                 100 |        0.12 |
-      |                 500 |        0.62 |
-      |                1000 |        1.25 |
-      |               10000 |       12.50 |
+      |No of Click| Amount of Borrowing | Monthly Fee |
+      |0|                 100 |        0.12 |
 
-  Scenario: CUICE-6171 >> ATC-008: Test if user is able to select only one of the choices on the Marital Status screen
+
+  Scenario: CUICE-6171 >> ATC-008: Test if user is able to purpose of borrowing screen after clicking on Yes
     Given user is on Amount of Borrowing question screen
     When user selects option on Amount of Borrowig Yes screen
     And user clicks on continue button on the screen
     Then verify that Purpose of Borrowing screen is displayed
     And user clicks on back button on lending question screen
+    

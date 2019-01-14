@@ -8,7 +8,7 @@ import static com.factory.mobile.driver.MobileDriverManager.*;
 
 public class AmountOfBorrowing extends CommonLibrary {
 	public static String amtOfBorrowingSlider;
-	public static String amtOfBorrowingCurrency;
+	public static String amtOfBorrowing;
 	public static String monthyFee;
 	public static String screenEAR;
 
@@ -61,10 +61,19 @@ public class AmountOfBorrowing extends CommonLibrary {
 		findByAny(screenEAR).verifyEqualsTo(arg1);
 	}
 
-	@When("^user selects an amount (\\d+) on Amount of Borrowig Yes screen$")
+	@When("^user selects an amount (\\d+) on Amount of Borrowing Yes screen$")
 	public void user_selects_an_amount_on_Amount_of_Borrowig_Yes_screen(int arg1) {
 		setStepName("When");
-		findByAny(amtOfBorrowingSlider).setValue(arg1+"");
+//		findByAny(amtOfBorrowingSlider).clickOnSlider(1);
+//		findByAny(amtOfBorrowing).verifyEqualsTo("100");
+//		findByAny(amtOfBorrowingSlider).clickOnSlider(1);
+//		findByAny(amtOfBorrowing).verifyEqualsTo("100");
+//		findByAny(amtOfBorrowingSlider).clickOnSlider(1);
+//		findByAny(amtOfBorrowing).verifyEqualsTo("100");
+//		findByAny(amtOfBorrowing).verifyEqualsTo("100");
+		findByAny(amtOfBorrowing).setValue("$1700");
+		
+		
 	}
 
 	@Then("^verify that monthly fee (\\d+)\\.(\\d+) is calculated and correct on the screen$")

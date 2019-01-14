@@ -1,20 +1,25 @@
 {
-	"suite-name":"thinSliceOverdrafts_sp4"
-	,"report-type":"aventstack"
-	,"appiumServer":{
-	        "ipAddress":"127.0.0.1"
-	        ,"port":"4726"
-	    }
-
-	,"iOSApp":{
-	        "platformName":"IOS"
-	        ,"platformVersion":"12.1"
-	        ,"deviceName":"iPhone 8"
-	        ,"app":"/Users/ashdiksh/Downloads/Iceberg 12.app"
-	    }
-
-	,"OR-package":"lending.overdrafts"
-	,"OR-path":"object-repositories/lending"
-	,"sso-login":{"username":"ashdiksh", "password":"password"}
-
+	"suite-name": "thinSliceOverdrafts_sp4",
+	"report-type": "aventstack",
+	"appiumServer": {
+		"ipAddress": "127.0.0.1",
+		"port": "4726"
+	},
+	"iOSApp": {
+		"platformName": "IOS",
+		"platformVersion": "12.1",
+		"deviceName": "iPhone 8",
+		"fullReset": "false",
+		"noReset": "false",
+		"app": "/Users/ashdiksh/Downloads/Iceberg 13.app"
+	},
+	"OR-package": "lending.overdrafts",
+	"OR-path": "object-repositories/lending",
+	"apiTesting":"true",
+	"baseURI": "https://mule.icepick.guru/iceberg/v1/businesses",
+	"Authorization": "AQIC5wM2LY4SfczgHBlnr7k6fUOpenAMjG4PKBXIQzMSwwiVaw.*AAJTSQACMDIAAlNLABMzMDc0MTYyOTMxMTkwNzU3MjY2AAJTMQACMDE.*",
+	"sso-login": {
+		"username": "TESTUSER",
+		"password": "TESTPASSWORD"
+	}
 }

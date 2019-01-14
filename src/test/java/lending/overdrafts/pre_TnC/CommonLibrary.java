@@ -8,14 +8,9 @@ import pageObjects.Login.Login;
 import pageObjects.More.More;
 
 public class CommonLibrary {
+	public static IOSDriver<MobileElement> driver;
 	public static boolean alreadyLoggedIn = false;
 	public static boolean onScreen = false;
-	public static IOSDriver<MobileElement> driver;
-	
-	public CommonLibrary() {
-		driver = (IOSDriver<MobileElement>) getAppiumDriverInstance();
-	}
-
 	public static String loginErrorCancel;
 
 	public void functionNotImplemented() {
@@ -25,6 +20,7 @@ public class CommonLibrary {
 
 	public void loginAndOpenCreditAndSelectScreen() {
 		if (!alreadyLoggedIn) {
+			driver = (IOSDriver<MobileElement>) getAppiumDriverInstance();
 			Login login = new Login(driver);
 			login.loginAsUser("TESTUSER", "TESTPASSWORD");
 			alreadyLoggedIn = true;
