@@ -73,6 +73,13 @@ public class TotalExistingBorrowing {
 		captureScreenshot();
 		findByAny(totalBorrowingInputbox).verifyEqualsTo(expected);
 	}
+	
+	@Then("^verify that Total Existing Borrowings is equals to \"([^\"]*)\" entered value$")
+	public void verify_that_Total_Existing_Borrowings_is_equals_to__entered_value(String expected) {
+		setStepName("Then");
+		captureScreenshot();
+		findByAny(totalBorrowingInputbox).verifyEqualsTo(expected);
+	}
 
 	@When("^user enters alphabetical and special chars \"([^\"]*)\"ZXCVBNM<>\\?\" in Total Existing Borrowings input box$")
 	public void user_enters_alphabetical_and_special_chars_ZXCVBNM_in_Total_Existing_Borrowings_input_box(String expected){

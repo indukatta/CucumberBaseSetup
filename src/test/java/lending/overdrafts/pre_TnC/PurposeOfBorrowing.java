@@ -55,10 +55,15 @@ public class PurposeOfBorrowing extends CommonLibrary {
 		findByAny(questionTypesChkBox).verifyAttributesAllEqualsTo("value", "0");
 	}
 
-	@When("^user selects option (\\d+) from Purpose of Borrowing Question$")
-	public void user_selects_an_option_from_Purpose_of_Borrowing_Question(int index) throws Throwable {
+	@When("^user selects option (\\d+) from Purpose of Borrowing question screen$")
+	public void user_selects_an_option_from_Purpose_of_Borrowing_question(int index) throws Throwable {
 		setStepName("When");
 		findByAny(questionTypes).click(index);
 	}
-
+	
+	@Then("^verify that option (\\d+) is selected on Purpose of Borrowing question screen$")
+	public void verify_that_option_is_selected_on_Purpose_of_Borrowing_question_screen(DataTable expected) {
+		setStepName("Then");
+		findByAny(questionTypesChkBox).verifyAttributesEqualsTo("value", "1");
+	}
 }

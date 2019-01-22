@@ -48,10 +48,10 @@ public class CommonStepDefinitions extends CommonLibrary {
 		}
 	}
 	
-	@Then("^user exit the iceberg application and reopen$")
+	@Then("^user exit the iceberg application and relaunch$")
 	public static void exit_the_iceberg_application_and_reopen() throws Throwable {
 		setStepName("When");
-		restartApplication();
+//		restartApplication();
 		driver = (IOSDriver<MobileElement>) getAppiumDriverInstance();
 		alreadyLoggedIn = false;
 	}
@@ -112,6 +112,20 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public void verify_that_No_button_is_not_selected_on_lending_question_screen() {
 		setStepName("Then");
 		findByAny(noButton).verifyAttributesEqualsTo("value", "0");
+	}
+	
+	@Then("^verify that Yes button is selected on lending question screen$")
+	public void verify_that_Yes_button_is_selected_on_lending_question_screen() {
+		setStepName("Then");
+		captureScreenshot();
+		findByAny(yesButton).verifyAttributesEqualsTo("value", "1");
+	}
+
+	@Then("^verify that No button is selected on lending question screen$")
+	public void verify_that_No_button_is_selected_on_lending_question_screen() {
+		setStepName("Then");
+		captureScreenshot();
+		findByAny(noButton).verifyAttributesEqualsTo("value", "1");
 	}
 
 	@When("^user clicks on No button on lending question screen$")

@@ -60,5 +60,12 @@ public class ResidentialStatus {
 		captureScreenshot();
 		findByAny(questionAnswerRadioBtn).verifyAttributesEqualsTo(index,  "value", "0");
 	}
+	
+	@Then("^verify that option (\\d+) on Residential Status screen is selected$")
+	public void verify_that_option_on_Residential_Status_screen_is_selected(int index) {
+		setStepName("Then");
+		captureScreenshot();
+		findByAny(questionAnswerRadioBtn).verifyAttributesEqualsTo(index,  "value", "1");
+	}
 
 }

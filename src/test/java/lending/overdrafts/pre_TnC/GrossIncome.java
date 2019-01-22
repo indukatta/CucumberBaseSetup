@@ -77,7 +77,14 @@ public class GrossIncome extends CommonLibrary {
 		captureScreenshot();
 		findByAny(grossIncomeInputbox).verifyEqualsTo(expected);
 	}
-
+	
+	@Then("^verify that entered value \"([^\"]*)\" is displayed in Gross Income input box$")
+	public void verify_that_entered_value_is_displayed_in_Gross_Income_input_box(String expected) {
+		setStepName("Then");
+		captureScreenshot();
+		findByAny(grossIncomeInputbox).verifyEqualsTo(expected);
+	}
+	
 	@When("^user enters alphabetical and special chars \"([^\"]*)\"ZXCVBNM<>\\?\" in Gross Income input box$")
 	public void user_enters_alphabetical_and_special_chars_in_Gross_Income_input_box(String expected) {
 		setStepName("Then");

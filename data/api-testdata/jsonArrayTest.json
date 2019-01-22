@@ -1,0 +1,107 @@
+[
+	{
+		"questionId": 11,
+		"answers": [
+			4
+		],
+		"dateModified": "2019-01-21T16:08:56.343Z"
+	},
+	{
+		"questionId": 12,
+		"answers": [
+			4000
+		],
+		"dateModified": "2019-01-21T16:16:29.999Z"
+	},
+	{
+		"questionId": 1,
+		"answers": [
+			3
+		],
+		"dateModified": "2019-01-21T16:25:25.837Z"
+	},
+	{
+		"questionId": 7,
+		"answers": [
+			2
+		],
+		"dateModified": "2019-01-21T16:25:26.978Z"
+	},
+	{
+		"questionId": 2,
+		"answers": [
+			4
+		],
+		"dateModified": "2019-01-21T16:25:28.497Z"
+	},
+	{
+		"questionId": 3,
+		"answers": [
+			2666
+		],
+		"dateModified": "2019-01-21T16:25:34.328Z"
+	},
+	{
+		"questionId": 14,
+		"answers": [
+			2
+		],
+		"dateModified": "2019-01-21T16:25:45.280Z"
+	},
+	{
+		"questionId": 5,
+		"answers": [
+			1
+		],
+		"dateModified": "2019-01-21T16:28:08.984Z"
+	},
+	{
+		"questionId": 6,
+		"answers": [
+			1
+		],
+		"dateModified": "2019-01-21T16:28:12.075Z"
+	},
+	{
+		"questionId": 8,
+		"answers": [
+			2
+		],
+		"dateModified": "2019-01-21T16:28:56.132Z"
+	},
+	{
+		"questionId": 10,
+		"answers": [
+			1
+		],
+		"dateModified": "2019-01-21T16:35:13.152Z"
+	},
+	{
+		"questionId": 4,
+		"answers": [
+			1
+		],
+		"dateModified": "2019-01-21T16:35:21.379Z"
+	},
+	{
+		"questionId": 9,
+		"answers": [
+			1
+		],
+		"dateModified": "2019-01-21T16:37:04.454Z"
+	},
+	{
+		"questionId": 15,
+		"answers": [
+			1
+		],
+		"dateModified": "2019-01-21T16:37:54.079Z"
+	},
+	{
+		"questionId": 13,
+		"answers": [
+			2
+		],
+		"dateModified": "2019-01-21T16:38:33.463Z"
+	}
+]

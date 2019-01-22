@@ -1,4 +1,4 @@
-@SustainabilityCheck @Sprint4 @Regression
+@SustainabilityCheck @Regression @Sprint4
 Feature: Verify all functionalities related to Amount of Borrowing No screen, it covers CUICE-6171
 
   Background: This is to add category to below scenarios
@@ -10,7 +10,7 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen
     And user clicks on continue button on the screen
-    When user selects option 1 from Purpose of Borrowing Question
+    When user selects option 1 from Purpose of Borrowing question screen
     And user clicks on continue button on the screen
     When user selects option 3 on Residential Status screen
     And user clicks on continue button on the screen

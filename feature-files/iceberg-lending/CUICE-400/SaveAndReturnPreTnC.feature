@@ -1,16 +1,16 @@
-
+@SaveAndReturnPreTnC @Sprint5
 Feature: Verify all functionalities related to Amount of Borrowings Yes No screen, it covers CUICE-6171
 
   Background: This is to add category to below scenarios
-	Given that category "AmountOfBorrowingYesNo" is added for below scenarios
+	Given that category "SaveAndReturnPreTnC" is added for below scenarios
   
-  @SaveLendingQuestions
+  @SaveAndReturnPreTnC
   Scenario: CUICE-6171 >> Prerequisite: Test if user able to view  the Amount of Borrowings Yes No screen
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
     When user clicks on Apply button on Product Selection
     Then verify that Amount of Borrowing YesNo screen is displayed
-    Then user exit the iceberg application and reopen
+    Then user exit the iceberg application and relaunch
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
     

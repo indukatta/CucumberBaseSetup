@@ -1,4 +1,4 @@
-@ProductDetails @Sprint2 @Regression
+@ProductDetails @Regression @Sprint2
 Feature: Verify all functionalities related to Product Details screen, it will cover following stories CUICE-542, CUICE-6194, CUICE-3911
 
   Background: This is to add category to below scenarios
@@ -16,7 +16,7 @@ Feature: Verify all functionalities related to Product Details screen, it will c
     Then verify product description "Best for flexible access to cash flow" on screen
     Then verify feature and benefit heading "Features and Benefits" on screen
     Then verify features and benefits on the screen
-      | •	No arrangement fees                                       |
+      | •	No arrangement fee                                       |
       | •	Pay interest only on the amount you use calculated daily |
       | •	Same day availability (if approved)                      |
     Then verify overdraft fee and interest given below

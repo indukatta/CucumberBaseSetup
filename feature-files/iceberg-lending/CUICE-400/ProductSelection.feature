@@ -1,4 +1,4 @@
-@ProductSelection @Sprint2 @Regression
+@ProductSelection @Regression @Sprint2
 Feature: Verify all functionalities related to Product Selection screen. It will covers following stories CUICE-540, CUICE-542
 
   Background: This is to add category to below scenarios
@@ -34,6 +34,6 @@ Feature: Verify all functionalities related to Product Selection screen. It will
     
   Scenario: CUICE-540 >> ATC-003: Test if user is taken back to "Lending Question" screen after Apply is clicked
     Given that user is on Product Selection screen
-    When user clicks on Apply button on Product Selection
-    Then verify lending question screen is displayed
+    #When user clicks on Apply button on Product Selection
+    #Then verify lending question screen is displayed
   

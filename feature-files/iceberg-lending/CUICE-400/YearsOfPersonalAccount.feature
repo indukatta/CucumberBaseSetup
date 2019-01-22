@@ -1,4 +1,4 @@
-@YearsOfPersonalAccount
+@YearsOfPersonalAccount @Regression
 Feature: Verify all functionalities related to Borrowing Yes No screen, it covers CUICE-6255
 
   Background: This is to add category to below scenarios
@@ -10,7 +10,7 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
     And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen
     And user clicks on continue button on the screen
-    When user selects option 1 from Purpose of Borrowing Question
+    When user selects option 1 from Purpose of Borrowing question screen
     And user clicks on continue button on the screen
     When user selects option 3 on Residential Status screen
     And user clicks on continue button on the screen
@@ -34,10 +34,16 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
     When user clicks on No button on lending question screen
     Then verify that Business Premises YesNo screen is displayed
     And user clicks on back button on lending question screen
+    Then verify that No button is selected on lending question screen
+    #When user call rest end point "productCategories" to get and verify response
+    #Then verify that expected json file "testAPI" is equal to end point response
     
   Scenario: CUICE-6174 >> ATC-003: Test if user clicks on Yes, Business Premises options are displayed
     Given that user is on Years of Personal Account screen
     When user clicks on Yes button on lending question screen
     Then verify that Business Premises YesNo screen is displayed
     And user clicks on back button on lending question screen
+    Then verify that Yes button is selected on lending question screen
+    #When user call rest end point "productCategories" to get and verify response
+    #Then verify that expected json file "testAPI" is equal to end point response
     

@@ -1,0 +1,91 @@
+{
+	"productCategoryId": 1,
+	"status": "open",
+	"answers": [
+		{
+			"questionId": 9,
+			"answers": [
+				2
+			],
+			"dateModified": "2019-01-18T14:45:08.953Z"
+		},
+		{
+			"questionId": 8,
+			"answers": [
+				2
+			],
+			"dateModified": "2019-01-18T14:48:31.239Z"
+		},
+		{
+			"questionId": 4,
+			"answers": [
+				2
+			],
+			"dateModified": "2019-01-18T14:56:15.877Z"
+		},
+		{
+			"questionId": 7,
+			"answers": [
+				4
+			],
+			"dateModified": "2019-01-18T14:56:43.923Z"
+		},
+		{
+			"questionId": 10,
+			"answers": [
+				2
+			],
+			"dateModified": "2019-01-18T15:05:14.058Z"
+		},
+		{
+			"questionId": 6,
+			"answers": [
+				1
+			],
+			"dateModified": "2019-01-18T15:08:28.520Z"
+		},
+		{
+			"questionId": 11,
+			"answers": [
+				4
+			],
+			"dateModified": "2019-01-18T15:11:20.313Z"
+		},
+		{
+			"questionId": 14,
+			"answers": [
+				1
+			],
+			"dateModified": "2019-01-18T15:20:47.906Z"
+		},
+		{
+			"questionId": 1,
+			"answers": [
+				2
+			],
+			"dateModified": "2019-01-18T15:23:03.360Z"
+		},
+		{
+			"questionId": 2,
+			"answers": [
+				2
+			],
+			"dateModified": "2019-01-18T15:25:18.165Z"
+		},
+		{
+			"questionId": 5,
+			"answers": [
+				1
+			],
+			"dateModified": "2019-01-18T15:25:53.412Z"
+		},
+		{
+			"questionId": 3,
+			"answers": [
+				2
+			],
+			"dateModified": "2019-01-18T15:26:40.043Z"
+		}
+	],
+	"id": 17
+}

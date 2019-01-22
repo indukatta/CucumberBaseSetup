@@ -1,5 +1,5 @@
 {
-	"suite-name": "thinSliceOverdrafts_sp4",
+	"suite-name": "thinSliceOverdrafts_sp3",
 	"report-type": "aventstack",
 	"appiumServer": {
 		"ipAddress": "127.0.0.1",
@@ -11,13 +11,19 @@
 		"deviceName": "iPhone 8",
 		"fullReset": "false",
 		"noReset": "false",
-		"app": "/Users/ashdiksh/Downloads/Iceberg 13.app"
+		"app": "/Users/ashdiksh/Downloads/Iceberg 19.app"
 	},
 	"OR-package": "lending.overdrafts",
 	"OR-path": "object-repositories/lending",
-	"apiTesting":"true",
-	"baseURI": "https://mule.icepick.guru/iceberg/v1/businesses",
+	"apiTesting": "true",
 	"Authorization": "AQIC5wM2LY4SfczgHBlnr7k6fUOpenAMjG4PKBXIQzMSwwiVaw.*AAJTSQACMDIAAlNLABMzMDc0MTYyOTMxMTkwNzU3MjY2AAJTMQACMDE.*",
+	"baseURI": "https://mule.icepick.guru/iceberg/v1/businesses",
+	"productCategories": "/{businessID}/lending/product-categories",
+	"configuration": "/{businessID}/lending/applications/{applicationID}/configuration",
+	"urlParams": {
+		"businessID": "1003056660",
+		"applicationID": "27"
+	},
 	"sso-login": {
 		"username": "TESTUSER",
 		"password": "TESTPASSWORD"

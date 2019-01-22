@@ -1,3 +1,4 @@
+
 Feature: Verify all functionalities related to Amount of Borrowing  screen, it covers CUICE-6171
 
   Background: This is to add category to below scenarios

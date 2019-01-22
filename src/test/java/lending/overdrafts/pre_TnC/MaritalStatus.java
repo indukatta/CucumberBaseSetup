@@ -59,5 +59,11 @@ public class MaritalStatus {
 		captureScreenshot();
 		findByAny(questionAnswerRadioBtn).verifyAttributesEqualsTo(index, "value", "0");
 	}
+	@Then("^verify that option (\\d+) on Marital Status is selected$")
+	public void verify_that_option_on_Marital_Status_is_selected(int index) {
+		setStepName("Then");
+		captureScreenshot();
+		findByAny(questionAnswerRadioBtn).verifyAttributesEqualsTo(index, "value", "1");
+	}
 	
 }
