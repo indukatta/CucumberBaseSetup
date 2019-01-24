@@ -1,0 +1,72 @@
+[
+	{
+		"questionId": 8,
+		"answers": [
+			2
+		],
+		"dateModified": "2019-01-24T18:30:18.902Z"
+	},
+	{
+		"questionId": 1,
+		"answers": [
+			2
+		],
+		"dateModified": "2019-01-24T18:30:27.210Z"
+	},
+	{
+		"questionId": 7,
+		"answers": [
+			4
+		],
+		"dateModified": "2019-01-24T18:30:30.850Z"
+	},
+	{
+		"questionId": 2,
+		"answers": [
+			4
+		],
+		"dateModified": "2019-01-24T18:30:35.375Z"
+	},
+	{
+		"questionId": 3,
+		"answers": [
+			1000
+		],
+		"dateModified": "2019-01-24T18:30:37.803Z"
+	},
+	{
+		"questionId": 14,
+		"answers": [
+			2
+		],
+		"dateModified": "2019-01-24T18:30:39.344Z"
+	},
+	{
+		"questionId": 5,
+		"answers": [
+			2
+		],
+		"dateModified": "2019-01-24T18:30:41.892Z"
+	},
+	{
+		"questionId": 10,
+		"answers": [
+			1
+		],
+		"dateModified": "2019-01-24T18:30:44.434Z"
+	},
+	{
+		"questionId": 4,
+		"answers": [
+			1
+		],
+		"dateModified": "2019-01-24T18:30:46.867Z"
+	},
+	{
+		"questionId": 15,
+		"answers": [
+			1
+		],
+		"dateModified": "2019-01-24T18:31:08.510Z"
+	}
+]

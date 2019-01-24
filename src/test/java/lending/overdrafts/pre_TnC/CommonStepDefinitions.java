@@ -38,14 +38,11 @@ public class CommonStepDefinitions extends CommonLibrary {
 			driver = (IOSDriver<MobileElement>) getAppiumDriverInstance();
 			Login login = new Login(driver);
 			login.loginAsUser("TESTUSER", "TESTPASSWORD");
-
-//			login.loginAsUser("Testuser", "testuser");
-//			findByAccessibilityId("Cancel").click();
-
 			alreadyLoggedIn = true;
 		} else {
 			reportPass("User is already logged in to Iceberg application.");
 		}
+		deleteAllLendingApplications();
 	}
 	
 	@Then("^user exit the iceberg application and relaunch$")
@@ -59,7 +56,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 	@When("^user clicks on the Credit & Lending link$")
 	public static void user_clicks_on_the_Credit_and_Lending_link() throws Throwable {
 		setStepName("When");
-		More more = new More(driver);
+		more = new More(driver);
 		more.navigateToCreditAndLending();
 		sleep(4000);
 	}

@@ -1,5 +1,5 @@
 {
-	"bpTypeScreenHeader": {
+	"screenQuestion": {
 		"xpath": "//XCUIElementTypeStaticText[@name=\"lending.question.title\"]"
 	},
 	"bpTypes": {

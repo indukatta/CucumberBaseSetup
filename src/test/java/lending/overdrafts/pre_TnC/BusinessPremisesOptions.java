@@ -12,11 +12,12 @@ public class BusinessPremisesOptions {
 	public static String bpTypeFreeholdCkb;
 	public static String bpTypeLeasehold;
 	public static String bpTypeFreehold;
+	public static String screenQuestion;
 
 	@Given("^that user is on Business Premises options screen$")
 	public void that_user_is_on_Business_Premises_options_screen() {
 		setStepName("Given");
-		findByAny(CommonStepDefinitions.screenQuestion).isDisplayed();
+		findByAny(screenQuestion).isDisplayed();
 	}
 
 	@Then("^verify that Business Premises options screen is displayed$")
@@ -24,13 +25,13 @@ public class BusinessPremisesOptions {
 		setStepName("Then");
 		captureScreenshot("BusinessPremises");
 		findByAny(CommonStepDefinitions.screenTitle).isDisplayed();
-		findByAny(CommonStepDefinitions.screenQuestion).isDisplayed();
+		findByAny(screenQuestion).isDisplayed();
 	}
 
 	@Then("^verify that Premises Business options header \"([^\"]*)\" is displayed$")
 	public void verify_that_Premises_Business_options_header_is_displayed(String expected) {
 		setStepName("Then");
-		findByAny(CommonStepDefinitions.screenQuestion).verifyEqualsTo(expected);
+		findByAny(screenQuestion).verifyEqualsTo(expected);
 	}
 
 	@When("^user clicks on Freehold Business Premises type$")
@@ -76,5 +77,19 @@ public class BusinessPremisesOptions {
 		setStepName("Then");
 		captureScreenshot();
 		findByAny(bpTypeFreeholdCkb).verifyAttributesEqualsTo("value", "0");
+	}
+	
+	@Then("^verify that Freehold Business Premises type is selected$")
+	public void verify_that_Freehold_Business_Premises_type_is_selected() throws Throwable {
+		setStepName("Then");
+		captureScreenshot();
+		findByAny(bpTypeFreeholdCkb).verifyAttributesEqualsTo("value", "1");
+	}
+
+	@Then("^verify that Leasehold Business Premises type is selected$")
+	public void verify_that_Leasehold_Business_Premises_type_is_selected() throws Throwable {
+		setStepName("Then");
+		captureScreenshot();
+		findByAny(bpTypeLeaseholdCkb).verifyAttributesEqualsTo("value", "1");
 	}
 }

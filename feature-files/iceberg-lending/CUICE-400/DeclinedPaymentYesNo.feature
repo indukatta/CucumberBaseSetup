@@ -17,7 +17,7 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
     And user clicks on continue button on the screen
     When user selects option 3 on Marital Status screen
     And user clicks on continue button on the screen
-    When user enters minimum value "1" in Gross Income input box
+    When user enters minimum value "1000" in Gross Income input box
     And user clicks on continue button on the screen
     When user clicks on No button on lending question screen
     When user clicks on No button on lending question screen
@@ -33,14 +33,26 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
     And verify that No button is not selected on lending question screen
     And verify that hint text "*This includes direct debit, standing order or a cheque." is displayed
 
-  @Sprint4
+  @Sprint4 @Sprint5
   Scenario: CUICE-6174 >> ATC-002: Test if user clicks on No, Questions screen is displayed
     Given that user is on Declined Payment YesNo screen
     When user clicks on No button on lending question screen
     Then verify that Business Borrowing YesNo screen is displayed
     And user clicks on back button on lending question screen
 
-  @Sprint4
+  @Sprint5
+  Scenario: CUICE-TBD >> ATC-TBD: Test if save and return is working when user clicks on No button
+    Then verify that No button is selected on lending question screen
+    When user call rest end point "configuration" to get and save the response
+    Then verify that expected json "lending-QnA/DeclinedPaymentNo" is equals to "data/application/answers" except "dateModified" key
+    When user clicks on No button on lending question screen
+    Then verify that Business Borrowing YesNo screen is displayed
+    And user clicks on back button on lending question screen
+    Then verify that No button is selected on lending question screen
+    When user call rest end point "configuration" to get and save the response
+    Then verify that expected json "lending-QnA/DeclinedPaymentNo" is equals to "data/application/answers" except "dateModified" key
+
+  @Sprint4 @Sprint5
   Scenario: CUICE-6174 >> ATC-003: Test if user clicks on Yes, Business Premises options are displayed
     Given that user is on Declined Payment YesNo screen
     When user clicks on Yes button on lending question screen
@@ -48,31 +60,13 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
     And user clicks on back button on lending question screen
 
   @Sprint5
-  Scenario: CUICE-TBD >> ATC-TBD: Test if save and return is working when user clicks on No button
-    Given that user is on Declined Payment YesNo screen
-    When user clicks on No button on lending question screen
-    Then verify that Business Borrowing YesNo screen is displayed
-    And user clicks on back button on lending question screen
-    Then verify that No button is selected on lending question screen
-    #When user call rest end point "productCategories" to get and verify response
-    #Then verify that expected json file "testAPI" is equal to end point response
-    When user clicks on No button on lending question screen
-    Then verify that Business Borrowing YesNo screen is displayed
-    And user clicks on back button on lending question screen
-    Then verify that No button is selected on lending question screen
-
-  #When user call rest end point "productCategories" to get and verify response
-  #Then verify that expected json file "testAPI" is equal to end point response
-  @Sprint5
   Scenario: CUICE-TBD >> ATC-TBD: Test if save and return is working when user clicks on Yes button
-    Given that user is on Declined Payment YesNo screen
+    Then verify that Yes button is selected on lending question screen
+    When user call rest end point "configuration" to get and save the response
+    Then verify that expected json "lending-QnA/DeclinedPaymentYes" is equals to "data/application/answers" except "dateModified" key
     When user clicks on Yes button on lending question screen
     Then verify that Business Borrowing YesNo screen is displayed
     And user clicks on back button on lending question screen
     Then verify that Yes button is selected on lending question screen
-    #When user call rest end point "productCategories" to get and verify response
-    #Then verify that expected json file "testAPI" is equal to end point response
-    When user clicks on Yes button on lending question screen
-    Then verify that Business Borrowing YesNo screen is displayed
-    And user clicks on back button on lending question screen
-    Then verify that Yes button is selected on lending question screen
+    When user call rest end point "configuration" to get and save the response
+    Then verify that expected json "lending-QnA/DeclinedPaymentYes" is equals to "data/application/answers" except "dateModified" key

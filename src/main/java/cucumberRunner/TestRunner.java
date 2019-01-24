@@ -14,8 +14,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
 		features = "feature-files/"
 		, glue = "lending/"
-//		, tags = {"@Sprint2"}
-		, tags = {"@AmountOfBorrowingYesNo"}
+//		, tags = {"@Regression"}
+		, tags = {"@GrossIncome"}
 //		, dryRun=true, tags = {"@AmountOfBorrowingYesNo"}
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
