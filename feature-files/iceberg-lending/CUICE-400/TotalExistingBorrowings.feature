@@ -17,7 +17,7 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     And user clicks on continue button on the screen
     When user selects option 3 on Marital Status screen
     And user clicks on continue button on the screen
-    When user enters minimum value "1" in Gross Income input box
+    When user enters minimum value "10000" in Gross Income input box
     And user clicks on continue button on the screen
     When user clicks on No button on lending question screen
     When user clicks on No button on lending question screen
@@ -74,26 +74,23 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     Then verify that value of Total Existing Borrowings is set to "1" min limit
     And verify that continue button is disabled
 
-  @Sprint4
+  @Sprint4 @Sprint5
   Scenario: CUICE-6173 >> ATC-007: Test if user is able to navigate to the next screen when continue button is clicked
     Given that user is on Total Existing Borrowings screen
-    When user enters minimum value "1" in Total Existing Borrowings input box
+    When user enters minimum value "101" in Total Existing Borrowings input box
     And user clicks on continue button on the screen
     Then verify that SustainabilityCheck screen is displayed
     And user clicks on back button on lending question screen
 
   @Sprint5
   Scenario: CUICE-TBD >> ATC-TBD: Test if save and return is working when user enters value in Total Existing Borrowings screen
-    Given that user is on Total Existing Borrowings screen
-    When user enters minimum value "1" in Total Existing Borrowings input box
-    And user clicks on continue button on the screen
-    Then verify that SustainabilityCheck screen is displayed
-    And user clicks on back button on lending question screen
-    Then verify that Total Existing Borrowings is equals to "1" entered value
-    #When user call rest end point "productCategories" to get and verify response
-    #Then verify that expected json file "testAPI" is equal to end point response
-    When user enters minimum value "101" in Total Existing Borrowings input box
-    And user clicks on continue button on the screen
-    Then verify that SustainabilityCheck screen is displayed
-    And user clicks on back button on lending question screen
     Then verify that Total Existing Borrowings is equals to "101" entered value
+    When user call rest end point "configuration" to get and save the response
+    Then verify that expected json "lending-QnA/TotalExistingBorrowing101" is equals to "data/application/answers" except "dateModified" key
+    When user enters minimum value "1001" in Total Existing Borrowings input box
+    And user clicks on continue button on the screen
+    Then verify that SustainabilityCheck screen is displayed
+    And user clicks on back button on lending question screen
+    Then verify that Total Existing Borrowings is equals to "1001" entered value
+    When user call rest end point "configuration" to get and save the response
+    Then verify that expected json "lending-QnA/TotalExistingBorrowing1001" is equals to "data/application/answers" except "dateModified" key

@@ -34,6 +34,6 @@ Feature: Verify all functionalities related to Product Selection screen. It will
     
   Scenario: CUICE-540 >> ATC-003: Test if user is taken back to "Lending Question" screen after Apply is clicked
     Given that user is on Product Selection screen
-    #When user clicks on Apply button on Product Selection
-    #Then verify lending question screen is displayed
+    When user clicks on Apply button on Product Selection
+    Then verify that Amount of Borrowing YesNo screen is displayed
   

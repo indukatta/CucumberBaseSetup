@@ -62,8 +62,9 @@ public class PurposeOfBorrowing extends CommonLibrary {
 	}
 	
 	@Then("^verify that option (\\d+) is selected on Purpose of Borrowing question screen$")
-	public void verify_that_option_is_selected_on_Purpose_of_Borrowing_question_screen(DataTable expected) {
+	public void verify_that_option_is_selected_on_Purpose_of_Borrowing_question_screen(int index) {
 		setStepName("Then");
-		findByAny(questionTypesChkBox).verifyAttributesEqualsTo("value", "1");
+		captureScreenshot();
+		findByAny(questionTypesChkBox).verifyAttributesEqualsTo(index, "value", "1");
 	}
 }

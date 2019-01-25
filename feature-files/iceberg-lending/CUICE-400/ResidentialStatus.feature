@@ -52,18 +52,13 @@ Feature: Verify all functionalities related to Residential Status screen. It wil
 
   @Sprint5
   Scenario: CUICE-TBD >> ATC-TBD: Test if save and return is working when user selects an option on Residential Status screen
-    Given user is on Residential Status lending question screen
-    When user selects option 3 on Residential Status screen
-    And user clicks on continue button on the screen
-    Then verify that Marital Status screen is displayed
-    And user clicks on back button on lending question screen
     Then verify that option 3 on Residential Status screen is selected
-    #When user call rest end point "productCategories" to get and verify response
-    #Then verify that expected json file "testAPI" is equal to end point response
-    When user selects option 1 on Residential Status screen
+    When user call rest end point "configuration" to get and save the response
+    Then verify that expected json "lending-QnA/ResidentialStatusOpt3" is equals to "data/application/answers" except "dateModified" key
+    When user selects option 4 on Residential Status screen
     And user clicks on continue button on the screen
     Then verify that Marital Status screen is displayed
     And user clicks on back button on lending question screen
-    Then verify that option 1 on Residential Status screen is selected
-    #When user call rest end point "productCategories" to get and verify response
-  	#Then verify that expected json file "testAPI" is equal to end point response
+    Then verify that option 4 on Residential Status screen is selected
+    When user call rest end point "configuration" to get and save the response
+    Then verify that expected json "lending-QnA/ResidentialStatusOpt4" is equals to "data/application/answers" except "dateModified" key

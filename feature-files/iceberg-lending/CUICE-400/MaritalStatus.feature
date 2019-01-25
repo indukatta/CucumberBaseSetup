@@ -47,28 +47,23 @@ Feature: Verify all functionalities related to Marital Status screen. It will co
     Then verify that option 1 on Marital Status is deselected
     And verify that continue button is enabled
 
-  @Sprint3
+  @Sprint3 @Sprint5
   Scenario: CUICE-6175 >> ATC-005: Test if user is able to navigate to the next screen when continue button is clicked
     Given user is on Marital Status lending question screen
     When user selects option 3 on Marital Status screen
     And user clicks on continue button on the screen
     Then verify that Gross Income screen is displayed
     And user clicks on back button on lending question screen
-
+  
   @Sprint5
   Scenario: CUICE-6175 >> ATC-005: Test if save and return is working when user select option on Marital Status screen
-    Given user is on Marital Status lending question screen
-    When user selects option 3 on Marital Status screen
-    And user clicks on continue button on the screen
-    Then verify that Gross Income screen is displayed
-    And user clicks on back button on lending question screen
     Then verify that option 3 on Marital Status is selected
-    #When user call rest end point "productCategories" to get and verify response
-    #Then verify that expected json file "testAPI" is equal to end point response
-    When user selects option 2 on Marital Status screen
+    When user call rest end point "configuration" to get and save the response
+    Then verify that expected json "lending-QnA/MaritalStatusOpt3" is equals to "data/application/answers" except "dateModified" key
+    When user selects option 4 on Marital Status screen
     And user clicks on continue button on the screen
     Then verify that Gross Income screen is displayed
     And user clicks on back button on lending question screen
-    Then verify that option 2 on Marital Status is selected
-    #When user call rest end point "productCategories" to get and verify response
-    #Then verify that expected json file "testAPI" is equal to end point response
+    Then verify that option 4 on Marital Status is selected
+    When user call rest end point "configuration" to get and save the response
+    Then verify that expected json "lending-QnA/MaritalStatusOpt4" is equals to "data/application/answers" except "dateModified" key

@@ -44,28 +44,23 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
     When user selects option 2 from Purpose of Borrowing question screen
     Then verify that continue button is enabled
 
-  @Sprint3
+  @Sprint3 @Sprint5
   Scenario: CUICE-6173 >> ATC-006: Test if user is taken to the Residential Status lending question when clicked on Continue button.
     Given that user is on Purpose of Borrowing screen
-    When user selects option 1 from Purpose of Borrowing question screen
+    When user selects option 4 from Purpose of Borrowing question screen
     And user clicks on continue button on the screen
     Then verify that Residential Status screen is displayed
     Then user clicks on back button on lending question screen
 
   @Sprint5
   Scenario: CUICE-TBD >> ATC-TBD: Test if save and return is working when user selects an option on Purpose of Borrowing screen
-    Given that user is on Purpose of Borrowing screen
-    When user selects option 1 from Purpose of Borrowing question screen
-    And user clicks on continue button on the screen
-    Then verify that Residential Status screen is displayed
-    Then user clicks on back button on lending question screen
-    Then verify that option 1 is selected on Purpose of Borrowing question screen
-    #When user call rest end point "productCategories" to get and verify response
-    #Then verify that expected json file "testAPI" is equal to end point response
+    Then verify that option 4 is selected on Purpose of Borrowing question screen
+    When user call rest end point "configuration" to get and save the response
+    Then verify that expected json "lending-QnA/PurposeOfBorrowingOpt4" is equals to "data/application/answers" except "dateModified" key
     When user selects option 3 from Purpose of Borrowing question screen
     And user clicks on continue button on the screen
     Then verify that Residential Status screen is displayed
     Then user clicks on back button on lending question screen
     Then verify that option 3 is selected on Purpose of Borrowing question screen
-    #When user call rest end point "productCategories" to get and verify response
-    #Then verify that expected json file "testAPI" is equal to end point response
+    When user call rest end point "configuration" to get and save the response
+    Then verify that expected json "lending-QnA/PurposeOfBorrowingOpt3" is equals to "data/application/answers" except "dateModified" key

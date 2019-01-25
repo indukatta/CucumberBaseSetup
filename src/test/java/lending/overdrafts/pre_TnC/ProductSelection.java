@@ -112,10 +112,4 @@ public class ProductSelection extends CommonLibrary {
 		reportSkip("Verify overall UI of Product Details screen is as per UX and usability.");
 	}
 
-	@Then("^verify lending question screen is displayed$")
-	public void verify_lending_question_screen_is_displayed() throws Throwable {
-		setStepName("Then");
-		functionNotImplemented();
-	}
-
 }

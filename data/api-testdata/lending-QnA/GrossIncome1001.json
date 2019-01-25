@@ -4,55 +4,34 @@
 		"answers": [
 			2
 		],
-		"dateModified": "2019-01-24T18:40:55.176Z"
+		"dateModified": "2019-01-25T10:33:28.460Z"
 	},
 	{
 		"questionId": 1,
 		"answers": [
-			2
+			1
 		],
-		"dateModified": "2019-01-24T18:41:03.409Z"
+		"dateModified": "2019-01-25T10:33:55.822Z"
 	},
 	{
 		"questionId": 7,
 		"answers": [
-			4
+			3
 		],
-		"dateModified": "2019-01-24T18:41:07.010Z"
+		"dateModified": "2019-01-25T10:34:47.186Z"
 	},
 	{
 		"questionId": 2,
 		"answers": [
-			4
+			3
 		],
-		"dateModified": "2019-01-24T18:41:11.563Z"
+		"dateModified": "2019-01-25T10:35:08.019Z"
 	},
 	{
 		"questionId": 3,
 		"answers": [
-			1000
+			1001
 		],
-		"dateModified": "2019-01-24T18:41:13.998Z"
-	},
-	{
-		"questionId": 14,
-		"answers": [
-			2
-		],
-		"dateModified": "2019-01-24T18:41:15.571Z"
-	},
-	{
-		"questionId": 5,
-		"answers": [
-			2
-		],
-		"dateModified": "2019-01-24T18:41:18.093Z"
-	},
-	{
-		"questionId": 10,
-		"answers": [
-			2
-		],
-		"dateModified": "2019-01-24T18:41:39.904Z"
+		"dateModified": "2019-01-25T10:36:31.257Z"
 	}
 ]
