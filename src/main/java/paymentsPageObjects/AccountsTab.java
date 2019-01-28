@@ -9,7 +9,7 @@ import utils.GuiCommands;
 import java.util.Calendar;
 import java.util.Locale;
 
-import static com.factory.mobile.driver.MobileDriverManager.*;
+import static com.factory.mobile.driver.AppiumDriverManager.*;
 
 public class AccountsTab extends GuiCommands {
 

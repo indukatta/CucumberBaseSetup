@@ -1,25 +1,85 @@
-@SaveAndReturnPreTnC @Sprint5
-Feature: Verify all functionalities related to Amount of Borrowings Yes No screen, it covers CUICE-6171
+@SaveAndReturnPreTnC @Regression
+Feature: Verify all functionalities related to Amount of Borrowing No screen, it covers CUICE-6171
 
   Background: This is to add category to below scenarios
-	Given that category "SaveAndReturnPreTnC" is added for below scenarios
-  
-  @SaveAndReturnPreTnC
-  Scenario: CUICE-6171 >> Prerequisite: Test if user able to view  the Amount of Borrowings Yes No screen
+    Given that category "SaveAndReturnPreTnC" is added for below scenarios
+
+  @Sprint6
+  Scenario: CUICE-6171 >> Prerequisite: Test if user able to view  the Borrowings Yes No screen
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
-    When user clicks on Apply button on Product Selection
-    Then verify that Amount of Borrowing YesNo screen is displayed
-    Then user exit the iceberg application and relaunch
+    And user clicks on Apply button on Product Selection
+    And user clicks on No button on lending question screen
+    And user clicks on continue button on the screen
+    When user selects option 1 from Purpose of Borrowing question screen
+    And user clicks on continue button on the screen
+    When user selects option 3 on Residential Status screen
+    And user clicks on continue button on the screen
+    When user selects option 3 on Marital Status screen
+    And user clicks on continue button on the screen
+    When user enters minimum value "1000" in Gross Income input box
+    And user clicks on continue button on the screen
+    When user clicks on No button on lending question screen
+    When user clicks on No button on lending question screen
+    When user clicks on Yes button on lending question screen
+    When user clicks on No button on lending question screen
+    Then verify that SustainabilityCheck screen is displayed
+    When user clicks on Yes button on lending question screen
+
+  @Sprint6
+  Scenario: CUICE-6171 >> Logout and Login to see if values are saved for an application
+    When user clicks on the More and Logout link
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
+    Then verify that SustainabilityCheck screen is displayed
+    Then verify that No button is selected on lending question screen
+    And user clicks on back button on lending question screen
+    Then verify that No button is selected on lending question screen
+    And user clicks on back button on lending question screen
+    Then verify that Yes button is selected on lending question screen
+    And user clicks on back button on lending question screen
+    Then verify that No button is selected on lending question screen
+    And user clicks on back button on lending question screen
+    Then verify that No button is selected on lending question screen
+    And user clicks on back button on lending question screen
+    Then verify that entered value "1000" is displayed in Gross Income input box
+    And user clicks on back button on lending question screen
+    Then verify that option 3 on Marital Status is selected
+    And user clicks on back button on lending question screen
+    Then verify that option 3 on Residential Status screen is selected
+    And user clicks on back button on lending question screen
+    Then verify that option 1 is selected on Purpose of Borrowing question screen
+    And user clicks on back button on lending question screen
+    And user clicks on back button on lending question screen
+    Then verify that No button is selected on lending question screen
+    And user clicks on back button on lending question screen
+    Then verify that Credit & Lending option is displayed on screen
     
-  Scenario: CUICE-6171 >> ATC-001: Test if user is able to see header, Yes No buttons and its default state
-    Given that user is on Amount of Borrowing YesNo screen
-    Then verify that Amount of Borrowing title "Borrowing" on screen
-    Then verify that Amount of Borrowing question "Do you know how much you would like to borrow?" on screen
-    And verify that Yes button is displayed on lending question screen
-    And verify that No button is displayed on lending question screen
-  	And verify that Yes button is not selected on lending question screen
-  	And verify that No button is not selected on lending question screen
-  	
+  @Sprint6
+  Scenario: CUICE-6171 >> Logout and Login to see if values are saved for an application
+    When user exit the iceberg application and relaunch
+    Given that user is on the Credit Management screen
+    When user clicks on the Credit & Lending link
+    Then verify that SustainabilityCheck screen is displayed
+    Then verify that No button is selected on lending question screen
+    And user clicks on back button on lending question screen
+    Then verify that No button is selected on lending question screen
+    And user clicks on back button on lending question screen
+    Then verify that Yes button is selected on lending question screen
+    And user clicks on back button on lending question screen
+    Then verify that No button is selected on lending question screen
+    And user clicks on back button on lending question screen
+    Then verify that No button is selected on lending question screen
+    And user clicks on back button on lending question screen
+    Then verify that entered value "1000" is displayed in Gross Income input box
+    And user clicks on back button on lending question screen
+    Then verify that option 3 on Marital Status is selected
+    And user clicks on back button on lending question screen
+    Then verify that option 3 on Residential Status screen is selected
+    And user clicks on back button on lending question screen
+    Then verify that option 1 is selected on Purpose of Borrowing question screen
+    And user clicks on back button on lending question screen
+    And user clicks on back button on lending question screen
+    Then verify that No button is selected on lending question screen
+    And user clicks on back button on lending question screen
+    Then verify that Credit & Lending option is displayed on screen

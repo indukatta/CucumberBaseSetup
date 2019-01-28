@@ -15,7 +15,7 @@ public class More extends GuiCommands {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @iOSFindBy(accessibility = "More")
+    @iOSFindBy(accessibility = "tab_bar.more_title")
     private MobileElement moreButton;
 
     @iOSFindBy(accessibility = "more.cell_title.details")

@@ -5,6 +5,15 @@
 	"screenQuestion": {
 		"accessibility id": "lending_question_title"
 	},
+	"creditAndLending": {
+		"accessibility id": "Credit & Lending"
+	},
+	"logout": {
+		"accessibility id": "Logout"
+	},
+	"more": {
+		"accessibility id": "More"
+	},
 	"continueButton": {
 		"accessibility id": "Continue"
 	},

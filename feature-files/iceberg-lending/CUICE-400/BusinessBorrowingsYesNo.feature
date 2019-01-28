@@ -1,5 +1,5 @@
 @BusinessBorrowingYesNo @Regression
-Feature: Verify all functionalities related to Borrowing Yes No screen, it covers CUICE-6255
+Feature: BusinessBorrowingYesNo - it covers CUICE-6255
 
   Background: This is to add category to below scenarios
     Given that category "BusinessBorrowingYesNo" is added for below scenarios

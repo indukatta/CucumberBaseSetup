@@ -1,11 +1,11 @@
 {
-	"suite-name": "thinSliceOverdrafts_sp3",
+	"suite-name": "thinSliceOverdrafts_Tnc",
 	"report-type": "aventstack",
-	"appiumServer": {
+	"appium-server": {
 		"ipAddress": "127.0.0.1",
 		"port": "4726"
 	},
-	"iOSApp": {
+	"ios-app": {
 		"platformName": "IOS",
 		"platformVersion": "12.1",
 		"deviceName": "iPhone 8",
@@ -13,17 +13,36 @@
 		"noReset": "false",
 		"app": "/Users/ashdiksh/Downloads/Iceberg 22.app"
 	},
-	"OR-package": "lending.overdrafts",
-	"OR-path": "object-repositories/lending",
-	"apiTesting": "true",
-	"Authorization": "AQIC5wM2LY4SfczgHBlnr7k6fUOpenAMjG4PKBXIQzMSwwiVaw.*AAJTSQACMDIAAlNLABMzMDc0MTYyOTMxMTkwNzU3MjY2AAJTMQACMDE.*",
-	"baseURI": "https://mule.icepick.guru/iceberg/v1/businesses/1003056660/lending",
-	"productCategories": "/product-categories",
+	"android-app": {
+		"platformName": "IOS",
+		"platformVersion": "12.1",
+		"deviceName": "iPhone 8",
+		"fullReset": "false",
+		"noReset": "false",
+		"app": "/Users/ashdiksh/Downloads/Iceberg 22.app"
+	},
+	"android-web": {
+		"platformName": "IOS",
+		"platformVersion": "12.1",
+		"deviceName": "iPhone 8",
+		"fullReset": "false",
+		"noReset": "false",
+		"app": "/Users/ashdiksh/Downloads/Iceberg 22.app"
+	},
+	
+	"or-package": "lending.overdrafts",
+	"or-path": "object-repositories/lending",
+	
+	"api-testing": "true",
+	"authorization": "AQIC5wM2LY4SfczgHBlnr7k6fUOpenAMjG4PKBXIQzMSwwiVaw.*AAJTSQACMDIAAlNLABMzMDc0MTYyOTMxMTkwNzU3MjY2AAJTMQACMDE.*",
+	"base-uri": "https://mule.icepick.guru/iceberg/v1/businesses/1003056660/lending",
+	"product-categories": "/product-categories",
 	"configuration": "/applications/{applicationID}/configuration",
 	"consents": "/consents",
-	"urlParams": {
+	"url-params": {
 		"applicationID": "27"
 	},
+	
 	"sso-login": {
 		"username": "TESTUSER",
 		"password": "TESTPASSWORD"

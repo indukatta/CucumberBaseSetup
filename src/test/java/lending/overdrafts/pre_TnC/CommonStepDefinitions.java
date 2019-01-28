@@ -1,6 +1,6 @@
 package lending.overdrafts.pre_TnC;
 
-import static com.factory.mobile.driver.MobileDriverManager.*;
+import static com.factory.mobile.driver.AppiumDriverManager.*;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -17,9 +17,13 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public static String screenTitle;
 	public static String screenQuestion;
 	public static String continueButton;
+	public static String more;
+	public static String logout;
+	public static String creditAndLending;
 	public static String yesButton;
 	public static String noButton;
 	public static String backButton;
+	public static Login login = null;
 
 	@Before
 	public void startTestReport(Scenario scenario) throws Exception {
@@ -36,33 +40,49 @@ public class CommonStepDefinitions extends CommonLibrary {
 		setStepName("Given");
 		if (!alreadyLoggedIn) {
 			driver = (IOSDriver<MobileElement>) getAppiumDriverInstance();
-			Login login = new Login(driver);
+			login = new Login(driver);
 			login.loginAsUser("TESTUSER", "TESTPASSWORD");
 			alreadyLoggedIn = true;
+			reportPass("Successfully logged in to Iceberg application.");
 		} else {
-			reportPass("User is already logged in to Iceberg application.");
+			reportPass("You are already logged in to Iceberg application.");
 		}
-		deleteAllLendingApplications();
+		if(deleteApplication) {
+			deleteLendingApplications();
+		}
+		deleteApplication = true;
 	}
-	
-	@Then("^user exit the iceberg application and relaunch$")
-	public static void exit_the_iceberg_application_and_reopen() throws Throwable {
-		setStepName("When");
-//		restartApplication();
-		driver = (IOSDriver<MobileElement>) getAppiumDriverInstance();
-		alreadyLoggedIn = false;
-	}
-	
+
 	@When("^user clicks on the Credit & Lending link$")
 	public static void user_clicks_on_the_Credit_and_Lending_link() throws Throwable {
 		setStepName("When");
-		more = new More(driver);
-		more.navigateToCreditAndLending();
+		findByAny(more).click();
+		sleep(500);
+		findByAny(creditAndLending).click();
 		sleep(4000);
+	}
+	
+	@Then("^user exit the iceberg application and relaunch$")
+	public static void user_exit_the_iceberg_application_and_reopen() throws Throwable {
+		setStepName("When");
+		restartApplication();
+		alreadyLoggedIn = false;
+		deleteApplication = false;
+	}
+	
+	@Then("^user clicks on the More and Logout link$")
+	public static void user_clicks_on_the_More_and_Logout_link() throws Throwable {
+		setStepName("When");
+		findByAny(more).click();
+		sleep(500);
+		findByAny(logout).click();
+		alreadyLoggedIn = false;
+		deleteApplication = false;
 	}
 
 	@Given("^that category \"([^\"]*)\" is added for below scenarios$")
 	public void that_category_is_added_for_below_sceanios(String category) {
+		categoryName = category;
 		addTestCategory(category);
 	}
 
@@ -72,7 +92,11 @@ public class CommonStepDefinitions extends CommonLibrary {
 		findByAny(continueButton).click();
 		sleep(1000);
 	}
-
+	@Then("^verify that Credit & Lending option is displayed on screen$")
+	public void verify_that_Credit_And_Lending_option_is_displayed_on_screen() throws Throwable {
+		setStepName("Then");
+		findByAny(creditAndLending).isDisabled();
+	}
 	@Then("^verify that continue button is enabled$")
 	public void verify_that_continue_button_is_enabled() throws Throwable {
 		setStepName("Then");

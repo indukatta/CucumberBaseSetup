@@ -1,11 +1,10 @@
 package lending.overdrafts.pre_TnC;
 
-import static com.factory.mobile.driver.MobileDriverManager.*;
+import static com.factory.mobile.driver.AppiumDriverManager.*;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import lending.overdrafts.saveAndReturn.APITestingLibrary;
 
 public class ProductSelection extends CommonLibrary {
 

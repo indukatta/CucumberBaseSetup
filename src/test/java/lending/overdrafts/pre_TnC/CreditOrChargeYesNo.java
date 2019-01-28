@@ -1,8 +1,8 @@
 package lending.overdrafts.pre_TnC;
 
-import static com.factory.mobile.driver.MobileDriverManager.captureScreenshot;
-import static com.factory.mobile.driver.MobileDriverManager.findByAny;
-import static com.factory.mobile.driver.MobileDriverManager.setStepName;
+import static com.factory.mobile.driver.AppiumDriverManager.captureScreenshot;
+import static com.factory.mobile.driver.AppiumDriverManager.findByAny;
+import static com.factory.mobile.driver.AppiumDriverManager.setStepName;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;

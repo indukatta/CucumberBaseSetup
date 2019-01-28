@@ -16,7 +16,7 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
 
-import static com.factory.mobile.driver.MobileDriverManager.*;
+import static com.factory.mobile.driver.AppiumDriverManager.*;
 
 public class GuiCommands {
 
@@ -44,10 +44,9 @@ public class GuiCommands {
         try{
             synchElement(element);
             scrollDown(element);
-//            element.click();
-//            reportPass("Click Element", "Clicked on element "+element.toString());
-//            driver.findElement(By.xpath("")).click();
-            findByAny(element).click();
+            element.click();
+            reportPass("Clicked on element "+element);
+//            findByAny(element).click();
             
         }
         catch (ElementNotVisibleException e) {
@@ -70,9 +69,9 @@ public class GuiCommands {
     protected void writeText(MobileElement element, String text) {
         try {
             scrollDown(element);
-//            element.sendKeys(text);
-//            reportPass("writeText", "Entered '"+text+"' in element "+element.toString());
-            findByAny(element).sendKeys(text);
+            element.sendKeys(text);
+            reportPass("Entered text "+text+" in "+element);
+//            findByAny(element).sendKeys(text);
         }
         catch (ElementNotVisibleException e) {
             System.out.println("Element not visible");

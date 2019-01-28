@@ -1,10 +1,11 @@
 package Onboarding_tests;
 
-import static com.factory.mobile.driver.MobileDriverManager.endReports;
-import static com.factory.mobile.driver.MobileDriverManager.startReports;
-import static com.factory.mobile.driver.MobileDriverManager.startTest;
-import static com.factory.mobile.driver.MobileDriverManager.endTest;
+import static com.factory.mobile.driver.AppiumDriverManager.startReports;
+import static com.factory.mobile.driver.AppiumDriverManager.endReports;
+import static com.factory.mobile.driver.AppiumDriverManager.startTest;
+import static com.factory.mobile.driver.AppiumDriverManager.endTest;
 
+import org.apache.poi.hssf.record.chart.EndRecord;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;

@@ -4,7 +4,7 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
   Background: This is to add category to below scenarios
     Given that category "SustainabilityCheck" is added for below scenarios
 
-  @Sprint4
+  @Sprint4 @Sprint5
   Scenario: CUICE-6171 >> Prerequisite: Test if user able to view  the Borrowings Yes No screen
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link

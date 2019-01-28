@@ -1,6 +1,6 @@
 package lending.overdrafts.pre_TnC;
 
-import static com.factory.mobile.driver.MobileDriverManager.*;
+import static com.factory.mobile.driver.AppiumDriverManager.*;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;

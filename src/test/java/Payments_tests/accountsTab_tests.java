@@ -1,6 +1,6 @@
 package Payments_tests;
 
-import static com.factory.mobile.driver.MobileDriverManager.*;
+import static com.factory.mobile.driver.AppiumDriverManager.*;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;

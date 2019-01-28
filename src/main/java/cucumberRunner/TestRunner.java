@@ -1,7 +1,7 @@
 package cucumberRunner;
 
-import static com.factory.mobile.driver.MobileDriverManager.closeApplication;
-import static com.factory.mobile.driver.MobileDriverManager.*;
+import static com.factory.mobile.driver.AppiumDriverManager.closeApplication;
+import static com.factory.mobile.driver.AppiumDriverManager.*;
 
 
 import org.apache.commons.lang3.StringUtils;
@@ -15,8 +15,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		features = "feature-files/"
 		, glue = "lending/"
 //		, tags = {"@Regression"}
-		, tags = {"@TotalExistingBorrowing"}
-//		, dryRun=true, tags = {"@AmountOfBorrowingYesNo"}
+		, tags = {"@Sprint6"}
+//		, dryRun=true, tags = {"@MaritalStatus"}
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 	

@@ -9,9 +9,9 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
-import com.factory.mobile.driver.MobileDriverBase.AppType;
+import com.factory.mobile.driver.AppiumDriverBase.AppType;
 
-import static com.factory.mobile.driver.MobileDriverManager.setAppiumDriver;
+import static com.factory.mobile.driver.AppiumDriverManager.setAppiumDriver;
 
 import java.io.File;
 import java.io.IOException;

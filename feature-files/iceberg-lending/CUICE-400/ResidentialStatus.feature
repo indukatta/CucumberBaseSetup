@@ -4,7 +4,7 @@ Feature: Verify all functionalities related to Residential Status screen. It wil
   Background: This is to add category to below scenarios
     Given that category "ResidentialStatus" is added for below scenarios
 
-  @Sprint3
+  @Sprint3 @Sprint5
   Scenario: CUICE-8934 >> ATC-001: Test if user able to view  the Residential Status screen
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
@@ -42,7 +42,7 @@ Feature: Verify all functionalities related to Residential Status screen. It wil
     Then verify that option 1 on Residential Status screen is deselected
     And verify that continue button is enabled
 
-  @Sprint3
+  @Sprint3 @Sprint5
   Scenario: CUICE-8934 >> ATC-005: Test if user is able to navigate to the next screen when continue button is clicked
     Given user is on Residential Status lending question screen
     When user selects option 3 on Residential Status screen

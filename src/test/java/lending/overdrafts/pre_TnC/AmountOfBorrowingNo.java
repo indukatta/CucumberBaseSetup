@@ -3,7 +3,7 @@ package lending.overdrafts.pre_TnC;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-import static com.factory.mobile.driver.MobileDriverManager.*;
+import static com.factory.mobile.driver.AppiumDriverManager.*;
 
 public class AmountOfBorrowingNo {
 	public static String screenTitle;
