@@ -1,11 +1,11 @@
 @BusinessPremisesOptions @Regression
-Feature: Verify all functionalities related to Purpose of Borrowing screen, it will cover following stories
+Feature: Verify all functionalities related to Business Premises screen, it covers CUICE-6174, CUICE-544
 
   Background: This is to add category to below scenarios
     Given that category "BusinessPremisesOptions" is added for below scenarios
 
   @Sprint3 @Sprint5
-  Scenario: CUICE-6174 >> ATC-005: Test if user is able to see Business Premises options screen
+  Scenario: CUICE-6174 >> ATC-006: Test if user is able to see Business Premises options screen
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
     And user clicks on Apply button on Product Selection
@@ -24,7 +24,7 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
     Then verify that Business Premises options screen is displayed
 
   @Sprint3
-  Scenario: CUICE-6174 >> ATC-006: Test if user is able to see Business Premises's default state
+  Scenario: CUICE-6174 >> ATC-007: Test if user is able to see Business Premises's default state
     Given that user is on Business Premises options screen
     Then verify that Premises Business options header "What type of premises does your business own?" is displayed
     And verify that Freehold Business Premises type "Freehold" is displayed
@@ -33,7 +33,7 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
     And verify that continue button is disabled
 
   @Sprint3
-  Scenario: CUICE-6174 >> ATC-007: Test if user select an option then continue button is enabled
+  Scenario: CUICE-6174 >> ATC-008: Test if user select an option then continue button is enabled
     Given that user is on Business Premises options screen
     When user clicks on Freehold Business Premises type
     Then verify that continue button is enabled
@@ -43,14 +43,14 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
     Then verify that Freehold Business Premises type is not selected
 
   @Sprint3 @Sprint5
-  Scenario: CUICE-6174 >> ATC-008: Test if user select an option and clicks on Continue, Questions screen is displayed
+  Scenario: CUICE-6174 >> ATC-009: Test if user select an option and clicks on Continue, Questions screen is displayed
     Given that user is on Business Premises options screen
     When user clicks on Freehold Business Premises type
     And user clicks on continue button on the screen
     Then user clicks on back button on lending question screen
 
   @Sprint5
-  Scenario: CUICE-TBD >> ATC-TBD: Test if save and return is working when user select Business Premisses type
+  Scenario: CUICE-6174,CUICE-544 >> ATC-010: Test if save and return is working when user select Business Premisses type
     Then verify that Freehold Business Premises type is selected
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/BusinessPremisesFreehold" is equals to "data/application/answers" except "dateModified" key

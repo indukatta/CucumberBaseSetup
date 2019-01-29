@@ -1,5 +1,5 @@
 @AmountOfBorrowingYesNo @Regression
-Feature: Verify all functionalities related to Amount of Borrowings Yes No screen, it covers CUICE-6171
+Feature: Verify all functionalities related to Amount of Borrowings Yes No screen, it covers CUICE-6171, CUICE-544
 
   Background: This is to add category to below scenarios
     Given that category "AmountOfBorrowingYesNo" is added for below scenarios
@@ -29,7 +29,7 @@ Feature: Verify all functionalities related to Amount of Borrowings Yes No scree
     Then user clicks on back button on lending question screen
 
   @Sprint5
-  Scenario: CUICE-6171 >> ATC-002: Test if save and return is working when user clicks on No button
+  Scenario: CUICE-6171,CUICE-544 >> ATC-003: Test if save and return is working when user clicks on No button
     Then verify that No button is selected on lending question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/AmountOfBorrowingNo" is equals to "data/application/answers" except "dateModified" key
@@ -41,14 +41,14 @@ Feature: Verify all functionalities related to Amount of Borrowings Yes No scree
     Then verify that expected json "lending-QnA/AmountOfBorrowingNo" is equals to "data/application/answers" except "dateModified" key
 
   @Sprint4 @Sprint5
-  Scenario: CUICE-6171 >> ATC-003: Test if save and return is working when user clicks on Yes button
+  Scenario: CUICE-6171 >> ATC-004: Test if save and return is working when user clicks on Yes button
     Given that user is on Amount of Borrowing YesNo screen
     When user clicks on Yes button on lending question screen
     Then verify that Amount of Borrowing screen is displayed
     Then user clicks on back button on lending question screen
 
   @Sprint5
-  Scenario: CUICE-6171 >> ATC-003: Test if save and return is working when user clicks on Yes button
+  Scenario: CUICE-6171,CUICE-544 >> ATC-005: Test if save and return is working when user clicks on Yes button
     Then verify that Yes button is selected on lending question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/AmountOfBorrowingYes" is equals to "data/application/answers" except "dateModified" key

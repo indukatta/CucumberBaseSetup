@@ -1,5 +1,5 @@
 @MaritalStatus @Regression
-Feature: Verify all functionalities related to Marital Status screen. It will covers following stories CUICE-6175
+Feature: Verify all functionalities related to Marital Status screen. It covers CUICE-6175
 
   Background: This is to add category to below scenarios
     Given that category "MaritalStatus" is added for below scenarios
@@ -56,7 +56,7 @@ Feature: Verify all functionalities related to Marital Status screen. It will co
     And user clicks on back button on lending question screen
   
   @Sprint5
-  Scenario: CUICE-6175 >> ATC-005: Test if save and return is working when user select option on Marital Status screen
+  Scenario: CUICE-6175 >> ATC-006: Test if save and return is working when user select option on Marital Status screen
     Then verify that option 3 on Marital Status is selected
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/MaritalStatusOpt3" is equals to "data/application/answers" except "dateModified" key

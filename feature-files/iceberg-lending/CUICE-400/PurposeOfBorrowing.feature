@@ -1,5 +1,5 @@
 @PurposeOfBorrowing @Regression
-Feature: Verify all functionalities related to Purpose of Borrowing screen, it will cover following stories
+Feature: Verify all functionalities related to Purpose of Borrowing screen, it covers CUICE-6173, CUICE-544
 
   Background: This is to add category to below scenarios
     Given that category "PurposeOfBorrowing" is added for below scenarios
@@ -45,7 +45,7 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
     Then verify that continue button is enabled
 
   @Sprint3 @Sprint5
-  Scenario: CUICE-6173 >> ATC-006: Test if user is taken to the Residential Status lending question when clicked on Continue button.
+  Scenario: CUICE-6173 >> ATC-005: Test if user is taken to the Residential Status lending question when clicked on Continue button.
     Given that user is on Purpose of Borrowing screen
     When user selects option 4 from Purpose of Borrowing question screen
     And user clicks on continue button on the screen
@@ -53,7 +53,7 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it w
     Then user clicks on back button on lending question screen
 
   @Sprint5
-  Scenario: CUICE-TBD >> ATC-TBD: Test if save and return is working when user selects an option on Purpose of Borrowing screen
+  Scenario: CUICE-6173,CUICE-544 >> ATC-006: Test if save and return is working when user selects an option on Purpose of Borrowing screen
     Then verify that option 4 is selected on Purpose of Borrowing question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/PurposeOfBorrowingOpt4" is equals to "data/application/answers" except "dateModified" key

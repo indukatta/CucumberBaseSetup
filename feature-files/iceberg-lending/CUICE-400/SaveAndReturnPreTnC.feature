@@ -1,5 +1,5 @@
 @SaveAndReturnPreTnC @Regression
-Feature: Verify all functionalities related to Amount of Borrowing No screen, it covers CUICE-6171
+Feature: Verify all functionalities related to Amount of Borrowing No screen, it covers CUICE-544
 
   Background: This is to add category to below scenarios
     Given that category "SaveAndReturnPreTnC" is added for below scenarios
@@ -32,7 +32,9 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
     Then verify that SustainabilityCheck screen is displayed
-    Then verify that No button is selected on lending question screen
+    Then verify that Yes button is selected on lending question screen
+    When user clicks on Yes button on lending question screen
+    And user clicks on back button on lending question screen
     And user clicks on back button on lending question screen
     Then verify that No button is selected on lending question screen
     And user clicks on back button on lending question screen
@@ -61,7 +63,10 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
     Then verify that SustainabilityCheck screen is displayed
-    Then verify that No button is selected on lending question screen
+    Then verify that Yes button is selected on lending question screen
+    Then verify that Yes button is selected on lending question screen
+    When user clicks on Yes button on lending question screen
+    And user clicks on back button on lending question screen
     And user clicks on back button on lending question screen
     Then verify that No button is selected on lending question screen
     And user clicks on back button on lending question screen
@@ -81,5 +86,21 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     And user clicks on back button on lending question screen
     And user clicks on back button on lending question screen
     Then verify that No button is selected on lending question screen
-    And user clicks on back button on lending question screen
-    Then verify that Credit & Lending option is displayed on screen
+  @Sprint6
+  Scenario: CUICE-6171 >> Logout and Login to see if values are saved for an application
+    And user clicks on No button on lending question screen
+    And user clicks on continue button on the screen
+    When user selects option 1 from Purpose of Borrowing question screen
+    And user clicks on continue button on the screen
+    When user selects option 3 on Residential Status screen
+    And user clicks on continue button on the screen
+    When user selects option 3 on Marital Status screen
+    And user clicks on continue button on the screen
+    When user enters minimum value "1000" in Gross Income input box
+    And user clicks on continue button on the screen
+    When user clicks on No button on lending question screen
+    When user clicks on No button on lending question screen
+    When user clicks on Yes button on lending question screen
+    When user clicks on No button on lending question screen
+    Then verify that SustainabilityCheck screen is displayed
+    When user clicks on Yes button on lending question screen

@@ -5,7 +5,7 @@ Feature: Verify all functionalities related to Business Premises Yes/No screen, 
     Given that category "BusinessPremisesYesNo" is added for below scenarios
 
   @Sprint3 @Sprint5
-  Scenario: CUICE-6174 >> ATC-001: Test if user is able to view "What is the purpose of borrowing" header and "Borrowing" title
+  Scenario: CUICE-6174 >> Prerequisite: Test if user able to view  the Business Premises YesNo screen
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
     And user clicks on Apply button on Product Selection
@@ -39,7 +39,7 @@ Feature: Verify all functionalities related to Business Premises Yes/No screen, 
     And user clicks on back button on lending question screen
 
   @Sprint5
-  Scenario: CUICE-TBD >> ATC-TBD: Test if save and return is working when user clicks on Yes button
+  Scenario: CUICE-6174,CUICE-544 >> ATC-003: Test if save and return is working when user clicks on Yes button
     Then verify that No button is selected on lending question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/BusinessPremisesNo" is equals to "data/application/answers" except "dateModified" key
@@ -51,14 +51,14 @@ Feature: Verify all functionalities related to Business Premises Yes/No screen, 
     Then verify that expected json "lending-QnA/BusinessPremisesNo" is equals to "data/application/answers" except "dateModified" key
 
   @Sprint3 @Sprint5
-  Scenario: CUICE-6174 >> ATC-003: Test if user clicks on Yes, Business Premises options are displayed
+  Scenario: CUICE-6174 >> ATC-004: Test if user clicks on Yes, Business Premises options are displayed
     Given that user is on Business Premises YesNo screen
     When user clicks on Yes button on lending question screen
     Then verify that Business Premises options screen is displayed
     And user clicks on back button on lending question screen
 
   @Sprint5
-  Scenario: CUICE-TBD >> ATC-TBD: Test if save and return is working when user clicks on Yes button
+  Scenario: CUICE-6174,CUICE-544 >> ATC-005: Test if save and return is working when user clicks on Yes button
     Then verify that Yes button is selected on lending question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/BusinessPremisesYes" is equals to "data/application/answers" except "dateModified" key

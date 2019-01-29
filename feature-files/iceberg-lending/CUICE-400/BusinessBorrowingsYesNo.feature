@@ -1,5 +1,5 @@
 @BusinessBorrowingYesNo @Regression
-Feature: BusinessBorrowingYesNo - it covers CUICE-6255
+Feature: BusinessBorrowingYesNo - it covers CUICE-6255, CUICE-544
 
   Background: This is to add category to below scenarios
     Given that category "BusinessBorrowingYesNo" is added for below scenarios
@@ -25,7 +25,7 @@ Feature: BusinessBorrowingYesNo - it covers CUICE-6255
     Then verify that Business Borrowing YesNo screen is displayed
 
   @Sprint4
-  Scenario: CUICE-6174 >> ATC-001: Test if user is able to see Yes No buttons and its default state
+  Scenario: CUICE-6255 >> ATC-001: Test if user is able to see Yes No buttons and its default state
     Given that user is on Business Borrowing YesNo screen
     Then verify that Business Borrowing YesNo question "Does the business have any borrowings?" is displayed
     And verify that Yes button is displayed on lending question screen
@@ -34,14 +34,14 @@ Feature: BusinessBorrowingYesNo - it covers CUICE-6255
     And verify that No button is not selected on lending question screen
 
   @Sprint4 @Sprint5
-  Scenario: CUICE-6174 >> ATC-002: Test if user clicks on No, Questions screen is displayed
+  Scenario: CUICE-6255 >> ATC-002: Test if user clicks on No, Questions screen is displayed
     Given that user is on Business Borrowing YesNo screen
     When user clicks on No button on lending question screen
     Then verify that SustainabilityCheck screen is displayed
     And user clicks on back button on lending question screen
 
   @Sprint5
-  Scenario: CUICE-TBD >> ATC-TBD: Test if save and return is working when user clicks on No button
+  Scenario: CUICE-6255 >> ATC-003: Test if save and return is working when user clicks on No button
     Then verify that No button is selected on lending question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/BusinessBorrowingNo" is equals to "data/application/answers" except "dateModified" key
@@ -53,14 +53,14 @@ Feature: BusinessBorrowingYesNo - it covers CUICE-6255
     Then verify that expected json "lending-QnA/BusinessBorrowingNo" is equals to "data/application/answers" except "dateModified" key
 
   @Sprint4 @Sprint5
-  Scenario: CUICE-6174 >> ATC-003: Test if user clicks on Yes, Business Premises options are displayed
+  Scenario: CUICE-6255 >> ATC-004: Test if user clicks on Yes, Business Premises options are displayed
     Given that user is on Business Borrowing YesNo screen
     When user clicks on Yes button on lending question screen
     Then verify that Credit or Charge Card YesNo screen is displayed
     And user clicks on back button on lending question screen
 
   @Sprint5
-  Scenario: CUICE-TBD >> ATC-TBD: Test if save and return is working when user clicks on Yes button
+  Scenario: CUICE-6255 >> ATC-005: Test if save and return is working when user clicks on Yes button
     Then verify that Yes button is selected on lending question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/BusinessBorrowingYes" is equals to "data/application/answers" except "dateModified" key

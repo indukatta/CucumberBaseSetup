@@ -1,5 +1,5 @@
 @ProductSelection @Regression @Sprint2
-Feature: Verify all functionalities related to Product Selection screen. It will covers following stories CUICE-540, CUICE-542
+Feature: Verify all functionalities related to Product Selection screen. It will covers following stories CUICE-540
 
   Background: This is to add category to below scenarios
 	Given that category "ProductSelection" is added for below scenarios
@@ -26,7 +26,7 @@ Feature: Verify all functionalities related to Product Selection screen. It will
     Then verify spacing between each components and/or sub screen
     Then verify overall UI of Product Selection screen as per UX
   
-  Scenario: CUICE-542 >> ATC-001: Test if user is taken to "Product Details" screen after find out more is clicked
+  Scenario: CUICE-540 >> ATC-001: Test if user is taken to "Product Details" screen after find out more is clicked
     Given that user is on Product Selection screen
     When user clicks on find out more link
     Then verify that Product Details screen is displayed
