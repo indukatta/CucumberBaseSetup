@@ -69,6 +69,7 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
 
   @Sprint4
   Scenario: CUICE-6255 >> ATC-007: Test if continue button is disabled and set to default value if special characters are entered in Total Existing Borrowings
+  	Given that category "SaveAndReturnPreTnC" is added for below scenarios
     Given that user is on Total Existing Borrowings screen
     When user enters alphabetical and special chars "~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:\"ZXCVBNM<>?" in Total Existing Borrowings input box
     Then verify that value of Total Existing Borrowings is set to "1" min limit
@@ -84,6 +85,7 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
 
   @Sprint5
   Scenario: CUICE-6255,CUICE-544 >> ATC-009: Test if save and return is working when user enters value in Total Existing Borrowings screen
+  	Given add category "SaveAndReturnPreTnC" again for below specific scenarios
     Then verify that Total Existing Borrowings is equals to "101" entered value
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/TotalExistingBorrowing101" is equals to "data/application/answers" except "dateModified" key

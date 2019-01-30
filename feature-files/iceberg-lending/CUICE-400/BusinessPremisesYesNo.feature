@@ -40,6 +40,7 @@ Feature: Verify all functionalities related to Business Premises Yes/No screen, 
 
   @Sprint5
   Scenario: CUICE-6174,CUICE-544 >> ATC-003: Test if save and return is working when user clicks on Yes button
+  	Given add category "SaveAndReturnPreTnC" again for below specific scenarios
     Then verify that No button is selected on lending question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/BusinessPremisesNo" is equals to "data/application/answers" except "dateModified" key
@@ -59,6 +60,7 @@ Feature: Verify all functionalities related to Business Premises Yes/No screen, 
 
   @Sprint5
   Scenario: CUICE-6174,CUICE-544 >> ATC-005: Test if save and return is working when user clicks on Yes button
+  	Given add category "SaveAndReturnPreTnC" again for below specific scenarios
     Then verify that Yes button is selected on lending question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/BusinessPremisesYes" is equals to "data/application/answers" except "dateModified" key

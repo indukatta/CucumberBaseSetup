@@ -1,5 +1,5 @@
 {
-	"suite-name": "thinSliceOverdrafts_Tnc",
+	"suite-name": "thinSliceOverdrafts_sp5",
 	"report-type": "aventstack",
 	"appium-server": {
 		"ipAddress": "127.0.0.1",

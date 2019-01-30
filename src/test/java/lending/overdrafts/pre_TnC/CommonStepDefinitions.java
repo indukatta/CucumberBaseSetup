@@ -85,6 +85,12 @@ public class CommonStepDefinitions extends CommonLibrary {
 		categoryName = category;
 		addTestCategory(category);
 	}
+	
+	@Given("^add category \"([^\"]*)\" again for below specific scenarios$")
+	public void add_category_again_for_below_specific_sceanios(String category) {
+		categoryName = category;
+		addTestCategory(category, true);
+	}
 
 	@When("^user clicks on continue button on the screen$")
 	public void user_clicks_on_continue_button_on_the_screen() throws Throwable {

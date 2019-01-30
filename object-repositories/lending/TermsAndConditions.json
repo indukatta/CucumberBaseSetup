@@ -1,0 +1,14 @@
+{
+	"tncHeader": {
+		"accessibility id": "tandc_summary_label"
+	},
+	"tncContent": {
+		"accessibility id": "tandc_webView"
+	},
+	"tncAccept": {
+		"accessibility id": "tandc_accept_button"
+	},
+	"tncReject": {
+		"accessibility id": "tandc_reject_button"
+	}
+}

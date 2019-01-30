@@ -70,6 +70,7 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it c
 
   @Sprint5
   Scenario: CUICE-6274,CUICE-544 >> ATC-TBD: Test if save and return is working when user enter value in Gross Income screen
+  	Given add category "SaveAndReturnPreTnC" again for below specific scenarios
     And user clicks on back button on lending question screen
     Then verify that entered value "101" is displayed in Gross Income input box
     When user call rest end point "configuration" to get and save the response

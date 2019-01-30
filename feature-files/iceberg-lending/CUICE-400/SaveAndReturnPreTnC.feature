@@ -4,7 +4,7 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
   Background: This is to add category to below scenarios
     Given that category "SaveAndReturnPreTnC" is added for below scenarios
 
-  @Sprint6
+  @Sprint5
   Scenario: CUICE-6171 >> Prerequisite: Test if user able to view  the Borrowings Yes No screen
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
@@ -26,7 +26,7 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     Then verify that SustainabilityCheck screen is displayed
     When user clicks on Yes button on lending question screen
 
-  @Sprint6
+  @Sprint5
   Scenario: CUICE-6171 >> Logout and Login to see if values are saved for an application
     When user clicks on the More and Logout link
     Given that user is on the Credit Management screen
@@ -56,8 +56,8 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     Then verify that No button is selected on lending question screen
     And user clicks on back button on lending question screen
     Then verify that Credit & Lending option is displayed on screen
-    
-  @Sprint6
+
+  @Sprint5
   Scenario: CUICE-6171 >> Logout and Login to see if values are saved for an application
     When user exit the iceberg application and relaunch
     Given that user is on the Credit Management screen
@@ -86,7 +86,8 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     And user clicks on back button on lending question screen
     And user clicks on back button on lending question screen
     Then verify that No button is selected on lending question screen
-  @Sprint6
+
+  @Sprint5
   Scenario: CUICE-6171 >> Logout and Login to see if values are saved for an application
     And user clicks on No button on lending question screen
     And user clicks on continue button on the screen
