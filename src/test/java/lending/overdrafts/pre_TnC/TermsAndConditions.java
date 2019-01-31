@@ -38,12 +38,14 @@ public class TermsAndConditions {
 
 	@Then("^verify that Accept button is not visible$")
 	public void verify_that_Accept_button_is_not_visible() {
-		
+		setStepName("@Then");
+		findByAny(tncAccept).verifyAttributesEqualsTo("visible", "false");
 	}
 
 	@Then("^verify that Reject button is not visible$")
 	public void verify_that_Reject_button_is_not_visible() {
-		
+		setStepName("@Then");
+		findByAny(tncReject).verifyAttributesEqualsTo("visible", "false");
 	}
 
 	@When("^user scroll down to bottom of screen$")
