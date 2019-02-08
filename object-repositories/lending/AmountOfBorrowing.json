@@ -1,6 +1,8 @@
 {
 	"amtOfBorrowingSlider" : {"accessibility id" : "lending_question_slider_accessibility_id"}
 	,"amtOfBorrowing" : {"xpath" : "(//XCUIElementTypeStaticText[@name=\"lending_question_title\"]/following::XCUIElementTypeStaticText)[2]"}
-	,"monthyFee" : {"" : ""}
-	,"screenEAR" : {"" : ""}
+	,"monthyFee" : {"accessibility id" : "number_question_fees_label"}
+	,"screenEAR" : {"accessibility id" : "number_question_fees_label"}
+	,"disclaimer" : {"accessibility id" : "number_question_footer_label"}
+	
 }

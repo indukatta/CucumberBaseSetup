@@ -31,7 +31,7 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     Given that user is on Total Existing Borrowings screen
     Then verify that Total Existing Borrowings question "What is your business’ total existing borrowings?" is displayed
     And verify that Total Existing Borrowings input box is displayed
-    And verify that default value of Total Existing Borrowings is "1"
+    And verify that default value of Total Existing Borrowings is ""
     And verify that currency symbol "GBP" is displayed
     And verify that continue button is disabled
 

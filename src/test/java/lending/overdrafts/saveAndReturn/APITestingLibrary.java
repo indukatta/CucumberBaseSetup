@@ -2,10 +2,7 @@ package lending.overdrafts.saveAndReturn;
 
 import static com.factory.mobile.driver.AppiumDriverManager.setStepName;
 import static com.factory.services.wrapper.RestAssuredManager.*;
-import static com.factory.services.wrapper.RestAssuredManager.httpGet;
-import static com.factory.services.wrapper.RestAssuredManager.verifyResponseFileEqualsTo;
 
-import static com.factory.services.wrapper.RestAssuredManager.getLastValueFromJSON;
 import cucumber.api.java.en.Then;
 
 public class APITestingLibrary {
@@ -21,12 +18,22 @@ public class APITestingLibrary {
 	}
 	
 	@Then("^user call rest end point \"([^\"]*)\" to get and save the response$")
-	public void user_call_rest_end_point_to_toget_and_store_the_response(String endPoint) {
+	public void user_call_rest_end_point_to_get_and_store_the_response(String endPoint) {
 		setStepName("Then");
 		httpGet("product-categories", false);
 		applicationID = getLastValueFromJSON("data/applications/id");
 		System.out.println("applicationID: "+applicationID);
 		httpGet(endPoint, "applicationID", applicationID.toString(), true);
+	}
+	
+
+	@Then("^user call rest end point \"([^\"]*)\" to set Amount of Borrowing \"([^\"]*)\" for lending question$")
+	public void user_call_rest_end_point_to_set_Amount_of_Borrowing_for_lending_question(String endPoint, String borrowingAmt) {
+		setStepName("Then");
+		httpGet("product-categories", false);
+		applicationID = getLastValueFromJSON("data/applications/id");
+		System.out.println("applicationID: "+applicationID);
+		httpPatch(endPoint, "applicationID", applicationID.toString(), "{\"answers\":["+borrowingAmt+"],\"questionId\":12}", false);
 	}
 	
 	@Then("^verify that expected json \"([^\"]*)\" is equals to \"([^\"]*)\" except \"([^\"]*)\" key$")

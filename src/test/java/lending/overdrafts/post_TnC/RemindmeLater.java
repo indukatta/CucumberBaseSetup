@@ -2,16 +2,20 @@ package lending.overdrafts.post_TnC;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import static com.factory.mobile.driver.AppiumDriverManager.*;
 
 public class RemindmeLater {
-	@Then("^user clicks on Not Now button on Final Offer$")
-	public void verify_that_user_clicks_on_Not_Now_button_on_Final_Offer() {
-
-	}
+	public static String remindMeScreen;
+	public static String finalOfferLogo;
+	public static String finalOfferSummary;
+	public static String finalOfferRateAndFee;
+	public static String finalOfferContinue;
+	public static String finalOfferNotNow;
 
 	@Then("^verify that Remind me Later screen is visible$")
 	public void verify_that_Remind_me_Later_screen_is_visible() {
-
+		setStepName("Then");
+//		findByAny(element)
 	}
 
 	@Given("^that user is on the Remind me Later screen$")

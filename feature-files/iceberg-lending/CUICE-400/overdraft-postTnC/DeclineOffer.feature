@@ -32,7 +32,6 @@ Feature: Verify all functionalities related to Decline Offer screen, it covers C
     Then user clicks on No decline the offer button on screen
     Then verify that Decline Offer screen is visible
     
-    
   @Sprint6
   Scenario: CUICE-553 >> Test if content on Decline Offer screen are correct
     Given that user is on the Decline Offer screen

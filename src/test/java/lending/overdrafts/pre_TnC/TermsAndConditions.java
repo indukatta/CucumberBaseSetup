@@ -3,6 +3,7 @@ package lending.overdrafts.pre_TnC;
 import static com.factory.mobile.driver.AppiumDriverManager.captureScreenshot;
 import static com.factory.mobile.driver.AppiumDriverManager.findByAny;
 import static com.factory.mobile.driver.AppiumDriverManager.setStepName;
+import static com.factory.mobile.driver.AppiumDriverManager.*;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -15,81 +16,104 @@ public class TermsAndConditions {
 	public static String tncReject;
 	public static String processingInfo;
 	public static String inProgress;
-	
+	public static String clickHere;
+
 	@Then("^verify that Terms and Conditions screen is displayed$")
 	public void verify_that_Total_Existing_Borrowings_screen_is_displayed() {
 		setStepName("Then");
 		captureScreenshot("TermsAndConditions");
 		findByAny(tncHeader).isDisplayed();
-		findByAny(tncAccept).isDisplayed();
+	}
+
+	@When("^user clicks on Accept button on Terms and Conditions screen$")
+	public void user_clicks_on_Accept_button_on_Terms_and_Conditions_screen() {
+		setStepName("When");
+		findByAny(tncAccept).click();
+	}
+
+	@Then("^verify that Processing your Application screen is displayed$")
+	public void verify_that_Processing_your_Application_screen_is_displayed() {
+		setStepName("Then");
+		findByAny(processingInfo).isDisplayed();
 	}
 	
-	@Given("^verify that user is on Proccessing you Application screen$")
-	public void that_user_is_on_Business_Premises_options_screen() {
+	@Then("^wait for Processing your Application screen to disappear$")
+	public void wait_for_Processing_your_Application_screen_to_disappear() {
+		setStepName("Then");
+		findByAny(processingInfo).waitNotToDisplay();
+	}
+
+	@Given("^verify that user is on Proccessing your Application screen$")
+	public void verify_that_user_is_on_Proccessing_your_Application_screen() {
 		setStepName("Given");
 		findByAny(inProgress).isDisplayed();
 		findByAny(processingInfo).isDisplayed();
 	}
-	
+
 	@Given("^that user is on the Terms and Conditions screen$")
 	public void that_user_is_on_the_Terms_and_Conditions_screen() {
-		
+		setStepName("Given");
+		findByAny(tncHeader).isDisplayed();
 	}
 
 	@Then("^verify that Accept button is not visible$")
 	public void verify_that_Accept_button_is_not_visible() {
-		setStepName("@Then");
+		setStepName("Then");
 		findByAny(tncAccept).verifyAttributesEqualsTo("visible", "false");
 	}
 
 	@Then("^verify that Reject button is not visible$")
 	public void verify_that_Reject_button_is_not_visible() {
-		setStepName("@Then");
+		setStepName("Then");
 		findByAny(tncReject).verifyAttributesEqualsTo("visible", "false");
 	}
 
 	@When("^user scroll down to bottom of screen$")
 	public void user_scroll_down_to_bottom_of_screen() {
-		
+		setStepName("Then");
+		scrollToEnd();
 	}
 
-	@Then("^verify that help link is visible on screen$")
-	public void verify_that_help_link_is_visible_on_screen() {
-		
+	@Then("^verify that click here link is visible on screen$")
+	public void verify_that_click_here_link_is_visible_on_screen() {
+		setStepName("Then");
+		findByAny(clickHere).isDisplayed();
 	}
 
-	@Then("^verify that url \"([^\"]*)\" is linked to the help text$")
+	@Then("^verify that url \"([^\"]*)\" is linked to click here$")
 	public void verify_that_url_is_linked_to_the_help_text(String arg1) {
-		
+		setStepName("Then");
+		findByAny(clickHere).verifyAttributesEqualsTo("href", arg1);
 	}
 
-	@Then("^verify that Accept button is enabled on screen$")
-	public void verify_that_Accept_button_is_enabled_on_screen() {
-		
+	@Then("^verify that Accept button is pre selected and enabled$")
+	public void verify_that_Accept_button_is_pre_selected_and_enabled() {
+		findByAny(tncAccept).verifyAttributesAllEqualsTo("value", "1");
+		findByAny(tncAccept).isEnabled();
 	}
 
-	@Then("^verify that Reject button is enabled on screen$")
-	public void verify_that_Reject_button_is_enabled_on_screen() {
-		
+	@Then("^verify that Reject button is not pre selected and enabled$")
+	public void verify_that_Reject_button_is_not_pre_selected_and_enabled() {
+		setStepName("Then");
+		findByAny(tncReject).verifyAttributesAllEqualsTo("value", "0");
+		findByAny(tncReject).isEnabled();
 	}
 
 	@When("^user clicks on Reject button on Terms and Conditions screen$")
 	public void user_clicks_on_Reject_button_on_Terms_and_Conditions_screen() {
-		
+		setStepName("Then");
+		findByAny(tncReject).click();
 	}
 
-	@Then("^verify that confirmation Alert is pops up on screen$")
-	public void verify_that_confirmation_Alert_is_pops_up_on_screen() {
-		
+	@When("^user clicks on No on Alert pop up to dismiss$")
+	public void user_clicks_on_No_on_Alert_pop_up_to_dismiss() {
+		setStepName("Then");
+		alertDismiss();
 	}
 
-	@When("^user clicks on No to dissmiss the alret$")
-	public void user_clicks_on_No_to_dissmiss_the_alret() {
-		
-	}
-
-	@When("^user clicks on Yes to accept the alret$")
-	public void user_clicks_on_Yes_to_accept_the_alret() {
-		
+	@When("^user clicks on Yes on Alert pop up to dismiss$")
+	public void user_clicks_on_Yes_on_Alert_pop_up_to_dismiss() {
+		setStepName("Then");
+		alertAccept();
 	}
 }

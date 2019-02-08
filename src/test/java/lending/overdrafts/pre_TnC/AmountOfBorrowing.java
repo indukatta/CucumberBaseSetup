@@ -5,12 +5,15 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 import static com.factory.mobile.driver.AppiumDriverManager.*;
+import static com.factory.mobile.driver.AppiumDriverManager.setStepName;
+import static com.factory.services.wrapper.RestAssuredManager.*;
 
 public class AmountOfBorrowing extends CommonLibrary {
 	public static String amtOfBorrowingSlider;
 	public static String amtOfBorrowing;
 	public static String monthyFee;
 	public static String screenEAR;
+	public static String disclaimer;
 
 	@Then("^verify that Amount of Borrowing screen is displayed$")
 	public void verify_that_Amount_of_Borrowing_Yes_screen_is_displayed() {
@@ -38,9 +41,10 @@ public class AmountOfBorrowing extends CommonLibrary {
 		findByAny(CommonStepDefinitions.screenQuestion).verifyEqualsTo(arg1);
 	}
 
-	@Then("^verify that hint text below to question is displayed on screen$")
-	public void verify_that_hint_text_below_to_question_is_displayed_on_screen() {
+	@Then("^verify that disclaimer text \"([^\"]*)\" is displayed on screen$")
+	public void verify_that_disclaimer_text_is_displayed_on_screen(String expected) {
 		setStepName("Then");
+		findByAny(disclaimer).verifyEqualsTo(expected);
 	}
 
 	@Then("^verify that Amount of borrowing slider is displayed on the screen$")
@@ -62,18 +66,9 @@ public class AmountOfBorrowing extends CommonLibrary {
 	}
 
 	@When("^user selects an amount (\\d+) on Amount of Borrowing Yes screen$")
-	public void user_selects_an_amount_on_Amount_of_Borrowig_Yes_screen(int arg1) {
+	public void user_selects_an_amount_on_Amount_of_Borrowig_Yes_screen(float arg1) {
 		setStepName("When");
-//		findByAny(amtOfBorrowingSlider).clickOnSlider(1);
-//		findByAny(amtOfBorrowing).verifyEqualsTo("100");
-//		findByAny(amtOfBorrowingSlider).clickOnSlider(1);
-//		findByAny(amtOfBorrowing).verifyEqualsTo("100");
-//		findByAny(amtOfBorrowingSlider).clickOnSlider(1);
-//		findByAny(amtOfBorrowing).verifyEqualsTo("100");
-//		findByAny(amtOfBorrowing).verifyEqualsTo("100");
-		findByAny(amtOfBorrowing).setValue("$1700");
-		
-		
+		findByAny(amtOfBorrowingSlider).setValue(arg1/10000);
 	}
 
 	@Then("^verify that monthly fee (\\d+)\\.(\\d+) is calculated and correct on the screen$")
@@ -86,7 +81,6 @@ public class AmountOfBorrowing extends CommonLibrary {
 	@When("^user selects option on Amount of Borrowig Yes screen$")
 	public void user_selects_option_on_Amount_of_Borrowig_Yes_screen() {
 		setStepName("When");
-		findByAny(amtOfBorrowingSlider).setValue("500");
+		findByAny(amtOfBorrowingSlider).setValue(".8");
 	}
-
 }

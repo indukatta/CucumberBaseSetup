@@ -42,6 +42,8 @@ public class CommonStepDefinitions extends CommonLibrary {
 			driver = (IOSDriver<MobileElement>) getAppiumDriverInstance();
 			login = new Login(driver);
 			login.loginAsUser("TESTUSER", "TESTPASSWORD");
+//			login.loginAsUser("Testuser", "testpassword");
+			
 			alreadyLoggedIn = true;
 			reportPass("Successfully logged in to Iceberg application.");
 		} else {
