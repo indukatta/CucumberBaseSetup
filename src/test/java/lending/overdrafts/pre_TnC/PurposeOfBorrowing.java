@@ -65,6 +65,6 @@ public class PurposeOfBorrowing extends CommonLibrary {
 	public void verify_that_option_is_selected_on_Purpose_of_Borrowing_question_screen(int index) {
 		setStepName("Then");
 		captureScreenshot();
-		findByAny(questionTypesChkBox).verifyAttributesEqualsTo(index, "value", "1");
+		findByAny(questionTypesChkBox).verifyAttributesEqualsTo("value", "1", index);
 	}
 }

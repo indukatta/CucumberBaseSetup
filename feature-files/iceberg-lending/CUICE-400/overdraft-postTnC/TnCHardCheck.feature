@@ -4,7 +4,6 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
   Background: This is to add category to below scenarios
     Given that category "TnCHardCheck" is added for below scenarios
 
-  @Sprint5
   Scenario: CUICE-552 >> Prerequisite: Test if user able to view  the Terms and Conditions screen
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
@@ -27,7 +26,6 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     When user clicks on Yes button on lending question screen
     Then verify that Terms and Conditions screen is displayed
 
-  @Sprint5
   Scenario: CUICE-553 >> Test if Processing your Applications screen is visible
     Given that user is on the Terms and Conditions screen
     When user clicks on Accept button on Terms and Conditions screen

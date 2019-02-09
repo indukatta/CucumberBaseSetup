@@ -71,7 +71,8 @@ public class TermsAndConditions {
 	@When("^user scroll down to bottom of screen$")
 	public void user_scroll_down_to_bottom_of_screen() {
 		setStepName("Then");
-		scrollToEnd();
+		captureScreenshot();
+		findByAny(tncAccept).scrollDownToView();
 	}
 
 	@Then("^verify that click here link is visible on screen$")
@@ -102,18 +103,18 @@ public class TermsAndConditions {
 	@When("^user clicks on Reject button on Terms and Conditions screen$")
 	public void user_clicks_on_Reject_button_on_Terms_and_Conditions_screen() {
 		setStepName("Then");
-		findByAny(tncReject).click();
+		findByAny(tncReject).scrollDownToView().click();
 	}
 
 	@When("^user clicks on No on Alert pop up to dismiss$")
 	public void user_clicks_on_No_on_Alert_pop_up_to_dismiss() {
 		setStepName("Then");
-		alertDismiss();
+		application().alertAccept();
 	}
 
 	@When("^user clicks on Yes on Alert pop up to dismiss$")
 	public void user_clicks_on_Yes_on_Alert_pop_up_to_dismiss() {
 		setStepName("Then");
-		alertAccept();
+		application().alertAccept();
 	}
 }

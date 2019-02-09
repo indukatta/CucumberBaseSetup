@@ -10,5 +10,14 @@
 	},
 	"tncReject": {
 		"accessibility id": "tandc_reject_button"
+	},
+	"processingInfo": {
+		"accessibility id": "tandc_reject_button"
+	},
+	"inProgress": {
+		"accessibility id": "tandc_reject_button"
+	},
+	"clickHere": {
+		"xpath": "//XCUIElementTypeStaticText[@name=\"here\"]"
 	}
 }

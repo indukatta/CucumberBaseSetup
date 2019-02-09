@@ -1,26 +1,17 @@
 package testUtils;
 
-import io.appium.java_client.ios.IOSDriver;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+import static com.factory.mobile.driver.AppiumDriverManager.setAppiumMobileDriver;
 
-import com.factory.mobile.driver.AppiumDriverBase.AppType;
-
-import static com.factory.mobile.driver.AppiumDriverManager.setAppiumDriver;
-
-import java.io.File;
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+import io.appium.java_client.ios.IOSDriver;
 
 public class Base_test {
 
@@ -42,7 +33,7 @@ public class Base_test {
 
         driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        setAppiumDriver(AppType.IOSAPP, driver);
+        setAppiumMobileDriver(driver);
     }
 
     @AfterMethod()

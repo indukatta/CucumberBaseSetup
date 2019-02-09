@@ -2,6 +2,8 @@ package lending.overdrafts.pre_TnC;
 
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 
+import com.factory.mobile.driver.AppiumDriverBase.AppType;
+
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -39,7 +41,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public static void that_user_is_on_the_Credit_Management_screen() throws Throwable {
 		setStepName("Given");
 		if (!alreadyLoggedIn) {
-			driver = (IOSDriver<MobileElement>) getAppiumDriverInstance();
+			driver = (IOSDriver<MobileElement>) getAppiumDriverMobileElement();
 			login = new Login(driver);
 			login.loginAsUser("TESTUSER", "TESTPASSWORD");
 //			login.loginAsUser("Testuser", "testpassword");
@@ -50,7 +52,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 			reportPass("You are already logged in to Iceberg application.");
 		}
 		if(deleteApplication) {
-			deleteLendingApplications();
+//			deleteLendingApplications();
 		}
 		deleteApplication = true;
 	}
@@ -67,7 +69,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 	@Then("^user exit the iceberg application and relaunch$")
 	public static void user_exit_the_iceberg_application_and_reopen() throws Throwable {
 		setStepName("When");
-		restartApplication();
+		restartMobileApplication(AppType.IOSAPP);
 		alreadyLoggedIn = false;
 		deleteApplication = false;
 	}
@@ -91,7 +93,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 	@Given("^add category \"([^\"]*)\" again for below specific scenarios$")
 	public void add_category_again_for_below_specific_sceanios(String category) {
 		categoryName = category;
-		addTestCategory(category, true);
+		addTestCategory(category);
 	}
 
 	@When("^user clicks on continue button on the screen$")
@@ -103,7 +105,8 @@ public class CommonStepDefinitions extends CommonLibrary {
 	@Then("^verify that Credit & Lending option is displayed on screen$")
 	public void verify_that_Credit_And_Lending_option_is_displayed_on_screen() throws Throwable {
 		setStepName("Then");
-		findByAny(creditAndLending).isDisabled();
+		captureScreenshot();
+		findByAny(creditAndLending).isDisplayed();
 	}
 	@Then("^verify that continue button is enabled$")
 	public void verify_that_continue_button_is_enabled() throws Throwable {

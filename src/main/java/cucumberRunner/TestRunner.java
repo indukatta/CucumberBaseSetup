@@ -8,21 +8,23 @@ import org.apache.commons.lang3.StringUtils;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import com.factory.mobile.driver.AppiumDriverBase.AppType;
+
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 		features = "feature-files/"
 		, glue = "lending/"
-		, tags = {"@CreditOrChargeYesNo"}
-//		, tags = {"@Sprint5"}
+//		, tags = {"@CreditOrChargeYesNo"}
+		, tags = {"@TermsAndConditions"}
 //		, dryRun=true, tags = {"@AmountOfBorrowing"}
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 	
 	@BeforeSuite
 	public void setup() throws Exception {
-		launchIOSApplication("0.0.0.0:4723");
+		launchMobileApplication(AppType.IOSAPP, "0.0.0.0:4723");
 	}
 	@AfterSuite
 	public void teardown() {

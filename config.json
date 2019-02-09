@@ -1,17 +1,22 @@
 {
-	"suite-name": "thinSliceOverdrafts_sp5",
+	"suite-name": "thinSliceOverdrafts_sp6",
 	"report-type": "aventstack",
+	"or-package": "lending.overdrafts",
+	"or-path": "object-repositories/lending",
+	"api-testing": "true",
+	
 	"appium-server": {
 		"ipAddress": "127.0.0.1",
 		"port": "4726"
 	},
+	
 	"ios-app": {
 		"platformName": "IOS",
 		"platformVersion": "12.1",
 		"deviceName": "iPhone 8",
 		"fullReset": "false",
 		"noReset": "false",
-		"app": "/Users/ashdiksh/Downloads/Iceberg 28.app"
+		"app": "/Users/ashdiksh/Downloads/Iceberg 25.app"
 	},
 	"android-app": {
 		"platformName": "IOS",
@@ -25,22 +30,14 @@
 		"platformName": "IOS",
 		"platformVersion": "12.1",
 		"deviceName": "iPhone 8",
-		"fullReset": "false",
-		"noReset": "false",
-		"app": "/Users/ashdiksh/Downloads/Iceberg 22.app"
+		"browser": "false"
 	},
-	"or-package": "lending.overdrafts",
-	"or-path": "object-repositories/lending",
-	"api-testing": "true",
 	"authorization": "AQIC5wM2LY4SfczgHBlnr7k6fUOpenAMjG4PKBXIQzMSwwiVaw.*AAJTSQACMDIAAlNLABMzMDc0MTYyOTMxMTkwNzU3MjY2AAJTMQACMDE.*",
 	"base-uri": "https://mule.icepick.guru/iceberg/v1/businesses/1003056660/lending",
 	"product-categories": "/product-categories",
 	"configuration": "/applications/{applicationID}/configuration",
 	"answers": "/applications/{applicationID}/answers",
 	"consents": "/consents",
-	"url-params": {
-		"applicationID": "27"
-	},
 	"sso-login": {
 		"username": "TESTUSER",
 		"password": "TESTPASSWORD"

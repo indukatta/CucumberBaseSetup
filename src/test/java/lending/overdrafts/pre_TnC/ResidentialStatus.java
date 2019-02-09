@@ -58,14 +58,14 @@ public class ResidentialStatus {
 	public void verify_that_option_on_Residential_Status_screen_is_deselected(int index) {
 		setStepName("Then");
 		captureScreenshot();
-		findByAny(questionAnswerRadioBtn).verifyAttributesEqualsTo(index,  "value", "0");
+		findByAny(questionAnswerRadioBtn).verifyAttributesEqualsTo("value", "0", index);
 	}
 	
 	@Then("^verify that option (\\d+) on Residential Status screen is selected$")
 	public void verify_that_option_on_Residential_Status_screen_is_selected(int index) {
 		setStepName("Then");
 		captureScreenshot();
-		findByAny(questionAnswerRadioBtn).verifyAttributesEqualsTo(index,  "value", "1");
+		findByAny(questionAnswerRadioBtn).verifyAttributesEqualsTo("value", "1", index);
 	}
 
 }
