@@ -1,0 +1,24 @@
+{
+
+	"finalOfferLogo": {
+		"accessibility id": "offer_icon_image_view"
+	},
+	"finalOfferHeading": {
+		"accessibility id": "offer_heading_label"
+	},
+	"finalOfferAmt": {
+		"accessibility id": "offer_amount_label"
+	},
+	"finalOfferFee": {
+		"accessibility id": "offer_fee_1_label"
+	},
+	"finalOfferAIR": {
+		"accessibility id": "offer_fee_2_label"
+	},
+	"finalOfferContinue": {
+		"accessibility id": "lending_primary_button"
+	},
+	"finalOfferNotNow": {
+		"accessibility id": "lending_secondary_button"
+	}
+}

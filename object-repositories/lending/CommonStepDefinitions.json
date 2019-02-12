@@ -6,13 +6,13 @@
 		"accessibility id": "lending_question_title"
 	},
 	"creditAndLending": {
-		"accessibility id": "Credit & Lending"
+		"accessibility id": "Lending"
 	},
 	"logout": {
 		"accessibility id": "Logout"
 	},
 	"more": {
-		"accessibility id": "More"
+		"xpath": "//XCUIElementTypeButton[@name=\"More\"]"
 	},
 	"continueButton": {
 		"accessibility id": "Continue"

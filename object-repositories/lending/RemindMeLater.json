@@ -1,0 +1,17 @@
+{
+	"remindMeTitle": {
+		"accessibility id": "remind_me_later_title_label"
+	},
+	"remindMeHeading": {
+		"accessibility id": "remind_me_later_heading_label"
+	},
+	"remindMeSubHeading": {
+		"accessibility id": "remind_me_later_subheading_label"
+	},
+	"yesRemindMeLater": {
+		"accessibility id": "lending_primary_button"
+	},
+	"noDeclineTheOffer": {
+		"accessibility id": "lending_secondary_button"
+	}
+}

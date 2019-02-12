@@ -10,6 +10,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class TermsAndConditions {
+	public static String screenTitle;
 	public static String tncHeader;
 	public static String tncContent;
 	public static String tncAccept;
@@ -19,10 +20,10 @@ public class TermsAndConditions {
 	public static String clickHere;
 
 	@Then("^verify that Terms and Conditions screen is displayed$")
-	public void verify_that_Total_Existing_Borrowings_screen_is_displayed() {
+	public void verify_that_Terms_and_Conditions_screen_is_displayed() {
 		setStepName("Then");
 		captureScreenshot("TermsAndConditions");
-		findByAny(tncHeader).isDisplayed();
+		findByAny(screenTitle).isDisplayed();
 	}
 
 	@When("^user clicks on Accept button on Terms and Conditions screen$")
@@ -53,7 +54,7 @@ public class TermsAndConditions {
 	@Given("^that user is on the Terms and Conditions screen$")
 	public void that_user_is_on_the_Terms_and_Conditions_screen() {
 		setStepName("Given");
-		findByAny(tncHeader).isDisplayed();
+		findByAny(screenTitle).isDisplayed();
 	}
 
 	@Then("^verify that Accept button is not visible$")
@@ -71,13 +72,13 @@ public class TermsAndConditions {
 	@When("^user scroll down to bottom of screen$")
 	public void user_scroll_down_to_bottom_of_screen() {
 		setStepName("Then");
-		captureScreenshot();
-		findByAny(tncAccept).scrollDownToView();
+		findByAny(tncAccept).scrollDownUntillVisible();
 	}
 
 	@Then("^verify that click here link is visible on screen$")
 	public void verify_that_click_here_link_is_visible_on_screen() {
 		setStepName("Then");
+		captureScreenshot();
 		findByAny(clickHere).isDisplayed();
 	}
 
@@ -103,7 +104,7 @@ public class TermsAndConditions {
 	@When("^user clicks on Reject button on Terms and Conditions screen$")
 	public void user_clicks_on_Reject_button_on_Terms_and_Conditions_screen() {
 		setStepName("Then");
-		findByAny(tncReject).scrollDownToView().click();
+		findByAny(tncReject).scrollDownUntillVisible().click();
 	}
 
 	@When("^user clicks on No on Alert pop up to dismiss$")
@@ -115,6 +116,6 @@ public class TermsAndConditions {
 	@When("^user clicks on Yes on Alert pop up to dismiss$")
 	public void user_clicks_on_Yes_on_Alert_pop_up_to_dismiss() {
 		setStepName("Then");
-		application().alertAccept();
+		application().alertDismiss();
 	}
 }

@@ -5,56 +5,58 @@ import cucumber.api.java.en.Then;
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 
 public class RemindmeLater {
-	public static String remindMeScreen;
-	public static String finalOfferLogo;
-	public static String finalOfferSummary;
-	public static String finalOfferRateAndFee;
-	public static String finalOfferContinue;
-	public static String finalOfferNotNow;
+	public static String remindMeTitle;
+	public static String remindMeHeading;
+	public static String remindMeSubHeading;
+	public static String yesRemindMeLater;
+	public static String noDeclineTheOffer;
 
 	@Then("^verify that Remind me Later screen is visible$")
 	public void verify_that_Remind_me_Later_screen_is_visible() {
 		setStepName("Then");
-//		findByAny(element)
+		captureScreenshot();
+		findByAny(remindMeTitle).isDisplayed();
 	}
 
 	@Given("^that user is on the Remind me Later screen$")
 	public void that_user_is_on_the_Remind_me_Later_screen() {
-
+		setStepName("Then");
+		findByAny(remindMeTitle).isDisplayed();
 	}
 
-	@Then("^verify that remind me later summay \"([^\"]*)\" is displayed$")
-	public void verify_that_remind_me_later_summay_is_displayed(String arg1) {
-
+	@Then("^verify that remind me later heading \"([^\"]*)\" is displayed$")
+	public void verify_that_remind_me_later_heading_is_displayed(String expected) {
+		setStepName("Then");
+		findByAny(remindMeHeading).verifyEqualsTo(expected);
 	}
 
 	@Then("^verify that remind me later description \"([^\"]*)\" is displayed$")
-	public void verify_that_remind_me_later_description_is_displayed(String arg1) {
-
+	public void verify_that_remind_me_later_sub_heading_is_displayed(String expected) {
+		setStepName("Then");
+		findByAny(remindMeHeading).verifyEqualsTo(expected);
 	}
 
 	@Then("^verify that Yes remind me later button is displayed$")
 	public void verify_that_Yes_remind_me_later_button_is_displayed() {
-
+		setStepName("Then");
+		findByAny(yesRemindMeLater).isDisplayed();
 	}
 
-	@Then("^verify that NO decline the offer button is displayed$")
-	public void verify_that_NO_decline_the_offer_button_is_displayed() {
-
+	@Then("^verify that No decline the offer button is displayed$")
+	public void verify_that_No_decline_the_offer_button_is_displayed() {
+		setStepName("Then");
+		findByAny(noDeclineTheOffer).isDisplayed();
 	}
 
 	@Then("^user clicks on No decline the offer button on screen$")
 	public void click_on_No_decline_the_offer_button_on_screen() {
-
-	}
-
-	@Then("^verify that Decline Offer screen is displayed$")
-	public void verify_that_Decline_Offer_screen_is_displayed() {
-
+		setStepName("Then");
+		findByAny(noDeclineTheOffer).click();
 	}
 
 	@Then("^user clicks on Yes remind me later button on screen$")
 	public void click_on_Yes_remind_me_later_button_on_screen() {
-
+		setStepName("Then");
+		findByAny(yesRemindMeLater).isDisplayed();
 	}
 }

@@ -1,0 +1,14 @@
+{
+	"suitableOfferLogo": {
+		"accessibility id": "offer_icon_image_view"
+	},
+	"suitableOfferHeading": {
+		"accessibility id": "offer_heading_label"
+	},
+	"suitableOfferMessage": {
+		"accessibility id": "offer_message_label"
+	},
+	"suitableOfferContinue": {
+		"accessibility id": "lending_primary_button"
+	}
+}

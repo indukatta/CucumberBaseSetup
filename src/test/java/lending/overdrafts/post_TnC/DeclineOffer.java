@@ -10,7 +10,7 @@ public class DeclineOffer {
 	@Then("^verify that Decline Offer screen is visible$")
 	public void verify_that_Decline_Offer_screen_is_visible() {
 		setStepName("Then");
-		captureScreenshot("DeclineOffer");
+		captureScreenshot();
 		application().isAlertPresent();
 	}
 

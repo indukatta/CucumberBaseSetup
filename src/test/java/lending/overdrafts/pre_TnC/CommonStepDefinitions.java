@@ -13,7 +13,6 @@ import cucumber.api.java.en.When;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import pageObjects.Login.Login;
-import pageObjects.More.More;
 
 public class CommonStepDefinitions extends CommonLibrary {
 	public static String screenTitle;
@@ -44,8 +43,6 @@ public class CommonStepDefinitions extends CommonLibrary {
 			driver = (IOSDriver<MobileElement>) getAppiumDriverMobileElement();
 			login = new Login(driver);
 			login.loginAsUser("TESTUSER", "TESTPASSWORD");
-//			login.loginAsUser("Testuser", "testpassword");
-			
 			alreadyLoggedIn = true;
 			reportPass("Successfully logged in to Iceberg application.");
 		} else {
@@ -64,6 +61,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 		sleep(500);
 		findByAny(creditAndLending).click();
 		sleep(4000);
+		captureScreenshot();
 	}
 	
 	@Then("^user exit the iceberg application and relaunch$")
@@ -179,5 +177,10 @@ public class CommonStepDefinitions extends CommonLibrary {
 		setStepName("Then");
 		findByAny(backButton).click();
 		sleep(1000);
+	}
+	
+	@Then("^user captures updated screenshot for evidence$")
+	public void user_captures_updated_screenshot_for_evidence() {
+		captureScreenshot();
 	}
 }

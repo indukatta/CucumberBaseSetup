@@ -36,10 +36,9 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     Given that user is on the Terms and Conditions screen
     When user scroll down to bottom of screen
     Then verify that click here link is visible on screen
-    Then verify that url "https://www.hsbc.co.uk/1/PA_esf-ca-app-content/content/pws/content/personal/pdfs/credit-scoring.pdf" is linked to click here
     Then verify that Accept button is pre selected and enabled
     Then verify that Reject button is not pre selected and enabled
-@TermsAndConditions
+	@TermsAndConditions
   Scenario: CUICE-553 >> Click on No button and verify that application is not cancelled and user can't create new application
     Given that user is on the Terms and Conditions screen
     When user clicks on Reject button on Terms and Conditions screen
@@ -47,7 +46,8 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     When user clicks on the Credit & Lending link
     Then verify that SustainabilityCheck screen is displayed
     When user clicks on Yes button on lending question screen
-
+    Then user captures updated screenshot for evidence
+	@TermsAndConditions
   Scenario: CUICE-553 >> Click on Yes button and verify that application is closed and user can create new application
     Given that user is on the Terms and Conditions screen
     When user clicks on Reject button on Terms and Conditions screen

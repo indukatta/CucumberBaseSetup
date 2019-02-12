@@ -6,10 +6,12 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class FinalOffer {
-	public static String finalOfferAmt;
+
 	public static String finalOfferLogo;
-	public static String finalOfferSummary;
-	public static String finalOfferRateAndFee;
+	public static String finalOfferHeading;
+	public static String finalOfferAmt;
+	public static String finalOfferFee;
+	public static String finalOfferAIR;
 	public static String finalOfferContinue;
 	public static String finalOfferNotNow;
 	
@@ -17,13 +19,13 @@ public class FinalOffer {
 	public void verify_that_the_Final_Offer_screen_is_displayed() {
 		setStepName("Then");
 		captureScreenshot("TermsAndConditions");
-		findByAny(finalOfferSummary).isDisplayed();
+		findByAny(finalOfferHeading).isDisplayed();
 	}
 
 	@Given("^that user is on the Final Offer screen$")
 	public void that_user_is_on_the_Final_Offer_screen() {
 		setStepName("Given");
-		findByAny(finalOfferSummary).isDisplayed();
+		findByAny(finalOfferHeading).isDisplayed();
 	}
 
 	@Then("^verify that logo is displayed on Final Offer screen$")
@@ -32,10 +34,10 @@ public class FinalOffer {
 		findByAny(finalOfferLogo).isDisplayed();
 	}
 
-	@Then("^verify that final offer summary \"([^\"]*)\" is displayed$")
-	public void verify_that_final_offer_summary_is_displayed(String expected) {
+	@Then("^verify that final offer heading \"([^\"]*)\" is displayed$")
+	public void verify_that_final_offer_heading_is_displayed(String expected) {
 		setStepName("Then");
-		findByAny(finalOfferSummary).verifyEqualsTo(expected);
+		findByAny(finalOfferHeading).verifyEqualsTo(expected);
 	}
 
 	@Then("^verify that offered overdraft amount is displayed$")
@@ -47,13 +49,13 @@ public class FinalOffer {
 	@Then("^verify that daily and monthly fee \"([^\"]*)\" is displayed$")
 	public void verify_that_daily_and_monthly_fee_are_displayed(String expected) {
 		setStepName("Then");
-		findByAny(finalOfferRateAndFee).verifyContains(expected);
+		findByAny(finalOfferFee).verifyContains(expected);
 	}
 
-	@Then("^verify that annual rate \"([^\"]*)\" is displayed$")
+	@Then("^verify that annual interest rate \"([^\"]*)\" is displayed$")
 	public void verify_that_annual_rate_is_displayed(String expected) {
 		setStepName("Then");
-		findByAny(finalOfferRateAndFee).verifyContains(expected);
+		findByAny(finalOfferAIR).verifyContains(expected);
 	}
 
 	@Then("^verify that Continue with overdraft button is pre selected$")

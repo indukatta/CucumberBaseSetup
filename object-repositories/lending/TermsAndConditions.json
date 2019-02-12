@@ -2,6 +2,9 @@
 	"tncHeader": {
 		"accessibility id": "tandc_summary_label"
 	},
+	"screenTitle": {
+		"accessibility id": "lending.navigation.bar_title_accessibility_id"
+	},
 	"tncContent": {
 		"accessibility id": "tandc_webView"
 	},
