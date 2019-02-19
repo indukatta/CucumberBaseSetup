@@ -15,10 +15,10 @@
 		"accessibility id": "tandc_reject_button"
 	},
 	"processingInfo": {
-		"accessibility id": "tandc_reject_button"
+		"accessibility id": "In progress"
 	},
 	"inProgress": {
-		"accessibility id": "tandc_reject_button"
+		"accessibility id": "processing_info_label"
 	},
 	"clickHere": {
 		"xpath": "//XCUIElementTypeStaticText[@name=\"here\"]"

@@ -53,15 +53,19 @@ public class GrossIncome extends CommonLibrary {
 	@When("^user enters minimum value \"([^\"]*)\" in Gross Income input box$")
 	public void user_enters_minimum_value_in_Gross_Income_input_box(String expected) {
 		setStepName("Then");
-		findByAny(grossIncomeInputbox).clear();
-		findByAny(grossIncomeInputbox).sendKeys(expected);
+//		findByAny(grossIncomeInputbox).clear();
+//		findByAny(grossIncomeInputbox).sendKeys(expected);
+		System.out.println("Waiting 60 seconds");
+		sleep(60000);
 	}
 
 	@When("^user enters maximum value \"([^\"]*)\" in Gross Income input box$")
 	public void user_enters_maximum_value_in_Gross_Income_input_box(String expected) {
 		setStepName("Then");
-		findByAny(grossIncomeInputbox).clear();
-		findByAny(grossIncomeInputbox).sendKeys(expected);
+//		findByAny(grossIncomeInputbox).clear();
+//		findByAny(grossIncomeInputbox).sendKeys(expected);
+		System.out.println("Waiting 60 seconds");
+		sleep(60000);
 	}
 
 	@Then("^verify that value of Gross Income is set to \"([^\"]*)\" min limit$")

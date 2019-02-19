@@ -12,7 +12,7 @@
 		"accessibility id": "Logout"
 	},
 	"more": {
-		"xpath": "//XCUIElementTypeButton[@name=\"More\"]"
+		"accessibility id": "More"
 	},
 	"continueButton": {
 		"accessibility id": "Continue"

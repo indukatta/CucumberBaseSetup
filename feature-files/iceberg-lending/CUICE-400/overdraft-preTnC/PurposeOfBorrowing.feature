@@ -54,7 +54,7 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it c
 
   @Sprint5
   Scenario: CUICE-6173,CUICE-544 >> ATC-006: Test if save and return is working when user selects an option on Purpose of Borrowing screen
-  	Given add category "SaveAndReturnPreTnC" again for below specific scenarios
+  	Given that category "SaveAndReturnPreTnC" is added for below scenarios
     Then verify that option 4 is selected on Purpose of Borrowing question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/PurposeOfBorrowingOpt4" is equals to "data/application/answers" except "dateModified" key

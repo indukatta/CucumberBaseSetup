@@ -24,8 +24,8 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it c
     Given that user is on Gross Income screen
     Then verify that Gross Income header is displayed
     And verify that Gross Income input box is displayed
-    And verify that default value of Gross Income is "0"
-    And verify that currency symbol "GBP" is displayed
+    And verify that default value of Gross Income is "£0"
+    #And verify that currency symbol "GBP" is displayed
     And verify that continue button is disabled
 
   @Sprint3
@@ -51,15 +51,15 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it c
   Scenario: CUICE-6274 >> ATC-005: Test if user is able to view Gross Income header and other components
     Given that user is on Gross Income screen
     When user enters maximum value "100000001" in Gross Income input box
-    Then verify that value of Gross Income is set to "10000000" max limit
+    Then verify that value of Gross Income is set to "10,000,000" max limit
     And verify that continue button is enabled
 
   @Sprint3
   Scenario: CUICE-6274 >> ATC-006: Test if user is able to view Gross Income header and other components
     Given that user is on Gross Income screen
     When user enters alphabetical and special chars "~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:\"ZXCVBNM<>?" in Gross Income input box
-    Then verify that value of Gross Income is set to "0" min limit
-    And verify that continue button is disabled
+    Then verify that value of Gross Income is set to "£0" min limit
+    And verify that continue button is enabled
 
   @Sprint3 @Sprint5
   Scenario: CUICE-6274 >> ATC-007: Test if user is able to navigate to the next screen when continue button is clicked
@@ -70,7 +70,7 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it c
 
   @Sprint5
   Scenario: CUICE-6274,CUICE-544 >> ATC-TBD: Test if save and return is working when user enter value in Gross Income screen
-  	Given add category "SaveAndReturnPreTnC" again for below specific scenarios
+  	Given that category "SaveAndReturnPreTnC" is added for below scenarios
     And user clicks on back button on lending question screen
     Then verify that entered value "101" is displayed in Gross Income input box
     When user call rest end point "configuration" to get and save the response

@@ -57,7 +57,7 @@ Feature: Verify all functionalities related to Marital Status screen. It covers 
   
   @Sprint5
   Scenario: CUICE-6175 >> ATC-006: Test if save and return is working when user select option on Marital Status screen
-  	Given add category "SaveAndReturnPreTnC" again for below specific scenarios
+  	Given that category "SaveAndReturnPreTnC" is added for below scenarios
     Then verify that option 3 on Marital Status is selected
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/MaritalStatusOpt3" is equals to "data/application/answers" except "dateModified" key

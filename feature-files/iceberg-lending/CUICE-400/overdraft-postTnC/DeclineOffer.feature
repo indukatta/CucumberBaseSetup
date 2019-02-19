@@ -35,8 +35,8 @@ Feature: Verify all functionalities related to Decline Offer screen, it covers C
   @Sprint6
   Scenario: CUICE-553 >> Test if content on Decline Offer screen are correct
     Given that user is on the Decline Offer screen
-    Then verify that Decline Offer summay "Decline Offer" is displayed
-    Then verify that Decline Offer description "This will end your application for borrowing. Are you sure you want to decline the offer?" is displayed
+    Then verify that Decline Offer title text "Decline Offer" is displayed
+    Then verify that Decline Offer body text "This will end your application for borrowing. Are you sure you want to decline the offer?" is displayed
     Then verify that No button is displayed on Decline Offer screen
     Then verify that Yes button is displayed on Decline Offer screen
     

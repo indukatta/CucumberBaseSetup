@@ -1,0 +1,17 @@
+{
+	"alertImageView": {
+		"accessibility id": "alertImageView"
+	},
+	"alertTitleLabel": {
+		"accessibility id": "alertTitleLabel"
+	},
+	"alertBodyLabel": {
+		"accessibility id": "alertBodyLabel"
+	},
+	"alertYesButton": {
+		"accessibility id": "alertPrimaryButton"
+	},
+	"alertNoButton": {
+		"accessibility id": "alertSecondaryButton"
+	}
+}

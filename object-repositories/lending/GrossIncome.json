@@ -6,7 +6,7 @@
 		"accessibility id": "lending_qeustion_title"
 	},
 	"grossIncomeInputbox": {
-		"accessibility id": "lending_question_answer_option_text"
+		"accessibility id": "//XCUIElementTypeApplication[@name=\"Iceberg\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField"
 	},
 	"grossIncomeCurrencySymbol": {
 		"accessibility id": "GBP"

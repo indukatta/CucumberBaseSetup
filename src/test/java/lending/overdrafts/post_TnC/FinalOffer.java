@@ -18,8 +18,8 @@ public class FinalOffer {
 	@Then("^verify that the Final Offer screen is displayed$")
 	public void verify_that_the_Final_Offer_screen_is_displayed() {
 		setStepName("Then");
-		captureScreenshot("TermsAndConditions");
-		findByAny(finalOfferHeading).isDisplayed();
+		captureScreenshot();
+		findByAny(finalOfferHeading).waitUntillVisible().isDisplayed();
 	}
 
 	@Given("^that user is on the Final Offer screen$")
@@ -45,17 +45,23 @@ public class FinalOffer {
 		setStepName("Then");
 		findByAny(finalOfferAmt);
 	}
+	
+	@Then("^verify that offered overdraft amount \"([^\"]*)\" is displayed$")
+	public void verify_that_offered_overdraft_amount_is_displayed(String expected) throws Throwable {
+		setStepName("Then");
+		findByAny(finalOfferAmt).verifyEqualsTo(expected);
+	}
 
 	@Then("^verify that daily and monthly fee \"([^\"]*)\" is displayed$")
 	public void verify_that_daily_and_monthly_fee_are_displayed(String expected) {
 		setStepName("Then");
-		findByAny(finalOfferFee).verifyContains(expected);
+		findByAny(finalOfferFee).verifyEqualsTo(expected);
 	}
 
 	@Then("^verify that annual interest rate \"([^\"]*)\" is displayed$")
 	public void verify_that_annual_rate_is_displayed(String expected) {
 		setStepName("Then");
-		findByAny(finalOfferAIR).verifyContains(expected);
+		findByAny(finalOfferAIR).verifyEqualsTo(expected);
 	}
 
 	@Then("^verify that Continue with overdraft button is pre selected$")
@@ -69,7 +75,6 @@ public class FinalOffer {
 		setStepName("Then");
 		findByAny(finalOfferNotNow).isDisplayed();
 	}
-	
 
 	@Then("^user clicks on Continue with overdraft button on Final Offer$")
 	public void user_clicks_on_Continue_with_overdraft_button_on_Final_Offer() {

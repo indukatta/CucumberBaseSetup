@@ -3,7 +3,6 @@ package cucumberRunner;
 import static com.factory.mobile.driver.AppiumDriverManager.closeApplication;
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 
-
 import org.apache.commons.lang3.StringUtils;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -16,15 +15,15 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
 		features = "feature-files/"
 		, glue = "lending/"
-//		, tags = {"@CreditOrChargeYesNo"}
 		, tags = {"@FinalOffer"}
+//		, tags = {"@ProductSelection, @ProductDetails"}
 //		, dryRun=true, tags = {"@FinalOffer"}
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 	
 	@BeforeSuite
 	public void setup() throws Exception {
-		launchMobileApplication(AppType.IOSAPP, "0.0.0.0:4723");
+//		launchMobileApplication(AppType.IOSAPP, "0.0.0.0:4723");
 	}
 	@AfterSuite
 	public void teardown() {

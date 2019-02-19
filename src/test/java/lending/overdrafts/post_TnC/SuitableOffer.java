@@ -42,7 +42,7 @@ public class SuitableOffer {
 		findByAny(suitableOfferMessage).verifyEqualsTo(expected);
 	}
 
-	@Then("^verify that Continue with overdraft button is pre selected$")
+	@Then("^verify that Continue button on suitable offer is pre selected$")
 	public void verify_that_Continue_with_overdraft_button_is_displayed() {
 		setStepName("Then");
 		findByAny(suitableOfferContinue).isDisplayed();

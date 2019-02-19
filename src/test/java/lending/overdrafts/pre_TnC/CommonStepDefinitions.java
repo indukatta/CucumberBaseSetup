@@ -39,11 +39,14 @@ public class CommonStepDefinitions extends CommonLibrary {
 	@Given("^that user is on the Credit Management screen$")
 	public static void that_user_is_on_the_Credit_Management_screen() throws Throwable {
 		setStepName("Given");
+		launchMobileApplication(AppType.IOSAPP, "0.0.0.0:4723");
 		if (!alreadyLoggedIn) {
 			driver = (IOSDriver<MobileElement>) getAppiumDriverMobileElement();
 			login = new Login(driver);
+			System.out.println("Login Start");
 			login.loginAsUser("TESTUSER", "TESTPASSWORD");
-			alreadyLoggedIn = true;
+			System.out.println("Login End");
+//			alreadyLoggedIn = true;
 			reportPass("Successfully logged in to Iceberg application.");
 		} else {
 			reportPass("You are already logged in to Iceberg application.");
@@ -84,12 +87,6 @@ public class CommonStepDefinitions extends CommonLibrary {
 
 	@Given("^that category \"([^\"]*)\" is added for below scenarios$")
 	public void that_category_is_added_for_below_sceanios(String category) {
-		categoryName = category;
-		addTestCategory(category);
-	}
-	
-	@Given("^add category \"([^\"]*)\" again for below specific scenarios$")
-	public void add_category_again_for_below_specific_sceanios(String category) {
 		categoryName = category;
 		addTestCategory(category);
 	}

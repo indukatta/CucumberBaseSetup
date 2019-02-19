@@ -9,7 +9,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class TermsAndConditions {
+public class TermsAndConditions extends CommonLibrary {
 	public static String screenTitle;
 	public static String tncHeader;
 	public static String tncContent;
@@ -29,7 +29,8 @@ public class TermsAndConditions {
 	@When("^user clicks on Accept button on Terms and Conditions screen$")
 	public void user_clicks_on_Accept_button_on_Terms_and_Conditions_screen() {
 		setStepName("When");
-		findByAny(tncAccept).click();
+		findByAny(tncAccept).scrollDownUntillVisible().click();
+		sleep(3000);
 	}
 
 	@Then("^verify that Processing your Application screen is displayed$")
@@ -41,7 +42,7 @@ public class TermsAndConditions {
 	@Then("^wait for Processing your Application screen to disappear$")
 	public void wait_for_Processing_your_Application_screen_to_disappear() {
 		setStepName("Then");
-		findByAny(processingInfo).waitNotToDisplay();
+		findByAny(processingInfo).waitTillVisible();
 	}
 
 	@Given("^verify that user is on Proccessing your Application screen$")
@@ -105,6 +106,7 @@ public class TermsAndConditions {
 	public void user_clicks_on_Reject_button_on_Terms_and_Conditions_screen() {
 		setStepName("Then");
 		findByAny(tncReject).scrollDownUntillVisible().click();
+		sleep(3000);
 	}
 
 	@When("^user clicks on No on Alert pop up to dismiss$")
