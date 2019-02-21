@@ -1,13 +1,4 @@
 {
-	"screenTitle": {
-		"accessibility id": "lending.navigation.bar_title_accessibility_id"
-	},
-	"backButton": {
-		"accessibility id": "Back"
-	},
-	"screenHeader": {
-		"xpath": "//XCUIElementTypeStaticText[@name=\"lending.question.title\"]"
-	},
 	"questionAnswer": {
 		"xpath": "//XCUIElementTypeStaticText[starts-with(@name,\"lending_question_answer_option_text_\")]"
 	},

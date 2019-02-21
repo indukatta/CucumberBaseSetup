@@ -7,6 +7,7 @@ Feature: Verify all functionalities related to Amount of Borrowings Yes No scree
   @Sprint4 @Sprint5
   Scenario: CUICE-6171 >> Prerequisite: Test if user able to view  the Amount of Borrowings Yes No screen
     Given that user is on the Credit Management screen
+    Then execute database query to get reset lending application
     When user clicks on the Credit & Lending link
     When user clicks on Apply button on Product Selection
     Then verify that Amount of Borrowing YesNo screen is displayed

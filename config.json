@@ -2,51 +2,43 @@
 	"report-type": "aventstack",
 	"or-package": "lending.overdrafts",
 	"or-path": "object-repositories/lending",
+	"or-separator": "==",
+	"api-testing": "true",
 	"appium-server": {
 		"ipAddress": "127.0.0.1",
 		"port": "4726"
 	},
 	"suite": {
-		"default": "Sprint2"
+		"default": "Sprint3",
+		"sprint2": "Sprint2"
+	},
+	"ios-app": {
+		"platformName": "iOS",
+		"platformVersion": "12.1",
+		"deviceName": "iPhone 8",
+		"fullReset": "false",
+		"noReset": "false",
+		"app": "/Users/ashdiksh/Downloads/Iceberg.app"
 	},
 	"env": {
-		"suite-name": "thinSliceOverdrafts_sp6",
-		"api-testing": "true",
-		"authorization": "AQIC5wM2LY4SfczgHBlnr7k6fUOpenAMjG4PKBXIQzMSwwiVaw.*AAJTSQACMDIAAlNLABMzMDc0MTYyOTMxMTkwNzU3MjY2AAJTMQACMDE.*",
-		"base-uri": "https://mule.icepick.guru/iceberg/v1/businesses/1003056660/lending",
 		"qa": {
-			"ios-app": {
-				"platformName": "IOS",
-				"platformVersion": "12.1",
-				"deviceName": "Lending iphone x",
-				"fullReset": "false",
-				"noReset": "false",
-				"app": "/Users/ashdiksh/Downloads/Iceberg 31.app"
-			},
+			"authorization": "AQIC5wM2LY4SfczgHBlnr7k6fUOpenAMjG4PKBXIQzMSwwiVaw.*AAJTSQACMDIAAlNLABMzMDc0MTYyOTMxMTkwNzU3MjY2AAJTMQACMDE.*",
+			"base-uri": "https://mule.icepick.guru/iceberg/v1/businesses/1003056660/lending",
 			"db": {
-				"type": "postgres",
+				"url": "jdbc:postgresql://35.195.179.124:5432/lending",
+				"username": "lending",
+				"password": "UlaYg9e1BmT4n3OE5+B8rg=="
+			}
+		},
+		"dev": {
+			"authorization": "AQIC5wM2LY4SfczgHBlnr7k6fUOpenAMjG4PKBXIQzMSwwiVaw.*AAJTSQACMDIAAlNLABMzMDc0MTYyOTMxMTkwNzU3MjY2AAJTMQACMDE.*",
+			"base-uri": "https://mule.icepick.guru/iceberg/v1/businesses/1003056660/lending",
+			"db": {
+				"type": "postgreSQL",
 				"user": "fred",
 				"password": "secret",
 				"ssl": "true"
 			}
-		},
-		"dev": {
-			"android-app": {
-				"platformName": "IOS",
-				"platformVersion": "12.1",
-				"deviceName": "iPhone 8",
-				"fullReset": "false",
-				"noReset": "false",
-				"app": "/Users/ashdiksh/Downloads/Iceberg 22.app"
-			},
-			"db": {
-				"type": "postgres",
-				"user": "fred",
-				"password": "secret",
-				"ssl": "true"
-			},
-			"authorization": "AQIC5wM2LY4SfczgHBlnr7k6fUOpenAMjG4PKBXIQzMSwwiVaw.*AAJTSQACMDIAAlNLABMzMDc0MTYyOTMxMTkwNzU3MjY2AAJTMQACMDE.*",
-			"base-uri": "https://mule.icepick.guru/iceberg/v1/businesses/1003056660/lending"
 		}
 	},
 	"product-categories": "/product-categories",

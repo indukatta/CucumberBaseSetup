@@ -1,5 +1,8 @@
 package lending.overdrafts.pre_TnC;
 
+import static com.factory.data.manager.Database.fetchSingleValue;
+import static com.factory.data.manager.Database.updateTable;
+import static com.factory.data.manager.Database.closeDatabseConnection;
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 import static com.factory.services.wrapper.RestAssuredManager.*;
 
@@ -15,6 +18,7 @@ public class CommonLibrary {
 	public static IOSDriver<MobileElement> driver;
 	public static boolean alreadyLoggedIn = false;
 	public static boolean deleteApplication = true;
+	public static String applicationStatus = "";
 	public static String categoryName = "";
 	public static More more = null;
 
@@ -34,11 +38,19 @@ public class CommonLibrary {
 	public static void deleteLendingApplications() throws Throwable {
 		httpGet("product-categories", false);
 		List<Object> appIds = getValueFromJSON("data/applications/id");
-		System.out.println("Current Application ID: " + appIds);
 		for (Object appId : appIds) {
 			Map<String, Object> reqParam = new HashMap<String, Object>();
 			reqParam.put("applicationId", appId);
 			httpPost("consents", "consents", reqParam, false);
 		}
+	}
+	
+	public static void resetLendingApplication() {
+		applicationStatus = fetchSingleValue("select status from application where id=(SELECT max(id) from application);");
+		if (applicationStatus.equals("open")) {
+			updateTable(
+					"UPDATE application set decision=null, answers=null, status='open' where id=(SELECT max(id) from application);");
+		}
+		closeDatabseConnection();
 	}
 }

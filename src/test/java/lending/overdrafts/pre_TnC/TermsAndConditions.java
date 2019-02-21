@@ -29,7 +29,7 @@ public class TermsAndConditions extends CommonLibrary {
 	@When("^user clicks on Accept button on Terms and Conditions screen$")
 	public void user_clicks_on_Accept_button_on_Terms_and_Conditions_screen() {
 		setStepName("When");
-		findByAny(tncAccept).scrollDownUntillVisible().click();
+		findByAny(tncAccept).scrollDownUntilVisible().click();
 		sleep(3000);
 	}
 
@@ -73,7 +73,7 @@ public class TermsAndConditions extends CommonLibrary {
 	@When("^user scroll down to bottom of screen$")
 	public void user_scroll_down_to_bottom_of_screen() {
 		setStepName("Then");
-		findByAny(tncAccept).scrollDownUntillVisible();
+		findByAny(tncAccept).scrollDownUntilVisible();
 	}
 
 	@Then("^verify that click here link is visible on screen$")
@@ -105,7 +105,7 @@ public class TermsAndConditions extends CommonLibrary {
 	@When("^user clicks on Reject button on Terms and Conditions screen$")
 	public void user_clicks_on_Reject_button_on_Terms_and_Conditions_screen() {
 		setStepName("Then");
-		findByAny(tncReject).scrollDownUntillVisible().click();
+		findByAny(tncReject).scrollDownUntilVisible().click();
 		sleep(3000);
 	}
 

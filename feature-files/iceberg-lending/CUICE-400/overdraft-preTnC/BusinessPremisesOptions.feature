@@ -51,7 +51,7 @@ Feature: Verify all functionalities related to Business Premises screen, it cove
 
   @Sprint5
   Scenario: CUICE-6174,CUICE-544 >> ATC-010: Test if save and return is working when user select Business Premisses type
-    Given that category "CreditOrChargeYesNo" is added for below scenarios
+    Given that category "SaveAndReturnPreTnC" is added for below scenarios
     Then verify that Freehold Business Premises type is selected
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/BusinessPremisesFreehold" is equals to "data/application/answers" except "dateModified" key

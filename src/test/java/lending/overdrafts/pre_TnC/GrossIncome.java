@@ -7,8 +7,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class GrossIncome extends CommonLibrary {
-	public static String grossIncomeInputbox;
-	public static String grossIncomeCurrencySymbol;
+	public static String grossIncomeInputbox = "accessibility id==number_question_selected_value_label";
 
 	@Given("^that user is on Gross Income screen$")
 	public void that_user_is_on_Gross_Income_screen() {
@@ -44,28 +43,18 @@ public class GrossIncome extends CommonLibrary {
 		findByAny(grossIncomeInputbox).verifyEqualsTo(expected);
 	}
 
-	@Then("^verify that currency symbol \"([^\"]*)\" is displayed$")
-	public void verify_that_currency_symblol_is_diplayed(String expected) {
-		setStepName("Then");
-		findByAny(grossIncomeCurrencySymbol).verifyEqualsTo(expected);
-	}
-
 	@When("^user enters minimum value \"([^\"]*)\" in Gross Income input box$")
 	public void user_enters_minimum_value_in_Gross_Income_input_box(String expected) {
 		setStepName("Then");
-//		findByAny(grossIncomeInputbox).clear();
-//		findByAny(grossIncomeInputbox).sendKeys(expected);
-		System.out.println("Waiting 60 seconds");
-		sleep(60000);
+		findByAny(grossIncomeInputbox).clear();
+		findByAny(grossIncomeInputbox).sendKeys(expected);
 	}
 
 	@When("^user enters maximum value \"([^\"]*)\" in Gross Income input box$")
 	public void user_enters_maximum_value_in_Gross_Income_input_box(String expected) {
 		setStepName("Then");
-//		findByAny(grossIncomeInputbox).clear();
-//		findByAny(grossIncomeInputbox).sendKeys(expected);
-		System.out.println("Waiting 60 seconds");
-		sleep(60000);
+		findByAny(grossIncomeInputbox).clear();
+		findByAny(grossIncomeInputbox).sendKeys(expected);
 	}
 
 	@Then("^verify that value of Gross Income is set to \"([^\"]*)\" min limit$")

@@ -1,11 +1,11 @@
-package lending.overdrafts.saveAndReturn;
+package lending.overdrafts.utils;
 
 import static com.factory.mobile.driver.AppiumDriverManager.setStepName;
 import static com.factory.services.wrapper.RestAssuredManager.*;
 
 import cucumber.api.java.en.Then;
 
-public class APITestingLibrary {
+public class LendingAPI {
 	
 	Object applicationID = "";
 	

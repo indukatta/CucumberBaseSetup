@@ -8,6 +8,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class BusinessBorrowingYesNo {
+	public static String hintText = "accessibility id==lending_question_hint";
+
 	@Then("^verify that Business Borrowing YesNo screen is displayed$")
 	public void verify_that_Amount_of_Borrowing_YesNo_screen_is_displayed() {
 		setStepName("Then");
@@ -32,5 +34,11 @@ public class BusinessBorrowingYesNo {
 	public void verify_that_Amount_of_Borrowing_YesNo_header_on_screen(String expected) {
 		setStepName("Then");
 		findByAny(CommonStepDefinitions.screenQuestion).verifyEqualsTo(expected);
+	}
+
+	@Then("^verify that hint text \"([^\"]*)\" is displayed on Business Borrowing$")
+	public void verify_that_hint_text_is_displayed(String expected) {
+		setStepName("Then");
+		findByAny(hintText).verifyEqualsTo(expected);
 	}
 }

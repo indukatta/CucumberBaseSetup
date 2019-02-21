@@ -8,30 +8,29 @@ import cucumber.api.java.en.When;
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 
 public class ResidentialStatus {
-	public static String screenTitle;
-	public static String screenHeader;
 	public static String questionAnswer;
 	public static String questionAnswerRadioBtn;
+	public static String screenQuestion = "accessibility id==lending.question.title";
 
 	@Given("^user is on Residential Status lending question screen$")
 	public void user_is_on_Residential_Status_lending_question_screen() {
 		setStepName("Given");
-		findByAny(screenTitle).isDisplayed();
-		findByAny(screenHeader).isDisplayed();
+		findByAny(CommonStepDefinitions.screenTitle).isDisplayed();
+		findByAny(screenQuestion).isDisplayed();
 	}
 
 	@Then("^verify that Residential Status screen is displayed$")
 	public void verify_that_Residential_Status_is_displayed() {
 		setStepName("Given");
 		captureScreenshot("ResidentialStatus_0");
-		findByAny(screenTitle).isDisplayed();
-		findByAny(screenHeader).isDisplayed();
+		findByAny(CommonStepDefinitions.screenTitle).isDisplayed();
+		findByAny(screenQuestion).isDisplayed();
 	}
 
 	@Then("^verify that Residential Status description \"([^\"]*)\" on screen$")
 	public void verify_that_Residential_Status_description_on_screen(String expected) {
 		setStepName("Then");
-		findByAny(screenHeader).verifyEqualsTo(expected);
+		findByAny(screenQuestion).verifyEqualsTo(expected);
 	}
 
 	@Then("^verify that below Residential Status options are displayed$")

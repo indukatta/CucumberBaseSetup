@@ -1,7 +1,4 @@
 {
-	"screenQuestion": {
-		"xpath": "//XCUIElementTypeStaticText[@name=\"lending.question.title\"]"
-	},
 	"bpTypes": {
 		"xpath": "//XCUIElementTypeImage[starts-with(@name, \"lending_question_answer_option_checkbox_\")]"
 	},

@@ -8,15 +8,14 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class PurposeOfBorrowing extends CommonLibrary {
-	public static String screenQuestion;
 	public static String questionTypes;
 	public static String questionTypesChkBox;
+	public static String screenQuestion = "accessibility id==lending.question.title";
 
 	@Then("^verify that Purpose of Borrowing screen is displayed$")
 	public void verify_that_user_Purpose_of_Borrowing_screen_is_displayed() {
 		setStepName("Then");
-		captureScreenshot("PurposeOfBorrowing");
-		System.out.println("################ "+CommonStepDefinitions.screenQuestion);
+		captureScreenshot();
 		findByAny(CommonStepDefinitions.screenTitle).isDisplayed();
 		findByAny(screenQuestion).isDisplayed();
 	}
@@ -38,7 +37,7 @@ public class PurposeOfBorrowing extends CommonLibrary {
 	@Then("^verify Purpose of Borrowing title \"([^\"]*)\" on screen$")
 	public void verify_Purpose_of_Borrowing_title_on_screen(String expected) {
 		setStepName("Then");
-		captureScreenshot("PurposeOfBorrowing");
+		captureScreenshot();
 		findByAny(CommonStepDefinitions.screenTitle).isDisplayed();
 		findByAny(CommonStepDefinitions.screenTitle).verifyEqualsTo(expected);
 	}

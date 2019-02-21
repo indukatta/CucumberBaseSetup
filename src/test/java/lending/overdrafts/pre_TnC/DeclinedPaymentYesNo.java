@@ -8,7 +8,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class DeclinedPaymentYesNo {
-	public static String hintText = "lending_question_hint";
+	public static String hintText = "accessibility id==lending_question_hint";
 
 	@Then("^verify that Declined Payment YesNo screen is displayed$")
 	public void verify_that_Declined_Payment_YesNo_screen_is_displayed() {
@@ -31,7 +31,7 @@ public class DeclinedPaymentYesNo {
 		findByAny(CommonStepDefinitions.screenQuestion).verifyEqualsTo(expected);
 	}
 
-	@Then("^verify that hint text \"([^\"]*)\" is displayed$")
+	@Then("^verify that hint text \"([^\"]*)\" is displayed on Declined Payment$")
 	public void verify_that_hint_text_is_displayed(String expected) {
 		setStepName("Then");
 		findByAny(hintText).verifyEqualsTo(expected);

@@ -3,7 +3,7 @@
 		"accessibility id": "lending_question_subtitle"
 	},
 	"totalBorrowingInputbox": {
-		"accessibility id": "lending_question_answer_option_text"
+		"accessibility id": "number_question_selected_value_label"
 	},
 	"totalBorrowingCurrencySymbol": {
 		"accessibility id": "GBP"

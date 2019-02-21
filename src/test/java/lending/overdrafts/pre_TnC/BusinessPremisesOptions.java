@@ -17,7 +17,7 @@ public class BusinessPremisesOptions {
 	@Given("^that user is on Business Premises options screen$")
 	public void that_user_is_on_Business_Premises_options_screen() {
 		setStepName("Given");
-		findByAny(screenQuestion).isDisplayed();
+		findByAny(CommonStepDefinitions.screenQuestion).isDisplayed();
 	}
 
 	@Then("^verify that Business Premises options screen is displayed$")
@@ -25,13 +25,13 @@ public class BusinessPremisesOptions {
 		setStepName("Then");
 		captureScreenshot("BusinessPremises");
 		findByAny(CommonStepDefinitions.screenTitle).isDisplayed();
-		findByAny(screenQuestion).isDisplayed();
+		findByAny(CommonStepDefinitions.screenQuestion).isDisplayed();
 	}
 
 	@Then("^verify that Premises Business options header \"([^\"]*)\" is displayed$")
 	public void verify_that_Premises_Business_options_header_is_displayed(String expected) {
 		setStepName("Then");
-		findByAny(screenQuestion).verifyEqualsTo(expected);
+		findByAny(CommonStepDefinitions.screenQuestion).verifyEqualsTo(expected);
 	}
 
 	@When("^user clicks on Freehold Business Premises type$")

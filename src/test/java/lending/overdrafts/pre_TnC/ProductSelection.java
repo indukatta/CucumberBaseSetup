@@ -15,7 +15,7 @@ public class ProductSelection extends CommonLibrary {
 	public static String productBenefit;
 	public static String linkFindOutMore;
 	public static String buttonApply;
-	
+
 	@Given("^that user is on Product Selection screen$")
 	public void that_user_is_on_Product_Selection_screen() throws Throwable {
 		setStepName("Given");
@@ -30,6 +30,7 @@ public class ProductSelection extends CommonLibrary {
 //		findByAny(screenTitle).isDisplayed();
 		findByAny(productName).isDisplayed();
 	}
+
 	@When("^user clicks on find out more link$")
 	public void user_clicks_on_find_out_more_link() throws Throwable {
 		setStepName("When");
@@ -39,9 +40,11 @@ public class ProductSelection extends CommonLibrary {
 
 	@When("^user clicks on Apply button on Product Selection$")
 	public void user_clicks_on_Apply_button_on_Product_Selection_screen() throws Throwable {
-		setStepName("When");
-		findByAny(buttonApply).click();
-		sleep(3000);
+		if (!applicationStatus.equals("open")) {
+			setStepName("When");
+			findByAny(buttonApply).click();
+			sleep(3000);
+		}
 	}
 
 	@Then("^verify Select Products description \"([^\"]*)\" on screen$")

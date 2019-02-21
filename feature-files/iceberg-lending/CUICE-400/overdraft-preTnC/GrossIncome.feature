@@ -25,7 +25,6 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it c
     Then verify that Gross Income header is displayed
     And verify that Gross Income input box is displayed
     And verify that default value of Gross Income is "£0"
-    #And verify that currency symbol "GBP" is displayed
     And verify that continue button is disabled
 
   @Sprint3
@@ -44,14 +43,14 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it c
   Scenario: CUICE-6274 >> ATC-004: Test if user is able to view Gross Income header and other components
     Given that user is on Gross Income screen
     When user enters minimum value "-1" in Gross Income input box
-    Then verify that value of Gross Income is set to "1" min limit
+    Then verify that value of Gross Income is set to "£1" min limit
     And verify that continue button is enabled
 
   @Sprint3
   Scenario: CUICE-6274 >> ATC-005: Test if user is able to view Gross Income header and other components
     Given that user is on Gross Income screen
     When user enters maximum value "100000001" in Gross Income input box
-    Then verify that value of Gross Income is set to "10,000,000" max limit
+    Then verify that value of Gross Income is set to "£10,000,000" max limit
     And verify that continue button is enabled
 
   @Sprint3

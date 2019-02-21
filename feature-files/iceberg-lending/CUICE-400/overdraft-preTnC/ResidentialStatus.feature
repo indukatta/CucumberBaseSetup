@@ -52,7 +52,7 @@ Feature: Verify all functionalities related to Residential Status screen. It cov
 
   @Sprint5
   Scenario: CUICE-6176,CUICE-544 >> ATC-TBD: Test if save and return is working when user selects an option on Residential Status screen
-  	Given add category "SaveAndReturnPreTnC" again for below specific scenarios
+  	Given that category "SaveAndReturnPreTnC" is added for below scenarios
     Then verify that option 3 on Residential Status screen is selected
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/ResidentialStatusOpt3" is equals to "data/application/answers" except "dateModified" key

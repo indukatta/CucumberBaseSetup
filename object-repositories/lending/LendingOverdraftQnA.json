@@ -13,5 +13,8 @@
 	},
 	"disclaimer": {
 		"accessibility id": "number_question_footer_label"
+	},
+	"screenMessage": {
+		"accessibility id": "lending_screen_custom_text_element_accessibility_id_0_0"
 	}
 }

@@ -24,7 +24,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public static String yesButton;
 	public static String noButton;
 	public static String backButton;
-	public static Login login = null;
+//	public static Login login = null;
 
 	@Before
 	public void startTestReport(Scenario scenario) throws Exception {
@@ -40,12 +40,11 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public static void that_user_is_on_the_Credit_Management_screen() throws Throwable {
 		setStepName("Given");
 		launchMobileApplication(AppType.IOSAPP, "0.0.0.0:4723");
+		resetLendingApplication();
 		if (!alreadyLoggedIn) {
 			driver = (IOSDriver<MobileElement>) getAppiumDriverMobileElement();
-			login = new Login(driver);
-			System.out.println("Login Start");
+			Login login = new Login(driver);
 			login.loginAsUser("TESTUSER", "TESTPASSWORD");
-			System.out.println("Login End");
 //			alreadyLoggedIn = true;
 			reportPass("Successfully logged in to Iceberg application.");
 		} else {

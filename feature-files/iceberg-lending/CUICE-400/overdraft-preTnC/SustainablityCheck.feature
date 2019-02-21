@@ -1,5 +1,5 @@
 @SustainabilityCheck @Regression
-Feature: Verify all functionalities related to Amount of Borrowing No screen, it covers CUICE-5041, CUICE-544
+Feature: Verify all functionalities related to Sustainability Check screen, it covers CUICE-5041, CUICE-544
 
   Background: This is to add category to below scenarios
     Given that category "SustainabilityCheck" is added for below scenarios
@@ -7,8 +7,9 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
   @Sprint4 @Sprint5
   Scenario: CUICE-5041 >> Prerequisite: Test if user able to view  the Borrowings Yes No screen
     Given that user is on the Credit Management screen
+    Then execute database query to get reset lending application
     When user clicks on the Credit & Lending link
-    And user clicks on Apply button on Product Selection
+    #And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen
     And user clicks on continue button on the screen
     When user selects option 1 from Purpose of Borrowing question screen
@@ -43,7 +44,7 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
 
   @Sprint5
   Scenario: CUICE-5041,CUICE-544 >> ATC-TBD: Test if save and return is working when user clicks on No button
-  	Given add category "SaveAndReturnPreTnC" again for below specific scenarios
+  	Given that category "SaveAndReturnPreTnC" is added for below scenarios
     Then verify that No button is selected on lending question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/SustainabilityCheckNo" is equals to "data/application/answers" except "dateModified" key
@@ -63,7 +64,7 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
 
   @Sprint5
   Scenario: CUICE-5041,CUICE-544 >> ATC-TBD: Test if save and return is working when user clicks on No button
-  	Given add category "SaveAndReturnPreTnC" again for below specific scenarios
+  	Given that category "SaveAndReturnPreTnC" is added for below scenarios
     Then verify that Yes button is selected on lending question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/SustainabilityCheckYes" is equals to "data/application/answers" except "dateModified" key
