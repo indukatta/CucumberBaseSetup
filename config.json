@@ -9,7 +9,7 @@
 		"port": "4726"
 	},
 	"suite": {
-		"default": "Sprint3",
+		"default": "TotalExistingBorrowing",
 		"sprint2": "Sprint2"
 	},
 	"ios-app": {

@@ -31,7 +31,7 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
     And verify that No button is displayed on lending question screen
     And verify that Yes button is not selected on lending question screen
     And verify that No button is not selected on lending question screen
-    And verify that hint text "*This includes direct debit, standing order or a cheque." is displayed
+    And verify that hint text "*This includes direct debit, standing order or a cheque." is displayed on Declined Payment
 
   @Sprint4 @Sprint5
   Scenario: CUICE-6272 >> ATC-002: Test if user clicks on No, next questions screen is displayed

@@ -9,7 +9,7 @@ Feature: Verify all functionalities related to Sustainability Check screen, it c
     Given that user is on the Credit Management screen
     Then execute database query to get reset lending application
     When user clicks on the Credit & Lending link
-    #And user clicks on Apply button on Product Selection
+    And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen
     And user clicks on continue button on the screen
     When user selects option 1 from Purpose of Borrowing question screen

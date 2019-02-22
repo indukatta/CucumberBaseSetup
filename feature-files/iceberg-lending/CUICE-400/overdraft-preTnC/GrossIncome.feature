@@ -71,14 +71,14 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it c
   Scenario: CUICE-6274,CUICE-544 >> ATC-TBD: Test if save and return is working when user enter value in Gross Income screen
   	Given that category "SaveAndReturnPreTnC" is added for below scenarios
     And user clicks on back button on lending question screen
-    Then verify that entered value "101" is displayed in Gross Income input box
+    Then verify that entered value "£101" is displayed in Gross Income input box
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/GrossIncome101" is equals to "data/application/answers" except "dateModified" key
     When user enters minimum value "1001" in Gross Income input box
     And user clicks on continue button on the screen
     Then verify that Personal Account YesNo screen is displayed
     And user clicks on back button on lending question screen
-    Then verify that entered value "1001" is displayed in Gross Income input box
+    Then verify that entered value "£1,001" is displayed in Gross Income input box
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/GrossIncome1001" is equals to "data/application/answers" except "dateModified" key
     And user clicks on continue button on the screen

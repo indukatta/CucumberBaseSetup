@@ -31,8 +31,7 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     Given that user is on Total Existing Borrowings screen
     Then verify that Total Existing Borrowings question "What is your business’ total existing borrowings?" is displayed
     And verify that Total Existing Borrowings input box is displayed
-    And verify that default value of Total Existing Borrowings is ""
-    And verify that currency symbol "GBP" is displayed
+    And verify that default value "£" is displayed on Total Existing Borrowings
     And verify that continue button is disabled
 
   @Sprint4
@@ -57,14 +56,14 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
   Scenario: CUICE-6255 >> ATC-005: Test if continue button is enabled and set to min default value if minus value is entered in Total Existing Borrowings
     Given that user is on Total Existing Borrowings screen
     When user enters minimum value "-1" in Total Existing Borrowings input box
-    Then verify that value of Total Existing Borrowings is set to "1" min limit
+    Then verify that value of Total Existing Borrowings is set to "£1" min limit
     And verify that continue button is enabled
 
   @Sprint4
   Scenario: CUICE-6255 >> ATC-006: Test if continue button is enabled and set to max default value if more value is entered in Total Existing Borrowings
     Given that user is on Total Existing Borrowings screen
     When user enters maximum value "100000001" in Total Existing Borrowings input box
-    Then verify that value of Total Existing Borrowings is set to "10000000" max limit
+    Then verify that value of Total Existing Borrowings is set to "£10,000,000" max limit
     And verify that continue button is enabled
 
   @Sprint4
@@ -72,7 +71,7 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
   	Given that category "SaveAndReturnPreTnC" is added for below scenarios
     Given that user is on Total Existing Borrowings screen
     When user enters alphabetical and special chars "~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:\"ZXCVBNM<>?" in Total Existing Borrowings input box
-    Then verify that value of Total Existing Borrowings is set to "1" min limit
+    Then verify that value of Total Existing Borrowings is set to "£" min limit
     And verify that continue button is disabled
 
   @Sprint4 @Sprint5
@@ -86,13 +85,13 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
   @Sprint5
   Scenario: CUICE-6255,CUICE-544 >> ATC-009: Test if save and return is working when user enters value in Total Existing Borrowings screen
   	Given that category "SaveAndReturnPreTnC" is added for below scenarios
-    Then verify that Total Existing Borrowings is equals to "101" entered value
+    Then verify that Total Existing Borrowings is equals to "£101" entered value
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/TotalExistingBorrowing101" is equals to "data/application/answers" except "dateModified" key
     When user enters minimum value "1001" in Total Existing Borrowings input box
     And user clicks on continue button on the screen
     Then verify that SustainabilityCheck screen is displayed
     And user clicks on back button on lending question screen
-    Then verify that Total Existing Borrowings is equals to "1001" entered value
+    Then verify that Total Existing Borrowings is equals to "£1,001" entered value
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/TotalExistingBorrowing1001" is equals to "data/application/answers" except "dateModified" key

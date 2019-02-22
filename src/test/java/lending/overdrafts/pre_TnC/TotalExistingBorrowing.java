@@ -40,8 +40,8 @@ public class TotalExistingBorrowing {
 		findByAny(totalBorrowingInputbox).isDisplayed();
 	}
 
-	@Then("^verify that default value of Total Existing Borrowings is \"([^\"]*)\"$")
-	public void verify_that_default_value_of_Total_Existing_Borrowings_is(String expected) {
+	@Then("^verify that default value \"([^\"]*)\" is displayed on Total Existing Borrowings$")
+	public void verify_that_default_value_is_displayed_on_Total_Existing_Borrowings(String expected) {
 		setStepName("Then");
 		findByAny(totalBorrowingInputbox).verifyEqualsTo(expected);
 	}

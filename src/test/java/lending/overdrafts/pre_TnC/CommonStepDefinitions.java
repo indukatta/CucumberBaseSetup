@@ -175,6 +175,13 @@ public class CommonStepDefinitions extends CommonLibrary {
 		sleep(1000);
 	}
 	
+	@Then("^user clicks on back button on new lending question screen$")
+	public void user_clicks_on_back_button_on_new_lending_question_screen() {
+		setStepName("Then");
+		findByAccessibilityId("back chevron").click();
+		sleep(1000);
+	}
+	
 	@Then("^user captures updated screenshot for evidence$")
 	public void user_captures_updated_screenshot_for_evidence() {
 		captureScreenshot();
