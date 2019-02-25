@@ -10,7 +10,7 @@ import static com.factory.mobile.driver.AppiumDriverManager.*;
 public class ResidentialStatus {
 	public static String questionAnswer;
 	public static String questionAnswerRadioBtn;
-	public static String screenQuestion = "accessibility id==lending.question.title";
+	public static String screenQuestion = "accessibility id==lending_question_title";
 
 	@Given("^user is on Residential Status lending question screen$")
 	public void user_is_on_Residential_Status_lending_question_screen() {

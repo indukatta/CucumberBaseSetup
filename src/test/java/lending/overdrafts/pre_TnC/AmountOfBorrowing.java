@@ -6,15 +6,17 @@ import cucumber.api.java.en.When;
 
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 import static com.factory.mobile.driver.AppiumDriverManager.setStepName;
-import static com.factory.services.wrapper.RestAssuredManager.*;
 
 public class AmountOfBorrowing extends CommonLibrary {
+	public static String amtOfBorrowingInput;
 	public static String amtOfBorrowingSlider;
-	public static String amtOfBorrowing;
+	public static String amtOfBorrowingMax;
 	public static String monthyFee;
 	public static String screenEAR;
-	public static String disclaimer;
-
+	public static String desclaimer;
+	public static String cancel;
+	public static String done;
+	
 	@Then("^verify that Amount of Borrowing screen is displayed$")
 	public void verify_that_Amount_of_Borrowing_Yes_screen_is_displayed() {
 		setStepName("Then");
@@ -41,12 +43,6 @@ public class AmountOfBorrowing extends CommonLibrary {
 		findByAny(CommonStepDefinitions.screenQuestion).verifyEqualsTo(arg1);
 	}
 
-	@Then("^verify that disclaimer text \"([^\"]*)\" is displayed on screen$")
-	public void verify_that_disclaimer_text_is_displayed_on_screen(String expected) {
-		setStepName("Then");
-		findByAny(disclaimer).verifyEqualsTo(expected);
-	}
-
 	@Then("^verify that Amount of borrowing slider is displayed on the screen$")
 	public void verify_that_Amount_of_borrowing_slider_is_displayed_on_the_screen() {
 		setStepName("Then");
@@ -63,6 +59,12 @@ public class AmountOfBorrowing extends CommonLibrary {
 	public void verify_that_EAR_component_is_displayed_on_the_screen(String arg1) {
 		setStepName("Then");
 		findByAny(screenEAR).verifyEqualsTo(arg1);
+	}
+	
+	@Then("^verify that desclaimer \"([^\"]*)\" is displayed on the screen$")
+	public void verify_that_desclaimer_is_displayed_on_the_screen(String arg1) {
+		setStepName("Then");
+		findByAny(desclaimer).verifyEqualsTo(arg1);
 	}
 
 	@When("^user selects an amount (\\d+) on Amount of Borrowing Yes screen$")

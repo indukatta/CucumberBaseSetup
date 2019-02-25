@@ -24,16 +24,22 @@ public class RemindmeLater {
 		findByAny(remindMeTitle).isDisplayed();
 	}
 
+	@Then("^verify that remind me later title \"([^\"]*)\" is displayed$")
+	public void verify_that_remind_me_later_title_is_displayed(String expected) {
+		setStepName("Then");
+		findByAny(remindMeTitle).verifyEqualsTo(expected);
+	}
+	
 	@Then("^verify that remind me later heading \"([^\"]*)\" is displayed$")
 	public void verify_that_remind_me_later_heading_is_displayed(String expected) {
 		setStepName("Then");
 		findByAny(remindMeHeading).verifyEqualsTo(expected);
 	}
 
-	@Then("^verify that remind me later description \"([^\"]*)\" is displayed$")
+	@Then("^verify that remind me later sub heading \"([^\"]*)\" is displayed$")
 	public void verify_that_remind_me_later_sub_heading_is_displayed(String expected) {
 		setStepName("Then");
-		findByAny(remindMeHeading).verifyEqualsTo(expected);
+		findByAny(remindMeSubHeading).verifyEqualsTo(expected);
 	}
 
 	@Then("^verify that Yes remind me later button is displayed$")
@@ -51,7 +57,7 @@ public class RemindmeLater {
 	@Then("^user clicks on No decline the offer button on screen$")
 	public void click_on_No_decline_the_offer_button_on_screen() {
 		setStepName("Then");
-		findByAny(noDeclineTheOffer).click();
+		findByAny(noDeclineTheOffer).as("No, decline the offer").click();
 	}
 
 	@Then("^user clicks on Yes remind me later button on screen$")

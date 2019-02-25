@@ -2,6 +2,8 @@ package lending.overdrafts.pre_TnC;
 
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 
+import java.util.Collection;
+
 import com.factory.mobile.driver.AppiumDriverBase.AppType;
 
 import cucumber.api.Scenario;
@@ -40,7 +42,6 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public static void that_user_is_on_the_Credit_Management_screen() throws Throwable {
 		setStepName("Given");
 		launchMobileApplication(AppType.IOSAPP, "0.0.0.0:4723");
-		resetLendingApplication();
 		if (!alreadyLoggedIn) {
 			driver = (IOSDriver<MobileElement>) getAppiumDriverMobileElement();
 			Login login = new Login(driver);
@@ -50,7 +51,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 		} else {
 			reportPass("You are already logged in to Iceberg application.");
 		}
-		if(deleteApplication) {
+		if (deleteApplication) {
 //			deleteLendingApplications();
 		}
 		deleteApplication = true;
@@ -65,7 +66,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 		sleep(4000);
 		captureScreenshot();
 	}
-	
+
 	@Then("^user exit the iceberg application and relaunch$")
 	public static void user_exit_the_iceberg_application_and_reopen() throws Throwable {
 		setStepName("When");
@@ -73,7 +74,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 		alreadyLoggedIn = false;
 		deleteApplication = false;
 	}
-	
+
 	@Then("^user clicks on the More and Logout link$")
 	public static void user_clicks_on_the_More_and_Logout_link() throws Throwable {
 		setStepName("When");
@@ -86,6 +87,12 @@ public class CommonStepDefinitions extends CommonLibrary {
 
 	@Given("^that category \"([^\"]*)\" is added for below scenarios$")
 	public void that_category_is_added_for_below_sceanios(String category) {
+		if (!categoryName.equals(category)
+				&& (category.equals("ProductSelection") || category.equals("ProductDetails"))) {
+			setApplicationStatusTo("closed");
+		} else if (!category.equals(categoryName)&&!category.equals("SaveAndReturnPreTnC")) {
+			setApplicationStatusTo("open");
+		}
 		categoryName = category;
 		addTestCategory(category);
 	}
@@ -96,12 +103,14 @@ public class CommonStepDefinitions extends CommonLibrary {
 		findByAny(continueButton).click();
 		sleep(1000);
 	}
+
 	@Then("^verify that Credit & Lending option is displayed on screen$")
 	public void verify_that_Credit_And_Lending_option_is_displayed_on_screen() throws Throwable {
 		setStepName("Then");
 		captureScreenshot();
 		findByAny(creditAndLending).isDisplayed();
 	}
+
 	@Then("^verify that continue button is enabled$")
 	public void verify_that_continue_button_is_enabled() throws Throwable {
 		setStepName("Then");
@@ -139,7 +148,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 		setStepName("Then");
 		findByAny(noButton).verifyAttributesEqualsTo("value", "0");
 	}
-	
+
 	@Then("^verify that Yes button is selected on lending question screen$")
 	public void verify_that_Yes_button_is_selected_on_lending_question_screen() {
 		setStepName("Then");
@@ -174,16 +183,9 @@ public class CommonStepDefinitions extends CommonLibrary {
 		findByAny(backButton).click();
 		sleep(1000);
 	}
-	
-	@Then("^user clicks on back button on new lending question screen$")
-	public void user_clicks_on_back_button_on_new_lending_question_screen() {
-		setStepName("Then");
-		findByAccessibilityId("back chevron").click();
-		sleep(1000);
-	}
-	
-	@Then("^user captures updated screenshot for evidence$")
-	public void user_captures_updated_screenshot_for_evidence() {
+
+	@Then("^captures updated screenshot for execution results$")
+	public void captures_updated_screenshot_for_execution_results() {
 		captureScreenshot();
 	}
 }

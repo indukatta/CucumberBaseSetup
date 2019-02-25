@@ -10,7 +10,7 @@ import cucumber.api.java.en.When;
 public class PurposeOfBorrowing extends CommonLibrary {
 	public static String questionTypes;
 	public static String questionTypesChkBox;
-	public static String screenQuestion = "accessibility id==lending.question.title";
+	public static String screenQuestion = "accessibility id==lending_question_title";
 
 	@Then("^verify that Purpose of Borrowing screen is displayed$")
 	public void verify_that_user_Purpose_of_Borrowing_screen_is_displayed() {

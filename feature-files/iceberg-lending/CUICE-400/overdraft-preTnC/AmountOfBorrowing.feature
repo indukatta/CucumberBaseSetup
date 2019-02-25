@@ -15,10 +15,10 @@ Feature: Verify all functionalities related to Amount of Borrowing  screen, it c
     Given user is on Amount of Borrowing question screen
     Then verify Amount of Borrowing title "Borrowing" on screen
     Then verify Amount of Borrowing question "How much would you like to borrow?" on screen
-    And verify that disclaimer text "*All lending is subject to eligibility" is displayed on screen
     And verify that Amount of borrowing slider is displayed on the screen
     And verify that monthly fee component "Fee 0.12 GBP monthly" is displayed on the screen
     And verify that EAR component "Representative EAR of 9.9% variable*" is displayed on the screen
+    And verify that desclaimer "*All lending is subject to eligibility" is displayed on the screen
     And verify that continue button is disabled
 
   

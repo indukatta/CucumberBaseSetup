@@ -6,6 +6,7 @@ import static com.factory.data.manager.Database.closeDatabseConnection;
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 import static com.factory.services.wrapper.RestAssuredManager.*;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,6 +16,7 @@ import io.appium.java_client.ios.IOSDriver;
 import pageObjects.More.More;
 
 public class CommonLibrary {
+	public static Map<String, String> persistentValue = new HashMap<String, String>();
 	public static IOSDriver<MobileElement> driver;
 	public static boolean alreadyLoggedIn = false;
 	public static boolean deleteApplication = true;
@@ -44,12 +46,16 @@ public class CommonLibrary {
 			httpPost("consents", "consents", reqParam, false);
 		}
 	}
-	
-	public static void resetLendingApplication() {
-		applicationStatus = fetchSingleValue("select status from application where id=(SELECT max(id) from application);");
-		if (applicationStatus.equals("open")) {
+
+	public static void setApplicationStatusTo(String status) {
+		applicationStatus = fetchSingleValue(
+				"select status from application where id=(SELECT max(id) from application);");
+		if (applicationStatus.equals("open") && status.equalsIgnoreCase("open")) {
 			updateTable(
 					"UPDATE application set decision=null, answers=null, status='open' where id=(SELECT max(id) from application);");
+		} else if (applicationStatus.equals("open")) {
+			updateTable(
+					"UPDATE application set decision=null, answers=null, status='closed' where id=(SELECT max(id) from application);");
 		}
 		closeDatabseConnection();
 	}

@@ -91,14 +91,14 @@ public class TermsAndConditions extends CommonLibrary {
 
 	@Then("^verify that Accept button is pre selected and enabled$")
 	public void verify_that_Accept_button_is_pre_selected_and_enabled() {
-		findByAny(tncAccept).verifyAttributesAllEqualsTo("value", "1");
+		findByAny(tncAccept).verifyAttributesEqualsTo("value", "1");
 		findByAny(tncAccept).isEnabled();
 	}
 
 	@Then("^verify that Reject button is not pre selected and enabled$")
 	public void verify_that_Reject_button_is_not_pre_selected_and_enabled() {
 		setStepName("Then");
-		findByAny(tncReject).verifyAttributesAllEqualsTo("value", "0");
+		findByAny(tncReject).verifyAttributesEqualsTo("value", "0");
 		findByAny(tncReject).isEnabled();
 	}
 

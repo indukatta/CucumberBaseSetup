@@ -7,7 +7,6 @@ Feature: Verify all functionalities related to Amount of Borrowings Yes No scree
   @Sprint4 @Sprint5
   Scenario: CUICE-6171 >> Prerequisite: Test if user able to view  the Amount of Borrowings Yes No screen
     Given that user is on the Credit Management screen
-    Then execute database query to get reset lending application
     When user clicks on the Credit & Lending link
     When user clicks on Apply button on Product Selection
     Then verify that Amount of Borrowing YesNo screen is displayed
@@ -47,7 +46,7 @@ Feature: Verify all functionalities related to Amount of Borrowings Yes No scree
     Given that user is on Amount of Borrowing YesNo screen
     When user clicks on Yes button on lending question screen
     Then verify that Amount of Borrowing screen is displayed
-    Then user clicks on back button on new lending question screen
+    Then user clicks on back button on lending question screen
 
   @Sprint5
   Scenario: CUICE-6171,CUICE-544 >> ATC-005: Test if save and return is working when user clicks on Yes button
@@ -57,7 +56,7 @@ Feature: Verify all functionalities related to Amount of Borrowings Yes No scree
     Then verify that expected json "lending-QnA/AmountOfBorrowingYes" is equals to "data/application/answers" except "dateModified" key
     When user clicks on Yes button on lending question screen
     Then verify that Amount of Borrowing screen is displayed
-    And user clicks on back button on new lending question screen
+    And user clicks on back button on lending question screen
     Then verify that Yes button is selected on lending question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/AmountOfBorrowingYes" is equals to "data/application/answers" except "dateModified" key

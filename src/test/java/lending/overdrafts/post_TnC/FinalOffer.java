@@ -4,8 +4,9 @@ import static com.factory.mobile.driver.AppiumDriverManager.*;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import lending.overdrafts.pre_TnC.CommonLibrary;
 
-public class FinalOffer {
+public class FinalOffer extends CommonLibrary {
 
 	public static String finalOfferLogo;
 	public static String finalOfferHeading;
@@ -14,7 +15,7 @@ public class FinalOffer {
 	public static String finalOfferAIR;
 	public static String finalOfferContinue;
 	public static String finalOfferNotNow;
-	
+
 	@Then("^verify that the Final Offer screen is displayed$")
 	public void verify_that_the_Final_Offer_screen_is_displayed() {
 		setStepName("Then");
@@ -45,7 +46,7 @@ public class FinalOffer {
 		setStepName("Then");
 		findByAny(finalOfferAmt);
 	}
-	
+
 	@Then("^verify that offered overdraft amount \"([^\"]*)\" is displayed$")
 	public void verify_that_offered_overdraft_amount_is_displayed(String expected) throws Throwable {
 		setStepName("Then");
@@ -61,7 +62,7 @@ public class FinalOffer {
 	@Then("^verify that annual interest rate \"([^\"]*)\" is displayed$")
 	public void verify_that_annual_rate_is_displayed(String expected) {
 		setStepName("Then");
-		findByAny(finalOfferAIR).verifyEqualsTo(expected);
+		findByAny(finalOfferAIR).verifyContains(expected);
 	}
 
 	@Then("^verify that Continue with overdraft button is pre selected$")
@@ -85,6 +86,22 @@ public class FinalOffer {
 	@Then("^user clicks on Not Now button on Final Offer$")
 	public void user_clicks_on_Not_Now_button_on_Final_Offer() {
 		setStepName("Then");
-		findByAny(finalOfferNotNow).click();
+		findByAny(finalOfferNotNow).as("Final Offer's Not Now").click();
+		sleep(2000);
 	}
+
+	@Then("^verify that opted suitable offer amount is displayed on Final Offer screen$")
+	public void verify_that_opted_suitable_offer_amount_is_displayed_on_Final_Offer_screen() {
+		setStepName("Then");
+		captureScreenshot();
+		findByAny(finalOfferAmt).verifyEqualsTo(persistentValue.get("SuitableOfferAmt"));
+	}
+
+	@Then("^verify that correct rate has been calculated on Final Offer screen$")
+	public void verify_that_correct_rate_has_been_calculated_on_Final_Offer_screen() {
+		setStepName("Then");
+		findByAny(finalOfferFee).verifyContains(persistentValue.get("DailyFee"));
+		findByAny(finalOfferFee).verifyContains(persistentValue.get("MonthlyFee"));
+	}
+
 }

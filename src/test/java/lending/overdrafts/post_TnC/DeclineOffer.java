@@ -2,9 +2,11 @@ package lending.overdrafts.post_TnC;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import lending.overdrafts.pre_TnC.CommonLibrary;
+
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 
-public class DeclineOffer {
+public class DeclineOffer extends CommonLibrary {
 	public static String alertImageView;
 	public static String alertTitleLabel;
 	public static String alertBodyLabel;
@@ -40,6 +42,7 @@ public class DeclineOffer {
 	public void click_on_No_button_on_Decline_Offer_screen() {
 		setStepName("Then");
 		findByAny(alertYesButton).click();
+		sleep(1000);
 	}
 
 	@Then("^click on Yes button on Decline Offer screen$")
@@ -63,11 +66,6 @@ public class DeclineOffer {
 	public void verify_that_Yes_button_is_displayed_on_Decline_Offer_screen() {
 		setStepName("Then");
 		findByAny(alertYesButton).isDisplayed();
-	}
-
-	@Then("^verify that Remind me later screen is displayed$")
-	public void verify_that_Remind_me_later_screen_is_displayed() {
-		setStepName("Then");
 	}
 
 }

@@ -4,13 +4,15 @@ import static com.factory.mobile.driver.AppiumDriverManager.*;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import lending.overdrafts.pre_TnC.CommonLibrary;
 
-public class SuitableOffer {
+public class SuitableOffer extends CommonLibrary {
 	public static String suitableOfferLogo;
 	public static String suitableOfferHeading;
 	public static String suitableOfferMessage;
 	public static String suitableOfferContinue;
-	
+
 	@Then("^verify that the Suitable Offer screen is displayed$")
 	public void verify_that_the_Suitable_Offer_screen_is_displayed() {
 		setStepName("Then");
@@ -35,11 +37,11 @@ public class SuitableOffer {
 		setStepName("Then");
 		findByAny(suitableOfferHeading).verifyEqualsTo(expected);
 	}
-	
+
 	@Then("^verify that suitable offer message \"([^\"]*)\" is displayed$")
 	public void verify_that_suitable_offer_message_is_displayed(String expected) {
 		setStepName("Then");
-		findByAny(suitableOfferMessage).verifyEqualsTo(expected);
+		findByAny(suitableOfferMessage).verifyContains(expected);
 	}
 
 	@Then("^verify that Continue button on suitable offer is pre selected$")
@@ -53,4 +55,12 @@ public class SuitableOffer {
 		setStepName("Then");
 		findByAny(suitableOfferContinue).click();
 	}
+
+	@Then("^retrieve and save offered amount from Suitable Offer screen$")
+	public void retrieve_and_save_offered_amount_from_Suitable_Offer_screen() {
+		String suitableOfferMsg = findByAny(suitableOfferMessage).getText().split("£")[1];
+		System.out.println("Stored value for 'SuitableOfferAmt' is "+ suitableOfferMsg);
+		persistentValue.put("SuitableOfferAmt", suitableOfferMsg);
+	}
+
 }

@@ -33,7 +33,8 @@ public class LendingAPI {
 		httpGet("product-categories", false);
 		applicationID = getLastValueFromJSON("data/applications/id");
 		System.out.println("applicationID: "+applicationID);
-		httpPatch(endPoint, "applicationID", applicationID.toString(), "{{\"answers\":["+borrowingAmt+"],\"questionId\":2},{\"answers\":1,\"questionId\":1}}", false);
+		httpPatch(endPoint, "applicationID", applicationID.toString(), "{\"answers\":[1],\"questionId\":1}", false);
+		httpPatch(endPoint, "applicationID", applicationID.toString(), "{\"answers\":["+borrowingAmt+"],\"questionId\":2}", false);
 	}
 	
 	@Then("^verify that expected json \"([^\"]*)\" is equals to \"([^\"]*)\" except \"([^\"]*)\" key$")

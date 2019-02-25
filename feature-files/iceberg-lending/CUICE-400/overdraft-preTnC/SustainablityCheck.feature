@@ -68,9 +68,9 @@ Feature: Verify all functionalities related to Sustainability Check screen, it c
     Then verify that Yes button is selected on lending question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/SustainabilityCheckYes" is equals to "data/application/answers" except "dateModified" key
-    When user clicks on Yes button on lending question screen
+    When user clicks on No button on lending question screen
     Then verify that Terms and Conditions screen is displayed
     And user clicks on back button on lending question screen
-    Then verify that Yes button is selected on lending question screen
+    Then verify that No button is selected on lending question screen
     When user call rest end point "configuration" to get and save the response
-    Then verify that expected json "lending-QnA/SustainabilityCheckYes" is equals to "data/application/answers" except "dateModified" key
+    Then verify that expected json "lending-QnA/SustainabilityCheckNo" is equals to "data/application/answers" except "dateModified" key

@@ -55,7 +55,7 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
     Given that user is on Current Account YesNo screen
     When user clicks on Yes button on lending question screen
     Then verify that Years of Personal Account screen is displayed
-    And user clicks on back button on new lending question screen
+    And user clicks on back button on lending question screen
 
   @Sprint5
   Scenario: CUICE-6267,CUICE-544 >> ATC-005: Test if save and return is working when user clicks on Yes button
@@ -65,7 +65,7 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
     Then verify that expected json "lending-QnA/PersonalAccountYes" is equals to "data/application/answers" except "dateModified" key
     When user clicks on Yes button on lending question screen
     Then verify that Years of Personal Account screen is displayed
-    And user clicks on back button on new lending question screen
+    And user clicks on back button on lending question screen
     Then verify that Yes button is selected on lending question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/PersonalAccountYes" is equals to "data/application/answers" except "dateModified" key
