@@ -2,9 +2,11 @@ package lending.overdrafts.post_TnC;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import lending.overdrafts.pre_TnC.CommonLibrary;
+
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 
-public class RemindmeLater {
+public class RemindmeLater extends CommonLibrary {
 	public static String remindMeTitle;
 	public static String remindMeHeading;
 	public static String remindMeSubHeading;
@@ -54,10 +56,11 @@ public class RemindmeLater {
 		findByAny(noDeclineTheOffer).isDisplayed();
 	}
 
-	@Then("^user clicks on No decline the offer button on screen$")
+	@Then("^user clicks on No, decline the offer button on screen$")
 	public void click_on_No_decline_the_offer_button_on_screen() {
 		setStepName("Then");
 		findByAny(noDeclineTheOffer).as("No, decline the offer").click();
+		sleep(1000);
 	}
 
 	@Then("^user clicks on Yes remind me later button on screen$")

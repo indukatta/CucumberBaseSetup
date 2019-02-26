@@ -94,7 +94,7 @@ public class FinalOffer extends CommonLibrary {
 	public void verify_that_selected_suitable_offer_amount_is_displayed_on_Final_Offer_screen() {
 		setStepName("Then");
 		captureScreenshot();
-		findByAny(finalOfferAmt).verifyEqualsTo(persistentValue.get("SuitableOfferAmt"));
+		findByAny(finalOfferAmt).verifyEqualsTo("£"+commaSeparatedNumber(persistentValue.get("SuitableOfferAmt"))+".00");
 	}
 
 	@Then("^verify that correct rate has been calculated on Final Offer screen$")

@@ -12,21 +12,21 @@ Feature: Verify all functionalities related to Remind me Later screen, it covers
     And user clicks on No button on lending question screen
     And user clicks on continue button on the screen
     And user call rest end point "answers" to set Amount of Borrowing "3800" for lending question
-    When user selects option 1 from Purpose of Borrowing question screen
+    And user selects option 1 from Purpose of Borrowing question screen
     And user clicks on continue button on the screen
-    When user selects option 3 on Residential Status screen
+    And user selects option 3 on Residential Status screen
     And user clicks on continue button on the screen
-    When user selects option 3 on Marital Status screen
+    And user selects option 3 on Marital Status screen
     And user clicks on continue button on the screen
-    When user enters minimum value "1000" in Gross Income input box
+    And user enters minimum value "1000" in Gross Income input box
     And user clicks on continue button on the screen
-    When user clicks on No button on lending question screen
-    When user clicks on No button on lending question screen
-    When user clicks on Yes button on lending question screen
-    When user clicks on No button on lending question screen
-    When user clicks on No button on lending question screen
-    Then user clicks on Accept button on Terms and Conditions screen
-    Then user clicks on Not Now button on Final Offer
+    And user clicks on No button on lending question screen
+    And user clicks on No button on lending question screen
+    And user clicks on Yes button on lending question screen
+    And user clicks on No button on lending question screen
+    And user clicks on No button on lending question screen
+    And user clicks on Accept button on Terms and Conditions screen
+    And user clicks on Not Now button on Final Offer
     Then verify that Remind me Later screen is visible
     
   @Sprint6
@@ -41,7 +41,7 @@ Feature: Verify all functionalities related to Remind me Later screen, it covers
   @Sprint6
   Scenario: CUICE-553 >> Test if Decline Offer screen is displayed when user clicks on No, decline the offer
     Given that user is on the Remind me Later screen
-    Then user clicks on No decline the offer button on screen
+    Then user clicks on No, decline the offer button on screen
     Then verify that Decline Offer screen is visible
     Then click on No button on Decline Offer screen
 

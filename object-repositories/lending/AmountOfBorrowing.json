@@ -23,6 +23,10 @@
 		"accessibility id": "Cancel"
 	}
 	},
+	"hint": {
+		"xpath": "//XCUIElementTypeStaticText[contains(@name,\"Please enter a value from\")]"
+	}
+	},
 	"done": {
 		"accessibility id": "Done"
 	}

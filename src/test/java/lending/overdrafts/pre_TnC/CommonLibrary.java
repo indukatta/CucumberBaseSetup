@@ -6,6 +6,7 @@ import static com.factory.data.manager.Database.closeDatabseConnection;
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 import static com.factory.services.wrapper.RestAssuredManager.*;
 
+import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -35,6 +36,12 @@ public class CommonLibrary {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+	}
+
+	protected static String commaSeparatedNumber(String number) {
+		DecimalFormat myFormatter = new DecimalFormat("#,###");
+		String output = myFormatter.format(Integer.parseInt(number));
+		return output;
 	}
 
 	public static void deleteLendingApplications() throws Throwable {

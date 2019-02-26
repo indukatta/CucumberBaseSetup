@@ -12,29 +12,28 @@ Feature: Verify all functionalities related to Decline Offer screen, it covers C
     And user clicks on No button on lending question screen
     And user clicks on continue button on the screen
     And user call rest end point "answers" to set Amount of Borrowing "3800" for lending question
-    When user selects option 1 from Purpose of Borrowing question screen
+    And user selects option 1 from Purpose of Borrowing question screen
     And user clicks on continue button on the screen
-    When user selects option 3 on Residential Status screen
+    And user selects option 3 on Residential Status screen
     And user clicks on continue button on the screen
-    When user selects option 3 on Marital Status screen
+    And user selects option 3 on Marital Status screen
     And user clicks on continue button on the screen
-    When user enters minimum value "1000" in Gross Income input box
+    And user enters minimum value "1000" in Gross Income input box
     And user clicks on continue button on the screen
-    When user clicks on No button on lending question screen
-    When user clicks on No button on lending question screen
-    When user clicks on Yes button on lending question screen
-    When user clicks on No button on lending question screen
-    When user clicks on No button on lending question screen
-    Then verify that Terms and Conditions screen is displayed
-    Then user clicks on Accept button on Terms and Conditions screen
-    Then verify that the Final Offer screen is displayed
-    Then user clicks on Not Now button on Final Offer
-    Then user clicks on No decline the offer button on screen
+    And user clicks on No button on lending question screen
+    And user clicks on No button on lending question screen
+    And user clicks on Yes button on lending question screen
+    And user clicks on No button on lending question screen
+    And user clicks on No button on lending question screen
+    And user clicks on Accept button on Terms and Conditions screen
+    And user clicks on Not Now button on Final Offer
+    And user clicks on No, decline the offer button on screen
     Then verify that Decline Offer screen is visible
     
   @Sprint6
   Scenario: CUICE-553 >> Test if content on Decline Offer screen are correct
     Given that user is on the Decline Offer screen
+    Then verify that Decline Offer alert image is displayed
     Then verify that Decline Offer title text "Decline offer" is displayed
     Then verify that Decline Offer body text "This will end your application for borrowing. Are you sure you want to decline the offer?" is displayed
     Then verify that No button is displayed on Decline Offer screen
@@ -45,7 +44,7 @@ Feature: Verify all functionalities related to Decline Offer screen, it covers C
     Given that user is on the Decline Offer screen
     Then click on No button on Decline Offer screen
     Then verify that Remind me Later screen is visible
-    Then user clicks on No decline the offer button on screen
+    Then user clicks on No, decline the offer button on screen
 
   @Sprint6
   Scenario: CUICE-553 >> Test if User Decline screen is displayed when user clicks on Yes button

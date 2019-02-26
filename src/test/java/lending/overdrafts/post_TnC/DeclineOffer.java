@@ -7,7 +7,7 @@ import lending.overdrafts.pre_TnC.CommonLibrary;
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 
 public class DeclineOffer extends CommonLibrary {
-	public static String alertImageView;
+	public static String alertImageView1;
 	public static String alertTitleLabel;
 	public static String alertBodyLabel;
 	public static String alertYesButton;
@@ -17,13 +17,19 @@ public class DeclineOffer extends CommonLibrary {
 	public void verify_that_Decline_Offer_screen_is_visible() {
 		setStepName("Then");
 		captureScreenshot();
-		findByAny(alertImageView).isDisplayed();
+		findByAny(alertTitleLabel).isDisplayed();
 	}
 
 	@Given("^that user is on the Decline Offer screen$")
 	public void that_user_is_on_the_Decline_Offer_screen() {
 		setStepName("Given");
-		findByAny(alertImageView).isDisplayed();
+		findByAny(alertTitleLabel).isDisplayed();
+	}
+
+	@Then("^verify that Decline Offer alert image is displayed$")
+	public void verify_that_Decline_Offer_alert_image_text_is_displayed(String expected) {
+		setStepName("Then");
+		findByAny(alertTitleLabel).verifyEqualsTo(expected);
 	}
 
 	@Then("^verify that Decline Offer title text \"([^\"]*)\" is displayed$")
@@ -49,6 +55,7 @@ public class DeclineOffer extends CommonLibrary {
 	public void click_on_Yes_button_on_Decline_Offer_screen() {
 		setStepName("Then");
 		findByAny(alertNoButton).click();
+		sleep(2000);
 	}
 
 	@Then("^verify that No button is displayed on Decline Offer screen$")
