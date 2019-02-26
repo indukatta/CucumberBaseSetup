@@ -51,11 +51,6 @@ public class DeclineOffer extends CommonLibrary {
 		findByAny(alertNoButton).click();
 	}
 
-	@Then("^verify that User Decline screen is displayed$")
-	public void verify_that_User_Decline_screen_is_displayed() {
-		setStepName("Then");
-	}
-
 	@Then("^verify that No button is displayed on Decline Offer screen$")
 	public void verify_that_No_button_is_displayed_on_Decline_Offer_screen() {
 		setStepName("Then");

@@ -51,9 +51,9 @@ Feature: Verify all functionalities related to Suitable Offer screen, it covers 
 @Sprint6
   Scenario: CUICE-553 >> Test if rate gets changed with amount selected on Tailor Offer screen
     Given that user is on the Tailor Offer screen
-    When user selects the suitable offer amount on Tailor Offer screen
+    When user moves slider to "80%" percent of maximum value on Tailor Offer screen
     When user clicks on continue button on the screen
-    Then verify that opted suitable offer amount is displayed on Final Offer screen
+    Then verify that selected suitable offer amount is displayed on Final Offer screen
     Then verify that correct rate has been calculated on Final Offer screen
     Then user clicks on back button on lending question screen
     Given that user is on the Tailor Offer screen

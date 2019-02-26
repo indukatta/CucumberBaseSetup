@@ -1,0 +1,26 @@
+{
+	"userDeclineTitle": {
+		"accessibility id": "decline_title_label"
+	},
+	"userDeclineWhatNext": {
+		"accessibility id": "decline_what_next_label"
+	},
+	"userDeclineOptions": {
+		"accessibility id": "decline_options_label"
+	},
+	"userDeclineConsider": {
+		"accessibility id": "Consider alternative financing"
+	},
+	"userDeclineConsiderDesc": {
+		"accessibility id": "We can refer your case under Government's referral scheme to alternative providers."
+	},
+	"userDeclineAppeal": {
+		"accessibility id": "Appeal your decision"
+	},
+	"userDeclineAppealDesc": {
+		"accessibility id": "You can appeal and have decision reassessed by our team."
+	},
+	"userDeclineNotNow": {
+		"accessibility id": "decline_not_now_button"
+	}
+}

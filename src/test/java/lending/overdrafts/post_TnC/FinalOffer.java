@@ -90,8 +90,8 @@ public class FinalOffer extends CommonLibrary {
 		sleep(2000);
 	}
 
-	@Then("^verify that opted suitable offer amount is displayed on Final Offer screen$")
-	public void verify_that_opted_suitable_offer_amount_is_displayed_on_Final_Offer_screen() {
+	@Then("^verify that selected suitable offer amount is displayed on Final Offer screen$")
+	public void verify_that_selected_suitable_offer_amount_is_displayed_on_Final_Offer_screen() {
 		setStepName("Then");
 		captureScreenshot();
 		findByAny(finalOfferAmt).verifyEqualsTo(persistentValue.get("SuitableOfferAmt"));

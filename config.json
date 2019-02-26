@@ -9,7 +9,7 @@
 		"port": "4726"
 	},
 	"suite": {
-		"default": "regression",
+		"default": "FinalOffer",
 		"sprint2": "Sprint2"
 	},
 	"ios-app": {

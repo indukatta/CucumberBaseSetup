@@ -61,10 +61,10 @@ public class TailorOffer extends CommonLibrary {
 		setAmountAndFeeinPersistentValue();
 	}
 
-	@Given("^user change the offer amount with slider on Tailor Offer screen$")
-	public void user_change_the_offer_amount_with_slider_on_Tailor_Offer_screen() {
+	@Given("^user moves slider to \"([^\"]*)\" percent of maximum value on Tailor Offer screen$")
+	public void user_moves_slider_to_percent_of_maximum_value_on_Tailor_Offer_screen(String arg1) {
 		setStepName("Then");
-		findByAny(AmountOfBorrowing.amtOfBorrowingSlider).setValue("0.5");
+		findByAny(AmountOfBorrowing.amtOfBorrowingSlider).setValue(Integer.parseInt(arg1.replace("%", ""))/100);
 		sleep(1000);
 		setAmountAndFeeinPersistentValue();
 	}
