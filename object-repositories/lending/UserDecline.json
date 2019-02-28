@@ -2,6 +2,9 @@
 	"userDeclineTitle": {
 		"accessibility id": "decline_title_label"
 	},
+	"userDeclineBody": {
+		"accessibility id": "decline_body_label"
+	},
 	"userDeclineWhatNext": {
 		"accessibility id": "decline_what_next_label"
 	},
@@ -9,13 +12,13 @@
 		"accessibility id": "decline_options_label"
 	},
 	"userDeclineConsider": {
-		"accessibility id": "Consider alternative financing"
+		"accessibility id": "decline_link_heading_label_0"
 	},
 	"userDeclineConsiderDesc": {
 		"accessibility id": "We can refer your case under Government's referral scheme to alternative providers."
 	},
 	"userDeclineAppeal": {
-		"accessibility id": "Appeal your decision"
+		"accessibility id": "decline_link_heading_label_1"
 	},
 	"userDeclineAppealDesc": {
 		"accessibility id": "You can appeal and have decision reassessed by our team."

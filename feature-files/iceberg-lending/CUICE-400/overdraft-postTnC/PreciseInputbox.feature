@@ -25,18 +25,17 @@ Feature: Verify all functionalities related to Tailor Offer screen, it covers CU
     And user clicks on No button on lending question screen
     And user clicks on No button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
+    Then retrieve and save offered amount from Suitable Offer screen
     And user clicks on continue button on the screen
     And user tap on input box to bring the keyboard up for precise input
-    Then verify that precise input box values appears on the screen
+    Then verify that precise input box appears on the screen
 
   @Sprint7
   Scenario: CUICE-553 >> Test if content on Tailor Offer screen are correct after tap on input box
   	Given that user is on precise input screen
     Then verify that cancel button is displayed on top corner on the screen
     And verify that min value "£100" is displayed in input box
-    And verify that hint text is displayed on Tailor Offer screen
-    And verify that min value "£100" is displayed in hint text
-    And verify that suitable amount as max value is displayed in hint text
+    And verify that hint text "Please enter a value from £100 to £" is displayed on Tailor Offer screen
     And verify that Done button is enabled on the screen
 
   @Sprint7
@@ -48,15 +47,17 @@ Feature: Verify all functionalities related to Tailor Offer screen, it covers CU
   @Sprint7
   Scenario: CUICE-553 >> Test if Done button gets disabled when user enter greater than allowed
     Given that user is on precise input screen
-    When user enter more than allowed value in precise input box on the screen
+    When user enter greater than allowed value in precise input box on the screen
     Then verify that Done button is disabled on the screen
 
   @Sprint7
   Scenario: CUICE-553 >> Test if entered value is not appearing on tailor offer screen when user clicks on cancel
     Given that user is on precise input screen
-    When user enter valid allowed value in precise input box on the screen
-    Then verify that Done button is enabled on the screen
     Then user clicks on cancel button on the screen
+    Then verify that entered values does not displayed in input box
+    When user enter valid allowed value in precise input box on the screen
+    Then user clicks on cancel button on the screen
+    Then verify that Done button is enabled on the screen
     Then verify that entered values does not displayed in input box
 
   @Sprint7
@@ -72,8 +73,8 @@ Feature: Verify all functionalities related to Tailor Offer screen, it covers CU
     Given that user is on precise input screen
     When user enter valid allowed value in precise input box on the screen
     Then user clicks on Done button on the screen
-    Then verify that precise input box values appears on the screen
-    Then verify that correct rate has been calculated on Final Offer screen
+    Then verify that precise input box appears on the screen
+    Then verify that fee has calculated correctly on Tailor Offer screen
 
   @Sprint7
   Scenario: CUICE-553 >> Test if precise input box value gets appeared on the Final Offer screen

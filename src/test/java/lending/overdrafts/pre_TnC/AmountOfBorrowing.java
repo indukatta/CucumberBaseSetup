@@ -15,7 +15,6 @@ public class AmountOfBorrowing extends CommonLibrary {
 	public static String screenEAR;
 	public static String desclaimer;
 	public static String cancel;
-	public static String hint;
 	public static String done;
 	
 	@Then("^verify that Amount of Borrowing screen is displayed$")

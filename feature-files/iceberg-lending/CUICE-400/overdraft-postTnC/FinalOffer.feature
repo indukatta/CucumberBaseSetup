@@ -31,7 +31,7 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
     Given that user is on the Final Offer screen
     Then verify that logo is displayed on Final Offer screen
     Then verify that final offer heading "Add your overdraft" is displayed
-    Then verify that offered overdraft amount "£3800" is displayed
+    Then verify that offered overdraft amount "£3,800" is displayed
     Then verify that daily and monthly fee "Daily fee of £0.15 (£4.65 monthly)" is displayed
     Then verify that annual interest rate "10.65%" is displayed
     When user call rest end point "configuration" to get and save the response

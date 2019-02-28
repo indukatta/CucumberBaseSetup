@@ -42,15 +42,16 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public static void that_user_is_on_the_Credit_Management_screen() throws Throwable {
 		setStepName("Given");
 		launchMobileApplication(AppType.IOSAPP, "0.0.0.0:4723");
-		if (!alreadyLoggedIn) {
+		setApplicationStatus();
+//		if (!alreadyLoggedIn) {
 			driver = (IOSDriver<MobileElement>) getAppiumDriverMobileElement();
 			Login login = new Login(driver);
 			login.loginAsUser("TESTUSER", "TESTPASSWORD");
 //			alreadyLoggedIn = true;
 			reportPass("Successfully logged in to Iceberg application.");
-		} else {
-			reportPass("You are already logged in to Iceberg application.");
-		}
+//		} else {
+//			reportPass("You are already logged in to Iceberg application.");
+//		}
 		if (deleteApplication) {
 //			deleteLendingApplications();
 		}
@@ -87,12 +88,6 @@ public class CommonStepDefinitions extends CommonLibrary {
 
 	@Given("^that category \"([^\"]*)\" is added for below scenarios$")
 	public void that_category_is_added_for_below_sceanios(String category) {
-		if (!categoryName.equals(category)
-				&& (category.equals("ProductSelection") || category.equals("ProductDetails"))) {
-			setApplicationStatusTo("closed");
-		} else if (!category.equals(categoryName)&&!category.equals("SaveAndReturnPreTnC")) {
-			setApplicationStatusTo("open");
-		}
 		categoryName = category;
 		addTestCategory(category);
 	}

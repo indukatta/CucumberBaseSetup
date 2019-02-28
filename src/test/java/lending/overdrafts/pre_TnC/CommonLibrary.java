@@ -54,16 +54,15 @@ public class CommonLibrary {
 		}
 	}
 
-	public static void setApplicationStatusTo(String status) {
+	public static void setApplicationStatus() {
 		applicationStatus = fetchSingleValue(
 				"select status from application where id=(SELECT max(id) from application);");
-		if (applicationStatus.equals("open") && status.equalsIgnoreCase("open")) {
-			updateTable(
-					"UPDATE application set decision=null, answers=null, status='open' where id=(SELECT max(id) from application);");
-		} else if (applicationStatus.equals("open")) {
+		if (categoryName.equals("ProductSelection") || categoryName.equals("ProductDetails")) {
 			updateTable(
 					"UPDATE application set decision=null, answers=null, status='closed' where id=(SELECT max(id) from application);");
+		} else {
+			updateTable(
+					"UPDATE application set decision=null, answers=null, status='open' where id=(SELECT max(id) from application);");
 		}
-		closeDatabseConnection();
 	}
 }

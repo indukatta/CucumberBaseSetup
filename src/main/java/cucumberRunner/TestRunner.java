@@ -12,9 +12,9 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
 		features = "feature-files/"
 		, glue = "lending/"
-		, tags = {"@PreciseInputbox"}
-//		, tags = {"@BusinessPremisesOptions"}
-//		, dryRun=true, tags = {"@PreciseInputbox"}
+//		, tags = {"@DeclineOffer, @FinalOffer, @PreciseInputbox, @RemindmeLater, @SuitableOffer, @UserDecline"}
+		, tags = {"@AdverseConditionsFlow"}
+//		, dryRun=true, tags = {"@AdverseConditionsFlow"}
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 	
@@ -24,7 +24,7 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 	}
 	@AfterSuite
 	public void teardown() {
-		closeApplication();
+		closeApplication();	
 	}
 	
 	public static void main1(String[] args) {

@@ -5,6 +5,7 @@ import static com.factory.mobile.driver.AppiumDriverManager.*;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
+import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -13,6 +14,10 @@ import lending.overdrafts.pre_TnC.CommonLibrary;
 import lending.overdrafts.pre_TnC.CommonStepDefinitions;
 
 public class TailorOffer extends CommonLibrary {
+	public static String hint;
+	public static String dailyFee;
+	public static String monthlyFee;
+	public static String feeAndAIR;
 
 	@Then("^verify that Tailor Offer screen is visible$")
 	public void verify_that_Tailor_Offer_screen_is_visible() {
@@ -45,29 +50,31 @@ public class TailorOffer extends CommonLibrary {
 	public void verify_that_max_suitable_amount_is_displayed_on_Trailor_Offer_screen(String arg1) {
 		setStepName("Then");
 		findByAny(AmountOfBorrowing.amtOfBorrowingMax).as("Suitable Offer Max Amount")
-				.verifyEqualsTo(arg1 + commaSeparatedNumber(persistentValue.get("SuitableOfferAmt")));
+				.verifyEqualsTo(arg1 + commaSeparatedNumber(persistentValue.get("maxAmount")));
 	}
 
-	@Then("^verify that \"([^\"]*)\" is displayed in rate and feed section$")
-	public void verify_that_is_displayed_in_rate_and_feed_section(String arg1) {
-		setStepName("Then");
-		findByAny(AmountOfBorrowing.monthyFee).as("Suitable Offer Fee").verifyContains(arg1);
+	@Then("^verify that daily, monthly and AIR fee and rate are displayed correctly$")
+	public void verify_that_daily_monthly_and_AIR_fee_and_rate_are_displayed_correctly(DataTable expected) {
+		findByAny(feeAndAIR).verifyAllEqualsTo(expected);
 	}
-	
+
 	@When("^user moves slider to (\\d+) percent of maximum value on Tailor Offer screen$")
 	public void user_moves_slider_to_percent_of_maximum_value_on_Tailor_Offer_screen(float arg1) {
 		setStepName("Then");
-		findByAny(AmountOfBorrowing.amtOfBorrowingSlider).setValue(arg1/100);
+		findByAny(AmountOfBorrowing.amtOfBorrowingSlider).setValue(arg1 / 100);
 		sleep(1000);
 		captureScreenshot();
 		String amount = findByAny(AmountOfBorrowing.amtOfBorrowingInput).getText();
 		setAmountAndFeeinPersistentValue(amount);
 	}
+
 	@Then("^verify that fee has calculated correctly on Tailor Offer screen$")
 	public void verify_that_fee_has_calculated_correctly_on_Tailor_Offer_screen() {
 		setStepName("Then");
-		findByAny(AmountOfBorrowing.monthyFee).as("Daily Fee").verifyContains(persistentValue.get("DailyFee"));
-		findByAny(AmountOfBorrowing.monthyFee).as("Monthly Fee").verifyContains(persistentValue.get("MonthlyFee"));
+		findByAny(dailyFee).as("Daily Fee")
+				.verifyContains("Daily fee £" + persistentValue.get("dailyFee"));
+		findByAny(monthlyFee).as("Monthly Fee")
+				.verifyContains("Monthly fee max £" + persistentValue.get("monthlyFee"));
 	}
 
 	@When("^user clicks on Suitable Amount input box to open keyboard on Tailor Offer screen$")
@@ -75,8 +82,6 @@ public class TailorOffer extends CommonLibrary {
 		setStepName("Then");
 		findByAny(AmountOfBorrowing.amtOfBorrowingInput).click();
 		findByAny(AmountOfBorrowing.done).isDisplayed();
-		findByAny(AmountOfBorrowing.amtOfBorrowingInput)
-				.sendKeys((Integer.parseInt(persistentValue.get("SuitableOfferAmt")) - 50) + "");
 	}
 
 	@Then("^user clicks on Done button on Input keypad screen$")
@@ -89,30 +94,25 @@ public class TailorOffer extends CommonLibrary {
 		setAmountAndFeeinPersistentValue(amount);
 	}
 
-	private void setAmountAndFeeinPersistentValue(String amount) {
+	public static void setAmountAndFeeinPersistentValue(String amount) {
 		DecimalFormat df = new DecimalFormat("#.##");
 		df.setRoundingMode(RoundingMode.DOWN);
 		amount = amount.replace(",", "").replace("£", "");
 		double amountInt = Integer.parseInt(amount);
 		double dailyRate = 1.5 / 36500;
 		String dailyFee = df.format(amountInt * dailyRate);
-		String monthlyFee = df.format(Double.parseDouble(dailyFee) * 31);
-		System.out.println("SuitableOfferAmt: " + amount + ", DailyFee: " + dailyFee + ", MonthlyFee: " + monthlyFee);
-		persistentValue.put("SuitableOfferAmt", amount);
-		persistentValue.put("DailyFee", dailyFee);
-		persistentValue.put("MonthlyFee", monthlyFee);
+		String monthlyFee = df.format(Float.parseFloat(dailyFee) * 31);
+		System.out.println("sliderAmount: " + amount + ", DailyFee: " + dailyFee + ", MonthlyFee: " + monthlyFee);
+		persistentValue.put("sliderAmount", amount);
+		persistentValue.put("dailyFee", dailyFee);
+		persistentValue.put("monthlyFee", monthlyFee);
 	}
-
-	public static void main(String[] args) {
+	
+	public static void setMaximumAmount(String amount) {
 		DecimalFormat df = new DecimalFormat("#.##");
 		df.setRoundingMode(RoundingMode.DOWN);
-		String amount = "3400";
 		amount = amount.replace(",", "").replace("£", "");
-		double amountInt = Integer.parseInt(amount);
-		double dailyRate = 1.5 / 36500;
-		String dailyFee = df.format(amountInt * dailyRate);
-		String monthlyFee = Double.parseDouble(dailyFee) * 31 + "";
-		System.out.println("SuitableOfferAmt: " + amount + "DailyFee: " + dailyFee + ", MonthlyFee: " + monthlyFee);
+		persistentValue.put("maxAmount", amount);
 	}
 
 }

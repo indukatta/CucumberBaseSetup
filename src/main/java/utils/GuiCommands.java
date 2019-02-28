@@ -42,10 +42,10 @@ public class GuiCommands {
     //Package private Click Method
     protected void click (MobileElement element) {
         try{
-            synchElement(element);
-            scrollDown(element);
+//            synchElement(element);
+//            scrollDown(element);
             element.click();
-            reportPass("Clicked on element "+element);
+//            reportPass("Clicked on element "+element);
 //            findByAny(element).click();
             
         }

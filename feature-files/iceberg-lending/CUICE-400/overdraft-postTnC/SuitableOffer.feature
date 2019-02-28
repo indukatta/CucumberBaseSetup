@@ -44,7 +44,10 @@ Feature: Verify all functionalities related to Suitable Offer screen, it covers 
     Then verify that header "Select the amount you would like to borrow" is displayed on Tailor Offer screen
     Then verify that min default value "£100" is displayed on Tailor Offer screen
     Then verify that max "Max £" suitable amount is displayed on Trailor Offer screen
-    Then verify that "Daily fee £0.00 Monthly fee max £0.00 Annual Interest Rate 10.65%" is displayed in rate and feed section
+    Then verify that daily, monthly and AIR fee and rate are displayed correctly
+      | Daily fee £0.00             |
+      | Monthly fee max £0.00       |
+      | Annual Interest Rate 10.65% |
     Then verify that continue button is enabled
 
   @Sprint7

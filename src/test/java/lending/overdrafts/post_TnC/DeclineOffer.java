@@ -27,9 +27,9 @@ public class DeclineOffer extends CommonLibrary {
 	}
 
 	@Then("^verify that Decline Offer alert image is displayed$")
-	public void verify_that_Decline_Offer_alert_image_text_is_displayed(String expected) {
+	public void verify_that_Decline_Offer_alert_image_is_displayed() {
 		setStepName("Then");
-		findByAny(alertTitleLabel).verifyEqualsTo(expected);
+		findByAny(alertImageView1).isDisplayed();
 	}
 
 	@Then("^verify that Decline Offer title text \"([^\"]*)\" is displayed$")

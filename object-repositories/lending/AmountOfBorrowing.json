@@ -6,26 +6,23 @@
 		"accessibility id": "number_question_text_field"
 	},
 	"monthyFee": {
-		"accessibility id": "number_question_fees_label"
+		"accessibility id": "number_question_fees_label_0"
 	},
 	"screenEAR": {
-		"accessibility id": "number_question_fees_label"
+		"accessibility id": "number_question_fees_label_1"
 	},
+	
 	"amtOfBorrowingMax": {
 		"accessibility id": "number_question_max_label"
-	}
 	},
 	"desclaimer": {
 		"accessibility id": "number_question_footer_label"
-	}
 	},
 	"cancel": {
 		"accessibility id": "Cancel"
-	}
 	},
 	"hint": {
 		"xpath": "//XCUIElementTypeStaticText[contains(@name,\"Please enter a value from\")]"
-	}
 	},
 	"done": {
 		"accessibility id": "Done"

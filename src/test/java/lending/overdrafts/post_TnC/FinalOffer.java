@@ -94,14 +94,14 @@ public class FinalOffer extends CommonLibrary {
 	public void verify_that_selected_suitable_offer_amount_is_displayed_on_Final_Offer_screen() {
 		setStepName("Then");
 		captureScreenshot();
-		findByAny(finalOfferAmt).verifyEqualsTo("£"+commaSeparatedNumber(persistentValue.get("SuitableOfferAmt"))+".00");
+		findByAny(finalOfferAmt).verifyEqualsTo("£"+commaSeparatedNumber(persistentValue.get("sliderAmount"))+".00");
 	}
 
 	@Then("^verify that correct rate has been calculated on Final Offer screen$")
 	public void verify_that_correct_rate_has_been_calculated_on_Final_Offer_screen() {
 		setStepName("Then");
-		findByAny(finalOfferFee).verifyContains(persistentValue.get("DailyFee"));
-		findByAny(finalOfferFee).verifyContains(persistentValue.get("MonthlyFee"));
+		findByAny(finalOfferFee).verifyContains(persistentValue.get("dailyFee"));
+		findByAny(finalOfferFee).verifyContains(persistentValue.get("monthlyFee"));
 	}
 
 }

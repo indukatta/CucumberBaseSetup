@@ -4,10 +4,13 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import lending.overdrafts.pre_TnC.CommonLibrary;
 
+import static com.factory.mobile.driver.AppiumDriverManager.setStepName;
+import static com.factory.services.wrapper.RestAssuredManager.*;
 import static com.factory.mobile.driver.AppiumDriverManager.*;
-
+import static com.factory.data.manager.Database.*;
 public class UserDecline extends CommonLibrary {
 	public static String userDeclineTitle;
+	public static String userDeclineBody;
 	public static String userDeclineWhatNext;
 	public static String userDeclineOptions;
 	public static String userDeclineConsider;
@@ -23,6 +26,19 @@ public class UserDecline extends CommonLibrary {
 		findByAny(userDeclineTitle).isDisplayed();
 	}
 	
+	@Then("^verify that the Iceberg Decline screen is displayed$")
+	public void verify_that_the_Iceberg_Decline_screen_is_displayed() {
+		setStepName("Then");
+		captureScreenshot();
+		findByAny(userDeclineBody).isDisplayed();
+	}
+	
+	@Then("^verify that \"([^\"]*)\" decision is coming in PSE response$")
+	public void verify_that_decision_is_comming_in_PSE_response(String decision) {
+		setStepName("Then");
+		String pseDecision = fetchSingleValue("select decision from application where id = (SELECT max(id) from application);");
+		verify(pseDecision).contains(decision);
+	}
 	@Given("^that user is on User Decline screen$")
 	public void that_user_is_on_User_Decline_screen() {
 		setStepName("Given");
