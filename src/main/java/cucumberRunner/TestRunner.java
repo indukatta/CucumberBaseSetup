@@ -2,6 +2,8 @@ package cucumberRunner;
 
 import static com.factory.mobile.driver.AppiumDriverManager.closeApplication;
 
+import static com.factory.data.manager.Database.*;
+
 import org.apache.commons.lang3.StringUtils;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -26,8 +28,8 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 	public void teardown() {
 		closeApplication();	
 	}
-	
 	public static void main1(String[] args) {
+		System.out.println(encrypt("AshokDikshit"));
 		String s = Thread.currentThread().getStackTrace()[1].getClassName();
 		String[] r = StringUtils.capitalize(s).split("(?=\\p{Upper})");
 		System.out.println(r.length);
