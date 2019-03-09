@@ -2,15 +2,18 @@ package lending.overdrafts.pre_TnC;
 
 import static com.factory.data.manager.Database.fetchSingleValue;
 import static com.factory.data.manager.Database.updateTable;
-import static com.factory.data.manager.Database.closeDatabseConnection;
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 import static com.factory.services.wrapper.RestAssuredManager.*;
 
 import java.text.DecimalFormat;
-import java.util.Collection;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import org.json.JSONObject;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
@@ -21,10 +24,13 @@ public class CommonLibrary {
 	public static IOSDriver<MobileElement> driver;
 	public static boolean alreadyLoggedIn = false;
 	public static boolean deleteApplication = true;
-	public static String applicationStatus = "";
+	public static String applicationID = "";
 	public static String categoryName = "";
 	public static More more = null;
 
+	public CommonLibrary() {
+		
+	}
 	public void functionNotImplemented() {
 		System.out.println(Thread.currentThread().getStackTrace()[2].getMethodName() + " is not implemented yet.");
 		reportInfo(Thread.currentThread().getStackTrace()[2].getMethodName() + " is not implemented yet.");
@@ -37,7 +43,13 @@ public class CommonLibrary {
 			e.printStackTrace();
 		}
 	}
-
+	public static String modifiedDate(int days){
+		LocalDateTime newDate =  LocalDateTime.now().plusDays(days);
+		String dateStr = newDate.getDayOfMonth()+" "+newDate.getMonth()+" "+newDate.getYear();
+		Date date = new Date(dateStr);
+		SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yyyy");
+		return sdf.format(date);
+	}
 	protected static String commaSeparatedNumber(String number) {
 		DecimalFormat myFormatter = new DecimalFormat("#,###");
 		String output = myFormatter.format(Integer.parseInt(number));
@@ -54,15 +66,18 @@ public class CommonLibrary {
 		}
 	}
 
-	public static void setApplicationStatus() {
-		applicationStatus = fetchSingleValue(
-				"select status from application where id=(SELECT max(id) from application);");
-		if (categoryName.equals("ProductSelection") || categoryName.equals("ProductDetails")) {
+	public static void updateApplicationDate() {
+		String pseDecision = fetchSingleValue("select psedecision from application where id=(SELECT max(id) from application);");
+		if(pseDecision != null && !pseDecision.equals("null")) {
+			JSONObject pseDecisionObj = new JSONObject(pseDecision);
+			String dateTime = pseDecisionObj.getString("datetime");
 			updateTable(
-					"UPDATE application set decision=null, answers=null, status='closed' where id=(SELECT max(id) from application);");
-		} else {
+					"update application set psedecision=replace(psedecision::TEXT,'\""+dateTime+"\"','\"2018-01-01T00:00:00.000Z\"')::json;");
+		}else {
 			updateTable(
-					"UPDATE application set decision=null, answers=null, status='open' where id=(SELECT max(id) from application);");
+					"update application set datemodified='2018-01-01 11:42:20.712+00';");
+			
 		}
 	}
+
 }

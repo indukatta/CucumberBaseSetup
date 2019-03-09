@@ -1,6 +1,6 @@
 {
 	"screenTitle": {
-		"accessibility id": "lending_navigation_bar_title"
+		"accessibility id": "Borrowing"
 	},
 	"screenQuestion": {
 		"accessibility id": "lending_question_title"
@@ -15,7 +15,7 @@
 		"accessibility id": "More"
 	},
 	"continueButton": {
-		"accessibility id": "Continue"
+		"accessibility id": "Next"
 	},
 	"yesButton": {
 		"accessibility id": "Yes"

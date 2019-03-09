@@ -35,7 +35,9 @@ public class UserDecline extends CommonLibrary {
 	@Then("^verify that \"([^\"]*)\" decision is coming in PSE response$")
 	public void verify_that_decision_is_comming_in_PSE_response(String decision) {
 		setStepName("Then");
-		String pseDecision = fetchSingleValue("select decision from application where id = (SELECT max(id) from application);");
+		String applicationID = fetchSingleValue("SELECT max(id) from application;");
+		System.out.println("applicationID: "+applicationID);
+		String pseDecision = fetchSingleValue("select psedecision from application where id = (SELECT max(id) from application);");
 		verify(pseDecision).contains(decision);
 	}
 	@Given("^that user is on User Decline screen$")

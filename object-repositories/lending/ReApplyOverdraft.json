@@ -1,0 +1,18 @@
+{
+	"screenHeading": {
+		"accessibility id": "decline_title_label"
+	},
+	"screenBody": {
+		"accessibility id": "decline_body_label"
+	},
+	"whatNext": {
+		"accessibility id": "decline_what_next_label"
+	},
+	"declineFooter": {
+		"accessibility id": "decline_footer_label"
+	},
+	"declineNotNow": {
+		"accessibility id": "decline_not_now_button"
+	}
+	
+}

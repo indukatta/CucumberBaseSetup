@@ -25,7 +25,7 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
     And user clicks on No button on lending question screen
     And user clicks on No button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    Then verify that the Final Offer screen is displayed
+    Then verify that Final Offer screen is displayed
     
   Scenario: CUICE-553 >> Test if content on Final Offer screen are correct
     Given that user is on the Final Offer screen

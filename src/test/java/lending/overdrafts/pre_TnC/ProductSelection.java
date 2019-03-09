@@ -1,6 +1,8 @@
 package lending.overdrafts.pre_TnC;
 
 import static com.factory.mobile.driver.AppiumDriverManager.*;
+import static com.factory.services.wrapper.RestAssuredManager.getLastValueFromJSON;
+import static com.factory.services.wrapper.RestAssuredManager.httpGet;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -19,15 +21,15 @@ public class ProductSelection extends CommonLibrary {
 	@Given("^that user is on Product Selection screen$")
 	public void that_user_is_on_Product_Selection_screen() throws Throwable {
 		setStepName("Given");
-//		findByAny(screenTitle).isDisplayed();
+		findByAny(screenTitle).isDisplayed();
 		findByAny(productName).isDisplayed();
 	}
 
 	@Then("^verify that Product Selection screen is displayed$")
 	public void verify_Product_Details_screen_is_displayed() throws Throwable {
 		setStepName("Then");
-		captureScreenshot("ProductSelection");
-//		findByAny(screenTitle).isDisplayed();
+		captureScreenshot();
+		findByAny(screenTitle).isDisplayed();
 		findByAny(productName).isDisplayed();
 	}
 
@@ -40,11 +42,19 @@ public class ProductSelection extends CommonLibrary {
 
 	@When("^user clicks on Apply button on Product Selection$")
 	public void user_clicks_on_Apply_button_on_Product_Selection_screen() throws Throwable {
-		if (!applicationStatus.equals("open")) {
-			setStepName("When");
-			findByAny(buttonApply).click();
-			sleep(3000);
-		}
+		setStepName("When");
+		findByAny(buttonApply).click();
+		sleep(3000);
+		httpGet("product-categories", false);
+		applicationID = getLastValueFromJSON("data/applications/id").toString();
+		System.out.println("applicationID: "+applicationID);
+	}
+	
+	@When("^verify that \"([^\"]*)\" button is shown on product selection screen$")
+	public void verify_that_Apply_or_Re_Apply_button_is_shown_on_product_selection_screen(String expected) throws Throwable {
+		setStepName("When");
+		findByAny(buttonApply).verifyEqualsTo(expected);
+		sleep(3000);
 	}
 
 	@Then("^verify Select Products description \"([^\"]*)\" on screen$")

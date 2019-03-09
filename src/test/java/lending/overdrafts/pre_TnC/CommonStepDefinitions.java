@@ -2,8 +2,6 @@ package lending.overdrafts.pre_TnC;
 
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 
-import java.util.Collection;
-
 import com.factory.mobile.driver.AppiumDriverBase.AppType;
 
 import cucumber.api.Scenario;
@@ -42,7 +40,6 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public static void that_user_is_on_the_Credit_Management_screen() throws Throwable {
 		setStepName("Given");
 		launchMobileApplication(AppType.IOSAPP, "0.0.0.0:4723");
-		setApplicationStatus();
 //		if (!alreadyLoggedIn) {
 			driver = (IOSDriver<MobileElement>) getAppiumDriverMobileElement();
 			Login login = new Login(driver);
@@ -90,6 +87,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public void that_category_is_added_for_below_sceanios(String category) {
 		categoryName = category;
 		addTestCategory(category);
+		updateApplicationDate();
 	}
 
 	@When("^user clicks on continue button on the screen$")
@@ -183,4 +181,5 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public void captures_updated_screenshot_for_execution_results() {
 		captureScreenshot();
 	}
+	
 }

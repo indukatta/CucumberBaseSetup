@@ -3,16 +3,16 @@
 		"accessibility id": "tandc_summary_label"
 	},
 	"screenTitle": {
-		"accessibility id": "lending.navigation.bar_title_accessibility_id"
+		"accessibility id": "Borrowing"
 	},
 	"tncContent": {
 		"accessibility id": "tandc_webView"
 	},
 	"tncAccept": {
-		"accessibility id": "tandc_accept_button"
+		"accessibility id": "lending_primary_button"
 	},
 	"tncReject": {
-		"accessibility id": "tandc_reject_button"
+		"accessibility id": "lending_secondary_button"
 	},
 	"processingInfo": {
 		"accessibility id": "In progress"
