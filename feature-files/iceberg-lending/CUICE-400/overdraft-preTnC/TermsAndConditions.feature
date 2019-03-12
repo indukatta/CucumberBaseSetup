@@ -1,10 +1,10 @@
-@Regression @Sprint6
+@TermsAndConditions @Regression
 Feature: Verify all functionalities related to Amount of Borrowing No screen, it covers CUICE-552, CUICE-553
 
   Background: This is to add category to below scenarios
     Given that category "TermsAndConditions" is added for below scenarios
 
-  @TermsAndConditions @Sprint6
+  @Sprint6
   Scenario: CUICE-552 >> Prerequisite: Test if user able to view  the Terms and Conditions screen
     Given that user is on the Credit Management screen
     Then close existing open application for the next scenario
@@ -28,13 +28,13 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     When user clicks on Yes button on lending question screen
     Then verify that Terms and Conditions screen is displayed
 
-  @TermsAndConditions @Sprint6
+  @Sprint6
   Scenario: CUICE-552 >> Test that CTA are not sticky to the screen and not visible at top
     Given that user is on the Terms and Conditions screen
     Then verify that Accept button is not visible
     Then verify that Reject button is not visible
 
-  @TermsAndConditions @Sprint6
+  @Sprint6
   Scenario: CUICE-553 >> Test if CTA and help link is enabled when user scroll to bottom of screen
     Given that user is on the Terms and Conditions screen
     When user scroll down to bottom of screen
@@ -43,7 +43,7 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     Then verify that Accept button is pre selected and enabled
     Then verify that Reject button is not pre selected and enabled
 
-  @TermsAndConditions @Sprint6
+  @Sprint6
   Scenario: CUICE-553 >> Click on No button and verify that application is not cancelled and user can't create new application
     Given that user is on the Terms and Conditions screen
     When user clicks on Reject button on Terms and Conditions screen
@@ -51,7 +51,7 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     Then verify that Terms and Conditions screen is displayed
     
 
-  @TermsAndConditions @Sprint6
+  @Sprint6
   Scenario: CUICE-553 >> Click on Yes button and verify that application is closed and user can create new application
     Given that user is on the Terms and Conditions screen
     When user clicks on Reject button on Terms and Conditions screen
