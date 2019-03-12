@@ -71,11 +71,13 @@ public class CommonLibrary {
 		if(pseDecision != null && !pseDecision.equals("null")) {
 			JSONObject pseDecisionObj = new JSONObject(pseDecision);
 			String dateTime = pseDecisionObj.getString("datetime");
-			updateTable(
-					"update application set psedecision=replace(psedecision::TEXT,'\""+dateTime+"\"','\"2018-01-01T00:00:00.000Z\"')::json;");
+			String message = "update application set psedecision=replace(psedecision::TEXT,'\""+dateTime+"\"','\"2018-01-01T00:00:00.000Z\"')::json;";
+			updateTable(message);
+			reportPass(message);
 		}else {
-			updateTable(
-					"update application set datemodified='2018-01-01 11:42:20.712+00';");
+			String message = "update application set datemodified='2018-01-01 11:42:20.712+00';";
+			updateTable(message);
+			reportPass(message);
 			
 		}
 	}

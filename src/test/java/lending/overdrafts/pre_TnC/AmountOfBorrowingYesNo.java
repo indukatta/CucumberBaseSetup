@@ -11,7 +11,7 @@ public class AmountOfBorrowingYesNo extends CommonLibrary {
 	@Then("^verify that Amount of Borrowing YesNo screen is displayed$")
 	public void verify_that_Amount_of_Borrowing_YesNo_screen_is_displayed() {
 		setStepName("Then");
-		captureScreenshot("AmountOfBorrowingYesNo");
+		captureScreenshot();
 		findByAny(CommonStepDefinitions.screenTitle).isDisplayed();
 		findByAny(CommonStepDefinitions.screenQuestion).isDisplayed();
 	}

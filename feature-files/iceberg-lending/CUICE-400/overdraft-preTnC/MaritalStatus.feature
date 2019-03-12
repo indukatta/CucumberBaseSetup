@@ -7,6 +7,7 @@ Feature: Verify all functionalities related to Marital Status screen. It covers 
   @Sprint3 @Sprint5
   Scenario: CUICE-6175 >> ATC-001: Test if user able to view  the Marital Status screen
     Given that user is on the Credit Management screen
+    Then close existing open application for the next scenario
     When user clicks on the Credit & Lending link
     And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen

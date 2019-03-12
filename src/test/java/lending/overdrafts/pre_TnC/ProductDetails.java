@@ -8,7 +8,6 @@ import cucumber.api.java.en.Then;
 public class ProductDetails extends CommonLibrary {
 
 	public static String screenTitle;
-	public static String backButton;
 	public static String productName;
 	public static String productDescription;
 	public static String featuresAndBenefitsHeading;
@@ -131,7 +130,7 @@ public class ProductDetails extends CommonLibrary {
 	@Then("^user clicks on Back button on Product Details screen$")
 	public void user_clicks_on_Back_button_on_Product_Details_screen() throws Throwable {
 		setStepName("Then");
-		findByAny(backButton).click();
+		findByAny(CommonStepDefinitions.backButton).click();
 		sleep(2000);
 	}
 }

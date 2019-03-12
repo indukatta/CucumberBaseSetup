@@ -239,7 +239,7 @@ public class Login extends GuiCommands {
         clearText(passwordFieldBox);
         writePassword(password);
         clickpasswordLoginButton();
-        click(dontAllowNotification);
+//        click(dontAllowNotification);
     }
 
     public void setLogin(String user){

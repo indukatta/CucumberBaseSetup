@@ -6,6 +6,7 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
 
   Scenario: CUICE-9953 >> Prerequisite: Test if user able to view  the Terms and Conditions screen
     Given that user is on the Credit Management screen
+    Then close existing open application for the next scenario
     When user clicks on the Credit & Lending link
     And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen
@@ -25,7 +26,7 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
     And user clicks on No button on lending question screen
     And user clicks on No button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    Then verify that Final Offer screen is displayed
+    Then verify that the Final Offer screen is displayed
     
   Scenario: CUICE-553 >> Test if content on Final Offer screen are correct
     Given that user is on the Final Offer screen

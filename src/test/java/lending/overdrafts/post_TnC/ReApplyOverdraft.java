@@ -18,6 +18,11 @@ public class ReApplyOverdraft extends CommonLibrary {
 		captureScreenshot();
 		findByAny(screenHeading).isDisplayed();
 	}
+	@Then("^close existing open application for the next scenario$")
+	public void close_existing_open_application_for_the_next_scenario() {
+		setStepName("Then");
+		updateApplicationDate();
+	}
 
 	@Then("^verify that screen body \"([^\"]*)\" displayed on the screen$")
 	public void verify_that_screen_body_displayed_on_the_screen(String expected) {

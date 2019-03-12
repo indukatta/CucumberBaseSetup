@@ -6,6 +6,7 @@ Feature: Verify all functionalities related to Product Details screen, it will c
 
   Scenario: CUICE-542 >> Pre-requisite: Login and open Product Details screen
     Given that user is on the Credit Management screen
+    Then close existing open application for the next scenario
     When user clicks on the Credit & Lending link
     When user clicks on find out more link
     Then verify that Product Details screen is displayed
@@ -41,7 +42,7 @@ Feature: Verify all functionalities related to Product Details screen, it will c
 
   Scenario: CUICE-6194 >> ATC-001: Verify static overdraft range on Product Details screen
     Given user is on Product Details screen
-    Then verify overdraft range "Overdraft between 1.00 GBP - 10,000.00 GBP" is displayed on product details screen
+    Then verify overdraft range "Overdraft between £1.00 - £10,000.00" is displayed on product details screen
 
   Scenario: CUICE-3914 >> ATC-001: Verify static warning message on Product Details screen
     Given user is on Product Details screen

@@ -7,6 +7,7 @@ Feature: Verify all functionalities related to Amount of Borrowings Yes No scree
   @Sprint4 @Sprint5
   Scenario: CUICE-6171 >> Prerequisite: Test if user able to view  the Amount of Borrowings Yes No screen
     Given that user is on the Credit Management screen
+    Then close existing open application for the next scenario
     When user clicks on the Credit & Lending link
     When user clicks on Apply button on Product Selection
     Then verify that Amount of Borrowing YesNo screen is displayed
@@ -34,12 +35,6 @@ Feature: Verify all functionalities related to Amount of Borrowings Yes No scree
     Then verify that No button is selected on lending question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/AmountOfBorrowingNo" is equals to "data/application/answers" except "dateModified" key
-    When user clicks on No button on lending question screen
-    Then verify that Amount of Borrowing No screen is displayed
-    And user clicks on back button on lending question screen
-    Then verify that No button is selected on lending question screen
-    When user call rest end point "configuration" to get and save the response
-    Then verify that expected json "lending-QnA/AmountOfBorrowingNo" is equals to "data/application/answers" except "dateModified" key
 
   @Sprint4 @Sprint5
   Scenario: CUICE-6171 >> ATC-004: Test if save and return is working when user clicks on Yes button
@@ -51,12 +46,6 @@ Feature: Verify all functionalities related to Amount of Borrowings Yes No scree
   @Sprint5
   Scenario: CUICE-6171,CUICE-544 >> ATC-005: Test if save and return is working when user clicks on Yes button
   	Given that category "SaveAndReturnPreTnC" is added for below scenarios
-    Then verify that Yes button is selected on lending question screen
-    When user call rest end point "configuration" to get and save the response
-    Then verify that expected json "lending-QnA/AmountOfBorrowingYes" is equals to "data/application/answers" except "dateModified" key
-    When user clicks on Yes button on lending question screen
-    Then verify that Amount of Borrowing screen is displayed
-    And user clicks on back button on lending question screen
     Then verify that Yes button is selected on lending question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/AmountOfBorrowingYes" is equals to "data/application/answers" except "dateModified" key

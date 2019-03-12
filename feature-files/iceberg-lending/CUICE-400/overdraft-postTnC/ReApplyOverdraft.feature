@@ -1,8 +1,9 @@
- @Regression
+@Regression
 Feature: Verify all functionalities related to Apply and Re Apply within and post 30 and 60 days as applicable
 
   Background: This is to add category to below scenarios
     Given that category "ReApplyOverdraft" is added for below scenarios
+    Then close existing open application for the next scenario
 
   Scenario: CUICE-9953 >> Test if user able to view 'LAST SAVED Q&A' for No PSE decision -> logic on datemodified -> within 30 days
     Given that user is on the Credit Management screen
@@ -28,6 +29,7 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     Given that user is on the Credit Management screen
     And user clicks on the Credit & Lending link
     Then verify that SustainabilityCheck screen is displayed
+    Then close existing open application for the next scenario
 
   Scenario: CUICE-9953 >> Test if user able to view 'Re Apply' on product selection for PSE decision->declined->within 60 days
     Given that user is on the Credit Management screen
@@ -159,7 +161,8 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     Then verify that Re-apply Overdraft screen is displayed
     Then verify that screen body "You recently applied for an overdraft. You can re-apply in 1 days." displayed on the screen
     Then verify that date in "Re-apply from" component displays 1 days from today on the screen
-@ReApplyOverdraft
+
+  @ReApplyOverdraft
   Scenario: CUICE-9953 >> Test if user able to view 'Re Apply' on product selection for PSE decision->declined-> Sustainability Yes->within 60 days
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link

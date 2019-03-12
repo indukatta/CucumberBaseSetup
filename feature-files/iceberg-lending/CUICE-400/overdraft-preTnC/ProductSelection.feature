@@ -6,6 +6,7 @@ Feature: Verify all functionalities related to Product Selection screen. It will
 	
   Scenario: CUICE-540 >> ATC-001: Test if user is able to view the product categories screen if not already taken out
     Given that user is on the Credit Management screen
+    Then close existing open application for the next scenario
     When user clicks on the Credit & Lending link
     Then verify that Product Selection screen is displayed
   

@@ -3,6 +3,7 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
 
   Background: This is to add category to below scenarios
     Given that category "AdverseConditionsFlow" is added for below scenarios
+    Then close existing open application for the next scenario
 
   @AdverseConditionsFlow
   Scenario: CUICE-9953 >> Test if user able to view the Decline screen for refer decision from PSE with Sustainability No

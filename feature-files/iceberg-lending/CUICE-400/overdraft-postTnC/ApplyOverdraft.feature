@@ -3,6 +3,7 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
 
   Background: This is to add category to below scenarios
     Given that category "ApplyOverdraft" is added for below scenarios
+    Then close existing open application for the next scenario
 
   Scenario: CUICE-9953 >> Test if user able to view 'Apply' on product selection for No PSE decision->datemodified of application > more than 30 days
     Given that user is on the Credit Management screen

@@ -7,6 +7,7 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
   @Sprint5
   Scenario: CUICE-6171 >> Prerequisite: Test if user able to view  the Borrowings Yes No screen
     Given that user is on the Credit Management screen
+    Then close existing open application for the next scenario
     When user clicks on the Credit & Lending link
     And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen
@@ -28,7 +29,6 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
 
   @Sprint5
   Scenario: CUICE-6171 >> Logout and Login to see if values are saved for an application
-    When user clicks on the More and Logout link
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
     Then verify that SustainabilityCheck screen is displayed
@@ -61,7 +61,6 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     
     @Sprint5
   Scenario: CUICE-6171 >> Exit the application and Login to see if values are saved for an application
-    When user exit the iceberg application and relaunch
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
     Then verify that SustainabilityCheck screen is displayed

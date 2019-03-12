@@ -7,6 +7,7 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it c
   @Sprint3 @Sprint5
   Scenario: CUICE-6173 >> Prerequisite: Test if user is able to view "What is the main purpose of borrowing" header and "Borrowing" title
     Given that user is on the Credit Management screen
+    Then close existing open application for the next scenario
     When user clicks on the Credit & Lending link
     And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen

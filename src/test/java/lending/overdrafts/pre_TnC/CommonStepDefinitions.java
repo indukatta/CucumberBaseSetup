@@ -87,7 +87,6 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public void that_category_is_added_for_below_sceanios(String category) {
 		categoryName = category;
 		addTestCategory(category);
-		updateApplicationDate();
 	}
 
 	@When("^user clicks on continue button on the screen$")
@@ -154,6 +153,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 		setStepName("Then");
 		captureScreenshot();
 		findByAny(noButton).verifyAttributesEqualsTo("value", "1");
+		sleep(5000);
 	}
 
 	@When("^user clicks on No button on lending question screen$")

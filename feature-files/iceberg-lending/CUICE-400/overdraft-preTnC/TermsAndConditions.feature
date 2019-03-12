@@ -7,6 +7,7 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
   @TermsAndConditions @Sprint6
   Scenario: CUICE-552 >> Prerequisite: Test if user able to view  the Terms and Conditions screen
     Given that user is on the Credit Management screen
+    Then close existing open application for the next scenario
     When user clicks on the Credit & Lending link
     And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen

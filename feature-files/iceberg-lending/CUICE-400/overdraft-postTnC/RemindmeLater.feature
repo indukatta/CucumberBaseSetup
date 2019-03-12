@@ -7,6 +7,7 @@ Feature: Verify all functionalities related to Remind me Later screen, it covers
   @Sprint6
   Scenario: CUICE-9953 >> Prerequisite: Test if user able to view  the Remind me Later screen
     Given that user is on the Credit Management screen
+    Then close existing open application for the next scenario
     When user clicks on the Credit & Lending link
     And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen
