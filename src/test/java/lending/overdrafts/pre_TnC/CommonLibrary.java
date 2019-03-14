@@ -78,7 +78,6 @@ public class CommonLibrary {
 			String message = "update application set datemodified='2018-01-01 11:42:20.712+00';";
 			updateTable(message);
 			reportPass(message);
-			
 		}
 	}
 

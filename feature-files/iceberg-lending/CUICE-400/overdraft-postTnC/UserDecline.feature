@@ -4,7 +4,7 @@ Feature: Verify all functionalities related to Decline Offer screen, it covers C
   Background: This is to add category to below scenarios
     Given that category "UserDecline" is added for below scenarios
 
-  @Sprint7 @UserDecline
+  @Sprint7
   Scenario: CUICE-9953 >> Prerequisite: Test if user able to view  the Decline Offer screen
     Given that user is on the Credit Management screen
     Then close existing open application for the next scenario
@@ -34,7 +34,7 @@ Feature: Verify all functionalities related to Decline Offer screen, it covers C
     And click on Yes button on Decline Offer screen
     Then verify that User Decline screen is displayed
     
-  @Sprint7 @UserDecline
+  @Sprint7
   Scenario: CUICE-553 >> Test if content on User Decline screen are correct
     Given that user is on User Decline screen
     Then verify that title "Sorry we didn't meet your needs" on User Decline screen is displayed

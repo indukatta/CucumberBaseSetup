@@ -28,7 +28,7 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
     And user clicks on Accept button on Terms and Conditions screen
     Then verify that the Final Offer screen is displayed
     
-  Scenario: CUICE-553 >> Test if content on Final Offer screen are correct
+  Scenario: CUICE-9953 >> Test if content on Final Offer screen are correct
     Given that user is on the Final Offer screen
     Then verify that logo is displayed on Final Offer screen
     Then verify that final offer heading "Add your overdraft" is displayed
@@ -38,18 +38,18 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/FinalOffer" is equals to "data/application/answers" except "dateModified" key
     
-  Scenario: CUICE-553 >> Test if content on Final Offer screen are correct
+  Scenario: CUICE-9953 >> Test if content on Final Offer screen are correct
     Given that user is on the Final Offer screen
     Then verify that Continue with overdraft button is pre selected
     Then verify that Not Now button is not pre selected
     
-  Scenario: CUICE-553 >> Test if content on Final Offer screen are correct
+  Scenario: CUICE-9953 >> Test if content on Final Offer screen are correct
     Given that user is on the Final Offer screen
     Then user clicks on Not Now button on Final Offer
     Then verify that Remind me Later screen is visible
     Then user clicks on back button on lending question screen
     
-  Scenario: CUICE-553 >> Test if content on Final Offer screen are correct
+  Scenario: CUICE-9953 >> Test if content on Final Offer screen are correct
     Given that user is on the Final Offer screen
     Then user clicks on Continue with overdraft button on Final Offer
     #Then verify that Overdraft TnC is visible

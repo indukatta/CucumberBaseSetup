@@ -27,8 +27,13 @@ public class GrossIncome extends CommonLibrary {
 	@Then("^verify that Gross Income header is displayed$")
 	public void verify_that_Gross_Income_header_is_displayed() {
 		setStepName("Then");
-		findByAny(CommonStepDefinitions.screenTitle).isDisplayed();
 		findByAny(CommonStepDefinitions.screenQuestion).isDisplayed();
+	}
+	
+	@Then("^verify that Gross Income description \"([^\"]*)\" on screen$")
+	public void verify_that_Gross_Income_description_on_screen(String expected) {
+		setStepName("Then");
+		findByAny(CommonStepDefinitions.screenQuestion).verifyEqualsTo(expected);
 	}
 
 	@Then("^verify that Gross Income input box is displayed$")

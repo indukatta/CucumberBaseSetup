@@ -24,7 +24,7 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it c
   Scenario: CUICE-6274 >> ATC-001: Test if user is able to view Gross Income header and other components
     Given that user is on Gross Income screen
     Then verify that Gross Income header is displayed
-    Then verify that Marital Status description "What was your personal gross income in the last year?" on screen
+    Then verify that Gross Income description "What was your personal gross income in the last year?" on screen
     And verify that Gross Income input box is displayed
     And verify that default value of Gross Income is "£0"
     And verify that continue button is disabled

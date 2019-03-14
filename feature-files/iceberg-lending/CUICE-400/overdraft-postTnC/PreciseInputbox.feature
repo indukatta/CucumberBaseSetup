@@ -1,11 +1,11 @@
 @PreciseInputbox @Regression
-Feature: Verify all functionalities related to Tailor Offer screen, it covers CUICE-9953
+Feature: Verify all functionalities related to Tailor Offer screen, it covers CUICE-8891
 
   Background: This is to add category to below scenarios
     Given that category "PreciseInputbox" is added for below scenarios
 
   @Sprint7
-  Scenario: CUICE-9953 >> Prerequisite: Test if user able to view  the Tailor Offer screen
+  Scenario: CUICE-8891 >> Prerequisite: Test if user able to view  the Tailor Offer screen
     Given that user is on the Credit Management screen
     Then close existing open application for the next scenario
     When user clicks on the Credit & Lending link
@@ -32,7 +32,7 @@ Feature: Verify all functionalities related to Tailor Offer screen, it covers CU
     Then verify that precise input box appears on the screen
 
   @Sprint7
-  Scenario: CUICE-553 >> Test if content on Tailor Offer screen are correct after tap on input box
+  Scenario: CUICE-8891 >> Test if content on Tailor Offer screen are correct after tap on input box
   	Given that user is on precise input screen
     Then verify that cancel button is displayed on top corner on the screen
     And verify that min value "£100" is displayed in input box
@@ -40,19 +40,19 @@ Feature: Verify all functionalities related to Tailor Offer screen, it covers CU
     And verify that Done button is enabled on the screen
 
   @Sprint7
-  Scenario: CUICE-553 >> Test if Done button gets disabled when user enter less than 100
+  Scenario: CUICE-8891 >> Test if Done button gets disabled when user enter less than 100
     Given that user is on precise input screen
     When user enter "90" in precise input box on the screen
     Then verify that Done button is disabled on the screen
 
   @Sprint7
-  Scenario: CUICE-553 >> Test if Done button gets disabled when user enter greater than allowed
+  Scenario: CUICE-8891 >> Test if Done button gets disabled when user enter greater than allowed
     Given that user is on precise input screen
     When user enter greater than allowed value in precise input box on the screen
     Then verify that Done button is disabled on the screen
 
   @Sprint7
-  Scenario: CUICE-553 >> Test if entered value is not appearing on tailor offer screen when user clicks on cancel
+  Scenario: CUICE-8891 >> Test if entered value is not appearing on tailor offer screen when user clicks on cancel
     Given that user is on precise input screen
     Then user clicks on cancel button on the screen
     Then verify that entered values does not displayed in input box
@@ -62,7 +62,7 @@ Feature: Verify all functionalities related to Tailor Offer screen, it covers CU
     Then verify that entered values does not displayed in input box
 
   @Sprint7
-  Scenario: CUICE-553 >> Test if slider value appears on precise input box as default value
+  Scenario: CUICE-8891 >> Test if slider value appears on precise input box as default value
     Given that user is on the Tailor Offer screen
     Then user moves slider to 40 percent of maximum value on Tailor Offer screen
     Then user tap on input box to bring the keyboard up for precise input
@@ -70,7 +70,7 @@ Feature: Verify all functionalities related to Tailor Offer screen, it covers CU
     Then verify that Done button is enabled on the screen
 
   @Sprint7
-  Scenario: CUICE-553 >> Test if precise input box value gets appeared on the Tailor Offer screen
+  Scenario: CUICE-8891 >> Test if precise input box value gets appeared on the Tailor Offer screen
     Given that user is on precise input screen
     When user enter valid allowed value in precise input box on the screen
     Then user clicks on Done button on the screen
@@ -78,7 +78,7 @@ Feature: Verify all functionalities related to Tailor Offer screen, it covers CU
     Then verify that fee has calculated correctly on Tailor Offer screen
 
   @Sprint7
-  Scenario: CUICE-553 >> Test if precise input box value gets appeared on the Final Offer screen
+  Scenario: CUICE-8891 >> Test if precise input box value gets appeared on the Final Offer screen
     Given that user is on the Tailor Offer screen
     When user clicks on continue button on the screen
     Then verify that selected suitable offer amount is displayed on Final Offer screen

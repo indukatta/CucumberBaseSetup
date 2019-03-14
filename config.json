@@ -9,8 +9,7 @@
 		"port": "4726"
 	},
 	"suite": {
-		"default": "Sprint5",
-		"sprint2": "Sprint2"
+		"default": "Sprint3"
 	},
 	"ios-app": {
 		"platformName": "iOS",

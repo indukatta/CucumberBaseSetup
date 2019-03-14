@@ -1,11 +1,11 @@
 @SuitableOffer @Regression
-Feature: Verify all functionalities related to Suitable Offer screen, it covers CUICE-9953
+Feature: Verify all functionalities related to Suitable Offer screen, it covers CUICE-10262
 
   Background: This is to add category to below scenarios
     Given that category "SuitableOffer" is added for below scenarios
 
   @Sprint7
-  Scenario: CUICE-9953 >> Prerequisite: Test if user able to view  the Suitable screen
+  Scenario: CUICE-10262 >> Prerequisite: Test if user able to view  the Suitable screen
     Given that user is on the Credit Management screen
     Then close existing open application for the next scenario
     When user clicks on the Credit & Lending link
@@ -29,7 +29,7 @@ Feature: Verify all functionalities related to Suitable Offer screen, it covers 
     Then verify that the Suitable Offer screen is displayed
 
   @Sprint7
-  Scenario: CUICE-553 >> Test if content on Suitable Offer screen are correct
+  Scenario: CUICE-10262 >> Test if content on Suitable Offer screen are correct
     Given that user is on the Suitable Offer screen
     Then verify that logo is displayed on Suitable Offer screen
     Then verify that suitable offer heading "Congratulations!" is displayed
@@ -38,7 +38,7 @@ Feature: Verify all functionalities related to Suitable Offer screen, it covers 
     Then verify that continue button is enabled
 
   @Sprint7
-  Scenario: CUICE-553 >> Test if content on Tailor Offer screen are correct
+  Scenario: CUICE-10262 >> Test if content on Tailor Offer screen are correct
     Given that user is on the Suitable Offer screen
     Then user clicks on continue button on the screen
     Then verify that Tailor Offer screen is visible
@@ -52,7 +52,7 @@ Feature: Verify all functionalities related to Suitable Offer screen, it covers 
     Then verify that continue button is enabled
 
   @Sprint7
-  Scenario Outline: CUICE-553 >> Test if rate gets changed with amount selected on Tailor Offer screen
+  Scenario Outline: CUICE-10262 >> Test if rate gets changed with amount selected on Tailor Offer screen
     Given that user is on the Tailor Offer screen
     And user moves slider to <SuitableAmount%> percent of maximum value on Tailor Offer screen
     Then verify that fee has calculated correctly on Tailor Offer screen
@@ -66,7 +66,7 @@ Feature: Verify all functionalities related to Suitable Offer screen, it covers 
       |               0 |
 
   @Sprint7
-  Scenario: CUICE-553 >> Test if rate gets changed with amount selected on Tailor Offer screen
+  Scenario: CUICE-10262 >> Test if rate gets changed with amount selected on Tailor Offer screen
     Given that user is on the Tailor Offer screen
     When user moves slider to 80 percent of maximum value on Tailor Offer screen
     When user clicks on continue button on the screen

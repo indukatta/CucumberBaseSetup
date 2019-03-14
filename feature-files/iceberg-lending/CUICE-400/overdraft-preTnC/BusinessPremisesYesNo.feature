@@ -45,12 +45,12 @@ Feature: Verify all functionalities related to Business Premises Yes/No screen, 
     Then verify that No button is selected on lending question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/BusinessPremisesNo" is equals to "data/application/answers" except "dateModified" key
-    #When user clicks on No button on lending question screen
-    #Then verify that Declined Payment YesNo screen is displayed
-    #And user clicks on back button on lending question screen
-    #Then verify that No button is selected on lending question screen
-    #When user call rest end point "configuration" to get and save the response
-    #Then verify that expected json "lending-QnA/BusinessPremisesNo" is equals to "data/application/answers" except "dateModified" key
+    When user clicks on No button on lending question screen
+    Then verify that Declined Payment YesNo screen is displayed
+    And user clicks on back button on lending question screen
+    Then verify that No button is selected on lending question screen
+    When user call rest end point "configuration" to get and save the response
+    Then verify that expected json "lending-QnA/BusinessPremisesNo" is equals to "data/application/answers" except "dateModified" key
 
   @Sprint3 @Sprint5
   Scenario: CUICE-6174 >> ATC-004: Test if user clicks on Yes, Business Premises options are displayed
@@ -65,9 +65,9 @@ Feature: Verify all functionalities related to Business Premises Yes/No screen, 
     Then verify that Yes button is selected on lending question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/BusinessPremisesYes" is equals to "data/application/answers" except "dateModified" key
-    #When user clicks on Yes button on lending question screen
-    #Then verify that Business Premises options screen is displayed
-    #And user clicks on back button on lending question screen
-    #Then verify that Yes button is selected on lending question screen
-    #When user call rest end point "configuration" to get and save the response
-    #Then verify that expected json "lending-QnA/BusinessPremisesYes" is equals to "data/application/answers" except "dateModified" key
+    When user clicks on Yes button on lending question screen
+    Then verify that Business Premises options screen is displayed
+    And user clicks on back button on lending question screen
+    Then verify that Yes button is selected on lending question screen
+    When user call rest end point "configuration" to get and save the response
+    Then verify that expected json "lending-QnA/BusinessPremisesYes" is equals to "data/application/answers" except "dateModified" key

@@ -1,11 +1,11 @@
 @DeclineOffer @Regression
-Feature: Verify all functionalities related to Decline Offer screen, it covers CUICE-9953
+Feature: Verify all functionalities related to Decline Offer screen, it covers CUICE-563
 
   Background: This is to add category to below scenarios
     Given that category "DeclineOffer" is added for below scenarios
 
   @Sprint6
-  Scenario: CUICE-9953 >> Prerequisite: Test if user able to view  the Decline Offer screen
+  Scenario: CUICE-563 >> Prerequisite: Test if user able to view  the Decline Offer screen
     Given that user is on the Credit Management screen
     Then close existing open application for the next scenario
     When user clicks on the Credit & Lending link
@@ -32,7 +32,7 @@ Feature: Verify all functionalities related to Decline Offer screen, it covers C
     Then verify that Decline Offer screen is visible
     
   @Sprint6
-  Scenario: CUICE-553 >> Test if content on Decline Offer screen are correct
+  Scenario: CUICE-563 >> Test if content on Decline Offer screen are correct
     Given that user is on the Decline Offer screen
     Then verify that Decline Offer alert image is displayed
     Then verify that Decline Offer title text "Decline offer" is displayed
@@ -41,14 +41,14 @@ Feature: Verify all functionalities related to Decline Offer screen, it covers C
     Then verify that Yes button is displayed on Decline Offer screen
     
   @Sprint6
-  Scenario: CUICE-553 >> Test if Remind me later screen is displayed when user clicks on No button
+  Scenario: CUICE-563 >> Test if Remind me later screen is displayed when user clicks on No button
     Given that user is on the Decline Offer screen
     Then click on No button on Decline Offer screen
     Then verify that Remind me Later screen is visible
     Then user clicks on No, decline the offer button on screen
 
   @Sprint6
-  Scenario: CUICE-553 >> Test if User Decline screen is displayed when user clicks on Yes button
+  Scenario: CUICE-563 >> Test if User Decline screen is displayed when user clicks on Yes button
     Given that user is on the Decline Offer screen
     Then click on Yes button on Decline Offer screen
     Then verify that User Decline screen is displayed

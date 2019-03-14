@@ -1,11 +1,11 @@
 @RemindmeLater @Regression
-Feature: Verify all functionalities related to Remind me Later screen, it covers CUICE-9953
+Feature: Verify all functionalities related to Remind me Later screen, it covers CUICE-10190
 
   Background: This is to add category to below scenarios
     Given that category "RemindmeLater" is added for below scenarios
 
   @Sprint6
-  Scenario: CUICE-9953 >> Prerequisite: Test if user able to view  the Remind me Later screen
+  Scenario: CUICE-10190 >> Prerequisite: Test if user able to view  the Remind me Later screen
     Given that user is on the Credit Management screen
     Then close existing open application for the next scenario
     When user clicks on the Credit & Lending link
@@ -31,7 +31,7 @@ Feature: Verify all functionalities related to Remind me Later screen, it covers
     Then verify that Remind me Later screen is visible
     
   @Sprint6
-  Scenario: CUICE-553 >> Test if content on Remind me later screen are correct
+  Scenario: CUICE-10190 >> Test if content on Remind me later screen are correct
     Given that user is on the Remind me Later screen
     Then verify that remind me later title "Remind me later" is displayed
     Then verify that remind me later heading "Need some time to decide?" is displayed
@@ -40,14 +40,14 @@ Feature: Verify all functionalities related to Remind me Later screen, it covers
     Then verify that No decline the offer button is displayed
     
   @Sprint6
-  Scenario: CUICE-553 >> Test if Decline Offer screen is displayed when user clicks on No, decline the offer
+  Scenario: CUICE-10190 >> Test if Decline Offer screen is displayed when user clicks on No, decline the offer
     Given that user is on the Remind me Later screen
     Then user clicks on No, decline the offer button on screen
     Then verify that Decline Offer screen is visible
     Then click on No button on Decline Offer screen
 
   @Sprint6
-  Scenario: CUICE-553 >> Test if Remind me later screen is displayed when user clicks on Yes, remind me later
+  Scenario: CUICE-10190 >> Test if Remind me later screen is displayed when user clicks on Yes, remind me later
     Given that user is on the Remind me Later screen
     Then user clicks on Yes remind me later button on screen
     

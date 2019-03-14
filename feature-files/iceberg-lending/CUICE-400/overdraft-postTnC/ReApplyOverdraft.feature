@@ -5,7 +5,7 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     Given that category "ReApplyOverdraft" is added for below scenarios
     Then close existing open application for the next scenario
 
-  Scenario: CUICE-9953 >> Test if user able to view 'LAST SAVED Q&A' for No PSE decision -> logic on datemodified -> within 30 days
+  Scenario: CUICE-6397 >> Test if user able to view 'LAST SAVED Q&A' for No PSE decision -> logic on datemodified -> within 30 days
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
     And user clicks on Apply button on Product Selection
@@ -31,7 +31,7 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     Then verify that SustainabilityCheck screen is displayed
     Then close existing open application for the next scenario
 
-  Scenario: CUICE-9953 >> Test if user able to view 'Re Apply' on product selection for PSE decision->declined->within 60 days
+  Scenario: CUICE-6397 >> Test if user able to view 'Re Apply' on product selection for PSE decision->declined->within 60 days
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
     And user clicks on Apply button on Product Selection
@@ -63,7 +63,7 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     Then verify that screen body "You recently applied for an overdraft. You can re-apply in 32 days." displayed on the screen
     Then verify that date in "Re-apply from" component displays 32 days from today on the screen
 
-  Scenario: CUICE-9953 >> Test if user able to view 'Re Apply' on product selection for PSE decision->referred->within 60 days
+  Scenario: CUICE-6397 >> Test if user able to view 'Re Apply' on product selection for PSE decision->referred->within 60 days
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
     And user clicks on Apply button on Product Selection
@@ -96,7 +96,7 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     Then verify that screen body "You recently applied for an overdraft. You can re-apply in 35 days." displayed on the screen
     Then verify that date in "Re-apply from" component displays 35 days from today on the screen
 
-  Scenario: CUICE-9953 >> Test if user able to view 'Re Apply' on product selection for PSE decision->accepted-> Sustainability Yes->within 60 days
+  Scenario: CUICE-6397 >> Test if user able to view 'Re Apply' on product selection for PSE decision->accepted-> Sustainability Yes->within 60 days
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
     And user clicks on Apply button on Product Selection
@@ -129,7 +129,7 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     Then verify that screen body "You recently applied for an overdraft. You can re-apply in 30 days." displayed on the screen
     Then verify that date in "Re-apply from" component displays 30 days from today on the screen
 
-  Scenario: CUICE-9953 >> Test if user able to view 'Re Apply' on product selection for PSE decision->referred-> Sustainability Yes->within 60 days
+  Scenario: CUICE-6397 >> Test if user able to view 'Re Apply' on product selection for PSE decision->referred-> Sustainability Yes->within 60 days
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
     And user clicks on Apply button on Product Selection
@@ -163,7 +163,7 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     Then verify that date in "Re-apply from" component displays 1 days from today on the screen
 
   @ReApplyOverdraft
-  Scenario: CUICE-9953 >> Test if user able to view 'Re Apply' on product selection for PSE decision->declined-> Sustainability Yes->within 60 days
+  Scenario: CUICE-6397 >> Test if user able to view 'Re Apply' on product selection for PSE decision->declined-> Sustainability Yes->within 60 days
     Given that user is on the Credit Management screen
     When user clicks on the Credit & Lending link
     And user clicks on Apply button on Product Selection

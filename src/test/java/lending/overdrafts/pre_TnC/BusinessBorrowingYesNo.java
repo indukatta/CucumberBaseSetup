@@ -11,7 +11,7 @@ public class BusinessBorrowingYesNo {
 	public static String hintText = "accessibility id==lending_question_hint";
 
 	@Then("^verify that Business Borrowing YesNo screen is displayed$")
-	public void verify_that_Amount_of_Borrowing_YesNo_screen_is_displayed() {
+	public void verify_that_Business_Borrowing_YesNo_screen_is_displayed() {
 		setStepName("Then");
 		captureScreenshot("BusinessBorrowingYesNo");
 		findByAny(CommonStepDefinitions.screenTitle).isDisplayed();
@@ -19,19 +19,19 @@ public class BusinessBorrowingYesNo {
 	}
 
 	@Given("^that user is on Business Borrowing YesNo screen$")
-	public void that_user_is_on_Amount_of_Borrowing_YesNo_screen() {
+	public void that_user_is_on_Business_Borrowing_YesNo_screen() {
 		setStepName("Given");
 		findByAny(CommonStepDefinitions.screenQuestion).isDisplayed();
 	}
 
 	@Then("^verify Business Borrowingg YesNo title \"([^\"]*)\" on screen$")
-	public void verify_that_Amount_of_Borrowing_YesNo_title_on_screen(String expected) {
+	public void verify_Business_Borrowingg_YesNo_title_on_screen(String expected) {
 		setStepName("Then");
 		findByAny(CommonStepDefinitions.screenTitle).verifyEqualsTo(expected);
 	}
 
 	@Then("^verify that Business Borrowing YesNo question \"([^\"]*)\" is displayed$")
-	public void verify_that_Amount_of_Borrowing_YesNo_header_on_screen(String expected) {
+	public void verify_that_Business_Borrowing_YesNo_header_on_screen(String expected) {
 		setStepName("Then");
 		findByAny(CommonStepDefinitions.screenQuestion).verifyEqualsTo(expected);
 	}

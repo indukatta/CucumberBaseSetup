@@ -67,9 +67,9 @@ Feature: BusinessBorrowingYesNo - it covers CUICE-6255, CUICE-544
     Then verify that Yes button is selected on lending question screen
     When user call rest end point "configuration" to get and save the response
     Then verify that expected json "lending-QnA/BusinessBorrowingYes" is equals to "data/application/answers" except "dateModified" key
-    #When user clicks on Yes button on lending question screen
-    #Then verify that Credit or Charge Card YesNo screen is displayed
-    #And user clicks on back button on lending question screen
-    #Then verify that Yes button is selected on lending question screen
-    #When user call rest end point "configuration" to get and save the response
-    #Then verify that expected json "lending-QnA/BusinessBorrowingYes" is equals to "data/application/answers" except "dateModified" key
+    When user clicks on Yes button on lending question screen
+    Then verify that Credit or Charge Card YesNo screen is displayed
+    And user clicks on back button on lending question screen
+    Then verify that Yes button is selected on lending question screen
+    When user call rest end point "configuration" to get and save the response
+    Then verify that expected json "lending-QnA/BusinessBorrowingYes" is equals to "data/application/answers" except "dateModified" key
