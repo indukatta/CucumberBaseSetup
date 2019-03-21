@@ -17,7 +17,7 @@
 		"deviceName": "iPhone 8",
 		"fullReset": "false",
 		"noReset": "false",
-		"app": "/Users/ashdiksh/Downloads/Iceberg.app"
+		"app": "/Users/ashdiksh/Downloads/Iceberg 38.app"
 	},
 	"env": {
 		"qa": {
@@ -41,7 +41,7 @@
 		}
 	},
 	"product-categories": "/product-categories",
-	"configuration": "/applications/{applicationID}/configuration",
+	"question-configuration": "/applications/{applicationID}/question-configuration",
 	"answers": "/applications/{applicationID}/answers",
 	"consents": "/consents",
 	"sso-login": {

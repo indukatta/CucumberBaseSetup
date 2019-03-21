@@ -1,0 +1,1831 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/master/dist/css/extent.css' type='text/css' rel='stylesheet' />
+
+	<title>Sprint3</title>
+	
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="http://extentreports.relevantcodes.com" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>Sprint3</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a>
+				<span class='suite-start-time'>19 Mar, 2019 5:55:35 PM</span>
+			</a>
+			<a>
+				<span>v3.0.0</span>
+			</a>
+		</ul>
+	</div>
+</nav>
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+					<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li status='error'><a href='#!'>Error <i class='material-icons red-text lighten-2'>error</i></a></li>
+					<li status='warning'><a href='#!'>Warning <i class='material-icons orange-text'>warning</i></a></li>
+					<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+						<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>BusinessPremisesYesNo</a></li>
+					<li><a href='#'>SaveAndReturnPreTnC</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>CUICE-6174 >> Prerequisite: Test if user able to view  the Business Premises YesNo screen</span>
+						<span class='test-time'>19 Mar, 2019 5:55:35 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>19 Mar, 2019 5:55:35 PM</span>
+	<span class='label end-time'>19 Mar, 2019 5:56:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 20s+204ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>BusinessPremisesYesNo</span>
+			</div>
+	</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='2'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Given that user is on the Credit Management screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:55:35 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:55:50 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Entered text TESTUSER in Located by By.chained({By.AccessibilityId: login.login_username_textfield_header})</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:55:53 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Entered text TESTPASSWORD in Located by By.chained({By.AccessibilityId: login.login_password_textfield_header})</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:55:59 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on By.AccessibilityId: alertPrimaryButton</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:55:59 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Successfully logged in to Iceberg application.</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='3'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then close existing open application for the next scenario</div>						
+						<span class='node-time'>19 Mar, 2019 5:55:59 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:00 PM</td>
+													<td class='step-details'><span class='label white-text blue'>update application set datemodified='2018-01-01 11:42:20.712+00';</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='4'>
+					<div class='collapsible-header'>
+						<div class='node-name'>When user clicks on the Credit and Lending link</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:00 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:00 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on By.AccessibilityId: More</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:01 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on By.AccessibilityId: Lending</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='5'>
+					<div class='collapsible-header'>
+						<div class='node-name'>When user clicks on Apply button on Product Selection screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:05 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:06 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on By.AccessibilityId: lending.button_apply</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:10 PM</td>
+													<td class='step-details'><span class='label white-text blue'>End point URL => https://mule.icepick.guru/iceberg/v1/businesses/1003056660/lending/product-categories</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:10 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Status code =>  201</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:10 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Response Body => {"data":[{"name":"Business Overdrafts","summary":"Best for flexible access to cash flow","description":[{"title":"Features and Benefits","contentType":"list","content":[{"text":"No arrangement fee"},{"text":"Pay interest only on the amount you use calculated daily"},{"text":"Same day availability (if approved)"}]},{"title":"Overdraft between ${min} - ${max}","contentType":"text","content":[{"text":"Overdraft fee 1.5% (monthly charge)"},{"text":"Interest is 9.9% EAR Representative"},{"text":""},{"text":"Business borrowing cannot be used for personal use."}]}],"limit":{"min":{"amount":1,"currency":"GBP"},"max":{"amount":10000,"currency":"GBP"}},"id":1,"applications":[{"id":10,"type":"newApplication"}]}],"links":[{"rel":"applications","href":"/businesses/1003056660/lending/applications","method":"POST"},{"rel":"questionConfiguration","href":"/businesses/1003056660/lending/applications/{application-id}/question-configuration","method":"GET"},{"rel":"declineConfiguration","href":"/businesses/1003056660/lending/applications/{application-id}/decline-configuration","method":"GET"},{"rel":"limitConfiguration","href":"/businesses/1003056660/lending/applications/{application-id}/limit-configuration","method":"GET"}]}</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='6'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then user clicks on No button on lending question YesNo screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:10 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:11 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on By.AccessibilityId: No</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='7'>
+					<div class='collapsible-header'>
+						<div class='node-name'>When user clicks on continue button on the screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:13 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:13 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on By.AccessibilityId: Next</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='8'>
+					<div class='collapsible-header'>
+						<div class='node-name'>When user selects an option from Purpose of Borrowing question</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:14 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:18 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on 1 of By.xpath: //XCUIElementTypeStaticText[starts-with(@name,"lending_question_answer_option_text_")]</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='9'>
+					<div class='collapsible-header'>
+						<div class='node-name'>When user clicks on continue button on the screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:18 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:18 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on By.AccessibilityId: Next</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='10'>
+					<div class='collapsible-header'>
+						<div class='node-name'>When user selects option on Residential Status screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:19 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:21 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on 3 of By.xpath: //XCUIElementTypeStaticText[starts-with(@name,"lending_question_answer_option_text_")]</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='11'>
+					<div class='collapsible-header'>
+						<div class='node-name'>When user clicks on continue button on the screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:21 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:22 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on By.AccessibilityId: Next</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='12'>
+					<div class='collapsible-header'>
+						<div class='node-name'>When user selects option on Marital Status screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:23 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:25 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on 3 of By.xpath: //XCUIElementTypeStaticText[starts-with(@name,"lending_question_answer_option_text_")]</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='13'>
+					<div class='collapsible-header'>
+						<div class='node-name'>When user clicks on continue button on the screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:25 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:26 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on By.AccessibilityId: Next</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='14'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then user enters minimum value in Gross Income input box</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:27 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:27 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Cleared "£0" from  By.AccessibilityId: number_question_selected_value_label</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:28 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Entered "1000" in  By.AccessibilityId: number_question_selected_value_label</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='15'>
+					<div class='collapsible-header'>
+						<div class='node-name'>When user clicks on continue button on the screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:28 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:28 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on By.AccessibilityId: Next</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='16'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then user clicks on No button on lending question YesNo screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:29 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:30 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on By.AccessibilityId: No</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='17'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then verify that Business Premises YesNo screen is displayed</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:32 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:32 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDisplayed "true" from  By.AccessibilityId: lending_navigation_bar_title</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:32 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDisplayed "true" from  By.AccessibilityId: lending_question_title</span></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_2.png' width='25%' src='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_2.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>CUICE-6174 >> ATC-001: Test if user is able to see Yes No buttons and its default state</span>
+						<span class='test-time'>19 Mar, 2019 5:56:32 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>19 Mar, 2019 5:56:32 PM</span>
+	<span class='label end-time'>19 Mar, 2019 5:56:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+755ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>BusinessPremisesYesNo</span>
+			</div>
+	</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='19'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Given that user is on Business Premises YesNo screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:32 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:32 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDisplayed "true" from  By.AccessibilityId: lending_navigation_bar_title</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:33 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDisplayed "true" from  By.AccessibilityId: lending_question_title</span></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_2.png' width='25%' src='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_2.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='20'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then verify that Business Premises header is displayed</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:33 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:33 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDisplayed "true" from  By.AccessibilityId: lending_question_title</span></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_2.png' width='25%' src='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_2.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='21'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then verify that Yes button is displayed on lending question screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:33 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:33 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDisplayed "true" from  By.AccessibilityId: Yes</span></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_2.png' width='25%' src='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_2.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='22'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then verify that No button is displayed on lending question screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:33 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:33 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDisplayed "true" from  By.AccessibilityId: No</span></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_2.png' width='25%' src='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_2.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='23'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then verify that Yes button is not selected on lending question screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:33 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:33 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDeselected "true" for element By.AccessibilityId: Yes</span></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_2.png' width='25%' src='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_2.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='24'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then verify that No button is not selected on lending question screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:33 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:34 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDeselected "true" for element By.AccessibilityId: No</span></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_2.png' width='25%' src='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_2.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>CUICE-6174 >> ATC-002: Test if user clicks on No, Questions screen is displayed</span>
+						<span class='test-time'>19 Mar, 2019 5:56:34 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>19 Mar, 2019 5:56:34 PM</span>
+	<span class='label end-time'>19 Mar, 2019 5:56:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+507ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>BusinessPremisesYesNo</span>
+			</div>
+	</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='26'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Given that user is on Business Premises YesNo screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:34 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:34 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDisplayed "true" from  By.AccessibilityId: lending_navigation_bar_title</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:34 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDisplayed "true" from  By.AccessibilityId: lending_question_title</span></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_2.png' width='25%' src='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_2.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='27'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then user clicks on No button on lending question YesNo screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:34 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:34 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on By.AccessibilityId: No</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='28'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then verify that Declined Payment YesNo screen is displayed</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:36 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:37 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDisplayed "true" from  By.AccessibilityId: lending_navigation_bar_title</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:37 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDisplayed "true" from  By.AccessibilityId: lending_question_title</span></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_3.png' width='25%' src='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_3.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='29'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then user clicks on back button on lending question screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:37 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:37 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on By.AccessibilityId: back</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='30'>
+					<div class='test-heading'>
+						<span class='test-name'>CUICE-6174,CUICE-544 >> ATC-003: Test if save and return is working when user clicks on Yes button</span>
+						<span class='test-time'>19 Mar, 2019 5:56:38 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>19 Mar, 2019 5:56:38 PM</span>
+	<span class='label end-time'>19 Mar, 2019 5:56:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+803ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>BusinessPremisesYesNo</span>
+				<span class='category label white-text'>SaveAndReturnPreTnC</span>
+			</div>
+	</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='31'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then verify that No button is selected on lending question screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:38 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:39 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDeselected "false" for element By.AccessibilityId: No</span></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ashdiksh/Documents/uitesting/results/screenshots/SaveAndReturnPreTnC_4.png' width='25%' src='/Users/ashdiksh/Documents/uitesting/results/screenshots/SaveAndReturnPreTnC_4.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf unknown' status='unknown' test-id='32'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then user clicks on No button on lending question YesNo screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:44 PM</span>
+						<span class='test-status right unknown'>unknown</span>
+					</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='33'>
+					<div class='test-heading'>
+						<span class='test-name'>CUICE-6174 >> ATC-004: Test if user clicks on Yes, Business Premises options are displayed</span>
+						<span class='test-time'>19 Mar, 2019 5:56:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>19 Mar, 2019 5:56:44 PM</span>
+	<span class='label end-time'>19 Mar, 2019 5:56:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+365ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>BusinessPremisesYesNo</span>
+			</div>
+	</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='34'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Given that user is on Business Premises YesNo screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:44 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDisplayed "true" from  By.AccessibilityId: lending_navigation_bar_title</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:44 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDisplayed "true" from  By.AccessibilityId: lending_question_title</span></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ashdiksh/Documents/uitesting/results/screenshots/SaveAndReturnPreTnC_4.png' width='25%' src='/Users/ashdiksh/Documents/uitesting/results/screenshots/SaveAndReturnPreTnC_4.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='35'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then user clicks on Yes button on lending question YesNo screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:44 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on By.AccessibilityId: Yes</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='36'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then verify that Business Premises options screen is displayed</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:46 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:47 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDisplayed "true" from  By.AccessibilityId: lending_navigation_bar_title</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:47 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDisplayed "true" from  By.AccessibilityId: lending_question_title</span></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_5.png' width='25%' src='/Users/ashdiksh/Documents/uitesting/results/screenshots/BusinessPremisesYesNo_5.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='37'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then user clicks on back button on lending question screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:47 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:48 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on By.AccessibilityId: back</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='38'>
+					<div class='test-heading'>
+						<span class='test-name'>CUICE-6174,CUICE-544 >> ATC-005: Test if save and return is working when user clicks on Yes button</span>
+						<span class='test-time'>19 Mar, 2019 5:56:49 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>19 Mar, 2019 5:56:49 PM</span>
+	<span class='label end-time'>19 Mar, 2019 5:56:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+528ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>BusinessPremisesYesNo</span>
+				<span class='category label white-text'>SaveAndReturnPreTnC</span>
+			</div>
+	</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='39'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then verify that Yes button is selected on lending question screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:49 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:49 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDeselected "false" for element By.AccessibilityId: Yes</span></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ashdiksh/Documents/uitesting/results/screenshots/SaveAndReturnPreTnC_6.png' width='25%' src='/Users/ashdiksh/Documents/uitesting/results/screenshots/SaveAndReturnPreTnC_6.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='40'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then user clicks on Yes button on lending question YesNo screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:49 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:50 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on By.AccessibilityId: Yes</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='41'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then verify that Business Premises options screen is displayed</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:52 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDisplayed "true" from  By.AccessibilityId: lending_navigation_bar_title</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:52 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDisplayed "true" from  By.AccessibilityId: lending_question_title</span></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ashdiksh/Documents/uitesting/results/screenshots/SaveAndReturnPreTnC_7.png' width='25%' src='/Users/ashdiksh/Documents/uitesting/results/screenshots/SaveAndReturnPreTnC_7.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='42'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then user clicks on back button on lending question screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:53 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Clicked on By.AccessibilityId: back</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='43'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then verify that Yes button is selected on lending question screen</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:54 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:54 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Verified isDeselected "false" for element By.AccessibilityId: Yes</span></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ashdiksh/Documents/uitesting/results/screenshots/SaveAndReturnPreTnC_8.png' width='25%' src='/Users/ashdiksh/Documents/uitesting/results/screenshots/SaveAndReturnPreTnC_8.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='44'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then user call rest end point to get and store the response</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:54 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:55 PM</td>
+													<td class='step-details'><span class='label white-text blue'>End point URL => https://mule.icepick.guru/iceberg/v1/businesses/1003056660/lending/applications/10/question-configuration</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:55 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Status code =>  201</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:55 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Response Body => {"data":{"questions":[{"questionType":"yesNo","answerOptions":[{"id":1,"label":"Yes"},{"id":2,"label":"No"}],"placeholder":null,"mandatory":true,"validation":null,"min":null,"max":null,"increment":null,"feeMultiplier":null,"feeText":null,"id":1},{"questionType":"borrowingRange","answerOptions":null,"placeholder":"","mandatory":true,"validation":{"min":100,"max":10000,"dataType":"integer"},"min":null,"max":null,"increment":100,"feeMultiplier":0.00125,"feeText":[{"text":"Fee ${currency:value} GBP monthly"},{"text":"Representative EAR of 9.9% variable*"}],"id":2},{"questionType":"singleChoice","answerOptions":[{"id":1,"label":"Asset purchase"},{"id":2,"label":"Debt consolidation (HSBC)"},{"id":3,"label":"Debt consolidation (non-HSBC)"},{"id":4,"label":"Furniture & fittings"},{"id":5,"label":"Motor vehicles"},{"id":6,"label":"Premises expansion"},{"id":7,"label":"Premises refurbishment"},{"id":8,"label":"Property purchase - Investment"},{"id":9,"label":"Property purchase - own occupation"},{"id":10,"label":"Stock purchase"},{"id":11,"label":"Working capital"},{"id":12,"label":"Other"}],"placeholder":null,"mandatory":true,"validation":null,"min":null,"max":null,"increment":null,"feeMultiplier":null,"feeText":null,"id":3},{"questionType":"singleChoice","answerOptions":[{"id":1,"label":"Halls of residence"},{"id":2,"label":"Living with a parent"},{"id":3,"label":"Owner occupier"},{"id":4,"label":"Tenant"},{"id":5,"label":"Other"}],"placeholder":null,"mandatory":true,"validation":null,"min":null,"max":null,"increment":null,"feeMultiplier":null,"feeText":null,"id":4},{"questionType":"singleChoice","answerOptions":[{"id":1,"label":"Civil partnership"},{"id":2,"label":"Married"},{"id":3,"label":"Divorced/Ex-civil partnership"},{"id":4,"label":"Separated"},{"id":5,"label":"Single"},{"id":6,"label":"Living with partner"},{"id":7,"label":"Widowed/Surviving civil partnership"},{"id":8,"label":"Other"}],"placeholder":null,"mandatory":true,"validation":null,"min":null,"max":null,"increment":null,"feeMultiplier":null,"feeText":null,"id":5},{"questionType":"currency","answerOptions":null,"placeholder":"0","mandatory":true,"validation":{"min":0,"max":100000000,"dataType":"integer"},"min":null,"max":null,"increment":null,"feeMultiplier":null,"feeText":null,"id":6},{"questionType":"yesNo","answerOptions":[{"id":1,"label":"Yes"},{"id":2,"label":"No"}],"placeholder":null,"mandatory":true,"validation":null,"min":null,"max":null,"increment":null,"feeMultiplier":null,"feeText":null,"id":7},{"questionType":"number","answerOptions":null,"placeholder":"Enter number of years","mandatory":true,"validation":{"min":0,"max":10,"dataType":"integer"},"min":null,"max":null,"increment":null,"feeMultiplier":null,"feeText":null,"id":8},{"questionType":"yesNo","answerOptions":[{"id":1,"label":"Yes"},{"id":2,"label":"No"}],"placeholder":null,"mandatory":true,"validation":null,"min":null,"max":null,"increment":null,"feeMultiplier":null,"feeText":null,"id":9},{"questionType":"singleChoice","answerOptions":[{"id":1,"label":"Freehold"},{"id":2,"label":"Leasehold"}],"placeholder":null,"mandatory":true,"validation":null,"min":null,"max":null,"increment":null,"feeMultiplier":null,"feeText":null,"id":10},{"questionType":"yesNo","answerOptions":[{"id":1,"label":"Yes"},{"id":2,"label":"No"}],"placeholder":null,"mandatory":true,"validation":null,"min":null,"max":null,"increment":null,"feeMultiplier":null,"feeText":null,"id":11},{"questionType":"yesNo","answerOptions":[{"id":1,"label":"Yes"},{"id":2,"label":"No"}],"placeholder":null,"mandatory":true,"validation":null,"min":null,"max":null,"increment":null,"feeMultiplier":null,"feeText":null,"id":12},{"questionType":"yesNo","answerOptions":[{"id":1,"label":"Yes"},{"id":2,"label":"No"}],"placeholder":null,"mandatory":true,"validation":null,"min":null,"max":null,"increment":null,"feeMultiplier":null,"feeText":null,"id":13},{"questionType":"currency","answerOptions":null,"placeholder":null,"mandatory":true,"validation":{"min":1,"max":100000000,"dataType":"integer"},"min":null,"max":null,"increment":null,"feeMultiplier":null,"feeText":null,"id":14},{"questionType":"yesNo","answerOptions":[{"id":1,"label":"Yes"},{"id":2,"label":"No"}],"placeholder":null,"mandatory":true,"validation":null,"min":null,"max":null,"increment":null,"feeMultiplier":null,"feeText":null,"id":15}],"screens":[{"questionIds":[1],"termsAndConditionsIds":null,"screenType":"question","title":"Do you know how much you would like to borrow?","description":null,"customContent":null,"buttons":null,"footer":null,"disableBackButton":false,"header":null,"redirectDestination":null,"hint":null,"id":1},{"questionIds":[2],"termsAndConditionsIds":null,"screenType":"question","title":"How much would you like to borrow?","description":null,"customContent":null,"buttons":null,"footer":{"text":"*All lending is subject to eligibility"},"disableBackButton":false,"header":null,"redirectDestination":null,"hint":null,"id":2},{"questionIds":null,"termsAndConditionsIds":null,"screenType":"custom","title":null,"description":null,"customContent":[{"contentType":"text","content":[{"text":"We'll let you know how much your business can borrow at the end of the application process"}]}],"buttons":null,"footer":null,"disableBackButton":false,"header":null,"redirectDestination":null,"hint":null,"id":3},{"questionIds":[3],"termsAndConditionsIds":null,"screenType":"question","title":"What is the main purpose of borrowing?","description":null,"customContent":null,"buttons":null,"footer":null,"disableBackButton":false,"header":null,"redirectDestination":null,"hint":null,"id":4},{"questionIds":[4],"termsAndConditionsIds":null,"screenType":"question","title":"What is your residential status?","description":null,"customContent":null,"buttons":null,"footer":null,"disableBackButton":false,"header":null,"redirectDestination":null,"hint":null,"id":5},{"questionIds":[5],"termsAndConditionsIds":null,"screenType":"question","title":"What is your marital status?","description":null,"customContent":null,"buttons":null,"footer":null,"disableBackButton":false,"header":null,"redirectDestination":null,"hint":null,"id":6},{"questionIds":[6],"termsAndConditionsIds":null,"screenType":"question","title":"What was your personal gross income in the last year?","description":null,"customContent":null,"buttons":null,"footer":null,"disableBackButton":false,"header":null,"redirectDestination":null,"hint":null,"id":7},{"questionIds":[7],"termsAndConditionsIds":null,"screenType":"question","title":"Do you have a personal current account?","description":null,"customContent":null,"buttons":null,"footer":null,"disableBackButton":false,"header":null,"redirectDestination":null,"hint":null,"id":8},{"questionIds":[8],"termsAndConditionsIds":null,"screenType":"question","title":"How many full years have you had your personal current account?","description":null,"customContent":null,"buttons":null,"footer":null,"disableBackButton":false,"header":null,"redirectDestination":null,"hint":null,"id":9},{"questionIds":[9],"termsAndConditionsIds":null,"screenType":"question","title":"Does your business own a premises?","description":null,"customContent":null,"buttons":null,"footer":null,"disableBackButton":false,"header":null,"redirectDestination":null,"hint":null,"id":10},{"questionIds":[10],"termsAndConditionsIds":null,"screenType":"question","title":"What type of premises does your business own?","description":null,"customContent":null,"buttons":null,"footer":null,"disableBackButton":false,"header":null,"redirectDestination":null,"hint":null,"id":11},{"questionIds":[11],"termsAndConditionsIds":null,"screenType":"question","title":"Has your business had a declined payment* in the last 3 months?","description":null,"customContent":null,"buttons":null,"footer":null,"disableBackButton":false,"header":null,"redirectDestination":null,"hint":"*This includes direct debit, standing order or a cheque.","id":12},{"questionIds":[12],"termsAndConditionsIds":null,"screenType":"question","title":"Does the business have any borrowings?","description":null,"customContent":null,"buttons":null,"footer":null,"disableBackButton":false,"header":null,"redirectDestination":null,"hint":"This includes overdrafts, credit cards, charge cards, loans and/or mortgages.","id":13},{"questionIds":[13],"termsAndConditionsIds":null,"screenType":"question","title":"Does this include a credit or charge card?","description":null,"customContent":null,"buttons":null,"footer":null,"disableBackButton":false,"header":null,"redirectDestination":null,"hint":null,"id":14},{"questionIds":[14],"termsAndConditionsIds":null,"screenType":"question","title":"What is your business’ total existing borrowings?","description":null,"customContent":null,"buttons":null,"footer":null,"disableBackButton":false,"header":null,"redirectDestination":null,"hint":"Please enter an approximate value","id":15},{"questionIds":[15],"termsAndConditionsIds":null,"screenType":"question","title":"Do you know of any changes in your circumstances that could affect the business’ ability to repay this borrowing?","description":null,"customContent":null,"buttons":null,"footer":null,"disableBackButton":false,"header":null,"redirectDestination":null,"hint":null,"id":16},{"questionIds":null,"termsAndConditionsIds":[1],"screenType":"creditCheck","title":"We’re now going to perform a credit check","description":null,"customContent":null,"buttons":[{"actionId":1,"buttonStyle":"primary","label":"Accept"},{"actionId":2,"buttonStyle":"secondary","label":"Reject and cancel application","event":{"confirm":{"title":"Cancel application","message":"This will end your application for borrowing. Are you sure you want to cancel the application?"}}}],"footer":null,"disableBackButton":false,"header":"Credit Check","redirectDestination":null,"hint":null,"id":17},{"questionIds":null,"termsAndConditionsIds":null,"screenType":"processCreditCheck","title":"Processing","description":"We’re now going to perform a credit check","customContent":null,"buttons":null,"footer":null,"disableBackButton":false,"header":null,"redirectDestination":null,"hint":null,"id":18},{"questionIds":null,"termsAndConditionsIds":null,"screenType":"redirect","title":null,"description":null,"customContent":null,"buttons":null,"footer":null,"disableBackButton":false,"header":null,"redirectDestination":"home","hint":null,"id":19}],"rules":[{"screenId":2,"dependencies":[{"questionId":1,"answerIds":[1],"dependencyType":"question"}],"id":1},{"screenId":9,"dependencies":[{"questionId":7,"answerIds":[1],"dependencyType":"question"}],"id":2},{"screenId":3,"dependencies":[{"questionId":1,"answerIds":[2],"dependencyType":"question"}],"id":3},{"screenId":14,"dependencies":[{"questionId":12,"answerIds":[1],"dependencyType":"question"}],"id":4},{"screenId":11,"dependencies":[{"questionId":9,"answerIds":[1],"dependencyType":"question"}],"id":5},{"screenId":15,"dependencies":[{"questionId":12,"answerIds":[1],"dependencyType":"question"}],"id":6},{"screenId":18,"dependencies":[{"screenId":17,"actionId":1,"dependencyType":"screen"}],"id":7},{"screenId":19,"dependencies":[{"screenId":17,"actionId":2,"dependencyType":"screen"}],"id":8}],"application":{"type":"newApplication","productCategoryId":1,"customerDecision":null,"answers":[{"questionId":1,"answers":[2],"dateModified":"2019-03-19T17:56:13.556Z"},{"questionId":3,"answers":[1],"dateModified":"2019-03-19T17:56:21.238Z"},{"questionId":4,"answers":[3],"dateModified":"2019-03-19T17:56:24.755Z"},{"questionId":5,"answers":[3],"dateModified":"2019-03-19T17:56:29.021Z"},{"questionId":6,"answers":[1000],"dateModified":"2019-03-19T17:56:31.283Z"},{"questionId":7,"answers":[2],"dateModified":"2019-03-19T17:56:32.802Z"},{"questionId":9,"answers":[1],"dateModified":"2019-03-19T17:56:52.848Z"}],"id":10}},"links":[{"rel":"applicationTermsAndConditions","href":"/businesses/1003056660/lending/applications/10/terms-and-conditions/{terms-and-conditions-id}","method":"GET"},{"rel":"applicationAnswers","href":"/businesses/1003056660/lending/applications/10/answers","method":"PATCH"},{"rel":"consents","href":"/businesses/1003056660/lending/consents","method":"POST"},{"rel":"decisionConfiguration","href":"/businesses/1003056660/lending/applications/10/decision-configuration","method":"GET"}]}</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='45'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then verify that expected json file is equal to end point response</div>						
+						<span class='node-time'>19 Mar, 2019 5:56:55 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:55 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Actual: questionId: 1, Expected: questionId: 1</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:55 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Actual: answers: 2, Expected: answers: 2</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:55 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Actual: questionId: 3, Expected: questionId: 3</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:55 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Actual: answers: 1, Expected: answers: 1</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:55 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Actual: questionId: 4, Expected: questionId: 4</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:55 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Actual: answers: 3, Expected: answers: 3</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:55 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Actual: questionId: 5, Expected: questionId: 5</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:55 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Actual: answers: 3, Expected: answers: 3</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:55 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Actual: questionId: 6, Expected: questionId: 6</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:55 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Actual: answers: 1000, Expected: answers: 1000</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:55 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Actual: questionId: 7, Expected: questionId: 7</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:55 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Actual: answers: 2, Expected: answers: 2</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:55 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Actual: questionId: 9, Expected: questionId: 9</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:55 PM</td>
+													<td class='step-details'><span class='label white-text blue'>Actual: answers: 1, Expected: answers: 1</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span><span class='strong'>38</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong'>0</span> test(s) failed, <span class='strong'>1</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span><span class='strong'>68</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong'>0</span> step(s) failed, <span class='strong'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h5>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>BusinessPremisesYesNo</span>
+						<span class='category-status right'>
+							<span class='label pass'>6</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 6</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>19 Mar, 2019 5:55:35 PM</td>
+										<td class='linked' test-id='1'>CUICE-6174 >> Prerequisite: Test if user able to view  the Business Premises YesNo screen</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>19 Mar, 2019 5:56:32 PM</td>
+										<td class='linked' test-id='18'>CUICE-6174 >> ATC-001: Test if user is able to see Yes No buttons and its default state</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>19 Mar, 2019 5:56:34 PM</td>
+										<td class='linked' test-id='25'>CUICE-6174 >> ATC-002: Test if user clicks on No, Questions screen is displayed</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>19 Mar, 2019 5:56:38 PM</td>
+										<td class='linked' test-id='30'>CUICE-6174,CUICE-544 >> ATC-003: Test if save and return is working when user clicks on Yes button</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>19 Mar, 2019 5:56:44 PM</td>
+										<td class='linked' test-id='33'>CUICE-6174 >> ATC-004: Test if user clicks on Yes, Business Premises options are displayed</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>19 Mar, 2019 5:56:49 PM</td>
+										<td class='linked' test-id='38'>CUICE-6174,CUICE-544 >> ATC-005: Test if save and return is working when user clicks on Yes button</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>SaveAndReturnPreTnC</span>
+						<span class='category-status right'>
+							<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>19 Mar, 2019 5:56:38 PM</td>
+										<td class='linked' test-id='30'>CUICE-6174,CUICE-544 >> ATC-003: Test if save and return is working when user clicks on Yes button</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>19 Mar, 2019 5:56:49 PM</td>
+										<td class='linked' test-id='38'>CUICE-6174,CUICE-544 >> ATC-005: Test if save and return is working when user clicks on Yes button</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>39</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>68</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>19 Mar, 2019 5:55:35 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>19 Mar, 2019 5:56:55 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>80,352ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+						<tr>
+							<td>User Name</td>
+							<td>ashdiksh</td>
+						</tr>
+						<tr>
+							<td>OS</td>
+							<td>Mac OS X</td>
+						</tr>
+						<tr>
+							<td>Java Version</td>
+							<td>1.8.0_181</td>
+						</tr>
+						<tr>
+							<td>Host Name</td>
+							<td>WKMIN0752567</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+						</tr>
+						<tr>
+							<td>BusinessPremisesYesNo</td>
+							<td>6</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>SaveAndReturnPreTnC</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view --><!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 38,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				unknownParent: 1,
+				
+				passChild: 68,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				unknownChild: 0,
+				infoChild: 0,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				unknownGrandChild: 0,
+				infoGrandChild: 0
+			};
+		</script>
+
+		<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/master/dist/js/extent.js' type='text/javascript'></script>
+		
+		<script type='text/javascript'>
+			$(document).ready(function() {
+				$('#test-view-charts').addClass('hide');
+			});
+		</script>
+		
+	</body>
+	
+</html>

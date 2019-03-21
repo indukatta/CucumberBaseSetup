@@ -57,12 +57,12 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it c
   Scenario: CUICE-6173,CUICE-544 >> ATC-006: Test if save and return is working when user selects an option on Purpose of Borrowing screen
   	Given that category "SaveAndReturnPreTnC" is added for below scenarios
     Then verify that option 4 is selected on Purpose of Borrowing question screen
-    When user call rest end point "configuration" to get and save the response
+    When user call rest end point "question-configuration" to get and save the response
     Then verify that expected json "lending-QnA/PurposeOfBorrowingOpt4" is equals to "data/application/answers" except "dateModified" key
     When user selects option 3 from Purpose of Borrowing question screen
     And user clicks on continue button on the screen
     Then verify that Residential Status screen is displayed
     Then user clicks on back button on lending question screen
     Then verify that option 3 is selected on Purpose of Borrowing question screen
-    When user call rest end point "configuration" to get and save the response
+    When user call rest end point "question-configuration" to get and save the response
     Then verify that expected json "lending-QnA/PurposeOfBorrowingOpt3" is equals to "data/application/answers" except "dateModified" key

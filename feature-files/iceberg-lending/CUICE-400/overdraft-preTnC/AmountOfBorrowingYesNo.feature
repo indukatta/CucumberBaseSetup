@@ -33,7 +33,7 @@ Feature: Verify all functionalities related to Amount of Borrowings Yes No scree
   Scenario: CUICE-6171,CUICE-544 >> ATC-003: Test if save and return is working when user clicks on No button
   	Given that category "SaveAndReturnPreTnC" is added for below scenarios
     Then verify that No button is selected on lending question screen
-    When user call rest end point "configuration" to get and save the response
+    When user call rest end point "question-configuration" to get and save the response
     Then verify that expected json "lending-QnA/AmountOfBorrowingNo" is equals to "data/application/answers" except "dateModified" key
 
   @Sprint4 @Sprint5
@@ -47,5 +47,5 @@ Feature: Verify all functionalities related to Amount of Borrowings Yes No scree
   Scenario: CUICE-6171,CUICE-544 >> ATC-005: Test if save and return is working when user clicks on Yes button
   	Given that category "SaveAndReturnPreTnC" is added for below scenarios
     Then verify that Yes button is selected on lending question screen
-    When user call rest end point "configuration" to get and save the response
+    When user call rest end point "question-configuration" to get and save the response
     Then verify that expected json "lending-QnA/AmountOfBorrowingYes" is equals to "data/application/answers" except "dateModified" key

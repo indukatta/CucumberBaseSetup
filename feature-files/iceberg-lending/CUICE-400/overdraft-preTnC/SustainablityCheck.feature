@@ -46,13 +46,13 @@ Feature: Verify all functionalities related to Sustainability Check screen, it c
   Scenario: CUICE-5041,CUICE-544 >> ATC-TBD: Test if save and return is working when user clicks on No button
   	Given that category "SaveAndReturnPreTnC" is added for below scenarios
     Then verify that No button is selected on lending question screen
-    When user call rest end point "configuration" to get and save the response
+    When user call rest end point "question-configuration" to get and save the response
     Then verify that expected json "lending-QnA/SustainabilityCheckNo" is equals to "data/application/answers" except "dateModified" key
     When user clicks on No button on lending question screen
     Then verify that Terms and Conditions screen is displayed
     And user clicks on back button on lending question screen
     Then verify that No button is selected on lending question screen
-    When user call rest end point "configuration" to get and save the response
+    When user call rest end point "question-configuration" to get and save the response
     Then verify that expected json "lending-QnA/SustainabilityCheckNo" is equals to "data/application/answers" except "dateModified" key
 
   @Sprint4 @Sprint5
@@ -66,11 +66,11 @@ Feature: Verify all functionalities related to Sustainability Check screen, it c
   Scenario: CUICE-5041,CUICE-544 >> ATC-TBD: Test if save and return is working when user clicks on No button
   	Given that category "SaveAndReturnPreTnC" is added for below scenarios
     Then verify that Yes button is selected on lending question screen
-    When user call rest end point "configuration" to get and save the response
+    When user call rest end point "question-configuration" to get and save the response
     Then verify that expected json "lending-QnA/SustainabilityCheckYes" is equals to "data/application/answers" except "dateModified" key
     When user clicks on No button on lending question screen
     Then verify that Terms and Conditions screen is displayed
     And user clicks on back button on lending question screen
     Then verify that No button is selected on lending question screen
-    When user call rest end point "configuration" to get and save the response
+    When user call rest end point "question-configuration" to get and save the response
     Then verify that expected json "lending-QnA/SustainabilityCheckNo" is equals to "data/application/answers" except "dateModified" key

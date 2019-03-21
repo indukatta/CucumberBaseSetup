@@ -40,15 +40,15 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
 
   @Sprint5
   Scenario: CUICE-6267,CUICE-544 >> ATC-003: Test if save and return is working when user clicks on No button
-  	Given that category "SaveAndReturnPreTnC" is added for below scenarios
+    Given that category "SaveAndReturnPreTnC" is added for below scenarios
     Then verify that No button is selected on lending question screen
-    When user call rest end point "configuration" to get and save the response
+    When user call rest end point "question-configuration" to get and save the response
     Then verify that expected json "lending-QnA/PersonalAccountNo" is equals to "data/application/answers" except "dateModified" key
     When user clicks on No button on lending question screen
     Then verify that Business Premises YesNo screen is displayed
     And user clicks on back button on lending question screen
     Then verify that No button is selected on lending question screen
-    When user call rest end point "configuration" to get and save the response
+    When user call rest end point "question-configuration" to get and save the response
     Then verify that expected json "lending-QnA/PersonalAccountNo" is equals to "data/application/answers" except "dateModified" key
 
   @Sprint4 @Sprint5
@@ -60,13 +60,13 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
 
   @Sprint5
   Scenario: CUICE-6267,CUICE-544 >> ATC-005: Test if save and return is working when user clicks on Yes button
-  	Given that category "SaveAndReturnPreTnC" is added for below scenarios
+    Given that category "SaveAndReturnPreTnC" is added for below scenarios
     Then verify that Yes button is selected on lending question screen
-    When user call rest end point "configuration" to get and save the response
+    When user call rest end point "question-configuration" to get and save the response
     Then verify that expected json "lending-QnA/PersonalAccountYes" is equals to "data/application/answers" except "dateModified" key
     When user clicks on Yes button on lending question screen
     Then verify that Years of Personal Account screen is displayed
     And user clicks on back button on lending question screen
     Then verify that Yes button is selected on lending question screen
-    When user call rest end point "configuration" to get and save the response
+    When user call rest end point "question-configuration" to get and save the response
     Then verify that expected json "lending-QnA/PersonalAccountYes" is equals to "data/application/answers" except "dateModified" key
