@@ -6,9 +6,9 @@ Feature: Verify all functionalities related to Business Premises screen, it cove
 
   @Sprint3 @Sprint5
   Scenario: CUICE-6174 >> ATC-006: Test if user is able to see Business Premises options screen
-    Given that user is on the Credit Management screen
+    Given that user is on the Iceberg Homescreen
     Then close existing open application for the next scenario
-    When user clicks on the Credit & Lending link
+    When user clicks on the More and then Lending button
     And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen
     And user clicks on continue button on the screen

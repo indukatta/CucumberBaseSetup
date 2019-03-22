@@ -6,9 +6,9 @@ Feature: Verify all functionalities related to Sustainability Check screen, it c
 
   @Sprint4 @Sprint5
   Scenario: CUICE-5041 >> Prerequisite: Test if user able to view  the Borrowings Yes No screen
-    Given that user is on the Credit Management screen
+    Given that user is on the Iceberg Homescreen
     Then close existing open application for the next scenario
-    When user clicks on the Credit & Lending link
+    When user clicks on the More and then Lending button
     And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen
     And user clicks on continue button on the screen

@@ -7,8 +7,8 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
 
   @AdverseConditionsFlow
   Scenario: CUICE-8938 >> Test if user able to view the Decline screen for refer decision from PSE with Sustainability No
-    Given that user is on the Credit Management screen
-    When user clicks on the Credit & Lending link
+    Given that user is on the Iceberg Homescreen
+    When user clicks on the More and then Lending button
     And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen
     And user clicks on continue button on the screen
@@ -31,8 +31,8 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
     Then verify that the Iceberg Decline screen is displayed
 
   Scenario: CUICE-8938 >> Test if user able to view the Decline screen for declined decision from PSE with Sustainability No
-    Given that user is on the Credit Management screen
-    When user clicks on the Credit & Lending link
+    Given that user is on the Iceberg Homescreen
+    When user clicks on the More and then Lending button
     And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen
     And user clicks on continue button on the screen
@@ -55,8 +55,8 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
     Then verify that the Iceberg Decline screen is displayed
 
   Scenario: CUICE-8938 >> Test if user don't know how much would he like to borrow is able to view the Decline screen for approved decision from PSE with Sustainability Yes
-    Given that user is on the Credit Management screen
-    When user clicks on the Credit & Lending link
+    Given that user is on the Iceberg Homescreen
+    When user clicks on the More and then Lending button
     And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen
     And user clicks on continue button on the screen
@@ -78,8 +78,8 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
     Then verify that the Iceberg Decline screen is displayed
 
   Scenario: CUICE-8938 >> Test if user able to view the Decline screen for approved decision from PSE with Sustainability Yes
-    Given that user is on the Credit Management screen
-    When user clicks on the Credit & Lending link
+    Given that user is on the Iceberg Homescreen
+    When user clicks on the More and then Lending button
     And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen
     And user clicks on continue button on the screen
@@ -102,8 +102,8 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
     Then verify that the Iceberg Decline screen is displayed
 
   Scenario: CUICE-8938 >> Test if user able to view the Decline screen for refer decision from PSE with Sustainability Yes
-    Given that user is on the Credit Management screen
-    When user clicks on the Credit & Lending link
+    Given that user is on the Iceberg Homescreen
+    When user clicks on the More and then Lending button
     And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen
     And user clicks on continue button on the screen
@@ -126,8 +126,8 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
     Then verify that the Iceberg Decline screen is displayed
 
   Scenario: CUICE-8938 >> Test if user able to view the Decline screen for declined decision from PSE with Sustainability Yes
-    Given that user is on the Credit Management screen
-    When user clicks on the Credit & Lending link
+    Given that user is on the Iceberg Homescreen
+    When user clicks on the More and then Lending button
     And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen
     And user clicks on continue button on the screen

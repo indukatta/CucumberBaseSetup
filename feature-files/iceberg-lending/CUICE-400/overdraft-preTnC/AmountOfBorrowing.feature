@@ -6,9 +6,9 @@ Feature: Verify all functionalities related to Amount of Borrowing  screen, it c
 
   @Sprint4
   Scenario: CUICE-6171 >> Prerequisite: Test if user able to view  the Borrowings Yes No screen
-    Given that user is on the Credit Management screen
+    Given that user is on the Iceberg Homescreen
     Then close existing open application for the next scenario
-    When user clicks on the Credit & Lending link
+    When user clicks on the More and then Lending button
     And user clicks on Apply button on Product Selection
     And user clicks on Yes button on lending question screen
     Then verify that Amount of Borrowing screen is displayed

@@ -6,9 +6,9 @@ Feature: Verify all functionalities related to Decline Offer screen, it covers C
 
   @Sprint6
   Scenario: CUICE-563 >> Prerequisite: Test if user able to view  the Decline Offer screen
-    Given that user is on the Credit Management screen
+    Given that user is on the Iceberg Homescreen
     Then close existing open application for the next scenario
-    When user clicks on the Credit & Lending link
+    When user clicks on the More and then Lending button
     And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen
     And user clicks on continue button on the screen

@@ -69,7 +69,9 @@ public class GuiCommands {
     protected void writeText(MobileElement element, String text) {
         try {
             scrollDown(element);
-            element.sendKeys(text);
+            if(!element.getText().equalsIgnoreCase(text)) {
+            	element.sendKeys(text);
+            }
             reportPass("Entered text "+text+" in "+element);
 //            findByAny(element).sendKeys(text);
         }

@@ -6,9 +6,9 @@ Feature: Verify all functionalities related to Product Selection screen. It will
 
   @Sprint2
   Scenario: CUICE-540 >> ATC-001: Test if user is able to view the product categories screen if not already taken out
-    Given that user is on the Credit Management screen
+    Given that user is on the Iceberg Homescreen
     Then close existing open application for the next scenario
-    When user clicks on the Credit & Lending link
+    When user clicks on the More and then Lending button
     Then verify that Product Selection screen is displayed
 
   @Sprint2

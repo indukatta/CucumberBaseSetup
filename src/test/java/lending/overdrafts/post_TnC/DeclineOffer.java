@@ -44,14 +44,14 @@ public class DeclineOffer extends CommonLibrary {
 		findByAny(alertBodyLabel).verifyEqualsTo(expected);
 	}
 
-	@Then("^click on No button on Decline Offer screen$")
+	@Then("^user clicks on No button on Decline Offer screen$")
 	public void click_on_No_button_on_Decline_Offer_screen() {
 		setStepName("Then");
 		findByAny(alertYesButton).click();
 		sleep(1000);
 	}
 
-	@Then("^click on Yes button on Decline Offer screen$")
+	@Then("^user clicks on Yes button on Decline Offer screen$")
 	public void click_on_Yes_button_on_Decline_Offer_screen() {
 		setStepName("Then");
 		findByAny(alertNoButton).click();
