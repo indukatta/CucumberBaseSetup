@@ -50,27 +50,3 @@ Feature: Verify all functionalities related to Suitable Offer screen, it covers 
       | Monthly fee max £0.00       |
       | Annual Interest Rate 10.65% |
     Then verify that continue button is enabled
-
-  @Sprint7
-  Scenario Outline: CUICE-10262 >> Test if rate gets changed with amount selected on Tailor Offer screen
-    Given that user is on the Tailor Offer screen
-    And user moves slider to <SuitableAmount%> percent of maximum value on Tailor Offer screen
-    Then verify that fee has calculated correctly on Tailor Offer screen
-    Then verify that continue button is enabled
-
-    Examples: 
-      | SuitableAmount% |
-      |              50 |
-      |              80 |
-      |             100 |
-      |               0 |
-
-  @Sprint7
-  Scenario: CUICE-10262 >> Test if rate gets changed with amount selected on Tailor Offer screen
-    Given that user is on the Tailor Offer screen
-    When user moves slider to 80 percent of maximum value on Tailor Offer screen
-    When user clicks on continue button on the screen
-    Then verify that selected suitable offer amount is displayed on Final Offer screen
-    Then verify that correct rate has been calculated on Final Offer screen
-    Then user clicks on back button on lending question screen
-    Given that user is on the Tailor Offer screen

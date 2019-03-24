@@ -36,7 +36,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 		endTest();
 	}
 
-	@Given("^that user is on the Credit Management screen$")
+	@Given("^that user is on the Iceberg Homescreen$")
 	public static void that_user_is_on_the_Credit_Management_screen() throws Throwable {
 		setStepName("Given");
 		launchMobileApplication(AppType.IOSAPP, "0.0.0.0:4723");
@@ -56,7 +56,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 		deleteApplication = true;
 	}
 
-	@When("^user clicks on the Credit & Lending link$")
+	@When("^user clicks on the More and then Lending button$")
 	public static void user_clicks_on_the_Credit_and_Lending_link() throws Throwable {
 		setStepName("When");
 		findByAny(more).click();
