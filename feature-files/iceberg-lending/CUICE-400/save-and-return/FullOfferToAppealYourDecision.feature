@@ -1,8 +1,8 @@
-@SnRFullOfferToAppealYourDecision @Regression
+@FullOfferToAppealYourDecision @SaveAndReturnPostTnC @Regression 
 Feature: Verify that save and return functionality is working for Suitable Offer to Appeal your Decision flow
 
   Background: This is to add category to below scenarios
-    Given that category "SnRFullOfferToAppealYourDecision" is added for below scenarios
+    Given that category "FullOfferToAppealYourDecision" is added for below scenarios
 
   @Sprint10
   Scenario: CUICE-9341 >> Prerequisite: Test if user able to view  the Final Offer screen

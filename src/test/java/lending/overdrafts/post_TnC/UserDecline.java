@@ -93,4 +93,9 @@ public class UserDecline extends CommonLibrary {
 		setStepName("Given");
 		findByAny(userDeclineNotNow).isDisplayed();
 	}
+
+	@Then("^user clicks on Next button on User decline screen$")
+	public void user_clicks_on_Next_button_on_User_decline_screen() {
+
+	}
 }

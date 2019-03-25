@@ -1,8 +1,8 @@
-@SnRIcebergDeclineToAppealYourDecision @Regression
+@IcebergDeclineToAppealYourDecision @SaveAndReturnPostTnC @Regression 
 Feature: Verify that save and return functionality is working for Suitable Offer to Appeal your Decision flow
 
   Background: This is to add category to below scenarios
-    Given that category "SnRIcebergDeclineToAppealYourDecision" is added for below scenarios
+    Given that category "IcebergDeclineToAppealYourDecision" is added for below scenarios
 
   @Sprint10
   Scenario: CUICE-9341 >> Prerequisite: Test if user able to view  the Iceberg Decline screen

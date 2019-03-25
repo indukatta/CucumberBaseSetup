@@ -1,4 +1,4 @@
-@SnRSuitableOfferToAppealYourDecision @Regression
+@SnRSuitableOfferToAppealYourDecision @SaveAndReturnPostTnC @Regression
 Feature: Verify that save and return functionality is working for Final Offer to Appeal your Decision flow
 
   Background: This is to add category to below scenarios
@@ -76,7 +76,7 @@ Feature: Verify that save and return functionality is working for Final Offer to
     When user clicks on the More and then Lending button
     Then verify that Alternative Financing screen is visible
     Then user clicks on I Consent on Financial Alternative screen
-    Then verify that Ok got it for I Consent option id displayed
+    Then verify that Ok got it for I Consent option is displayed
     
     @Sprint10
   Scenario: CUICE-9341 >> ATC024: Logout and Login to see if user is lending to Alternative Financing screen after alert
