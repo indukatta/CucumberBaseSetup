@@ -4,14 +4,14 @@ Feature: Verify all functionalities related to Product Selection screen. It will
   Background: This is to add category to below scenarios
     Given that category "ProductSelection" is added for below scenarios
 
-  @Sprint2
+  @Sprint2 @Sprint10
   Scenario: CUICE-540 >> ATC-001: Test if user is able to view the product categories screen if not already taken out
     Given that user is on the Iceberg Homescreen
     Then close existing open application for the next scenario
     When user clicks on the More and then Lending button
     Then verify that Product Selection screen is displayed
 
-  @Sprint2
+  @Sprint2 @Sprint10
   Scenario: CUICE-540 >> ATC-002: Test the content on the "Select Products" screen
     Given that user is on Product Selection screen
     Then verify Select Products description "Do you want to add extra products or services?" on screen
@@ -19,6 +19,8 @@ Feature: Verify all functionalities related to Product Selection screen. It will
     Then verify product name "Business Overdrafts" on Select Products screen
     Then verify product benefit "Best for flexible access to cash flow" on screen
     Then verify Find Out More link "Find Out More" on screen
+    Then verify that check eligibility link is displayed on screen
+    Then verify that "href" value for check eligibility is "https://creditindication.business.hsbc.co.uk"
     Then verify Apply button "Apply" on screen
 
   @Sprint2

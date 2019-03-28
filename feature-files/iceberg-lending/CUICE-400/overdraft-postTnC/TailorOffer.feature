@@ -29,7 +29,31 @@ Feature: Verify all functionalities related to Suitable Offer screen, it covers 
     Then verify that the Suitable Offer screen is displayed
     Then user clicks on continue button on the screen
     Then verify that Tailor Offer screen is visible
+  
+  @Sprint10
+  Scenario: CUICE-8891 >> Test if content on Tailor Offer screen are correct after tap on input box
+  	Given that user is on the Tailor Offer screen
+  	Then user clicks on input box to bring the keyboard up for precise input
+    And verify that hint text "Please enter a value from £100 to £" is displayed on Tailor Offer screen
+    And verify that Done button is enabled on the screen
 
+  @Sprint10
+  Scenario: CUICE-13956 >> Test if precise value is being round down to multiple of 10
+    Given that user is on precise input box screen
+    When user enter "109" in precise input box on the screen
+    Then verify that Done button is disabled on the screen
+    Then verify that updated amount "100" is displayed on the screen
+    And user clicks on input box to bring the keyboard up for precise input
+    When user enter "101" in precise input box on the screen
+    Then verify that Done button is disabled on the screen
+    Then verify that updated amount "100" is displayed on the screen
+        
+  @Sprint10
+  Scenario: CUICE-8891 >> Test if Done button gets disabled when user enter less than 100
+    Given that user is on the Tailor Offer screen
+    When user enter "90" in precise input box on the screen
+    Then verify that Done button is disabled on the screen
+    
   @Sprint7
   Scenario Outline: CUICE-10262 >> Test if rate gets changed with amount selected on Tailor Offer screen
     Given that user is on the Tailor Offer screen

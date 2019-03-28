@@ -24,6 +24,24 @@ Feature: Verify all functionalities related to Amount of Borrowing  screen, it c
     And verify that desclaimer "*All lending is subject to eligibility" is displayed on the screen
     And verify that continue button is disabled
 
+  @Sprint10
+  Scenario: CUICE-13956 >> Test if content on Tailor Offer screen are correct after tap on input box
+    Then verify that Amount of Borrowing screen is displayed
+    Then user clicks on input box to bring the keyboard up for precise input
+    And verify that hint text "Please enter a value from £100 to £" is displayed on Tailor Offer screen
+    And verify that Done button is enabled on the screen
+
+  @Sprint10
+  Scenario: CUICE-13956 >> Test if precise value is being round down to multiple of 10
+    Given that user is on precise input box screen
+    When user enter "109" in precise input box on the screen
+    Then verify that Done button is disabled on the screen
+    Then verify that updated amount "100" is displayed on the screen
+    And user clicks on input box to bring the keyboard up for precise input
+    When user enter "101" in precise input box on the screen
+    Then verify that Done button is disabled on the screen
+    Then verify that updated amount "100" is displayed on the screen
+
   @Sprint4
   Scenario Outline: CUICE-6171 >> MTC-007: Test if monthly fee changes as per Amount of Borrowing selected on screen
     Given user is on Amount of Borrowing question screen

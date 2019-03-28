@@ -16,10 +16,10 @@ public class UserDecline extends CommonLibrary {
 	public static String userDeclineConsiderDesc;
 	public static String userDeclineAppeal;
 	public static String userDeclineAppealDesc;
-	public static String userDeclineNotNow;
+	public static String userDeclineNext;
 
-	@Then("^verify that User Decline screen is displayed$")
-	public void verify_that_User_Decline_screen_is_displayed() {
+	@Then("^verify that Customer Decline screen is displayed$")
+	public void verify_that_Customer_Decline_screen_is_displayed() {
 		setStepName("Then");
 		captureScreenshot();
 		findByAny(userDeclineTitle).isDisplayed();
@@ -40,8 +40,8 @@ public class UserDecline extends CommonLibrary {
 		String pseDecision = fetchSingleValue("select psedecision from application where id = (SELECT max(id) from application);");
 		verify(pseDecision).contains(decision);
 	}
-	@Given("^that user is on User Decline screen$")
-	public void that_user_is_on_User_Decline_screen() {
+	@Given("^that user is on Customer Decline screen$")
+	public void that_user_is_on_Customer_Decline_screen() {
 		setStepName("Given");
 		findByAny(userDeclineTitle).isDisplayed();
 	}
@@ -50,12 +50,6 @@ public class UserDecline extends CommonLibrary {
 	public void verify_that_title_on_User_Decline_screen_is_displayed(String expected) {
 		setStepName("Given");
 		findByAny(userDeclineTitle).verifyEqualsTo(expected);
-	}
-
-	@Then("^verify that what next \"([^\"]*)\" is displayed$")
-	public void verify_that_what_next_is_displayed(String expected) {
-		setStepName("Given");
-		findByAny(userDeclineWhatNext).verifyEqualsTo(expected);
 	}
 
 	@Then("^verify that decline options \"([^\"]*)\" is displayed$")
@@ -70,12 +64,6 @@ public class UserDecline extends CommonLibrary {
 		findByAny(userDeclineConsider).verifyEqualsTo(expected);
 	}
 
-	@Then("^verify that consider alternative desc \"([^\"]*)\" is displayed$")
-	public void verify_that_consider_alternative_desc_is_displayed(String expected) {
-		setStepName("Given");
-		findByAny(userDeclineConsiderDesc).verifyEqualsTo(expected);
-	}
-
 	@Then("^verify that appeal decision text \"([^\"]*)\" is displayed$")
 	public void verify_that_appeal_decision_text_is_displayed(String expected) {
 		setStepName("Given");
@@ -88,10 +76,10 @@ public class UserDecline extends CommonLibrary {
 		findByAny(userDeclineAppealDesc).verifyEqualsTo(expected);
 	}
 
-	@Then("^verify that Not Not button is displayed on User Decline screen$")
-	public void verify_that_Not_Not_button_is_displayed_on_User_Decline_screen() {
+	@Then("^verify that Next button is displayed on User Decline screen$")
+	public void verify_that_Next_button_is_displayed_on_User_Decline_screen() {
 		setStepName("Given");
-		findByAny(userDeclineNotNow).isDisplayed();
+		findByAny(userDeclineNext).isDisplayed();
 	}
 
 	@Then("^user clicks on Next button on User decline screen$")

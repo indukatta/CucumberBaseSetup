@@ -44,7 +44,7 @@ public class PreciseInputbox extends CommonLibrary {
 		findByAny(AmountOfBorrowing.done).isEnabled();
 	}
 
-	@Given("^that user is on precise input screen$")
+	@Given("^that user is on precise input box screen$")
 	public void that_user_is_on_precise_input_screen_for_tailor_offer() {
 		setStepName("Given");
 		findByAny(AmountOfBorrowing.amtOfBorrowingInput).isDisplayed();
@@ -63,18 +63,18 @@ public class PreciseInputbox extends CommonLibrary {
 		findByAny(AmountOfBorrowing.done).isDisabled();
 	}
 
-	@When("^user enter greater than allowed value in precise input box on the screen$")
-	public void user_enter_greater_than_allowed_value_in_precise_input_box_on_the_screen() {
+	@When("^user enter more than allowed value in precise input box on the screen$")
+	public void user_enter_more_than_allowed_value_in_precise_input_box_on_the_screen() {
 		setStepName("When");
 		findByAny(AmountOfBorrowing.amtOfBorrowingInput).clear();
-		String greaterThanAllowed = (Integer.parseInt(persistentValue.get("maxAmount"))+10)+"";
+		String greaterThanAllowed = (Integer.parseInt(persistentValue.get("maxAmount"))+1)+"";
 		persistentValue.put("valueNotToBeAppear", greaterThanAllowed);
 		findByAny(AmountOfBorrowing.amtOfBorrowingInput).sendKeys(greaterThanAllowed);
 		
 	}
 
-	@When("^user enter valid allowed value in precise input box on the screen$")
-	public void user_enter_valid_allowed_value_in_precise_input_box_on_the_screen() {
+	@When("^user enter valid value in precise input box on the screen$")
+	public void user_enter_valid_value_in_precise_input_box_on_the_screen() {
 		setStepName("Then");
 		findByAny(AmountOfBorrowing.amtOfBorrowingInput).clear();
 		persistentValue.put("valueNotToBeAppear", persistentValue.get("sliderAmount"));
@@ -93,8 +93,8 @@ public class PreciseInputbox extends CommonLibrary {
 		findByAny(AmountOfBorrowing.amtOfBorrowingInput).verifyNotEqualsTo(persistentValue.get("valueNotToBeAppear"));
 	}
 
-	@Then("^user tap on input box to bring the keyboard up for precise input$")
-	public void user_tap_on_input_box_to_bring_the_keyboard_up_for_precise_input() {
+	@Then("^user clicks on input box to bring the keyboard up for precise input$")
+	public void user_clicks_on_input_box_to_bring_the_keyboard_up_for_precise_input() {
 		setStepName("Then");
 		String amount = findByAny(AmountOfBorrowing.amtOfBorrowingInput).getText();
 		TailorOffer.setAmountAndFeeinPersistentValue(amount);
