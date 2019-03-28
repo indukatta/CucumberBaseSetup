@@ -85,4 +85,10 @@ public class AmountOfBorrowing extends CommonLibrary {
 		setStepName("When");
 		findByAny(amtOfBorrowingSlider).setValue(".8");
 	}
+	
+	@Then("^verify that updated amount \"([^\"]*)\" is displayed on the screen$")
+	public void verify_that_updated_amount_is_displayed_on_the_screen(String expected) {
+		findByAny(amtOfBorrowingInput).verifyEqualsTo(expected);
+	}
+	
 }
