@@ -4,10 +4,9 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import lending.overdrafts.pre_TnC.CommonLibrary;
 
-import static com.factory.mobile.driver.AppiumDriverManager.setStepName;
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 import static com.factory.data.manager.Database.*;
-public class UserDecline extends CommonLibrary {
+public class CustomerDecline extends CommonLibrary {
 	public static String userDeclineTitle;
 	public static String userDeclineBody;
 	public static String userDeclineWhatNext;
@@ -84,6 +83,6 @@ public class UserDecline extends CommonLibrary {
 
 	@Then("^user clicks on Next button on User decline screen$")
 	public void user_clicks_on_Next_button_on_User_decline_screen() {
-
+		reportFail("CustomerDecline");
 	}
 }

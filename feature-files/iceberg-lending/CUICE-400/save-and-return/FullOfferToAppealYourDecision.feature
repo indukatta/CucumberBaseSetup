@@ -61,13 +61,13 @@ Feature: Verify that save and return functionality is working for Suitable Offer
     Then user clicks on No, decline the offer button on screen
     Then verify that Decline Offer screen is visible
     Then user clicks on Yes button on Decline Offer screen
-    Then verify that User Decline screen is displayed
+    Then verify that Customer Decline screen is displayed
     
     @Sprint10
   Scenario: CUICE-9341 >> ATC005: Logout and Login to see if user is lending to Customer Decline screen
     Given user exit the iceberg application and relaunch
     When user clicks on the More and then Lending button
-    Then verify that User Decline screen is displayed
+    Then verify that Customer Decline screen is displayed
     Then user clicks on Next button on User decline screen
     Then verify that Alternative Financing screen is visible
     
