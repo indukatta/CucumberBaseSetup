@@ -24,7 +24,6 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public static String yesButton;
 	public static String noButton;
 	public static String backButton;
-//	public static Login login = null;
 
 	@Before
 	public void startTestReport(Scenario scenario) throws Exception {
@@ -40,20 +39,19 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public static void that_user_is_on_the_Credit_Management_screen() throws Throwable {
 		setStepName("Given");
 		launchMobileApplication(AppType.IOSAPP, "0.0.0.0:4723");
-//		if (!alreadyLoggedIn) {
-			driver = (IOSDriver<MobileElement>) getAppiumDriverMobileElement();
-			Login login = new Login(driver);
-			login.loginAsUser("TESTUSER", "TESTPASSWORD");
-			findByAccessibilityId("alertPrimaryButton").click();
-//			alreadyLoggedIn = true;
-			reportPass("Successfully logged in to Iceberg application.");
-//		} else {
-//			reportPass("You are already logged in to Iceberg application.");
-//		}
-		if (deleteApplication) {
-//			deleteLendingApplications();
-		}
+		System.out.println("Feature or category name: "+categoryName);
+		driver = (IOSDriver<MobileElement>) getAppiumDriverMobileElement();
+		Login login = new Login(driver);
+		login.loginAsUser("TESTUSER", "TESTPASSWORD");
+		findByAccessibilityId("alertPrimaryButton").click();
+		reportPass("Successfully logged in to Iceberg application.");
 		deleteApplication = true;
+	}
+
+	@Then("^close existing open application for the next scenario$")
+	public void close_existing_open_application_for_the_next_scenario() {
+		setStepName("Then");
+		updateApplicationDate();
 	}
 
 	@When("^user clicks on the More and then Lending button$")
@@ -182,5 +180,5 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public void captures_updated_screenshot_for_execution_results() {
 		captureScreenshot();
 	}
-	
+
 }

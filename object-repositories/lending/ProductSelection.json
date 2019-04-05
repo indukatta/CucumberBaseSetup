@@ -1,15 +1,15 @@
 {
 	"screenTitle": {
-		"accessibility id": "Select Products"
+		"accessibility id": "lending_navigation_bar_title"
 	},
 	"backButton": {
-		"accessibility id": "Back"
+		"accessibility id": "back"
 	},
 	"selectProductDescription": {
-		"accessibility id": "lending.product_selection.heading_label_accessibility_id"
+		"accessibility id": "lending.product.summary_label"
 	},
 	"productIcon": {
-		"xpath": "//XCUIElementTypeImage[@name=\"bankAvatar\"]"
+		"accessibility id": "borrowing"
 	},
 	"productName": {
 		"accessibility id": "lending.product.name_label"
@@ -21,6 +21,15 @@
 		"accessibility id": "lending.button_more_info"
 	},
 	"buttonApply": {
-		"accessibility id": "lending.button_apply"
+		"accessibility id": "lending.button_add"
+	},
+	"eligibility": {
+		"accessibility id": "Check eligibility"
+	},
+	"eligibilityPage": {
+		"xpath": "//XCUIElementTypeOther[@name=\"Business Lending Eligibility Checker\"]"
+	},
+	"breadcrumb": {
+		"accessibility id": "breadcrumb"
 	}
 }

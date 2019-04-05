@@ -4,7 +4,6 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
   Background: This is to add category to below scenarios
     Given that category "AnnualInteresRate" is added for below scenarios
 
-  @Sprint5
   Scenario: CUICE-6171 >> Prerequisite: Test if user able to view  the Borrowings Yes No screen
     Given that user is on the Iceberg Homescreen
     Then close existing open application for the next scenario

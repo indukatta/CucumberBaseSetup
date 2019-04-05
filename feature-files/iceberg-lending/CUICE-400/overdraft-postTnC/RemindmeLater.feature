@@ -44,7 +44,7 @@ Feature: Verify all functionalities related to Remind me Later screen, it covers
     Given that user is on the Remind me Later screen
     Then user clicks on No, decline the offer button on screen
     Then verify that Decline Offer screen is visible
-    Then click on No button on Decline Offer screen
+    Then user clicks on No button on Decline Offer screen
 
   @Sprint6
   Scenario: CUICE-10190 >> Test if Remind me later screen is displayed when user clicks on Yes, remind me later

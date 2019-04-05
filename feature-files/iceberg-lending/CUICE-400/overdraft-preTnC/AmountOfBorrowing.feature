@@ -19,9 +19,9 @@ Feature: Verify all functionalities related to Amount of Borrowing  screen, it c
     Then verify Amount of Borrowing title "Borrowing" on screen
     Then verify Amount of Borrowing question "How much would you like to borrow?" on screen
     And verify that Amount of borrowing slider is displayed on the screen
-    And verify that monthly fee component "Fee 0.12 GBP monthly" is displayed on the screen
-    And verify that EAR component "Representative EAR of 9.9% variable*" is displayed on the screen
-    And verify that desclaimer "*All lending is subject to eligibility" is displayed on the screen
+    #And verify that monthly fee component "Fee 0.12 GBP monthly" is displayed on the screen
+    And verify that EAR component "Representative EAR (variable)* 9.9%" is displayed on the screen
+    And verify that disclaimer "*All lending is subject to eligibility" is displayed on the screen
     And verify that continue button is disabled
 
   @Sprint10
@@ -35,27 +35,25 @@ Feature: Verify all functionalities related to Amount of Borrowing  screen, it c
   Scenario: CUICE-13956 >> Test if precise value is being round down to multiple of 10
     Given that user is on precise input box screen
     When user enter "109" in precise input box on the screen
-    Then verify that Done button is disabled on the screen
-    Then verify that updated amount "100" is displayed on the screen
+    Then user clicks on Done button on Input keypad screen
+    Then verify that updated amount "£100" is displayed on the screen
     And user clicks on input box to bring the keyboard up for precise input
     When user enter "101" in precise input box on the screen
-    Then verify that Done button is disabled on the screen
-    Then verify that updated amount "100" is displayed on the screen
+    Then user clicks on Done button on Input keypad screen
+    Then verify that updated amount "£100" is displayed on the screen
 
   @Sprint4
   Scenario Outline: CUICE-6171 >> MTC-007: Test if monthly fee changes as per Amount of Borrowing selected on screen
     Given user is on Amount of Borrowing question screen
     When user selects an amount <Amount of Borrowing> on Amount of Borrowing Yes screen
-    Then verify that monthly fee <Monthly Fee> is calculated and correct on the screen
+    #Then verify that monthly fee <Monthly Fee> is calculated and correct on the screen
     Then verify that continue button is enabled
 
     Examples: 
       | Amount of Borrowing | Monthly Fee |
       |                1000 |        0.62 |
-      |                1500 |        1.87 |
-      |                4000 |        0.62 |
       |                5500 |       11.25 |
-      |                7000 |       11.25 |
+      |               10000 |       11.25 |
 
   @Sprint4
   Scenario: CUICE-6171 >> ATC-008: Test if user is able to purpose of borrowing screen after clicking on Yes

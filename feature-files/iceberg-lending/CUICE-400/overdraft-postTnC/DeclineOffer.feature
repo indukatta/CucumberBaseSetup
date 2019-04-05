@@ -43,13 +43,13 @@ Feature: Verify all functionalities related to Decline Offer screen, it covers C
   @Sprint6
   Scenario: CUICE-563 >> Test if Remind me later screen is displayed when user clicks on No button
     Given that user is on the Decline Offer screen
-    Then click on No button on Decline Offer screen
+    Then user clicks on No button on Decline Offer screen
     Then verify that Remind me Later screen is visible
     Then user clicks on No, decline the offer button on screen
 
   @Sprint6
   Scenario: CUICE-563 >> Test if User Decline screen is displayed when user clicks on Yes button
     Given that user is on the Decline Offer screen
-    Then click on Yes button on Decline Offer screen
-    Then verify that User Decline screen is displayed
+    Then user clicks on Yes button on Decline Offer screen
+    Then verify that Customer Decline screen is displayed
     

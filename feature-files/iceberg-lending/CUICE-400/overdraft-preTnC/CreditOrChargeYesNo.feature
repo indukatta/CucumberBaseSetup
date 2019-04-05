@@ -51,9 +51,6 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
     When user clicks on No button on lending question screen
     Then verify that Total Existing Borrowings screen is displayed
     And user clicks on back button on lending question screen
-    Then verify that No button is selected on lending question screen
-    When user call rest end point "question-configuration" to get and save the response
-    Then verify that expected json "lending-QnA/CreditOrChargeNo" is equals to "data/application/answers" except "dateModified" key
 
   @Sprint4 @Sprint5
   Scenario: CUICE-6270 >> ATC-004: Test if user clicks on Yes, Total Existing Borrowings is displayed
@@ -71,6 +68,3 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
     When user clicks on Yes button on lending question screen
     Then verify that Total Existing Borrowings screen is displayed
     And user clicks on back button on lending question screen
-    Then verify that Yes button is selected on lending question screen
-    When user call rest end point "question-configuration" to get and save the response
-    Then verify that expected json "lending-QnA/CreditOrChargeYes" is equals to "data/application/answers" except "dateModified" key

@@ -47,7 +47,7 @@ Feature: Verify all functionalities related to Decline Offer screen, it covers C
   Scenario: CUICE-13956 >> Test if content on User Decline screen are correct
     Given that user is on Customer Decline screen
     Then user clicks on Next button on User decline screen
-    Then verify that Alternative Financing screen is displayed
+    Then verify that Alternative Financing screen is visible
     Then user clicks on back button on lending question screen
     Then verify that Customer Decline screen is displayed
     

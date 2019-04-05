@@ -65,7 +65,7 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     Given that user is on Total Existing Borrowings screen
     When user enters maximum value "100000001" in Total Existing Borrowings input box
     Then verify that value of Total Existing Borrowings is set to "£10,000,000" max limit
-    And verify that continue button is enabled
+    And verify that continue button is disabled
 
   @Sprint4
   Scenario: CUICE-6255 >> ATC-007: Test if continue button is disabled and set to default value if special characters are entered in Total Existing Borrowings

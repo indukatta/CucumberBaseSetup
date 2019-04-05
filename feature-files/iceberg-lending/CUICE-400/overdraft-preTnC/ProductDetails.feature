@@ -28,12 +28,6 @@ Feature: Verify all functionalities related to Product Details screen, it will c
     Then verify terms and conditions heading "Terms and Conditions" on screen
 
   @Sprint2
-  Scenario: CUICE-542 >> ATC-002: Verify terms and conditions is not clickable.
-    Given user is on Product Details screen
-    Then user clicks on terms and condition
-    Then verify product name "Business Overdrafts" on Product Details screen
-
-  @Sprint2
   Scenario: CUICE-542 >> MTC-003: Verify icon, spacing between sub components alignment of text and/or sub component and over all UI
     Then verify broken link for icon image on the screen
     Then verify product name and description are center aligned
@@ -53,3 +47,4 @@ Feature: Verify all functionalities related to Product Details screen, it will c
   Scenario: CUICE-3914 >> ATC-001: Verify static warning message on Product Details screen
     Given user is on Product Details screen
     Then verify product purpose "Business borrowing cannot be used for personal use" is displayed on product details screen
+    Then user clicks on Back button on Product Details screen

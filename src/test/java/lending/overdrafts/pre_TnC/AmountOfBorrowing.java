@@ -61,8 +61,8 @@ public class AmountOfBorrowing extends CommonLibrary {
 		findByAny(screenEAR).verifyEqualsTo(arg1);
 	}
 	
-	@Then("^verify that desclaimer \"([^\"]*)\" is displayed on the screen$")
-	public void verify_that_desclaimer_is_displayed_on_the_screen(String arg1) {
+	@Then("^verify that disclaimer \"([^\"]*)\" is displayed on the screen$")
+	public void verify_that_disclaimer_is_displayed_on_the_screen(String arg1) {
 		setStepName("Then");
 		findByAny(desclaimer).verifyEqualsTo(arg1);
 	}

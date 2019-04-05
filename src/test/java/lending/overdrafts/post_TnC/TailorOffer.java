@@ -87,8 +87,8 @@ public class TailorOffer extends CommonLibrary {
 	@Then("^user clicks on Done button on Input keypad screen$")
 	public void user_clicks_on_Done_button_on_Input_keypad_screen() {
 		setStepName("Then");
-		findByAny(AmountOfBorrowing.done).isEnabled();
 		findByAny(AmountOfBorrowing.done).click();
+		sleep(1000);
 		captureScreenshot();
 		String amount = findByAny(AmountOfBorrowing.amtOfBorrowingInput).getText();
 		setAmountAndFeeinPersistentValue(amount);

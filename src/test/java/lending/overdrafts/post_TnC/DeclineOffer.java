@@ -7,7 +7,7 @@ import lending.overdrafts.pre_TnC.CommonLibrary;
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 
 public class DeclineOffer extends CommonLibrary {
-	public static String alertImageView1;
+	public static String alertImageView;
 	public static String alertTitleLabel;
 	public static String alertBodyLabel;
 	public static String alertYesButton;
@@ -29,7 +29,7 @@ public class DeclineOffer extends CommonLibrary {
 	@Then("^verify that Decline Offer alert image is displayed$")
 	public void verify_that_Decline_Offer_alert_image_is_displayed() {
 		setStepName("Then");
-		findByAny(alertImageView1).isDisplayed();
+		findByAny(alertImageView).isDisplayed();
 	}
 
 	@Then("^verify that Decline Offer title text \"([^\"]*)\" is displayed$")

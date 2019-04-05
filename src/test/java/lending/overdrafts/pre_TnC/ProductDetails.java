@@ -61,11 +61,6 @@ public class ProductDetails extends CommonLibrary {
 		findByAny(termsAndConditionsHeading).verifyEqualsTo(expected);
 	}
 
-	@Then("^user clicks on terms and condition$")
-	public void user_clicks_on_terms_and_condition() throws Throwable {
-		setStepName("Then");
-		functionNotImplemented();
-	}
 
 	@Then("^verify overdraft range \"([^\"]*)\" is displayed on product details screen$")
 	public void verify_overdraft_range_is_displayed_on_product_details_screen(String expected) throws Throwable {
