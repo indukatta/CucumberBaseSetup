@@ -67,10 +67,9 @@ public class PreciseInputbox extends CommonLibrary {
 	public void user_enter_more_than_allowed_value_in_precise_input_box_on_the_screen() {
 		setStepName("When");
 		findByAny(AmountOfBorrowing.amtOfBorrowingInput).clear();
-		String greaterThanAllowed = (Integer.parseInt(persistentValue.get("maxAmount"))+1)+"";
+		String greaterThanAllowed = convertToInteger(persistentValue.get("maxAmount"))+1+"";
 		persistentValue.put("valueNotToBeAppear", greaterThanAllowed);
 		findByAny(AmountOfBorrowing.amtOfBorrowingInput).sendKeys(greaterThanAllowed);
-		
 	}
 
 	@When("^user enter valid value in precise input box on the screen$")
@@ -106,7 +105,7 @@ public class PreciseInputbox extends CommonLibrary {
 	@Then("^verify that slider value is apparing in the precise input box$")
 	public void verify_that_slider_value_is_apparing_in_the_precise_input_box() {
 		setStepName("Then");
-		findByAny(AmountOfBorrowing.amtOfBorrowingInput).verifyEqualsTo("£"+persistentValue.get("sliderAmount"));
+		findByAny(AmountOfBorrowing.amtOfBorrowingInput).verifyEqualsTo("£"+commaSeparatedNumber(persistentValue.get("sliderAmount")));
 	}
 
 	@Then("^user clicks on Done button on the screen$")

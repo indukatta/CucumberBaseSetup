@@ -6,7 +6,10 @@
 		"accessibility id": "lending_question_title"
 	},
 	"creditAndLending": {
-		"accessibility id": "Lending"
+		"accessibility id": "lendingButton"
+	},
+	"manageOverdraft": {
+		"accessibility id": "manageLimitButton"
 	},
 	"logout": {
 		"accessibility id": "Logout"
@@ -14,8 +17,11 @@
 	"more": {
 		"accessibility id": "More"
 	},
-	"continueButton": {
+	"nextButton": {
 		"accessibility id": "Next"
+	},
+	"lendingPrimaryButton": {
+		"accessibility id": "lending_primary_button"
 	},
 	"yesButton": {
 		"accessibility id": "Yes"

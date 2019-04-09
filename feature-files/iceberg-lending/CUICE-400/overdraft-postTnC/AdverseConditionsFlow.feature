@@ -1,11 +1,10 @@
-@Regression
+@AdverseConditionsFlow @Regression @Sprint7
 Feature: Verify all functionalities related to Final Offer screen, it covers CUICE-8938
 
   Background: This is to add category to below scenarios
     Given that category "AdverseConditionsFlow" is added for below scenarios
     Then close existing open application for the next scenario
 
-  @AdverseConditionsFlow
   Scenario: CUICE-8938 >> Test if user able to view the Decline screen for refer decision from PSE with Sustainability No
     Given that user is on the Iceberg Homescreen
     When user clicks on the More and then Lending button
@@ -27,8 +26,8 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
     And user clicks on No button on lending question screen
     And user clicks on No button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    Then verify that "referred" decision is coming in PSE response
-    Then verify that the Iceberg Decline screen is displayed
+    Then verify that "partialOffer" decision is coming in PSE response
+    Then verify that the Partial Offer screen is displayed
 
   Scenario: CUICE-8938 >> Test if user able to view the Decline screen for declined decision from PSE with Sustainability No
     Given that user is on the Iceberg Homescreen
@@ -52,7 +51,7 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
     And user clicks on No button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
     Then verify that "declined" decision is coming in PSE response
-    Then verify that the Iceberg Decline screen is displayed
+    Then verify that Iceberg Decline screen is displayed
 
   Scenario: CUICE-8938 >> Test if user don't know how much would he like to borrow is able to view the Decline screen for approved decision from PSE with Sustainability Yes
     Given that user is on the Iceberg Homescreen
@@ -74,8 +73,8 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
     And user clicks on No button on lending question screen
     And user clicks on Yes button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    Then verify that "accepted" decision is coming in PSE response
-    Then verify that the Iceberg Decline screen is displayed
+    Then verify that "fullOffer" decision is coming in PSE response
+    Then verify that Iceberg Decline screen is displayed
 
   Scenario: CUICE-8938 >> Test if user able to view the Decline screen for approved decision from PSE with Sustainability Yes
     Given that user is on the Iceberg Homescreen
@@ -98,8 +97,8 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
     And user clicks on No button on lending question screen
     And user clicks on Yes button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    Then verify that "accepted" decision is coming in PSE response
-    Then verify that the Iceberg Decline screen is displayed
+    Then verify that "fullOffer" decision is coming in PSE response
+    Then verify that Iceberg Decline screen is displayed
 
   Scenario: CUICE-8938 >> Test if user able to view the Decline screen for refer decision from PSE with Sustainability Yes
     Given that user is on the Iceberg Homescreen
@@ -122,8 +121,8 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
     And user clicks on No button on lending question screen
     And user clicks on Yes button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    Then verify that "referred" decision is coming in PSE response
-    Then verify that the Iceberg Decline screen is displayed
+    Then verify that "partialOffer" decision is coming in PSE response
+    Then verify that Iceberg Decline screen is displayed
 
   Scenario: CUICE-8938 >> Test if user able to view the Decline screen for declined decision from PSE with Sustainability Yes
     Given that user is on the Iceberg Homescreen
@@ -147,4 +146,4 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
     And user clicks on Yes button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
     Then verify that "declined" decision is coming in PSE response
-    Then verify that the Iceberg Decline screen is displayed
+    Then verify that Iceberg Decline screen is displayed

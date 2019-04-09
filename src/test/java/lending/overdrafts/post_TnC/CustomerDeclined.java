@@ -7,12 +7,12 @@ import lending.overdrafts.pre_TnC.CommonLibrary;
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 import static com.factory.data.manager.Database.*;
 
-public class CustomerDecline extends CommonLibrary {
+public class CustomerDeclined extends CommonLibrary {
 	public static String screenHeading = "custom_title_label";
 	public static String textWhatCanYouDo = "lending_screen_custom_text_element_accessibility_id_0_0";
 	public static String textAlternativeFinancing = "lending_screen_custom_text_element_accessibility_id_1_0";
 	public static String textAppealDecision = "lending_screen_custom_text_element_accessibility_id_1_1";
-	public static String nextButton;
+	public static String nextButton = "lending_primary_button";
 
 	@Then("^verify that Customer Decline screen is displayed$")
 	public void verify_that_Customer_Decline_screen_is_displayed() {
@@ -57,12 +57,20 @@ public class CustomerDecline extends CommonLibrary {
 		findByAny(nextButton).isDisplayed();
 	}
 
+	@Then("^user clicks on Next button on User decline screen$")
+	public void user_clicks_on_Next_button_on_User_decline_screen() {
+		setStepName("Given");
+		findByAny(nextButton).click();
+		sleep(3000);
+	}
+
 	@Then("^verify that \"([^\"]*)\" decision is coming in PSE response$")
 	public void verify_that_decision_is_comming_in_PSE_response(String decision) {
 		setStepName("Then");
 		String applicationID = fetchSingleValue("SELECT max(id) from application;");
-		System.out.println("applicationID: "+applicationID);
-		String pseDecision = fetchSingleValue("select psedecision from application where id = (SELECT max(id) from application);");
+		System.out.println("applicationID: " + applicationID);
+		String pseDecision = fetchSingleValue(
+				"select psedecision from application where id = (SELECT max(id) from application);");
 		verify(pseDecision).contains(decision);
 	}
 

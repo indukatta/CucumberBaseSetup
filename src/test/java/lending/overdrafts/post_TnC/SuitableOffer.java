@@ -44,16 +44,23 @@ public class SuitableOffer extends CommonLibrary {
 		findByAny(suitableOfferMessage).verifyContains(expected);
 	}
 
+	@Then("^verify that continue button is enabled on Suitable Offer screen$")
+	public void verify_that_continue_button_is_enabled_on_Suitable_Offer_screen() {
+		setStepName("Then");
+		findByAny(suitableOfferContinue).isEnabled();
+	}
+
 	@Then("^verify that Continue button on suitable offer is pre selected$")
 	public void verify_that_Continue_with_overdraft_button_is_displayed() {
 		setStepName("Then");
 		findByAny(suitableOfferContinue).isDisplayed();
 	}
-
-	@Then("^user clicks on Continue button on Suitable Offer$")
-	public void user_clicks_on_Continue_button_on_Suitable_Offer() {
+	
+	@Then("^user clicks on continue button on Suitable Offer screen$")
+	public void user_clicks_on_Continue_button_on_Suitable_Offer_screen() {
 		setStepName("Then");
 		findByAny(suitableOfferContinue).click();
+		sleep(2000);
 	}
 
 	@Then("^retrieve and save offered amount from Suitable Offer screen$")
@@ -62,5 +69,5 @@ public class SuitableOffer extends CommonLibrary {
 		System.out.println("Stored value for 'maxAmount' is "+ suitableOfferMsg);
 		persistentValue.put("maxAmount", suitableOfferMsg);
 	}
-
+	
 }

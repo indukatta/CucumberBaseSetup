@@ -9,7 +9,7 @@
 		"port": "4726"
 	},
 	"suite": {
-		"default": "DeclineOffer"
+		"default": "Sprint7"
 	},
 	"ios-app": {
 		"platformName": "iOS",
@@ -18,6 +18,15 @@
 		"fullReset": "false",
 		"noReset": "false",
 		"app": "/Users/ashdiksh/Downloads/Iceberg.app"
+	},
+	"apple-app": {
+		"platformName": "iOS",
+		"platformVersion": "12.1.4",
+		"deviceName": "Lending iPhone x",
+		"udid": "79a5c712dd6f40603557f31e040948bacfccf16f",
+		"fullReset": "false",
+		"noReset": "false",
+		"app": "/Users/ashdiksh/Downloads/Iceberg2.app"
 	},
 	"env": {
 		"qa": {

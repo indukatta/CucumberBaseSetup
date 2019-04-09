@@ -2,6 +2,8 @@ package lending.overdrafts.post_TnC;
 
 import cucumber.api.java.en.Then;
 import lending.overdrafts.pre_TnC.CommonLibrary;
+import lending.overdrafts.pre_TnC.CommonStepDefinitions;
+
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 
 public class AfterDeclineScreen extends CommonLibrary {
@@ -18,14 +20,14 @@ public class AfterDeclineScreen extends CommonLibrary {
 	public void verify_that_Alternative_Financing_screen_is_visible() {
 		setStepName("Then");
 		captureScreenshot();
-		findByAccessibilityId(lendingPrimaryButton).as("I Consent").isDisplayed();
-		findByAccessibilityId(lendingPrimaryButton).as("I Consent").verifyEqualsTo("I Consent");
+		findByAccessibilityId(CommonStepDefinitions.lendingPrimaryButton).as("I consent").scrollDownUntilVisible().isDisplayed();
+		findByAccessibilityId(CommonStepDefinitions.lendingPrimaryButton).as("I consent").verifyEqualsTo("I consent");
 	}
 
 	@Then("^user clicks on I Consent on Financial Alternative screen$")
 	public void user_clicks_on_I_Consent_on_Financial_Alternative_screen() {
 		setStepName("Then");
-		findByAccessibilityId(lendingPrimaryButton).as("I Consent").click();
+		findByAccessibilityId(CommonStepDefinitions.lendingPrimaryButton).as("I consent").click();
 	}
 
 

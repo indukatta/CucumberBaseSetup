@@ -9,6 +9,7 @@
 		"accessibility id": "number_question_fees_label_1"
 	},
 	"feeAndAIR": {
-		"xpath": "//XCUIElementTypeStaticText[contains(@name, \"number_question_fees_label_0\")]"
+		"accessibility id": "number_question_fees_label_1"
+		
 	}
 }

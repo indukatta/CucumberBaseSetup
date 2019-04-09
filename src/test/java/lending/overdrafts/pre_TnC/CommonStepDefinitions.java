@@ -17,10 +17,12 @@ import pageObjects.Login.Login;
 public class CommonStepDefinitions extends CommonLibrary {
 	public static String screenTitle;
 	public static String screenQuestion;
-	public static String continueButton;
+	public static String nextButton;
+	public static String lendingPrimaryButton;
 	public static String more;
 	public static String logout;
 	public static String creditAndLending;
+	public static String manageOverdraft;
 	public static String yesButton;
 	public static String noButton;
 	public static String backButton;
@@ -64,6 +66,16 @@ public class CommonStepDefinitions extends CommonLibrary {
 		captureScreenshot();
 	}
 
+
+	@When("^user clicks on More and then Manage Overdraft button$")
+	public void user_clicks_on_More_and_then_Manage_Overdraft_button() {
+		setStepName("When");
+		findByAccessibilityId(more).click();
+		sleep(500);
+		findByAny(manageOverdraft).click();
+		sleep(4000);
+		captureScreenshot();
+	}
 	@Then("^user exit the iceberg application and relaunch$")
 	public static void user_exit_the_iceberg_application_and_reopen() throws Throwable {
 		setStepName("When");
@@ -91,7 +103,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 	@When("^user clicks on continue button on the screen$")
 	public void user_clicks_on_continue_button_on_the_screen() throws Throwable {
 		setStepName("When");
-		findByAny(continueButton).click();
+		findByAny(nextButton).click();
 		sleep(1000);
 	}
 
@@ -106,14 +118,14 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public void verify_that_continue_button_is_enabled() throws Throwable {
 		setStepName("Then");
 		captureScreenshot();
-		findByAny(continueButton).isEnabled();
+		findByAny(nextButton).isEnabled();
 	}
 
 	@Then("^verify that continue button is disabled$")
 	public void verify_that_continue_button_is_disabled() {
 		setStepName("Then");
 		captureScreenshot();
-		findByAny(continueButton).isDisabled();
+		findByAny(nextButton).isDisabled();
 	}
 
 	@Then("^verify that Yes button is displayed on lending question screen$")

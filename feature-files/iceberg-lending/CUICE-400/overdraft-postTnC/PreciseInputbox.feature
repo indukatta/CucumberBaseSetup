@@ -27,7 +27,7 @@ Feature: Verify all functionalities related to Tailor Offer screen, it covers CU
     And user clicks on No button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
     Then retrieve and save offered amount from Suitable Offer screen
-    And user clicks on continue button on the screen
+    And user clicks on continue button on Suitable Offer screen
     And user clicks on input box to bring the keyboard up for precise input
     Then verify that precise input box appears on the screen
 
@@ -65,17 +65,19 @@ Feature: Verify all functionalities related to Tailor Offer screen, it covers CU
 
   @Sprint7
   Scenario: CUICE-8891 >> Test if precise input box value gets appeared on the Tailor Offer screen
-    Given that user is on precise input screen
+    Given that user is on precise input box screen
     When user enter valid value in precise input box on the screen
     Then user clicks on Done button on the screen
     Then verify that precise input box appears on the screen
-    Then verify that fee has calculated correctly on Tailor Offer screen
+    #This is not part of thinslice
+    #Then verify that fee has calculated correctly on Tailor Offer screen
 
   @Sprint7
   Scenario: CUICE-8891 >> Test if precise input box value gets appeared on the Final Offer screen
     Given that user is on the Tailor Offer screen
     When user clicks on continue button on the screen
     Then verify that selected suitable offer amount is displayed on Final Offer screen
-    Then verify that correct rate has been calculated on Final Offer screen
+    #This is not part of thinslice
+    #Then verify that correct rate has been calculated on Final Offer screen
     Then user clicks on back button on lending question screen
     Given that user is on the Tailor Offer screen

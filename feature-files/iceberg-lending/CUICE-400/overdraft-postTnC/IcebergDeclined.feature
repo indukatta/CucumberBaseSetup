@@ -1,8 +1,8 @@
-@UserDecline @Regression
+@IcebergDeclined @Regression
 Feature: Verify all functionalities related to Decline Offer screen, it covers CUICE-9953
 
   Background: This is to add category to below scenarios
-    Given that category "UserDecline" is added for below scenarios
+    Given that category "IcebergDeclined" is added for below scenarios
 
   @Sprint7 @Sprint10
   Scenario: CUICE-9953 >> Prerequisite: Test if user able to view  the Decline Offer screen
@@ -26,26 +26,24 @@ Feature: Verify all functionalities related to Decline Offer screen, it covers C
     And user clicks on Yes button on lending question screen
     And user clicks on No button on lending question screen
     And user clicks on No button on lending question screen
-    And verify that Terms and Conditions screen is displayed
     And user clicks on Accept button on Terms and Conditions screen
     Then verify that Iceberg Decline screen is displayed
 
   @Sprint7 @Sprint10
   Scenario: CUICE-553 >> Test if content on User Decline screen are correct
     Given that user is on Iceberg Decline screen
-    Then verify that first line of description "We made this decision based on infromation held by us and from the credit reference agency Experian." is displayed on screen
+    Then verify that first line of description "We made this decision based on information held by us and from the Credit reference agency Experian." is displayed on screen
     Then verify that second line of description "You can get a copy of your credit record here:" is displayed on screen
     Then verify that Experian info "Contact Experian at uk.experian.com" is displayed on screen
-    Then verify that title "Sorry we didn't meet your needs" on User Decline screen is displayed
-    Then verify that decline options "Here's what you can do now:" is displayed
-    Then verify that consider alternative text "We can refer you for alternative financing options under the government's Designated Online Finance Platforms" is displayed
-    Then verify that appeal decision text "Appeal this decision" is displayed
-    Then verify that Next button is displayed on User Decline screen
+    Then verify that decline options "Here’s what you can do now:" on Iceberg declined screen
+    Then verify that consider alternative text "•	We can refer you for alternative financing options under the government’s Designated Online Finance Platforms" on Iceberg declined screen
+    Then verify that appeal decision text "•	Appeal this decision" on Iceberg declined screen
+    Then verify that Next button is displayed on Iceberg Decline screen
 
   @Sprint7 @Sprint10
   Scenario: CUICE-553 >> Test if content on User Decline screen are correct
     Given that user is on Iceberg Decline screen
-    Then user clicks on Next button on User decline screen
-    Then verify that Alternative Financing screen is displayed
+    Then user clicks on Next button on Iceberg decline screen
+    Then verify that Alternative Financing screen is visible
     Then user clicks on back button on lending question screen
     Then verify that Customer Decline screen is displayed

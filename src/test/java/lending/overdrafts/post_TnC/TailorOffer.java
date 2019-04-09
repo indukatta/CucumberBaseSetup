@@ -50,14 +50,22 @@ public class TailorOffer extends CommonLibrary {
 	public void verify_that_max_suitable_amount_is_displayed_on_Trailor_Offer_screen(String arg1) {
 		setStepName("Then");
 		findByAny(AmountOfBorrowing.amtOfBorrowingMax).as("Suitable Offer Max Amount")
-				.verifyEqualsTo(arg1 + commaSeparatedNumber(persistentValue.get("maxAmount")));
+				.verifyEqualsTo(arg1 + persistentValue.get("maxAmount").replace(".00", ""));
 	}
 
 	@Then("^verify that daily, monthly and AIR fee and rate are displayed correctly$")
 	public void verify_that_daily_monthly_and_AIR_fee_and_rate_are_displayed_correctly(DataTable expected) {
+		setStepName("Then");
 		findByAny(feeAndAIR).verifyAllEqualsTo(expected);
 	}
 
+	@Then("^user clicks Annual Interest Rate icon on the screen$")
+	public void user_clicks_Annual_Interest_Rate_icon_on_the_screen() {
+		setStepName("Then");
+		findByAny(feeAndAIR).click();
+		sleep(1000);
+	}
+	
 	@When("^user moves slider to (\\d+) percent of maximum value on Tailor Offer screen$")
 	public void user_moves_slider_to_percent_of_maximum_value_on_Tailor_Offer_screen(float arg1) {
 		setStepName("Then");

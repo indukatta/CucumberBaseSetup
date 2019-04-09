@@ -29,8 +29,9 @@ public class CommonLibrary {
 	public static More more = null;
 
 	public CommonLibrary() {
-		
+
 	}
+
 	public void functionNotImplemented() {
 		System.out.println(Thread.currentThread().getStackTrace()[2].getMethodName() + " is not implemented yet.");
 		reportInfo(Thread.currentThread().getStackTrace()[2].getMethodName() + " is not implemented yet.");
@@ -43,17 +44,26 @@ public class CommonLibrary {
 			e.printStackTrace();
 		}
 	}
-	public static String modifiedDate(int days){
-		LocalDateTime newDate =  LocalDateTime.now().plusDays(days);
-		String dateStr = newDate.getDayOfMonth()+" "+newDate.getMonth()+" "+newDate.getYear();
+
+	public static String modifiedDate(int days) {
+		LocalDateTime newDate = LocalDateTime.now().plusDays(days);
+		String dateStr = newDate.getDayOfMonth() + " " + newDate.getMonth() + " " + newDate.getYear();
 		Date date = new Date(dateStr);
 		SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yyyy");
 		return sdf.format(date);
 	}
+
 	protected static String commaSeparatedNumber(String number) {
 		DecimalFormat myFormatter = new DecimalFormat("#,###");
-		String output = myFormatter.format(Integer.parseInt(number));
-		return output;
+		if (!number.contains(",")) {
+			number = myFormatter.format(Integer.parseInt(number));
+		}
+		return number;
+	}
+
+	protected static int convertToInteger(String number) {
+		number = number.replace(",", "").replace(".00", "");
+		return Integer.parseInt(number);
 	}
 
 	public static void deleteLendingApplications() throws Throwable {
@@ -67,18 +77,19 @@ public class CommonLibrary {
 	}
 
 	public static void updateApplicationDate() {
-		String pseDecision = fetchSingleValue("select psedecision from application where id=(SELECT max(id) from application);");
-		if(pseDecision != null && !pseDecision.equals("null")) {
+		String pseDecision = fetchSingleValue(
+				"select psedecision from application where id=(SELECT max(id) from application);");
+		if (pseDecision != null && !pseDecision.equals("null")) {
 			JSONObject pseDecisionObj = new JSONObject(pseDecision);
 			String dateTime = pseDecisionObj.getString("datetime");
-			String message = "update application set psedecision=replace(psedecision::TEXT,'\""+dateTime+"\"','\"2018-01-01T00:00:00.000Z\"')::json;";
+			String message = "update application set psedecision=replace(psedecision::TEXT,'\"" + dateTime
+					+ "\"','\"2018-01-01T00:00:00.000Z\"')::json;";
 			updateTable(message);
 			reportPass(message);
-		}else {
+		} else {
 			String message = "update application set datemodified='2018-01-01 11:42:20.712+00';";
 			updateTable(message);
 			reportPass(message);
 		}
 	}
-
 }

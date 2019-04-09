@@ -35,18 +35,18 @@ Feature: Verify all functionalities related to Suitable Offer screen, it covers 
     Then verify that suitable offer heading "Congratulations!" is displayed
     Then verify that suitable offer message "You have been approved and can borrow upto £" is displayed
     Then retrieve and save offered amount from Suitable Offer screen
-    Then verify that continue button is enabled
+    Then verify that continue button is enabled on Suitable Offer screen
 
   @Sprint7
   Scenario: CUICE-10262 >> Test if content on Tailor Offer screen are correct
     Given that user is on the Suitable Offer screen
-    Then user clicks on continue button on the screen
+    Then user clicks on continue button on Suitable Offer screen
     Then verify that Tailor Offer screen is visible
     Then verify that header "Select the amount you would like to borrow" is displayed on Tailor Offer screen
     Then verify that min default value "£100" is displayed on Tailor Offer screen
     Then verify that max "Max £" suitable amount is displayed on Trailor Offer screen
     Then verify that daily, monthly and AIR fee and rate are displayed correctly
-      | Daily fee £0.00             |
-      | Monthly fee max £0.00       |
-      | Annual Interest Rate 10.65% |
+      #| Daily fee £0.00             |
+      #| Monthly fee max £0.00       |
+      | Annual Interest Rate (variable) 10.65% |
     Then verify that continue button is enabled
