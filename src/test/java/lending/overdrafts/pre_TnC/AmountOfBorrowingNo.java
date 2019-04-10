@@ -6,7 +6,7 @@ import cucumber.api.java.en.Then;
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 
 public class AmountOfBorrowingNo {
-	public static String screenMessage = "accessibility id==lending_screen_custom_text_element_accessibility_id_0_0";
+	public static String screenMessage = "lending_screen_custom_text_element_accessibility_id_0_0";
 
 	@Then("^verify that Amount of Borrowing No screen is displayed$")
 	public void verify_that_Amount_of_Borrowing_No_screen_is_displayed() {

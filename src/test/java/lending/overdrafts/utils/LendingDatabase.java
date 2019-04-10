@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import org.json.JSONObject;
 
 import cucumber.api.java.en.Then;
-import lending.overdrafts.pre_TnC.CommonLibrary;
+import lending.common.library.CommonLibrary;
 
 public class LendingDatabase extends CommonLibrary {
 	@Then("^user update the application modified date or psedecision datetime to more than 60 days$")

@@ -2,7 +2,7 @@ package lending.overdrafts.post_TnC;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import lending.overdrafts.pre_TnC.CommonLibrary;
+import lending.common.library.CommonLibrary;
 
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 import static com.factory.data.manager.Database.*;

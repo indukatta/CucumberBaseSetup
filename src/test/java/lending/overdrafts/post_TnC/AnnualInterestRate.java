@@ -1,9 +1,9 @@
 package lending.overdrafts.post_TnC;
 
-import lending.overdrafts.pre_TnC.CommonLibrary;
 import static com.factory.mobile.driver.AppiumDriverManager.*;
 
 import cucumber.api.java.en.Then;
+import lending.common.library.CommonLibrary;
 
 public class AnnualInterestRate extends CommonLibrary {
 

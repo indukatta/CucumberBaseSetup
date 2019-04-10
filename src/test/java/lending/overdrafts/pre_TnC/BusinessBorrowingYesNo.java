@@ -8,7 +8,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class BusinessBorrowingYesNo {
-	public static String hintText = "accessibility id==lending_question_hint";
+	public static String hintText = "lending_question_hint";
 
 	@Then("^verify that Business Borrowing YesNo screen is displayed$")
 	public void verify_that_Business_Borrowing_YesNo_screen_is_displayed() {

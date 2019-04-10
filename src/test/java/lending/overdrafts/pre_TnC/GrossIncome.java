@@ -5,9 +5,10 @@ import static com.factory.mobile.driver.AppiumDriverManager.*;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import lending.common.library.CommonLibrary;
 
 public class GrossIncome extends CommonLibrary {
-	public static String grossIncomeInputbox = "accessibility id==number_question_selected_value_label";
+	public static String grossIncomeInputbox = "number_question_selected_value_label";
 
 	@Given("^that user is on Gross Income screen$")
 	public void that_user_is_on_Gross_Income_screen() {

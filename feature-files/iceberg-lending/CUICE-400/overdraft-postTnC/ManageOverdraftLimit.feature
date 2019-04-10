@@ -1,4 +1,4 @@
-@ManageOverdraftLimit @Regression
+@ManageOverdraftLimit @Regression @Sprint10
 Feature: Verify all functionalities related to Suitable Offer screen, it covers CUICE-12222
 
   Background: This is to add category to below scenarios

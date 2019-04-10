@@ -4,7 +4,7 @@ import static com.factory.mobile.driver.AppiumDriverManager.setStepName;
 import static com.factory.services.wrapper.RestAssuredManager.*;
 
 import cucumber.api.java.en.Then;
-import lending.overdrafts.pre_TnC.CommonLibrary;
+import lending.common.library.CommonLibrary;
 
 public class LendingAPI extends CommonLibrary {
 	

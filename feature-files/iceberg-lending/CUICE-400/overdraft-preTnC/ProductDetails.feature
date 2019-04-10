@@ -1,10 +1,10 @@
-@ProductDetails @Regression
+ @Regression
 Feature: Verify all functionalities related to Product Details screen, it will cover following stories CUICE-542, CUICE-6194, CUICE-3911
 
   Background: This is to add category to below scenarios
     Given that category "ProductDetails" is added for below scenarios
 
-  @Sprint2
+  @Sprint2 @ProductDetails
   Scenario: CUICE-542 >> Pre-requisite: Login and open Product Details screen
     Given that user is on the Iceberg Homescreen
     Then close existing open application for the next scenario

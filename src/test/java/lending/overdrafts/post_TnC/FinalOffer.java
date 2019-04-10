@@ -4,7 +4,7 @@ import static com.factory.mobile.driver.AppiumDriverManager.*;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import lending.overdrafts.pre_TnC.CommonLibrary;
+import lending.common.library.CommonLibrary;
 import lending.overdrafts.pre_TnC.CommonStepDefinitions;
 
 public class FinalOffer extends CommonLibrary {

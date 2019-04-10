@@ -4,6 +4,7 @@ import static com.factory.mobile.driver.AppiumDriverManager.*;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import lending.common.library.CommonLibrary;
 
 public class ProductDetails extends CommonLibrary {
 

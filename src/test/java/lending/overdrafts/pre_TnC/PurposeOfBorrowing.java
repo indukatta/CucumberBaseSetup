@@ -6,11 +6,12 @@ import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import lending.common.library.CommonLibrary;
 
 public class PurposeOfBorrowing extends CommonLibrary {
 	public static String questionTypes;
 	public static String questionTypesChkBox;
-	public static String screenQuestion = "accessibility id==lending_question_title";
+	public static String screenQuestion = "lending_question_title";
 
 	@Then("^verify that Purpose of Borrowing screen is displayed$")
 	public void verify_that_user_Purpose_of_Borrowing_screen_is_displayed() {

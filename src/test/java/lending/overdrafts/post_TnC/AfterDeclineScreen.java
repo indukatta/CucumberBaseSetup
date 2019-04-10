@@ -1,7 +1,7 @@
 package lending.overdrafts.post_TnC;
 
 import cucumber.api.java.en.Then;
-import lending.overdrafts.pre_TnC.CommonLibrary;
+import lending.common.library.CommonLibrary;
 import lending.overdrafts.pre_TnC.CommonStepDefinitions;
 
 import static com.factory.mobile.driver.AppiumDriverManager.*;

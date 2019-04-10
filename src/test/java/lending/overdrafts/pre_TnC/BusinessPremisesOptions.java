@@ -12,7 +12,7 @@ public class BusinessPremisesOptions {
 	public static String bpTypeFreeholdCkb;
 	public static String bpTypeLeasehold;
 	public static String bpTypeFreehold;
-	public static String screenQuestion = "accessibility id==lending_question_title";
+	public static String screenQuestion = "lending_question_title";
 
 	@Given("^that user is on Business Premises options screen$")
 	public void that_user_is_on_Business_Premises_options_screen() {

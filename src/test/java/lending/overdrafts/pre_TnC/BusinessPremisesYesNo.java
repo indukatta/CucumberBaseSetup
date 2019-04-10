@@ -6,6 +6,7 @@ import static com.factory.mobile.driver.AppiumDriverManager.setStepName;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import lending.common.library.CommonLibrary;
 
 public class BusinessPremisesYesNo extends CommonLibrary {
 

@@ -12,6 +12,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
+import lending.common.library.CommonLibrary;
 import pageObjects.Login.Login;
 
 public class CommonStepDefinitions extends CommonLibrary {
@@ -27,6 +28,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public static String yesButton;
 	public static String noButton;
 	public static String backButton;
+	public static String okayButton = "alertPrimaryButton";
 
 	@Before
 	public void startTestReport(Scenario scenario) throws Exception {
@@ -46,7 +48,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 		driver = (IOSDriver<MobileElement>) getAppiumDriverMobileElement();
 		Login login = new Login(driver);
 		login.loginAsUser("TESTUSER", "TESTPASSWORD");
-		findByAccessibilityId("alertPrimaryButton").click();
+		findByAccessibilityId(okayButton).as("Okay Button after Login").click();
 		reportPass("Successfully logged in to Iceberg application.");
 		deleteApplication = true;
 	}

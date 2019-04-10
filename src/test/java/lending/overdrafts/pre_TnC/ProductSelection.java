@@ -7,6 +7,7 @@ import static com.factory.services.wrapper.RestAssuredManager.httpGet;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import lending.common.library.CommonLibrary;
 
 public class ProductSelection extends CommonLibrary {
 
