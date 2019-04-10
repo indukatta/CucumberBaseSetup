@@ -5,6 +5,7 @@ import static com.factory.mobile.driver.AppiumDriverManager.*;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import lending.overdrafts.pre_TnC.CommonLibrary;
+import lending.overdrafts.pre_TnC.CommonStepDefinitions;
 
 public class FinalOffer extends CommonLibrary {
 
@@ -13,8 +14,6 @@ public class FinalOffer extends CommonLibrary {
 	public static String finalOfferAmt;
 	public static String finalOfferFee;
 	public static String finalOfferAIR;
-	public static String finalOfferContinue;
-	public static String finalOfferNotNow;
 
 	@Then("^verify that the Final Offer screen is displayed$")
 	public void verify_that_the_Final_Offer_screen_is_displayed() {
@@ -44,7 +43,7 @@ public class FinalOffer extends CommonLibrary {
 	@Then("^verify that offered overdraft amount is displayed$")
 	public void verify_that_offered_overdraft_amount_is_displayed() {
 		setStepName("Then");
-		findByAny(finalOfferAmt);
+		findByAny(finalOfferAmt).isDisplayed();
 	}
 
 	@Then("^verify that offered overdraft amount \"([^\"]*)\" is displayed$")
@@ -64,29 +63,35 @@ public class FinalOffer extends CommonLibrary {
 		setStepName("Then");
 		findByAny(finalOfferAIR).verifyContains(expected);
 	}
+	
+	@Then("^user clicks Annual Interest Rate icon on Final Offer$")
+	public void user_clicks_Annual_Interest_Rate_icon_on_Final_Offer() {
+		setStepName("Then");
+		findByAny(finalOfferAIR).click();
+	}
 
 	@Then("^verify that Continue with overdraft button is pre selected$")
 	public void verify_that_Continue_with_overdraft_button_is_displayed() {
 		setStepName("Then");
-		findByAny(finalOfferContinue).isDisplayed();
+		findByAny(CommonStepDefinitions.lendingPrimaryButton).as("Continue with overdraft").isDisplayed();
 	}
 
 	@Then("^verify that Not Now button is not pre selected$")
 	public void verify_that_Not_Now_button_is_displayed() {
 		setStepName("Then");
-		findByAny(finalOfferNotNow).isDisplayed();
+		findByAny(CommonStepDefinitions.lendingSecondaryButton).as("Final Offer's Not Now").isDisplayed();
 	}
 
 	@Then("^user clicks on Continue with overdraft button on Final Offer$")
 	public void user_clicks_on_Continue_with_overdraft_button_on_Final_Offer() {
 		setStepName("Then");
-		findByAny(finalOfferContinue).click();
+		findByAny(CommonStepDefinitions.lendingPrimaryButton).as("Continue with overdraft").click();
 	}
 
 	@Then("^user clicks on Not Now button on Final Offer$")
 	public void user_clicks_on_Not_Now_button_on_Final_Offer() {
 		setStepName("Then");
-		findByAny(finalOfferNotNow).as("Final Offer's Not Now").click();
+		findByAny(CommonStepDefinitions.lendingSecondaryButton).as("Final Offer's Not Now").click();
 		sleep(2000);
 	}
 

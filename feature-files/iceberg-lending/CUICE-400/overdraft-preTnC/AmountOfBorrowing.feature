@@ -46,6 +46,7 @@ Feature: Verify all functionalities related to Amount of Borrowing  screen, it c
   Scenario Outline: CUICE-6171 >> MTC-007: Test if monthly fee changes as per Amount of Borrowing selected on screen
     Given user is on Amount of Borrowing question screen
     When user selects an amount <Amount of Borrowing> on Amount of Borrowing Yes screen
+    #Below step is not part of thinslice
     #Then verify that monthly fee <Monthly Fee> is calculated and correct on the screen
     Then verify that continue button is enabled
 

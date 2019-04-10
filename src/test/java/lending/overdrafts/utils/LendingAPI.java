@@ -18,9 +18,6 @@ public class LendingAPI extends CommonLibrary {
 	@Then("^user call rest end point \"([^\"]*)\" to get and save the response$")
 	public void user_call_rest_end_point_to_get_and_store_the_response(String endPoint) {
 		setStepName("Then");
-//		httpGet("product-categories", false);
-//		applicationID = getLastValueFromJSON("data/applications/id");
-//		System.out.println("applicationID: "+applicationID);
 		httpGet(endPoint, "applicationID", applicationID.toString(), true);
 	}
 	

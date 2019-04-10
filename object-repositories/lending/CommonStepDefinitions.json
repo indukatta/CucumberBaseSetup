@@ -23,6 +23,9 @@
 	"lendingPrimaryButton": {
 		"accessibility id": "lending_primary_button"
 	},
+	"lendingSecondaryButton": {
+		"accessibility id": "lending_secondary_button"
+	},
 	"yesButton": {
 		"accessibility id": "Yes"
 	},

@@ -13,12 +13,6 @@
 		"accessibility id": "offer_fee_1_label"
 	},
 	"finalOfferAIR": {
-		"accessibility id": "offer_fee_2_label"
-	},
-	"finalOfferContinue": {
-		"accessibility id": "lending_primary_button"
-	},
-	"finalOfferNotNow": {
-		"accessibility id": "lending_secondary_button"
+		"accessibility id": "lending_action_icon_button"
 	}
 }

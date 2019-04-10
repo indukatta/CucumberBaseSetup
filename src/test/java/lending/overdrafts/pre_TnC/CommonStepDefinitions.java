@@ -19,6 +19,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public static String screenQuestion;
 	public static String nextButton;
 	public static String lendingPrimaryButton;
+	public static String lendingSecondaryButton;
 	public static String more;
 	public static String logout;
 	public static String creditAndLending;
@@ -104,7 +105,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public void user_clicks_on_continue_button_on_the_screen() throws Throwable {
 		setStepName("When");
 		findByAny(nextButton).click();
-		sleep(1000);
+		sleep(500);
 	}
 
 	@Then("^verify that Credit & Lending option is displayed on screen$")
