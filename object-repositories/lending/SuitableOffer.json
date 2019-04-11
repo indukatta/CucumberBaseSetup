@@ -1,15 +1,15 @@
 {
-	"suitableOfferLogo": {
+	"offerLogo": {
 		"accessibility id": "offer_icon_image_view"
 	},
-	"suitableOfferHeading": {
+	"offerHeading": {
 		"accessibility id": "offer_heading_label"
 	},
-	"suitableOfferMessage": {
+	"offerMessage": {
 		"accessibility id": "offer_message_label"
 	},
-	"suitableOfferContinue": {
-		"accessibility id": "lending_primary_button"
+	"offerExplanation": {
+		"accessibility id": "offer_explanation_label"
 	},
 	"hint": {
 		"accessibility id": "number_question_hint_label"
@@ -19,8 +19,5 @@
 	},
 	"monthlyFee": {
 		"accessibility id": "number_question_fees_label_1"
-	},
-	"feeAndAIR": {
-		"xpath": "//XCUIElementTypeStaticText[contains(@name, \"number_question_fees_label_0\")]"
 	}
 }

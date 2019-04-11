@@ -8,10 +8,10 @@
 	"alertBodyLabel": {
 		"accessibility id": "alertBodyLabel"
 	},
-	"alertYesButton": {
+	"alertPrimaryButton": {
 		"accessibility id": "alertPrimaryButton"
 	},
-	"alertNoButton": {
+	"alertSecondaryButton": {
 		"accessibility id": "alertSecondaryButton"
 	}
 }

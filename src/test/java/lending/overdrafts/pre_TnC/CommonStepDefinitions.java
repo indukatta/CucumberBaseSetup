@@ -37,14 +37,15 @@ public class CommonStepDefinitions extends CommonLibrary {
 
 	@After
 	public void endTestReport(Scenario scenario) {
+		System.out.println(categoryName+": "+scenario.getName()+" is: "+scenario.getStatus());
 		endTest();
 	}
 
 	@Given("^that user is on the Iceberg Homescreen$")
 	public static void that_user_is_on_the_Credit_Management_screen() throws Throwable {
 		setStepName("Given");
+//		System.out.println("Feature or category name: "+categoryName);
 		launchMobileApplication(AppType.IOSAPP, "0.0.0.0:4723");
-		System.out.println("Feature or category name: "+categoryName);
 		driver = (IOSDriver<MobileElement>) getAppiumDriverMobileElement();
 		Login login = new Login(driver);
 		login.loginAsUser("TESTUSER", "TESTPASSWORD");
@@ -66,18 +67,16 @@ public class CommonStepDefinitions extends CommonLibrary {
 		sleep(500);
 		findByAny(creditAndLending).click();
 		sleep(4000);
-		captureScreenshot();
 	}
 
 
 	@When("^user clicks on More and then Manage Overdraft button$")
 	public void user_clicks_on_More_and_then_Manage_Overdraft_button() {
 		setStepName("When");
-		findByAccessibilityId(more).click();
+		findByAny(more).click();
 		sleep(500);
 		findByAny(manageOverdraft).click();
 		sleep(4000);
-		captureScreenshot();
 	}
 	@Then("^user exit the iceberg application and relaunch$")
 	public static void user_exit_the_iceberg_application_and_reopen() throws Throwable {

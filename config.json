@@ -9,7 +9,7 @@
 		"port": "4726"
 	},
 	"suite": {
-		"default": "ProductDetails"
+		"default": "PartialOfferToAppealYourDecision"
 	},
 	"ios-app": {
 		"platformName": "iOS",

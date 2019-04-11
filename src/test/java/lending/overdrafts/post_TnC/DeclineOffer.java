@@ -10,8 +10,8 @@ public class DeclineOffer extends CommonLibrary {
 	public static String alertImageView;
 	public static String alertTitleLabel;
 	public static String alertBodyLabel;
-	public static String alertYesButton;
-	public static String alertNoButton;
+	public static String alertPrimaryButton;
+	public static String alertSecondaryButton;
 
 	@Then("^verify that Decline Offer screen is visible$")
 	public void verify_that_Decline_Offer_screen_is_visible() {
@@ -47,27 +47,27 @@ public class DeclineOffer extends CommonLibrary {
 	@Then("^user clicks on No button on Decline Offer screen$")
 	public void click_on_No_button_on_Decline_Offer_screen() {
 		setStepName("Then");
-		findByAny(alertYesButton).click();
+		findByAny(alertPrimaryButton).as("No Button").click();
 		sleep(1000);
 	}
 
 	@Then("^user clicks on Yes button on Decline Offer screen$")
 	public void click_on_Yes_button_on_Decline_Offer_screen() {
 		setStepName("Then");
-		findByAny(alertNoButton).click();
+		findByAny(alertSecondaryButton).as("Yes Button").click();
 		sleep(2000);
 	}
 
 	@Then("^verify that No button is displayed on Decline Offer screen$")
 	public void verify_that_No_button_is_displayed_on_Decline_Offer_screen() {
 		setStepName("Then");
-		findByAny(alertNoButton).isDisplayed();
+		findByAny(alertSecondaryButton).as("No Button").isDisplayed();
 	}
 
 	@Then("^verify that Yes button is displayed on Decline Offer screen$")
 	public void verify_that_Yes_button_is_displayed_on_Decline_Offer_screen() {
 		setStepName("Then");
-		findByAny(alertYesButton).isDisplayed();
+		findByAny(alertPrimaryButton).as("Yes Button").isDisplayed();
 	}
 
 }

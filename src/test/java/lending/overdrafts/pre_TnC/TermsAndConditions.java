@@ -14,7 +14,6 @@ public class TermsAndConditions extends CommonLibrary {
 	public static String screenTitle;
 	public static String tncHeader;
 	public static String tncContent;
-	public static String tncAccept;
 	public static String tncReject;
 	public static String processingInfo;
 	public static String inProgress;
@@ -30,7 +29,7 @@ public class TermsAndConditions extends CommonLibrary {
 	@When("^user clicks on Accept button on Terms and Conditions screen$")
 	public void user_clicks_on_Accept_button_on_Terms_and_Conditions_screen() {
 		setStepName("When");
-		findByAny(tncAccept).scrollDownUntilVisible().click();
+		findByAny(CommonStepDefinitions.lendingPrimaryButton).as("Accept").scrollDownUntilVisible().click();
 		sleep(3000);
 	}
 
@@ -62,7 +61,7 @@ public class TermsAndConditions extends CommonLibrary {
 	@Then("^verify that Accept button is not visible$")
 	public void verify_that_Accept_button_is_not_visible() {
 		setStepName("Then");
-		findByAny(tncAccept).verifyAttributesEqualsTo("visible", "false");
+		findByAny(CommonStepDefinitions.lendingPrimaryButton).as("Accept").verifyAttributesEqualsTo("visible", "false");
 	}
 
 	@Then("^verify that Reject button is not visible$")
@@ -74,7 +73,7 @@ public class TermsAndConditions extends CommonLibrary {
 	@When("^user scroll down to bottom of screen$")
 	public void user_scroll_down_to_bottom_of_screen() {
 		setStepName("Then");
-		findByAny(tncAccept).scrollDownUntilVisible();
+		findByAny(CommonStepDefinitions.lendingPrimaryButton).as("Accept").scrollDownUntilVisible();
 	}
 
 	@Then("^verify that click here link is visible on screen$")
@@ -92,8 +91,8 @@ public class TermsAndConditions extends CommonLibrary {
 
 	@Then("^verify that Accept button is pre selected and enabled$")
 	public void verify_that_Accept_button_is_pre_selected_and_enabled() {
-		findByAny(tncAccept).verifyAttributesEqualsTo("value", "1");
-		findByAny(tncAccept).isEnabled();
+		findByAny(CommonStepDefinitions.lendingPrimaryButton).as("Accept").verifyAttributesEqualsTo("value", "1");
+		findByAny(CommonStepDefinitions.lendingPrimaryButton).as("Accept").isEnabled();
 	}
 
 	@Then("^verify that Reject button is not pre selected and enabled$")

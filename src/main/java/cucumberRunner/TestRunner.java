@@ -1,7 +1,6 @@
 package cucumberRunner;
 
 import static com.factory.mobile.driver.AppiumDriverManager.closeApplication;
-
 import static com.factory.data.manager.Database.*;
 
 import org.apache.commons.lang3.StringUtils;
@@ -11,23 +10,23 @@ import org.testng.annotations.BeforeSuite;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
-@CucumberOptions(
-		features = "feature-files/"
-		, glue = "lending/"
+@CucumberOptions(features = "feature-files/", glue = "lending/"
 //		, tags = {"@DeclineOffer, @FinalOffer, @PreciseInputbox, @RemindmeLater, @SuitableOffer, @UserDecline"}
-		, tags = {"@ProductDetails"}
-//		, dryRun=true, tags = {"@Sprint10"}
+		, tags = { "@PartialOfferToAppealYourDecision" }
+//		, dryRun=true
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
-	
+
 	@BeforeSuite
 	public void setup() throws Exception {
 //		launchMobileApplication(AppType.IOSAPP, "0.0.0.0:4723");
 	}
+
 	@AfterSuite
 	public void teardown() {
-		closeApplication();	
+		closeApplication();
 	}
+
 	public static void main1(String[] args) {
 		System.out.println(encrypt("AshokDikshit"));
 		String s = Thread.currentThread().getStackTrace()[1].getClassName();

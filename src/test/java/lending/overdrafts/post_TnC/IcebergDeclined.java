@@ -34,19 +34,19 @@ public class IcebergDeclined extends CommonLibrary {
 	@Then("^verify that first line of description \"([^\"]*)\" is displayed on screen$")
 	public void verify_that_first_line_of_description_is_displayed_on_screen(String expected) {
 		setStepName("Then");
-		findByAccessibilityId(firstLine).verifyEqualsTo(expected);
+		findByAny(firstLine).verifyEqualsTo(expected);
 	}
 
 	@Then("^verify that second line of description \"([^\"]*)\" is displayed on screen$")
 	public void verify_that_second_line_of_description_is_displayed_on_screen(String expected) {
 		setStepName("Then");
-		findByAccessibilityId(secondLine).verifyEqualsTo(expected);
+		findByAny(secondLine).verifyEqualsTo(expected);
 	}
 
 	@Then("^verify that Experian info \"([^\"]*)\" is displayed on screen$")
 	public void verify_that_Experian_info_is_displayed_on_screen(String expected) {
 		setStepName("Then");
-		findByAccessibilityId(thirdLine).verifyEqualsTo(expected);
+		findByAny(thirdLine).verifyEqualsTo(expected);
 	}
 	
 
@@ -71,13 +71,13 @@ public class IcebergDeclined extends CommonLibrary {
 	@Then("^verify that Next button is displayed on Iceberg Decline screen$")
 	public void verify_that_Next_button_is_displayed_on_Iceberg_Decline_screen() {
 		setStepName("Then");
-		findByAccessibilityId(CustomerDeclined.nextButton).isDisplayed();
+		findByAny(CustomerDeclined.nextButton).isDisplayed();
 	}
 
 	@Then("^user clicks on Next button on Iceberg decline screen$")
 	public void user_clicks_on_Next_button_on_Iceberg_decline_screen() {
 		setStepName("Then");
-		findByAccessibilityId(CustomerDeclined.nextButton).click();
+		findByAny(CustomerDeclined.nextButton).click();
 		sleep(2000);
 	}
 	

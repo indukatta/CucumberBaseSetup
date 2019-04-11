@@ -58,8 +58,8 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
     Then verify that No button is selected on lending question screen
     And user clicks on back button on lending question screen
     Then verify that Credit & Lending option is displayed on screen
-    
-    @Sprint5
+
+  @Sprint5
   Scenario: CUICE-6171 >> Exit the application and Login to see if values are saved for an application
     Given that user is on the Iceberg Homescreen
     When user clicks on the More and then Lending button
