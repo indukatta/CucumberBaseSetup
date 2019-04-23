@@ -42,10 +42,11 @@ public class AfterDeclineScreen extends CommonLibrary {
 		findByAny(DeclineOffer.alertPrimaryButton).as("Ok got it for I consent").isDisplayed();
 	}
 
-	@Then("^user clicks on Ok got it on Alternative Financing screen$")
-	public void user_clicks_on_Ok_got_it_on_Alternative_Financing_screen() {
+	@Then("^user clicks on Ok got it for I Consent option on screen$")
+	public void user_clicks_on_Ok_got_it_for_I_Consent_option_on_screen() {
 		setStepName("Then");
 		findByAny(DeclineOffer.alertPrimaryButton).as("Ok got it After Alternative Financing").click();
+		sleep(1000);
 	}
 
 	@Then("^verify that Appeal your Decision screen is visible$")
@@ -59,7 +60,7 @@ public class AfterDeclineScreen extends CommonLibrary {
 	@Then("^user clicks on Ok got it on Appleal your Decision screen$")
 	public void user_clicks_on_Ok_got_it_on_Appleal_your_Decision_screen() {
 		setStepName("Then");
-		findByAny(CommonStepDefinitions.lendingPrimaryButton).as("Ok got it on Appeal").click();
+		findByAny(CommonStepDefinitions.lendingPrimaryButton).scrollDownUntilVisible().as("Ok got it on Appeal").click();
 	}
 
 }

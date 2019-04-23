@@ -1,6 +1,6 @@
 {
 	"report-type": "aventstack",
-	"or-package": "lending.overdrafts",
+	"step-definition": "lending.overdrafts",
 	"or-path": "object-repositories/lending",
 	"or-separator": "==",
 	"api-testing": "true",
@@ -9,7 +9,7 @@
 		"port": "4726"
 	},
 	"suite": {
-		"default": "PartialOfferToAppealYourDecision"
+		"default": "SuitableOfferToAppealYourDecision"
 	},
 	"ios-app": {
 		"platformName": "iOS",

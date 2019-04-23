@@ -12,6 +12,7 @@ Feature: Verify that save and return functionality is working for Final Offer to
     And user clicks on Apply button on Product Selection
     And user clicks on No button on lending question screen
     And user clicks on continue button on the screen
+    And user call rest end point "answers" to set Amount of Borrowing "5800" for lending question
     And user selects option 1 from Purpose of Borrowing question screen
     And user clicks on continue button on the screen
     And user selects option 3 on Residential Status screen
@@ -30,23 +31,23 @@ Feature: Verify that save and return functionality is working for Final Offer to
 
   @Sprint10
   Scenario: CUICE-9341 >> ATC014: Logout and Login to see if user is lending to Partial Offer screen
-    Given user exit the iceberg application and relaunch
+    Given that user is on the Iceberg Homescreen
     When user clicks on the More and then Lending button
-    Then verify that the Partial Offer screen is displaye
+    Then verify that the Partial Offer screen is displayed
     When user clicks on see my options button on the screen
     Then verify that Partial Offer Options screen is displayed
 
   @Sprint10
   Scenario: CUICE-9341 >> ATC015: Logout and Login to see if user is lending to Partial Offer Options screen
-    Given user exit the iceberg application and relaunch
+    Given that user is on the Iceberg Homescreen
     When user clicks on the More and then Lending button
     Then verify that Partial Offer Options screen is displayed
-    When user clicks on Add your Overdraft CTA on the screen
+    When user clicks on Accept Overdraft CTA on the screen
     Then verify that the Final Offer screen is displayed
 
   @Sprint10
   Scenario: CUICE-9341 >> ATC016: Logout and Login to see if user is lending to Final Offer screen
-    Given user exit the iceberg application and relaunch
+    Given that user is on the Iceberg Homescreen
     When user clicks on the More and then Lending button
     Then verify that the Final Offer screen is displayed
     Then user clicks on Not Now button on Final Offer
@@ -54,7 +55,7 @@ Feature: Verify that save and return functionality is working for Final Offer to
 
   @Sprint10
   Scenario: CUICE-9341 >> ATC017: Logout and Login to see if user is lending to Remind me later
-    Given user exit the iceberg application and relaunch
+    Given that user is on the Iceberg Homescreen
     When user clicks on the More and then Lending button
     Then verify that Remind me Later screen is visible
     Then user clicks on No, decline the offer button on screen

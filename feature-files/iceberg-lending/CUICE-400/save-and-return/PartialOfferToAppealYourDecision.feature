@@ -76,7 +76,7 @@ Feature: Verify that save and return functionality is working for Final Offer to
     When user clicks on the More and then Lending button
     Then verify that Alternative Financing screen is visible
     Then user clicks on I Consent on Financial Alternative screen
-    Then user clicks on Ok got it on Alternative Financing screen
+    Then user clicks on Ok got it for I Consent option on screen
     Then verify that Appeal your Decision screen is visible
 
   @Sprint10

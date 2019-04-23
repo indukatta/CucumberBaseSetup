@@ -12,7 +12,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(features = "feature-files/", glue = "lending/"
 //		, tags = {"@DeclineOffer, @FinalOffer, @PreciseInputbox, @RemindmeLater, @SuitableOffer, @UserDecline"}
-		, tags = { "@PartialOfferToAppealYourDecision" }
+		, tags = { "@SuitableOfferToAppealYourDecision" }
 //		, dryRun=true
 )
 public class TestRunner extends AbstractTestNGCucumberTests {

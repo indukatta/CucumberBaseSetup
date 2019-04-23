@@ -20,7 +20,6 @@ public class PartialOffer {
 	public static String partialOfferDeclineDesc = "partial_offer_option_description_label_3_0";
 	public static String partialOfferDeclineOffer = "partial_offer_option_icon_label_3";
 	
-	
 	@Then("^verify that the Partial Offer screen is displayed$")
 	public void verify_that_the_Partial_Offer_screen_is_displayed() {
 		setStepName("Then");
@@ -46,6 +45,12 @@ public class PartialOffer {
 	public void user_clicks_on_Decline_Offer_CTA_on_the_screen() {
 		setStepName("Then");
 		findByAny(partialOfferDeclineOffer).click();
+	}
+	
+	@When("^user clicks on Accept Overdraft CTA on the screen$")
+	public void user_clicks_on_Accept_Overdraft_CTA_on_the_screen() {
+		setStepName("Then");
+		findByAny(partialOfferAcceptOD).click();
 	}
 
 }
