@@ -27,11 +27,11 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
     And user clicks on No button on lending question screen
     And user clicks on No button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    Then verify that the Final Offer screen is displayed
+    Then verify that Final Offer screen is displayed
 
   @Sprint7
   Scenario: CUICE-9953 >> TC-001: Test if content on Final Offer screen are correct
-    Given that user is on the Final Offer screen
+    Given that user is on Final Offer screen
     Then verify that logo is displayed on Final Offer screen
     Then verify that final offer heading "Add your overdraft" is displayed
     Then verify that offered overdraft amount "£2,340.00" is displayed
@@ -43,28 +43,28 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
 
   @Sprint7
   Scenario: CUICE-9953 >> TC-002: Test if content on Final Offer screen are correct
-    Given that user is on the Final Offer screen
+    Given that user is on Final Offer screen
     Then verify that Continue with overdraft button is pre selected
     Then verify that Not Now button is not pre selected
 
   @Sprint7
   Scenario: CUICE-9953 >> TC-003: Test if content on Final Offer screen are correct
-    Given that user is on the Final Offer screen
+    Given that user is on Final Offer screen
     Then user clicks on Not Now button on Final Offer
     Then verify that Remind me Later screen is visible
     Then user clicks on back button on lending question screen
 
   @Sprint7
   Scenario: CUICE-9953 >> TC-004: Test if content on Final Offer screen are correct
-    Given that user is on the Final Offer screen
+    Given that user is on Final Offer screen
     Then user clicks on Continue with overdraft button on Final Offer
     Then verify that products Terms and Conditions screen is visible
     Then user clicks on back button on lending question screen
 
   @Sprint10
   Scenario: CUICE-13965 >> TC-005: Test if AIR screen appears when user clicks on i icon
-    Given that user is on the Final Offer screen
+    Given that user is on Final Offer screen
     Then user clicks Annual Interest Rate icon on Final Offer
     Then verify that Annual Interest Rate screen is displayed
     Then user clicks on Close button on the AIR pop up
-    Then verify that the Final Offer screen is displayed
+    Then verify that Final Offer screen is displayed

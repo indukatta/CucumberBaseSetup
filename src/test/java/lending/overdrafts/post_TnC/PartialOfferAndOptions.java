@@ -8,17 +8,18 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import lending.overdrafts.pre_TnC.CommonStepDefinitions;
 
-public class PartialOffer {
+public class PartialOfferAndOptions {
 	
-	public static String partialOfferHeading = "partial_offer_option_heading_label_1";
-	public static String partialOfferDescription = "partial_offer_option_description_label_1_0";
-	public static String partialOfferContactUs = "partial_offer_option_icon_label_1";
-	public static String partialOfferAcceptOD = "partial_offer_option_heading_label_2";
-	public static String partialOfferAIR = "partial_offer_option_description_label_2_1";
-	public static String partialOfferProceed = "partial_offer_option_icon_label_2";
-	public static String partialOfferDeclineOD = "partial_offer_option_heading_label_3";
-	public static String partialOfferDeclineDesc = "partial_offer_option_description_label_3_0";
-	public static String partialOfferDeclineOffer = "partial_offer_option_icon_label_3";
+	public static String partialOfferExplanation = "offer_explanation_label";
+	public static String partialOfferOptionsHeading = "partial_offer_option_heading_label_1";
+	public static String partialOfferOptionsDescription = "partial_offer_option_description_label_1_0";
+	public static String partialOfferOptionsContactUs = "partial_offer_option_icon_label_1";
+	public static String partialOfferOptionsAcceptOD = "partial_offer_option_heading_label_2";
+	public static String partialOfferOptionsAIR = "partial_offer_option_description_label_2_1";
+	public static String partialOfferOptionsProceed = "partial_offer_option_icon_label_2";
+	public static String partialOfferOptionsDeclineOD = "partial_offer_option_heading_label_3";
+	public static String partialOfferOptionsDeclineDesc = "partial_offer_option_description_label_3_0";
+	public static String partialOfferOptionsDeclineOffer = "partial_offer_option_icon_label_3";
 	
 	@Then("^verify that the Partial Offer screen is displayed$")
 	public void verify_that_the_Partial_Offer_screen_is_displayed() {
@@ -37,20 +38,20 @@ public class PartialOffer {
 	@Then("^verify that Partial Offer Options screen is displayed$")
 	public void verify_that_Partial_Offer_Options_screen_is_displayed() {
 		setStepName("Then");
-		findByAny(partialOfferHeading).isDisplayed();
-		findByAny(partialOfferHeading).verifyEqualsTo("Refer The Decision");
+		findByAny(partialOfferOptionsHeading).isDisplayed();
+		findByAny(partialOfferOptionsHeading).verifyEqualsTo("Refer The Decision");
 	}
 
 	@When("^user clicks on Decline Offer CTA on the screen$")
 	public void user_clicks_on_Decline_Offer_CTA_on_the_screen() {
 		setStepName("Then");
-		findByAny(partialOfferDeclineOffer).click();
+		findByAny(partialOfferOptionsDeclineOffer).click();
 	}
 	
 	@When("^user clicks on Accept Overdraft CTA on the screen$")
 	public void user_clicks_on_Accept_Overdraft_CTA_on_the_screen() {
 		setStepName("Then");
-		findByAny(partialOfferAcceptOD).click();
+		findByAny(partialOfferOptionsAcceptOD).click();
 	}
 
 }

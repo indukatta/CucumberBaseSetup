@@ -27,7 +27,7 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     Then verify that Terms and Conditions screen is displayed
     Then decrease application datemodified column by 15 days in application table
     Given that user is on the Iceberg Homescreen
-    And user clicks on the Credit & Lending link
+    And user clicks on the More and then Lending button
     Then verify that SustainabilityCheck screen is displayed
     Then close existing open application for the next scenario
 
@@ -54,9 +54,9 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     And user clicks on Accept button on Terms and Conditions screen
     Then verify that "declined" decision is coming in PSE response
     Then decrease psedecision datetime by 28 days in application table
-    Then verify that the Iceberg Decline screen is displayed
+    Then verify that Iceberg Decline screen is displayed
     Given that user is on the Iceberg Homescreen
-    And user clicks on the Credit & Lending link
+    And user clicks on the More and then Lending button
     Then verify that "Re Apply" button is shown on product selection screen
     Then user clicks on Apply button on Product Selection
     Then verify that Re-apply Overdraft screen is displayed
@@ -84,12 +84,12 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     And user clicks on No button on lending question screen
     And user clicks on No button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    Then verify that the Iceberg Decline screen is displayed
+    Then verify that Iceberg Decline screen is displayed
     Then verify that "referred" decision is coming in PSE response
     Then decrease psedecision datetime by 25 days in application table
-    Then verify that the Iceberg Decline screen is displayed
+    Then verify that Iceberg Decline screen is displayed
     Given that user is on the Iceberg Homescreen
-    And user clicks on the Credit & Lending link
+    And user clicks on the More and then Lending button
     Then verify that "Re Apply" button is shown on product selection screen
     Then user clicks on Apply button on Product Selection
     Then verify that Re-apply Overdraft screen is displayed
@@ -117,12 +117,12 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     And user clicks on No button on lending question screen
     And user clicks on Yes button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    Then verify that the Iceberg Decline screen is displayed
+    Then verify that Iceberg Decline screen is displayed
     Then verify that "accepted" decision is coming in PSE response
     Then decrease psedecision datetime by 30 days in application table
-    Then verify that the Iceberg Decline screen is displayed
+    Then verify that Iceberg Decline screen is displayed
     Given that user is on the Iceberg Homescreen
-    And user clicks on the Credit & Lending link
+    And user clicks on the More and then Lending button
     Then verify that "Re Apply" button is shown on product selection screen
     Then user clicks on Apply button on Product Selection
     Then verify that Re-apply Overdraft screen is displayed
@@ -150,12 +150,12 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     And user clicks on No button on lending question screen
     And user clicks on Yes button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    Then verify that the Iceberg Decline screen is displayed
+    Then verify that Iceberg Decline screen is displayed
     Then verify that "referred" decision is coming in PSE response
     Then decrease psedecision datetime by 59 days in application table
-    Then verify that the Iceberg Decline screen is displayed
+    Then verify that Iceberg Decline screen is displayed
     Given that user is on the Iceberg Homescreen
-    And user clicks on the Credit & Lending link
+    And user clicks on the More and then Lending button
     Then verify that "Re Apply" button is shown on product selection screen
     Then user clicks on Apply button on Product Selection
     Then verify that Re-apply Overdraft screen is displayed
@@ -184,11 +184,11 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     And user clicks on No button on lending question screen
     And user clicks on Yes button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    Then verify that the Iceberg Decline screen is displayed
+    Then verify that Iceberg Decline screen is displayed
     Then verify that "declined" decision is coming in PSE response
     Then decrease psedecision datetime by 60 days in application table
     Given that user is on the Iceberg Homescreen
-    And user clicks on the Credit & Lending link
+    And user clicks on the More and then Lending button
     #Then verify that "Re Apply" button is shown on product selection screen
     #Then user clicks on Apply button on Product Selection
     #Then verify that Re-apply Overdraft screen is displayed

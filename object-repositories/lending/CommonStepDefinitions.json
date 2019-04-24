@@ -27,10 +27,10 @@
 		"accessibility id": "lending_secondary_button"
 	},
 	"yesButton": {
-		"accessibility id": "Yes"
+		"xpath": "//XCUIElementTypeOther[@name=\"Yes\"]"
 	},
 	"noButton": {
-		"accessibility id": "No"
+		"xpath": "//XCUIElementTypeOther[@name=\"No\"]"
 	},
 	"backButton": {
 		"accessibility id": "back"

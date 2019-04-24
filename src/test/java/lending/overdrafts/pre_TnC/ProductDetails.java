@@ -28,7 +28,7 @@ public class ProductDetails extends CommonLibrary {
 	@Then("^verify that Product Details screen is displayed$")
 	public void verify_Product_Details_screen_is_displayed() throws Throwable {
 		setStepName("Then");
-		captureScreenshot("ProductDetails");
+		captureScreenshot();
 		findByAny(productName).isDisplayed();
 	}
 

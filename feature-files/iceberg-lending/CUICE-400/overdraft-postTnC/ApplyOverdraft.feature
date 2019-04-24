@@ -27,7 +27,7 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     Then verify that Terms and Conditions screen is displayed
     Then decrease application datemodified column by 35 days in application table
     Given that user is on the Iceberg Homescreen
-    And user clicks on the Credit & Lending link
+    And user clicks on the More and then Lending button
     Then verify that Product Selection screen is displayed
 
   Scenario: CUICE-9953 >> Test if user able to view 'Apply' PSE decision->accepted->No customer decision->more than 30 days
@@ -51,11 +51,11 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     And user clicks on No button on lending question screen
     And user clicks on No button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    Then verify that the Final Offer screen is displayed
+    Then verify that Final Offer screen is displayed
     Then verify that "accepted" decision is coming in PSE response
     Then decrease psedecision datetime by 38 days in application table
     Given that user is on the Iceberg Homescreen
-    And user clicks on the Credit & Lending link
+    And user clicks on the More and then Lending button
     Then verify that "Apply" button is shown on product selection screen
 
   Scenario: CUICE-9953 >> Test if user able to view 'Re Apply' on product selection for PSE decision->referred->More than 60 days

@@ -12,7 +12,6 @@ public class SuitableOffer extends CommonLibrary {
 	public static String offerLogo;
 	public static String offerHeading;
 	public static String offerMessage;
-	public static String offerExplanation;
 	
 	@Then("^verify that the Suitable Offer screen is displayed$")
 	public void verify_that_the_Suitable_Offer_screen_is_displayed() {

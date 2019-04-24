@@ -27,7 +27,7 @@ Feature: Verify all functionalities related to Decline Offer screen, it covers C
     And user clicks on No button on lending question screen
     And user clicks on No button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    And verify that the Final Offer screen is displayed
+    And verify that Final Offer screen is displayed
     And user clicks on Not Now button on Final Offer
     And user clicks on No, decline the offer button on screen
     And user clicks on Yes button on Decline Offer screen

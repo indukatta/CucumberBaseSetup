@@ -173,6 +173,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public void user_clicks_on_No_button_on_lending_question_YesNo_screen() {
 		setStepName("Then");
 		findByAny(noButton).click();
+		findByAny(nextButton).click();
 		sleep(2000);
 	}
 
@@ -180,6 +181,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public void user_clicks_on_Yes_button_on_lending_question_YesNo_screen() {
 		setStepName("Then");
 		findByAny(yesButton).click();
+		findByAny(nextButton).click();
 		sleep(2000);
 	}
 

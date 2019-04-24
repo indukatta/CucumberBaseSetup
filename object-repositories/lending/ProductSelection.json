@@ -30,6 +30,6 @@
 		"xpath": "//XCUIElementTypeOther[@name=\"Business Lending Eligibility Checker\"]"
 	},
 	"breadcrumb": {
-		"accessibility id": "breadcrumb"
+		"accessibility id": "Done"
 	}
 }

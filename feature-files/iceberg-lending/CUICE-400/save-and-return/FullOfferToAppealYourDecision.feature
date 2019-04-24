@@ -28,13 +28,13 @@ Feature: Verify that save and return functionality is working for Suitable Offer
     And user clicks on No button on lending question screen
     And user clicks on No button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    Then verify that the Final Offer screen is displayed
+    Then verify that Final Offer screen is displayed
 
   @Sprint10 
   Scenario: CUICE-9341 >> ATC001: Logout and Login to see if user is lending to Final Offer screen
     Given that user is on the Iceberg Homescreen
     When user clicks on the More and then Lending button
-    Then verify that the Final Offer screen is displayed
+    Then verify that Final Offer screen is displayed
     Then user clicks on Continue with overdraft button on Final Offer
     Then verify that products Terms and Conditions screen is visible
 

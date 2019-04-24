@@ -15,7 +15,7 @@ Feature: Verify all functionalities related to Product Details screen, it will c
   @Sprint2
   Scenario: CUICE-542 >> ATC-001: Verify other static content on Product Details screen.
     Given user is on Product Details screen
-    Then verify product name "Business Overdrafts" on Product Details screen
+    Then verify product name "Overdrafts" on Product Details screen
     Then verify product description "Best for flexible access to cash flow" on screen
     Then verify feature and benefit heading "Features and Benefits" on screen
     Then verify features and benefits on the screen
@@ -25,7 +25,7 @@ Feature: Verify all functionalities related to Product Details screen, it will c
     Then verify overdraft fee and interest given below
       | Overdraft fee 1.5% (monthly charge) |
       | Interest is 9.9% EAR Representative |
-    Then verify terms and conditions heading "Terms and Conditions" on screen
+    #Then verify terms and conditions heading "Terms and Conditions" on screen
 
   @Sprint2
   Scenario: CUICE-542 >> MTC-003: Verify icon, spacing between sub components alignment of text and/or sub component and over all UI
@@ -41,7 +41,7 @@ Feature: Verify all functionalities related to Product Details screen, it will c
   @Sprint2
   Scenario: CUICE-6194 >> ATC-001: Verify static overdraft range on Product Details screen
     Given user is on Product Details screen
-    Then verify overdraft range "Overdraft between £1.00 - £10,000.00" is displayed on product details screen
+    Then verify overdraft range "Overdraft between £1 - £10,000" is displayed on product details screen
 
   @Sprint2
   Scenario: CUICE-3914 >> ATC-001: Verify static warning message on Product Details screen

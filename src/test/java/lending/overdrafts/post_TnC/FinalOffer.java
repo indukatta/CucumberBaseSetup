@@ -15,15 +15,15 @@ public class FinalOffer extends CommonLibrary {
 	public static String finalOfferFee;
 	public static String finalOfferAIR;
 
-	@Then("^verify that the Final Offer screen is displayed$")
-	public void verify_that_the_Final_Offer_screen_is_displayed() {
+	@Then("^verify that Final Offer screen is displayed$")
+	public void verify_that_Final_Offer_screen_is_displayed() {
 		setStepName("Then");
 		captureScreenshot();
 		findByAny(finalOfferHeading).waitUntillVisible().isDisplayed();
 	}
 
-	@Given("^that user is on the Final Offer screen$")
-	public void that_user_is_on_the_Final_Offer_screen() {
+	@Given("^that user is on Final Offer screen$")
+	public void that_user_is_on_Final_Offer_screen() {
 		setStepName("Given");
 		findByAny(finalOfferHeading).isDisplayed();
 	}

@@ -42,13 +42,13 @@ Feature: Verify that save and return functionality is working for Final Offer to
     When user clicks on the More and then Lending button
     Then verify that Tailor Offer screen is visible
     When user clicks on continue button on the screen
-    Then verify that the Final Offer screen is displayed
+    Then verify that Final Offer screen is displayed
 
   @Sprint10
   Scenario: CUICE-9341 >> ATC020: Logout and Login to see if user is lending to Final Offer screen
     Given that user is on the Iceberg Homescreen
     When user clicks on the More and then Lending button
-    Then verify that the Final Offer screen is displayed
+    Then verify that Final Offer screen is displayed
     Then user clicks on Not Now button on Final Offer
     Then verify that Remind me Later screen is visible
 

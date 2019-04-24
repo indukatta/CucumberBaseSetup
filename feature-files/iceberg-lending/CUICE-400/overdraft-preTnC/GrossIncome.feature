@@ -38,13 +38,13 @@ Feature: Verify all functionalities related to Purpose of Borrowing screen, it c
   @Sprint3
   Scenario: CUICE-6274 >> ATC-003: Test if user is able to view Gross Income header and other components
     Given that user is on Gross Income screen
-    When user enters maximum value "100000000" in Gross Income input box
+    When user enters more than allowed value "100000000" in Gross Income input box
     Then verify that continue button is enabled
 
   @Sprint3
   Scenario: CUICE-6274 >> ATC-004: Test if user is able to view Gross Income header and other components
     Given that user is on Gross Income screen
-    When user enters minimum value "-1" in Gross Income input box
+    When user enters less than allowed value "-1" in Gross Income input box
     Then verify that value of Gross Income is set to "£1" min limit
     And verify that continue button is enabled
 

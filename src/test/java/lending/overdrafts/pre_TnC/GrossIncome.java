@@ -49,6 +49,20 @@ public class GrossIncome extends CommonLibrary {
 		findByAny(grossIncomeInputbox).verifyEqualsTo(expected);
 	}
 
+	@When("^user enters less than allowed value \"([^\"]*)\" in Gross Income input box$")
+	public void user_enters_less_than_allowed_value_in_Gross_Income_input_box(String expected) {
+		setStepName("Then");
+		findByAny(grossIncomeInputbox).clear();
+		findByAny(grossIncomeInputbox).sendKeys(expected);
+	}
+
+	@When("^user enters more than allowed value \"([^\"]*)\" in Gross Income input box$")
+	public void user_enters_more_than_allowed_value_in_Gross_Income_input_box(String expected) {
+		setStepName("Then");
+		findByAny(grossIncomeInputbox).clear();
+		findByAny(grossIncomeInputbox).sendKeys(expected);
+	}
+
 	@When("^user enters minimum value \"([^\"]*)\" in Gross Income input box$")
 	public void user_enters_minimum_value_in_Gross_Income_input_box(String expected) {
 		setStepName("Then");
@@ -62,7 +76,7 @@ public class GrossIncome extends CommonLibrary {
 		findByAny(grossIncomeInputbox).clear();
 		findByAny(grossIncomeInputbox).sendKeys(expected);
 	}
-
+	
 	@Then("^verify that value of Gross Income is set to \"([^\"]*)\" min limit$")
 	public void verify_that_value_of_Gross_Income_is_set_to_min_limit(String expected) {
 		setStepName("Then");

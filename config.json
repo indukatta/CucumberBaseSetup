@@ -9,7 +9,7 @@
 		"port": "4726"
 	},
 	"suite": {
-		"default": "SuitableOfferToAppealYourDecision"
+		"default": "Sprint3"
 	},
 	"ios-app": {
 		"platformName": "iOS",
