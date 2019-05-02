@@ -25,7 +25,7 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
   @Sprint4
   Scenario: CUICE-6267 >> ATC-001: Test if user is able to see Yes No buttons and its default state
     Given that user is on Current Account YesNo screen
-    Then verify that Credit Card question "Do you have a personal current account?" is displayed
+    Then verify that Personal Account question "Do you have a personal current account?" is displayed
     And verify that Yes button is displayed on lending question screen
     And verify that No button is displayed on lending question screen
     And verify that Yes button is not selected on lending question screen

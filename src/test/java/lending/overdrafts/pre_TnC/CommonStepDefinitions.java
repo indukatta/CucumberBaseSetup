@@ -48,7 +48,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 		launchMobileApplication(AppType.IOSAPP, "0.0.0.0:4723");
 		driver = (IOSDriver<MobileElement>) getAppiumDriverMobileElement();
 		Login login = new Login(driver);
-		login.loginAsUser("TESTUSER", "TESTPASSWORD");
+		login.loginAsUser("TWOTRANUSER", "TESTPASSWORD");
 		findByAccessibilityId(okayButton).as("Okay Button after Login").click();
 		reportPass("Successfully logged in to Iceberg application.");
 		deleteApplication = true;

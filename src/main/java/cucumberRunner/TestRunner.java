@@ -1,6 +1,7 @@
 package cucumberRunner;
 
 import static com.factory.mobile.driver.AppiumDriverManager.closeApplication;
+
 import static com.factory.data.manager.Database.*;
 
 import org.apache.commons.lang3.StringUtils;
@@ -12,14 +13,14 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(features = "feature-files/", glue = "lending/"
 //		, tags = {"@DeclineOffer, @FinalOffer, @PreciseInputbox, @RemindmeLater, @SuitableOffer, @UserDecline"}
-		, tags = { "@Sprint3" }
+		, tags = { "@YearsOfPersonalAccount" }
 //		, dryRun=true
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 
 	@BeforeSuite
 	public void setup() throws Exception {
-//		launchMobileApplication(AppType.IOSAPP, "0.0.0.0:4723");
+        
 	}
 
 	@AfterSuite

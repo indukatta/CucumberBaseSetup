@@ -1,11 +1,11 @@
 @YearsOfPersonalAccount @Regression
-Feature: Verify all functionalities related to Borrowing Yes No screen, it covers CUICE-6267
+Feature: Verify all functionalities related to Year of Current Account screen, it covers CUICE-6267
 
   Background: This is to add category to below scenarios
     Given that category "YearsOfPersonalAccount" is added for below scenarios
 
   @Sprint4 @Sprint5
-  Scenario: CUICE-6255 >> Prerequisite: Test if user able to view  the Current Account Yes No screen
+  Scenario: CUICE-6267 >> Prerequisite: Test if user able to view  the Year of Current Account screen
     Given that user is on the Iceberg Homescreen
     Then close existing open application for the next scenario
     When user clicks on the More and then Lending button
@@ -18,31 +18,28 @@ Feature: Verify all functionalities related to Borrowing Yes No screen, it cover
     And user clicks on continue button on the screen
     When user selects option 3 on Marital Status screen
     And user clicks on continue button on the screen
-    When user enters minimum value "1" in Gross Income input box
+    When user enters minimum value "11231" in Gross Income input box
     And user clicks on continue button on the screen
     When user clicks on Yes button on lending question screen
     Then verify that Years of Personal Account screen is displayed
 
-  Scenario: CUICE-6174 >> ATC-001: Test if user is able to see Yes No buttons and its default state
+  Scenario: CUICE-6267 >> ATC-001: Test if user is able to see default content and state on the screen
     Given that user is on Years of Personal Account screen
-    Then verify that Credit Card header "Do you have a personal current account?" is displayed
-    And verify that Yes button is displayed on lending question screen
-    And verify that No button is displayed on lending question screen
-    And verify that Yes button is not selected on lending question screen
-    And verify that No button is not selected on lending question screen
+    Then verify that Years of Personal Account question "How many full years have you had your personal current account?" is displayed
+    And verify that maximum limit number of years "10+" is displayed on the screen
+    Then verify that number of years field is equels to "0" on the screen
+    And verify that continue button is enabled
 
-  Scenario: CUICE-6174 >> ATC-002: Test if user clicks on No, Questions screen is displayed
+  Scenario: CUICE-6267 >> ATC-002: Test if user is able to select the number of years through slider
     Given that user is on Years of Personal Account screen
-    When user clicks on No button on lending question screen
-    Then verify that Business Premises YesNo screen is displayed
-    And user clicks on back button on lending question screen
-    Then verify that No button is selected on lending question screen
+    When user selects option 4 on Years of Persoanl Account screen
+    Then verify that number of years field is equels to "4" on the screen
+    When user selects option 10 on Years of Persoanl Account screen
+    Then verify that number of years field is equels to "10+" on the screen
 
-  #When user call rest end point "productCategories" to get and verify response
-  #Then verify that expected json file "testAPI" is equal to end point response
-  Scenario: CUICE-6174 >> ATC-003: Test if user clicks on Yes, Business Premises options are displayed
+  Scenario: CUICE-6267 >> ATC-003: Test if selected number of years value is stored on the screen
     Given that user is on Years of Personal Account screen
-    When user clicks on Yes button on lending question screen
-    Then verify that Business Premises YesNo screen is displayed
-    And user clicks on back button on lending question screen
-    Then verify that Yes button is selected on lending question screen
+    When user selects option 10 on Years of Persoanl Account screen
+    Then user clicks on continue button on the screen
+    Then user clicks on back button on lending question screen
+    Then verify that number of years field is equels to "10+" on the screen

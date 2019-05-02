@@ -42,11 +42,3 @@ Feature: Verify all functionalities related to Suitable Offer screen, it covers 
     Given that user is on the Suitable Offer screen
     Then user clicks on continue button on Suitable Offer screen
     Then verify that Tailor Offer screen is visible
-    Then verify that header "Select the amount you would like to borrow" is displayed on Tailor Offer screen
-    Then verify that min default value "£100" is displayed on Tailor Offer screen
-    Then verify that max "Max £" suitable amount is displayed on Trailor Offer screen
-    Then verify that daily, monthly and AIR fee and rate are displayed correctly
-      #| Daily fee £0.00             |
-      #| Monthly fee max £0.00       |
-      | Annual Interest Rate (variable) 10.65% |
-    Then verify that continue button is enabled

@@ -27,41 +27,38 @@ Feature: Verify all functionalities related to Suitable Offer screen, it covers 
     And user clicks on No button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
     Then verify that the Suitable Offer screen is displayed
+    Then retrieve and save offered amount from Suitable Offer screen
     Then user clicks on continue button on Suitable Offer screen
     Then verify that Tailor Offer screen is visible
 
+  @Sprint7
+  Scenario: CUICE-10262 >> Test if content on Tailor Offer screen are correct
+    Given that user is on the Suitable Offer screen
+    Then user clicks on continue button on Suitable Offer screen
+    Then verify that Tailor Offer screen is visible
+    Then verify that header "Select the amount you would like to borrow" is displayed on Tailor Offer screen
+    Then verify that min default value "£100" is displayed on Tailor Offer screen
+    Then verify that max "Max £" suitable amount is displayed on Trailor Offer screen
+    Then verify that daily, monthly and AIR fee and rate are displayed correctly
+      #| Daily fee £0.00             |
+      #| Monthly fee max £0.00       |
+      | Annual Interest Rate (variable) 10.65% |
+    Then verify that continue button is enabled
+
   @Sprint10
-  Scenario: CUICE-8891 >> Test if content on Tailor Offer screen are correct after tap on input box
+  Scenario: CUICE-13965: Test if AIR screen appears when user clicks on i icon
     Given that user is on the Tailor Offer screen
-    Then user clicks on input box to bring the keyboard up for precise input
-    And verify that hint text "Please enter a value from £100 to £" is displayed on Tailor Offer screen
-    And verify that Done button is enabled on the screen
+    Then user clicks Annual Interest Rate icon on the screen
+    Then verify that Annual Interest Rate screen is displayed
+    Then user clicks on Close button on the AIR pop up
+    Then verify that Tailor Offer screen is visible
 
-  @Sprint10
-  Scenario: CUICE-13956 >> Test if precise value is being round down to multiple of 10
-    Given that user is on precise input box screen
-    When user enter "109" in precise input box on the screen
-    Then verify that Done button is enabled on the screen
-    Then user clicks on Done button on Input keypad screen
-    Then verify that updated amount "£100" is displayed on the screen
-    And user clicks on input box to bring the keyboard up for precise input
-    When user enter "101" in precise input box on the screen
-    Then verify that Done button is enabled on the screen
-    Then user clicks on Done button on Input keypad screen
-    Then verify that updated amount "£100" is displayed on the screen
-
-  @Sprint10
-  Scenario: CUICE-8891 >> Test if Done button gets disabled when user enter less than 100
-    Given that user is on the Tailor Offer screen
-    When user enter "90" in precise input box on the screen
-    Then verify that Done button is disabled on the screen
-    Then user clicks on cancel button on the screen
-
-  #this scenarios is not part of thinslice
   #Scenario Outline: CUICE-10262 >> Test if rate gets changed with amount selected on Tailor Offer screen
   #Given that user is on the Tailor Offer screen
   #And user moves slider to <SuitableAmount%> percent of maximum value on Tailor Offer screen
+  #this scenarios is not part of thinslice
   #Then verify that fee has calculated correctly on Tailor Offer screen
+  #Then verify that selected amount is displayed in amount text field on the screen
   #Then verify that continue button is enabled
   #
   #Examples:
@@ -71,20 +68,29 @@ Feature: Verify all functionalities related to Suitable Offer screen, it covers 
   #|             100 |
   #|               0 |
   @Sprint7
-  Scenario: CUICE-10262 >> Test if rate gets changed with amount selected on Tailor Offer screen
+  Scenario: CUICE-12512 >> Test if selected suitable offer amount is displayed on Final Offer screen
     Given that user is on the Tailor Offer screen
     When user moves slider to 80 percent of maximum value on Tailor Offer screen
-    When user clicks on continue button on the screen
+    Then user clicks on continue button on the screen
+    Then verify that Final Offer screen is displayed
     Then verify that selected suitable offer amount is displayed on Final Offer screen
-    #Below step is not part of thinslice
-    #Then verify that correct rate has been calculated on Final Offer screen
-    Then user clicks on back button on lending question screen
-    Then verify that Tailor Offer screen is visible
 
-  @Sprint10
-  Scenario: CUICE-13965: Test if AIR screen appears when user clicks on i icon
-    Given that user is on the Tailor Offer screen
-    Then user clicks Annual Interest Rate icon on the screen
-    Then verify that Annual Interest Rate screen is displayed
-    Then user clicks on Close button on the AIR pop up
+  @Sprint7
+  Scenario: CUICE-12512 >> Test if products Terms and Conditions screen is visible
+    Given that user is on Final Offer screen
+    When user clicks on Continue with overdraft button on Final Offer
+    Then verify that products Terms and Conditions screen is visible
+    When user clicks on back button on lending question screen
+
+  @Sprint7
+  Scenario: CUICE-12512 >> Test if Remind me Later screen is visible
+    Given that user is on Final Offer screen
+    When user clicks on Not Now button on Final Offer
+    Then verify that Remind me Later screen is visible
+    Then user clicks on back button on lending question screen
+
+  @Sprint7
+  Scenario: CUICE-12512 >> Test if Tailor Offer screen is visible
+    Given that user is on Final Offer screen
+    When user clicks on back button on lending question screen
     Then verify that Tailor Offer screen is visible

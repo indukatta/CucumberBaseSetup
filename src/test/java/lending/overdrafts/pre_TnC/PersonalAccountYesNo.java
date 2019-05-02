@@ -28,4 +28,10 @@ public class PersonalAccountYesNo {
 		setStepName("Then");
 		findByAny(CommonStepDefinitions.screenQuestion).verifyEqualsTo(expected);
 	}
+	
+	@Then("^verify that Personal Account question \"([^\"]*)\" is displayed$")
+	public void verify_that_Personal_Account_question_is_displayed(String arg1) throws Throwable {
+		setStepName("Then");
+		findByAny(CommonStepDefinitions.screenQuestion).verifyEqualsTo(arg1);
+	}
 }
