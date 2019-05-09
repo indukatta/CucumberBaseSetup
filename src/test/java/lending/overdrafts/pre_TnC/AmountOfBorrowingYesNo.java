@@ -36,4 +36,9 @@ public class AmountOfBorrowingYesNo extends CommonLibrary {
 		findByAny(CommonStepDefinitions.screenQuestion).verifyEqualsTo(expected);
 	}
 
+	@Then("^verify that disclaimer \"([^\"]*)\" is displayed on the screen$")
+	public void verify_that_disclaimer_is_displayed_on_the_screen(String arg1) {
+		setStepName("Then");
+		findByAny(AmountOfBorrowing.amtOfBorrowingSubTitle).verifyEqualsTo(arg1);
+	}
 }

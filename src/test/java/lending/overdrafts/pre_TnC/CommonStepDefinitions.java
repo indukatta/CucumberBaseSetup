@@ -37,7 +37,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 
 	@After
 	public void endTestReport(Scenario scenario) {
-		System.out.println(categoryName+": "+scenario.getName()+" is: "+scenario.getStatus());
+		System.out.println(categoryName+" >> "+scenario.getName()+" is: "+scenario.getStatus().toUpperCase()+"\n");
 		endTest();
 	}
 
@@ -48,7 +48,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 		launchMobileApplication(AppType.IOSAPP, "0.0.0.0:4723");
 		driver = (IOSDriver<MobileElement>) getAppiumDriverMobileElement();
 		Login login = new Login(driver);
-		login.loginAsUser("TWOTRANUSER", "TESTPASSWORD");
+		login.loginAsUser("TESTUSER", "TESTPASSWORD");
 		findByAccessibilityId(okayButton).as("Okay Button after Login").click();
 		reportPass("Successfully logged in to Iceberg application.");
 		deleteApplication = true;

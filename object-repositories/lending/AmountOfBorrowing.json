@@ -9,14 +9,14 @@
 		"accessibility id": "number_question_fees_label_0"
 	},
 	"screenEAR": {
-		"accessibility id": "number_question_fees_label_1"
+		"accessibility id": "number_question_fees_label_(Function)"
 	},
 	
 	"amtOfBorrowingMax": {
 		"accessibility id": "number_question_max_label"
 	},
-	"desclaimer": {
-		"accessibility id": "number_question_footer_label"
+	"amtOfBorrowingSubTitle": {
+		"accessibility id": "lending_question_hint"
 	},
 	"cancel": {
 		"accessibility id": "Cancel"

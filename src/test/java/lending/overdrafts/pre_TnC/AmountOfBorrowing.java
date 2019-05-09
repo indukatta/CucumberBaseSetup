@@ -14,7 +14,7 @@ public class AmountOfBorrowing extends CommonLibrary {
 	public static String amtOfBorrowingMax;
 	public static String monthyFee;
 	public static String screenEAR;
-	public static String desclaimer;
+	public static String amtOfBorrowingSubTitle;
 	public static String cancel;
 	public static String done;
 	
@@ -60,12 +60,6 @@ public class AmountOfBorrowing extends CommonLibrary {
 	public void verify_that_EAR_component_is_displayed_on_the_screen(String arg1) {
 		setStepName("Then");
 		findByAny(screenEAR).verifyEqualsTo(arg1);
-	}
-	
-	@Then("^verify that disclaimer \"([^\"]*)\" is displayed on the screen$")
-	public void verify_that_disclaimer_is_displayed_on_the_screen(String arg1) {
-		setStepName("Then");
-		findByAny(desclaimer).verifyEqualsTo(arg1);
 	}
 
 	@When("^user selects an amount (\\d+) on Amount of Borrowing Yes screen$")
