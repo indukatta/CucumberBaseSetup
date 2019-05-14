@@ -12,6 +12,7 @@ import lending.overdrafts.pre_TnC.CommonStepDefinitions;
 public class ProductTermsAndConditions {
 
 	public static String tncHeading = "tandc_summary_label";
+	public static String tncContentWebView = "tandc_webView";
 
 	@Then("^verify that products Terms and Conditions screen is visible$")
 	public void verify_that_products_Terms_and_Conditions_screen_is_visible() {

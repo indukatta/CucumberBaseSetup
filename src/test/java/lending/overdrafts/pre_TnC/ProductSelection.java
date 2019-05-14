@@ -156,12 +156,4 @@ public class ProductSelection extends CommonLibrary {
 		findByAny(eligibilityPage).verifyAttributesAllEqualsTo("name", expected);
 	}
 
-	@Then("^user clicks on breadcrumb to see Select Products screen$")
-	public void user_clicks_on_breadcrumb_to_see_Select_Products_screen() {
-		setStepName("Then");
-		findByAny(breadcrumb).click();
-		sleep(2000);
-		captureScreenshot();
-	}
-
 }

@@ -5,7 +5,7 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     Given that category "ApplyOverdraft" is added for below scenarios
     Then close existing open application for the next scenario
 
-  Scenario: CUICE-9953 >> Test if user able to view 'Apply' on product selection for No PSE decision->datemodified of application > more than 30 days
+  Scenario: CUICE-9953 >> Test if user able to view 'Add' on product selection for No PSE decision->datemodified of application > more than 30 days
     Given that user is on the Iceberg Homescreen
     When user clicks on the More and then Lending button
     And user clicks on Apply button on Product Selection
@@ -29,8 +29,9 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     Given that user is on the Iceberg Homescreen
     And user clicks on the More and then Lending button
     Then verify that Product Selection screen is displayed
+    Then verify that "Add" button is shown on product selection screen
 
-  Scenario: CUICE-9953 >> Test if user able to view 'Apply' PSE decision->accepted->No customer decision->more than 30 days
+  Scenario: CUICE-9953 >> Test if user able to view 'Add' PSE decision->accepted->No customer decision->more than 30 days
     Given that user is on the Iceberg Homescreen
     When user clicks on the More and then Lending button
     And user clicks on Apply button on Product Selection
@@ -56,9 +57,9 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     Then decrease psedecision datetime by 38 days in application table
     Given that user is on the Iceberg Homescreen
     And user clicks on the More and then Lending button
-    Then verify that "Apply" button is shown on product selection screen
+    Then verify that "Add" button is shown on product selection screen
 
-  Scenario: CUICE-9953 >> Test if user able to view 'Re Apply' on product selection for PSE decision->referred->More than 60 days
+  Scenario: CUICE-9953 >> Test if user able to view 'Re Apply' on product selection for PSE decision->referred->More than 30 days
     Given that user is on the Iceberg Homescreen
     When user clicks on the More and then Lending button
     And user clicks on Apply button on Product Selection
@@ -79,14 +80,14 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     And user clicks on No button on lending question screen
     And user clicks on No button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    Then verify that the Iceberg Decline screen is displayed
+    Then verify that Iceberg Decline screen is displayed
     Then verify that "referred" decision is coming in PSE response
-    Then decrease psedecision datetime by 61 days in application table
+    Then decrease psedecision datetime by 31 days in application table
     Given that user is on the Iceberg Homescreen
-    And user clicks on the Credit & Lending link
-    Then verify that "Apply" button is shown on product selection screen
+    And user clicks on the More and then Lending button
+    Then verify that "Add" button is shown on product selection screen
 
-  Scenario: CUICE-9953 >> Test if user able to view 'Apply' on product selection for PSE decision->declined->More than 60 days
+  Scenario: CUICE-9953 >> Test if user able to view 'Apply' on product selection for PSE decision->declined->More than 30 days
     Given that user is on the Iceberg Homescreen
     When user clicks on the More and then Lending button
     And user clicks on Apply button on Product Selection
@@ -107,14 +108,14 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     And user clicks on No button on lending question screen
     And user clicks on No button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    Then verify that the Iceberg Decline screen is displayed
+    Then verify that Iceberg Decline screen is displayed
     Then verify that "declined" decision is coming in PSE response
     Then decrease psedecision datetime by 61 days in application table
     Given that user is on the Iceberg Homescreen
-    And user clicks on the Credit & Lending link
-    Then verify that "Apply" button is shown on product selection screen
+    And user clicks on the More and then Lending button
+    Then verify that "Add" button is shown on product selection screen
 
-  Scenario: CUICE-9953 >> Test if user able to view 'Apply' on product selection for PSE decision->accepted-> Sustainability Yes->More than 60 days
+  Scenario: CUICE-9953 >> Test if user able to view 'Apply' on product selection for PSE decision->accepted-> Sustainability Yes->More than 30 days
     Given that user is on the Iceberg Homescreen
     When user clicks on the More and then Lending button
     And user clicks on Apply button on Product Selection
@@ -135,14 +136,14 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     And user clicks on No button on lending question screen
     And user clicks on Yes button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    Then verify that the Iceberg Decline screen is displayed
+    Then verify that Iceberg Decline screen is displayed
     Then verify that "accepted" decision is coming in PSE response
     Then decrease psedecision datetime by 61 days in application table
     Given that user is on the Iceberg Homescreen
-    And user clicks on the Credit & Lending link
-    Then verify that "Apply" button is shown on product selection screen
+    And user clicks on the More and then Lending button
+    Then verify that "Add" button is shown on product selection screen
     
-  Scenario: CUICE-9953 >> Test if user able to view 'Apply' on product selection for PSE decision->referred-> Sustainability Yes->More than 60 days
+  Scenario: CUICE-9953 >> Test if user able to view 'Apply' on product selection for PSE decision->referred-> Sustainability Yes->More than 30 days
     Given that user is on the Iceberg Homescreen
     When user clicks on the More and then Lending button
     And user clicks on Apply button on Product Selection
@@ -163,12 +164,12 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     And user clicks on No button on lending question screen
     And user clicks on Yes button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    Then verify that the Iceberg Decline screen is displayed
+    Then verify that Iceberg Decline screen is displayed
     Then verify that "referred" decision is coming in PSE response
     Then decrease psedecision datetime by 61 days in application table
     Given that user is on the Iceberg Homescreen
-    And user clicks on the Credit & Lending link
-    Then verify that "Apply" button is shown on product selection screen
+    And user clicks on the More and then Lending button
+    Then verify that "Add" button is shown on product selection screen
 
   Scenario: CUICE-9953 >> Test if user able to view 'Re Apply' on product selection for PSE decision->declined-> Sustainability Yes->More than 60 days
     Given that user is on the Iceberg Homescreen
@@ -191,9 +192,9 @@ Feature: Verify all functionalities related to Apply and Re Apply within and pos
     And user clicks on No button on lending question screen
     And user clicks on Yes button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    Then verify that the Iceberg Decline screen is displayed
+    Then verify that Iceberg Decline screen is displayed
     Then verify that "declined" decision is coming in PSE response
     Then decrease psedecision datetime by 61 days in application table
     Given that user is on the Iceberg Homescreen
-    And user clicks on the Credit & Lending link
-    Then verify that "Apply" button is shown on product selection screen
+    And user clicks on the More and then Lending button
+    Then verify that "Add" button is shown on product selection screen

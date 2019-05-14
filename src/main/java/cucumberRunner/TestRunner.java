@@ -1,6 +1,8 @@
 package cucumberRunner;
 
 import static com.factory.mobile.driver.AppiumDriverManager.closeApplication;
+import static com.factory.mobile.driver.AppiumDriverManager.*;
+import com.factory.mobile.driver.AppiumDriverBase.AppType;
 
 import static com.factory.data.manager.Database.*;
 
@@ -8,19 +10,20 @@ import org.apache.commons.lang3.StringUtils;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(features = "feature-files/", glue = "lending/"
 //		, tags = {"@DeclineOffer, @FinalOffer, @PreciseInputbox, @RemindmeLater, @SuitableOffer, @UserDecline"}
-		, tags = { "@YearsOfPersonalAccount" }
+		, tags = { "@AppealYourDecision" }
 //		, dryRun=true
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 
 	@BeforeSuite
 	public void setup() throws Exception {
-        
+//		printMissingLocators(AppType.IOSAPP);
 	}
 
 	@AfterSuite

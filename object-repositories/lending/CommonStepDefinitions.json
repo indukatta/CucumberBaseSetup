@@ -34,5 +34,8 @@
 	},
 	"backButton": {
 		"accessibility id": "back"
+	},
+	"webViewDone": {
+		"accessibility id": "Done"
 	}
 }

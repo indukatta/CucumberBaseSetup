@@ -1,15 +1,29 @@
 {
-	"screenHeading": {
+	"reApplyHeading": {
 		"accessibility id": "decline_title_label"
 	},
-	"screenBody": {
+	"reApplyBody": {
 		"accessibility id": "decline_body_label"
 	},
 	"whatNext": {
 		"accessibility id": "decline_what_next_label"
 	},
-	"declineNotNow": {
+	"exploreOne": {
+		"accessibility id": "decline_options_label"
+	},
+	"alternativeFinancing": {
+		"accessibility id": "decline_link_heading_label_0"
+	},
+	"alternativeFinancingDesc": {
+		"accessibility id": "decline_link_heading_label_0"
+	},
+	"appealYourDecision": {
+		"accessibility id": "decline_link_heading_label_1"
+	},
+	"appealYourDecisionDesc": {
+		"accessibility id": "decline_link_heading_label_1"
+	},
+	"notNowBtn": {
 		"accessibility id": "decline_not_now_button"
 	}
-	
 }

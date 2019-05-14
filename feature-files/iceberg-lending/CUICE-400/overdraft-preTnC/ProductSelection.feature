@@ -27,7 +27,7 @@ Feature: Verify all functionalities related to Product Selection screen. It will
     Given that user is on Product Selection screen
     Then user clicks on check eligibility link on screen
     Then verify that check eligibility page "Business Lending Eligibility Checker" is displayed on screen
-    Then user clicks on breadcrumb to see Select Products screen
+    Then user clicks on done button on web view on the screen
     Then verify that Product Selection screen is displayed
 
   @Sprint2

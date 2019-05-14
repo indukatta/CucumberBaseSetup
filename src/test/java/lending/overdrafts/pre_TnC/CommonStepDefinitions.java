@@ -28,6 +28,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public static String yesButton;
 	public static String noButton;
 	public static String backButton;
+	public static String webViewDone;
 	public static String okayButton = "alertPrimaryButton";
 
 	@Before
@@ -44,7 +45,6 @@ public class CommonStepDefinitions extends CommonLibrary {
 	@Given("^that user is on the Iceberg Homescreen$")
 	public static void that_user_is_on_the_Credit_Management_screen() throws Throwable {
 		setStepName("Given");
-//		System.out.println("Feature or category name: "+categoryName);
 		launchMobileApplication(AppType.IOSAPP, "0.0.0.0:4723");
 		driver = (IOSDriver<MobileElement>) getAppiumDriverMobileElement();
 		Login login = new Login(driver);
@@ -69,7 +69,13 @@ public class CommonStepDefinitions extends CommonLibrary {
 		sleep(4000);
 	}
 
-
+	@Then("^verify that homescreen is visible$")
+	public void verify_that_homescreen_is_visible() throws Throwable {
+		setStepName("Then");
+		captureScreenshot();
+		findByAny(more).isDisplayed();
+	}
+	
 	@When("^user clicks on More and then Manage Overdraft button$")
 	public void user_clicks_on_More_and_then_Manage_Overdraft_button() {
 		setStepName("When");
@@ -78,6 +84,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 		findByAny(manageOverdraft).click();
 		sleep(4000);
 	}
+
 	@Then("^user exit the iceberg application and relaunch$")
 	public static void user_exit_the_iceberg_application_and_reopen() throws Throwable {
 		setStepName("When");
@@ -86,7 +93,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 		deleteApplication = false;
 	}
 
-	@Then("^user clicks on the More and Logout link$")
+	@When("^user clicks on the More and Logout link$")
 	public static void user_clicks_on_the_More_and_Logout_link() throws Throwable {
 		setStepName("When");
 		findByAny(more).click();
@@ -191,7 +198,14 @@ public class CommonStepDefinitions extends CommonLibrary {
 		findByAny(backButton).click();
 		sleep(1000);
 	}
-
+	@Then("^user clicks on done button on web view on the screen$")
+	public void user_clicks_on_done_button_on_web_view_on_the_screen() {
+		setStepName("Then");
+		findByAny(webViewDone).click();
+		sleep(2000);
+		captureScreenshot();
+	}
+	
 	@Then("^captures updated screenshot for execution results$")
 	public void captures_updated_screenshot_for_execution_results() {
 		captureScreenshot();

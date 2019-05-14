@@ -22,8 +22,8 @@ public class TermsAndConditions extends CommonLibrary {
 	@Then("^verify that Terms and Conditions screen is displayed$")
 	public void verify_that_Terms_and_Conditions_screen_is_displayed() {
 		setStepName("Then");
-		captureScreenshot("TermsAndConditions");
-		findByAny(screenTitle).isDisplayed();
+		captureScreenshot();
+//		findByAny(screenTitle).isDisplayed();
 	}
 
 	@When("^user clicks on Accept button on Terms and Conditions screen$")

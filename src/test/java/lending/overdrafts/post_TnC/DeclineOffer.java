@@ -69,5 +69,6 @@ public class DeclineOffer extends CommonLibrary {
 		setStepName("Then");
 		findByAny(alertPrimaryButton).as("Yes Button").isDisplayed();
 	}
+	
 
 }

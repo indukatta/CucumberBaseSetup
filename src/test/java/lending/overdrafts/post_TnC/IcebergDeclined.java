@@ -5,7 +5,6 @@ import cucumber.api.java.en.Then;
 import lending.common.library.CommonLibrary;
 
 import static com.factory.mobile.driver.AppiumDriverManager.*;
-import static com.factory.data.manager.Database.*;
 
 public class IcebergDeclined extends CommonLibrary {
 	public static String screenHeading = "custom_title_label";
@@ -16,10 +15,8 @@ public class IcebergDeclined extends CommonLibrary {
 	public static String textAlternativeFinancing = "lending_screen_custom_text_element_accessibility_id_1_0";
 	public static String textAppealDecision = "lending_screen_custom_text_element_accessibility_id_1_1";
 	
-	public static String nextButton;
-
 	@Then("^verify that Iceberg Decline screen is displayed$")
-	public void verify_that_Customer_Decline_screen_is_displayed() {
+	public void verify_that_Iceberg_Decline_screen_is_displayed() {
 		setStepName("Then");
 		captureScreenshot();
 		findByAny(screenHeading).isDisplayed();
