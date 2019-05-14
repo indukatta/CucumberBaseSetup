@@ -43,7 +43,7 @@ Feature: Verify that save and return functionality is working for Suitable Offer
     When user clicks on the More and then Lending button
     Then verify that Alternative Financing screen is visible
     Then user clicks on I Consent on Financial Alternative screen
-    Then verify that Ok got it for I Consent option is displayed
+    Then verify that alert button Ok got it is displayed on the screen
 
   @Sprint10 @IcebergDeclineToAppealYourDecision
   Scenario: CUICE-9341 >> ATC028: Logout and Login to see if user is lending to Alternative Financing screen after alert
@@ -51,7 +51,7 @@ Feature: Verify that save and return functionality is working for Suitable Offer
     When user clicks on the More and then Lending button
     Then verify that Alternative Financing screen is visible
     Then user clicks on I Consent on Financial Alternative screen
-    Then user clicks on Ok got it for I Consent or Not now options on screen
+    Then user clicks on Ok got it button on alert screen
     Then verify that Appeal your Decision screen is visible
 
   @Sprint10
@@ -106,7 +106,7 @@ Feature: Verify that save and return functionality is working for Suitable Offer
     When user clicks on the More and then Lending button
     Then verify that Alternative Financing screen is visible
     Then user clicks on Not Now on Financial Alternative screen
-    Then verify that Ok got it for Not Not option is displayed
+    Then verify that alert button Ok got it is displayed on the screen
 
   @Sprint10
   Scenario: CUICE-9341 >> ATC032: Logout and Login to see if user is lending to Alternative Financing screen after alert
@@ -114,7 +114,7 @@ Feature: Verify that save and return functionality is working for Suitable Offer
     When user clicks on the More and then Lending button
     Then verify that Alternative Financing screen is visible
     Then user clicks on Not Now on Financial Alternative screen
-    Then user clicks on Ok got it for I Consent or Not now options on screen
+    Then user clicks on Ok got it button on alert screen
     Then verify that Appeal your Decision screen is visible
 
   @Sprint10
