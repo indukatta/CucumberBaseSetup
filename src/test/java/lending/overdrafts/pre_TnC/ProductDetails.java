@@ -5,6 +5,7 @@ import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import lending.common.library.CommonLibrary;
+import lending.common.library.CommonStepDefinitions;
 
 public class ProductDetails extends CommonLibrary {
 

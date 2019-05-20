@@ -7,7 +7,7 @@ import static com.factory.mobile.driver.AppiumDriverManager.setStepName;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import lending.overdrafts.pre_TnC.CommonStepDefinitions;
+import lending.common.library.CommonStepDefinitions;
 
 public class PartialOfferAndOptions {
 

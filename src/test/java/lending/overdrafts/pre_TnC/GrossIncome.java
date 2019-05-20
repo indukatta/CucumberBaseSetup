@@ -6,6 +6,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import lending.common.library.CommonLibrary;
+import lending.common.library.CommonStepDefinitions;
 
 public class GrossIncome extends CommonLibrary {
 	public static String grossIncomeInputbox = "number_question_selected_value_label";

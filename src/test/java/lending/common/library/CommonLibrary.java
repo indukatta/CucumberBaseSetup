@@ -17,7 +17,6 @@ import org.json.JSONObject;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
-import pageObjects.More.More;
 
 public class CommonLibrary {
 	public static Map<String, String> persistentValue = new HashMap<String, String>();
@@ -26,7 +25,6 @@ public class CommonLibrary {
 	public static boolean deleteApplication = true;
 	public static String applicationID = "";
 	public static String categoryName = "";
-	public static More more = null;
 
 	public CommonLibrary() {
 
