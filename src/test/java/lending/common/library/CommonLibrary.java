@@ -25,6 +25,14 @@ public class CommonLibrary {
 	public static boolean deleteApplication = true;
 	public static String applicationID = "";
 	public static String categoryName = "";
+	
+	public static String alreadyRegistered = "welcome.existing_customer_button_title";
+	public static String username = "login.login_username_textfield_header";
+	public static String next = "next_button_default_title";
+	public static String password = "login.login_password_textfield_header";
+	public static String login = "login.login_button_title";
+	public static String dontAllow = "Don’t Allow";
+	public static String okayButton = "alertPrimaryButton";
 
 	public CommonLibrary() {
 
@@ -41,6 +49,18 @@ public class CommonLibrary {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public static void loginWithTestUser(String user, String pass){
+		findByAny(alreadyRegistered).click();
+		findByAny(username).sendKeys(user);
+		findByAny(next).click();
+		findByAny(password).sendKeys(pass);
+		findByAny(login).click();
+		if(findByAny(dontAllow).isDisplayed()) {
+			findByAny(dontAllow).click();
+		}
+		findByAny(okayButton).click();
 	}
 
 	public static String modifiedDate(int days) {

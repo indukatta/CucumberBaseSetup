@@ -7,10 +7,10 @@ Feature: Verify all functionalities related to Product Details screen, it will c
   @Sprint2 @ProductDetails
   Scenario: CUICE-542 >> Pre-requisite: Login and open Product Details screen
     Given that user is on the Iceberg Homescreen
-    Then close existing open application for the next scenario
-    When user clicks on the More and then Lending button
-    When user clicks on find out more link
-    Then verify that Product Details screen is displayed
+    #Then close existing open application for the next scenario
+    #When user clicks on the More and then Lending button
+    #When user clicks on find out more link
+    #Then verify that Product Details screen is displayed
 
   @Sprint2
   Scenario: CUICE-542 >> ATC-001: Verify other static content on Product Details screen.

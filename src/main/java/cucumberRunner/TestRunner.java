@@ -16,8 +16,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(features = "feature-files/", glue = "lending/"
 //		, tags = {"@DeclineOffer, @FinalOffer, @PreciseInputbox, @RemindmeLater, @SuitableOffer, @UserDecline"}
-		, tags = { "@PartialOfferAndOptions" }
-		, dryRun=true
+		, tags = { "@ProductDetails" }
+//		, dryRun=true
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 
@@ -32,13 +32,16 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 	}
 
 	public static void main1(String[] args) {
-		System.out.println(encrypt("AshokDikshit"));
-		String s = Thread.currentThread().getStackTrace()[1].getClassName();
-		String[] r = StringUtils.capitalize(s).split("(?=\\p{Upper})");
-		System.out.println(r.length);
-		String cp = String.join("", r).toString();
-		System.out.println(cp);
-		System.out.println(cp.lastIndexOf("."));
-		System.out.println(String.join("", r));
+//		System.out.println(encrypt("AshokDikshit"));
+//		String s = Thread.currentThread().getStackTrace()[1].getClassName();
+//		String[] r = StringUtils.capitalize(s).split("(?=\\p{Upper})");
+//		System.out.println(r.length);
+//		String cp = String.join("", r).toString();
+//		System.out.println(cp);
+//		System.out.println(cp.lastIndexOf("."));
+//		System.out.println(String.join("", r));
+		
+		String[] arr = "ashok".split("==");
+		System.out.println(arr.length);
 	}
 }

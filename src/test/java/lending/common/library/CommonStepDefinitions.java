@@ -27,7 +27,6 @@ public class CommonStepDefinitions extends CommonLibrary {
 	public static String noButton;
 	public static String backButton;
 	public static String webViewDone;
-	public static String okayButton = "alertPrimaryButton";
 
 	@Before
 	public void startTestReport(Scenario scenario) throws Exception {
@@ -45,7 +44,7 @@ public class CommonStepDefinitions extends CommonLibrary {
 		setStepName("Given");
 		launchMobileApplication(AppType.IOSAPP, "0.0.0.0:4723");
 		driver = (IOSDriver<MobileElement>) getAppiumDriverMobileElement();
-		findByAccessibilityId(okayButton).as("Okay Button after Login").click();
+		loginWithTestUser("TESTUSER", "TESTPASSWORD");
 		reportPass("Successfully logged in to Iceberg application.");
 		deleteApplication = true;
 	}
