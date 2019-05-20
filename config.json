@@ -1,6 +1,6 @@
 {
 	"report-type": "aventstack",
-	"step-definition": "lending.overdrafts",
+	"step-definition": "lending",
 	"or-path": "object-repositories/lending",
 	"or-separator": "==",
 	"api-testing": "true",

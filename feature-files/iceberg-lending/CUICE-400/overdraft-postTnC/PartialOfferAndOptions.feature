@@ -1,11 +1,11 @@
-@PartialOfferAndOptions @Regression
+@Regression @PartialOfferAndOptions
 Feature: Verify all functionalities related to Suitable Offer screen, it covers CUICE-10262
 
   Background: This is to add category to below scenarios
     Given that category "PartialOfferAndOptions" is added for below scenarios
 
   @Sprint9
-  Scenario: CUICE-10262 >> Prerequisite: Test if user able to view  the partial screen
+  Scenario: CUICE-10262 [ATC-01] >> Prerequisite: Test if user able to view  the partial screen
     Given that user is on the Iceberg Homescreen
     Then close existing open application for the next scenario
     When user clicks on the More and then Lending button
@@ -30,17 +30,18 @@ Feature: Verify all functionalities related to Suitable Offer screen, it covers 
     Then verify that the Partial Offer screen is displayed
 
   @Sprint9
-  Scenario: CUICE-10262 >> Test if content on Partial Offer screen are correct
+  Scenario: CUICE-10262 [ATC-02] >> Test if content on Partial Offer screen are correct
     Given that user is on the Partial Offer screen
     Then verify that logo is displayed on Partial Offer screen
     Then verify that partial offer heading "Congratulations!" is displayed
     Then verify that partial offer message "You have been approved and can borrow upto £" is displayed
     Then verify that partial offer explanation "We haven't been able to approve you for the full amount you requested but you can select one of 3 options" is displayed
-    Then retrieve and save offered amount from Partial Offer screen
+    Then retrieve and save offered amount from Suitable or Partial Offer screen
+    Then verify that see my options text "See my options" on the screen
     Then verify that see my options button is enabled on Partial Offer screen
 
   @Sprint9
-  Scenario: CUICE-10262 >> Test if content on Partial Offer options screen are correct
+  Scenario: CUICE-10262 [ATC-03] >> Test if content on Partial Offer options screen are correct
     Given that user is on the Partial Offer screen
     Then user clicks on See my options button on Partial Offer screen
     Then verify that Partial Offer options screen is visible
@@ -55,14 +56,13 @@ Feature: Verify all functionalities related to Suitable Offer screen, it covers 
     Then verify that decline offer "Decline Offer" is diaplayed on the screen
 
   @Sprint9
-  Scenario: CUICE-10262 >> Test if Add your Overdraft screen is visible
+  Scenario: CUICE-10262 [ATC-04] >> Test if Add your Overdraft screen is visible
     Given that user is on the Partial Offer options screen
     Then user clicks on Acept Overdraft CTA on the screen
-    
     Then user clicks on back button on lending question screen
 
   @Sprint9
-  Scenario: CUICE-10262 >> Test if Decline Offer screen is visible.
+  Scenario: CUICE-10262 [ATC-05] >> Test if Decline Offer screen is visible.
     Given that user is on the Partial Offer options screen
     Then user clicks on Decline Overdraft CTA on the screen
     Then verify that Decline Offer screen is visible

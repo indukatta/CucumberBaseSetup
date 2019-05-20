@@ -23,8 +23,8 @@ public class CommonLibrary {
 	public static IOSDriver<MobileElement> driver;
 	public static boolean alreadyLoggedIn = false;
 	public static boolean deleteApplication = true;
-	public static String applicationID = "";
-	public static String categoryName = "";
+	public static String applicationID;
+	public static String categoryName;
 	
 	public static String alreadyRegistered = "welcome.existing_customer_button_title";
 	public static String username = "login.login_username_textfield_header";
@@ -57,6 +57,7 @@ public class CommonLibrary {
 		findByAny(next).click();
 		findByAny(password).sendKeys(pass);
 		findByAny(login).click();
+		sleep(3000);
 		if(findByAny(dontAllow).isDisplayed()) {
 			findByAny(dontAllow).click();
 		}

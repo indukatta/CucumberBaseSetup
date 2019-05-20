@@ -63,7 +63,7 @@ public class SuitableOffer extends CommonLibrary {
 		sleep(2000);
 	}
 
-	@Then("^retrieve and save offered amount from Suitable Offer screen$")
+	@Then("^retrieve and save offered amount from Suitable or Partial Offer screen$")
 	public void retrieve_and_save_offered_amount_from_Suitable_Offer_screen() {
 		String offerMsg = findByAny(offerMessage).getText().split("£")[1];
 		System.out.println("Stored value for 'maxAmount' is "+ offerMsg);

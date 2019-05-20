@@ -40,12 +40,11 @@ public class CommonStepDefinitions extends CommonLibrary {
 	}
 
 	@Given("^that user is on the Iceberg Homescreen$")
-	public static void that_user_is_on_the_Credit_Management_screen() throws Throwable {
+	public static void that_user_is_on_the_Iceberg_Homescreen() throws Throwable {
 		setStepName("Given");
 		launchMobileApplication(AppType.IOSAPP, "0.0.0.0:4723");
 		driver = (IOSDriver<MobileElement>) getAppiumDriverMobileElement();
 		loginWithTestUser("TESTUSER", "TESTPASSWORD");
-		reportPass("Successfully logged in to Iceberg application.");
 		deleteApplication = true;
 	}
 

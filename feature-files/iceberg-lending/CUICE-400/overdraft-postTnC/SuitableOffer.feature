@@ -34,7 +34,7 @@ Feature: Verify all functionalities related to Suitable Offer screen, it covers 
     Then verify that logo is displayed on Suitable Offer screen
     Then verify that suitable offer heading "Congratulations!" is displayed
     Then verify that suitable offer message "You have been approved and can borrow upto £" is displayed
-    Then retrieve and save offered amount from Suitable Offer screen
+    Then retrieve and save offered amount from Suitable or Partial Offer screen
     Then verify that continue button is enabled on Suitable Offer screen
 
   @Sprint7
