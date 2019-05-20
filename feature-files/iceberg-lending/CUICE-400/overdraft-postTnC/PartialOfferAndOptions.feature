@@ -46,7 +46,7 @@ Feature: Verify all functionalities related to Suitable Offer screen, it covers 
     Then user clicks on See my options button on Partial Offer screen
     Then verify that Partial Offer options screen is visible
     Then verify that refer the decision heading "Refer The Decision" is displayed on screen
-    Then verify that refer the decision description "We may be able to offer you more but we will require addition information" is displayed on screen
+    Then verify that refer the decision description "We may be able to offer you more but we will require additional information" is displayed on screen
     Then verify that contact us for referral "Contact Us For Referral" is diaplayed on the screen
     Then verify that accept overdraft heading "Accept Overdraft" is displayed on screen
     Then verify that accept overdraft description "Annual Interest Rate of 10.65%" is displayed on screen
