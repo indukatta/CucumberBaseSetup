@@ -9,7 +9,7 @@
 		"port": "4726"
 	},
 	"suite": {
-		"default": "ProductDetails"
+		"default": "FinalOffer"
 	},
 	"ios-app": {
 		"platformName": "iOS",

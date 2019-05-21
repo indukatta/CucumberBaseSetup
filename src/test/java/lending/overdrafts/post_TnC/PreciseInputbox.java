@@ -30,8 +30,8 @@ public class PreciseInputbox extends CommonLibrary {
 		findByAny(AmountOfBorrowing.amtOfBorrowingInput).verifyEqualsTo(expected);
 	}
 
-	@Then("^verify that hint text \"([^\"]*)\" is displayed on Tailor Offer screen$")
-	public void verify_that_hint_text_is_displayed_on_Tailor_Offer_screen(String expected) {
+	@Then("^verify that hint text \"([^\"]*)\" is displayed on the screen$")
+	public void verify_that_hint_text_is_displayed_on_the_screen(String expected) {
 		setStepName("Then");
 		findByAny(TailorOffer.hint).isDisplayed();
 //		expected = expected.replace("{MaxAmount}", persistentValue.get("sliderAmount"));

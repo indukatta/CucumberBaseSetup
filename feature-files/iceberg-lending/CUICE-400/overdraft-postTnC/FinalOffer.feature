@@ -42,20 +42,20 @@ Feature: Verify all functionalities related to Final Offer screen, it covers CUI
     Then verify that expected json "lending-QnA/FinalOffer" is equals to "data/application/answers" except "dateModified" key
 
   @Sprint7
-  Scenario: CUICE-9953 >> TC-002: Test if content on Final Offer screen are correct
+  Scenario: CUICE-9953 >> TC-002: Test if Not Now button is not pre selected
     Given that user is on Final Offer screen
     Then verify that Continue with overdraft button is pre selected
     Then verify that Not Now button is not pre selected
 
   @Sprint7
-  Scenario: CUICE-9953 >> TC-003: Test if content on Final Offer screen are correct
+  Scenario: CUICE-9953 >> TC-003: Test if Remind me Later screen is visible
     Given that user is on Final Offer screen
     Then user clicks on Not Now button on Final Offer
     Then verify that Remind me Later screen is visible
     Then user clicks on back button on lending question screen
 
   @Sprint7
-  Scenario: CUICE-9953 >> TC-004: Test if content on Final Offer screen are correct
+  Scenario: CUICE-9953 >> TC-004: Test if products Terms and Conditions screen is visible
     Given that user is on Final Offer screen
     Then user clicks on Continue with overdraft button on Final Offer
     Then verify that products Terms and Conditions screen is visible

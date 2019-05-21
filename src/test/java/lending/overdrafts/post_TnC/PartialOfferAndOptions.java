@@ -49,12 +49,6 @@ public class PartialOfferAndOptions {
 		findByAny(partialOfferOptionsDeclineOffer).click();
 	}
 
-	@When("^user clicks on Accept Overdraft CTA on the screen$")
-	public void user_clicks_on_Accept_Overdraft_CTA_on_the_screen() {
-		setStepName("Then");
-		findByAny(partialOfferOptionsAcceptOD).click();
-	}
-
 	@Given("^that user is on the Partial Offer screen$")
 	public void that_user_is_on_the_Partial_Offer_screen() throws Throwable {
 		setStepName("Given");
@@ -169,8 +163,8 @@ public class PartialOfferAndOptions {
 		findByAny(partialOfferOptionsHeading).isDisplayed();
 	}
 
-	@Then("^user clicks on Acept Overdraft CTA on the screen$")
-	public void user_clicks_on_Acept_Overdraft_CTA_on_the_screen() throws Throwable {
+	@Then("^user clicks on Accept Overdraft CTA on the screen$")
+	public void user_clicks_on_Accept_Overdraft_CTA_on_the_screen() throws Throwable {
 		setStepName("Then");
 		findByAny(partialOfferOptionsAcceptOD).click();
 	}

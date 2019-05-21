@@ -66,8 +66,8 @@ public class TailorOffer extends CommonLibrary {
 		sleep(1000);
 	}
 	
-	@When("^user moves slider to (\\d+) percent of maximum value on Tailor Offer screen$")
-	public void user_moves_slider_to_percent_of_maximum_value_on_Tailor_Offer_screen(float arg1) {
+	@When("^user moves slider to (\\d+) percent of maximum value on the screen$")
+	public void user_moves_slider_to_percent_of_maximum_value_on_the_screen(float arg1) {
 		setStepName("Then");
 		findByAny(AmountOfBorrowing.amtOfBorrowingSlider).setValue(arg1 / 100);
 		sleep(1000);

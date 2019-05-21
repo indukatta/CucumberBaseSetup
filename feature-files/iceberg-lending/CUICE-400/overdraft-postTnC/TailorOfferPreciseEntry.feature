@@ -2,7 +2,7 @@
 Feature: Verify all functionalities related to Tailor Offer screen, it covers CUICE-8891
 
   Background: This is to add category to below scenarios
-    Given that category "PreciseInputbox" is added for below scenarios
+    Given that category "TailorOfferPreciseEntry" is added for below scenarios
 
   @Sprint7 @Sprint10
   Scenario: CUICE-8891 >> Prerequisite: Test if user able to view  the Tailor Offer screen
@@ -26,7 +26,7 @@ Feature: Verify all functionalities related to Tailor Offer screen, it covers CU
     And user clicks on No button on lending question screen
     And user clicks on No button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
-    Then retrieve and save offered amount from Suitable Offer screen
+    Then retrieve and save offered amount from Suitable or Partial Offer screen
     And user clicks on continue button on Suitable Offer screen
     And user clicks on input box to bring the keyboard up for precise input
     Then verify that precise input box appears on the screen
@@ -36,7 +36,7 @@ Feature: Verify all functionalities related to Tailor Offer screen, it covers CU
   	Given that user is on precise input box screen
     Then verify that cancel button is displayed on top corner on the screen
     And verify that min value "£100" is displayed in input box
-    And verify that hint text "Please enter a value from £100 to £" is displayed on Tailor Offer screen
+    And verify that hint text "Please enter a value from £100 to £" is displayed on the screen
     And verify that Done button is enabled on the screen
 
   @Sprint10
@@ -78,7 +78,7 @@ Feature: Verify all functionalities related to Tailor Offer screen, it covers CU
   @Sprint7
   Scenario: CUICE-8891 >> Test if slider value appears on precise input box as default value
     Given that user is on the Tailor Offer screen
-    Then user moves slider to 40 percent of maximum value on Tailor Offer screen
+    Then user moves slider to 40 percent of maximum value on the screen
     Then user clicks on input box to bring the keyboard up for precise input
     Then verify that slider value is apparing in the precise input box
     Then verify that Done button is enabled on the screen

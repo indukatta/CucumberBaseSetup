@@ -37,7 +37,7 @@ Feature: Verify all functionalities related to Amount of Borrowing No screen, it
   @Sprint6
   Scenario: CUICE-553 >> Test if CTA and help link is enabled when user scroll to bottom of screen
     Given that user is on the Terms and Conditions screen
-    When user scroll down to bottom of screen
+    When user scroll down to bottom of screen to see primary button
     Then captures updated screenshot for execution results
     Then verify that click here link is visible on screen
     Then verify that Accept button is pre selected and enabled

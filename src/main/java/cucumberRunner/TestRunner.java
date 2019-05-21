@@ -16,8 +16,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(features = "feature-files/", glue = "lending/"
 //		, tags = {"@DeclineOffer, @FinalOffer, @PreciseInputbox, @RemindmeLater, @SuitableOffer, @UserDecline"}
-		, tags = { "@PartialOfferAndOptions" }
-//		, dryRun=true
+		, tags = { "@ProductTermsAndConditions" }
+		, dryRun=true
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 

@@ -71,10 +71,10 @@ public class TermsAndConditions extends CommonLibrary {
 		findByAny(tncReject).verifyAttributesEqualsTo("visible", "false");
 	}
 
-	@When("^user scroll down to bottom of screen$")
+	@When("^user scroll down to bottom of screen to see primary button$")
 	public void user_scroll_down_to_bottom_of_screen() {
 		setStepName("Then");
-		findByAny(CommonStepDefinitions.lendingPrimaryButton).as("Accept").scrollDownUntilVisible();
+		findByAny(CommonStepDefinitions.lendingPrimaryButton).scrollDownUntilVisible();
 	}
 
 	@Then("^verify that click here link is visible on screen$")

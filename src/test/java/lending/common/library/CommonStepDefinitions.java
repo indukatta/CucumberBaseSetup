@@ -63,8 +63,8 @@ public class CommonStepDefinitions extends CommonLibrary {
 		sleep(4000);
 	}
 
-	@Then("^verify that homescreen is visible$")
-	public void verify_that_homescreen_is_visible() throws Throwable {
+	@Then("^verify that homescreen is visible on the screen$")
+	public void verify_that_homescreen_is_visible_on_the_screen() throws Throwable {
 		setStepName("Then");
 		captureScreenshot();
 		findByAny(more).isDisplayed();

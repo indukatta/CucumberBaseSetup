@@ -27,15 +27,13 @@ Feature: Verify all functionalities related to Suitable Offer screen, it covers 
     And user clicks on No button on lending question screen
     And user clicks on Accept button on Terms and Conditions screen
     Then verify that the Suitable Offer screen is displayed
-    Then retrieve and save offered amount from Suitable Offer screen
+    Then retrieve and save offered amount from Suitable or Partial Offer screen
     Then user clicks on continue button on Suitable Offer screen
     Then verify that Tailor Offer screen is visible
 
   @Sprint7
   Scenario: CUICE-10262 >> Test if content on Tailor Offer screen are correct
-    Given that user is on the Suitable Offer screen
-    Then user clicks on continue button on Suitable Offer screen
-    Then verify that Tailor Offer screen is visible
+    Then that user is on the Tailor Offer screen
     Then verify that header "Select the amount you would like to borrow" is displayed on Tailor Offer screen
     Then verify that min default value "£100" is displayed on Tailor Offer screen
     Then verify that max "Max £" suitable amount is displayed on Trailor Offer screen
@@ -70,7 +68,7 @@ Feature: Verify all functionalities related to Suitable Offer screen, it covers 
   @Sprint7
   Scenario: CUICE-12512 >> Test if selected suitable offer amount is displayed on Final Offer screen
     Given that user is on the Tailor Offer screen
-    When user moves slider to 80 percent of maximum value on Tailor Offer screen
+    When user moves slider to 80 percent of maximum value on the screen
     Then user clicks on continue button on the screen
     Then verify that Final Offer screen is displayed
     Then verify that selected suitable offer amount is displayed on Final Offer screen
