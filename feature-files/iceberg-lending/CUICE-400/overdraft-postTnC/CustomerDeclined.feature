@@ -1,11 +1,11 @@
 @CustomerDeclined @Regression
-Feature: Verify all functionalities related to Decline Offer screen, it covers CUICE-9953, CUICE-13956
+Feature: Verify all functionalities related to Decline Offer screen, it covers CUICE-14418
 
   Background: This is to add category to below scenarios
     Given that category "CustomerDeclined" is added for below scenarios
 
   @Sprint7 @Sprint10
-  Scenario: CUICE-13956 >> Prerequisite: Test if user able to view  the Decline Offer screen
+  Scenario: CUICE-14418 >> Prerequisite: Test if user able to view  the Decline Offer screen
     Given that user is on the Iceberg Homescreen
     Then close existing open application for the next scenario
     When user clicks on the More and then Lending button
@@ -34,7 +34,7 @@ Feature: Verify all functionalities related to Decline Offer screen, it covers C
     Then verify that Customer Decline screen is displayed
     
   @Sprint7 @Sprint10
-  Scenario: CUICE-13956 >> Test if content on User Decline screen are correct
+  Scenario: CUICE-14418 >> Test if content on User Decline screen are correct
     Given that user is on Customer Decline screen
     Then verify that title "Sorry we didn’t meet your needs" on User Decline screen is displayed
     Then verify that decline options "Here’s what you can do now:" is displayed
@@ -43,7 +43,7 @@ Feature: Verify all functionalities related to Decline Offer screen, it covers C
     Then verify that Next button is displayed on User Decline screen
     
   @Sprint7 @Sprint10
-  Scenario: CUICE-13956 >> Test if content on User Decline screen are correct
+  Scenario: CUICE-14418 >> Test if content on User Decline screen are correct
     Given that user is on Customer Decline screen
     Then user clicks on Next button on User decline screen
     Then verify that Alternative Financing screen is visible

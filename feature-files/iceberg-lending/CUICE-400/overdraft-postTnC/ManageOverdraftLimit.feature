@@ -30,7 +30,7 @@ Feature: Verify all functionalities related to Magage Overdraft screen, it cover
     And user clicks on Continue with overdraft button on Final Offer
     And user clicks on Accept button on Terms and Conditions screen
     And user clicks on More and then Manage Overdraft button
-    Then verify that Manage Overdraft screen is displayed
+    Then verify that Manage Overdraft Limit screen is displayed
 
   @Sprint9
   Scenario: CUICE-12222 >> Test if content on Manage Overdraft Limit screen are correct
@@ -49,7 +49,7 @@ Feature: Verify all functionalities related to Magage Overdraft screen, it cover
     Then user clicks Annual Interest Rate icon on the screen
     Then verify that Annual Interest Rate screen is displayed
     Then user clicks on Close button on the AIR pop up
-    Then verify that Manage Overdraft screen is displayed
+    Then verify that Manage Overdraft Limit screen is displayed
 
   @Sprint9
   Scenario: CUICE-12222 >> Test if slider is working fine on Manage Overdraft Limit screen
@@ -58,8 +58,8 @@ Feature: Verify all functionalities related to Magage Overdraft screen, it cover
     Then verify that slider amount "10,000" is appearing on input box component
     Then user moves slider to 0 percent of maximum value on the screen
     Then verify that slider amount "100" is appearing on input box component
-    
-      @Sprint9
+
+  @Sprint9
   Scenario: CUICE-12222 >> Test if Change Limit button is disabled when user move to default value
     Given that user is on Manage Overdraft Limit screen
     Then user clicks on input box to bring the keyboard up for precise input

@@ -21,6 +21,7 @@ public class AlternativeFinancing extends CommonLibrary {
 	@Then("^user clicks on I Consent on Financial Alternative screen$")
 	public void user_clicks_on_I_Consent_on_Financial_Alternative_screen() {
 		setStepName("Then");
+		application().alertAccept();
 		findByAny(CommonStepDefinitions.lendingPrimaryButton).as("I consent on Alternative Financing")
 				.scrollDownUntilVisible().click();
 	}

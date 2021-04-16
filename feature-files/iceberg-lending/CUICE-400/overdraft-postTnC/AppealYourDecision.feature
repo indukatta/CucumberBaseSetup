@@ -69,4 +69,4 @@ Feature: Verify all functionalities related to Decline Offer screen, it covers C
   Scenario: CUICE-11090 >> Test if user is able to test find out more on Appeal your decision screen
     Given that user is on Appeal your decision screen
     When user clicks on Ok got it on Appleal your Decision screen
-    Then verify that homescreen is visible
+    Then verify that homescreen is visible on the screen

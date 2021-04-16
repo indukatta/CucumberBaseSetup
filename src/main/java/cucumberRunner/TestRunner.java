@@ -16,8 +16,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(features = "feature-files/", glue = "lending/"
 //		, tags = {"@DeclineOffer, @FinalOffer, @PreciseInputbox, @RemindmeLater, @SuitableOffer, @UserDecline"}
-		, tags = { "@ProductTermsAndConditions" }
-		, dryRun=true
+		, tags = { "@ManageOverdraftLimit" }
+//		, dryRun=true
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 
@@ -32,6 +32,7 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 	}
 
 	public static void main1(String[] args) {
+		
 //		System.out.println(encrypt("AshokDikshit"));
 //		String s = Thread.currentThread().getStackTrace()[1].getClassName();
 //		String[] r = StringUtils.capitalize(s).split("(?=\\p{Upper})");
